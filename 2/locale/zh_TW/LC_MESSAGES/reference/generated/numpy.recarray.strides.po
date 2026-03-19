@@ -1,0 +1,104 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.recarray.strides.rst:4
+msgid "numpy.recarray.strides"
+msgstr ""
+
+#: ../../../reference/generated/numpy.recarray.strides.rst:8
+msgid "attribute"
+msgstr ""
+
+#: ../../../../docstring of numpy.recarray.strides:2
+msgid "Tuple of bytes to step in each dimension when traversing an array."
+msgstr ""
+
+#: ../../../../docstring of numpy.recarray.strides:4
+msgid ""
+"The byte offset of element ``(i[0], i[1], ..., i[n])`` in an array `a` is::"
+msgstr ""
+
+#: ../../../../docstring of numpy.recarray.strides:7
+msgid "offset = sum(np.array(i) * a.strides)"
+msgstr ""
+
+#: ../../../../docstring of numpy.recarray.strides:9
+msgid ""
+"A more detailed explanation of strides can be found in :ref:`arrays.ndarray`."
+msgstr ""
+
+#: ../../../../docstring of numpy.recarray.strides:14
+msgid ""
+"Setting ``arr.strides`` is discouraged and may be deprecated in the future.  "
+"`numpy.lib.stride_tricks.as_strided` should be preferred to create a new "
+"view of the same data in a safer way."
+msgstr ""
+
+#: ../../../../docstring of numpy.recarray.strides:29
+msgid ":obj:`numpy.lib.stride_tricks.as_strided`"
+msgstr ""
+
+#: ../../../../docstring of numpy.recarray.strides:33
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.recarray.strides:34
+msgid "Imagine an array of 32-bit integers (each 4 bytes)::"
+msgstr ""
+
+#: ../../../../docstring of numpy.recarray.strides:36
+msgid ""
+"x = np.array([[0, 1, 2, 3, 4],\n"
+"              [5, 6, 7, 8, 9]], dtype=np.int32)"
+msgstr ""
+
+#: ../../../../docstring of numpy.recarray.strides:39
+msgid ""
+"This array is stored in memory as 40 bytes, one after the other (known as a "
+"contiguous block of memory).  The strides of an array tell us how many bytes "
+"we have to skip in memory to move to the next position along a certain "
+"axis.  For example, we have to skip 4 bytes (1 value) to move to the next "
+"column, but 20 bytes (5 values) to get to the same position in the next "
+"row.  As such, the strides for the array `x` will be ``(20, 4)``."
+msgstr ""
+
+#: ../../../../docstring of numpy.recarray.strides:49
+msgid "Examples"
+msgstr ""
+
+#: ../../../../docstring of numpy.recarray.strides:-1
+msgid ""
+"<div id=\"a25230cf-5d34-4019-a3a7-c5020b6c4ea8\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('5248a021-1618-4612-8ce1-"
+"f348310a5694','a25230cf-5d34-4019-a3a7-c5020b6c4ea8')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('5248a021-1618-4612-8ce1-f348310a5694','a25230cf-5d34-4019-a3a7-"
+"c5020b6c4ea8')\">Open In Tab</button></div><div id=\"a8f5696e-41d9-46f2-"
+"bf86-3bfdc2f512f4\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../docstring of numpy.recarray.strides:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

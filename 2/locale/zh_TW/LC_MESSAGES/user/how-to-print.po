@@ -1,0 +1,132 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../user/how-to-print.rst:5
+msgid "Printing NumPy Arrays"
+msgstr ""
+
+#: ../../../user/how-to-print.rst:8
+msgid ""
+"This page explains how to control the formatting of printed NumPy arrays. "
+"Note that these printing options apply only to arrays, not to scalars."
+msgstr ""
+
+#: ../../../user/how-to-print.rst:12
+msgid "Defining printing options"
+msgstr ""
+
+#: ../../../user/how-to-print.rst:15
+msgid "Applying settings globally"
+msgstr ""
+
+#: ../../../user/how-to-print.rst:17
+msgid ""
+"Use :func:`numpy.set_printoptions` to change printing options for the entire "
+"runtime session. To inspect current print settings, use :func:`numpy."
+"get_printoptions`:"
+msgstr ""
+
+#: ../../../user/how-to-print.rst:23
+msgid "To restore the default settings, use:"
+msgstr ""
+
+#: ../../../user/how-to-print.rst:31
+msgid "Applying settings temporarily"
+msgstr ""
+
+#: ../../../user/how-to-print.rst:33
+msgid ""
+"Use :func:`numpy.printoptions` as a context manager to temporarily override "
+"print settings within a specific scope:"
+msgstr ""
+
+#: ../../../user/how-to-print.rst:42
+msgid ""
+"All keywords that apply to :func:`numpy.set_printoptions` also apply to :"
+"func:`numpy.printoptions`."
+msgstr ""
+
+#: ../../../user/how-to-print.rst:46
+msgid "Changing the number of digits of precision"
+msgstr ""
+
+#: ../../../user/how-to-print.rst:48
+msgid ""
+"The default number of fractional digits displayed is 8. You can change this "
+"number using ``precision`` keyword."
+msgstr ""
+
+#: ../../../user/how-to-print.rst:56
+msgid ""
+"The ``floatmode`` option determines how the ``precision`` setting is "
+"interpreted. By default, ``floatmode=maxprec_equal`` displays values with "
+"the minimal number of digits needed to uniquely represent them, using the "
+"same number of digits across all elements. If you want to show exactly the "
+"same number of digits specified by ``precision``, use ``floatmode=fixed``:"
+msgstr ""
+
+#: ../../../user/how-to-print.rst:68
+msgid "Changing how `nan` and `inf` are displayed"
+msgstr ""
+
+#: ../../../user/how-to-print.rst:70
+msgid ""
+"By default, `numpy.nan` is displayed as `nan` and `numpy.inf` is displayed "
+"as `inf`. You can override these representations using the ``nanstr`` and "
+"``infstr`` options:"
+msgstr ""
+
+#: ../../../user/how-to-print.rst:80
+msgid "Controlling scientific notations"
+msgstr ""
+
+#: ../../../user/how-to-print.rst:82
+msgid "By default, NumPy uses scientific notation when:"
+msgstr ""
+
+#: ../../../user/how-to-print.rst:84
+msgid "The absolute value of the smallest number is less than ``1e-4``, or"
+msgstr ""
+
+#: ../../../user/how-to-print.rst:85
+msgid ""
+"The ratio of the largest to the smallest absolute value is greater than "
+"``1e3``"
+msgstr ""
+
+#: ../../../user/how-to-print.rst:91
+msgid ""
+"To suppress scientific notation and always use fixed-point notation, set "
+"``suppress=True``:"
+msgstr ""
+
+#: ../../../user/how-to-print.rst:101
+msgid "Applying custom formatting functions"
+msgstr ""
+
+#: ../../../user/how-to-print.rst:103
+msgid ""
+"You can apply custom formatting functions to specific or all data types "
+"using ``formatter`` keyword. See :func:`numpy.set_printoptions` for more "
+"details on supported format keys."
+msgstr ""
+
+#: ../../../user/how-to-print.rst:106
+msgid "For example, to format `datetime64` values with a custom function:"
+msgstr ""

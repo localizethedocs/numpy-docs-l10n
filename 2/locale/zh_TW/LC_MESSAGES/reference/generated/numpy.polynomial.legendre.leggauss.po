@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.legendre.leggauss.rst:4
+msgid "numpy.polynomial.legendre.leggauss"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.leggauss:2
+msgid "Gauss-Legendre quadrature."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.leggauss:4
+msgid ""
+"Computes the sample points and weights for Gauss-Legendre quadrature. These "
+"sample points and weights will correctly integrate polynomials of degree :"
+"math:`2*deg - 1` or less over the interval :math:`[-1, 1]` with the weight "
+"function :math:`f(x) = 1`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.leggauss:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.leggauss:12
+msgid "**deg**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.leggauss:-1
+msgid "int"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.leggauss:12
+msgid "Number of sample points and weights. It must be >= 1."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.leggauss:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.leggauss:17
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.leggauss:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.leggauss:17
+msgid "1-D ndarray containing the sample points."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.leggauss:27
+msgid "**y**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.leggauss:20
+msgid "1-D ndarray containing the weights."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.leggauss:30
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.leggauss:31
+msgid ""
+"The results have only been tested up to degree 100, higher degrees may be "
+"problematic. The weights are determined by using the fact that"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.leggauss:34
+msgid ""
+"w_k = c / (L'_n(x_k) * L_{n-1}(x_k))\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.leggauss:36
+msgid ""
+"where :math:`c` is a constant independent of :math:`k` and :math:`x_k` is "
+"the k'th root of :math:`L_n`, and then scaling the results to get the right "
+"value when integrating 1."
+msgstr ""

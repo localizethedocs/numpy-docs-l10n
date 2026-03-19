@@ -1,0 +1,187 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.binary_repr.rst:4
+msgid "numpy.binary\\_repr"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:2
+msgid "Return the binary representation of the input number as a string."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:4
+msgid ""
+"For negative numbers, if width is not given, a minus sign is added to the "
+"front. If width is given, the two's complement of the number is returned, "
+"with respect to that width."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:8
+msgid ""
+"In a two's-complement system negative numbers are represented by the two's "
+"complement of the absolute value. This is the most common method of "
+"representing signed integers on computers [R962252997619-1]_. A N-bit two's-"
+"complement system can represent every integer in the range :math:`-2^{N-1}` "
+"to :math:`+2^{N-1}-1`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:17
+msgid "**num**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:-1
+msgid "int"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:17
+msgid "Only an integer decimal number can be used."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:24
+msgid "**width**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:20
+msgid ""
+"The length of the returned string if `num` is positive, or the length of the "
+"two's complement if `num` is negative, provided that `width` is at least a "
+"sufficient number of bits for `num` to be represented in the designated "
+"form. If the `width` value is insufficient, an error is raised."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:35
+msgid "**bin**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:-1
+msgid "str"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:29
+msgid "Binary representation of `num` or two's complement of `num`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:40
+msgid ":obj:`base_repr`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:41
+msgid "Return a string representation of a number in the given base system."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:42
+msgid ":obj:`bin`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:43
+msgid "Python's built-in binary representation generator of an integer."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:47
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:48
+msgid ""
+"`binary_repr` is equivalent to using `base_repr` with base 2, but about 25x "
+"faster."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:52
+msgid "References"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:53
+msgid ""
+"Wikipedia, \"Two's complement\", https://en.wikipedia.org/wiki/"
+"Two's_complement"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:58
+msgid "[R962252997619-1]_"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:61
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:74
+msgid ""
+"The two's complement is returned when the input number is negative and width "
+"is specified:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:-1
+msgid ""
+"<div id=\"e84625ae-d262-4041-80ee-fe061d92aa74\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('88b350de-6e7d-4ebc-a1b6-ec2a68f38517','e84625ae-"
+"d262-4041-80ee-fe061d92aa74')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('88b350de-6e7d-4ebc-a1b6-ec2a68f38517','e84625ae-d262-4041-80ee-"
+"fe061d92aa74')\">Open In Tab</button></div><div id=\"cf7d0747-d31e-4008-9c29-"
+"d5947522848f\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.binary_repr:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

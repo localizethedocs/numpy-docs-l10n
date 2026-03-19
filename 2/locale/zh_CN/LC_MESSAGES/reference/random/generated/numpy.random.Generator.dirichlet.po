@@ -1,0 +1,187 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/generated/numpy.random.Generator.dirichlet.rst:4
+msgid "numpy.random.Generator.dirichlet"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.dirichlet.rst:8
+msgid "method"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:2
+msgid "Draw samples from the Dirichlet distribution."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:4
+msgid ""
+"Draw `size` samples of dimension k from a Dirichlet distribution. A "
+"Dirichlet-distributed random variable can be seen as a multivariate "
+"generalization of a Beta distribution. The Dirichlet distribution is a "
+"conjugate prior of a multinomial distribution in Bayesian inference."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:14
+msgid "**alpha**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:-1
+msgid "sequence of floats, length k"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:13
+msgid ""
+"Parameter of the distribution (length ``k`` for sample of length ``k``)."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:19
+msgid "**size**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:-1
+msgid "int or tuple of ints, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:17
+msgid ""
+"Output shape.  If the given shape is, e.g., ``(m, n)``, then ``m * n * k`` "
+"samples are drawn.  Default is None, in which case a vector of length ``k`` "
+"is returned."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:27
+msgid "**samples**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:-1
+msgid "ndarray,"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:24
+msgid "The drawn samples, of shape ``(size, k)``."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:35
+msgid "ValueError"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:32
+msgid "If any value in ``alpha`` is less than zero"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:38
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:39
+msgid ""
+"The Dirichlet distribution is a distribution over vectors :math:`x` that "
+"fulfil the conditions :math:`x_i>0` and :math:`\\sum_{i=1}^k x_i = 1`."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:43
+msgid ""
+"The probability density function :math:`p` of a Dirichlet-distributed random "
+"vector :math:`X` is proportional to"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:47
+msgid ""
+"p(x) \\propto \\prod_{i=1}^{k}{x^{\\alpha_i-1}_i},\n"
+"\n"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:49
+msgid ""
+"where :math:`\\alpha` is a vector containing the positive concentration "
+"parameters."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:52
+msgid ""
+"The method uses the following property for computation: let :math:`Y` be a "
+"random vector which has components that follow a standard gamma "
+"distribution, then :math:`X = \\frac{1}{\\sum_{i=1}^k{Y_i}} Y` is Dirichlet-"
+"distributed"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:58
+msgid "References"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:59
+msgid ""
+"David McKay, \"Information Theory, Inference and Learning Algorithms,\" "
+"chapter 23, https://www.inference.org.uk/mackay/itila/"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:62
+msgid ""
+"Wikipedia, \"Dirichlet distribution\", https://en.wikipedia.org/wiki/"
+"Dirichlet_distribution"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:67
+msgid "[R0fe533894e26-1]_, [R0fe533894e26-2]_"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:70
+msgid "Examples"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.dirichlet.rst:3
+msgid ""
+"Taking an example cited in Wikipedia, this distribution can be used if one "
+"wanted to cut strings (each of initial length 1.0) into K pieces with "
+"different lengths, where each piece had, on average, a designated average "
+"length, but allowing some variation in the relative sizes of the pieces."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:94
+msgid ""
+"<div id=\"47db2b28-f2ba-41a3-a87e-7153a87247f6\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('03586399-0e26-4920-8354-4732e9803918','47db2b28-"
+"f2ba-41a3-a87e-7153a87247f6')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('03586399-0e26-4920-8354-4732e9803918','47db2b28-f2ba-41a3-"
+"a87e-7153a87247f6')\">Open In Tab</button></div><div "
+"id=\"a2563e13-67c3-4957-96b7-1910283ff7a9\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:94
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../../try_examples.json\");});</script>"
+msgstr ""

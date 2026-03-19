@@ -1,0 +1,437 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../user/troubleshooting-importerror.rst:11
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:15
+msgid ""
+"Since this information may be updated regularly, please ensure you are "
+"viewing the most `up-to-date version <https://numpy.org/devdocs/user/"
+"troubleshooting-importerror.html>`_."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:20
+msgid "ImportError"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:22
+msgid ""
+"In certain cases a failed installation or setup issue can cause you to see "
+"the following error message::"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:25
+msgid ""
+"IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!\n"
+"\n"
+"Importing the numpy c-extensions failed. This error can happen for\n"
+"different reasons, often due to issues with your setup."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:30
+msgid "The error also has additional information to help you troubleshoot:"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:32
+msgid "Your Python version"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:33
+msgid "Your NumPy version"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:35
+msgid ""
+"Please check both of these carefully to see if they are what you expect. You "
+"may need to check your ``PATH`` or ``PYTHONPATH`` environment variables (see "
+"`Check Environment Variables`_ below)."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:39
+msgid ""
+"The following sections list commonly reported issues depending on your "
+"setup. If you have an issue/solution that you think should appear please "
+"open a NumPy issue so that it will be added."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:43
+msgid ""
+"There are a few commonly reported issues depending on your system/setup. If "
+"none of the following tips help you, please be sure to note the following:"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:46
+msgid "how you installed Python"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:47
+msgid "how you installed NumPy"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:48
+msgid "your operating system"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:49
+msgid "whether or not you have multiple versions of Python installed"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:50
+msgid ""
+"if you built from source, your compiler versions and ideally a build log"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:52
+msgid "when investigating further and asking for support."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:56
+msgid "Using Python from ``conda`` (Anaconda)"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:58
+msgid ""
+"Please make sure that you have activated your conda environment. See also "
+"the `conda user-guide <https://docs.conda.io/projects/conda/en/latest/user-"
+"guide/tasks/manage-environments.html#activating-an-environment>`_. If you "
+"use an external editor/development environment it will have to be set up "
+"correctly.  See below for solutions for some common setups."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:64
+msgid "Using PyCharm with Anaconda Python"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:66
+msgid ""
+"There are fairly common issues when using PyCharm together with Anaconda, "
+"please see the `PyCharm support <https://www.jetbrains.com/help/pycharm/"
+"conda-support-creating-conda-virtual-environment.html>`_"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:70
+msgid "Using VS Code with Anaconda Python (or environments)"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:72
+msgid ""
+"A commonly reported issue is related to the environment activation within "
+"VSCode. Please see the `VSCode support <https://code.visualstudio.com/docs/"
+"python/environments>`_ for information on how to correctly set up VSCode "
+"with virtual environments or conda."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:78
+msgid "Using Eclipse/PyDev with Anaconda Python (or environments)"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:80
+msgid ""
+"Please see the `Anaconda Documentation <https://docs.anaconda.com/working-"
+"with-conda/ide-tutorials/eclipse-pydev/>`_ on how to properly configure "
+"Eclipse/PyDev to use Anaconda Python with specific conda environments."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:87
+msgid "Debug build on Windows"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:89
+msgid ""
+"Rather than building your project in ``DEBUG`` mode on windows, try building "
+"in ``RELEASE`` mode with debug symbols and no optimization. Full ``DEBUG`` "
+"mode on windows changes the names of the DLLs python expects to find, so if "
+"you wish to truly work in ``DEBUG`` mode you will need to recompile the "
+"entire stack of python modules you work with including NumPy"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:98
+msgid "All setups"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:100
+msgid ""
+"Occasionally there may be simple issues with old or bad installations of "
+"NumPy. In this case you may just try to uninstall and reinstall NumPy. Make "
+"sure that NumPy is not found after uninstalling."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:106
+msgid "Development setup"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:108
+msgid ""
+"If you are using a development setup, make sure to run ``git clean -xdf`` to "
+"delete all files not under version control (be careful not to lose any "
+"modifications you made, e.g. ``site.cfg``). In many cases files from old "
+"builds may lead to incorrect builds."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:115
+msgid "Check environment variables"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:117
+msgid ""
+"In general how to set and check your environment variables depends on your "
+"system. If you can open a correct python shell, you can also run the "
+"following in python::"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:121
+msgid ""
+"import os\n"
+"print(\"PYTHONPATH:\", os.environ.get('PYTHONPATH'))\n"
+"print(\"PATH:\", os.environ.get('PATH'))"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:125
+msgid ""
+"This may mainly help you if you are not running the python and/or NumPy "
+"version you are expecting to run."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:130
+msgid "Downstream ImportError, AttributeError or C-API/ABI incompatibility"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:132
+msgid "If you see a message such as::"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:134
+msgid ""
+"A module that was compiled using NumPy 1.x cannot be run in\n"
+"NumPy 2.0.0 as it may crash. To support both 1.x and 2.x\n"
+"versions of NumPy, modules must be compiled with NumPy 2.0.\n"
+"Some module may need to rebuild instead e.g. with 'pybind11>=2.12'."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:139
+msgid "either as an ``ImportError`` or with::"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:141
+msgid "AttributeError: _ARRAY_API not found"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:143
+msgid "or other errors such as::"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:145
+msgid ""
+"RuntimeError: module compiled against API version v1 but this version of "
+"numpy is v2"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:147
+msgid "or when a package implemented with Cython::"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:149
+msgid ""
+"ValueError: numpy.dtype size changed, may indicate binary incompatibility. "
+"Expected 96 from C header, got 88 from PyObject"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:151
+msgid ""
+"This means that a package depending on NumPy was build in a way that is not "
+"compatible with the NumPy version found. If this error is due to a recent "
+"upgrade to NumPy 2, the easiest solution may be to simply downgrade NumPy to "
+"``'numpy<2'``."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:156
+msgid ""
+"To understand the cause, search the traceback (from the back) to find the "
+"first line that isn't inside NumPy to see which package has the "
+"incompatibility. Note your NumPy version and the version of the incompatible "
+"package to help you find the best solution."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:161
+msgid "There can be various reasons for the incompatibility:"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:163
+msgid ""
+"You have recently upgraded NumPy, most likely to NumPy 2, and the other "
+"module now also needs to be upgraded.  (NumPy 2 was released in June 2024.)"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:166
+msgid ""
+"You have version constraints and ``pip`` may have installed a combination of "
+"incompatible packages."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:169
+msgid ""
+"You have compiled locally or have copied a compiled extension from elsewhere "
+"(which is, in general, a bad idea)."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:172
+msgid "The best solution will usually be to upgrade the failing package:"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:174
+msgid ""
+"If you installed it for example through ``pip``, try upgrading it with ``pip "
+"install package_name --upgrade``."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:177
+msgid ""
+"If it is your own package or it is build locally, you need recompiled for "
+"the new NumPy version (for details see :ref:`depending_on_numpy`). It may be "
+"that a reinstall of the package is sufficient to fix it."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:181
+msgid ""
+"When these steps fail, you should inform the package maintainers since they "
+"probably need to make a new, compatible, release."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:184
+msgid ""
+"However, upgrading may not always be possible because a compatible version "
+"does not yet exist or cannot be installed for other reasons.  In that case:"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:187
+msgid "Install a compatible NumPy version:"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:189
+msgid ""
+"Try downgrading NumPy with ``pip install 'numpy<2'`` (NumPy 2 was released "
+"in June 2024)."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:191
+msgid ""
+"If your NumPy version is old, you can try upgrading it for example with "
+"``pip install numpy --upgrade``."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:194
+msgid ""
+"Add additional version pins to the failing package to help ``pip`` resolve "
+"compatible versions of NumPy and the package."
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:200
+msgid "Segfaults or crashes"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:202
+msgid ""
+"NumPy tries to use advanced CPU features (SIMD) to speed up operations. If "
+"you are getting an \"illegal instruction\" error or a segfault, one cause "
+"could be that the environment claims it can support one or more of these "
+"features but actually cannot. This can happen inside a docker image or a VM "
+"(qemu, VMWare, ...)"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:208
+msgid ""
+"You can use the output of ``np.show_runtime()`` to show which SIMD features "
+"are detected. For instance::"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:211
+msgid ""
+">>> np.show_runtime()\n"
+"WARNING: `threadpoolctl` not found in system! Install it by `pip install \\\n"
+"threadpoolctl`. Once installed, try `np.show_runtime` again for more "
+"detailed\n"
+"build information\n"
+"[{'simd_extensions': {'baseline': ['SSE', 'SSE2', 'SSE3'],\n"
+"                      'found': ['SSSE3',\n"
+"                                'SSE41',\n"
+"                                'POPCNT',\n"
+"                                'SSE42',\n"
+"                                'AVX',\n"
+"                                'F16C',\n"
+"                                'FMA3',\n"
+"                                'AVX2'],\n"
+"                      'not_found': ['AVX512F',\n"
+"                                    'AVX512CD',\n"
+"                                    'AVX512_KNL',\n"
+"                                    'AVX512_KNM',\n"
+"                                    'AVX512_SKX',\n"
+"                                    'AVX512_CLX',\n"
+"                                    'AVX512_CNL',\n"
+"                                    'AVX512_ICL']}}]"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:233
+msgid ""
+"In this case, it shows AVX2 and FMA3 under the ``found`` section, so you can "
+"try disabling them by setting ``NPY_DISABLE_CPU_FEATURES=\"AVX2,FMA3\"`` in "
+"your environment before running python (for cmd.exe on windows)::"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:237
+msgid ""
+">SET NPY_DISABLE_CPU_FEATURES=\"AVX2,FMA3\"\n"
+">python <myprogram.py>"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:240
+msgid ""
+"By installing threadpoolctl ``np.show_runtime()`` will show additional "
+"information::"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:242
+msgid ""
+"...\n"
+"{'architecture': 'Zen',\n"
+"  'filepath': '/tmp/venv3/lib/python3.9/site-packages/numpy.libs/"
+"libopenblas64_p-r0-15028c96.3.21.so',\n"
+"  'internal_api': 'openblas',\n"
+"  'num_threads': 24,\n"
+"  'prefix': 'libopenblas',\n"
+"  'threading_layer': 'pthreads',\n"
+"  'user_api': 'blas',\n"
+"  'version': '0.3.21'}]"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:252
+msgid ""
+"If you use the wheel from PyPI, it contains code from the OpenBLAS project "
+"to speed up matrix operations. This code too can try to use SIMD "
+"instructions. It has a different mechanism for choosing which to use, based "
+"on a CPU architecture, You can override this architecture by setting "
+"``OPENBLAS_CORETYPE``: a minimal value for ``x86_64`` is "
+"``OPENBLAS_CORETYPE=Haswell``.  This too needs to be set before running your "
+"python (this time for posix)::"
+msgstr ""
+
+#: ../../../user/troubleshooting-importerror.rst:260
+msgid "$ OPENBLAS_CORETYPE=Haswell python <myprogram.py>"
+msgstr ""

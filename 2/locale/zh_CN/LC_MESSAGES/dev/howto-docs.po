@@ -1,0 +1,854 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../dev/howto-docs.rst:5
+msgid "How to contribute to the NumPy documentation"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:7
+msgid ""
+"This guide will help you decide what to contribute and how to submit it to "
+"the official NumPy documentation."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:12
+msgid "Documentation team meetings"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:14
+msgid ""
+"The NumPy community has set a firm goal of improving its documentation. We "
+"hold regular documentation meetings on Zoom (dates are announced on the "
+"`numpy-discussion mailing list <https://mail.python.org/mailman/listinfo/"
+"numpy-discussion>`__), and everyone is welcome. Reach out if you have "
+"questions or need someone to guide you through your first steps -- we're "
+"happy to help. Minutes are taken `on hackmd.io <https://hackmd.io/"
+"oB_boakvRqKR-_2jRV-Qjg>`__ and stored in the `NumPy Archive repository "
+"<https://github.com/numpy/archive>`__."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:26
+msgid "What's needed"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:28
+msgid ""
+"The :ref:`NumPy Documentation <numpy_docs_mainpage>` has the details "
+"covered. API reference documentation is generated directly from `docstrings "
+"<https://www.python.org/dev/peps/pep-0257/>`_ in the code when the "
+"documentation is :ref:`built<howto-build-docs>`. Although we have mostly "
+"complete reference documentation for each function and class exposed to "
+"users, there is a lack of usage examples for some of them."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:35
+msgid ""
+"What we lack are docs with broader scope -- tutorials, how-tos, and "
+"explanations. Reporting defects is another way to contribute. We discuss "
+"both."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:40
+msgid "Contributing fixes"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:42
+msgid ""
+"We're eager to hear about and fix doc defects. But to attack the biggest "
+"problems we end up having to defer or overlook some bug reports. Here are "
+"the best defects to go after."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:46
+msgid ""
+"Top priority goes to **technical inaccuracies** -- a docstring missing a "
+"parameter, a faulty description of a function/parameter/method, and so on. "
+"Other \"structural\" defects like broken links also get priority. All these "
+"fixes are easy to confirm and put in place. You can submit a `pull request "
+"(PR) <https://numpy.org/devdocs/dev/index.html#devindex>`__ with the fix, if "
+"you know how to do that; otherwise please `open an issue <https://github.com/"
+"numpy/numpy/issues>`__."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:54
+msgid ""
+"**Typos and misspellings** fall on a lower rung; we welcome hearing about "
+"them but may not be able to fix them promptly. These too can be handled as "
+"pull requests or issues."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:58
+msgid ""
+"Obvious **wording** mistakes (like leaving out a \"not\") fall into the typo "
+"category, but other rewordings -- even for grammar -- require a judgment "
+"call, which raises the bar. Test the waters by first presenting the fix as "
+"an issue."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:62
+msgid ""
+"Some functions/objects like numpy.ndarray.transpose, numpy.array etc. "
+"defined in C-extension modules have their docstrings defined separately in "
+"`_add_newdocs.py <https://github.com/numpy/numpy/blob/main/numpy/_core/"
+"_add_newdocs.py>`__"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:68
+msgid "Contributing new pages"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:70
+msgid ""
+"Your frustrations using our documents are our best guide to what needs "
+"fixing."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:72
+msgid ""
+"If you write a missing doc you join the front line of open source, but it's "
+"a meaningful contribution just to let us know what's missing. If you want to "
+"compose a doc, run your thoughts by the `mailing list <https://mail.python."
+"org/mailman/listinfo/numpy-discussion>`__ for further ideas and feedback. If "
+"you want to alert us to a gap, `open an issue <https://github.com/numpy/"
+"numpy/issues>`__. See `this issue <https://github.com/numpy/numpy/"
+"issues/15760>`__ for an example."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:80
+msgid ""
+"If you're looking for subjects, our formal roadmap for documentation is a "
+"*NumPy Enhancement Proposal (NEP)*, :ref:`NEP44`. It identifies areas where "
+"our docs need help and lists several additions we'd like to see, including :"
+"ref:`Jupyter notebooks <numpy_tutorials>`."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:89
+msgid "Documentation framework"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:91
+msgid ""
+"There are formulas for writing useful documents, and four formulas cover "
+"nearly everything. There are four formulas because there are four categories "
+"of document -- ``tutorial``, ``how-to guide``, ``explanation``, and "
+"``reference``. The insight that docs divide up this way belongs to Daniele "
+"Procida and his `Diátaxis Framework <https://diataxis.fr/>`__. When you "
+"begin a document or propose one, have in mind which of these types it will "
+"be."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:101
+msgid "NumPy tutorials"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:103
+msgid ""
+"In addition to the documentation that is part of the NumPy source tree, you "
+"can submit content in Jupyter Notebook format to the `NumPy Tutorials "
+"<https://numpy.org/numpy-tutorials>`__ page. This set of tutorials and "
+"educational materials is meant to provide high-quality resources by the "
+"NumPy project, both for self-learning and for teaching classes with. These "
+"resources are developed in a separate GitHub repository, `numpy-tutorials "
+"<https://github.com/numpy/numpy-tutorials>`__, where you can check out "
+"existing notebooks, open issues to suggest new topics or submit your own "
+"tutorials as pull requests."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:116
+msgid "More on contributing"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:118
+msgid ""
+"Don't worry if English is not your first language, or if you can only come "
+"up with a rough draft. Open source is a community effort. Do your best -- "
+"we'll help fix issues."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:122
+msgid ""
+"Images and real-life data make text more engaging and powerful, but be sure "
+"what you use is appropriately licensed and available. Here again, even a "
+"rough idea for artwork can be polished by others."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:126
+msgid ""
+"For now, the only data formats accepted by NumPy are those also used by "
+"other Python scientific libraries like pandas, SciPy, or Matplotlib. We're "
+"developing a package to accept more formats; contact us for details."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:130
+msgid ""
+"NumPy documentation is kept in the source code tree. To get your document "
+"into the docbase you must download the tree, :ref:`build it <howto-build-"
+"docs>`, and submit a pull request. If GitHub and pull requests are new to "
+"you, check our :ref:`Contributor Guide <devindex>`."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:135
+msgid ""
+"Our markup language is reStructuredText (rST), which is more elaborate than "
+"Markdown. Sphinx, the tool many Python projects use to build and link "
+"project documentation, converts the rST into HTML and other formats. For "
+"more on rST, see the `Quick reStructuredText Guide <https://docutils."
+"sourceforge.io/docs/user/rst/quickref.html>`__ or the `reStructuredText "
+"Primer <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics."
+"html>`__"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:146
+msgid "Contributing indirectly"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:148
+msgid ""
+"If you run across outside material that would be a useful addition to the "
+"NumPy docs, let us know by `opening an issue <https://github.com/numpy/numpy/"
+"issues>`__."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:151
+msgid ""
+"You don't have to contribute here to contribute to NumPy. You've contributed "
+"if you write a tutorial on your blog, create a YouTube video, or answer "
+"questions on Stack Overflow and other sites."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:160
+msgid "Documentation style"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:165
+msgid "User documentation"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:167
+msgid ""
+"In general, we follow the `Google developer documentation style guide "
+"<https://developers.google.com/style>`_ for the User Guide."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:171
+msgid "NumPy style governs cases where:"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:173
+msgid "Google has no guidance, or"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:174
+msgid "We prefer not to use the Google style"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:176
+msgid "Our current rules:"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:178
+msgid ""
+"We pluralize *index* as *indices* rather than `indexes <https://developers."
+"google.com/style/word-list#letter-i>`_, following the precedent of :func:"
+"`numpy.indices`."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:182
+msgid "For consistency we also pluralize *matrix* as *matrices*."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:184
+msgid ""
+"Grammatical issues inadequately addressed by the NumPy or Google rules are "
+"decided by the section on \"Grammar and Usage\" in the most recent edition "
+"of the `Chicago Manual of Style <https://en.wikipedia.org/wiki/"
+"The_Chicago_Manual_of_Style>`_."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:189
+msgid ""
+"We welcome being `alerted <https://github.com/numpy/numpy/issues>`_ to cases "
+"we should add to the NumPy style rules."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:196
+msgid "Docstrings"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:198
+msgid ""
+"When using `Sphinx <https://www.sphinx-doc.org/>`_ in combination with the "
+"NumPy conventions, you should use the ``numpydoc`` extension so that your "
+"docstrings will be handled correctly. For example, Sphinx will extract the "
+"``Parameters`` section from your docstring and convert it into a field "
+"list.  Using ``numpydoc`` will also avoid the reStructuredText errors "
+"produced by plain Sphinx when it encounters NumPy docstring conventions like "
+"section headers (e.g. ``-------------``) that sphinx does not expect to find "
+"in docstrings."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:207
+msgid "It is available from:"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:209
+msgid "`numpydoc on PyPI <https://pypi.python.org/pypi/numpydoc>`_"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:210
+msgid "`numpydoc on GitHub <https://github.com/numpy/numpydoc/>`_"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:212
+msgid ""
+"Note that for documentation within NumPy, it is not necessary to do ``import "
+"numpy as np`` at the beginning of an example."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:215
+msgid ""
+"Please use the ``numpydoc`` :ref:`formatting standard <numpydoc:format>` as "
+"shown in their :ref:`example <numpydoc:example>`."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:221
+msgid "Documenting C/C++ code"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:223
+msgid ""
+"NumPy uses Doxygen_ to parse specially-formatted C/C++ comment blocks. This "
+"generates XML files, which are  converted by Breathe_ into RST, which is "
+"used by Sphinx."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:226
+msgid "**It takes three steps to complete the documentation process**:"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:229
+msgid "1. Writing the comment blocks"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:231
+msgid ""
+"Although there is still no commenting style set to follow, the Javadoc is "
+"more preferable than the others due to the similarities with the current "
+"existing non-indexed comment blocks."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:236
+msgid ""
+"Please see `\"Documenting the code\" <https://www.doxygen.nl/manual/"
+"docblocks.html>`__."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:238
+msgid "**This is what Javadoc style looks like**:"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:240
+msgid ""
+"/**\n"
+" * This a simple brief.\n"
+" *\n"
+" * And the details goes here.\n"
+" * Multi lines are welcome.\n"
+" *\n"
+" * @param  num  leave a comment for parameter num.\n"
+" * @param  str  leave a comment for the second parameter.\n"
+" * @return      leave a comment for the returned value.\n"
+" */\n"
+"int doxy_javadoc_example(int num, const char *str);\n"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:242 ../../../dev/howto-docs.rst:250
+#: ../../../dev/howto-docs.rst:300
+msgid "**And here is how it is rendered**:"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:246
+msgid "**For line comment, you can use a triple forward slash. For example**:"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:248
+msgid ""
+"/**\n"
+" *  Template to represent limbo numbers.\n"
+" *\n"
+" *  Specializations for integer types that are part of nowhere.\n"
+" *  It doesn't support with any real types.\n"
+" *\n"
+" *  @param Tp Type of the integer. Required to be an integer type.\n"
+" *  @param N  Number of elements.\n"
+"*/\n"
+"template<typename Tp, std::size_t N>\n"
+"class DoxyLimbo {\n"
+" public:\n"
+"    /// Default constructor. Initialize nothing.\n"
+"    DoxyLimbo();\n"
+"    /// Set Default behavior for copy the limbo.\n"
+"    DoxyLimbo(const DoxyLimbo<Tp, N> &l);\n"
+"    /// Returns the raw data for the limbo.\n"
+"    const Tp *data();\n"
+" protected:\n"
+"    Tp p_data[N]; ///< Example for inline comment.\n"
+"};\n"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:0
+msgid "Param Tp"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:0
+msgid "Param N"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:0
+msgid "Public Functions"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:0
+msgid "Protected Attributes"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:255
+msgid "Common Doxygen Tags:"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:258
+msgid ""
+"For more tags/commands, please take a look at https://www.doxygen.nl/manual/"
+"commands.html"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:260
+msgid "``@brief``"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:262
+msgid ""
+"Starts a paragraph that serves as a brief description. By default the first "
+"sentence of the documentation block is automatically treated as a brief "
+"description, since option `JAVADOC_AUTOBRIEF <https://www.doxygen.nl/manual/"
+"config.html#cfg_javadoc_autobrief>`__ is enabled within doxygen "
+"configurations."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:267
+msgid "``@details``"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:269
+msgid ""
+"Just like ``@brief`` starts a brief description, ``@details`` starts the "
+"detailed description. You can also start a new paragraph (blank line) then "
+"the ``@details`` command is not needed."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:272
+msgid "``@param``"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:274
+msgid ""
+"Starts a parameter description for a function parameter with name <parameter-"
+"name>, followed by a description of the parameter. The existence of the "
+"parameter is checked and a warning is given if the documentation of this (or "
+"any other) parameter is missing or not present in the function declaration "
+"or definition."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:279
+msgid "``@return``"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:281
+msgid ""
+"Starts a return value description for a function. Multiple adjacent "
+"``@return`` commands will be joined into a single paragraph. The ``@return`` "
+"description ends when a blank line or some other sectioning command is "
+"encountered."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:285
+msgid "``@code/@endcode``"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:287
+msgid ""
+"Starts/Ends a block of code. A code block is treated differently from "
+"ordinary text. It is interpreted as source code."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:290
+msgid "``@rst/@endrst``"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:292
+msgid "Starts/Ends a block of reST markup."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:295
+msgid "Example"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:296
+msgid "**Take a look at the following example**:"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:298
+msgid ""
+"/**\n"
+" * A comment block contains reST markup.\n"
+" * @rst\n"
+" * .. note::\n"
+" *\n"
+" *   Thanks to Breathe_, we were able to bring it to Doxygen_\n"
+" *\n"
+" * Some code example::\n"
+" *\n"
+" *   int example(int x) {\n"
+" *       return x * 2;\n"
+" *   }\n"
+" * @endrst\n"
+" */\n"
+"void doxy_reST_example(void);\n"
+msgstr ""
+
+#: ../../../../<breathe>:-1
+msgid "A comment block contains reST markup."
+msgstr ""
+
+#: ../../../../<breathe>:-1
+msgid "Some code example:int example(int x) {     return x * 2; }"
+msgstr ""
+
+#: ../../../../<breathe>:1
+msgid "Some code example::"
+msgstr ""
+
+#: ../../../../<breathe>:1
+msgid ""
+"int example(int x) {\n"
+"    return x * 2;\n"
+"}"
+msgstr ""
+
+#: ../../../../<breathe>:1
+msgid "Thanks to Breathe_, we were able to bring it to Doxygen_"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:305
+msgid "2. Feeding Doxygen"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:307
+msgid ""
+"Not all headers files are collected automatically. You have to add the "
+"desired C/C++ header paths within the sub-config files of Doxygen."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:310
+msgid ""
+"Sub-config files have the unique name ``.doxyfile``, which you can usually "
+"find near directories that contain documented headers. You need to create a "
+"new config file if there's not one located in a path close(2-depth) to the "
+"headers you want to add."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:314
+msgid ""
+"Sub-config files can accept any of Doxygen_ `configuration options <https://"
+"www.doxygen.nl/manual/config.html>`__, but do not override or re-initialize "
+"any configuration option, rather only use the concatenation operator \"+=\". "
+"For example::"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:318
+msgid ""
+"# to specify certain headers\n"
+"INPUT += @CUR_DIR/header1.h \\\n"
+"         @CUR_DIR/header2.h\n"
+"# to add all headers in certain path\n"
+"INPUT += @CUR_DIR/to/headers\n"
+"# to define certain macros\n"
+"PREDEFINED += C_MACRO(X)=X\n"
+"# to enable certain branches\n"
+"PREDEFINED += NPY_HAVE_FEATURE \\\n"
+"              NPY_HAVE_FEATURE2"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:330
+msgid ""
+"@CUR_DIR is a template constant returns the current dir path of the sub-"
+"config file."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:334
+msgid "3. Inclusion directives"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:336
+msgid ""
+"Breathe_ provides a wide range of custom directives to allow converting the "
+"documents generated by Doxygen_ into reST files."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:340
+msgid ""
+"For more information, please check out \"`Directives & Config Variables "
+"<https://breathe.readthedocs.io/en/latest/directives.html>`__\""
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:343
+msgid "Common directives:"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:345
+msgid "``doxygenfunction``"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:347
+msgid ""
+"This directive generates the appropriate output for a single function. The "
+"function name is required to be unique in the project."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:350
+msgid ""
+".. doxygenfunction:: <function name>\n"
+"    :outline:\n"
+"    :no-link:"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:356
+msgid ""
+"Checkout the `example <https://breathe.readthedocs.io/en/latest/function."
+"html#function-example>`__ to see it in action."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:360
+msgid "``doxygenclass``"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:362
+msgid ""
+"This directive generates the appropriate output for a single class. It takes "
+"the standard project, path, outline and no-link options and additionally the "
+"members, protected-members, private-members, undoc-members, membergroups and "
+"members-only options:"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:367
+msgid ""
+".. doxygenclass:: <class name>\n"
+"   :members: [...]\n"
+"   :protected-members:\n"
+"   :private-members:\n"
+"   :undoc-members:\n"
+"   :membergroups: ...\n"
+"   :members-only:\n"
+"   :outline:\n"
+"   :no-link:"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:379
+msgid ""
+"Checkout the `doxygenclass documentation <https://breathe.readthedocs.io/en/"
+"latest/class.html#class-example>`__ for more details and to see it in action."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:382
+msgid "``doxygennamespace``"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:384
+msgid ""
+"This directive generates the appropriate output for the contents of a "
+"namespace. It takes the standard project, path, outline and no-link options "
+"and additionally the content-only, members, protected-members, private-"
+"members and undoc-members options. To reference a nested namespace, the full "
+"namespaced path must be provided, e.g. foo::bar for the bar namespace inside "
+"the foo namespace."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:390
+msgid ""
+".. doxygennamespace:: <namespace>\n"
+"   :content-only:\n"
+"   :outline:\n"
+"   :members:\n"
+"   :protected-members:\n"
+"   :private-members:\n"
+"   :undoc-members:\n"
+"   :no-link:"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:401
+msgid ""
+"Checkout the `doxygennamespace documentation <https://breathe.readthedocs.io/"
+"en/latest/namespace.html#namespace-example>`__ for more details and to see "
+"it in action."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:404
+msgid "``doxygengroup``"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:406
+msgid ""
+"This directive generates the appropriate output for the contents of a "
+"doxygen group. A doxygen group can be declared with specific doxygen markup "
+"in the source comments as covered in the doxygen `grouping documentation "
+"<https://www.doxygen.nl/manual/grouping.html>`__."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:410
+msgid ""
+"It takes the standard project, path, outline and no-link options and "
+"additionally the content-only, members, protected-members, private-members "
+"and undoc-members options."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:413
+msgid ""
+".. doxygengroup:: <group name>\n"
+"   :content-only:\n"
+"   :outline:\n"
+"   :members:\n"
+"   :protected-members:\n"
+"   :private-members:\n"
+"   :undoc-members:\n"
+"   :no-link:\n"
+"   :inner:"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:425
+msgid ""
+"Checkout the `doxygengroup documentation <https://breathe.readthedocs.io/en/"
+"latest/group.html#group-example>`__ for more details and to see it in action."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:433
+msgid "Legacy directive"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:435
+msgid ""
+"If a function, module or API is in *legacy* mode, meaning that it is kept "
+"around for backwards compatibility reasons, but is not recommended to use in "
+"new code, you can use the ``.. legacy::`` directive."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:439
+msgid ""
+"By default, if used with no arguments, the legacy directive will generate "
+"the following output:"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:-1
+msgid "Legacy"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:443
+msgid ""
+"This submodule is considered legacy and will no longer receive updates. This "
+"could also mean it will be removed in future NumPy versions."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:445
+msgid ""
+"We strongly recommend that you also add a custom message, such as a new API "
+"to replace the old one::"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:448
+msgid ""
+".. legacy::\n"
+"\n"
+"   For more details, see :ref:`distutils-status-migration`."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:452
+msgid ""
+"This message will be appended to the default message and will create the "
+"following output:"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:457
+msgid ""
+"This submodule is considered legacy and will no longer receive updates. This "
+"could also mean it will be removed in future NumPy versions. For more "
+"details, see :ref:`distutils-status-migration`."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:459
+msgid ""
+"Finally, if you want to mention a function, method (or any custom object) "
+"instead of a *submodule*, you can use an optional argument::"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:462
+msgid ".. legacy:: function"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:464
+msgid "This will create the following output:"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:467
+msgid ""
+"This function is considered legacy and will no longer receive updates. This "
+"could also mean it will be removed in future NumPy versions."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:470
+msgid "Documentation reading"
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:472
+msgid ""
+"The leading organization of technical writers, `Write the Docs <https://www."
+"writethedocs.org/>`__, holds conferences, hosts learning resources, and runs "
+"a Slack channel."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:476
+msgid ""
+"\"Every engineer is also a writer,\" says Google's `collection of technical "
+"writing resources <https://developers.google.com/tech-writing>`__, which "
+"includes free online courses for developers in planning and writing "
+"documents."
+msgstr ""
+
+#: ../../../dev/howto-docs.rst:481
+msgid ""
+"`Software Carpentry's <https://software-carpentry.org/lessons>`__ mission is "
+"teaching software to researchers. In addition to hosting the curriculum, the "
+"website explains how to present ideas effectively."
+msgstr ""

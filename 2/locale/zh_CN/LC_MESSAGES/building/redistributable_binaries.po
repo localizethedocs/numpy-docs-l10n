@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../building/redistributable_binaries.rst:2
+msgid "Building redistributable binaries"
+msgstr ""
+
+#: ../../../building/redistributable_binaries.rst:4
+msgid ""
+"When ``python -m build`` or ``pip wheel`` is used to build a NumPy wheel, "
+"that wheel will rely on external shared libraries (at least for BLAS/LAPACK "
+"and a Fortran compiler runtime library, perhaps other libraries). Such "
+"wheels therefore will only run on the system on which they are built. See "
+"`the pypackaging-native content under \"Building and installing or uploading "
+"artifacts\" <https://pypackaging-native.github.io/meta-topics/"
+"build_steps_conceptual/#building-and-installing-or-uploading-artifacts>`__ "
+"for more context on that."
+msgstr ""
+
+#: ../../../building/redistributable_binaries.rst:11
+msgid ""
+"A wheel like that is therefore an intermediate stage to producing a binary "
+"that can be distributed. That final binary may be a wheel - in that case, "
+"run ``auditwheel`` (Linux), ``delocate`` (macOS) or ``delvewheel`` (Windows) "
+"to vendor the required shared libraries into the wheel."
+msgstr ""
+
+#: ../../../building/redistributable_binaries.rst:16
+msgid ""
+"The final binary may also be in another packaging format (e.g., a ``.rpm``, "
+"``.deb`` or ``.conda`` package). In that case, there are packaging ecosystem-"
+"specific tools to first install the wheel into a staging area, then making "
+"the extension modules in that install location relocatable (e.g., by "
+"rewriting RPATHs), and then repackaging it into the final package format."
+msgstr ""

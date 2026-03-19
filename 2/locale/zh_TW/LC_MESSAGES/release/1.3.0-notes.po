@@ -1,0 +1,522 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release/1.3.0-notes.rst:3
+msgid "NumPy 1.3.0 Release Notes"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:5
+msgid ""
+"This minor includes numerous bug fixes, official python 2.6 support, and "
+"several new features such as generalized ufuncs."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:9
+msgid "Highlights"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:12
+msgid "Python 2.6 support"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:14
+msgid ""
+"Python 2.6 is now supported on all previously supported platforms, including "
+"windows."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:17
+msgid "https://www.python.org/dev/peps/pep-0361/"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:20
+msgid "Generalized ufuncs"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:22
+msgid ""
+"There is a general need for looping over not only functions on scalars but "
+"also over functions on vectors (or arrays), as explained on http://scipy.org/"
+"scipy/numpy/wiki/GeneralLoopingFunctions. We propose to realize this concept "
+"by generalizing the universal functions (ufuncs), and provide a C "
+"implementation that adds ~500 lines to the numpy code base. In current "
+"(specialized) ufuncs, the elementary function is limited to element-by-"
+"element operations, whereas the generalized version supports \"sub-array\" "
+"by \"sub-array\" operations. The Perl vector library PDL provides a similar "
+"functionality and its terms are re-used in the following."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:32
+msgid ""
+"Each generalized ufunc has information associated with it that states what "
+"the \"core\" dimensionality of the inputs is, as well as the corresponding "
+"dimensionality of the outputs (the element-wise ufuncs have zero core "
+"dimensions). The list of the core dimensions for all arguments is called the "
+"\"signature\" of a ufunc. For example, the ufunc numpy.add has signature "
+"\"(),()->()\" defining two scalar inputs and one scalar output."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:39
+msgid ""
+"Another example is (see the GeneralLoopingFunctions page) the function "
+"inner1d(a,b) with a signature of \"(i),(i)->()\". This applies the inner "
+"product along the last axis of each input, but keeps the remaining indices "
+"intact. For example, where a is of shape (3,5,N) and b is of shape (5,N), "
+"this will return an output of shape (3,5). The underlying elementary "
+"function is called 3*5 times. In the signature, we specify one core "
+"dimension \"(i)\" for each input and zero core dimensions \"()\" for the "
+"output, since it takes two 1-d arrays and returns a scalar. By using the "
+"same name \"i\", we specify that the two corresponding dimensions should be "
+"of the same size (or one of them is of size 1 and will be broadcasted)."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:50
+msgid ""
+"The dimensions beyond the core dimensions are called \"loop\" dimensions. In "
+"the above example, this corresponds to (3,5)."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:53
+msgid ""
+"The usual numpy \"broadcasting\" rules apply, where the signature determines "
+"how the dimensions of each input/output object are split into core and loop "
+"dimensions:"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:57
+msgid ""
+"While an input array has a smaller dimensionality than the corresponding "
+"number of core dimensions, 1's are prepended to its shape.  The core "
+"dimensions are removed from all inputs and the remaining dimensions are "
+"broadcasted; defining the loop dimensions.  The output is given by the loop "
+"dimensions plus the output core dimensions."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:64
+msgid "Experimental Windows 64 bits support"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:66
+msgid ""
+"Numpy can now be built on windows 64 bits (amd64 only, not IA64), with both "
+"MS compilers and mingw-w64 compilers:"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:69
+msgid ""
+"This is *highly experimental*: DO NOT USE FOR PRODUCTION USE. See INSTALL."
+"txt, Windows 64 bits section for more information on limitations and how to "
+"build it by yourself."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:74
+msgid "New features"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:77
+msgid "Formatting issues"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:79
+msgid ""
+"Float formatting is now handled by numpy instead of the C runtime: this "
+"enables locale independent formatting, more robust fromstring and related "
+"methods. Special values (inf and nan) are also more consistent across "
+"platforms (nan vs IND/NaN, etc...), and more consistent with recent python "
+"formatting work (in 2.6 and later)."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:86
+msgid "Nan handling in max/min"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:88
+msgid ""
+"The maximum/minimum ufuncs now reliably propagate nans. If one of the "
+"arguments is a nan, then nan is returned. This affects np.min/np.max, amin/"
+"amax and the array methods max/min. New ufuncs fmax and fmin have been added "
+"to deal with non-propagating nans."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:94
+msgid "Nan handling in sign"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:96
+msgid "The ufunc sign now returns nan for the sign of anan."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:100
+msgid "New ufuncs"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:102
+msgid ""
+"fmax - same as maximum for integer types and non-nan floats. Returns the non-"
+"nan argument if one argument is nan and returns nan if both arguments are "
+"nan."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:105
+msgid ""
+"fmin - same as minimum for integer types and non-nan floats. Returns the non-"
+"nan argument if one argument is nan and returns nan if both arguments are "
+"nan."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:108
+msgid "deg2rad - converts degrees to radians, same as the radians ufunc."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:109
+msgid "rad2deg - converts radians to degrees, same as the degrees ufunc."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:110
+msgid "log2 - base 2 logarithm."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:111
+msgid "exp2 - base 2 exponential."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:112
+msgid "trunc - truncate floats to nearest integer towards zero."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:113
+msgid ""
+"logaddexp - add numbers stored as logarithms and return the logarithm of the "
+"result."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:115
+msgid ""
+"logaddexp2 - add numbers stored as base 2 logarithms and return the base 2 "
+"logarithm of the result."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:119
+msgid "Masked arrays"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:121
+msgid "Several new features and bug fixes, including:"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:123
+msgid ""
+"structured arrays should now be fully supported by MaskedArray (r6463, "
+"r6324, r6305, r6300, r6294...)"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:125
+msgid "Minor bug fixes (r6356, r6352, r6335, r6299, r6298)"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:126
+msgid "Improved support for __iter__ (r6326)"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:127
+msgid ""
+"made baseclass, sharedmask and hardmask accessible to the user (but read-"
+"only)"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:129
+msgid "doc update"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:132
+msgid "gfortran support on windows"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:134
+msgid ""
+"Gfortran can now be used as a fortran compiler for numpy on windows, even "
+"when the C compiler is Visual Studio (VS 2005 and above; VS 2003 will NOT "
+"work). Gfortran + Visual studio does not work on windows 64 bits (but gcc + "
+"gfortran does). It is unclear whether it will be possible to use gfortran "
+"and visual studio at all on x64."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:141
+msgid "Arch option for windows binary"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:143
+msgid ""
+"Automatic arch detection can now be bypassed from the command line for the "
+"superpack installed:"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:145
+msgid "numpy-1.3.0-superpack-win32.exe /arch=nosse"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:147
+msgid ""
+"will install a numpy which works on any x86, even if the running computer "
+"supports SSE set."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:151
+msgid "Deprecated features"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:154
+msgid "Histogram"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:156
+msgid ""
+"The semantics of histogram has been modified to fix long-standing issues "
+"with outliers handling. The main changes concern"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:159
+msgid "the definition of the bin edges, now including the rightmost edge, and"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:160
+msgid ""
+"the handling of upper outliers, now ignored rather than tallied in the "
+"rightmost bin."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:163
+msgid ""
+"The previous behavior is still accessible using `new=False`, but this is "
+"deprecated, and will be removed entirely in 1.4.0."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:167
+msgid "Documentation changes"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:169
+msgid ""
+"A lot of documentation has been added. Both user guide and references can be "
+"built from sphinx."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:173
+msgid "New C API"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:176
+msgid "Multiarray API"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:178
+msgid "The following functions have been added to the multiarray C API:"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:180
+msgid "PyArray_GetEndianness: to get runtime endianness"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:183
+msgid "Ufunc API"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:185
+msgid "The following functions have been added to the ufunc API:"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:187
+msgid ""
+"PyUFunc_FromFuncAndDataAndSignature: to declare a more general ufunc "
+"(generalized ufunc)."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:192
+msgid "New defines"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:194
+msgid ""
+"New public C defines are available for ARCH specific code through numpy/"
+"npy_cpu.h:"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:196
+msgid "NPY_CPU_X86: x86 arch (32 bits)"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:197
+msgid "NPY_CPU_AMD64: amd64 arch (x86_64, NOT Itanium)"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:198
+msgid "NPY_CPU_PPC: 32 bits ppc"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:199
+msgid "NPY_CPU_PPC64: 64 bits ppc"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:200
+msgid "NPY_CPU_SPARC: 32 bits sparc"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:201
+msgid "NPY_CPU_SPARC64: 64 bits sparc"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:202
+msgid "NPY_CPU_S390: S390"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:203
+msgid "NPY_CPU_IA64: ia64"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:204
+msgid "NPY_CPU_PARISC: PARISC"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:206
+msgid ""
+"New macros for CPU endianness has been added as well (see internal changes "
+"below for details):"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:209
+msgid "NPY_BYTE_ORDER: integer"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:210
+msgid "NPY_LITTLE_ENDIAN/NPY_BIG_ENDIAN defines"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:212
+msgid ""
+"Those provide portable alternatives to glibc endian.h macros for platforms "
+"without it."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:216
+msgid "Portable NAN, INFINITY, etc..."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:218
+msgid ""
+"npy_math.h now makes available several portable macro to get NAN, INFINITY:"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:220
+msgid "NPY_NAN: equivalent to NAN, which is a GNU extension"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:221
+msgid "NPY_INFINITY: equivalent to C99 INFINITY"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:222
+msgid "NPY_PZERO, NPY_NZERO: positive and negative zero respectively"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:224
+msgid ""
+"Corresponding single and extended precision macros are available as well. "
+"All references to NAN, or home-grown computation of NAN on the fly have been "
+"removed for consistency."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:229
+msgid "Internal changes"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:232
+msgid "numpy.core math configuration revamp"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:234
+msgid ""
+"This should make the porting to new platforms easier, and more robust. In "
+"particular, the configuration stage does not need to execute any code on the "
+"target platform, which is a first step toward cross-compilation."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:238
+msgid "https://www.numpy.org/neps/nep-0003-math_config_clean.html"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:241
+msgid "umath refactor"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:243
+msgid "A lot of code cleanup for umath/ufunc code (charris)."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:246
+msgid "Improvements to build warnings"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:248
+msgid "Numpy can now build with -W -Wall without warnings"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:250
+msgid "https://www.numpy.org/neps/nep-0002-warnfix.html"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:253
+msgid "Separate core math library"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:255
+msgid ""
+"The core math functions (sin, cos, etc... for basic C types) have been put "
+"into a separate library; it acts as a compatibility layer, to support most "
+"C99 maths functions (real only for now). The library includes platform-"
+"specific fixes for various maths functions, such as using those versions "
+"should be more robust than using your platform functions directly. The API "
+"for existing functions is exactly the same as the C99 math functions API; "
+"the only difference is the npy prefix (npy_cos vs cos)."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:263
+msgid "The core library will be made available to any extension in 1.4.0."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:266
+msgid "CPU arch detection"
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:268
+msgid ""
+"npy_cpu.h defines numpy specific CPU defines, such as NPY_CPU_X86, etc... "
+"Those are portable across OS and toolchains, and set up when the header is "
+"parsed, so that they can be safely used even in the case of cross-"
+"compilation (the values is not set when numpy is built), or for multi-arch "
+"binaries (e.g. fat binaries on Max OS X)."
+msgstr ""
+
+#: ../../../release/1.3.0-notes.rst:274
+msgid ""
+"npy_endian.h defines numpy specific endianness defines, modeled on the glibc "
+"endian.h. NPY_BYTE_ORDER  is equivalent to BYTE_ORDER, and one of "
+"NPY_LITTLE_ENDIAN or NPY_BIG_ENDIAN is defined. As for CPU archs, those are "
+"set when the header is parsed by the compiler, and as such can be used for "
+"cross-compilation and multi-arch binaries."
+msgstr ""

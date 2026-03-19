@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.polynomial.polyroots.rst:4
+msgid "numpy.polynomial.polynomial.polyroots"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyroots:2
+msgid "Compute the roots of a polynomial."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyroots:4
+msgid "Return the roots (a.k.a. \"zeros\") of the polynomial"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyroots:6
+msgid ""
+"p(x) = \\sum_i c[i] * x^i.\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyroots:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyroots:11
+msgid "**c**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyroots:-1
+msgid "1-D array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyroots:11
+msgid "1-D array of polynomial coefficients."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyroots:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyroots:23
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyroots:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyroots:16
+msgid ""
+"Array of the roots of the polynomial. If all the roots are real, then `out` "
+"is also real, otherwise it is complex."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyroots:28
+msgid ":obj:`numpy.polynomial.chebyshev.chebroots`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyroots:30
+msgid ":obj:`numpy.polynomial.legendre.legroots`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyroots:32
+msgid ":obj:`numpy.polynomial.laguerre.lagroots`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyroots:34
+msgid ":obj:`numpy.polynomial.hermite.hermroots`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyroots:36
+msgid ":obj:`numpy.polynomial.hermite_e.hermeroots`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyroots:40
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyroots:41
+msgid ""
+"The root estimates are obtained as the eigenvalues of the companion matrix, "
+"Roots far from the origin of the complex plane may have large errors due to "
+"the numerical instability of the power series for such values. Roots with "
+"multiplicity greater than 1 will also show larger errors as the value of the "
+"series near such points is relatively insensitive to errors in the roots. "
+"Isolated roots near the origin can be improved by a few iterations of "
+"Newton's method."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyroots:51
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyroots:-1
+msgid ""
+"<div id=\"3a57cfd2-7839-42dd-bd91-af96541aabf0\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('b5f0086d-848e-4798-b6f4-"
+"bfab710049bb','3a57cfd2-7839-42dd-bd91-af96541aabf0')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('b5f0086d-848e-4798-b6f4-bfab710049bb','3a57cfd2-7839-42dd-bd91-"
+"af96541aabf0')\">Open In Tab</button></div><div id=\"cfb96b96-a6f4-4821-8a3b-"
+"ca3f509bd94e\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyroots:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

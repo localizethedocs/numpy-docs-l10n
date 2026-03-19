@@ -1,0 +1,233 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release/1.16.6-notes.rst:5
+msgid "NumPy 1.16.6 Release Notes"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:7
+msgid ""
+"The NumPy 1.16.6 release fixes bugs reported against the 1.16.5 release, and "
+"also backports several enhancements from master that seem appropriate for a "
+"release series that is the last to support Python 2.7. The wheels on PyPI "
+"are linked with OpenBLAS v0.3.7, which should fix errors on Skylake series "
+"cpus."
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:13
+msgid ""
+"Downstream developers building this release should use Cython >= 0.29.2 and, "
+"if using OpenBLAS, OpenBLAS >= v0.3.7. The supported Python versions are 2.7 "
+"and 3.5-3.7."
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:18
+msgid "Highlights"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:20
+msgid ""
+"The ``np.testing.utils`` functions have been updated from 1.19.0-dev0. This "
+"improves the function documentation and error messages as well extending the "
+"``assert_array_compare`` function to additional types."
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:26
+msgid "New functions"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:29
+msgid "Allow matmul (`@` operator) to work with object arrays."
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:30
+msgid ""
+"This is an enhancement that was added in NumPy 1.17 and seems reasonable to "
+"include in the LTS 1.16 release series."
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:35
+msgid "Compatibility notes"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:38
+msgid "Fix regression in matmul (`@` operator) for boolean types"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:39
+msgid ""
+"Booleans were being treated as integers rather than booleans, which was a "
+"regression from previous behavior."
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:44
+msgid "Improvements"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:47
+msgid "Array comparison assertions include maximum differences"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:48
+msgid ""
+"Error messages from array comparison tests such as ``testing."
+"assert_allclose`` now include \"max absolute difference\" and \"max relative "
+"difference,\" in addition to the previous \"mismatch\" percentage.  This "
+"information makes it easier to update absolute and relative error tolerances."
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:54
+msgid "Contributors"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:56
+msgid "A total of 10 people contributed to this release."
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:58
+msgid "CakeWithSteak"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:59
+msgid "Charles Harris"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:60
+msgid "Chris Burr"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:61
+msgid "Eric Wieser"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:62
+msgid "Fernando Saravia"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:63
+msgid "Lars Grueter"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:64
+msgid "Matti Picus"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:65
+msgid "Maxwell Aladago"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:66
+msgid "Qiming Sun"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:67
+msgid "Warren Weckesser"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:70
+msgid "Pull requests merged"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:72
+msgid "A total of 14 pull requests were merged for this release."
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:74
+msgid ""
+"`#14211 <https://github.com/numpy/numpy/pull/14211>`__: BUG: Fix uint-"
+"overflow if padding with linear_ramp and negative..."
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:75
+msgid ""
+"`#14275 <https://github.com/numpy/numpy/pull/14275>`__: BUG: fixing to allow "
+"unpickling of PY3 pickles from PY2"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:76
+msgid ""
+"`#14340 <https://github.com/numpy/numpy/pull/14340>`__: BUG: Fix misuse of ."
+"names and .fields in various places (backport..."
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:77
+msgid ""
+"`#14423 <https://github.com/numpy/numpy/pull/14423>`__: BUG: test, fix "
+"regression in converting to ctypes."
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:78
+msgid ""
+"`#14434 <https://github.com/numpy/numpy/pull/14434>`__: BUG: Fixed maximum "
+"relative error reporting in assert_allclose"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:79
+msgid ""
+"`#14509 <https://github.com/numpy/numpy/pull/14509>`__: BUG: Fix regression "
+"in boolean matmul."
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:80
+msgid ""
+"`#14686 <https://github.com/numpy/numpy/pull/14686>`__: BUG: properly define "
+"PyArray_DescrCheck"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:81
+msgid ""
+"`#14853 <https://github.com/numpy/numpy/pull/14853>`__: BLD: add 'apt "
+"update' to shippable"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:82
+msgid ""
+"`#14854 <https://github.com/numpy/numpy/pull/14854>`__: BUG: Fix _ctypes "
+"class circular reference. (#13808)"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:83
+msgid ""
+"`#14856 <https://github.com/numpy/numpy/pull/14856>`__: BUG: Fix `np.einsum` "
+"errors on Power9 Linux and z/Linux"
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:84
+msgid ""
+"`#14863 <https://github.com/numpy/numpy/pull/14863>`__: BLD: Prevent -flto "
+"from optimising long double representation..."
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:85
+msgid ""
+"`#14864 <https://github.com/numpy/numpy/pull/14864>`__: BUG: lib: Fix "
+"histogram problem with signed integer arrays."
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:86
+msgid ""
+"`#15172 <https://github.com/numpy/numpy/pull/15172>`__: ENH: Backport "
+"improvements to testing functions."
+msgstr ""
+
+#: ../../../release/1.16.6-notes.rst:87
+msgid ""
+"`#15191 <https://github.com/numpy/numpy/pull/15191>`__: REL: Prepare for "
+"1.16.6 release."
+msgstr ""

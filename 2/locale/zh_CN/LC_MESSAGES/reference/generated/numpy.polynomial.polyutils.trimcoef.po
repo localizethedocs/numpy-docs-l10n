@@ -1,0 +1,138 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.polyutils.trimcoef.rst:4
+msgid "numpy.polynomial.polyutils.trimcoef"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polyutils.py:docstring
+#: of numpy.polynomial.polyutils.trimcoef:2
+msgid "Remove \"small\" \"trailing\" coefficients from a polynomial."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polyutils.py:docstring
+#: of numpy.polynomial.polyutils.trimcoef:4
+msgid ""
+"\"Small\" means \"small in absolute value\" and is controlled by the "
+"parameter `tol`; \"trailing\" means highest order coefficient(s), e.g., in "
+"``[0, 1, 1, 0, 0]`` (which represents ``0 + x + x**2 + 0*x**3 + 0*x**4``) "
+"both the 3-rd and 4-th order coefficients would be \"trimmed.\""
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polyutils.py:docstring
+#: of numpy.polynomial.polyutils.trimcoef:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polyutils.py:docstring
+#: of numpy.polynomial.polyutils.trimcoef:12
+msgid "**c**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polyutils.py:docstring
+#: of numpy.polynomial.polyutils.trimcoef:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polyutils.py:docstring
+#: of numpy.polynomial.polyutils.trimcoef:12
+msgid "1-d array of coefficients, ordered from lowest order to highest."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polyutils.py:docstring
+#: of numpy.polynomial.polyutils.trimcoef:16
+msgid "**tol**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polyutils.py:docstring
+#: of numpy.polynomial.polyutils.trimcoef:-1
+msgid "number, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polyutils.py:docstring
+#: of numpy.polynomial.polyutils.trimcoef:15
+msgid ""
+"Trailing (i.e., highest order) elements with absolute value less than or "
+"equal to `tol` (default value is zero) are removed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polyutils.py:docstring
+#: of numpy.polynomial.polyutils.trimcoef:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polyutils.py:docstring
+#: of numpy.polynomial.polyutils.trimcoef:25
+msgid "**trimmed**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polyutils.py:docstring
+#: of numpy.polynomial.polyutils.trimcoef:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polyutils.py:docstring
+#: of numpy.polynomial.polyutils.trimcoef:21
+msgid ""
+"1-d array with trailing zeros removed.  If the resulting series would be "
+"empty, a series containing a single zero is returned."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polyutils.py:docstring
+#: of numpy.polynomial.polyutils.trimcoef:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polyutils.py:docstring
+#: of numpy.polynomial.polyutils.trimcoef:35
+msgid "ValueError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polyutils.py:docstring
+#: of numpy.polynomial.polyutils.trimcoef:30
+msgid "If `tol` < 0"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polyutils.py:docstring
+#: of numpy.polynomial.polyutils.trimcoef:38
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polyutils.py:docstring
+#: of numpy.polynomial.polyutils.trimcoef:-1
+msgid ""
+"<div id=\"53c9adeb-2253-4f15-b4b3-097de08eb59d\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('36177def-eedf-4af5-"
+"b2c1-1f6903b8dbf2','53c9adeb-2253-4f15-b4b3-097de08eb59d')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('36177def-eedf-4af5-b2c1-1f6903b8dbf2','53c9adeb-2253-4f15-"
+"b4b3-097de08eb59d')\">Open In Tab</button></div><div id=\"cd4a6798-4a4f-4b0b-"
+"b182-261c9b29de75\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polyutils.py:docstring
+#: of numpy.polynomial.polyutils.trimcoef:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

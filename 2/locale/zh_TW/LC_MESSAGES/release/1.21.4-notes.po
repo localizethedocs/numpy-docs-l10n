@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release/1.21.4-notes.rst:5
+msgid "NumPy 1.21.4 Release Notes"
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:7
+msgid ""
+"The NumPy 1.21.4 is a maintenance release that fixes a few bugs discovered "
+"after 1.21.3. The most important fix here is a fix for the NumPy header "
+"files to make them work for both x86_64 and M1 hardware when included in the "
+"Mac universal2 wheels. Previously, the header files only worked for M1 and "
+"this caused problems for folks building x86_64 extensions. This problem was "
+"not seen before Python 3.10 because there were thin wheels for x86_64 that "
+"had precedence. This release also provides thin x86_64 Mac wheels for Python "
+"3.10."
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:15
+msgid ""
+"The Python versions supported in this release are 3.7-3.10. If you want to "
+"compile your own version using gcc-11, you will need to use gcc-11.2+ to "
+"avoid problems."
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:20
+msgid "Contributors"
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:22
+msgid ""
+"A total of 7 people contributed to this release.  People with a \"+\" by "
+"their names contributed a patch for the first time."
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:25
+msgid "Bas van Beek"
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:26
+msgid "Charles Harris"
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:27
+msgid "Isuru Fernando"
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:28
+msgid "Matthew Brett"
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:29
+msgid "Sayed Adel"
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:30
+msgid "Sebastian Berg"
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:31
+msgid "傅立业（Chris Fu） +"
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:34
+msgid "Pull requests merged"
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:36
+msgid "A total of 9 pull requests were merged for this release."
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:38
+msgid ""
+"`#20278 <https://github.com/numpy/numpy/pull/20278>`__: BUG: Fix shadowed "
+"reference of ``dtype`` in type stub"
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:39
+msgid ""
+"`#20293 <https://github.com/numpy/numpy/pull/20293>`__: BUG: Fix headers for "
+"universal2 builds"
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:40
+msgid ""
+"`#20294 <https://github.com/numpy/numpy/pull/20294>`__: BUG: "
+"``VOID_nonzero`` could sometimes mutate alignment flag"
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:41
+msgid ""
+"`#20295 <https://github.com/numpy/numpy/pull/20295>`__: BUG: Do not use "
+"nonzero fastpath on unaligned arrays"
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:42
+msgid ""
+"`#20296 <https://github.com/numpy/numpy/pull/20296>`__: BUG: Distutils patch "
+"to allow for 2 as a minor version (!)"
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:43
+msgid ""
+"`#20297 <https://github.com/numpy/numpy/pull/20297>`__: BUG, SIMD: Fix 64-"
+"bit/8-bit integer division by a scalar"
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:44
+msgid ""
+"`#20298 <https://github.com/numpy/numpy/pull/20298>`__: BUG, SIMD: "
+"Workaround broadcasting SIMD 64-bit integers on MSVC..."
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:45
+msgid ""
+"`#20300 <https://github.com/numpy/numpy/pull/20300>`__: REL: Prepare for the "
+"NumPy 1.21.4 release."
+msgstr ""
+
+#: ../../../release/1.21.4-notes.rst:46
+msgid ""
+"`#20302 <https://github.com/numpy/numpy/pull/20302>`__: TST: Fix a "
+"``Arrayterator`` typing test failure"
+msgstr ""

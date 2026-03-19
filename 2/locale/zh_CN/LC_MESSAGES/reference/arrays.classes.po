@@ -1,0 +1,1076 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/arrays.classes.rst:5
+msgid "Standard array subclasses"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:14
+msgid ""
+"Subclassing a ``numpy.ndarray`` is possible but if your goal is to create an "
+"array with *modified* behavior, as do dask arrays for distributed "
+"computation and cupy arrays for GPU-based computation, subclassing is "
+"discouraged. Instead, using numpy's :ref:`dispatch mechanism <basics."
+"dispatch>` is recommended."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:20
+msgid ""
+"The :class:`ndarray` can be inherited from (in Python or in C) if desired. "
+"Therefore, it can form a foundation for many useful classes. Often whether "
+"to sub-class the array object or to simply use the core array component as "
+"an internal part of a new class is a difficult decision, and can be simply a "
+"matter of choice. NumPy has several tools for simplifying how your new "
+"object interacts with other array objects, and so the choice may not be "
+"significant in the end. One way to simplify the question is by asking "
+"yourself if the object you are interested in can be replaced as a single "
+"array or does it really require two or more arrays at its core."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:31
+msgid ""
+"Note that :func:`asarray` always returns the base-class ndarray. If you are "
+"confident that your use of the array object can handle any subclass of an "
+"ndarray, then :func:`asanyarray` can be used to allow subclasses to "
+"propagate more cleanly through your subroutine. In principle, a subclass "
+"could redefine any aspect of the array and therefore, under strict "
+"guidelines, :func:`asanyarray` would rarely be useful. However, most "
+"subclasses of the array object will not redefine certain aspects of the "
+"array object such as the buffer interface, or the attributes of the array. "
+"One important example, however, of why your subroutine may not be able to "
+"handle an arbitrary subclass of an array is that matrices redefine the \"*\" "
+"operator to be matrix-multiplication, rather than element-by-element "
+"multiplication."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:47
+msgid "Special attributes and methods"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:49
+msgid ":ref:`Subclassing ndarray <basics.subclassing>`"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:51
+msgid "NumPy provides several hooks that classes can customize:"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:55
+msgid ""
+"Any class, ndarray subclass or not, can define this method or set it to None "
+"in order to override the behavior of NumPy's ufuncs. This works quite "
+"similarly to Python's ``__mul__`` and other binary operation routines."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:59
+msgid "*ufunc* is the ufunc object that was called."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:60
+msgid ""
+"*method* is a string indicating which Ufunc method was called (one of "
+"``\"__call__\"``, ``\"reduce\"``, ``\"reduceat\"``, ``\"accumulate\"``, "
+"``\"outer\"``, ``\"inner\"``)."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:63
+msgid "*inputs* is a tuple of the input arguments to the ``ufunc``."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:64
+msgid ""
+"*kwargs* is a dictionary containing the optional input arguments of the "
+"ufunc. If given, any ``out`` arguments, both positional and keyword, are "
+"passed as a :obj:`tuple` in *kwargs*. See the discussion in :ref:`ufuncs` "
+"for details."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:69
+msgid ""
+"The method should return either the result of the operation, or :obj:"
+"`NotImplemented` if the operation requested is not implemented."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:72
+msgid ""
+"If one of the input, output, or ``where`` arguments has a :func:"
+"`__array_ufunc__` method, it is executed *instead* of the ufunc.  If more "
+"than one of the arguments implements :func:`__array_ufunc__`, they are tried "
+"in the order: subclasses before superclasses, inputs before outputs, outputs "
+"before ``where``, otherwise left to right. The first routine returning "
+"something other than :obj:`NotImplemented` determines the result. If all of "
+"the :func:`__array_ufunc__` operations return :obj:`NotImplemented`, a :exc:"
+"`TypeError` is raised."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:82
+msgid ""
+"We intend to re-implement numpy functions as (generalized) Ufunc, in which "
+"case it will become possible for them to be overridden by the "
+"``__array_ufunc__`` method.  A prime candidate is :func:`~numpy.matmul`, "
+"which currently is not a Ufunc, but could be relatively easily be rewritten "
+"as a (set of) generalized Ufuncs. The same may happen with functions such "
+"as :func:`~numpy.median`, :func:`~numpy.amin`, and :func:`~numpy.argsort`."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:90
+msgid ""
+"Like with some other special methods in python, such as ``__hash__`` and "
+"``__iter__``, it is possible to indicate that your class does *not* support "
+"ufuncs by setting ``__array_ufunc__ = None``. Ufuncs always raise :exc:"
+"`TypeError` when called on an object that sets ``__array_ufunc__ = None``."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:96
+msgid ""
+"The presence of :func:`__array_ufunc__` also influences how :class:`ndarray` "
+"handles binary operations like ``arr + obj`` and ``arr < obj`` when ``arr`` "
+"is an :class:`ndarray` and ``obj`` is an instance of a custom class. There "
+"are two possibilities. If ``obj.__array_ufunc__`` is present and not None, "
+"then ``ndarray.__add__`` and friends will delegate to the ufunc machinery, "
+"meaning that ``arr + obj`` becomes ``np.add(arr, obj)``, and then :func:"
+"`~numpy.add` invokes ``obj.__array_ufunc__``. This is useful if you want to "
+"define an object that acts like an array."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:106
+msgid ""
+"Alternatively, if ``obj.__array_ufunc__`` is set to None, then as a special "
+"case, special methods like ``ndarray.__add__`` will notice this and "
+"*unconditionally* raise :exc:`TypeError`. This is useful if you want to "
+"create objects that interact with arrays via binary operations, but are not "
+"themselves arrays. For example, a units handling system might have an object "
+"``m`` representing the \"meters\" unit, and want to support the syntax ``arr "
+"* m`` to represent that the array has units of \"meters\", but not want to "
+"otherwise interact with arrays via ufuncs or otherwise. This can be done by "
+"setting ``__array_ufunc__ = None`` and defining ``__mul__`` and ``__rmul__`` "
+"methods. (Note that this means that writing an ``__array_ufunc__`` that "
+"always returns :obj:`NotImplemented` is not quite the same as setting "
+"``__array_ufunc__ = None``: in the former case, ``arr + obj`` will raise :"
+"exc:`TypeError`, while in the latter case it is possible to define a "
+"``__radd__`` method to prevent this.)"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:121
+msgid ""
+"The above does not hold for in-place operators, for which :class:`ndarray` "
+"never returns :obj:`NotImplemented`.  Hence, ``arr += obj`` would always "
+"lead to a :exc:`TypeError`.  This is because for arrays in-place operations "
+"cannot generically be replaced by a simple reverse operation.  (For "
+"instance, by default, ``arr += obj`` would be translated to ``arr = arr + "
+"obj``, i.e., ``arr`` would be replaced, contrary to what is expected for in-"
+"place array operations.)"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:129
+msgid "If you define ``__array_ufunc__``:"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:131
+msgid ""
+"If you are not a subclass of :class:`ndarray`, we recommend your class "
+"define special methods like ``__add__`` and ``__lt__`` that delegate to "
+"ufuncs just like ndarray does.  An easy way to do this is to subclass from :"
+"class:`~numpy.lib.mixins.NDArrayOperatorsMixin`."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:135
+msgid ""
+"If you subclass :class:`ndarray`, we recommend that you put all your "
+"override logic in ``__array_ufunc__`` and not also override special methods. "
+"This ensures the class hierarchy is determined in only one place rather than "
+"separately by the ufunc machinery and by the binary operation rules (which "
+"gives preference to special methods of subclasses; the alternative way to "
+"enforce a one-place only hierarchy, of setting :func:`__array_ufunc__` to "
+"None, would seem very unexpected and thus confusing, as then the subclass "
+"would not work at all with ufuncs)."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:144
+msgid ""
+":class:`ndarray` defines its own :func:`__array_ufunc__`, which, evaluates "
+"the ufunc if no arguments have overrides, and returns :obj:`NotImplemented` "
+"otherwise. This may be useful for subclasses for which :func:"
+"`__array_ufunc__` converts any instances of its own class to :class:"
+"`ndarray`: it can then pass these on to its superclass using ``super()."
+"__array_ufunc__(*inputs, **kwargs)``, and finally return the results after "
+"possible back-conversion. The advantage of this practice is that it ensures "
+"that it is possible to have a hierarchy of subclasses that extend the "
+"behaviour. See :ref:`Subclassing ndarray <basics.subclassing>` for details."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:157
+msgid ""
+"``func`` is an arbitrary callable exposed by NumPy's public API, which was "
+"called in the form ``func(*args, **kwargs)``."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:159
+msgid ""
+"``types`` is a collection :py:class:`collections.abc.Collection` of unique "
+"argument types from the original NumPy function call that implement "
+"``__array_function__``."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:162
+msgid ""
+"The tuple ``args`` and dict ``kwargs`` are directly passed on from the "
+"original call."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:165
+msgid ""
+"As a convenience for ``__array_function__`` implementers, ``types`` provides "
+"all argument types with an ``'__array_function__'`` attribute. This allows "
+"implementers to quickly identify cases where they should defer to "
+"``__array_function__`` implementations on other arguments. Implementations "
+"should not rely on the iteration order of ``types``."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:171
+msgid ""
+"Most implementations of ``__array_function__`` will start with two checks:"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:174
+msgid "Is the given function something that we know how to overload?"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:175
+msgid "Are all arguments of a type that we know how to handle?"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:177
+msgid ""
+"If these conditions hold, ``__array_function__`` should return the result "
+"from calling its implementation for ``func(*args, **kwargs)``.  Otherwise, "
+"it should return the sentinel value ``NotImplemented``, indicating that the "
+"function is not implemented by these types."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:182
+msgid ""
+"There are no general requirements on the return value from "
+"``__array_function__``, although most sensible implementations should "
+"probably return array(s) with the same type as one of the function's "
+"arguments."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:187
+msgid ""
+"It may also be convenient to define a custom decorators (``implements`` "
+"below) for registering ``__array_function__`` implementations."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:190
+msgid ""
+"HANDLED_FUNCTIONS = {}\n"
+"\n"
+"class MyArray:\n"
+"    def __array_function__(self, func, types, args, kwargs):\n"
+"        if func not in HANDLED_FUNCTIONS:\n"
+"            return NotImplemented\n"
+"        # Note: this allows subclasses that don't override\n"
+"        # __array_function__ to handle MyArray objects\n"
+"        if not all(issubclass(t, MyArray) for t in types):\n"
+"            return NotImplemented\n"
+"        return HANDLED_FUNCTIONS[func](*args, **kwargs)\n"
+"\n"
+"def implements(numpy_function):\n"
+"    \"\"\"Register an __array_function__ implementation for MyArray objects."
+"\"\"\"\n"
+"    def decorator(func):\n"
+"        HANDLED_FUNCTIONS[numpy_function] = func\n"
+"        return func\n"
+"    return decorator\n"
+"\n"
+"@implements(np.concatenate)\n"
+"def concatenate(arrays, axis=0, out=None):\n"
+"    ...  # implementation of concatenate for MyArray objects\n"
+"\n"
+"@implements(np.broadcast_to)\n"
+"def broadcast_to(array, shape):\n"
+"    ...  # implementation of broadcast_to for MyArray objects"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:219
+msgid ""
+"Note that it is not required for ``__array_function__`` implementations to "
+"include *all* of the corresponding NumPy function's optional arguments (e."
+"g., ``broadcast_to`` above omits the irrelevant ``subok`` argument). "
+"Optional arguments are only passed in to ``__array_function__`` if they were "
+"explicitly used in the NumPy function call."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:225
+msgid ""
+"Just like the case for builtin special methods like ``__add__``, properly "
+"written ``__array_function__`` methods should always return "
+"``NotImplemented`` when an unknown type is encountered. Otherwise, it will "
+"be impossible to correctly override NumPy functions from another object if "
+"the operation also includes one of your objects."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:231
+msgid ""
+"For the most part, the rules for dispatch with ``__array_function__`` match "
+"those for ``__array_ufunc__``. In particular:"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:234
+msgid ""
+"NumPy will gather implementations of ``__array_function__`` from all "
+"specified inputs and call them in order: subclasses before superclasses, and "
+"otherwise left to right. Note that in some edge cases involving subclasses, "
+"this differs slightly from the `current behavior <https://bugs.python.org/"
+"issue30140>`_ of Python."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:239
+msgid ""
+"Implementations of ``__array_function__`` indicate that they can handle the "
+"operation by returning any value other than ``NotImplemented``."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:242
+msgid ""
+"If all ``__array_function__`` methods return ``NotImplemented``, NumPy will "
+"raise ``TypeError``."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:245
+msgid ""
+"If no ``__array_function__`` methods exists, NumPy will default to calling "
+"its own implementation, intended for use on NumPy arrays. This case arises, "
+"for example, when all array-like arguments are Python numbers or lists. "
+"(NumPy arrays do have a ``__array_function__`` method, given below, but it "
+"always returns ``NotImplemented`` if any argument other than a NumPy array "
+"subclass implements ``__array_function__``.)"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:252
+msgid ""
+"One deviation from the current behavior of ``__array_ufunc__`` is that NumPy "
+"will only call ``__array_function__`` on the *first* argument of each unique "
+"type. This matches Python's `rule for calling reflected methods <https://"
+"docs.python.org/3/reference/datamodel.html#object.__ror__>`_, and this "
+"ensures that checking overloads has acceptable performance even when there "
+"are a large number of overloaded arguments."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:261
+msgid ""
+"This method is called whenever the system internally allocates a new array "
+"from *obj*, where *obj* is a subclass (subtype) of the :class:`ndarray`. It "
+"can be used to change attributes of *self* after construction (so as to "
+"ensure a 2-d matrix for example), or to update meta-information from the "
+"\"parent.\" Subclasses inherit a default implementation of this method that "
+"does nothing."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:270
+msgid ""
+"At the end of every :ref:`ufunc <ufuncs-output-type>`, this method is called "
+"on the input object with the highest array priority, or the output object if "
+"one was specified. The ufunc-computed array is passed in and whatever is "
+"returned is passed to the user. Subclasses inherit a default implementation "
+"of this method, which transforms the array into a new instance of the "
+"object's class. Subclasses may opt to use this method to transform the "
+"output array into an instance of the subclass and update metadata before "
+"returning the array to the user."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:280
+msgid ""
+"NumPy may also call this function without a context from non-ufuncs to allow "
+"preserving subclass information."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:283
+msgid ""
+"``return_scalar`` is now passed as either ``False`` (usually) or ``True`` "
+"indicating that NumPy would return a scalar. Subclasses may ignore the "
+"value, or return ``array[()]`` to behave more like NumPy."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:290
+msgid ""
+"It is hoped to eventually deprecate this method in favour of :func:"
+"`__array_ufunc__` for ufuncs (and :func:`__array_function__` for a few other "
+"functions like :func:`numpy.squeeze`)."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:296
+msgid ""
+"The value of this attribute is used to determine what type of object to "
+"return in situations where there is more than one possibility for the Python "
+"type of the returned object. Subclasses inherit a default value of 0.0 for "
+"this attribute."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:301
+msgid ""
+"For ufuncs, it is hoped to eventually deprecate this method in favour of :"
+"func:`__array_ufunc__`."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:306
+msgid ""
+"If defined on an object, it must return a NumPy ``ndarray``. This method is "
+"called by array-coercion functions like ``np.array()`` if an object "
+"implementing this interface is passed to those functions."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:310
+msgid ""
+"Third-party implementations of ``__array__`` must take ``dtype`` and "
+"``copy`` arguments."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:313
+msgid ""
+"2.0 Not implementing ``copy`` and ``dtype`` is deprecated as of NumPy 2. "
+"When adding them, you must ensure correct behavior for ``copy``."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:317
+msgid ""
+"``dtype`` is the requested data type of the returned array and is passed by "
+"NumPy positionally (only if requested by the user). It is acceptable to "
+"ignore the ``dtype`` because NumPy will check the result and cast to "
+"``dtype`` if necessary.  If it is more efficient to coerce the data to the "
+"requested dtype without relying on NumPy, you should handle it in your "
+"library."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:323
+msgid ""
+"``copy`` is a boolean passed by keyword.  If ``copy=True`` you *must* return "
+"a copy. Returning a view into existing data will lead to incorrect user "
+"code. If ``copy=False`` the user requested that a copy is never made and you "
+"*must* raise an error unless no copy is made and the returned array is a "
+"view into existing data.  It is valid to always raise an error for "
+"``copy=False``. The default ``copy=None`` (not passed) allows for the result "
+"to either be a view or a copy.  However, a view return should be preferred "
+"when possible."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:332
+msgid ""
+"Please refer to :ref:`Interoperability with NumPy <basics.interoperability>` "
+"for the protocol hierarchy, of which ``__array__`` is the oldest and least "
+"desirable."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:336
+msgid ""
+"If a class (ndarray subclass or not) having the :func:`__array__` method is "
+"used as the output object of an :ref:`ufunc <ufuncs-output-type>`, results "
+"will *not* be written to the object returned by :func:`__array__`. This "
+"practice will return ``TypeError``."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:344
+msgid "Matrix objects"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:350
+msgid ""
+"It is strongly advised *not* to use the matrix subclass.  As described "
+"below, it makes writing functions that deal consistently with matrices and "
+"regular arrays very difficult. Currently, they are mainly used for "
+"interacting with ``scipy.sparse``. We hope to provide an alternative for "
+"this use, however, and eventually remove the ``matrix`` subclass."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:356
+msgid ""
+":class:`matrix` objects inherit from the ndarray and therefore, they have "
+"the same attributes and methods of ndarrays. There are six important "
+"differences of matrix objects, however, that may lead to unexpected results "
+"when you use matrices but expect them to act like arrays:"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:362
+msgid ""
+"Matrix objects can be created using a string notation to allow Matlab-style "
+"syntax where spaces separate columns and semicolons (';') separate rows."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:366
+msgid ""
+"Matrix objects are always two-dimensional. This has far-reaching "
+"implications, in that m.ravel() is still two-dimensional (with a 1 in the "
+"first dimension) and item selection returns two-dimensional objects so that "
+"sequence behavior is fundamentally different than arrays."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:372
+msgid ""
+"Matrix objects over-ride multiplication to be matrix-multiplication. **Make "
+"sure you understand this for functions that you may want to receive "
+"matrices. Especially in light of the fact that asanyarray(m) returns a "
+"matrix when m is a matrix.**"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:378
+msgid ""
+"Matrix objects over-ride power to be matrix raised to a power. The same "
+"warning about using power inside a function that uses asanyarray(...) to get "
+"an array object holds for this fact."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:382
+msgid ""
+"The default __array_priority\\__ of matrix objects is 10.0, and therefore "
+"mixed operations with ndarrays always produce matrices."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:385
+msgid ""
+"Matrices have special attributes which make calculations easier. These are"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:395:<autosummary>:1
+msgid ":py:obj:`matrix.T <numpy.matrix.T>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:395:<autosummary>:1
+msgid "Returns the transpose of the matrix."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:395:<autosummary>:1
+msgid ":py:obj:`matrix.H <numpy.matrix.H>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:395:<autosummary>:1
+msgid "Returns the (complex) conjugate transpose of `self`."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:395:<autosummary>:1
+msgid ":py:obj:`matrix.I <numpy.matrix.I>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:395:<autosummary>:1
+msgid "Returns the (multiplicative) inverse of invertible `self`."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:395:<autosummary>:1
+msgid ":py:obj:`matrix.A <numpy.matrix.A>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:395:<autosummary>:1
+msgid "Return `self` as an `ndarray` object."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:398
+msgid ""
+"Matrix objects over-ride multiplication, '*', and power, '**', to be matrix-"
+"multiplication and matrix power, respectively. If your subroutine can accept "
+"sub-classes and you do not convert to base- class arrays, then you must use "
+"the ufuncs multiply and power to be sure that you are performing the correct "
+"operation for all inputs."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:405
+msgid ""
+"The matrix class is a Python subclass of the ndarray and can be used as a "
+"reference for how to construct your own subclass of the ndarray. Matrices "
+"can be created from other matrices, strings, and anything else that can be "
+"converted to an ``ndarray`` . The name \"mat \"is an alias for \"matrix \"in "
+"NumPy."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:417:<autosummary>:1
+msgid ":py:obj:`matrix <numpy.matrix>`\\ \\(data\\[\\, dtype\\, copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:417:<autosummary>:1
+msgid "Returns a matrix from an array-like object, or from a string of data."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:417:<autosummary>:1
+msgid ":py:obj:`asmatrix <numpy.asmatrix>`\\ \\(data\\[\\, dtype\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:417:<autosummary>:1
+msgid "Interpret the input as a matrix."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:417:<autosummary>:1
+msgid ":py:obj:`bmat <numpy.bmat>`\\ \\(obj\\[\\, ldict\\, gdict\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:417:<autosummary>:1
+msgid "Build a matrix object from a string, nested sequence, or array."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:418
+msgid "Example 1: Matrix creation from a string"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:-1
+msgid ""
+"<div id=\"28b20cc7-4b9a-4b46-95a6-7e90331191e9\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('f0c9051c-5257-42d0-97cd-"
+"c6d34a1a1622','28b20cc7-4b9a-4b46-95a6-7e90331191e9')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('f0c9051c-5257-42d0-97cd-"
+"c6d34a1a1622','28b20cc7-4b9a-4b46-95a6-7e90331191e9')\">Open In Tab</"
+"button></div><div id=\"2152fb1f-9a37-4e92-ab26-805f9ad3bea6\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../try_examples.json\");});</script>"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:429
+msgid "Example 2: Matrix creation from a nested sequence"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:-1
+msgid ""
+"<div id=\"bf4279a7-4fce-4c4e-83c5-4cc4920b0fe6\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('f7257500-748a-4684-9dab-"
+"d5876c4e69c5','bf4279a7-4fce-4c4e-83c5-4cc4920b0fe6')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('f7257500-748a-4684-9dab-"
+"d5876c4e69c5','bf4279a7-4fce-4c4e-83c5-4cc4920b0fe6')\">Open In Tab</"
+"button></div><div id=\"06ec604e-a0cc-48ff-870a-4adee2be11bc\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:438
+msgid "Example 3: Matrix creation from an array"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:-1
+msgid ""
+"<div id=\"310020cb-a426-4e35-bd7b-8dbc471e4b9a\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('bb2c7789-6cd0-4180-a865-288655f46ac2','310020cb-"
+"a426-4e35-bd7b-8dbc471e4b9a')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('bb2c7789-6cd0-4180-a865-288655f46ac2','310020cb-a426-4e35-"
+"bd7b-8dbc471e4b9a')\">Open In Tab</button></div><div id=\"32e6231f-b8fd-44b6-"
+"aa22-92b990cb8688\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:450
+msgid "Memory-mapped file arrays"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:457
+msgid ""
+"Memory-mapped files are useful for reading and/or modifying small segments "
+"of a large file with regular layout, without reading the entire file into "
+"memory. A simple subclass of the ndarray uses a memory-mapped file for the "
+"data buffer of the array. For small files, the over-head of reading the "
+"entire file into memory is typically not significant, however for large "
+"files using memory mapping can save considerable resources."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:465
+msgid ""
+"Memory-mapped-file arrays have one additional method (besides those they "
+"inherit from the ndarray): :meth:`.flush() <memmap.flush>` which must be "
+"called manually by the user to ensure that any changes to the array actually "
+"get written to disk."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:475:<autosummary>:1
+msgid ""
+":py:obj:`memmap <numpy.memmap>`\\ \\(filename\\[\\, dtype\\, mode\\, "
+"offset\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:475:<autosummary>:1
+msgid "Create a memory-map to an array stored in a *binary* file on disk."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:475:<autosummary>:1
+msgid ":py:obj:`memmap.flush <numpy.memmap.flush>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:475:<autosummary>:1
+msgid "Write any changes in the array to the file on disk."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:476
+msgid "Example:"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:-1
+msgid ""
+"<div id=\"a9a084f0-6700-4458-8480-16bb08bfc5cc\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('b6201994-c3bb-4b99-"
+"b0a3-1ce52b97e0a8','a9a084f0-6700-4458-8480-16bb08bfc5cc')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('b6201994-c3bb-4b99-"
+"b0a3-1ce52b97e0a8','a9a084f0-6700-4458-8480-16bb08bfc5cc')\">Open In Tab</"
+"button></div><div id=\"d91e75a6-ec00-40a3-8f99-5fb1f7f9fe61\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:497
+msgid "Character arrays (:mod:`numpy.char`)"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:499
+msgid ":ref:`routines.array-creation.char`"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:505
+msgid ""
+"The `~numpy.char.chararray` class exists for backwards compatibility with "
+"Numarray, it is not recommended for new development. Starting from numpy "
+"1.4, if one needs arrays of strings, it is recommended to use arrays of "
+"`dtype` `object_`, `bytes_` or `str_`, and use the free functions in the "
+"`numpy.char` module for fast vectorized string operations."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:511
+msgid ""
+"These are enhanced arrays of either :class:`str_` type or :class:`bytes_` "
+"type.  These arrays inherit from the :class:`ndarray`, but specially-define "
+"the operations ``+``, ``*``, and ``%`` on a (broadcasting) element-by-"
+"element basis.  These operations are not available on the standard :class:"
+"`ndarray` of character type. In addition, the :class:`~numpy.char.chararray` "
+"has all of the standard :class:`str` (and :class:`bytes`) methods, executing "
+"them on an element-by-element basis. Perhaps the easiest way to create a "
+"chararray is to use :meth:`self.view(chararray) <ndarray.view>` where *self* "
+"is an ndarray of str or unicode data-type. However, a chararray can also be "
+"created using the :meth:`~numpy.char.chararray` constructor, or via the :"
+"func:`numpy.char.array` function:"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:530:<autosummary>:1
+msgid ""
+":py:obj:`char.chararray <numpy.char.chararray>`\\ \\(shape\\[\\, itemsize\\, "
+"unicode\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:530:<autosummary>:1
+msgid "Provides a convenient view on arrays of string and unicode values."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:530:<autosummary>:1
+msgid ""
+":py:obj:`char.array <numpy.char.array>`\\ \\(obj\\[\\, itemsize\\, copy\\, "
+"unicode\\, order\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:530:<autosummary>:1
+msgid "Create a `~numpy.char.chararray`."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:531
+msgid ""
+"Another difference with the standard ndarray of str data-type is that the "
+"chararray inherits the feature introduced by Numarray that white-space at "
+"the end of any element in the array will be ignored on item retrieval and "
+"comparison operations."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:540
+msgid "Record arrays"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:542
+msgid ""
+":ref:`routines.array-creation.rec`, :ref:`routines.dtype`, :ref:`arrays."
+"dtypes`."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:545
+msgid ""
+"NumPy provides the :class:`recarray` class which allows accessing the fields "
+"of a structured array as attributes, and a corresponding scalar data type "
+"object :class:`record`."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:556:<autosummary>:1
+msgid ""
+":py:obj:`recarray <numpy.recarray>`\\ \\(shape\\[\\, dtype\\, buf\\, "
+"offset\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:556:<autosummary>:1
+msgid "Construct an ndarray that allows field access using attributes."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:556:<autosummary>:1
+msgid ""
+":py:obj:`record <numpy.record>`\\ \\(length\\_or\\_data\\, \\/\\[\\, "
+"dtype\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:556:<autosummary>:1
+msgid "A data-type scalar that allows field access as attribute lookup."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:559
+msgid ""
+"The pandas DataFrame is more powerful than record array. If possible, please "
+"use pandas DataFrame instead."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:563
+msgid "Masked arrays (:mod:`numpy.ma`)"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:565
+msgid ":ref:`maskedarray`"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:568
+msgid "Standard container class"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:572
+msgid ""
+"For backward compatibility and as a standard \"container \"class, the "
+"UserArray from Numeric has been brought over to NumPy and named :class:"
+"`numpy.lib.user_array.container` The container class is a Python class whose "
+"self.array attribute is an ndarray. Multiple inheritance is probably easier "
+"with numpy.lib.user_array.container than with the ndarray itself and so it "
+"is included by default. It is not documented here beyond mentioning its "
+"existence because you are encouraged to use the ndarray class directly if "
+"you can."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:585:<autosummary>:1
+msgid ""
+":py:obj:`numpy.lib.user_array.container <numpy.lib.user_array.container>`\\ "
+"\\(data\\[\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:585:<autosummary>:1
+msgid "Standard container-class for easy multiple-inheritance."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:592
+msgid "Array iterators"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:599
+msgid ""
+"Iterators are a powerful concept for array processing. Essentially, "
+"iterators implement a generalized for-loop. If *myiter* is an iterator "
+"object, then the Python code::"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:603
+msgid ""
+"for val in myiter:\n"
+"    ...\n"
+"    some code involving val\n"
+"    ..."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:608
+msgid ""
+"calls ``val = next(myiter)`` repeatedly until :exc:`StopIteration` is raised "
+"by the iterator. There are several ways to iterate over an array that may be "
+"useful: default iteration, flat iteration, and :math:`N`-dimensional "
+"enumeration."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:615
+msgid "Default iteration"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:617
+msgid ""
+"The default iterator of an ndarray object is the default Python iterator of "
+"a sequence type. Thus, when the array object itself is used as an iterator. "
+"The default behavior is equivalent to::"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:621
+msgid ""
+"for i in range(arr.shape[0]):\n"
+"    val = arr[i]"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:624
+msgid ""
+"This default iterator selects a sub-array of dimension :math:`N-1` from the "
+"array. This can be a useful construct for defining recursive algorithms. To "
+"loop over the entire array requires :math:`N` for-loops."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:-1
+msgid ""
+"<div id=\"347d4e5c-70a0-45ab-b933-e443dfd3af4b\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('7b1bcae3-1540-4cd1-83ce-"
+"ec3767548fa7','347d4e5c-70a0-45ab-b933-e443dfd3af4b')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('7b1bcae3-1540-4cd1-83ce-ec3767548fa7','347d4e5c-70a0-45ab-b933-"
+"e443dfd3af4b')\">Open In Tab</button></div><div id=\"4ad70c6d-7e2b-4b22-"
+"a18d-40ecac96b41c\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:643
+msgid "Flat iteration"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:649:<autosummary>:1
+msgid ":py:obj:`ndarray.flat <numpy.ndarray.flat>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:649:<autosummary>:1
+msgid "A 1-D iterator over the array."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:650
+msgid ""
+"As mentioned previously, the flat attribute of ndarray objects returns an "
+"iterator that will cycle over the entire array in C-style contiguous order."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:-1
+msgid ""
+"<div id=\"ca867100-0b73-45f0-992d-6a73f9848b78\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('0313c4b7-2572-408e-9f90-7e651d6bb291','ca867100-0b73-45f0-992d-6a73f9848b78')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('0313c4b7-2572-408e-9f90-7e651d6bb291','ca867100-0b73-45f0-992d-6a73f9848b78')\">Open "
+"In Tab</button></div><div id=\"5674d91a-cfb2-4177-af2f-39ac3d0f4c86\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:665
+msgid ""
+"Here, I've used the built-in enumerate iterator to return the iterator index "
+"as well as the value."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:670
+msgid "N-dimensional enumeration"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:676:<autosummary>:1
+msgid ":py:obj:`ndenumerate <numpy.ndenumerate>`\\ \\(arr\\)"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:676:<autosummary>:1
+msgid "Multidimensional index iterator."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:677
+msgid ""
+"Sometimes it may be useful to get the N-dimensional index while iterating. "
+"The ndenumerate iterator can achieve this."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:-1
+msgid ""
+"<div id=\"9e3c9eaa-3bf1-4167-a09d-b6afe29a50d0\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('3eb0d028-f144-4199-"
+"baf1-6f99d273d576','9e3c9eaa-3bf1-4167-a09d-b6afe29a50d0')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('3eb0d028-f144-4199-baf1-6f99d273d576','9e3c9eaa-3bf1-4167-a09d-"
+"b6afe29a50d0')\">Open In Tab</button></div><div id=\"41734ec0-4196-48db-"
+"b926-1e0e119a5b13\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:693
+msgid "Iterator for broadcasting"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:699:<autosummary>:1
+msgid ":py:obj:`broadcast <numpy.broadcast>`\\ \\(\\*arrays\\)"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:699:<autosummary>:1
+msgid "Produce an object that mimics broadcasting."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:700
+msgid ""
+"The general concept of broadcasting is also available from Python using the :"
+"class:`broadcast` iterator. This object takes :math:`N` objects as inputs "
+"and returns an iterator that returns tuples providing each of the input "
+"sequence elements in the broadcasted result."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:-1
+msgid ""
+"<div id=\"c907a2d5-989d-425c-b9f0-efecb6d41e4e\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('beb496c4-c046-4c5c-999c-"
+"edf22f6af3a8','c907a2d5-989d-425c-b9f0-efecb6d41e4e')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('beb496c4-c046-4c5c-999c-edf22f6af3a8','c907a2d5-989d-425c-b9f0-"
+"efecb6d41e4e')\">Open In Tab</button></div><div id=\"798ee75f-"
+"cd7d-4000-9109-772fd6228257\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:346
+msgid "matrix"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:452
+msgid "memory maps"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:501
+msgid "character arrays"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:586
+msgid "user_array"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:586
+msgid "container class"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:596
+msgid "array iterator"
+msgstr ""

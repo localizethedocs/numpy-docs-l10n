@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.fill_diagonal.rst:4
+msgid "numpy.fill\\_diagonal"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:2
+msgid "Fill the main diagonal of the given array of any dimensionality."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:4
+msgid ""
+"For an array `a` with ``a.ndim >= 2``, the diagonal is the list of values "
+"``a[i, ..., i]`` with indices ``i`` all identical.  This function modifies "
+"the input array in-place without returning a value."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:11
+msgid "**a**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:-1
+msgid "array, at least 2-D."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:11
+msgid "Array whose diagonal is to be filled in-place."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:17
+msgid "**val**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:-1
+msgid "scalar or array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:14
+msgid ""
+"Value(s) to write on the diagonal. If `val` is scalar, the value is written "
+"along the diagonal. If array-like, the flattened `val` is written along the "
+"diagonal, repeating if necessary to fill all diagonal entries."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:29
+msgid "**wrap**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:-1
+msgid "bool"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:20
+msgid ""
+"For tall matrices in NumPy version up to 1.6.2, the diagonal \"wrapped\" "
+"after N columns. You can have this behavior with this option. This affects "
+"only tall matrices."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:34
+msgid ":obj:`diag_indices`, :obj:`diag_indices_from`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:38
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:39
+msgid ""
+"This functionality can be obtained via `diag_indices`, but internally this "
+"version uses a much faster implementation that never constructs the indices "
+"and uses simple slicing."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:45
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:58
+msgid "The same function can operate on a 4-D array:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:63
+msgid "We only show a few blocks for clarity:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:78
+msgid "The wrap option affects only tall matrices:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:108
+msgid ""
+"The anti-diagonal can be filled by reversing the order of elements using "
+"either `numpy.flipud` or `numpy.fliplr`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:123
+msgid ""
+"Note that the order in which the diagonal is filled varies depending on the "
+"flip function."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:-1
+msgid ""
+"<div id=\"cbf39d2e-f9c5-444f-93ed-e26b46ee5207\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('76d876e6-9e6d-443e-ba1a-a5cf242afd25','cbf39d2e-"
+"f9c5-444f-93ed-e26b46ee5207')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('76d876e6-9e6d-443e-ba1a-a5cf242afd25','cbf39d2e-f9c5-444f-93ed-"
+"e26b46ee5207')\">Open In Tab</button></div><div id=\"c9cd1f56-742a-488a-8512-"
+"a29942450a85\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fill_diagonal:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

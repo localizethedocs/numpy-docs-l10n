@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.exceptions.DTypePromotionError.rst:4
+msgid "numpy.exceptions.DTypePromotionError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.DTypePromotionError:2
+msgid "Multiple DTypes could not be converted to a common one."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.DTypePromotionError:4
+msgid ""
+"This exception derives from ``TypeError`` and is raised whenever dtypes "
+"cannot be converted to a single common one.  This can be because they are of "
+"a different category/class or incompatible instances of the same one (see "
+"Examples)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.DTypePromotionError:19
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.DTypePromotionError:20
+msgid ""
+"Many functions will use promotion to find the correct result and "
+"implementation.  For these functions the error will typically be chained "
+"with a more specific error indicating that no implementation was found for "
+"the input dtypes."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.DTypePromotionError:25
+msgid ""
+"Typically promotion should be considered \"invalid\" between the dtypes of "
+"two arrays when `arr1 == arr2` can safely return all ``False`` because the "
+"dtypes are fundamentally different."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.DTypePromotionError:31
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.DTypePromotionError:36
+msgid ""
+"Datetimes and complex numbers are incompatible classes and cannot be "
+"promoted:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.DTypePromotionError:49
+msgid ""
+"For example for structured dtypes, the structure can mismatch and the same "
+"``DTypePromotionError`` is given when two structured dtypes with a mismatch "
+"in their number of fields is given:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.DTypePromotionError:-1
+msgid ""
+"<div id=\"718492c6-f64a-4290-a650-f2b2c49b7c9f\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('f45be03b-6329-4a53-a5e9-636affcccc24','718492c6-"
+"f64a-4290-a650-f2b2c49b7c9f')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('f45be03b-6329-4a53-a5e9-636affcccc24','718492c6-f64a-4290-a650-"
+"f2b2c49b7c9f')\">Open In Tab</button></div><div id=\"ddb6538a-bec8-4176-80dc-"
+"bdb85feabbb3\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.DTypePromotionError:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

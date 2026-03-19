@@ -1,0 +1,625 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release/2.1.0-notes.rst:5
+msgid "NumPy 2.1.0 Release Notes"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:7
+msgid ""
+"NumPy 2.1.0 provides support for the upcoming Python 3.13 release and drops "
+"support for Python 3.9. In addition to the usual bug fixes and updated "
+"Python support, it helps get us back into our usual release cycle after the "
+"extended development of 2.0. The highlights for this release are:"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:12
+msgid "Support for the array-api 2023.12 standard."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:13
+msgid "Support for Python 3.13."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:14
+msgid "Preliminary support for free threaded Python 3.13."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:16
+msgid "Python versions 3.10-3.13 are supported in this release."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:20
+msgid "New functions"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:23
+msgid "New function ``numpy.unstack``"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:25
+msgid ""
+"A new function ``np.unstack(array, axis=...)`` was added, which splits an "
+"array into a tuple of arrays along an axis. It serves as the inverse of "
+"`numpy.stack`."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:29
+msgid "(`gh-26579 <https://github.com/numpy/numpy/pull/26579>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:33
+msgid "Deprecations"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:35
+msgid ""
+"The ``fix_imports`` keyword argument in ``numpy.save`` is deprecated. Since "
+"NumPy 1.17, ``numpy.save`` uses a pickle protocol that no longer supports "
+"Python 2, and ignored ``fix_imports`` keyword. This keyword is kept only for "
+"backward compatibility. It is now deprecated."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:40
+msgid "(`gh-26452 <https://github.com/numpy/numpy/pull/26452>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:42
+msgid ""
+"Passing non-integer inputs as the first argument of `bincount` is now "
+"deprecated, because such inputs are silently cast to integers with no "
+"warning about loss of precision."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:46
+msgid "(`gh-27076 <https://github.com/numpy/numpy/pull/27076>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:50
+msgid "Expired deprecations"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:52
+msgid ""
+"Scalars and 0D arrays are disallowed for ``numpy.nonzero`` and ``numpy."
+"ndarray.nonzero``."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:54
+msgid "(`gh-26268 <https://github.com/numpy/numpy/pull/26268>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:56
+msgid ""
+"``set_string_function`` internal function was removed and "
+"``PyArray_SetStringFunction`` was stubbed out."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:59 ../../../release/2.1.0-notes.rst:166
+msgid "(`gh-26611 <https://github.com/numpy/numpy/pull/26611>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:63
+msgid "C API changes"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:66
+msgid "API symbols now hidden but customizable"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:67
+msgid ""
+"NumPy now defaults to hide the API symbols it adds to allow all NumPy API "
+"usage.  This means that by default you cannot dynamically fetch the NumPy "
+"API from another library (this was never possible on windows)."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:71
+msgid ""
+"If you are experiencing linking errors related to ``PyArray_API`` or "
+"``PyArray_RUNTIME_VERSION``, you can define the ``NPY_API_SYMBOL_ATTRIBUTE`` "
+"to opt-out of this change."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:75
+msgid ""
+"If you are experiencing problems due to an upstream header including NumPy, "
+"the solution is to make sure you ``#include \"numpy/ndarrayobject.h\"`` "
+"before their header and import NumPy yourself based on  ``including-the-c-"
+"api``."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:79
+msgid "(`gh-26103 <https://github.com/numpy/numpy/pull/26103>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:82
+msgid "Many shims removed from npy_3kcompat.h"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:83
+msgid ""
+"Many of the old shims and helper functions were removed from ``npy_3kcompat."
+"h``. If you find yourself in need of these, vendor the previous version of "
+"the file into your codebase."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:87
+msgid "(`gh-26842 <https://github.com/numpy/numpy/pull/26842>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:90
+msgid "New ``PyUFuncObject`` field ``process_core_dims_func``"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:91
+msgid ""
+"The field ``process_core_dims_func`` was added to the structure "
+"``PyUFuncObject``.  For generalized ufuncs, this field can be set to a "
+"function of type ``PyUFunc_ProcessCoreDimsFunc`` that will be called when "
+"the ufunc is called. It allows the ufunc author to check that core "
+"dimensions satisfy additional constraints, and to set output core dimension "
+"sizes if they have not been provided."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:98
+msgid "(`gh-26908 <https://github.com/numpy/numpy/pull/26908>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:102
+msgid "New Features"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:105
+msgid "Preliminary Support for Free-Threaded CPython 3.13"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:107
+msgid ""
+"CPython 3.13 will be available as an experimental free-threaded build. See "
+"https://py-free-threading.github.io, `PEP 703 <https://peps.python.org/"
+"pep-0703/>`_ and the `CPython 3.13 release notes <https://docs.python."
+"org/3.13/whatsnew/3.13.html#free-threaded-cpython>`_ for more detail about "
+"free-threaded Python."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:113
+msgid ""
+"NumPy 2.1 has preliminary support for the free-threaded build of CPython "
+"3.13. This support was enabled by fixing a number of C thread-safety issues "
+"in NumPy. Before NumPy 2.1, NumPy used a large number of C global static "
+"variables to store runtime caches and other state. We have either refactored "
+"to avoid the need for global state, converted the global state to thread-"
+"local state, or added locking."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:120
+msgid ""
+"Support for free-threaded Python does not mean that NumPy is thread safe. "
+"Read-only shared access to ndarray should be safe. NumPy exposes shared "
+"mutable state and we have not added any locking to the array object itself "
+"to serialize access to shared state. Care must be taken in user code to "
+"avoid races if you would like to mutate the same array in multiple threads. "
+"It is certainly possible to crash NumPy by mutating an array simultaneously "
+"in multiple threads, for example by calling a ufunc and the ``resize`` "
+"method simultaneously. For now our guidance is: \"don't do that\". In the "
+"future we would like to provide stronger guarantees."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:130
+msgid ""
+"Object arrays in particular need special care, since the GIL previously "
+"provided locking for object array access and no longer does. See `Issue "
+"#27199 <https://github.com/numpy/numpy/issues/27199>`_ for more information "
+"about object arrays in the free-threaded build."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:135
+msgid ""
+"If you are interested in free-threaded Python, for example because you have "
+"a multiprocessing-based workflow that you are interested in running with "
+"Python threads, we encourage testing and experimentation."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:139
+msgid ""
+"If you run into problems that you suspect are because of NumPy, please `open "
+"an issue <https://github.com/numpy/numpy/issues/new/choose>`_, checking "
+"first if the bug also occurs in the \"regular\" non-free-threaded CPython "
+"3.13 build. Many threading bugs can also occur in code that releases the "
+"GIL; disabling the GIL only makes it easier to hit threading bugs."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:145
+msgid ""
+"(`gh-26157 <https://github.com/numpy/numpy/"
+"issues/26157#issuecomment-2233864940>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:147
+msgid ""
+"``numpy.reshape`` and ``numpy.ndarray.reshape`` now support ``shape`` and "
+"``copy`` arguments."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:150
+msgid "(`gh-26292 <https://github.com/numpy/numpy/pull/26292>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:152
+msgid ""
+"NumPy now supports DLPack v1, support for older versions will be deprecated "
+"in the future."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:155
+msgid "(`gh-26501 <https://github.com/numpy/numpy/pull/26501>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:157
+msgid ""
+"``numpy.asanyarray`` now supports ``copy`` and ``device`` arguments, "
+"matching ``numpy.asarray``."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:160
+msgid "(`gh-26580 <https://github.com/numpy/numpy/pull/26580>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:162
+msgid ""
+"``numpy.printoptions``, ``numpy.get_printoptions``, and ``numpy."
+"set_printoptions`` now support a new option, ``override_repr``, for defining "
+"custom ``repr(array)`` behavior."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:168
+msgid ""
+"``numpy.cumulative_sum`` and ``numpy.cumulative_prod`` were added as Array "
+"API compatible alternatives for ``numpy.cumsum`` and ``numpy.cumprod``. The "
+"new functions can include a fixed initial (zeros for ``sum`` and ones for "
+"``prod``) in the result."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:173 ../../../release/2.1.0-notes.rst:180
+#: ../../../release/2.1.0-notes.rst:184
+msgid "(`gh-26724 <https://github.com/numpy/numpy/pull/26724>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:175
+msgid ""
+"``numpy.clip`` now supports ``max`` and ``min`` keyword arguments which are "
+"meant to replace ``a_min`` and ``a_max``. Also, for ``np.clip(a)`` or ``np."
+"clip(a, None, None)`` a copy of the input array will be returned instead of "
+"raising an error."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:182
+msgid "``numpy.astype`` now supports ``device`` argument."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:187
+msgid "``f2py`` can generate freethreading-compatible C extensions"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:188
+msgid ""
+"Pass ``--freethreading-compatible`` to the f2py CLI tool to produce a C "
+"extension marked as compatible with the free threading CPython interpreter. "
+"Doing so prevents the interpreter from re-enabling the GIL at runtime when "
+"it imports the C extension. Note that ``f2py`` does not analyze fortran code "
+"for thread safety, so you must verify that the wrapped fortran code is "
+"thread safe before marking the extension as compatible."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:195
+msgid "(`gh-26981 <https://github.com/numpy/numpy/pull/26981>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:199
+msgid "Improvements"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:202
+msgid ""
+"``histogram`` auto-binning now returns bin sizes >=1 for integer input data"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:203
+msgid ""
+"For integer input data, bin sizes smaller than 1 result in spurious empty "
+"bins.  This is now avoided when the number of bins is computed using one of "
+"the algorithms provided by ``histogram_bin_edges``."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:207
+msgid "(`gh-12150 <https://github.com/numpy/numpy/pull/12150>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:210
+msgid ""
+"``ndarray`` shape-type parameter is now covariant and bound to "
+"``tuple[int, ...]``"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:211
+msgid ""
+"Static typing for ``ndarray`` is a long-term effort that continues with this "
+"change.  It is a generic type with type parameters for the shape and the "
+"data type.  Previously, the shape type parameter could be any value.  This "
+"change restricts it to a tuple of ints, as one would expect from using "
+"``ndarray.shape``.  Further, the shape-type parameter has been changed from "
+"invariant to covariant.  This change also applies to the subtypes of "
+"``ndarray``, e.g. ``numpy.ma.MaskedArray``.  See the `typing docs <https://"
+"typing.readthedocs.io/en/latest/reference/generics.html#variance-of-generic-"
+"types>`_ for more information."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:221
+msgid "(`gh-26081 <https://github.com/numpy/numpy/pull/26081>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:224
+msgid ""
+"``np.quantile`` with method ``closest_observation`` chooses nearest even "
+"order statistic"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:225
+msgid ""
+"This changes the definition of nearest for border cases from the nearest odd "
+"order statistic to nearest even order statistic. The numpy implementation "
+"now matches other reference implementations."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:229
+msgid "(`gh-26656 <https://github.com/numpy/numpy/pull/26656>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:232
+msgid "``lapack_lite`` is now thread safe"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:233
+msgid ""
+"NumPy provides a minimal low-performance version of LAPACK named "
+"``lapack_lite`` that can be used if no BLAS/LAPACK system is detected at "
+"build time."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:236
+msgid ""
+"Until now, ``lapack_lite`` was not thread safe. Single-threaded use cases "
+"did not hit any issues, but running linear algebra operations in multiple "
+"threads could lead to errors, incorrect results, or segfaults due to data "
+"races."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:240
+msgid ""
+"We have added a global lock, serializing access to ``lapack_lite`` in "
+"multiple threads."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:243
+msgid "(`gh-26750 <https://github.com/numpy/numpy/pull/26750>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:246
+msgid "The ``numpy.printoptions`` context manager is now thread and async-safe"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:247
+msgid ""
+"In prior versions of NumPy, the printoptions were defined using a "
+"combination of Python and C global variables. We have refactored so the "
+"state is stored in a python ``ContextVar``, making the context manager "
+"thread and async-safe."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:251
+msgid "(`gh-26846 <https://github.com/numpy/numpy/pull/26846>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:254
+msgid "Type hinting ``numpy.polynomial``"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:255
+msgid ""
+"Starting from the 2.1 release, PEP 484 type annotations have been included "
+"for the functions and convenience classes in ``numpy.polynomial`` and its "
+"sub-packages."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:259
+msgid "(`gh-26897 <https://github.com/numpy/numpy/pull/26897>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:262
+msgid "Improved ``numpy.dtypes`` type hints"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:263
+msgid ""
+"The type annotations for ``numpy.dtypes`` are now a better reflection of the "
+"runtime: The ``numpy.dtype`` type-aliases have been replaced with "
+"specialized ``dtype`` *subtypes*, and the previously missing annotations for "
+"``numpy.dtypes.StringDType`` have been added."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:268
+msgid "(`gh-27008 <https://github.com/numpy/numpy/pull/27008>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:272
+msgid "Performance improvements and changes"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:274
+msgid ""
+"``numpy.save`` now uses pickle protocol version 4 for saving arrays with "
+"object dtype, which allows for pickle objects larger than 4GB and improves "
+"saving speed by about 5% for large arrays."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:278
+msgid "(`gh-26388 <https://github.com/numpy/numpy/pull/26388>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:280
+msgid ""
+"OpenBLAS on x86_64 and i686 is built with fewer kernels. Based on "
+"benchmarking, there are 5 clusters of performance around these kernels: "
+"``PRESCOTT NEHALEM SANDYBRIDGE HASWELL SKYLAKEX``."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:284 ../../../release/2.1.0-notes.rst:288
+#: ../../../release/2.1.0-notes.rst:293
+msgid "(`gh-27147 <https://github.com/numpy/numpy/pull/27147>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:286
+msgid "OpenBLAS on windows is linked without quadmath, simplifying licensing"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:290
+msgid ""
+"Due to a regression in OpenBLAS on windows, the performance improvements "
+"when using multiple threads for OpenBLAS 0.3.26 were reverted."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:296
+msgid "``ma.cov`` and ``ma.corrcoef`` are now significantly faster"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:297
+msgid ""
+"The private function has been refactored along with ``ma.cov`` and ``ma."
+"corrcoef``. They are now significantly faster, particularly on large, masked "
+"arrays."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:301 ../../../release/2.1.0-notes.rst:331
+msgid "(`gh-26285 <https://github.com/numpy/numpy/pull/26285>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:305
+msgid "Changes"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:307
+msgid ""
+"As ``numpy.vecdot`` is now a ufunc it has a less precise signature. This is "
+"due to the limitations of ufunc's typing stub."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:310
+msgid "(`gh-26313 <https://github.com/numpy/numpy/pull/26313>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:312
+msgid ""
+"``numpy.floor``, ``numpy.ceil``, and ``numpy.trunc`` now won't perform "
+"casting to a floating dtype for integer and boolean dtype input arrays."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:315
+msgid "(`gh-26766 <https://github.com/numpy/numpy/pull/26766>`__)"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:318
+msgid "``ma.corrcoef`` may return a slightly different result"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:319
+msgid ""
+"A pairwise observation approach is currently used in ``ma.corrcoef`` to "
+"calculate the standard deviations for each pair of variables. This has been "
+"changed as it is being used to normalise the covariance, estimated using "
+"``ma.cov``, which does not consider the observations for each variable in a "
+"pairwise manner, rendering it unnecessary. The normalisation has been "
+"replaced by the more appropriate standard deviation for each variable, which "
+"significantly reduces the wall time, but will return slightly different "
+"estimates of the correlation coefficients in cases where the observations "
+"between a pair of variables are not aligned. However, it will return the "
+"same estimates in all other cases, including returning the same correlation "
+"matrix as ``corrcoef`` when using a masked array with no masked values."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:334
+msgid "Cast-safety fixes in ``copyto`` and ``full``"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:335
+msgid ""
+"``copyto`` now uses NEP 50 correctly and applies this to its cast safety. "
+"Python integer to NumPy integer casts and Python float to NumPy float casts "
+"are now considered \"safe\" even if assignment may fail or precision may be "
+"lost. This means the following examples change slightly:"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:342
+msgid ""
+"``np.copyto(int8_arr, 1000)`` previously performed an unsafe/same-kind cast"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:341
+msgid ""
+"of the Python integer.  It will now always raise, to achieve an unsafe cast "
+"you must pass an array or NumPy scalar."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:344
+msgid ""
+"``np.copyto(uint8_arr, 1000, casting=\"safe\")`` will raise an OverflowError "
+"rather than a TypeError due to same-kind casting."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:347
+msgid ""
+"``np.copyto(float32_arr, 1e300, casting=\"safe\")`` will overflow to ``inf`` "
+"(float32 cannot hold ``1e300``) rather raising a TypeError."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:350
+msgid ""
+"Further, only the dtype is used when assigning NumPy scalars (or 0-d "
+"arrays), meaning that the following behaves differently:"
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:353
+msgid "``np.copyto(float32_arr, np.float64(3.0), casting=\"safe\")`` raises."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:355
+msgid ""
+"``np.coptyo(int8_arr, np.int64(100), casting=\"safe\")`` raises. Previously, "
+"NumPy checked whether the 100 fits the ``int8_arr``."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:358
+msgid ""
+"This aligns ``copyto``, ``full``, and ``full_like`` with the correct NumPy 2 "
+"behavior."
+msgstr ""
+
+#: ../../../release/2.1.0-notes.rst:361
+msgid "(`gh-27091 <https://github.com/numpy/numpy/pull/27091>`__)"
+msgstr ""

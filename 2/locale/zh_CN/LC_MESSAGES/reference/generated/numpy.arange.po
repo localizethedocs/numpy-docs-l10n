@@ -1,0 +1,321 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.arange.rst:4
+msgid "numpy.arange"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:2
+msgid "Return evenly spaced values within a given interval."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:4
+msgid "``arange`` can be called with a varying number of positional arguments:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:6
+msgid ""
+"``arange(stop)``: Values are generated within the half-open interval ``[0, "
+"stop)`` (in other words, the interval including `start` but excluding "
+"`stop`)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:9
+msgid ""
+"``arange(start, stop)``: Values are generated within the half-open interval "
+"``[start, stop)``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:11
+msgid ""
+"``arange(start, stop, step)`` Values are generated within the half-open "
+"interval ``[start, stop)``, with spacing between values given by ``step``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:15
+msgid ""
+"For integer arguments the function is roughly equivalent to the Python built-"
+"in :py:class:`range`, but returns an ndarray rather than a ``range`` "
+"instance."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:19
+msgid ""
+"When using a non-integer step, such as 0.1, it is often better to use `numpy."
+"linspace`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:22
+msgid "See the Warning sections below for more information."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:28
+msgid "**start**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:-1
+msgid "integer or real, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:27
+msgid ""
+"Start of interval.  The interval includes this value.  The default start "
+"value is 0."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:33
+msgid "**stop**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:-1
+msgid "integer or real"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:31
+msgid ""
+"End of interval.  The interval does not include this value, except in some "
+"cases where `step` is not an integer and floating point round-off affects "
+"the length of `out`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:39
+msgid "**step**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:36
+msgid ""
+"Spacing between values.  For any output `out`, this is the distance between "
+"two adjacent values, ``out[i+1] - out[i]``.  The default step size is 1.  If "
+"`step` is specified as a position argument, `start` must also be given."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:43
+msgid "**dtype**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:-1
+msgid "dtype, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:42
+msgid ""
+"The type of the output array.  If `dtype` is not given, infer the data type "
+"from the other input arguments."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:49
+msgid "**device**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:-1
+msgid "str, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:46
+msgid ""
+"The device on which to place the created array. Default: ``None``. For Array-"
+"API interoperability only, so must be ``\"cpu\"`` if passed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:58
+msgid "**like**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:52
+msgid ""
+"Reference object to allow the creation of arrays which are not NumPy arrays. "
+"If an array-like passed in as ``like`` supports the ``__array_function__`` "
+"protocol, the result will be defined by it. In this case, it ensures the "
+"creation of an array object compatible with that passed in via this argument."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:73
+msgid "**arange**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:63
+msgid "Array of evenly spaced values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:65
+msgid ""
+"For floating point arguments, the length of the result is ``ceil((stop - "
+"start)/step)``.  Because of floating point overflow, this rule may result in "
+"the last element of `out` being greater than `stop`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:77
+msgid "The length of the output might not be numerically stable."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:79
+msgid ""
+"Another stability issue is due to the internal implementation of `numpy."
+"arange`. The actual step value used to populate the array is ``dtype(start + "
+"step) - dtype(start)`` and not `step`. Precision loss can occur here, due to "
+"casting or due to using floating points when `start` is much larger than "
+"`step`. This can lead to unexpected behaviour. For example::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:87
+msgid ""
+">>> np.arange(0, 5, 0.5, dtype=int)\n"
+"array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])\n"
+">>> np.arange(-3, 3, 0.5, dtype=int)\n"
+"array([-3, -2, -1,  0,  1,  2,  3,  4,  5,  6,  7,  8])"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:92
+msgid "In such cases, the use of `numpy.linspace` should be preferred."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:94
+msgid ""
+"The built-in :py:class:`range` generates :std:doc:`Python built-in integers "
+"that have arbitrary size <python:c-api/long>`, while `numpy.arange` produces "
+"`numpy.int32` or `numpy.int64` numbers. This may result in incorrect results "
+"for large integer values::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:99
+msgid ""
+">>> power = 40\n"
+">>> modulo = 10000\n"
+">>> x1 = [(n ** power) % modulo for n in range(8)]\n"
+">>> x2 = [(n ** power) % modulo for n in np.arange(8)]\n"
+">>> print(x1)\n"
+"[0, 1, 7776, 8801, 6176, 625, 6576, 4001]  # correct\n"
+">>> print(x2)\n"
+"[0, 1, 7776, 7185, 0, 5969, 4816, 3361]  # incorrect"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:111
+msgid ":obj:`numpy.linspace`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:112
+msgid "Evenly spaced numbers with careful handling of endpoints."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:113
+msgid ":obj:`numpy.ogrid`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:114
+msgid "Arrays of evenly spaced numbers in N-dimensions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:115
+msgid ":obj:`numpy.mgrid`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:116
+msgid "Grid-shaped arrays of evenly spaced numbers in N-dimensions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:117
+msgid ":ref:`how-to-partition`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:123
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:-1
+msgid ""
+"<div id=\"d5076523-e025-4dd4-ae2d-18a5063e835f\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('1b0539c0-d134-4724-81f6-a6cf71b59fe2','d5076523-"
+"e025-4dd4-ae2d-18a5063e835f')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('1b0539c0-"
+"d134-4724-81f6-a6cf71b59fe2','d5076523-e025-4dd4-ae2d-18a5063e835f')\">Open "
+"In Tab</button></div><div id=\"028765c7-8caf-43ff-8f2d-652254f2a71d\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.arange:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

@@ -1,0 +1,423 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../user/how-to-partition.rst:5
+msgid "How to create arrays with regularly-spaced values"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:7
+msgid ""
+"There are a few NumPy functions that are similar in application, but which "
+"provide slightly different results, which may cause confusion if one is not "
+"sure when and how to use them. The following guide aims to list these "
+"functions and describe their recommended usage."
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:12
+msgid "The functions mentioned here are"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:14
+msgid "`numpy.linspace`"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:15
+msgid "`numpy.arange`"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:16
+msgid "`numpy.geomspace`"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:17
+msgid "`numpy.logspace`"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:18
+msgid "`numpy.meshgrid`"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:19
+msgid "`numpy.mgrid`"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:20
+msgid "`numpy.ogrid`"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:23
+msgid "1D domains (intervals)"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:26
+msgid "``linspace`` vs. ``arange``"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:28
+msgid ""
+"Both `numpy.linspace` and `numpy.arange` provide ways to partition an "
+"interval (a 1D domain) into equal-length subintervals. These partitions will "
+"vary depending on the chosen starting and ending points, and the **step** "
+"(the length of the subintervals)."
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:33
+msgid "**Use** `numpy.arange` **if you want integer steps.**"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:35
+msgid ""
+"`numpy.arange` relies on step size to determine how many elements are in the "
+"returned array, which excludes the endpoint. This is determined through the "
+"``step`` argument to ``arange``."
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:39 ../../../user/how-to-partition.rst:63
+#: ../../../user/how-to-partition.rst:141
+msgid "Example::"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:41
+msgid ""
+">>> np.arange(0, 10, 2)  # np.arange(start, stop, step)\n"
+"array([0, 2, 4, 6, 8])"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:44
+msgid ""
+"The arguments ``start`` and ``stop`` should be integer or real, but not "
+"complex numbers. `numpy.arange` is similar to the Python built-in :py:class:"
+"`range`."
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:48
+msgid ""
+"Floating-point inaccuracies can make ``arange`` results with floating-point "
+"numbers confusing. In this case, you should use `numpy.linspace` instead."
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:51
+msgid ""
+"**Use** `numpy.linspace` **if you want the endpoint to be included in the "
+"result, or if you are using a non-integer step size.**"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:54
+msgid ""
+"`numpy.linspace` *can* include the endpoint and determines step size from "
+"the `num` argument, which specifies the number of elements in the returned "
+"array."
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:58
+msgid ""
+"The inclusion of the endpoint is determined by an optional boolean argument "
+"``endpoint``, which defaults to ``True``. Note that selecting "
+"``endpoint=False`` will change the step size computation, and the subsequent "
+"output for the function."
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:65
+msgid ""
+">>> np.linspace(0.1, 0.2, num=5)  # np.linspace(start, stop, num)\n"
+"array([0.1  , 0.125, 0.15 , 0.175, 0.2  ])\n"
+">>> np.linspace(0.1, 0.2, num=5, endpoint=False)\n"
+"array([0.1, 0.12, 0.14, 0.16, 0.18])"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:70
+msgid "`numpy.linspace` can also be used with complex arguments::"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:72
+msgid ""
+">>> np.linspace(1+1.j, 4, 5, dtype=np.complex64)\n"
+"array([1.  +1.j  , 1.75+0.75j, 2.5 +0.5j , 3.25+0.25j, 4.  +0.j  ],\n"
+"      dtype=complex64)"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:77
+msgid "Other examples"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:79
+msgid ""
+"Unexpected results may happen if floating point values are used as ``step`` "
+"in ``numpy.arange``. To avoid this, make sure all floating point conversion "
+"happens after the computation of results. For example, replace"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:85
+msgid ""
+">>> list(np.arange(0.1,0.4,0.1).round(1))\n"
+"[0.1, 0.2, 0.3, 0.4]  # endpoint should not be included!"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:88
+msgid "with"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:92
+msgid ""
+">>> list(np.arange(1, 4, 1) / 10.0)\n"
+"[0.1, 0.2, 0.3]  # expected result"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:95
+msgid "Note that"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:99
+msgid ""
+">>> np.arange(0, 1.12, 0.04)\n"
+"array([0.  , 0.04, 0.08, 0.12, 0.16, 0.2 , 0.24, 0.28, 0.32, 0.36, 0.4 ,\n"
+"       0.44, 0.48, 0.52, 0.56, 0.6 , 0.64, 0.68, 0.72, 0.76, 0.8 , 0.84,\n"
+"       0.88, 0.92, 0.96, 1.  , 1.04, 1.08, 1.12])"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:104
+msgid "and"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:108
+msgid ""
+">>> np.arange(0, 1.08, 0.04)\n"
+"array([0.  , 0.04, 0.08, 0.12, 0.16, 0.2 , 0.24, 0.28, 0.32, 0.36, 0.4 ,\n"
+"       0.44, 0.48, 0.52, 0.56, 0.6 , 0.64, 0.68, 0.72, 0.76, 0.8 , 0.84,\n"
+"       0.88, 0.92, 0.96, 1.  , 1.04])"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:113
+msgid ""
+"These differ because of numeric noise. When using floating point values, it "
+"is possible that ``0 + 0.04 * 28 < 1.12``, and so ``1.12`` is in the "
+"interval. In fact, this is exactly the case::"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:117
+msgid ""
+">>> 1.12/0.04\n"
+"28.000000000000004"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:120
+msgid "But ``0 + 0.04 * 27 >= 1.08`` so that 1.08 is excluded::"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:122
+msgid ""
+">>> 1.08/0.04\n"
+"27.0"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:125
+msgid ""
+"Alternatively, you could use ``np.arange(0, 28)*0.04`` which would always "
+"give you precise control of the end point since it is integral::"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:128
+msgid ""
+">>> np.arange(0, 28)*0.04\n"
+"array([0.  , 0.04, 0.08, 0.12, 0.16, 0.2 , 0.24, 0.28, 0.32, 0.36, 0.4 ,\n"
+"       0.44, 0.48, 0.52, 0.56, 0.6 , 0.64, 0.68, 0.72, 0.76, 0.8 , 0.84,\n"
+"       0.88, 0.92, 0.96, 1.  , 1.04, 1.08])"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:135
+msgid "``geomspace`` and ``logspace``"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:137
+msgid ""
+"``numpy.geomspace`` is similar to ``numpy.linspace``, but with numbers "
+"spaced evenly on a log scale (a geometric progression). The endpoint is "
+"included in the result."
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:143
+msgid ""
+">>> np.geomspace(2, 3, num=5)\n"
+"array([2.        , 2.21336384, 2.44948974, 2.71080601, 3.        ])"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:146
+msgid ""
+"``numpy.logspace`` is similar to ``numpy.geomspace``, but with the start and "
+"end points specified as logarithms (with base 10 as default)::"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:149
+msgid ""
+">>> np.logspace(2, 3, num=5)\n"
+"array([ 100.        ,  177.827941  ,  316.22776602,  562.34132519, "
+"1000.        ])"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:152
+msgid ""
+"In linear space, the sequence starts at ``base ** start`` (``base`` to the "
+"power of ``start``) and ends with ``base ** stop``::"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:155
+msgid ""
+">>> np.logspace(2, 3, num=5, base=2)\n"
+"array([4.        , 4.75682846, 5.65685425, 6.72717132, 8.        ])"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:159
+msgid "N-D domains"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:161
+msgid ""
+"N-D domains can be partitioned into *grids*. This can be done using one of "
+"the following functions."
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:165
+msgid "``meshgrid``"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:167
+msgid ""
+"The purpose of ``numpy.meshgrid`` is to create a rectangular grid out of a "
+"set of one-dimensional coordinate arrays."
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:170
+msgid "Given arrays::"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:172
+msgid ""
+">>> x = np.array([0, 1, 2, 3])\n"
+">>> y = np.array([0, 1, 2, 3, 4, 5])"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:175
+msgid ""
+"``meshgrid`` will create two coordinate arrays, which can be used to "
+"generate the coordinate pairs determining this grid.::"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:178
+msgid ""
+">>> xx, yy = np.meshgrid(x, y)\n"
+">>> xx\n"
+"array([[0, 1, 2, 3],\n"
+"       [0, 1, 2, 3],\n"
+"       [0, 1, 2, 3],\n"
+"       [0, 1, 2, 3],\n"
+"       [0, 1, 2, 3],\n"
+"       [0, 1, 2, 3]])\n"
+">>> yy\n"
+"array([[0, 0, 0, 0],\n"
+"       [1, 1, 1, 1],\n"
+"       [2, 2, 2, 2],\n"
+"       [3, 3, 3, 3],\n"
+"       [4, 4, 4, 4],\n"
+"       [5, 5, 5, 5]])\n"
+"\n"
+">>> import matplotlib.pyplot as plt\n"
+">>> plt.plot(xx, yy, marker='.', color='k', linestyle='none')"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:202
+msgid "``mgrid``"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:204
+msgid ""
+"``numpy.mgrid`` can be used as a shortcut for creating meshgrids. It is not "
+"a function, but when indexed, returns a multidimensional meshgrid."
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:209
+msgid ""
+">>> xx, yy = np.meshgrid(np.array([0, 1, 2, 3]), np.array([0, 1, 2, 3, 4, "
+"5]))\n"
+">>> xx.T, yy.T\n"
+"(array([[0, 0, 0, 0, 0, 0],\n"
+"        [1, 1, 1, 1, 1, 1],\n"
+"        [2, 2, 2, 2, 2, 2],\n"
+"        [3, 3, 3, 3, 3, 3]]),\n"
+" array([[0, 1, 2, 3, 4, 5],\n"
+"        [0, 1, 2, 3, 4, 5],\n"
+"        [0, 1, 2, 3, 4, 5],\n"
+"        [0, 1, 2, 3, 4, 5]]))\n"
+"\n"
+">>> np.mgrid[0:4, 0:6]\n"
+"array([[[0, 0, 0, 0, 0, 0],\n"
+"        [1, 1, 1, 1, 1, 1],\n"
+"        [2, 2, 2, 2, 2, 2],\n"
+"        [3, 3, 3, 3, 3, 3]],\n"
+"\n"
+"       [[0, 1, 2, 3, 4, 5],\n"
+"        [0, 1, 2, 3, 4, 5],\n"
+"        [0, 1, 2, 3, 4, 5],\n"
+"        [0, 1, 2, 3, 4, 5]]])"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:233
+msgid "``ogrid``"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:235
+msgid ""
+"Similar to ``numpy.mgrid``, ``numpy.ogrid`` returns an *open* "
+"multidimensional meshgrid. This means that when it is indexed, only one "
+"dimension of each returned array is greater than 1. This avoids repeating "
+"the data and thus saves memory, which is often desirable."
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:240
+msgid ""
+"These sparse coordinate grids are intended to be used with :ref:"
+"`broadcasting`. When all coordinates are used in an expression, broadcasting "
+"still leads to a fully-dimensional result array."
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:246
+msgid ""
+">>> np.ogrid[0:4, 0:6]\n"
+"(array([[0],\n"
+"        [1],\n"
+"        [2],\n"
+"        [3]]), array([[0, 1, 2, 3, 4, 5]]))"
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:252
+msgid ""
+"All three methods described here can be used to evaluate function values on "
+"a grid."
+msgstr ""
+
+#: ../../../user/how-to-partition.rst:257
+msgid ""
+">>> g = np.ogrid[0:4, 0:6]\n"
+">>> zg = np.sqrt(g[0]**2 + g[1]**2)\n"
+">>> g[0].shape, g[1].shape, zg.shape\n"
+"((4, 1), (1, 6), (4, 6))\n"
+">>> m = np.mgrid[0:4, 0:6]\n"
+">>> zm = np.sqrt(m[0]**2 + m[1]**2)\n"
+">>> np.array_equal(zm, zg)\n"
+"True"
+msgstr ""

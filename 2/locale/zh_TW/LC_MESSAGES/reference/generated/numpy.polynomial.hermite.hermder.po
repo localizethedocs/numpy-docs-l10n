@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.hermite.hermder.rst:4
+msgid "numpy.polynomial.hermite.hermder"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:2
+msgid "Differentiate a Hermite series."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:4
+msgid ""
+"Returns the Hermite series coefficients `c` differentiated `m` times along "
+"`axis`.  At each iteration the result is multiplied by `scl` (the scaling "
+"factor is for use in a linear change of variable). The argument `c` is an "
+"array of coefficients from low to high degree along each axis, e.g., [1,2,3] "
+"represents the series ``1*H_0 + 2*H_1 + 3*H_2`` while [[1,2],[1,2]] "
+"represents ``1*H_0(x)*H_0(y) + 1*H_1(x)*H_0(y) + 2*H_0(x)*H_1(y) + "
+"2*H_1(x)*H_1(y)`` if axis=0 is ``x`` and axis=1 is ``y``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:18
+msgid "**c**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:16
+msgid ""
+"Array of Hermite series coefficients. If `c` is multidimensional the "
+"different axis correspond to different variables with the degree in each "
+"axis given by the corresponding index."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:21
+msgid "**m**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:21
+msgid "Number of derivatives taken, must be non-negative. (Default: 1)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:26
+msgid "**scl**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:-1
+msgid "scalar, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:24
+msgid ""
+"Each differentiation is multiplied by `scl`.  The end result is "
+"multiplication by ``scl**m``.  This is for use in a linear change of "
+"variable. (Default: 1)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:29
+msgid "**axis**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:29
+msgid "Axis over which the derivative is taken. (Default: 0)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:40
+msgid "**der**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:34
+msgid "Hermite series of the derivative."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:45
+msgid ":obj:`hermint`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:49
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:50
+msgid ""
+"In general, the result of differentiating a Hermite series does not resemble "
+"the same operation on a power series. Thus the result of this function may "
+"be \"unintuitive,\" albeit correct; see Examples section below."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:57
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:-1
+msgid ""
+"<div id=\"f75b9bf0-3bfc-4bdb-874e-7befc24a78c0\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('d1c8668e-df2d-48b7-"
+"a10a-1bace5d789c2','f75b9bf0-3bfc-4bdb-874e-7befc24a78c0')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('d1c8668e-df2d-48b7-"
+"a10a-1bace5d789c2','f75b9bf0-3bfc-4bdb-874e-7befc24a78c0')\">Open In Tab</"
+"button></div><div id=\"45f872e1-9fb7-454d-8019-158e91b3eadb\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermder:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

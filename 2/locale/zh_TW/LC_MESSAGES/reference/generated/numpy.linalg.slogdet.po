@@ -1,0 +1,176 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.linalg.slogdet.rst:4
+msgid "numpy.linalg.slogdet"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:2
+msgid ""
+"Compute the sign and (natural) logarithm of the determinant of an array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:4
+msgid ""
+"If an array has a very small or very large determinant, then a call to `det` "
+"may overflow or underflow. This routine is more robust against such issues, "
+"because it computes the logarithm of the determinant rather than the "
+"determinant itself."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:12
+msgid "**a**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:-1
+msgid "(..., M, M) array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:12
+msgid "Input array, has to be a square 2-D array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:17
+msgid "A namedtuple with the following attributes:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:22
+msgid "**sign**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:-1
+msgid "(...) array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:20
+msgid ""
+"A number representing the sign of the determinant. For a real matrix, this "
+"is 1, 0, or -1. For a complex matrix, this is a complex number with absolute "
+"value 1 (i.e., it is on the unit circle), or else 0."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:25
+msgid "**logabsdet**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:25
+msgid "The natural log of the absolute value of the determinant."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:28
+msgid "If the determinant is zero, then `sign` will be 0 and `logabsdet`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:31
+msgid "will be -inf. In all cases, the determinant is equal to"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:40
+msgid "``sign * np.exp(logabsdet)``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:45
+msgid ":obj:`det`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:49
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:50
+msgid ""
+"Broadcasting rules apply, see the `numpy.linalg` documentation for details."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:53
+msgid ""
+"The determinant is computed via LU factorization using the LAPACK routine "
+"``z/dgetrf``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:58
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:63
+msgid "The determinant of a 2-D array ``[[a, b], [c, d]]`` is ``ad - bc``:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:73
+msgid "Computing log-determinants for a stack of matrices:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:84
+msgid "This routine succeeds where ordinary `det` does not:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:-1
+msgid ""
+"<div id=\"917f8d41-8c81-4307-9e20-5fecb73310c2\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('67c76061-0c78-47b1-"
+"aeb6-891187c61dd0','917f8d41-8c81-4307-9e20-5fecb73310c2')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('67c76061-0c78-47b1-"
+"aeb6-891187c61dd0','917f8d41-8c81-4307-9e20-5fecb73310c2')\">Open In Tab</"
+"button></div><div id=\"577032be-4766-4672-bf1f-99d6a83d027b\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.slogdet:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

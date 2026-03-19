@@ -1,0 +1,863 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/maskedarray.generic.rst:8
+#: ../../../reference/maskedarray.generic.rst:59
+msgid "The :mod:`numpy.ma` module"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:11
+msgid "Rationale"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:13
+msgid ""
+"Masked arrays are arrays that may have missing or invalid entries. The :mod:"
+"`numpy.ma` module provides a nearly work-alike replacement for numpy that "
+"supports data arrays with masks."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:20
+msgid "What is a masked array?"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:22
+msgid ""
+"In many circumstances, datasets can be incomplete or tainted by the presence "
+"of invalid data. For example, a sensor may have failed to record a data "
+"point, or recorded an invalid value. The :mod:`numpy.ma` module provides a "
+"convenient way to address this issue, by introducing masked arrays."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:27
+msgid ""
+"A masked array is the combination of a standard :class:`numpy.ndarray` and a "
+"mask. A mask is either :attr:`nomask`, indicating that no value of the "
+"associated array is invalid, or an array of booleans that determines for "
+"each element of the associated array whether the value is valid or not. When "
+"an element of the mask is ``False``, the corresponding element of the "
+"associated array is valid and is said to be unmasked. When an element of the "
+"mask is ``True``, the corresponding element of the associated array is said "
+"to be masked (invalid)."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:36
+msgid "The package ensures that masked entries are not used in computations."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:40
+msgid "As an illustration, let's consider the following dataset:"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:46
+msgid ""
+"We wish to mark the fourth entry as invalid. The easiest is to create a "
+"masked array::"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:49
+msgid ">>> mx = ma.masked_array(x, mask=[0, 0, 0, 1, 0])"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:51
+msgid ""
+"We can now compute the mean of the dataset, without taking the invalid data "
+"into account:"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:-1
+msgid ""
+"<div id=\"5be4c1c3-2a6f-4eac-8ccd-34dce792c424\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('ccd30ab0-"
+"fee0-450b-8862-24c337f263e1','5be4c1c3-2a6f-4eac-8ccd-34dce792c424')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('ccd30ab0-"
+"fee0-450b-8862-24c337f263e1','5be4c1c3-2a6f-4eac-8ccd-34dce792c424')\">Open "
+"In Tab</button></div><div id=\"2345f8a4-8829-4023-974b-25857d6dfef0\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../try_examples.json\");});</script>"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:62
+msgid ""
+"The main feature of the :mod:`numpy.ma` module is the :class:`MaskedArray` "
+"class, which is a subclass of :class:`numpy.ndarray`. The class, its "
+"attributes and methods are described in more details in the :ref:"
+"`MaskedArray class <maskedarray.baseclass>` section."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:69
+msgid "The :mod:`numpy.ma` module can be used as an addition to :mod:`numpy`:"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:74
+msgid "To create an array with the second element invalid, we would do::"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:76
+msgid ">>> y = ma.array([1, 2, 3], mask = [0, 1, 0])"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:78
+msgid ""
+"To create a masked array where all values close to 1.e20 are invalid, we "
+"would do:"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:-1
+msgid ""
+"<div id=\"84941369-e40a-4235-9801-bf6bca8b36db\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('e4a29c04-4374-4fbf-8f5c-952ab414ffe3','84941369-"
+"e40a-4235-9801-bf6bca8b36db')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('e4a29c04-4374-4fbf-8f5c-952ab414ffe3','84941369-e40a-4235-9801-"
+"bf6bca8b36db')\">Open In Tab</button></div><div id=\"8a2cbd82-3661-4726-938a-"
+"e674ff107e1c\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:83
+msgid ""
+"For a complete discussion of creation methods for masked arrays please see "
+"section :ref:`Constructing masked arrays <maskedarray.generic.constructing>`."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:90
+msgid "Using numpy.ma"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:95
+msgid "Constructing masked arrays"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:97
+msgid "There are several ways to construct a masked array."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:99
+msgid ""
+"A first possibility is to directly invoke the :class:`MaskedArray` class."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:101
+msgid ""
+"A second possibility is to use the two masked array constructors, :func:"
+"`array` and :func:`masked_array`."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:110:<autosummary>:1
+msgid ""
+":py:obj:`array <numpy.ma.array>`\\ \\(data\\[\\, dtype\\, copy\\, order\\, "
+"mask\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:110:<autosummary>:1
+msgid "An array class with possibly masked values."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:110:<autosummary>:1
+msgid ":py:obj:`masked_array <numpy.ma.masked_array>`\\"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:110:<autosummary>:1
+msgid "alias of :py:class:`~numpy.ma.MaskedArray`"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:111
+msgid ""
+"A third option is to take the view of an existing array. In that case, the "
+"mask of the view is set to :attr:`nomask` if the array has no named fields, "
+"or an array of boolean with the same structure as the array otherwise."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:-1
+msgid ""
+"<div id=\"a93c4e10-8b84-431b-87c6-349f5825ee98\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('ed7c9ba0-0933-4833-987a-"
+"dc051498b00e','a93c4e10-8b84-431b-87c6-349f5825ee98')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('ed7c9ba0-0933-4833-987a-"
+"dc051498b00e','a93c4e10-8b84-431b-87c6-349f5825ee98')\">Open In Tab</"
+"button></div><div id=\"e175bae6-cd80-4ab7-96b9-601a7ab0ddc0\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:130
+msgid "Yet another possibility is to use any of the following functions:"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid ":py:obj:`asarray <numpy.ma.asarray>`\\ \\(a\\[\\, dtype\\, order\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid "Convert the input to a masked array of the given data-type."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid ""
+":py:obj:`asanyarray <numpy.ma.asanyarray>`\\ \\(a\\[\\, dtype\\, order\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid "Convert the input to a masked array, conserving subclasses."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid ""
+":py:obj:`fix_invalid <numpy.ma.fix_invalid>`\\ \\(a\\[\\, mask\\, copy\\, "
+"fill\\_value\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid "Return input with invalid data masked and replaced by a fill value."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid ""
+":py:obj:`masked_equal <numpy.ma.masked_equal>`\\ \\(x\\, value\\[\\, "
+"copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid "Mask an array where equal to a given value."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid ""
+":py:obj:`masked_greater <numpy.ma.masked_greater>`\\ \\(x\\, value\\[\\, "
+"copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid "Mask an array where greater than a given value."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid ""
+":py:obj:`masked_greater_equal <numpy.ma.masked_greater_equal>`\\ \\(x\\, "
+"value\\[\\, copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid "Mask an array where greater than or equal to a given value."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid ""
+":py:obj:`masked_inside <numpy.ma.masked_inside>`\\ \\(x\\, v1\\, v2\\[\\, "
+"copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid "Mask an array inside a given interval."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid ""
+":py:obj:`masked_invalid <numpy.ma.masked_invalid>`\\ \\(a\\[\\, copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid "Mask an array where invalid values occur (NaNs or infs)."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid ""
+":py:obj:`masked_less <numpy.ma.masked_less>`\\ \\(x\\, value\\[\\, copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid "Mask an array where less than a given value."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid ""
+":py:obj:`masked_less_equal <numpy.ma.masked_less_equal>`\\ \\(x\\, "
+"value\\[\\, copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid "Mask an array where less than or equal to a given value."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid ""
+":py:obj:`masked_not_equal <numpy.ma.masked_not_equal>`\\ \\(x\\, value\\[\\, "
+"copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid "Mask an array where *not* equal to a given value."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid ""
+":py:obj:`masked_object <numpy.ma.masked_object>`\\ \\(x\\, value\\[\\, "
+"copy\\, shrink\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid "Mask the array `x` where the data are exactly equal to value."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid ""
+":py:obj:`masked_outside <numpy.ma.masked_outside>`\\ \\(x\\, v1\\, v2\\[\\, "
+"copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid "Mask an array outside a given interval."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid ""
+":py:obj:`masked_values <numpy.ma.masked_values>`\\ \\(x\\, value\\[\\, "
+"rtol\\, atol\\, copy\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid "Mask using floating point equality."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid ""
+":py:obj:`masked_where <numpy.ma.masked_where>`\\ \\(condition\\, a\\[\\, "
+"copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:152:<autosummary>:1
+msgid "Mask an array where a condition is met."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:154
+msgid "Accessing the data"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:156
+msgid "The underlying data of a masked array can be accessed in several ways:"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:158
+msgid ""
+"through the :attr:`~MaskedArray.data` attribute. The output is a view of the "
+"array as a :class:`numpy.ndarray` or one of its subclasses, depending on the "
+"type of the underlying data at the masked array creation."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:162
+msgid ""
+"through the :meth:`~MaskedArray.__array__` method. The output is then a :"
+"class:`numpy.ndarray`."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:165
+msgid ""
+"by directly taking a view of the masked array as a :class:`numpy.ndarray` or "
+"one of its subclass (which is actually what using the :attr:`~MaskedArray."
+"data` attribute does)."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:169
+msgid "by using the :func:`getdata` function."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:172
+msgid ""
+"None of these methods is completely satisfactory if some entries have been "
+"marked as invalid. As a general rule, where a representation of the array is "
+"required without any masked entries, it is recommended to fill the array "
+"with the :meth:`filled` method."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:180
+msgid "Accessing the mask"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:182
+msgid ""
+"The mask of a masked array is accessible through its :attr:`~MaskedArray."
+"mask` attribute. We must keep in mind that a ``True`` entry in the mask "
+"indicates an *invalid* data."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:186
+msgid ""
+"Another possibility is to use the :func:`getmask` and :func:`getmaskarray` "
+"functions. ``getmask(x)`` outputs the mask of ``x`` if ``x`` is a masked "
+"array, and the special value :data:`nomask` otherwise. ``getmaskarray(x)`` "
+"outputs the mask of ``x`` if ``x`` is a masked array. If ``x`` has no "
+"invalid entry or is not a masked array, the function outputs  a boolean "
+"array of ``False`` with as many elements as ``x``."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:197
+msgid "Accessing only the valid entries"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:199
+msgid ""
+"To retrieve only the valid entries, we can use the inverse of the mask as an "
+"index. The inverse of the mask can be calculated with the :func:`numpy."
+"logical_not` function or simply with the ``~`` operator:"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:212
+msgid ""
+"Another way to retrieve the valid data is to use the :meth:`compressed` "
+"method, which returns a one-dimensional :class:`~numpy.ndarray` (or one of "
+"its subclasses, depending on the value of the :attr:`~MaskedArray.baseclass` "
+"attribute):"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:220
+msgid "Note that the output of :meth:`compressed` is always 1D."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:-1
+msgid ""
+"<div id=\"5ac92a8a-bc28-4283-863b-0afaaa70fdfc\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('b2c42787-7594-44cc-a3ff-ec433ce48125','5ac92a8a-"
+"bc28-4283-863b-0afaaa70fdfc')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('b2c42787-7594-44cc-a3ff-ec433ce48125','5ac92a8a-"
+"bc28-4283-863b-0afaaa70fdfc')\">Open In Tab</button></div><div "
+"id=\"3b0cbab8-68c6-45a8-8b1c-1a49233e5c92\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:225
+msgid "Modifying the mask"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:228
+msgid "Masking an entry"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:230
+msgid ""
+"The recommended way to mark one or several specific entries of a masked "
+"array as invalid is to assign the special value :attr:`masked` to them:"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:-1
+msgid ""
+"<div id=\"edc93d45-c699-4e9d-af5a-c06aae389ce2\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('6f22d138-687f-45c5-a1ee-9560ade560ee','edc93d45-"
+"c699-4e9d-af5a-c06aae389ce2')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('6f22d138-687f-45c5-a1ee-9560ade560ee','edc93d45-c699-4e9d-af5a-"
+"c06aae389ce2')\">Open In Tab</button></div><div id=\"9533e5a3-6ad8-4176-"
+"a50e-6db4c65cde8c\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:260
+msgid ""
+"A second possibility is to modify the :attr:`~MaskedArray.mask` directly, "
+"but this usage is discouraged."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:264
+msgid ""
+"When creating a new masked array with a simple, non-structured datatype, the "
+"mask is initially set to the special value :attr:`nomask`, that corresponds "
+"roughly to the boolean ``False``. Trying to set an element of :attr:`nomask` "
+"will fail with a :exc:`TypeError` exception, as a boolean does not support "
+"item assignment."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:271
+msgid ""
+"All the entries of an array can be masked at once by assigning ``True`` to "
+"the mask:"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:285
+msgid ""
+"Finally, specific entries can be masked and/or unmasked by assigning to the "
+"mask a sequence of booleans:"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:-1
+msgid ""
+"<div id=\"efca7715-7722-4299-b6be-7d8ab13f124e\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('7c12546b-a3c5-41c6-b057-"
+"b49e9683b286','efca7715-7722-4299-b6be-7d8ab13f124e')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('7c12546b-a3c5-41c6-b057-b49e9683b286','efca7715-7722-4299-"
+"b6be-7d8ab13f124e')\">Open In Tab</button></div><div "
+"id=\"a99621cb-9434-4e0d-9763-0e417af03b2a\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:296
+msgid "Unmasking an entry"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:298
+msgid ""
+"To unmask one or several specific entries, we can just assign one or several "
+"new valid values to them:"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:-1
+msgid ""
+"<div id=\"7f811c5f-8c08-4f93-869d-60e3a6a6090c\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('0601792b-3673-4cd0-9f31-4488fac2996c','7f811c5f-8c08-4f93-869d-60e3a6a6090c')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('0601792b-3673-4cd0-9f31-4488fac2996c','7f811c5f-8c08-4f93-869d-60e3a6a6090c')\">Open "
+"In Tab</button></div><div id=\"4f33f85c-5f33-4758-aea1-60ec41d6dd37\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:316
+msgid ""
+"Unmasking an entry by direct assignment will silently fail if the masked "
+"array has a *hard* mask, as shown by the :attr:`~MaskedArray.hardmask` "
+"attribute. This feature was introduced to prevent overwriting the mask. To "
+"force the unmasking of an entry where the array has a hard mask, the mask "
+"must first to be softened using the :meth:`soften_mask` method before the "
+"allocation. It can be re-hardened with :meth:`harden_mask` as follows:"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:-1
+msgid ""
+"<div id=\"3316a0f6-b7d8-4102-a7b2-69e9a1109d3a\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('ddc8f5ea-da34-4d37-b98b-df72a1ffa72d','3316a0f6-"
+"b7d8-4102-a7b2-69e9a1109d3a')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('ddc8f5ea-"
+"da34-4d37-b98b-df72a1ffa72d','3316a0f6-b7d8-4102-a7b2-69e9a1109d3a')\">Open "
+"In Tab</button></div><div id=\"6b0eafc8-c25a-48c2-a9e7-1c66bdb3c296\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:352
+msgid ""
+"To unmask all masked entries of a masked array (provided the mask isn't a "
+"hard mask), the simplest solution is to assign the constant :attr:`nomask` "
+"to the mask:"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:-1
+msgid ""
+"<div id=\"edbe5505-1c59-4080-bd9e-a048ace47997\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('9b02d536-bebf-440d-"
+"a0bf-2c0bfcc1fa2b','edbe5505-1c59-4080-bd9e-a048ace47997')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('9b02d536-bebf-440d-a0bf-2c0bfcc1fa2b','edbe5505-1c59-4080-bd9e-"
+"a048ace47997')\">Open In Tab</button></div><div id=\"0c491c90-9fff-450e-b61d-"
+"dbc3597442b7\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:372
+msgid "Indexing and slicing"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:374
+msgid ""
+"As a :class:`MaskedArray` is a subclass of :class:`numpy.ndarray`, it "
+"inherits its mechanisms for indexing and slicing."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:377
+msgid ""
+"When accessing a single entry of a masked array with no named fields, the "
+"output is either a scalar (if the corresponding entry of the mask is "
+"``False``) or the special value :attr:`masked` (if the corresponding entry "
+"of the mask is ``True``):"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:-1
+msgid ""
+"<div id=\"84083de5-c248-4468-ae45-512b15194a97\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('8403ff04-a75d-4e3e-976a-68e9690dc352','84083de5-"
+"c248-4468-ae45-512b15194a97')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('8403ff04-"
+"a75d-4e3e-976a-68e9690dc352','84083de5-c248-4468-ae45-512b15194a97')\">Open "
+"In Tab</button></div><div id=\"067cb235-f0a1-4295-9f36-e86b8055fa48\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:393
+msgid ""
+"If the masked array has named fields, accessing a single entry returns a :"
+"class:`numpy.void` object if none of the fields are masked, or a 0d masked "
+"array with the same dtype as the initial array if at least one of the fields "
+"is masked."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:-1
+msgid ""
+"<div id=\"eacf817f-2320-4e90-b983-12d3a2974a63\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('7a295631-c04d-4629-"
+"b6aa-8428374b3440','eacf817f-2320-4e90-b983-12d3a2974a63')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('7a295631-c04d-4629-b6aa-8428374b3440','eacf817f-2320-4e90-"
+"b983-12d3a2974a63')\">Open In Tab</button></div><div id=\"612e8c4f-27f5-4ca1-"
+"abab-3200ac13d0e7\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:410
+msgid ""
+"When accessing a slice, the output is a masked array whose :attr:"
+"`~MaskedArray.data` attribute is a view of the original data, and whose mask "
+"is either :attr:`nomask` (if there was no invalid entries in the original "
+"array) or a view of the corresponding slice of the original mask. The view "
+"is required to ensure propagation of any modification of the mask to the "
+"original."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:-1
+msgid ""
+"<div id=\"1eaa142d-83b5-44ba-afb3-7d33154d315f\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('2dc6333c-4eef-41b4-"
+"b370-2277b41ea34f','1eaa142d-83b5-44ba-afb3-7d33154d315f')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('2dc6333c-4eef-41b4-b370-2277b41ea34f','1eaa142d-83b5-44ba-"
+"afb3-7d33154d315f')\">Open In Tab</button></div><div id=\"4131b502-aa4e-43ba-"
+"be06-c9fa54378030\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:436
+msgid ""
+"Accessing a field of a masked array with structured datatype returns a :"
+"class:`MaskedArray`."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:440
+msgid "Operations on masked arrays"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:442
+msgid ""
+"Arithmetic and comparison operations are supported by masked arrays. As much "
+"as possible, invalid entries of a masked array are not processed, meaning "
+"that the corresponding :attr:`~MaskedArray.data` entries *should* be the "
+"same before and after the operation."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:448
+msgid ""
+"We need to stress that this behavior may not be systematic, that masked data "
+"may be affected by the operation in some cases and therefore users should "
+"not rely on this data remaining unchanged."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:452
+msgid ""
+"The :mod:`numpy.ma` module comes with a specific implementation of most "
+"ufuncs. Unary and binary functions that have a validity domain (such as :"
+"func:`~numpy.log` or :func:`~numpy.divide`) return the :data:`masked` "
+"constant whenever the input is masked or falls outside the validity domain:"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:-1
+msgid ""
+"<div id=\"95561dfd-10ca-426e-b597-70ebb394d36e\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('59fc61f4-4f5d-4d5f-add0-"
+"dcd2837e7a85','95561dfd-10ca-426e-b597-70ebb394d36e')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('59fc61f4-4f5d-4d5f-add0-dcd2837e7a85','95561dfd-10ca-426e-"
+"b597-70ebb394d36e')\">Open In Tab</button></div><div id=\"0458cdf5-d199-4d18-"
+"aa90-b83d42cb65c2\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:465
+msgid ""
+"Masked arrays also support standard numpy ufuncs. The output is then a "
+"masked array. The result of a unary ufunc is masked wherever the input is "
+"masked. The result of a binary ufunc is masked wherever any of the input is "
+"masked. If the ufunc also returns the optional context output (a 3-element "
+"tuple containing the name of the ufunc, its arguments and its domain), the "
+"context is processed and entries of the output masked array are masked "
+"wherever the corresponding input fall outside the validity domain:"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:-1
+msgid ""
+"<div id=\"e14ccbd3-c088-4d1a-817d-c70adfe47722\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('ae37de59-ab3b-4577-8b42-066193c3bf88','e14ccbd3-"
+"c088-4d1a-817d-c70adfe47722')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('ae37de59-"
+"ab3b-4577-8b42-066193c3bf88','e14ccbd3-c088-4d1a-817d-c70adfe47722')\">Open "
+"In Tab</button></div><div id=\"2c73e76d-ad93-432f-ac49-8becf65fce83\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:484
+msgid "Examples"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:487
+msgid "Data with a given value representing missing data"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:489
+msgid ""
+"Let's consider a list of elements, ``x``, where values of -9999. represent "
+"missing data. We wish to compute the average value of the data and the "
+"vector of anomalies (deviations from the average):"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:-1
+msgid ""
+"<div id=\"7cab31e4-af8c-434d-bab1-b48c6abf9188\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('fba0f431-8f99-40e8-bbff-1eb81564496f','7cab31e4-"
+"af8c-434d-bab1-b48c6abf9188')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('fba0f431-8f99-40e8-bbff-1eb81564496f','7cab31e4-af8c-434d-bab1-"
+"b48c6abf9188')\">Open In Tab</button></div><div id=\"1c2b93c6-fc99-4dc2-8d43-"
+"ee517afde6d6\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:507
+msgid "Filling in the missing data"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:509
+msgid ""
+"Suppose now that we wish to print that same data, but with the missing "
+"values replaced by the average value."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:-1
+msgid ""
+"<div id=\"5b2a1973-c70b-41d1-8bfe-26fbf94fd520\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('3dfc9f24-9a75-4b94-82f5-59eebc88c685','5b2a1973-"
+"c70b-41d1-8bfe-26fbf94fd520')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('3dfc9f24-9a75-4b94-82f5-59eebc88c685','5b2a1973-"
+"c70b-41d1-8bfe-26fbf94fd520')\">Open In Tab</button></div><div "
+"id=\"7c493a19-1312-4c5f-9567-2c7dda73d09e\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:521
+msgid "Numerical operations"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:523
+msgid ""
+"Numerical operations can be easily performed without worrying about missing "
+"values, dividing by zero, square roots of negative numbers, etc.:"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:-1
+msgid ""
+"<div id=\"5dc89fbd-cb20-42f4-9596-ed1ebdd56cdd\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('f7abc54b-a6c5-4e20-8df1-00140a7f2902','5dc89fbd-"
+"cb20-42f4-9596-ed1ebdd56cdd')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('f7abc54b-"
+"a6c5-4e20-8df1-00140a7f2902','5dc89fbd-cb20-42f4-9596-ed1ebdd56cdd')\">Open "
+"In Tab</button></div><div id=\"687e6bf3-d279-4bf1-a371-a53c7dbfb9d2\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:534
+msgid ""
+"Four values of the output are invalid: the first one comes from taking the "
+"square root of a negative number, the second from the division by zero, and "
+"the last two where the inputs were masked."
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:540
+msgid "Ignoring extreme values"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:542
+msgid ""
+"Let's consider an array ``d`` of floats between 0 and 1. We wish to compute "
+"the average of the values of ``d`` while ignoring any data outside the range "
+"``[0.2, 0.9]``:"
+msgstr ""
+
+#: ../../../reference/maskedarray.generic.rst:-1
+msgid ""
+"<div id=\"c1ba8488-2ee2-4699-833d-e4561015c846\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('54440cbf-b714-40e7-81fa-"
+"c8d8a265e949','c1ba8488-2ee2-4699-833d-e4561015c846')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('54440cbf-b714-40e7-81fa-c8d8a265e949','c1ba8488-2ee2-4699-833d-"
+"e4561015c846')\">Open In Tab</button></div><div id=\"3e70f58c-715f-42dc-"
+"a6fc-601f2b39f231\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""

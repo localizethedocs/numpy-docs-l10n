@@ -1,0 +1,212 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.einsum_path.rst:4
+msgid "numpy.einsum\\_path"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:2
+msgid ""
+"Evaluates the lowest cost contraction order for an einsum expression by "
+"considering the creation of intermediate arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:9
+msgid "**subscripts**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:-1
+msgid "str"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:9
+msgid "Specifies the subscripts for summation."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:12
+msgid "**\\*operands**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:-1
+msgid "list of array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:12
+msgid "These are the arrays for the operation."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:34
+msgid "**optimize**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:-1
+msgid "{bool, list, tuple, 'greedy', 'optimal'}"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:15
+msgid ""
+"Choose the type of path. If a tuple is provided, the second argument is "
+"assumed to be the maximum intermediate size created. If only a single "
+"argument is provided the largest input or output array size is used as a "
+"maximum intermediate size."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:20
+msgid ""
+"if a list is given that starts with ``einsum_path``, uses this as the "
+"contraction path"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:22
+msgid "if False no optimization is taken"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:23
+msgid "if True defaults to the 'greedy' algorithm"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:24
+msgid ""
+"'optimal' An algorithm that combinatorially explores all possible ways of "
+"contracting the listed tensors and chooses the least costly path. Scales "
+"exponentially with the number of terms in the contraction."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:28
+msgid ""
+"'greedy' An algorithm that chooses the best pair contraction at each step. "
+"Effectively, this algorithm searches the largest inner, Hadamard, and then "
+"outer products at each step. Scales cubically with the number of terms in "
+"the contraction. Equivalent to the 'optimal' path for most contractions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:34
+msgid "Default is 'greedy'."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:39
+msgid "**path**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:-1
+msgid "list of tuples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:39
+msgid "A list representation of the einsum path."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:48
+msgid "**string_repr**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:42
+msgid "A printable representation of the einsum path."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:53
+msgid ":obj:`einsum`, :obj:`linalg.multi_dot`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:57
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:58
+msgid ""
+"The resulting path indicates which terms of the input contraction should be "
+"contracted first, the result of this contraction is then appended to the end "
+"of the contraction list. This list can then be iterated over until all "
+"intermediate contractions are complete."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:65
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:70
+msgid ""
+"We can begin with a chain dot example. In this case, it is optimal to "
+"contract the ``b`` and ``c`` tensors first as represented by the first "
+"element of the path ``(1, 2)``. The resulting tensor is added to the end of "
+"the contraction and the remaining contraction ``(0, 1)`` is then completed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:97
+msgid "A more complex index transformation example."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:-1
+msgid ""
+"<div id=\"8ae5783d-c6a2-409d-be78-841fe7e85af9\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('14f443b6-bd35-4d9c-b139-c2b5cc3dd807','8ae5783d-"
+"c6a2-409d-be78-841fe7e85af9')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('14f443b6-"
+"bd35-4d9c-b139-c2b5cc3dd807','8ae5783d-c6a2-409d-be78-841fe7e85af9')\">Open "
+"In Tab</button></div><div id=\"a0393df1-5b8f-4464-b11e-0ed1b3d16707\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum_path:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

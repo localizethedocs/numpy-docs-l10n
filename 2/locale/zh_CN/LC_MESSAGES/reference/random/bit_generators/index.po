@@ -1,0 +1,250 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/bit_generators/index.rst:46
+msgid "MT19937"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:46
+msgid "PCG64"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:46
+msgid "PCG64DXSM"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:46
+msgid "Philox"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:46
+msgid "SFC64"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:6
+msgid "Bit generators"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:8
+msgid ""
+"The random values produced by :class:`~Generator` originate in a "
+"BitGenerator.  The BitGenerators do not directly provide random numbers and "
+"only contains methods used for seeding, getting or setting the state, "
+"jumping or advancing the state, and for accessing low-level wrappers for "
+"consumption by code that can efficiently access the functions provided, e."
+"g., `numba <https://numba.pydata.org>`_."
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:16
+msgid "Supported BitGenerators"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:18
+msgid "The included BitGenerators are:"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:20
+msgid ""
+"PCG-64 - The default. A fast generator that can be advanced by an arbitrary "
+"amount. See the documentation for :meth:`~.PCG64.advance`. PCG-64 has a "
+"period of :math:`2^{128}`. See the `PCG author's page`_ for more details "
+"about this class of PRNG."
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:24
+msgid ""
+"PCG-64 DXSM - An upgraded version of PCG-64 with better statistical "
+"properties in parallel contexts. See :ref:`upgrading-pcg64` for more "
+"information on these improvements."
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:27
+msgid ""
+"MT19937 - The standard Python BitGenerator. Adds a `MT19937.jumped` function "
+"that returns a new generator with state as-if :math:`2^{128}` draws have "
+"been made."
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:30
+msgid ""
+"Philox - A counter-based generator capable of being advanced an arbitrary "
+"number of steps or generating independent streams. See the `Random123`_ page "
+"for more details about this class of bit generators."
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:33
+msgid ""
+"SFC64 - A fast generator based on random invertible mappings. Usually the "
+"fastest generator of the four. See the `SFC author's page`_ for (a little) "
+"more detail."
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:45:<autosummary>:1
+msgid ":py:obj:`BitGenerator <numpy.random.BitGenerator>`\\ \\(\\[seed\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:45:<autosummary>:1
+msgid ""
+"Base Class for generic BitGenerators, which provide a stream of random bits "
+"based on different algorithms."
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:58
+msgid "Seeding and entropy"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:60
+msgid ""
+"A BitGenerator provides a stream of random values. In order to generate "
+"reproducible streams, BitGenerators support setting their initial state via "
+"a seed. All of the provided BitGenerators will take an arbitrary-sized non-"
+"negative integer, or a list of such integers, as a seed. BitGenerators need "
+"to take those inputs and process them into a high-quality internal state for "
+"the BitGenerator. All of the BitGenerators in numpy delegate that task to "
+"`SeedSequence`, which uses hashing techniques to ensure that even low-"
+"quality seeds generate high-quality initial states."
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:69
+msgid ""
+"from numpy.random import PCG64\n"
+"\n"
+"bg = PCG64(12345678903141592653589793)"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:77
+msgid ""
+"`~SeedSequence` is designed to be convenient for implementing best "
+"practices. We recommend that a stochastic program defaults to using entropy "
+"from the OS so that each run is different. The program should print out or "
+"log that entropy. In order to reproduce a past value, the program should "
+"allow the user to provide that value through some mechanism, a command-line "
+"argument is common, so that the user can then re-enter that entropy to "
+"reproduce the result. `~SeedSequence` can take care of everything except for "
+"communicating with the user, which is up to you."
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:86
+msgid ""
+"from numpy.random import PCG64, SeedSequence\n"
+"\n"
+"# Get the user's seed somehow, maybe through `argparse`.\n"
+"# If the user did not provide a seed, it should return `None`.\n"
+"seed = get_user_seed()\n"
+"ss = SeedSequence(seed)\n"
+"print(f'seed = {ss.entropy}')\n"
+"bg = PCG64(ss)"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:99
+msgid ""
+"We default to using a 128-bit integer using entropy gathered from the OS. "
+"This is a good amount of entropy to initialize all of the generators that we "
+"have in numpy. We do not recommend using small seeds below 32 bits for "
+"general use. Using just a small set of seeds to instantiate larger state "
+"spaces means that there are some initial states that are impossible to "
+"reach. This creates some biases if everyone uses such values."
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:106
+msgid ""
+"There will not be anything *wrong* with the results, per se; even a seed of "
+"0 is perfectly fine thanks to the processing that `~SeedSequence` does. If "
+"you just need *some* fixed value for unit tests or debugging, feel free to "
+"use whatever seed you like. But if you want to make inferences from the "
+"results or publish them, drawing from a larger set of seeds is good practice."
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:112
+msgid ""
+"If you need to generate a good seed \"offline\", then ``SeedSequence()."
+"entropy`` or using ``secrets.randbits(128)`` from the standard library are "
+"both convenient ways."
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:116
+msgid ""
+"If you need to run several stochastic simulations in parallel, best practice "
+"is to construct a random generator instance for each simulation. To make "
+"sure that the random streams have distinct initial states, you can use the "
+"`spawn` method of `~SeedSequence`. For instance, here we construct a list of "
+"12 instances:"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:122
+msgid ""
+"from numpy.random import PCG64, SeedSequence\n"
+"\n"
+"# High quality initial entropy\n"
+"entropy = 0x87351080e25cb0fad77a44a3be03b491\n"
+"base_seq = SeedSequence(entropy)\n"
+"child_seqs = base_seq.spawn(12)    # a list of 12 SeedSequences\n"
+"generators = [PCG64(seq) for seq in child_seqs]"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:134
+msgid ""
+"If you already have an initial random generator instance, you can shorten "
+"the above by using the `~BitGenerator.spawn` method:"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:137
+msgid ""
+"from numpy.random import PCG64, SeedSequence\n"
+"# High quality initial entropy\n"
+"entropy = 0x87351080e25cb0fad77a44a3be03b491\n"
+"base_bitgen = PCG64(entropy)\n"
+"generators = base_bitgen.spawn(12)"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:145
+msgid ""
+"An alternative way is to use the fact that a `~SeedSequence` can be "
+"initialized by a tuple of elements. Here we use a base entropy value and an "
+"integer ``worker_id``"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:149
+msgid ""
+"from numpy.random import PCG64, SeedSequence\n"
+"\n"
+"# High quality initial entropy\n"
+"entropy = 0x87351080e25cb0fad77a44a3be03b491\n"
+"sequences = [SeedSequence((entropy, worker_id)) for worker_id in range(12)]\n"
+"generators = [PCG64(seq) for seq in sequences]"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:160
+msgid ""
+"Note that the sequences produced by the latter method will be distinct from "
+"those constructed via `~SeedSequence.spawn`."
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:167:<autosummary>:1
+msgid ""
+":py:obj:`SeedSequence <numpy.random.SeedSequence>`\\ \\(\\[entropy\\, "
+"spawn\\_key\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/index.rst:167:<autosummary>:1
+msgid ""
+"SeedSequence mixes sources of entropy in a reproducible way to set the "
+"initial state for independent and very probably non-overlapping "
+"BitGenerators."
+msgstr ""

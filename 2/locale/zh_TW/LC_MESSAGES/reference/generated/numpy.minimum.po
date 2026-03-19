@@ -1,0 +1,186 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.minimum.rst:4
+msgid "numpy.minimum"
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:2
+msgid "Element-wise minimum of array elements."
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:4
+msgid ""
+"Compare two arrays and return a new array containing the element-wise "
+"minima. If one of the elements being compared is a NaN, then that element is "
+"returned. If both elements are NaNs then the first is returned. The latter "
+"distinction is important for complex NaNs, which are defined as at least one "
+"of the real or imaginary parts being a NaN. The net effect is that NaNs are "
+"propagated."
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:16
+msgid "**x1, x2**"
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:14
+msgid ""
+"The arrays holding the elements to be compared. If ``x1.shape != x2.shape``, "
+"they must be broadcastable to a common shape (which becomes the shape of the "
+"output)."
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:22
+msgid "**out**"
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:-1
+msgid "ndarray, None, or tuple of ndarray and None, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:19
+msgid ""
+"A location into which the result is stored. If provided, it must have a "
+"shape that the inputs broadcast to. If not provided or None, a freshly-"
+"allocated array is returned. A tuple (possible only as a keyword argument) "
+"must have length equal to the number of outputs."
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:30
+msgid "**where**"
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:25
+msgid ""
+"This condition is broadcast over the input. At locations where the condition "
+"is True, the `out` array will be set to the ufunc result. Elsewhere, the "
+"`out` array will retain its original value. Note that if an uninitialized "
+"`out` array is created via the default ``out=None``, locations within it "
+"where the condition is False will remain uninitialized."
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:34
+msgid "**\\*\\*kwargs**"
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:33
+msgid ""
+"For other keyword-only arguments, see the :ref:`ufunc docs <ufuncs.kwargs>`."
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:46
+msgid "**y**"
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:-1
+msgid "ndarray or scalar"
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:39
+msgid ""
+"The minimum of `x1` and `x2`, element-wise. This is a scalar if both `x1` "
+"and `x2` are scalars."
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:51
+msgid ":obj:`maximum`"
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:52
+msgid "Element-wise maximum of two arrays, propagates NaNs."
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:53
+msgid ":obj:`fmin`"
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:54
+msgid "Element-wise minimum of two arrays, ignores NaNs."
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:55
+msgid ":obj:`amin`"
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:56
+msgid "The minimum value of an array along a given axis, propagates NaNs."
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:57
+msgid ":obj:`nanmin`"
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:58
+msgid "The minimum value of an array along a given axis, ignores NaNs."
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:59
+msgid ":obj:`fmax`, :obj:`amax`, :obj:`nanmax`"
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:63
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:64
+msgid ""
+"The minimum is equivalent to ``np.where(x1 <= x2, x1, x2)`` when neither x1 "
+"nor x2 are NaNs, but it is faster and does proper broadcasting."
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:70
+msgid "Examples"
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:-1
+msgid ""
+"<div id=\"cb238e6f-e797-40fa-9714-3cf571f3fd1f\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('c7260b38-662e-4981-9ab3-20484e4d03ea','cb238e6f-"
+"e797-40fa-9714-3cf571f3fd1f')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('c7260b38-662e-4981-9ab3-20484e4d03ea','cb238e6f-"
+"e797-40fa-9714-3cf571f3fd1f')\">Open In Tab</button></div><div id=\"106745ae-"
+"ffa2-4c79-9a91-73b848c04e3b\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../docstring of numpy.minimum:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

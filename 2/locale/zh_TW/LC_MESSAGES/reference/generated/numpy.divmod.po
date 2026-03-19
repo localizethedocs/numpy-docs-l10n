@@ -1,0 +1,186 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.divmod.rst:4
+msgid "numpy.divmod"
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:2
+msgid "Return element-wise quotient and remainder simultaneously."
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:4
+msgid ""
+"``np.divmod(x, y)`` is equivalent to ``(x // y, x % y)``, but faster because "
+"it avoids redundant work. It is used to implement the Python built-in "
+"function ``divmod`` on NumPy arrays."
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:11
+msgid "**x1**"
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:11
+msgid "Dividend array."
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:16
+msgid "**x2**"
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:14
+msgid ""
+"Divisor array. If ``x1.shape != x2.shape``, they must be broadcastable to a "
+"common shape (which becomes the shape of the output)."
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:22
+msgid "**out**"
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:-1
+msgid "ndarray, None, or tuple of ndarray and None, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:19
+msgid ""
+"A location into which the result is stored. If provided, it must have a "
+"shape that the inputs broadcast to. If not provided or None, a freshly-"
+"allocated array is returned. A tuple (possible only as a keyword argument) "
+"must have length equal to the number of outputs."
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:30
+msgid "**where**"
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:25
+msgid ""
+"This condition is broadcast over the input. At locations where the condition "
+"is True, the `out` array will be set to the ufunc result. Elsewhere, the "
+"`out` array will retain its original value. Note that if an uninitialized "
+"`out` array is created via the default ``out=None``, locations within it "
+"where the condition is False will remain uninitialized."
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:34
+msgid "**\\*\\*kwargs**"
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:33
+msgid ""
+"For other keyword-only arguments, see the :ref:`ufunc docs <ufuncs.kwargs>`."
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:40
+msgid "**out1**"
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:39
+msgid ""
+"Element-wise quotient resulting from floor division. This is a scalar if "
+"both `x1` and `x2` are scalars."
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:50
+msgid "**out2**"
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:43
+msgid ""
+"Element-wise remainder from floor division. This is a scalar if both `x1` "
+"and `x2` are scalars."
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:55
+msgid ":obj:`floor_divide`"
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:56
+msgid "Equivalent to Python's ``//`` operator."
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:57
+msgid ":obj:`remainder`"
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:58
+msgid "Equivalent to Python's ``%`` operator."
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:59
+msgid ":obj:`modf`"
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:60
+msgid ""
+"Equivalent to ``divmod(x, 1)`` for positive ``x`` with the return values "
+"switched."
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:66
+msgid "Examples"
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:75
+msgid ""
+"The `divmod` function can be used as a shorthand for ``np.divmod`` on "
+"ndarrays."
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:-1
+msgid ""
+"<div id=\"408163fc-4572-4755-a0cc-ae4684aa6a3d\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('fda11c1f-59a2-4b85-8022-"
+"ac0198eb73a5','408163fc-4572-4755-a0cc-ae4684aa6a3d')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('fda11c1f-59a2-4b85-8022-ac0198eb73a5','408163fc-4572-4755-a0cc-"
+"ae4684aa6a3d')\">Open In Tab</button></div><div "
+"id=\"18d96443-5f6f-411a-9e26-47b4081f7619\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../docstring of numpy.divmod:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""
