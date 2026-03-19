@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.seterrcall.rst:4
+msgid "numpy.seterrcall"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.seterrcall:2
+msgid "Set the floating-point error callback function or log object."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.seterrcall:4
+msgid ""
+"There are two ways to capture floating-point error messages.  The first is "
+"to set the error-handler to 'call', using `seterr`.  Then, set the function "
+"to call using this function."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.seterrcall:8
+msgid ""
+"The second is to set the error-handler to 'log', using `seterr`. Floating-"
+"point errors then trigger a call to the 'write' method of the provided "
+"object."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.seterrcall:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.seterrcall:29
+msgid "**func**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.seterrcall:-1
+msgid "callable f(err, flag) or object with write method"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.seterrcall:15
+msgid ""
+"Function to call upon floating-point errors ('call'-mode) or object whose "
+"'write' method is used to log such message ('log'-mode)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.seterrcall:18
+msgid ""
+"The call function takes two arguments. The first is a string describing the "
+"type of error (such as \"divide by zero\", \"overflow\", \"underflow\", or "
+"\"invalid value\"), and the second is the status flag.  The flag is a byte, "
+"whose four least-significant bits indicate the type of error, one of "
+"\"divide\", \"over\", \"under\", \"invalid\"::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.seterrcall:24
+msgid "[0 0 0 0 divide over under invalid]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.seterrcall:26
+msgid "In other words, ``flags = divide + 2*over + 4*under + 8*invalid``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.seterrcall:28
+msgid ""
+"If an object is provided, its write method should take one argument, a "
+"string."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.seterrcall:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.seterrcall:40
+msgid "**h**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.seterrcall:-1
+msgid "callable, log instance or None"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.seterrcall:34
+msgid "The old error handler."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.seterrcall:45
+msgid ":obj:`seterr`, :obj:`geterr`, :obj:`geterrcall`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.seterrcall:51
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.seterrcall:52
+msgid "Callback upon error:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.seterrcall:70
+msgid "Log error message:"
+msgstr ""

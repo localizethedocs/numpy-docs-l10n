@@ -1,0 +1,149 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.lib.format.write_array.rst:4
+msgid "numpy.lib.format.write\\_array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:2
+msgid "Write an array to an NPY file, including a header."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:4
+msgid ""
+"If the array is neither C-contiguous nor Fortran-contiguous AND the "
+"file_like object is not a real file object, this function will have to copy "
+"data in memory."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:12
+msgid "**fp**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:-1
+msgid "file_like object"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:11
+msgid ""
+"An open, writable file object, or similar object with a ``.write()`` method."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:15
+msgid "**array**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:15
+msgid "The array to write to disk."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:19
+msgid "**version**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:-1
+msgid "(int, int) or None, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:18
+msgid ""
+"The version number of the format. None means use the oldest supported "
+"version that is able to store the data.  Default: None"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:22
+msgid "**allow_pickle**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:22
+msgid "Whether to allow writing pickled data. Default: True"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:31
+msgid "**pickle_kwargs**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:-1
+msgid "dict, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:25
+msgid ""
+"Additional keyword arguments to pass to pickle.dump, excluding 'protocol'. "
+"These are only useful when pickling objects in object arrays on Python 3 to "
+"Python 2 compatible format."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:37
+msgid "ValueError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:36
+msgid ""
+"If the array cannot be persisted. This includes the case of "
+"allow_pickle=False and array being an object array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:50
+msgid "Various other errors"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format.write_array:40
+msgid ""
+"If the array contains Python objects as part of its dtype, the process of "
+"pickling them may raise various errors if the objects are not picklable."
+msgstr ""

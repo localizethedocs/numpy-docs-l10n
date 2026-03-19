@@ -1,0 +1,197 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../dev/gitwash/configure_git.rst:5
+msgid "Git configuration"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:10
+msgid "Overview"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:12
+msgid ""
+"Your personal git_ configurations are saved in the ``.gitconfig`` file in "
+"your home directory. Here is an example ``.gitconfig`` file::"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:16
+msgid ""
+"[user]\n"
+"        name = Your Name\n"
+"        email = you@yourdomain.example.com\n"
+"\n"
+"[alias]\n"
+"        ci = commit -a\n"
+"        co = checkout\n"
+"        st = status -a\n"
+"        stat = status -a\n"
+"        br = branch\n"
+"        wdiff = diff --color-words\n"
+"\n"
+"[core]\n"
+"        editor = vim\n"
+"\n"
+"[merge]\n"
+"        summary = true"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:34
+msgid ""
+"You can edit this file directly or you can use the ``git config --global`` "
+"command::"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:37
+msgid ""
+"git config --global user.name \"Your Name\"\n"
+"git config --global user.email you@yourdomain.example.com\n"
+"git config --global alias.ci \"commit -a\"\n"
+"git config --global alias.co checkout\n"
+"git config --global alias.st \"status -a\"\n"
+"git config --global alias.stat \"status -a\"\n"
+"git config --global alias.br branch\n"
+"git config --global alias.wdiff \"diff --color-words\"\n"
+"git config --global core.editor vim\n"
+"git config --global merge.summary true"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:48
+msgid ""
+"To set up on another computer, you can copy your ``~/.gitconfig`` file, or "
+"run the commands above."
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:52
+msgid "In detail"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:55
+msgid "user.name and user.email"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:57
+msgid ""
+"It is good practice to tell git_ who you are, for labeling any changes you "
+"make to the code.  The simplest way to do this is from the command line::"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:61
+msgid ""
+"git config --global user.name \"Your Name\"\n"
+"git config --global user.email you@yourdomain.example.com"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:64
+msgid ""
+"This will write the settings into your git configuration file,  which should "
+"now contain a user section with your name and email::"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:67
+msgid ""
+"[user]\n"
+"      name = Your Name\n"
+"      email = you@yourdomain.example.com"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:71
+msgid ""
+"Of course you'll need to replace ``Your Name`` and ``you@yourdomain.example."
+"com`` with your actual name and email address."
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:75
+msgid "Aliases"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:77
+msgid "You might well benefit from some aliases to common commands."
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:79
+msgid ""
+"For example, you might well want to be able to shorten ``git checkout`` to "
+"``git co``.  Or you may want to alias ``git diff --color-words`` (which "
+"gives a nicely formatted output of the diff) to ``git wdiff``"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:83
+msgid "The following ``git config --global`` commands::"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:85
+msgid ""
+"git config --global alias.ci \"commit -a\"\n"
+"git config --global alias.co checkout\n"
+"git config --global alias.st \"status -a\"\n"
+"git config --global alias.stat \"status -a\"\n"
+"git config --global alias.br branch\n"
+"git config --global alias.wdiff \"diff --color-words\""
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:92
+msgid ""
+"will create an ``alias`` section in your ``.gitconfig`` file with contents "
+"like this::"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:95
+msgid ""
+"[alias]\n"
+"        ci = commit -a\n"
+"        co = checkout\n"
+"        st = status -a\n"
+"        stat = status -a\n"
+"        br = branch\n"
+"        wdiff = diff --color-words"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:104
+msgid "Editor"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:106
+msgid "You may also want to make sure that your editor of choice is used ::"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:108
+msgid "git config --global core.editor vim"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:111
+msgid "Merging"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:113
+msgid "To enforce summaries when doing merges (``~/.gitconfig`` file again)::"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:115
+msgid ""
+"[merge]\n"
+"   log = true"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:118
+msgid "Or from the command line::"
+msgstr ""
+
+#: ../../../dev/gitwash/configure_git.rst:120
+msgid "git config --global merge.log true"
+msgstr ""

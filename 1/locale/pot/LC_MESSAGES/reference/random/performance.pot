@@ -1,0 +1,864 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/performance.rst:2
+msgid "Performance"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:7
+msgid "Recommendation"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:9
+msgid ""
+"The recommended generator for general use is `PCG64` or its upgraded variant "
+"`PCG64DXSM` for heavily-parallel use cases. They are statistically high "
+"quality, full-featured, and fast on most platforms, but somewhat slow when "
+"compiled for 32-bit processes. See :ref:`upgrading-pcg64` for details on "
+"when heavy parallelism would indicate using `PCG64DXSM`."
+msgstr ""
+
+#: ../../../reference/random/performance.rst:15
+msgid ""
+"`Philox` is fairly slow, but its statistical properties have very high "
+"quality, and it is easy to get an assuredly-independent stream by using "
+"unique keys. If that is the style you wish to use for parallel streams, or "
+"you are porting from another system that uses that style, then `Philox` is "
+"your choice."
+msgstr ""
+
+#: ../../../reference/random/performance.rst:21
+msgid ""
+"`SFC64` is statistically high quality and very fast. However, it lacks "
+"jumpability. If you are not using that capability and want lots of speed, "
+"even on 32-bit processes, this is your choice."
+msgstr ""
+
+#: ../../../reference/random/performance.rst:25
+msgid ""
+"`MT19937` `fails some statistical tests`_ and is not especially fast "
+"compared to modern PRNGs. For these reasons, we mostly do not recommend "
+"using it on its own, only through the legacy `~.RandomState` for reproducing "
+"old results. That said, it has a very long history as a default in many "
+"systems."
+msgstr ""
+
+#: ../../../reference/random/performance.rst:34
+msgid "Timings"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:36
+msgid ""
+"The timings below are the time in ns to produce 1 random value from a "
+"specific distribution.  The original `MT19937` generator is much slower "
+"since it requires 2 32-bit values to equal the output of the faster "
+"generators."
+msgstr ""
+
+#: ../../../reference/random/performance.rst:41
+msgid "Integer performance has a similar ordering."
+msgstr ""
+
+#: ../../../reference/random/performance.rst:43
+msgid ""
+"The pattern is similar for other, more complex generators. The normal "
+"performance of the legacy `RandomState` generator is much lower than the "
+"other since it uses the Box-Muller transform rather than the Ziggurat "
+"method. The performance gap for Exponentials is also large due to the cost "
+"of computing the log function to invert the CDF. The column labeled MT19973 "
+"uses the same 32-bit generator as `RandomState` but produces random variates "
+"using `Generator`."
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+#: ../../../reference/random/performance.rst:104
+#: ../../../reference/random/performance.rst:121
+#: ../../../reference/random/performance.rst:140
+msgid "MT19937"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+#: ../../../reference/random/performance.rst:104
+#: ../../../reference/random/performance.rst:121
+#: ../../../reference/random/performance.rst:140
+msgid "PCG64"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+#: ../../../reference/random/performance.rst:104
+#: ../../../reference/random/performance.rst:121
+#: ../../../reference/random/performance.rst:140
+msgid "PCG64DXSM"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+#: ../../../reference/random/performance.rst:104
+#: ../../../reference/random/performance.rst:121
+#: ../../../reference/random/performance.rst:140
+msgid "Philox"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+#: ../../../reference/random/performance.rst:104
+#: ../../../reference/random/performance.rst:121
+#: ../../../reference/random/performance.rst:140
+msgid "SFC64"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "RandomState"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+#: ../../../reference/random/performance.rst:106
+#: ../../../reference/random/performance.rst:123
+#: ../../../reference/random/performance.rst:142
+msgid "32-bit Unsigned Ints"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "3.3"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "1.9"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "2.0"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "1.8"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "3.1"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+#: ../../../reference/random/performance.rst:107
+#: ../../../reference/random/performance.rst:124
+#: ../../../reference/random/performance.rst:143
+msgid "64-bit Unsigned Ints"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "5.6"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "3.2"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "2.9"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "4.9"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "2.5"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "5.5"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+#: ../../../reference/random/performance.rst:108
+#: ../../../reference/random/performance.rst:125
+#: ../../../reference/random/performance.rst:144
+msgid "Uniforms"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "5.9"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "5.0"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "2.6"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "6.0"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+#: ../../../reference/random/performance.rst:109
+#: ../../../reference/random/performance.rst:126
+#: ../../../reference/random/performance.rst:145
+msgid "Normals"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "13.9"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "10.8"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "10.5"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "12.0"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "8.3"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "56.8"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+#: ../../../reference/random/performance.rst:110
+#: ../../../reference/random/performance.rst:127
+#: ../../../reference/random/performance.rst:146
+msgid "Exponentials"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "9.1"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "5.8"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "8.1"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "5.4"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "63.9"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "Gammas"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "37.2"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "30.8"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "28.9"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "34.0"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "27.5"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "77.0"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "Binomials"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "21.3"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "17.4"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "17.6"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "19.3"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "15.6"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "21.4"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "Laplaces"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "73.2"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "72.3"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "76.1"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "73.0"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "82.5"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "Poissons"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "111.7"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "103.4"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "100.5"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "109.4"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "90.7"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "115.2"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:65
+msgid ""
+"The next table presents the performance in percentage relative to values "
+"generated by the legacy generator, ``RandomState(MT19937())``. The overall "
+"performance was computed using a geometric mean."
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "96"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "162"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "160"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "175"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "97"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "171"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+#: ../../../reference/random/performance.rst:108
+msgid "188"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "113"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "218"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "102"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+#: ../../../reference/random/performance.rst:111
+msgid "192"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "206"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "121"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "233"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "409"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "526"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "541"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "471"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "684"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "701"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "1071"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "1101"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "784"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "1179"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "207"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "250"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "266"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "227"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "281"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+#: ../../../reference/random/performance.rst:106
+#: ../../../reference/random/performance.rst:107
+#: ../../../reference/random/performance.rst:108
+#: ../../../reference/random/performance.rst:109
+#: ../../../reference/random/performance.rst:110
+#: ../../../reference/random/performance.rst:111
+#: ../../../reference/random/performance.rst:123
+#: ../../../reference/random/performance.rst:124
+#: ../../../reference/random/performance.rst:125
+#: ../../../reference/random/performance.rst:126
+#: ../../../reference/random/performance.rst:127
+#: ../../../reference/random/performance.rst:128
+#: ../../../reference/random/performance.rst:142
+#: ../../../reference/random/performance.rst:143
+#: ../../../reference/random/performance.rst:144
+#: ../../../reference/random/performance.rst:145
+#: ../../../reference/random/performance.rst:146
+#: ../../../reference/random/performance.rst:147
+msgid "100"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "123"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "122"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+#: ../../../reference/random/performance.rst:110
+msgid "111"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+#: ../../../reference/random/performance.rst:128
+msgid "138"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "114"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "108"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "103"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+#: ../../../reference/random/performance.rst:109
+msgid "115"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "105"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "127"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+#: ../../../reference/random/performance.rst:111
+msgid "Overall"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+#: ../../../reference/random/performance.rst:127
+msgid "159"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "219"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "225"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "174"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:1
+msgid "251"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:86
+msgid "All timings were taken using Linux on an AMD Ryzen 9 3900X processor."
+msgstr ""
+
+#: ../../../reference/random/performance.rst:89
+msgid "Performance on different Operating Systems"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:90
+msgid ""
+"Performance differs across platforms due to compiler and hardware "
+"availability (e.g., register width) differences. The default bit generator "
+"has been chosen to perform well on 64-bit platforms.  Performance on 32-bit "
+"operating systems is very different."
+msgstr ""
+
+#: ../../../reference/random/performance.rst:95
+msgid ""
+"The values reported are normalized relative to the speed of MT19937 in each "
+"table. A value of 100 indicates that the performance matches the MT19937. "
+"Higher values indicate improved performance. These values cannot be compared "
+"across tables."
+msgstr ""
+
+#: ../../../reference/random/performance.rst:101
+msgid "64-bit Linux"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:104
+#: ../../../reference/random/performance.rst:121
+#: ../../../reference/random/performance.rst:140
+msgid "Distribution"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:106
+#: ../../../reference/random/performance.rst:110
+#: ../../../reference/random/performance.rst:111
+msgid "168"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:106
+msgid "166"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:106
+msgid "182"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:107
+msgid "176"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:107
+msgid "193"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:107
+msgid "116"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:107
+msgid "224"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:108
+msgid "202"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:108
+msgid "118"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:108
+msgid "228"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:109
+#: ../../../reference/random/performance.rst:126
+msgid "128"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:109
+msgid "132"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:109
+msgid "167"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:110
+msgid "152"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:110
+#: ../../../reference/random/performance.rst:124
+msgid "157"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:111
+msgid "161"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:111
+msgid "112"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:116
+msgid "64-bit Windows"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:117
+msgid ""
+"The relative performance on 64-bit Linux and 64-bit Windows is broadly "
+"similar with the notable exception of the Philox generator."
+msgstr ""
+
+#: ../../../reference/random/performance.rst:123
+#: ../../../reference/random/performance.rst:125
+msgid "155"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:123
+msgid "131"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:123
+msgid "29"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:123
+#: ../../../reference/random/performance.rst:126
+#: ../../../reference/random/performance.rst:127
+msgid "150"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:124
+msgid "143"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:124
+#: ../../../reference/random/performance.rst:147
+msgid "25"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:124
+#: ../../../reference/random/performance.rst:128
+msgid "154"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:125
+msgid "151"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:125
+msgid "144"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:125
+#: ../../../reference/random/performance.rst:142
+msgid "24"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:126
+msgid "129"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:126
+msgid "37"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:127
+msgid "145"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:127
+#: ../../../reference/random/performance.rst:128
+#: ../../../reference/random/performance.rst:145
+#: ../../../reference/random/performance.rst:146
+msgid "28"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:128
+#: ../../../reference/random/performance.rst:147
+msgid "**Overall**"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:128
+msgid "148"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:133
+msgid "32-bit Windows"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:135
+msgid ""
+"The performance of 64-bit generators on 32-bit Windows is much lower than on "
+"64-bit operating systems due to register width. MT19937, the generator that "
+"has been in NumPy since 2005, operates on 32-bit integers."
+msgstr ""
+
+#: ../../../reference/random/performance.rst:142
+#: ../../../reference/random/performance.rst:144
+msgid "34"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:142
+#: ../../../reference/random/performance.rst:143
+msgid "14"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:142
+#: ../../../reference/random/performance.rst:145
+msgid "57"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:143
+#: ../../../reference/random/performance.rst:144
+msgid "21"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:143
+msgid "32"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:143
+msgid "74"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:144
+msgid "16"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:144
+msgid "73"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:145
+msgid "36"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:145
+msgid "101"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:146
+msgid "44"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:146
+msgid "20"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:146
+msgid "88"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:147
+msgid "39"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:147
+msgid "18"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:147
+msgid "77"
+msgstr ""
+
+#: ../../../reference/random/performance.rst:153
+msgid ""
+"Linux timings used Ubuntu 20.04 and GCC 9.3.0.  Windows timings were made on "
+"Windows 10 using Microsoft C/C++ Optimizing Compiler Version 19 (Visual "
+"Studio 2019). All timings were produced on an AMD Ryzen 9 3900X processor."
+msgstr ""

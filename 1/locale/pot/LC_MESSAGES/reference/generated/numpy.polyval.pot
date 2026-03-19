@@ -1,0 +1,164 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polyval.rst:4
+msgid "numpy.polyval"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:2
+msgid "Evaluate a polynomial at specific values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:5
+msgid ""
+"This forms part of the old polynomial API. Since version 1.4, the new "
+"polynomial API defined in `numpy.polynomial` is preferred. A summary of the "
+"differences can be found in the :doc:`transition guide </reference/routines."
+"polynomials>`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:10
+msgid "If `p` is of length N, this function returns the value:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:12
+msgid "``p[0]*x**(N-1) + p[1]*x**(N-2) + ... + p[N-2]*x + p[N-1]``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:14
+msgid ""
+"If `x` is a sequence, then ``p(x)`` is returned for each element of ``x``. "
+"If `x` is another polynomial then the composite polynomial ``p(x(t))`` is "
+"returned."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:23
+msgid "**p**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:-1
+msgid "array_like or poly1d object"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:21
+msgid ""
+"1D array of polynomial coefficients (including coefficients equal to zero) "
+"from highest degree to the constant term, or an instance of poly1d."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:27
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:26
+msgid ""
+"A number, an array of numbers, or an instance of poly1d, at which to "
+"evaluate `p`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:42
+msgid "**values**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:-1
+msgid "ndarray or poly1d"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:32
+msgid ""
+"If `x` is a poly1d instance, the result is the composition of the two "
+"polynomials, i.e., `x` is \"substituted\" in `p` and the simplified result "
+"is returned. In addition, the type of `x` - array_like or poly1d - governs "
+"the type of the output: `x` array_like => `values` array_like, `x` a poly1d "
+"object => `values` is also."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:47
+msgid ":obj:`poly1d`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:48
+msgid "A polynomial class."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:52
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:53
+msgid ""
+"Horner's scheme [R138ee7027ddf-1]_ is used to evaluate the polynomial. Even "
+"so, for polynomials of high degree the values may be inaccurate due to "
+"rounding errors. Use carefully."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:57
+msgid ""
+"If `x` is a subtype of `ndarray` the return value will be of the same type."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:60
+msgid "References"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:61
+msgid ""
+"I. N. Bronshtein, K. A. Semendyayev, and K. A. Hirsch (Eng. trans. Ed.), "
+"*Handbook of Mathematics*, New York, Van Nostrand Reinhold Co., 1985, pg. "
+"720."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:67
+msgid "[R138ee7027ddf-1]_"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyval:70
+msgid "Examples"
+msgstr ""

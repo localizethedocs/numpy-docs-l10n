@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../dev/gitwash/dot2_dot3.rst:5
+msgid "Two and three dots in difference specs"
+msgstr ""
+
+#: ../../../dev/gitwash/dot2_dot3.rst:7
+msgid "Thanks to Yarik Halchenko for this explanation."
+msgstr ""
+
+#: ../../../dev/gitwash/dot2_dot3.rst:9
+msgid ""
+"Imagine a series of commits A, B, C, D...  Imagine that there are two "
+"branches, *topic* and *main*.  You branched *topic* off *main* when *main* "
+"was at commit 'E'.  The graph of the commits looks like this::"
+msgstr ""
+
+#: ../../../dev/gitwash/dot2_dot3.rst:14
+msgid ""
+"     A---B---C topic\n"
+"     /\n"
+"D---E---F---G main"
+msgstr ""
+
+#: ../../../dev/gitwash/dot2_dot3.rst:18
+msgid "Then::"
+msgstr ""
+
+#: ../../../dev/gitwash/dot2_dot3.rst:20
+msgid "git diff main..topic"
+msgstr ""
+
+#: ../../../dev/gitwash/dot2_dot3.rst:22
+msgid ""
+"will output the difference from G to C (i.e. with effects of F and G), "
+"while::"
+msgstr ""
+
+#: ../../../dev/gitwash/dot2_dot3.rst:25
+msgid "git diff main...topic"
+msgstr ""
+
+#: ../../../dev/gitwash/dot2_dot3.rst:27
+msgid ""
+"would output just differences in the topic branch (i.e. only A, B, and C)."
+msgstr ""

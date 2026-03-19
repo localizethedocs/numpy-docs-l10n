@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.ma.masked_array.itemset.rst:4
+msgid "numpy.ma.masked\\_array.itemset"
+msgstr ""
+
+#: ../../../reference/generated/numpy.ma.masked_array.itemset.rst:8
+msgid "method"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.ma.masked_array.itemset:2
+msgid ""
+"Insert scalar into an array (scalar is cast to array's dtype, if possible)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.ma.masked_array.itemset:4
+msgid ""
+"There must be at least 1 argument, and define the last argument as *item*.  "
+"Then, ``a.itemset(*args)`` is equivalent to but faster than ``a[args] = "
+"item``.  The item should be a scalar value and `args` must select a single "
+"item in the array `a`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.ma.masked_array.itemset:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.ma.masked_array.itemset:23
+msgid "**\\*args**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.ma.masked_array.itemset:-1
+msgid "Arguments"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.ma.masked_array.itemset:12
+msgid ""
+"If one argument: a scalar, only used in case `a` is of size 1. If two "
+"arguments: the last argument is the value to be set and must be a scalar, "
+"the first argument specifies a single array element location. It is either "
+"an int or a tuple."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.ma.masked_array.itemset:26
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.ma.masked_array.itemset:27
+msgid ""
+"Compared to indexing syntax, `itemset` provides some speed increase for "
+"placing a scalar into a particular location in an `ndarray`, if you must do "
+"this.  However, generally this is discouraged: among other problems, it "
+"complicates the appearance of the code. Also, when using `itemset` (and "
+"`item`) inside a loop, be sure to assign the methods to a local variable to "
+"avoid the attribute look-up at each loop iteration."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.ma.masked_array.itemset:37
+msgid "Examples"
+msgstr ""

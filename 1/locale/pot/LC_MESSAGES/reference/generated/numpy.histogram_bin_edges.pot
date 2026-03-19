@@ -1,0 +1,394 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.histogram_bin_edges.rst:4
+msgid "numpy.histogram\\_bin\\_edges"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:2
+msgid ""
+"Function to calculate only the edges of the bins used by the `histogram` "
+"function."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:9
+msgid "**a**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:9
+msgid "Input data. The histogram is computed over the flattened array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:59
+msgid "**bins**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:-1
+msgid "int or sequence of scalars or str, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:12
+msgid ""
+"If `bins` is an int, it defines the number of equal-width bins in the given "
+"range (10, by default). If `bins` is a sequence, it defines the bin edges, "
+"including the rightmost edge, allowing for non-uniform bin widths."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:17
+msgid ""
+"If `bins` is a string from the list below, `histogram_bin_edges` will use "
+"the method chosen to calculate the optimal bin width and consequently the "
+"number of bins (see `Notes` for more detail on the estimators) from the data "
+"that falls within the requested range. While the bin width will be optimal "
+"for the actual data in the range, the number of bins will be computed to "
+"fill the entire range, including the empty portions. For visualisation, "
+"using the 'auto' option is suggested. Weighted data is not supported for "
+"automated bin size selection."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:29
+msgid "'auto'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:28
+msgid ""
+"Maximum of the 'sturges' and 'fd' estimators. Provides good all around "
+"performance."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:33 numpy.histogram_bin_edges:120
+msgid "'fd' (Freedman Diaconis Estimator)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:32
+msgid ""
+"Robust (resilient to outliers) estimator that takes into account data "
+"variability and data size."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:37 numpy.histogram_bin_edges:157
+msgid "'doane'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:36
+msgid ""
+"An improved version of Sturges' estimator that works better with non-normal "
+"datasets."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:41 numpy.histogram_bin_edges:130
+msgid "'scott'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:40
+msgid ""
+"Less robust estimator that takes into account data variability and data size."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:46
+msgid "'stone'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:44
+msgid ""
+"Estimator based on leave-one-out cross-validation estimate of the integrated "
+"squared error. Can be regarded as a generalization of Scott's rule."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:50 numpy.histogram_bin_edges:137
+msgid "'rice'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:49
+msgid ""
+"Estimator does not take variability into account, only data size. Commonly "
+"overestimates number of bins required."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:55 numpy.histogram_bin_edges:145
+msgid "'sturges'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:53
+msgid ""
+"R's default method, only accounts for data size. Only optimal for gaussian "
+"data and underestimates number of bins for large non-gaussian datasets."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:59 numpy.histogram_bin_edges:164
+msgid "'sqrt'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:58
+msgid ""
+"Square root (of data size) estimator, used by Excel and other programs for "
+"its speed and simplicity."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:68
+msgid "**range**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:-1
+msgid "(float, float), optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:62
+msgid ""
+"The lower and upper range of the bins.  If not provided, range is simply "
+"``(a.min(), a.max())``.  Values outside the range are ignored. The first "
+"element of the range must be less than or equal to the second. `range` "
+"affects the automatic bin computation as well. While bin width is computed "
+"to be optimal based on the actual data within `range`, the bin count will "
+"fill the entire range including portions containing no data."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:74
+msgid "**weights**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:71
+msgid ""
+"An array of weights, of the same shape as `a`.  Each value in `a` only "
+"contributes its associated weight towards the bin count (instead of 1). This "
+"is currently not used by any of the bin estimators, but may be in the future."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:85
+msgid "**bin_edges**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:-1
+msgid "array of dtype float"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:79
+msgid "The edges to pass into `histogram`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:90
+msgid ":obj:`histogram`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:94
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:95
+msgid ""
+"The methods to estimate the optimal number of bins are well founded in "
+"literature, and are inspired by the choices R provides for histogram "
+"visualisation. Note that having the number of bins proportional to :math:"
+"`n^{1/3}` is asymptotically optimal, which is why it appears in most "
+"estimators. These are simply plug-in methods that give good starting points "
+"for number of bins. In the equations below, :math:`h` is the binwidth and :"
+"math:`n_h` is the number of bins. All estimators that compute bin counts are "
+"recast to bin width using the `ptp` of the data. The final bin count is "
+"obtained from ``np.round(np.ceil(range / h))``. The final bin width is often "
+"less than what is returned by the estimators below."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:112
+msgid "'auto' (maximum of the 'sturges' and 'fd' estimators)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:108
+msgid ""
+"A compromise to get a good value. For small datasets the Sturges value will "
+"usually be chosen, while larger datasets will usually default to FD.  Avoids "
+"the overly conservative behaviour of FD and Sturges for small and large "
+"datasets respectively. Switchover point is usually :math:`a.size \\approx "
+"1000`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:115
+msgid ""
+"h = 2 \\frac{IQR}{n^{1/3}}\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:117
+msgid ""
+"The binwidth is proportional to the interquartile range (IQR) and inversely "
+"proportional to cube root of a.size. Can be too conservative for small "
+"datasets, but is quite good for large datasets. The IQR is very robust to "
+"outliers."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:123
+msgid ""
+"h = \\sigma \\sqrt[3]{\\frac{24 \\sqrt{\\pi}}{n}}\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:125
+msgid ""
+"The binwidth is proportional to the standard deviation of the data and "
+"inversely proportional to cube root of ``x.size``. Can be too conservative "
+"for small datasets, but is quite good for large datasets. The standard "
+"deviation is not very robust to outliers. Values are very similar to the "
+"Freedman-Diaconis estimator in the absence of outliers."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:133
+msgid ""
+"n_h = 2n^{1/3}\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:135
+msgid ""
+"The number of bins is only proportional to cube root of ``a.size``. It tends "
+"to overestimate the number of bins and it does not take into account data "
+"variability."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:140
+msgid ""
+"n_h = \\log _{2}(n) + 1\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:142
+msgid ""
+"The number of bins is the base 2 log of ``a.size``.  This estimator assumes "
+"normality of data and is too conservative for larger, non-normal datasets. "
+"This is the default method in R's ``hist`` method."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:148
+msgid ""
+"n_h = 1 + \\log_{2}(n) +\n"
+"            \\log_{2}\\left(1 + \\frac{|g_1|}{\\sigma_{g_1}}\\right)\n"
+"\n"
+"g_1 = mean\\left[\\left(\\frac{x - \\mu}{\\sigma}\\right)^3\\right]\n"
+"\n"
+"\\sigma_{g_1} = \\sqrt{\\frac{6(n - 2)}{(n + 1)(n + 3)}}"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:155
+msgid ""
+"An improved version of Sturges' formula that produces better estimates for "
+"non-normal datasets. This estimator attempts to account for the skew of the "
+"data."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:160
+msgid ""
+"n_h = \\sqrt n\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:162
+msgid ""
+"The simplest and fastest estimator. Only takes into account the data size."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:167
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:174
+msgid ""
+"For consistency with histogram, an array of pre-computed bins is passed "
+"through unmodified:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:180
+msgid ""
+"This function allows one set of bins to be computed, and reused across "
+"multiple histograms:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram_bin_edges:195
+msgid ""
+"Which gives more easily comparable results than using separate bins for each "
+"histogram:"
+msgstr ""

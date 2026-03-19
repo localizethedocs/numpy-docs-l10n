@@ -1,0 +1,163 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/multithreading.rst:2
+msgid "Multithreaded Generation"
+msgstr ""
+
+#: ../../../reference/random/multithreading.rst:4
+msgid ""
+"The four core distributions (:meth:`~.Generator.random`, :meth:`~.Generator."
+"standard_normal`, :meth:`~.Generator.standard_exponential`, and :meth:`~."
+"Generator.standard_gamma`) all allow existing arrays to be filled using the "
+"``out`` keyword argument. Existing arrays need to be contiguous and well-"
+"behaved (writable and aligned). Under normal circumstances, arrays created "
+"using the common constructors such as :meth:`numpy.empty` will satisfy these "
+"requirements."
+msgstr ""
+
+#: ../../../reference/random/multithreading.rst:12
+msgid ""
+"This example makes use of Python 3 :mod:`concurrent.futures` to fill an "
+"array using multiple threads.  Threads are long-lived so that repeated calls "
+"do not require any additional overheads from thread creation."
+msgstr ""
+
+#: ../../../reference/random/multithreading.rst:16
+msgid ""
+"The random numbers generated are reproducible in the sense that the same "
+"seed will produce the same outputs, given that the number of threads does "
+"not change."
+msgstr ""
+
+#: ../../../reference/random/multithreading.rst:20
+msgid ""
+"from numpy.random import default_rng, SeedSequence\n"
+"import multiprocessing\n"
+"import concurrent.futures\n"
+"import numpy as np\n"
+"\n"
+"class MultithreadedRNG:\n"
+"    def __init__(self, n, seed=None, threads=None):\n"
+"        if threads is None:\n"
+"            threads = multiprocessing.cpu_count()\n"
+"        self.threads = threads\n"
+"\n"
+"        seq = SeedSequence(seed)\n"
+"        self._random_generators = [default_rng(s)\n"
+"                                   for s in seq.spawn(threads)]\n"
+"\n"
+"        self.n = n\n"
+"        self.executor = concurrent.futures.ThreadPoolExecutor(threads)\n"
+"        self.values = np.empty(n)\n"
+"        self.step = np.ceil(n / threads).astype(np.int_)\n"
+"\n"
+"    def fill(self):\n"
+"        def _fill(random_state, out, first, last):\n"
+"            random_state.standard_normal(out=out[first:last])\n"
+"\n"
+"        futures = {}\n"
+"        for i in range(self.threads):\n"
+"            args = (_fill,\n"
+"                    self._random_generators[i],\n"
+"                    self.values,\n"
+"                    i * self.step,\n"
+"                    (i + 1) * self.step)\n"
+"            futures[self.executor.submit(*args)] = i\n"
+"        concurrent.futures.wait(futures)\n"
+"\n"
+"    def __del__(self):\n"
+"        self.executor.shutdown(False)"
+msgstr ""
+
+#: ../../../reference/random/multithreading.rst:61
+msgid ""
+"The multithreaded random number generator can be used to fill an array. The "
+"``values`` attributes shows the zero-value before the fill and the random "
+"value after."
+msgstr ""
+
+#: ../../../reference/random/multithreading.rst:65
+msgid ""
+"In [2]: mrng = MultithreadedRNG(10000000, seed=12345)\n"
+"   ...: print(mrng.values[-1])\n"
+"Out[2]: 0.0\n"
+"\n"
+"In [3]: mrng.fill()\n"
+"   ...: print(mrng.values[-1])\n"
+"Out[3]: 2.4545724517479104"
+msgstr ""
+
+#: ../../../reference/random/multithreading.rst:75
+msgid ""
+"The time required to produce using multiple threads can be compared to the "
+"time required to generate using a single thread."
+msgstr ""
+
+#: ../../../reference/random/multithreading.rst:78
+msgid ""
+"In [4]: print(mrng.threads)\n"
+"   ...: %timeit mrng.fill()\n"
+"\n"
+"Out[4]: 4\n"
+"   ...: 32.8 ms ± 2.71 ms per loop (mean ± std. dev. of 7 runs, 10 loops "
+"each)"
+msgstr ""
+
+#: ../../../reference/random/multithreading.rst:86
+msgid "The single threaded call directly uses the BitGenerator."
+msgstr ""
+
+#: ../../../reference/random/multithreading.rst:88
+msgid ""
+"In [5]: values = np.empty(10000000)\n"
+"   ...: rg = default_rng()\n"
+"   ...: %timeit rg.standard_normal(out=values)\n"
+"\n"
+"Out[5]: 99.6 ms ± 222 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)"
+msgstr ""
+
+#: ../../../reference/random/multithreading.rst:96
+msgid ""
+"The gains are substantial and the scaling is reasonable even for arrays that "
+"are only moderately large. The gains are even larger when compared to a call "
+"that does not use an existing array due to array creation overhead."
+msgstr ""
+
+#: ../../../reference/random/multithreading.rst:100
+msgid ""
+"In [6]: rg = default_rng()\n"
+"   ...: %timeit rg.standard_normal(10000000)\n"
+"\n"
+"Out[6]: 125 ms ± 309 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)"
+msgstr ""
+
+#: ../../../reference/random/multithreading.rst:107
+msgid ""
+"Note that if `threads` is not set by the user, it will be determined by "
+"`multiprocessing.cpu_count()`."
+msgstr ""
+
+#: ../../../reference/random/multithreading.rst:110
+msgid ""
+"In [7]: # simulate the behavior for `threads=None`, if the machine had only "
+"one thread\n"
+"   ...: mrng = MultithreadedRNG(10000000, seed=12345, threads=1)\n"
+"   ...: print(mrng.values[-1])\n"
+"Out[7]: 1.1800150052158556"
+msgstr ""

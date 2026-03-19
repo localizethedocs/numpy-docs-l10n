@@ -1,0 +1,111 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.lib.mixins.NDArrayOperatorsMixin.rst:2
+msgid "numpy.lib.mixins.NDArrayOperatorsMixin"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/mixins.py:docstring
+#: of numpy.lib.mixins.NDArrayOperatorsMixin:2
+msgid "Mixin defining all operator special methods using __array_ufunc__."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/mixins.py:docstring
+#: of numpy.lib.mixins.NDArrayOperatorsMixin:4
+msgid ""
+"This class implements the special methods for almost all of Python's builtin "
+"operators defined in the `operator` module, including comparisons (``==``, "
+"``>``, etc.) and arithmetic (``+``, ``*``, ``-``, etc.), by deferring to the "
+"``__array_ufunc__`` method, which subclasses must implement."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/mixins.py:docstring
+#: of numpy.lib.mixins.NDArrayOperatorsMixin:10
+msgid ""
+"It is useful for writing classes that do not inherit from `numpy.ndarray`, "
+"but that should support arithmetic and numpy universal functions like arrays "
+"as described in `A Mechanism for Overriding Ufuncs <https://numpy.org/neps/"
+"nep-0013-ufunc-overrides.html>`_."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/mixins.py:docstring
+#: of numpy.lib.mixins.NDArrayOperatorsMixin:15
+msgid ""
+"As an trivial example, consider this implementation of an ``ArrayLike`` "
+"class that simply wraps a NumPy array and ensures that the result of any "
+"arithmetic operation is also an ``ArrayLike`` object::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/mixins.py:docstring
+#: of numpy.lib.mixins.NDArrayOperatorsMixin:19
+msgid ""
+"class ArrayLike(np.lib.mixins.NDArrayOperatorsMixin):\n"
+"    def __init__(self, value):\n"
+"        self.value = np.asarray(value)\n"
+"\n"
+"    # One might also consider adding the built-in list type to this\n"
+"    # list, to support operations like np.add(array_like, list)\n"
+"    _HANDLED_TYPES = (np.ndarray, numbers.Number)\n"
+"\n"
+"    def __array_ufunc__(self, ufunc, method, *inputs, **kwargs):\n"
+"        out = kwargs.get('out', ())\n"
+"        for x in inputs + out:\n"
+"            # Only support operations with instances of _HANDLED_TYPES.\n"
+"            # Use ArrayLike instead of type(self) for isinstance to\n"
+"            # allow subclasses that don't override __array_ufunc__ to\n"
+"            # handle ArrayLike objects.\n"
+"            if not isinstance(x, self._HANDLED_TYPES + (ArrayLike,)):\n"
+"                return NotImplemented\n"
+"\n"
+"        # Defer to the implementation of the ufunc on unwrapped values.\n"
+"        inputs = tuple(x.value if isinstance(x, ArrayLike) else x\n"
+"                       for x in inputs)\n"
+"        if out:\n"
+"            kwargs['out'] = tuple(\n"
+"                x.value if isinstance(x, ArrayLike) else x\n"
+"                for x in out)\n"
+"        result = getattr(ufunc, method)(*inputs, **kwargs)\n"
+"\n"
+"        if type(result) is tuple:\n"
+"            # multiple return values\n"
+"            return tuple(type(self)(x) for x in result)\n"
+"        elif method == 'at':\n"
+"            # no return value\n"
+"            return None\n"
+"        else:\n"
+"            # one return value\n"
+"            return type(self)(result)\n"
+"\n"
+"    def __repr__(self):\n"
+"        return '%s(%r)' % (type(self).__name__, self.value)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/mixins.py:docstring
+#: of numpy.lib.mixins.NDArrayOperatorsMixin:59
+msgid ""
+"In interactions between ``ArrayLike`` objects and numbers or numpy arrays, "
+"the result is always another ``ArrayLike``:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/mixins.py:docstring
+#: of numpy.lib.mixins.NDArrayOperatorsMixin:72
+msgid ""
+"Note that unlike ``numpy.ndarray``, ``ArrayLike`` does not allow operations "
+"with arbitrary, unrecognized types. This ensures that interactions with "
+"ArrayLike preserve a well-defined casting hierarchy."
+msgstr ""
