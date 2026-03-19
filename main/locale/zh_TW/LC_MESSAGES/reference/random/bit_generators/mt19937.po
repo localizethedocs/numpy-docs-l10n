@@ -1,0 +1,193 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/bit_generators/mt19937.rst:2
+msgid "Mersenne Twister (MT19937)"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:2
+msgid "Container for the Mersenne Twister pseudo-random number generator."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:12
+msgid "**seed**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:-1
+msgid "{None, int, array_like[ints], SeedSequence}, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:8
+msgid ""
+"A seed to initialize the `BitGenerator`. If None, then fresh, unpredictable "
+"entropy will be pulled from the OS. If an ``int`` or ``array_like[ints]`` is "
+"passed, then it will be passed to `SeedSequence` to derive the initial "
+"`BitGenerator` state. One may also pass in a `SeedSequence` instance."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:0
+msgid "Attributes"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:29
+msgid "**lock: threading.Lock**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:17
+msgid ""
+"Lock instance that is shared so that the same bit git generator can be used "
+"in multiple Generators without corrupting the state. Code that generates "
+"values from a bit generator should hold the bit generator's lock."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:32
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:33
+msgid ""
+"`MT19937` provides a capsule containing function pointers that produce "
+"doubles, and unsigned 32 and 64- bit integers [R312276d80bfa-1]_. These are "
+"not directly consumable in Python and must be consumed by a `Generator` or "
+"similar object that supports low-level access."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:38
+msgid ""
+"The Python stdlib module \"random\" also contains a Mersenne Twister pseudo-"
+"random number generator."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:41
+msgid "**State and Seeding**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:43
+msgid ""
+"The `MT19937` state vector consists of a 624-element array of 32-bit "
+"unsigned integers plus a single integer value between 0 and 624 that indexes "
+"the current position within the main array."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:47
+msgid ""
+"The input seed is processed by `SeedSequence` to fill the whole state. The "
+"first element is reset such that only its most significant bit is set."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:50
+msgid "**Parallel Features**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:52
+msgid ""
+"The preferred way to use a BitGenerator in parallel applications is to use "
+"the `SeedSequence.spawn` method to obtain entropy values, and to use these "
+"to generate new BitGenerators:"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:60
+msgid ""
+"Another method is to use `MT19937.jumped` which advances the state as-if :"
+"math:`2^{128}` random numbers have been generated ([R312276d80bfa-1]_, "
+"[R312276d80bfa-2]_). This allows the original sequence to be split so that "
+"distinct segments can be used in each worker process. All generators should "
+"be chained to ensure that the segments come from the same sequence."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:75
+msgid "**Compatibility Guarantee**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:77
+msgid ""
+"`MT19937` makes a guarantee that a fixed seed will always produce the same "
+"random integer stream."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:81
+msgid "References"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:82
+msgid ""
+"Hiroshi Haramoto, Makoto Matsumoto, and Pierre L'Ecuyer, \"A Fast Jump Ahead "
+"Algorithm for Linear Recurrences in a Polynomial Space\", Sequences and "
+"Their Applications - SETA, 290--298, 2008."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:85
+msgid ""
+"Hiroshi Haramoto, Makoto Matsumoto, Takuji Nishimura, François Panneton, "
+"Pierre L'Ecuyer, \"Efficient Jump Ahead for F2-Linear Random Number "
+"Generators\", INFORMS JOURNAL ON COMPUTING, Vol. 20, No. 3, Summer 2008, pp. "
+"385-390."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._mt19937.MT19937:92
+msgid "[R312276d80bfa-1]_, [R312276d80bfa-2]_"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/mt19937.rst:11
+msgid "State"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/mt19937.rst:17:<autosummary>:1
+msgid ":py:obj:`state <numpy.random.MT19937.state>`\\"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/mt19937.rst:17:<autosummary>:1
+msgid "Get or set the PRNG state"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/mt19937.rst:19
+msgid "Parallel generation"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/mt19937.rst:24:<autosummary>:1
+msgid ":py:obj:`jumped <numpy.random.MT19937.jumped>`\\ \\(\\[jumps\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/mt19937.rst:24:<autosummary>:1
+msgid "Returns a new bit generator with the state jumped"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/mt19937.rst:26
+msgid "Extending"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/mt19937.rst:33:<autosummary>:1
+msgid ":py:obj:`cffi <numpy.random.MT19937.cffi>`\\"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/mt19937.rst:33:<autosummary>:1
+msgid "CFFI interface"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/mt19937.rst:33:<autosummary>:1
+msgid ":py:obj:`ctypes <numpy.random.MT19937.ctypes>`\\"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/mt19937.rst:33:<autosummary>:1
+msgid "ctypes interface"
+msgstr ""

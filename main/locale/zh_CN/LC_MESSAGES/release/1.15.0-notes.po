@@ -1,0 +1,944 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release/1.15.0-notes.rst:3
+msgid "NumPy 1.15.0 Release Notes"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:5
+msgid ""
+"NumPy 1.15.0 is a release with an unusual number of cleanups, many "
+"deprecations of old functions, and improvements to many existing functions. "
+"Please read the detailed descriptions below to see if you are affected."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:9
+msgid ""
+"For testing, we have switched to pytest as a replacement for the no longer "
+"maintained nose framework. The old nose based interface remains for "
+"downstream projects who may still be using it."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:13
+msgid ""
+"The Python versions supported by this release are 2.7, 3.4-3.7. The wheels "
+"are linked with OpenBLAS v0.3.0, which should fix some of the linalg "
+"problems reported for NumPy 1.14."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:19
+msgid "Highlights"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:21
+msgid "NumPy has switched to pytest for testing."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:22
+msgid "A new  `numpy.printoptions` context manager."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:23
+msgid "Many improvements to the histogram functions."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:24
+msgid "Support for unicode field names in python 2.7."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:25
+msgid "Improved support for PyPy."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:26
+msgid "Fixes and improvements to `numpy.einsum`."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:30
+msgid "New functions"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:32
+msgid ""
+"`numpy.gcd` and `numpy.lcm`, to compute the greatest common divisor and "
+"least common multiple."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:35
+msgid ""
+"`numpy.ma.stack`, the `numpy.stack` array-joining function generalized to "
+"masked arrays."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:38
+msgid ""
+"`numpy.quantile` function, an interface to ``percentile`` without factors of "
+"100"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:41
+msgid ""
+"`numpy.nanquantile` function, an interface to ``nanpercentile`` without "
+"factors of 100"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:44
+msgid ""
+"`numpy.printoptions`, a context manager that sets print options temporarily "
+"for the scope of the ``with`` block::"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:47
+msgid ""
+">>> with np.printoptions(precision=2):\n"
+"...     print(np.array([2.0]) / 3)\n"
+"[0.67]"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:51
+msgid ""
+"`numpy.histogram_bin_edges`, a function to get the edges of the bins used by "
+"a histogram without needing to calculate the histogram."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:54
+msgid ""
+"C functions `npy_get_floatstatus_barrier` and "
+"`npy_clear_floatstatus_barrier` have been added to deal with compiler "
+"optimization changing the order of operations.  See below for details."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:60
+msgid "Deprecations"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:62
+msgid ""
+"Aliases of builtin `pickle` functions are deprecated, in favor of their "
+"unaliased ``pickle.<func>`` names:"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:65
+msgid "`numpy.loads`"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:66
+msgid "`numpy.core.numeric.load`"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:67
+msgid "`numpy.core.numeric.loads`"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:68
+msgid "`numpy.ma.loads`, `numpy.ma.dumps`"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:69
+msgid ""
+"`numpy.ma.load`, `numpy.ma.dump` - these functions already failed on python "
+"3 when called with a string."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:72
+msgid ""
+"Multidimensional indexing with anything but a tuple is deprecated. This "
+"means that the index list in ``ind = [slice(None), 0]; arr[ind]`` should be "
+"changed to a tuple, e.g., ``ind = [slice(None), 0]; arr[tuple(ind)]`` or "
+"``arr[(slice(None), 0)]``. That change is necessary to avoid ambiguity in "
+"expressions such as ``arr[[[0, 1], [0, 1]]]``, currently interpreted as "
+"``arr[array([0, 1]), array([0, 1])]``, that will be interpreted as "
+"``arr[array([[0, 1], [0, 1]])]`` in the future."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:80
+msgid ""
+"Imports from the following sub-modules are deprecated, they will be removed "
+"at some future date."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:83
+msgid "`numpy.testing.utils`"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:84
+msgid "`numpy.testing.decorators`"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:85
+msgid "`numpy.testing.nosetester`"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:86
+msgid "`numpy.testing.noseclasses`"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:87
+msgid "`numpy.core.umath_tests`"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:89
+msgid ""
+"Giving a generator to `numpy.sum` is now deprecated. This was undocumented "
+"behavior, but worked. Previously, it would calculate the sum of the "
+"generator expression.  In the future, it might return a different result. "
+"Use ``np.sum(np.from_iter(generator))`` or the built-in Python ``sum`` "
+"instead."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:94
+msgid ""
+"Users of the C-API should call ``PyArrayResolveWriteBackIfCopy`` or "
+"``PyArray_DiscardWritebackIfCopy`` on any array with the ``WRITEBACKIFCOPY`` "
+"flag set, before deallocating the array. A deprecation warning will be "
+"emitted if those calls are not used when needed."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:99
+msgid ""
+"Users of ``nditer`` should use the nditer object as a context manager "
+"anytime one of the iterator operands is writeable, so that numpy can manage "
+"writeback semantics, or should call ``it.close()``. A `RuntimeWarning` may "
+"be emitted otherwise in these cases."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:104
+msgid ""
+"The ``normed`` argument of ``np.histogram``, deprecated long ago in 1.6.0, "
+"now emits a ``DeprecationWarning``."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:109
+msgid "Future Changes"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:111
+msgid "NumPy 1.16 will drop support for Python 3.4."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:112
+msgid "NumPy 1.17 will drop support for Python 2.7."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:116
+msgid "Compatibility notes"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:119
+msgid "Compiled testing modules renamed and made private"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:120
+msgid "The following compiled modules have been renamed and made private:"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:122
+msgid "``umath_tests`` -> ``_umath_tests``"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:123
+msgid "``test_rational`` -> ``_rational_tests``"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:124
+msgid "``multiarray_tests`` -> ``_multiarray_tests``"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:125
+msgid "``struct_ufunc_test`` -> ``_struct_ufunc_tests``"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:126
+msgid "``operand_flag_tests`` -> ``_operand_flag_tests``"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:128
+msgid ""
+"The ``umath_tests`` module is still available for backwards compatibility, "
+"but will be removed in the future."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:132
+msgid ""
+"The ``NpzFile`` returned by ``np.savez`` is now a ``collections.abc.Mapping``"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:133
+msgid ""
+"This means it behaves like a readonly dictionary, and has a new ``."
+"values()`` method and ``len()`` implementation."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:136
+msgid ""
+"For python 3, this means that ``.iteritems()``, ``.iterkeys()`` have been "
+"deprecated, and ``.keys()`` and ``.items()`` now return views and not lists. "
+"This is consistent with how the builtin ``dict`` type changed between python "
+"2 and python 3."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:142
+msgid "Under certain conditions, ``nditer`` must be used in a context manager"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:143
+msgid ""
+"When using an `numpy.nditer` with the ``\"writeonly\"`` or ``\"readwrite\"`` "
+"flags, there are some circumstances where nditer doesn't actually give you a "
+"view of the writable array. Instead, it gives you a copy, and if you make "
+"changes to the copy, nditer later writes those changes back into your actual "
+"array. Currently, this writeback occurs when the array objects are garbage "
+"collected, which makes this API error-prone on CPython and entirely broken "
+"on PyPy. Therefore, ``nditer`` should now be used as a context manager "
+"whenever it is used with writeable arrays, e.g., ``with np.nditer(...) as "
+"it: ...``. You may also explicitly call ``it.close()`` for cases where a "
+"context manager is unusable, for instance in generator expressions."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:155
+msgid "Numpy has switched to using pytest instead of nose for testing"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:156
+msgid ""
+"The last nose release was 1.3.7 in June, 2015, and development of that tool "
+"has ended, consequently NumPy has now switched to using pytest. The old "
+"decorators and nose tools that were previously used by some downstream "
+"projects remain available, but will not be maintained. The standard testing "
+"utilities, ``assert_almost_equal`` and such, are not be affected by this "
+"change except for the nose specific functions ``import_nose`` and "
+"``raises``. Those functions are not used in numpy, but are kept for "
+"downstream compatibility."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:165
+msgid "Numpy no longer monkey-patches ``ctypes`` with ``__array_interface__``"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:166
+msgid ""
+"Previously numpy added ``__array_interface__`` attributes to all the integer "
+"types from ``ctypes``."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:170
+msgid ""
+"``np.ma.notmasked_contiguous`` and ``np.ma.flatnotmasked_contiguous`` always "
+"return lists"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:171
+msgid ""
+"This is the documented behavior, but previously the result could be any of "
+"slice, None, or list."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:174
+msgid ""
+"All downstream users seem to check for the ``None`` result from "
+"``flatnotmasked_contiguous`` and replace it with ``[]``.  Those callers will "
+"continue to work as before."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:179
+msgid ""
+"``np.squeeze`` restores old behavior of objects that cannot handle an "
+"``axis`` argument"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:180
+msgid ""
+"Prior to version ``1.7.0``, `numpy.squeeze` did not have an ``axis`` "
+"argument and all empty axes were removed by default. The incorporation of an "
+"``axis`` argument made it possible to selectively squeeze single or multiple "
+"empty axes, but the old API expectation was not respected because axes could "
+"still be selectively removed (silent success) from an object expecting all "
+"empty axes to be removed. That silent, selective removal of empty axes for "
+"objects expecting the old behavior has been fixed and the old behavior "
+"restored."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:189
+msgid "unstructured void array's ``.item`` method now returns a bytes object"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:190
+msgid ""
+"``.item`` now returns a ``bytes`` object instead of a buffer or byte array. "
+"This may affect code which assumed the return value was mutable, which is no "
+"longer the case."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:195
+msgid ""
+"``copy.copy`` and ``copy.deepcopy`` no longer turn ``masked`` into an array"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:196
+msgid ""
+"Since ``np.ma.masked`` is a readonly scalar, copying should be a no-op. "
+"These functions now behave consistently with ``np.copy()``."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:200
+msgid "Multifield Indexing of Structured Arrays will still return a copy"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:201
+msgid ""
+"The change that multi-field indexing of structured arrays returns a view "
+"instead of a copy is pushed back to 1.16. A new method ``numpy.lib."
+"recfunctions.repack_fields`` has been introduced to help mitigate the "
+"effects of this change, which can be used to write code compatible with both "
+"numpy 1.15 and 1.16. For more information on how to update code to account "
+"for this future change see the \"accessing multiple fields\" section of the "
+"`user guide <https://docs.scipy.org/doc/numpy/user/basics.rec.html>`__."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:211
+msgid "C API changes"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:214
+msgid ""
+"New functions ``npy_get_floatstatus_barrier`` and "
+"``npy_clear_floatstatus_barrier``"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:215
+msgid ""
+"Functions ``npy_get_floatstatus_barrier`` and "
+"``npy_clear_floatstatus_barrier`` have been added and should be used in "
+"place of the ``npy_get_floatstatus`` and ``npy_clear_status`` functions. "
+"Optimizing compilers like GCC 8.1 and Clang were rearranging the order of "
+"operations when the previous functions were used in the ufunc SIMD "
+"functions, resulting in the floatstatus flags being checked before the "
+"operation whose status we wanted to check was run.  See `#10339 <https://"
+"github.com/numpy/numpy/issues/10370>`__."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:224
+msgid "Changes to ``PyArray_GetDTypeTransferFunction``"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:225
+msgid ""
+"``PyArray_GetDTypeTransferFunction`` now defaults to using user-defined "
+"``copyswapn`` / ``copyswap`` for user-defined dtypes. If this causes a "
+"significant performance hit, consider implementing ``copyswapn`` to reflect "
+"the implementation of ``PyArray_GetStridedCopyFn``.  See `#10898 <https://"
+"github.com/numpy/numpy/pull/10898>`__."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:233
+msgid "New Features"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:236
+msgid "``np.gcd`` and ``np.lcm`` ufuncs added for integer and objects types"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:237
+msgid ""
+"These compute the greatest common divisor, and lowest common multiple, "
+"respectively. These work on all the numpy integer types, as well as the "
+"builtin arbitrary-precision ``Decimal`` and ``long`` types."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:242
+msgid "Support for cross-platform builds for iOS"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:243
+msgid ""
+"The build system has been modified to add support for the "
+"``_PYTHON_HOST_PLATFORM`` environment variable, used by ``distutils`` when "
+"compiling on one platform for another platform. This makes it possible to "
+"compile NumPy for iOS targets."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:248
+msgid ""
+"This only enables you to compile NumPy for one specific platform at a time. "
+"Creating a full iOS-compatible NumPy package requires building for the 5 "
+"architectures supported by iOS (i386, x86_64, armv7, armv7s and arm64), and "
+"combining these 5 compiled builds products into a single \"fat\" binary."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:254
+msgid "``return_indices`` keyword added for ``np.intersect1d``"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:255
+msgid ""
+"New keyword ``return_indices`` returns the indices of the two input arrays "
+"that correspond to the common elements."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:259
+msgid "``np.quantile`` and ``np.nanquantile``"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:260
+msgid ""
+"Like ``np.percentile`` and ``np.nanpercentile``, but takes quantiles in [0, "
+"1] rather than percentiles in [0, 100]. ``np.percentile`` is now a thin "
+"wrapper around ``np.quantile`` with the extra step of dividing by 100."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:266
+msgid "Build system"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:267
+msgid "Added experimental support for the 64-bit RISC-V architecture."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:271
+msgid "Improvements"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:274
+msgid "``np.einsum`` updates"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:275
+msgid ""
+"Syncs einsum path optimization tech between `numpy` and `opt_einsum`. In "
+"particular, the `greedy` path has received many enhancements by @jcmgray. A "
+"full list of issues fixed are:"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:279
+msgid "Arbitrary memory can be passed into the `greedy` path. Fixes gh-11210."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:280
+msgid ""
+"The greedy path has been updated to contain more dynamic programming ideas "
+"preventing a large number of duplicate (and expensive) calls that figure out "
+"the actual pair contraction that takes place. Now takes a few seconds on "
+"several hundred input tensors. Useful for matrix product state theories."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:284
+msgid ""
+"Reworks the broadcasting dot error catching found in gh-11218 gh-10352 to be "
+"a bit earlier in the process."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:286
+msgid ""
+"Enhances the `can_dot` functionality that previous missed an edge case (part "
+"of gh-11308)."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:290
+msgid "``np.ufunc.reduce`` and related functions now accept an initial value"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:291
+msgid ""
+"``np.ufunc.reduce``, ``np.sum``, ``np.prod``, ``np.min`` and ``np.max`` all "
+"now accept an ``initial`` keyword argument that specifies the value to start "
+"the reduction with."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:296
+msgid "``np.flip`` can operate over multiple axes"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:297
+msgid ""
+"``np.flip`` now accepts None, or tuples of int, in its ``axis`` argument. If "
+"axis is None, it will flip over all the axes."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:301
+msgid ""
+"``histogram`` and ``histogramdd`` functions have moved to ``np.lib."
+"histograms``"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:302
+msgid ""
+"These were originally found in ``np.lib.function_base``. They are still "
+"available under their un-scoped ``np.histogram(dd)`` names, and to maintain "
+"compatibility, aliased at ``np.lib.function_base.histogram(dd)``."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:306
+msgid ""
+"Code that does ``from np.lib.function_base import *`` will need to be "
+"updated with the new location, and should consider not using ``import *`` in "
+"future."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:310
+msgid "``histogram`` will accept NaN values when explicit bins are given"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:311
+msgid ""
+"Previously it would fail when trying to compute a finite range for the data. "
+"Since the range is ignored anyway when the bins are given explicitly, this "
+"error was needless."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:315
+msgid ""
+"Note that calling ``histogram`` on NaN values continues to raise the "
+"``RuntimeWarning`` s typical of working with nan values, which can be "
+"silenced as usual with ``errstate``."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:320
+msgid ""
+"``histogram`` works on datetime types, when explicit bin edges are given"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:321
+msgid ""
+"Dates, times, and timedeltas can now be histogrammed. The bin edges must be "
+"passed explicitly, and are not yet computed automatically."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:325
+msgid "``histogram`` \"auto\" estimator handles limited variance better"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:326
+msgid ""
+"No longer does an IQR of 0 result in ``n_bins=1``, rather the number of bins "
+"chosen is related to the data size in this situation."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:330
+msgid ""
+"The edges returned by ``histogram`` and ``histogramdd`` now match the data "
+"float type"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:331
+msgid ""
+"When passed ``np.float16``, ``np.float32``, or ``np.longdouble`` data, the "
+"returned edges are now of the same dtype. Previously, ``histogram`` would "
+"only return the same type if explicit bins were given, and ``histogram`` "
+"would produce ``float64`` bins no matter what the inputs."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:337
+msgid "``histogramdd`` allows explicit ranges to be given in a subset of axes"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:338
+msgid ""
+"The ``range`` argument of `numpy.histogramdd` can now contain ``None`` "
+"values to indicate that the range for the corresponding axis should be "
+"computed from the data. Previously, this could not be specified on a per-"
+"axis basis."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:343
+msgid ""
+"The normed arguments of ``histogramdd`` and ``histogram2d`` have been renamed"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:344
+msgid ""
+"These arguments are now called ``density``, which is consistent with "
+"``histogram``. The old argument continues to work, but the new name should "
+"be preferred."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:349
+msgid ""
+"``np.r_`` works with 0d arrays, and ``np.ma.mr_`` works with ``np.ma.masked``"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:350
+msgid ""
+"0d arrays passed to the `r_` and `mr_` concatenation helpers are now treated "
+"as though they are arrays of length 1. Previously, passing these was an "
+"error. As a result, `numpy.ma.mr_` now works correctly on the ``masked`` "
+"constant."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:355
+msgid "``np.ptp`` accepts a ``keepdims`` argument, and extended axis tuples"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:356
+msgid ""
+"``np.ptp`` (peak-to-peak) can now work over multiple axes, just like ``np."
+"max`` and ``np.min``."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:360
+msgid "``MaskedArray.astype`` now is identical to ``ndarray.astype``"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:361
+msgid ""
+"This means it takes all the same arguments, making more code written for "
+"ndarray work for masked array too."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:365
+msgid "Enable AVX2/AVX512 at compile time"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:366
+msgid ""
+"Change to simd.inc.src to allow use of AVX2 or AVX512 at compile time. "
+"Previously compilation for avx2 (or 512) with -march=native would still use "
+"the SSE code for the simd functions even when the rest of the code got AVX2."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:371
+msgid ""
+"``nan_to_num`` always returns scalars when receiving scalar or 0d inputs"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:372
+msgid ""
+"Previously an array was returned for integer scalar inputs, which is "
+"inconsistent with the behavior for float inputs, and that of ufuncs in "
+"general. For all types of scalar or 0d input, the result is now a scalar."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:377
+msgid "``np.flatnonzero`` works on numpy-convertible types"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:378
+msgid ""
+"``np.flatnonzero`` now uses ``np.ravel(a)`` instead of ``a.ravel()``, so it "
+"works for lists, tuples, etc."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:382
+msgid "``np.interp`` returns numpy scalars rather than builtin scalars"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:383
+msgid ""
+"Previously ``np.interp(0.5, [0, 1], [10, 20])`` would return a ``float``, "
+"but now it returns a ``np.float64`` object, which more closely matches the "
+"behavior of other functions."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:387
+msgid ""
+"Additionally, the special case of ``np.interp(object_array_0d, ...)`` is no "
+"longer supported, as ``np.interp(object_array_nd)`` was never supported "
+"anyway."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:390
+msgid ""
+"As a result of this change, the ``period`` argument can now be used on 0d "
+"arrays."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:394
+msgid "Allow dtype field names to be unicode in Python 2"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:395
+msgid ""
+"Previously ``np.dtype([(u'name', float)])`` would raise a ``TypeError`` in "
+"Python 2, as only bytestrings were allowed in field names. Now any unicode "
+"string field names will be encoded with the ``ascii`` codec, raising a "
+"``UnicodeEncodeError`` upon failure."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:400
+msgid ""
+"This change makes it easier to write Python 2/3 compatible code using ``from "
+"__future__ import unicode_literals``, which previously would cause string "
+"literal field names to raise a TypeError in Python 2."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:405
+msgid ""
+"Comparison ufuncs accept ``dtype=object``, overriding the default ``bool``"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:406
+msgid ""
+"This allows object arrays of symbolic types, which override ``==`` and other "
+"operators to return expressions, to be compared elementwise with ``np."
+"equal(a, b, dtype=object)``."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:411
+msgid "``sort`` functions accept ``kind='stable'``"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:412
+msgid "Up until now, to perform a stable sort on the data, the user must do:"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:417
+msgid ""
+"because merge sort is the only stable sorting algorithm available in NumPy. "
+"However, having kind='mergesort' does not make it explicit that the user "
+"wants to perform a stable sort thus harming the readability."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:421
+msgid ""
+"This change allows the user to specify kind='stable' thus clarifying the "
+"intent."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:425
+msgid "Do not make temporary copies for in-place accumulation"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:426
+msgid ""
+"When ufuncs perform accumulation they no longer make temporary copies "
+"because of the overlap between input an output, that is, the next element "
+"accumulated is added before the accumulated result is stored in its place, "
+"hence the overlap is safe. Avoiding the copy results in faster execution."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:432
+msgid "``linalg.matrix_power`` can now handle stacks of matrices"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:433
+msgid ""
+"Like other functions in ``linalg``, ``matrix_power`` can now deal with "
+"arrays of dimension larger than 2, which are treated as stacks of matrices. "
+"As part of the change, to further improve consistency, the name of the first "
+"argument has been changed to ``a`` (from ``M``), and the exceptions for non-"
+"square matrices have been changed to ``LinAlgError`` (from ``ValueError``)."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:440
+msgid ""
+"Increased performance in ``random.permutation`` for multidimensional arrays"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:441
+msgid ""
+"``permutation`` uses the fast path in ``random.shuffle`` for all input array "
+"dimensions.  Previously the fast path was only used for 1-d arrays."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:445
+msgid ""
+"Generalized ufuncs now accept ``axes``, ``axis`` and ``keepdims`` arguments"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:446
+msgid ""
+"One can control over which axes a generalized ufunc operates by passing in "
+"an ``axes`` argument, a list of tuples with indices of particular axes.  For "
+"instance, for a signature of ``(i,j),(j,k)->(i,k)`` appropriate for matrix "
+"multiplication, the base elements are two-dimensional matrices and these are "
+"taken to be stored in the two last axes of each argument.  The corresponding "
+"axes keyword would be ``[(-2, -1), (-2, -1), (-2, -1)]``. If one wanted to "
+"use leading dimensions instead, one would pass in ``[(0, 1), (0, 1), (0, "
+"1)]``."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:454
+msgid ""
+"For simplicity, for generalized ufuncs that operate on 1-dimensional arrays "
+"(vectors), a single integer is accepted instead of a single-element tuple, "
+"and for generalized ufuncs for which all outputs are scalars, the (empty) "
+"output tuples can be omitted.  Hence, for a signature of ``(i),(i)->()`` "
+"appropriate for an inner product, one could pass in ``axes=[0, 0]`` to "
+"indicate that the vectors are stored in the first dimensions of the two "
+"inputs arguments."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:461
+msgid ""
+"As a short-cut for generalized ufuncs that are similar to reductions, i.e., "
+"that act on a single, shared core dimension such as the inner product "
+"example above, one can pass an ``axis`` argument. This is equivalent to "
+"passing in ``axes`` with identical entries for all arguments with that core "
+"dimension (e.g., for the example above, ``axes=[(axis,), (axis,)]``)."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:467
+msgid ""
+"Furthermore, like for reductions, for generalized ufuncs that have inputs "
+"that all have the same number of core dimensions and outputs with no core "
+"dimension, one can pass in ``keepdims`` to leave a dimension with size 1 in "
+"the outputs, thus allowing proper broadcasting against the original inputs. "
+"The location of the extra dimension can be controlled with ``axes``. For "
+"instance, for the inner-product example, ``keepdims=True, axes=[-2, -2, "
+"-2]`` would act on the inner-product example, ``keepdims=True, axis=-2`` "
+"would act on the one-but-last dimension of the input arguments, and leave a "
+"size 1 dimension in that place in the output."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:478
+msgid "float128 values now print correctly on ppc systems"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:479
+msgid ""
+"Previously printing float128 values was buggy on ppc, since the special "
+"double-double floating-point-format on these systems was not accounted for. "
+"float128s now print with correct rounding and uniqueness."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:483
+msgid ""
+"Warning to ppc users: You should upgrade glibc if it is version <=2.23, "
+"especially if using float128. On ppc, glibc's malloc in these version often "
+"misaligns allocated memory which can crash numpy when using float128 values."
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:488
+msgid "New ``np.take_along_axis`` and ``np.put_along_axis`` functions"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:489
+msgid ""
+"When used on multidimensional arrays, ``argsort``, ``argmin``, ``argmax``, "
+"and ``argpartition`` return arrays that are difficult to use as indices. "
+"``take_along_axis`` provides an easy way to use these indices to lookup "
+"values within an array, so that::"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:494
+msgid "np.take_along_axis(a, np.argsort(a, axis=axis), axis=axis)"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:496
+msgid "is the same as::"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:498
+msgid "np.sort(a, axis=axis)"
+msgstr ""
+
+#: ../../../release/1.15.0-notes.rst:500
+msgid ""
+"``np.put_along_axis`` acts as the dual operation for writing to these "
+"indices within an array."
+msgstr ""

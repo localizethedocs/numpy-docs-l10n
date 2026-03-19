@@ -1,0 +1,318 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.histogram2d.rst:4
+msgid "numpy.histogram2d"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:2
+msgid "Compute the bi-dimensional histogram of two data samples."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:9
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:-1
+msgid "array_like, shape (N,)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:8
+msgid "An array containing the x coordinates of the points to be histogrammed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:13
+msgid "**y**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:12
+msgid "An array containing the y coordinates of the points to be histogrammed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:26
+msgid "**bins**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:-1
+msgid "int or array_like or [int, int] or [array, array], optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:16
+msgid "The bin specification:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:18
+msgid "If int, the number of bins for the two dimensions (nx=ny=bins)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:19
+msgid ""
+"If array_like, the bin edges for the two dimensions (x_edges=y_edges=bins)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:21
+msgid "If [int, int], the number of bins in each dimension (nx, ny = bins)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:23
+msgid ""
+"If [array, array], the bin edges in each dimension (x_edges, y_edges = bins)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:25
+msgid ""
+"A combination [int, array] or [array, int], where int is the number of bins "
+"and array is the bin edges."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:32
+msgid "**range**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:-1
+msgid "array_like, shape(2,2), optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:29
+msgid ""
+"The leftmost and rightmost edges of the bins along each dimension (if not "
+"specified explicitly in the `bins` parameters): ``[[xmin, xmax], [ymin, "
+"ymax]]``. All values outside of this range will be considered outliers and "
+"not tallied in the histogram."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:37
+msgid "**density**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:35
+msgid ""
+"If False, the default, returns the number of samples in each bin. If True, "
+"returns the probability *density* function at the bin, ``bin_count / "
+"sample_count / bin_area``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:45
+msgid "**weights**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:-1
+msgid "array_like, shape(N,), optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:40
+msgid ""
+"An array of values ``w_i`` weighing each sample ``(x_i, y_i)``. Weights are "
+"normalized to 1 if `density` is True. If `density` is False, the values of "
+"the returned histogram are equal to the sum of the weights belonging to the "
+"samples falling into each bin."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:52
+msgid "**H**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:-1
+msgid "ndarray, shape(nx, ny)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:50
+msgid ""
+"The bi-dimensional histogram of samples `x` and `y`. Values in `x` are "
+"histogrammed along the first dimension and values in `y` are histogrammed "
+"along the second dimension."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:55
+msgid "**xedges**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:-1
+msgid "ndarray, shape(nx+1,)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:55
+msgid "The bin edges along the first dimension."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:64
+msgid "**yedges**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:-1
+msgid "ndarray, shape(ny+1,)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:58
+msgid "The bin edges along the second dimension."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:69
+msgid ":obj:`histogram`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:70
+msgid "1D histogram"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:71
+msgid ":obj:`histogramdd`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:72
+msgid "Multidimensional histogram"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:76
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:77
+msgid ""
+"When `density` is True, then the returned histogram is the sample density, "
+"defined such that the sum over bins of the product ``bin_value * bin_area`` "
+"is 1."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:81
+msgid ""
+"Please note that the histogram does not follow the Cartesian convention "
+"where `x` values are on the abscissa and `y` values on the ordinate axis.  "
+"Rather, `x` is histogrammed along the first dimension of the array "
+"(vertical), and `y` along the second dimension of the array (horizontal).  "
+"This ensures compatibility with `histogramdd`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:89
+msgid "Examples"
+msgstr ""
+
+#: ../../../reference/generated/numpy.histogram2d.rst:7
+msgid ""
+"Construct a 2-D histogram with variable bin width. First define the bin "
+"edges:"
+msgstr ""
+
+#: ../../../reference/generated/numpy.histogram2d.rst:13
+msgid "Next we create a histogram H with random bin content:"
+msgstr ""
+
+#: ../../../reference/generated/numpy.histogram2d.rst:22
+msgid ":func:`imshow <matplotlib.pyplot.imshow>` can only display square bins:"
+msgstr ""
+
+#: ../../../reference/generated/numpy.histogram2d.rst:30
+msgid ""
+":func:`pcolormesh <matplotlib.pyplot.pcolormesh>` can display actual edges:"
+msgstr ""
+
+#: ../../../reference/generated/numpy.histogram2d.rst:38
+msgid ""
+":class:`NonUniformImage <matplotlib.image.NonUniformImage>` can be used to "
+"display actual bin edges with interpolation:"
+msgstr ""
+
+#: ../../../reference/generated/numpy.histogram2d.rst:75
+msgid ""
+"It is also possible to construct a 2-D histogram without specifying bin "
+"edges:"
+msgstr ""
+
+#: ../../../reference/generated/numpy.histogram2d.rst:85
+msgid ""
+"Now we can plot the histogram using :func:`pcolormesh <matplotlib.pyplot."
+"pcolormesh>`, and a :func:`hexbin <matplotlib.pyplot.hexbin>` for comparison."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:178
+msgid ""
+"<div id=\"aeb38c5c-0dcb-4aab-bf63-3efba07f86aa\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('68f16114-f267-4d40-"
+"b852-0581d5290fef','aeb38c5c-0dcb-4aab-bf63-3efba07f86aa')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('68f16114-f267-4d40-b852-0581d5290fef','aeb38c5c-0dcb-4aab-"
+"bf63-3efba07f86aa')\">Open In Tab</button></div><div id=\"042bd6d5-e99c-464b-"
+"a938-44e2f5e22584\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram2d:178
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

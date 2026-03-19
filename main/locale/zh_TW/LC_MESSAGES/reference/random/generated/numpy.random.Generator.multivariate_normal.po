@@ -1,0 +1,333 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/generated/numpy.random.Generator.multivariate_normal.rst:4
+msgid "numpy.random.Generator.multivariate\\_normal"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.multivariate_normal.rst:8
+msgid "method"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:2
+msgid "Draw random samples from a multivariate normal distribution."
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:4
+msgid ""
+"The multivariate normal, multinormal or Gaussian distribution is a "
+"generalization of the one-dimensional normal distribution to higher "
+"dimensions.  Such a distribution is specified by its mean and covariance "
+"matrix.  These parameters are analogous to the mean (average or \"center\") "
+"and variance (the squared standard deviation, or \"width\") of the one-"
+"dimensional normal distribution."
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:14
+msgid "**mean**"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:-1
+msgid "1-D array_like, of length N"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:14
+msgid "Mean of the N-dimensional distribution."
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:18
+msgid "**cov**"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:-1
+msgid "2-D array_like, of shape (N, N)"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:17
+msgid ""
+"Covariance matrix of the distribution. It must be symmetric and positive-"
+"semidefinite for proper sampling."
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:24
+msgid "**size**"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:-1
+msgid "int or tuple of ints, optional"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:21
+msgid ""
+"Given a shape of, for example, ``(m,n,k)``, ``m*n*k`` samples are generated, "
+"and packed in an `m`-by-`n`-by-`k` arrangement.  Because each sample is `N`-"
+"dimensional, the output shape is ``(m,n,k,N)``. If no shape is specified, a "
+"single (`N`-D) sample is returned."
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:27
+msgid "**check_valid**"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:-1
+msgid "{ 'warn', 'raise', 'ignore' }, optional"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:27
+msgid "Behavior when the covariance matrix is not positive semidefinite."
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:31
+msgid "**tol**"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:-1
+msgid "float, optional"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:30
+msgid ""
+"Tolerance when checking the singular values in covariance matrix. cov is "
+"cast to double before the check."
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:41
+msgid "**method**"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:-1
+msgid "{ 'svd', 'eigh', 'cholesky'}, optional"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:34
+msgid ""
+"The cov input is used to compute a factor matrix A such that ``A @ A.T = "
+"cov``. This argument is used to select the method used to compute the factor "
+"matrix A. The default method 'svd' is the slowest, while 'cholesky' is the "
+"fastest but less robust than the slowest method. The method `eigh` uses "
+"eigen decomposition to compute A and is faster than svd but slower than "
+"cholesky."
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:57
+msgid "**out**"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:46
+msgid ""
+"The drawn samples, of shape *size*, if that was provided.  If not, the shape "
+"is ``(N,)``."
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:49
+msgid ""
+"In other words, each entry ``out[i,j,...,:]`` is an N-dimensional value "
+"drawn from the distribution."
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:60
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:61
+msgid ""
+"The mean is a coordinate in N-dimensional space, which represents the "
+"location where samples are most likely to be generated.  This is analogous "
+"to the peak of the bell curve for the one-dimensional or univariate normal "
+"distribution."
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:66
+msgid ""
+"Covariance indicates the level to which two variables vary together. From "
+"the multivariate normal distribution, we draw N-dimensional samples, :math:"
+"`X = [x_1, x_2, ..., x_N]`.  The covariance matrix element :math:`C_{ij}` is "
+"the covariance of :math:`x_i` and :math:`x_j`. The element :math:`C_{ii}` is "
+"the variance of :math:`x_i` (i.e. its \"spread\")."
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:73
+msgid ""
+"Instead of specifying the full covariance matrix, popular approximations "
+"include:"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:76
+msgid "Spherical covariance (`cov` is a multiple of the identity matrix)"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:77
+msgid ""
+"Diagonal covariance (`cov` has non-negative elements, and only on the "
+"diagonal)"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:80
+msgid ""
+"This geometrical property can be seen in two dimensions by plotting "
+"generated data-points:"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:86
+msgid ""
+"Diagonal covariance means that the variables are independent, and the "
+"probability density contours have their axes aligned with the coordinate "
+"axes:"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:96
+msgid ""
+"Note that the covariance matrix must be positive semidefinite (a.k.a. "
+"nonnegative-definite). Otherwise, the behavior of this method is undefined "
+"and backwards compatibility is not guaranteed."
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:100
+msgid ""
+"This function internally uses linear algebra routines, and thus results may "
+"not be identical (even up to precision) across architectures, OSes, or even "
+"builds. For example, this is likely if ``cov`` has multiple equal singular "
+"values and ``method`` is ``'svd'`` (default). In this case, "
+"``method='cholesky'`` may be more robust."
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:107
+msgid "References"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:108
+msgid ""
+"Papoulis, A., \"Probability, Random Variables, and Stochastic Processes,\" "
+"3rd ed., New York: McGraw-Hill, 1991."
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:110
+msgid ""
+"Duda, R. O., Hart, P. E., and Stork, D. G., \"Pattern Classification,\" 2nd "
+"ed., New York: Wiley, 2001."
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:115
+msgid "[R73135c1078a9-1]_, [R73135c1078a9-2]_"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:118
+msgid "Examples"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.multivariate_normal.rst:10
+msgid "We can use a different method other than the default to factorize cov:"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.multivariate_normal.rst:16
+msgid ""
+"Here we generate 800 samples from the bivariate normal distribution with "
+"mean [0, 0] and covariance matrix [[6, -3], [-3, 3.5]].  The expected "
+"variances of the first and second components of the sample are 6 and 3.5, "
+"respectively, and the expected correlation coefficient is -3/sqrt(6*3.5) ≈ "
+"-0.65465."
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.multivariate_normal.rst:25
+msgid ""
+"Check that the mean, covariance, and correlation coefficient of the sample "
+"are close to the expected values:"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.multivariate_normal.rst:36
+msgid ""
+"We can visualize this data with a scatter plot.  The orientation of the "
+"point cloud illustrates the negative correlation of the components of this "
+"sample."
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:168
+msgid ""
+"<div id=\"a23a35cc-c44d-4cfd-b11b-ffbf02b5ba2b\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('b7f22e38-c994-4d4b-acef-4f943d69bd1f','a23a35cc-"
+"c44d-4cfd-b11b-ffbf02b5ba2b')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('b7f22e38-"
+"c994-4d4b-acef-4f943d69bd1f','a23a35cc-c44d-4cfd-b11b-ffbf02b5ba2b')\">Open "
+"In Tab</button></div><div id=\"ca6233fe-5365-415b-bb23-6cea7457eee6\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.multivariate_normal:168
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../../try_examples.json\");});</script>"
+msgstr ""

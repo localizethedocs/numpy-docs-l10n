@@ -1,0 +1,206 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../user/whatisnumpy.rst:5
+msgid "What is NumPy?"
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:7
+msgid ""
+"NumPy is the fundamental package for scientific computing in Python. It is a "
+"Python library that provides a multidimensional array object, various "
+"derived objects (such as masked arrays and matrices), and an assortment of "
+"routines for fast operations on arrays, including mathematical, logical, "
+"shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, "
+"basic linear algebra, basic statistical operations, random simulation and "
+"much more."
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:15
+msgid ""
+"At the core of the NumPy package, is the `~numpy.ndarray` object.  This "
+"encapsulates *n*-dimensional arrays of homogeneous data types, with many "
+"operations being performed in compiled code for performance. There are "
+"several important differences between NumPy arrays and the standard Python "
+"sequences:"
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:21
+msgid ""
+"NumPy arrays have a fixed size at creation, unlike Python lists (which can "
+"grow dynamically). Changing the size of an `~numpy.ndarray` will create a "
+"new array and delete the original."
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:25
+msgid ""
+"The elements in a NumPy array are all required to be of the same data type, "
+"and thus will be the same size in memory.  The exception: one can have "
+"arrays of (Python, including NumPy) objects, thereby allowing for arrays of "
+"different sized elements."
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:30
+msgid ""
+"NumPy arrays facilitate advanced mathematical and other types of operations "
+"on large numbers of data.  Typically, such operations are executed more "
+"efficiently and with less code than is possible using Python's built-in "
+"sequences."
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:35
+msgid ""
+"A growing plethora of scientific and mathematical Python-based packages are "
+"using NumPy arrays; though these typically support Python-sequence input, "
+"they convert such input to NumPy arrays prior to processing, and they often "
+"output NumPy arrays.  In other words, in order to efficiently use much "
+"(perhaps even most) of today's scientific/mathematical Python-based "
+"software, just knowing how to use Python's built-in sequence types is "
+"insufficient - one also needs to know how to use NumPy arrays."
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:44
+msgid ""
+"The points about sequence size and speed are particularly important in "
+"scientific computing.  As a simple example, consider the case of multiplying "
+"each element in a 1-D sequence with the corresponding element in another "
+"sequence of the same length.  If the data are stored in two Python lists, "
+"``a`` and ``b``, we could iterate over each element::"
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:51
+msgid ""
+"c = []\n"
+"for i in range(len(a)):\n"
+"    c.append(a[i]*b[i])"
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:55
+msgid ""
+"This produces the correct answer, but if ``a`` and ``b`` each contain "
+"millions of numbers, we will pay the price for the inefficiencies of looping "
+"in Python.  We could accomplish the same task much more quickly in C by "
+"writing (for clarity we neglect variable declarations and initializations, "
+"memory allocation, etc.)"
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:63
+msgid ""
+"for (i = 0; i < rows; i++) {\n"
+"  c[i] = a[i]*b[i];\n"
+"}"
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:67
+msgid ""
+"This saves all the overhead involved in interpreting the Python code and "
+"manipulating Python objects, but at the expense of the benefits gained from "
+"coding in Python.  Furthermore, the coding work required increases with the "
+"dimensionality of our data. In the case of a 2-D array, for example, the C "
+"code (abridged as before) expands to"
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:75
+msgid ""
+"for (i = 0; i < rows; i++) {\n"
+"  for (j = 0; j < columns; j++) {\n"
+"    c[i][j] = a[i][j]*b[i][j];\n"
+"  }\n"
+"}"
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:81
+msgid ""
+"NumPy gives us the best of both worlds: element-by-element operations are "
+"the \"default mode\" when an `~numpy.ndarray` is involved, but the element-"
+"by-element operation is speedily executed by pre-compiled C code.  In NumPy"
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:88
+msgid "c = a * b"
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:90
+msgid ""
+"does what the earlier examples do, at near-C speeds, but with the code "
+"simplicity we expect from something based on Python. Indeed, the NumPy idiom "
+"is even simpler!  This last example illustrates two of NumPy's features "
+"which are the basis of much of its power: vectorization and broadcasting."
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:99
+msgid "Why is NumPy fast?"
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:101
+msgid ""
+"Vectorization describes the absence of any explicit looping, indexing, etc., "
+"in the code - these things are taking place, of course, just \"behind the "
+"scenes\" in optimized, pre-compiled C code.  Vectorized code has many "
+"advantages, among which are:"
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:106
+msgid "vectorized code is more concise and easier to read"
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:108
+msgid "fewer lines of code generally means fewer bugs"
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:110
+msgid ""
+"the code more closely resembles standard mathematical notation (making it "
+"easier, typically, to correctly code mathematical constructs)"
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:114
+msgid ""
+"vectorization results in more \"Pythonic\" code. Without vectorization, our "
+"code would be littered with inefficient and difficult to read ``for`` loops."
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:118
+msgid ""
+"Broadcasting is the term used to describe the implicit element-by-element "
+"behavior of operations; generally speaking, in NumPy all operations, not "
+"just arithmetic operations, but logical, bit-wise, functional, etc., behave "
+"in this implicit element-by-element fashion, i.e., they broadcast.  "
+"Moreover, in the example above, ``a`` and ``b`` could be multidimensional "
+"arrays of the same shape, or a scalar and an array, or even two arrays with "
+"different shapes, provided that the smaller array is \"expandable\" to the "
+"shape of the larger in such a way that the resulting broadcast is "
+"unambiguous. For detailed \"rules\" of broadcasting see :ref:`Broadcasting "
+"<basics.broadcasting>`."
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:131
+msgid "Who else uses NumPy?"
+msgstr ""
+
+#: ../../../user/whatisnumpy.rst:133
+msgid ""
+"NumPy fully supports an object-oriented approach, starting, once again, with "
+"`~numpy.ndarray`.  For example, `~numpy.ndarray` is a class, possessing "
+"numerous methods and attributes.  Many of its methods are mirrored by "
+"functions in the outer-most NumPy namespace, allowing the programmer to code "
+"in whichever paradigm they prefer. This flexibility has allowed the NumPy "
+"array dialect and NumPy `~numpy.ndarray` class to become the *de-facto* "
+"language of multi-dimensional data interchange used in Python."
+msgstr ""

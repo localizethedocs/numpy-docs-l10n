@@ -1,0 +1,430 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../f2py/buildtools/meson-python.rst:5
+msgid "Distributing F2PY extensions with ``meson-python``"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:7
+msgid ""
+"The :ref:`f2py-meson` page covers building F2PY extensions using raw "
+"``meson`` commands. This page shows how to package those extensions into "
+"installable Python distributions (sdists and wheels) using `meson-python "
+"<https://meson-python.readthedocs.io/>`_ as the PEP 517 build backend."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:12
+msgid ""
+"This is the recommended approach for distributing F2PY-wrapped Fortran code "
+"as a Python package on PyPI or for local ``pip install`` workflows."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:17
+msgid ""
+"``meson-python`` replaced ``setuptools`` / ``numpy.distutils`` as the "
+"standard way to build and distribute compiled extensions in the NumPy and "
+"SciPy ecosystem. See :ref:`distutils-status-migration` for background."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:22
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:24
+msgid "You need:"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:26
+msgid "A C compiler"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:27
+msgid ""
+"A Fortran compiler (``gfortran``, ``ifort``, ``ifx``, ``flang-new``, etc.), "
+"if you use any Fortran code in your package"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:29
+msgid "Python >= 3.10"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:30
+msgid ""
+"``meson``, ``meson-python``, and ``numpy`` (installed automatically during "
+"the build when listed in ``build-system.requires``)"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:34
+msgid "Minimal example"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:36
+msgid ""
+"The project below wraps a Fortran ``fib`` subroutine into an importable "
+"Python package called ``fib_wrapper``."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:39
+msgid "Project layout::"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:41
+msgid ""
+"fib_wrapper/           # project root\n"
+"├── fib.f90            # Fortran source\n"
+"├── fib_wrapper/       # Python package directory\n"
+"│   └── __init__.py\n"
+"├── meson.build\n"
+"└── pyproject.toml"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:49
+msgid "Fortran source"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:51
+msgid "Save the following as ``fib.f90``:"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:53
+msgid ""
+"subroutine fib(a, n)\n"
+"  use iso_c_binding\n"
+"  integer(c_int), intent(in) :: n\n"
+"  integer(c_int), intent(out) :: a(n)\n"
+"  integer :: i\n"
+"  do i = 1, n\n"
+"     if (i == 1) then\n"
+"        a(i) = 0\n"
+"     else if (i == 2) then\n"
+"        a(i) = 1\n"
+"     else\n"
+"        a(i) = a(i - 1) + a(i - 2)\n"
+"     end if\n"
+"  end do\n"
+"end subroutine fib\n"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:57
+msgid "``pyproject.toml``"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:59
+msgid ""
+"[build-system]\n"
+"# numpy>=2.0 is required for dependency('numpy') support in meson.build\n"
+"requires = [\"meson-python>=0.15.0\", \"numpy>=2.0\"]\n"
+"build-backend = \"mesonpy\"\n"
+"\n"
+"[project]\n"
+"name = \"fib_wrapper\"\n"
+"version = \"0.1.0\"\n"
+"requires-python = \">=3.10\"\n"
+"dependencies = [\"numpy\"]\n"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:62
+msgid "Two entries matter here:"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:64
+msgid ""
+"``build-backend = \"mesonpy\"`` tells build frontends to use ``meson-"
+"python``."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:65
+msgid ""
+"``requires`` lists build-time dependencies. ``numpy >= 2.0`` is required so "
+"that ``f2py``, the NumPy headers, and ``dependency('numpy')`` support in "
+"Meson are available during compilation."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:70
+msgid "``meson.build``"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:72
+msgid ""
+"project('fib_wrapper', 'c',\n"
+"  version : '0.1.0',\n"
+"  meson_version: '>=1.1.0',\n"
+"  default_options : ['warning_level=2'],\n"
+")\n"
+"\n"
+"add_languages('fortran', native: false)\n"
+"\n"
+"py = import('python').find_installation(pure: false)\n"
+"\n"
+"# NumPy >=2.0 provides include dirs via dependency()\n"
+"np_dep = dependency('numpy')\n"
+"\n"
+"incdir_f2py = run_command(py,\n"
+"  ['-c', 'import numpy.f2py; print(numpy.f2py.get_include())'],\n"
+"  check : true\n"
+").stdout().strip()\n"
+"\n"
+"# f2py include dir (for fortranobject.h) is not in dependency('numpy'),\n"
+"# so add it separately\n"
+"f2py_dep = declare_dependency(\n"
+"  include_directories : incdir_f2py,\n"
+")\n"
+"\n"
+"# Generate the f2py wrappers\n"
+"fib_source = custom_target('fibmodule.c',\n"
+"  input : ['fib.f90'],\n"
+"  output : ['fibmodule.c', 'fib-f2pywrappers.f'],\n"
+"  command : [py, '-m', 'numpy.f2py', '@INPUT@', '-m', 'fib', '--lower']\n"
+")\n"
+"\n"
+"py.extension_module('fib',\n"
+"  ['fib.f90', fib_source, incdir_f2py / 'fortranobject.c'],\n"
+"  dependencies : [np_dep, f2py_dep],\n"
+"  subdir: 'fib_wrapper',\n"
+"  install : true,\n"
+")\n"
+"\n"
+"# Install the Python package files\n"
+"py.install_sources(\n"
+"  'fib_wrapper/__init__.py',\n"
+"  subdir: 'fib_wrapper',\n"
+")\n"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:76
+msgid ""
+"The file is stored as ``meson_mesonpy.build`` in the documentation source "
+"tree to avoid collisions with other examples. In your project, name it "
+"``meson.build``."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:80
+msgid "The ``meson.build`` file does four things:"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:82
+msgid ""
+"Uses ``dependency('numpy')`` to locate NumPy headers, and a "
+"``declare_dependency`` to add the F2PY include directory (for "
+"``fortranobject.h``)."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:85
+msgid "Runs ``f2py`` via ``custom_target`` to generate the C wrapper sources."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:86
+msgid ""
+"Compiles the generated C code together with the Fortran source into a Python "
+"extension module using ``py.extension_module``."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:88
+msgid ""
+"Installs ``__init__.py`` into the package directory so the result is a "
+"proper Python package."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:91
+msgid ""
+"The ``subdir: 'fib_wrapper'`` argument on the extension module is required "
+"so that the compiled ``fib`` shared library is installed inside the "
+"``fib_wrapper/`` package directory, next to ``__init__.py``. Without it the "
+"extension would be installed at the top level and ``import fib_wrapper`` "
+"would not find the ``fib`` extension. The resulting installed layout is::"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:97
+msgid ""
+"site-packages/\n"
+"└── fib_wrapper/\n"
+"    ├── __init__.py        # from .fib import fib\n"
+"    └── fib.cpython-*.so   # compiled extension module"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:103
+msgid "``__init__.py``"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:105
+msgid "A minimal ``__init__.py`` re-exports the wrapped function:"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:107
+msgid "from .fib import fib"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:112
+msgid "Building and installing"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:115
+msgid "Editable install (development)"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:117
+msgid "pip install --no-build-isolation --editable ."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:121
+msgid ""
+"``--no-build-isolation`` reuses the current environment, which is useful "
+"when iterating. This requires ``meson-python``, ``meson``, ``ninja``, and "
+"``numpy`` to already be installed."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:126
+msgid "Building a wheel"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:128
+msgid ""
+"# If you don't yet have `pypa/build` installed: `pip install build`\n"
+"python -m build --wheel"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:133
+msgid ""
+"The resulting ``.whl`` file in ``dist/`` can be uploaded to PyPI, or "
+"installed elsewhere with ``pip install dist/fib_wrapper-0.1.0-*.whl``."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:137
+msgid "Verifying the install"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:139
+msgid ""
+">>> from fib_wrapper import fib\n"
+">>> fib(10)\n"
+"array([ 0,  1,  1,  2,  3,  5,  8, 13, 21, 34], dtype=int32)"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:146
+msgid "Customizing the Fortran compiler"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:148
+msgid ""
+"``meson-python`` delegates compiler selection to ``meson``. By default, "
+"``meson`` will choose the first Fortran compiler it finds on the PATH. If "
+"you want more control over Fortran compiler selection, set the ``FC`` "
+"environment variable before building:"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:153
+msgid "FC=ifx python -m build --wheel"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:157
+msgid ""
+"For more control, use a `Meson native file <https://mesonbuild.com/Native-"
+"environments.html>`_:"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:160
+msgid ""
+"; native.ini\n"
+"[binaries]\n"
+"fortran = 'ifx'\n"
+"c = 'icx'"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:167
+msgid "python -m build --wheel -Csetup-args=\"--native-file=native.ini\""
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:172
+msgid "Adding dependencies (BLAS, LAPACK, etc.)"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:174
+msgid ""
+"Use ``dependency()`` in ``meson.build`` to link against system libraries:"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:176
+msgid ""
+"lapack_dep = dependency('lapack')\n"
+"\n"
+"py.extension_module('mymod',\n"
+"  [sources, generated, incdir_f2py / 'fortranobject.c'],\n"
+"  dependencies : [np_dep, f2py_dep, lapack_dep],\n"
+"  install : true,\n"
+")"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:186
+msgid ""
+"``meson`` resolves dependencies through ``pkg-config``, CMake, or its own "
+"detection logic. See the `Meson dependency documentation <https://mesonbuild."
+"com/Dependencies.html>`_ for details."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:191
+msgid "Differences from the ``scikit-build-core`` workflow"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:193
+msgid ""
+"The ``scikit-build-core`` approach documented in :ref:`f2py-skbuild` uses "
+"CMake under the hood. ``meson-python`` provides:"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:196
+msgid "Native Fortran compiler support in ``meson`` (no CMake layer)."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:197
+msgid "Direct integration with ``pip`` / ``build`` via PEP 517."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:198
+msgid "The same build system used by NumPy and SciPy themselves."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:201
+msgid "Further reading"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:203
+msgid "`meson-python documentation <https://meson-python.readthedocs.io/>`_"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:204
+msgid "`Meson build system <https://mesonbuild.com/>`_"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:205
+msgid ""
+"`SciPy's meson build configuration <https://github.com/scipy/scipy/blob/main/"
+"meson.build>`_ (real-world F2PY usage)"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:206
+msgid ":ref:`f2py-meson` (raw meson build without ``meson-python``)"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:207
+msgid ":ref:`f2py-skbuild` (alternative using ``scikit-build-core`` / CMake)"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson-python.rst:208
+msgid ":ref:`f2py-meson-distutils` (migration from ``distutils``)"
+msgstr ""

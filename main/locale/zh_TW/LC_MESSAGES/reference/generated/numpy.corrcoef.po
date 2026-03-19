@@ -1,0 +1,220 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.corrcoef.rst:4
+msgid "numpy.corrcoef"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:2
+msgid "Return Pearson product-moment correlation coefficients."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:4
+msgid ""
+"Please refer to the documentation for `cov` for more detail.  The "
+"relationship between the correlation coefficient matrix, `R`, and the "
+"covariance matrix, `C`, is"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:8
+msgid ""
+"R_{ij} = \\frac{ C_{ij} } { \\sqrt{ C_{ii} C_{jj} } }\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:10
+msgid "The values of `R` are between -1 and 1, inclusive."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:17
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:15
+msgid ""
+"A 1-D or 2-D array containing multiple variables and observations. Each row "
+"of `x` represents a variable, and each column a single observation of all "
+"those variables. Also see `rowvar` below."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:21
+msgid "**y**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:20
+msgid ""
+"An additional set of variables and observations. `y` has the same shape as "
+"`x`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:27
+msgid "**rowvar**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:24
+msgid ""
+"If `rowvar` is True (default), then each row represents a variable, with "
+"observations in the columns. Otherwise, the relationship is transposed: each "
+"column represents a variable, while the rows contain observations."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:35
+msgid "**dtype**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:-1
+msgid "data-type, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:30
+msgid ""
+"Data-type of the result. By default, the return data-type will have at least "
+"`numpy.float64` precision."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:46
+msgid "**R**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:40
+msgid "The correlation coefficient matrix of the variables."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:51
+msgid ":obj:`cov`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:52
+msgid "Covariance matrix"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:56
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:57
+msgid ""
+"Due to floating point rounding the resulting array may not be Hermitian, the "
+"diagonal elements may not be 1, and the elements may not satisfy the "
+"inequality abs(a) <= 1. The real and imaginary parts are clipped to the "
+"interval [-1,  1] in an attempt to improve on that situation but is not much "
+"help in the complex case."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:65
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:72
+msgid ""
+"In this example we generate two random arrays, ``xarr`` and ``yarr``, and "
+"compute the row-wise and column-wise Pearson correlation coefficients, "
+"``R``. Since ``rowvar`` is  true by  default, we first find the row-wise "
+"Pearson correlation coefficients between the variables of ``xarr``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:90
+msgid ""
+"If we add another set of variables and observations ``yarr``, we can compute "
+"the row-wise Pearson correlation coefficients between the variables in "
+"``xarr`` and ``yarr``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:114
+msgid ""
+"Finally if we use the option ``rowvar=False``, the columns are now being "
+"treated as the variables and we will find the column-wise Pearson "
+"correlation coefficients between variables in ``xarr`` and ``yarr``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:-1
+msgid ""
+"<div id=\"aca86b0a-447e-4e39-b6c8-ec775e25318d\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('cd2d42a8-6a3d-4a82-9aac-5828b1aa68b4','aca86b0a-447e-4e39-"
+"b6c8-ec775e25318d')\">Go Back</button><button class=\"try_examples_button\" "
+"onclick=\"window."
+"openInNewTab('cd2d42a8-6a3d-4a82-9aac-5828b1aa68b4','aca86b0a-447e-4e39-b6c8-"
+"ec775e25318d')\">Open In Tab</button></div><div id=\"f2d3942f-"
+"f9c6-4c3c-9c78-60ecdb668592\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.corrcoef:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

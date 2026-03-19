@@ -1,0 +1,217 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../f2py/buildtools/index.rst:5
+msgid "F2PY and build systems"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:7
+msgid ""
+"In this section we will cover the various popular build systems and their "
+"usage with ``f2py``."
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:10
+msgid "1.26.x"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:12
+msgid ""
+"The default build system for ``f2py`` has traditionally been through the "
+"enhanced ``numpy.distutils`` module. This module is based on ``distutils`` "
+"which was removed in ``NumPy2.5.0`` in **June 2026**. Like the rest of NumPy "
+"and SciPy, ``f2py`` uses ``meson`` now, see :ref:`distutils-status-"
+"migration` for some more details."
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:18
+msgid ""
+"All changes to ``f2py`` are tested on SciPy, so their `CI configuration`_ is "
+"always supported."
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:24
+msgid "See :ref:`f2py-meson-distutils` for migration information."
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:28
+msgid "Basic concepts"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:30
+msgid ""
+"Building an extension module which includes Python and Fortran consists of:"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:32
+msgid "Fortran source(s)"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:33
+msgid "One or more generated files from ``f2py``"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:35
+msgid "A ``C`` wrapper file is always created"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:36
+msgid "Code with modules require an additional ``.f90`` wrapper"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:37
+msgid "Code with functions generate an additional ``.f`` wrapper"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:39
+msgid "``fortranobject.{c,h}``"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:41
+msgid "Distributed with ``numpy``"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:42
+msgid ""
+"Can be queried via ``python -c \"import numpy.f2py; print(numpy.f2py."
+"get_include())\"``"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:44
+msgid "NumPy headers"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:46
+msgid ""
+"Can be queried via ``python -c \"import numpy; print(numpy.get_include())\"``"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:48
+msgid "Python libraries and development headers"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:50
+msgid ""
+"Broadly speaking there are three cases which arise when considering the "
+"outputs of ``f2py``:"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:61
+msgid "Fortran 77 programs"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:53
+msgid "Input file ``blah.f``"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:54
+msgid "Generates"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:56 ../../../f2py/buildtools/index.rst:67
+#: ../../../f2py/buildtools/index.rst:79
+msgid "``blahmodule.c``"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:57 ../../../f2py/buildtools/index.rst:68
+msgid "``blah-f2pywrappers.f``"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:59
+msgid ""
+"When no ``COMMON`` blocks are present only a ``C`` wrapper file is "
+"generated. Wrappers are also generated to rewrite assumed shape arrays as "
+"automatic arrays."
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:73
+msgid "Fortran 90 programs"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:64
+msgid "Input file ``blah.f90``"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:65 ../../../f2py/buildtools/index.rst:77
+msgid "Generates:"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:69
+msgid "``blah-f2pywrappers2.f90``"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:71
+msgid ""
+"The ``f90`` wrapper is used to handle code which is subdivided into modules. "
+"The ``f`` wrapper makes ``subroutines`` for  ``functions``. It rewrites "
+"assumed shape arrays as automatic arrays."
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:86
+msgid "Signature files"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:76
+msgid "Input file ``blah.pyf``"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:80
+msgid "``blah-f2pywrappers2.f90`` (occasionally)"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:81
+msgid "``blah-f2pywrappers.f`` (occasionally)"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:83
+msgid ""
+"Signature files ``.pyf`` do not signal their language standard via the file "
+"extension, they may generate the F90 and F77 specific wrappers depending on "
+"their contents; which shifts the burden of checking for generated files onto "
+"the build system."
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:88
+msgid "``1.22.4``"
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:90
+msgid ""
+"``f2py`` will deterministically generate wrapper files based on the input "
+"file Fortran standard (F77 or greater).  ``--skip-empty-wrappers`` can be "
+"passed to ``f2py`` to restore the previous behaviour of only generating "
+"wrappers when needed by the input ."
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:96
+msgid ""
+"In theory keeping the above requirements in hand, any build system can be "
+"adapted to generate ``f2py`` extension modules. Here we will cover a subset "
+"of the more popular systems."
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:101
+msgid ""
+"``make`` has no place in a modern multi-language setup, and so is not "
+"discussed further."
+msgstr ""
+
+#: ../../../f2py/buildtools/index.rst:105
+msgid "Build systems"
+msgstr ""

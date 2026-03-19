@@ -1,0 +1,198 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../building/blas_lapack.rst:4
+msgid "BLAS and LAPACK"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:9
+msgid "Default behavior for BLAS and LAPACK selection"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:11
+msgid ""
+"When a NumPy build is invoked, BLAS and LAPACK library detection happens "
+"automatically. The build system will attempt to locate a suitable library, "
+"and try a number of known libraries in a certain order - most to least "
+"performant. A typical order is: MKL, Accelerate, OpenBLAS, FlexiBLAS, BLIS, "
+"plain ``libblas``/``liblapack``. This may vary per platform or over "
+"releases. That order, and which libraries are tried, can be changed through "
+"the ``blas-order`` and ``lapack-order`` build options, for example::"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:19
+msgid ""
+"$ python -m pip install . -Csetup-args=-Dblas-order=openblas,mkl,blis -"
+"Csetup-args=-Dlapack-order=openblas,mkl,lapack"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:21
+msgid ""
+"The first suitable library that is found will be used. In case no suitable "
+"library is found, the NumPy build will print a warning and then use (slow!) "
+"NumPy-internal fallback routines. In order to disallow use of those slow "
+"routines, the ``allow-noblas`` build option can be used::"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:26
+msgid "$ python -m pip install . -Csetup-args=-Dallow-noblas=false"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:28
+msgid ""
+"By default the LP64 (32-bit integer) interface to BLAS and LAPACK will be "
+"used. For building against the ILP64 (64-bit integer) interface, one must "
+"use the ``use-ilp64`` build option::"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:32
+msgid "$ python -m pip install . -Csetup-args=-Duse-ilp64=true"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:38
+msgid "Selecting specific BLAS and LAPACK libraries"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:40
+msgid ""
+"The ``blas`` and ``lapack`` build options are set to \"auto\" by default, "
+"which means trying all known libraries. If you want to use a specific "
+"library, you can set these build options to the library name (typically the "
+"lower-case name that ``pkg-config`` expects). For example, to select plain "
+"``libblas`` and ``liblapack`` (this is typically Netlib BLAS/LAPACK on Linux "
+"distros, and can be dynamically switched between implementations on conda-"
+"forge), use::"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:47
+msgid ""
+"$ # for a development build\n"
+"$ spin build -C-Dblas=blas -C-Dlapack=lapack\n"
+"\n"
+"$ # to build and install a wheel\n"
+"$ python -m build -Csetup-args=-Dblas=blas -Csetup-args=-Dlapack=lapack\n"
+"$ pip install dist/numpy*.whl\n"
+"\n"
+"$ # Or, with pip>=23.1, this works too:\n"
+"$ python -m pip install . -Csetup-args=-Dblas=blas -Csetup-args=-"
+"Dlapack=lapack"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:57
+msgid ""
+"Other options that should work (as long as they're installed with ``pkg-"
+"config`` support; otherwise they may still be detected but things are "
+"inherently more fragile) include ``openblas``, ``mkl``, ``accelerate``, "
+"``atlas`` and ``blis``."
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:64
+msgid "Using pkg-config to detect libraries in a nonstandard location"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:66
+msgid ""
+"The way BLAS and LAPACK detection works under the hood is that Meson tries "
+"to discover the specified libraries first with ``pkg-config``, and then with "
+"CMake. If all you have is a standalone shared library file (e.g., "
+"``armpl_lp64.so`` in ``/a/random/path/lib/`` and a corresponding header file "
+"in ``/a/random/path/include/``), then what you have to do is craft your own "
+"pkg-config file. It should have a matching name (so in this example, "
+"``armpl_lp64.pc``) and may be located anywhere. The ``PKG_CONFIG_PATH`` "
+"environment variable should be set to point to the location of the ``.pc`` "
+"file. The contents of that file should be::"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:76
+msgid ""
+"libdir=/path/to/library-dir      # e.g., /a/random/path/lib\n"
+"includedir=/path/to/include-dir  # e.g., /a/random/path/include\n"
+"version=1.2.3                    # set to actual version\n"
+"extralib=-lm -lpthread -lgfortran   # if needed, the flags to link in "
+"dependencies\n"
+"Name: armpl_lp64\n"
+"Description: ArmPL - Arm Performance Libraries\n"
+"Version: ${version}\n"
+"Libs: -L${libdir} -larmpl_lp64      # linker flags\n"
+"Libs.private: ${extralib}\n"
+"Cflags: -I${includedir}"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:87
+msgid "To check that this works as expected, you should be able to run::"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:89
+msgid ""
+"$ pkg-config --libs armpl_lp64\n"
+"-L/path/to/library-dir -larmpl_lp64\n"
+"$ pkg-config --cflags armpl_lp64\n"
+"-I/path/to/include-dir"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:96
+msgid "Full list of BLAS and LAPACK related build options"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:98
+msgid ""
+"BLAS and LAPACK are complex dependencies. Some libraries have more options "
+"that are exposed via build options (see ``meson.options`` in the root of the "
+"repo for all of NumPy's build options)."
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:102
+msgid "``blas``: name of the BLAS library to use (default: ``auto``),"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:103
+msgid "``lapack``: name of the LAPACK library to use (default: ``auto``),"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:104
+msgid ""
+"``allow-noblas``: whether or not to allow building without external BLAS/"
+"LAPACK libraries (default: ``true``),"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:106
+msgid ""
+"``blas-order``: order of BLAS libraries to try detecting (default may vary "
+"per platform),"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:107
+msgid "``lapack-order``: order of LAPACK libraries to try detecting,"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:108
+msgid "``use-ilp64``: whether to use the ILP64 interface (default: ``false``),"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:109
+msgid ""
+"``blas-symbol-suffix``: the symbol suffix to use for the detected libraries "
+"(default: ``auto``),"
+msgstr ""
+
+#: ../../../building/blas_lapack.rst:110
+msgid ""
+"``mkl-threading``: which MKL threading layer to use, one of ``seq``, "
+"``iomp``, ``gomp``, ``tbb`` (default: ``auto``)."
+msgstr ""

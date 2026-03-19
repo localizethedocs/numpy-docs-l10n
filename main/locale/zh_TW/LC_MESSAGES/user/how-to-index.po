@@ -1,0 +1,437 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../user/how-to-index.rst:7
+msgid "How to index :class:`ndarrays <.ndarray>`"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:9
+msgid ":ref:`basics.indexing`"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:11
+msgid ""
+"This page tackles common examples. For an in-depth look into indexing, refer "
+"to :ref:`basics.indexing`."
+msgstr ""
+
+#: ../../../user/how-to-index.rst:15
+msgid "Access specific/arbitrary rows and columns"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:17
+msgid ""
+"Use :ref:`basic-indexing` features like :ref:`slicing-and-striding`, and :"
+"ref:`dimensional-indexing-tools`."
+msgstr ""
+
+#: ../../../user/how-to-index.rst:34
+msgid ""
+"Note that the output from indexing operations can have different shape from "
+"the original object. To preserve the original dimensions after indexing, you "
+"can use :func:`newaxis`. To use other such tools, refer to :ref:`dimensional-"
+"indexing-tools`."
+msgstr ""
+
+#: ../../../user/how-to-index.rst:46
+msgid "Variables can also be used to index::"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:48
+msgid ""
+">>> y = 0\n"
+">>> a[y, :, y+3]\n"
+"array([ 3,  8, 13])"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:52
+msgid ""
+"Refer to :ref:`dealing-with-variable-indices` to see how to use :term:"
+"`python:slice` and :py:data:`Ellipsis` in your index variables."
+msgstr ""
+
+#: ../../../user/how-to-index.rst:56
+msgid "Index columns"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:58
+msgid ""
+"To index columns, you have to index the last axis. Use :ref:`dimensional-"
+"indexing-tools` to get the desired number of dimensions::"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:61
+msgid ""
+">>> a = np.arange(24).reshape(2, 3, 4)\n"
+">>> a\n"
+"array([[[ 0,  1,  2,  3],\n"
+"        [ 4,  5,  6,  7],\n"
+"        [ 8,  9, 10, 11]],\n"
+"\n"
+"       [[12, 13, 14, 15],\n"
+"        [16, 17, 18, 19],\n"
+"        [20, 21, 22, 23]]])\n"
+">>> a[..., 3]\n"
+"array([[ 3,  7, 11],\n"
+"       [15, 19, 23]])"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:74
+msgid ""
+"To index specific elements in each column, make use of :ref:`advanced-"
+"indexing` as below::"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:77
+msgid ""
+">>> arr = np.arange(3*4).reshape(3, 4)\n"
+">>> arr\n"
+"array([[ 0,  1,  2,  3],\n"
+"       [ 4,  5,  6,  7],\n"
+"       [ 8,  9, 10, 11]])\n"
+">>> column_indices = [[1, 3], [0, 2], [2, 2]]\n"
+">>> np.arange(arr.shape[0])\n"
+"array([0, 1, 2])\n"
+">>> row_indices = np.arange(arr.shape[0])[:, np.newaxis]\n"
+">>> row_indices\n"
+"array([[0],\n"
+"       [1],\n"
+"       [2]])"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:91
+msgid "Use the ``row_indices`` and ``column_indices`` for advanced indexing::"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:94
+msgid ""
+">>> arr[row_indices, column_indices]\n"
+"array([[ 1,  3],\n"
+"       [ 4,  6],\n"
+"       [10, 10]])"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:100
+msgid "Index along a specific axis"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:102
+msgid ""
+"Use :meth:`take`. See also :meth:`take_along_axis` and :meth:"
+"`put_along_axis`."
+msgstr ""
+
+#: ../../../user/how-to-index.rst:128
+msgid "Create subsets of larger matrices"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:130
+msgid "Use :ref:`slicing-and-striding` to access chunks of a large array::"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:132
+msgid ""
+">>> a = np.arange(100).reshape(10, 10)\n"
+">>> a\n"
+"array([[ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9],\n"
+"        [10, 11, 12, 13, 14, 15, 16, 17, 18, 19],\n"
+"        [20, 21, 22, 23, 24, 25, 26, 27, 28, 29],\n"
+"        [30, 31, 32, 33, 34, 35, 36, 37, 38, 39],\n"
+"        [40, 41, 42, 43, 44, 45, 46, 47, 48, 49],\n"
+"        [50, 51, 52, 53, 54, 55, 56, 57, 58, 59],\n"
+"        [60, 61, 62, 63, 64, 65, 66, 67, 68, 69],\n"
+"        [70, 71, 72, 73, 74, 75, 76, 77, 78, 79],\n"
+"        [80, 81, 82, 83, 84, 85, 86, 87, 88, 89],\n"
+"        [90, 91, 92, 93, 94, 95, 96, 97, 98, 99]])\n"
+">>> a[2:5, 2:5]\n"
+"array([[22, 23, 24],\n"
+"       [32, 33, 34],\n"
+"       [42, 43, 44]])\n"
+">>> a[2:5, 1:3]\n"
+"array([[21, 22],\n"
+"       [31, 32],\n"
+"       [41, 42]])\n"
+">>> a[:5, :5]\n"
+"array([[ 0,  1,  2,  3,  4],\n"
+"       [10, 11, 12, 13, 14],\n"
+"       [20, 21, 22, 23, 24],\n"
+"       [30, 31, 32, 33, 34],\n"
+"       [40, 41, 42, 43, 44]])"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:159
+msgid ""
+"The same thing can be done with advanced indexing in a slightly more complex "
+"way. Remember that :ref:`advanced indexing creates a copy <indexing-"
+"operations>`::"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:163
+msgid ""
+">>> a[np.arange(5)[:, None], np.arange(5)[None, :]]\n"
+"array([[ 0,  1,  2,  3,  4],\n"
+"       [10, 11, 12, 13, 14],\n"
+"       [20, 21, 22, 23, 24],\n"
+"       [30, 31, 32, 33, 34],\n"
+"       [40, 41, 42, 43, 44]])"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:170
+msgid "You can also use :meth:`mgrid` to generate indices::"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:172
+msgid ""
+">>> indices = np.mgrid[0:6:2]\n"
+">>> indices\n"
+"array([0, 2, 4])\n"
+">>> a[:, indices]\n"
+"array([[ 0,  2,  4],\n"
+"       [10, 12, 14],\n"
+"       [20, 22, 24],\n"
+"       [30, 32, 34],\n"
+"       [40, 42, 44],\n"
+"       [50, 52, 54],\n"
+"       [60, 62, 64],\n"
+"       [70, 72, 74],\n"
+"       [80, 82, 84],\n"
+"       [90, 92, 94]])"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:188
+msgid "Filter values"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:191
+msgid "Non-zero elements"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:193
+msgid ""
+"Use :meth:`nonzero` to get a tuple of array indices of non-zero elements "
+"corresponding to every dimension::"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:196
+msgid ""
+">>> z = np.array([[1, 2, 3, 0], [0, 0, 5, 3], [4, 6, 0, 0]])\n"
+">>> z\n"
+"array([[1, 2, 3, 0],\n"
+"       [0, 0, 5, 3],\n"
+"       [4, 6, 0, 0]])\n"
+">>> np.nonzero(z)\n"
+"(array([0, 0, 0, 1, 1, 2, 2]), array([0, 1, 2, 2, 3, 0, 1]))"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:204
+msgid ""
+"Use :meth:`flatnonzero` to fetch indices of elements that are non-zero in "
+"the flattened version of the ndarray::"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:207
+msgid ""
+">>> np.flatnonzero(z)\n"
+"array([0, 1, 2, 6, 7, 8, 9])"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:211
+msgid "Arbitrary conditions"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:213
+msgid ""
+"Use :meth:`where` to generate indices based on conditions and then use :ref:"
+"`advanced-indexing`."
+msgstr ""
+
+#: ../../../user/how-to-index.rst:225
+msgid "Or, use :ref:`boolean-indexing`::"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:227
+msgid ""
+">>> a > 14\n"
+"array([[[False, False, False, False, False],\n"
+"        [False, False, False, False, False],\n"
+"        [False, False, False, False, False]],\n"
+"\n"
+"       [[ True,  True,  True,  True,  True],\n"
+"        [ True,  True,  True,  True,  True],\n"
+"        [ True,  True,  True,  True,  True]]])\n"
+">>> a[a > 14]\n"
+"array([15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29])"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:239
+msgid "Replace values after filtering"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:241
+msgid "Use assignment with filtering to replace desired values::"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:243
+msgid ""
+">>> p = np.arange(-10, 10).reshape(2, 2, 5)\n"
+">>> p\n"
+"array([[[-10,  -9,  -8,  -7,  -6],\n"
+"        [ -5,  -4,  -3,  -2,  -1]],\n"
+"\n"
+"       [[  0,   1,   2,   3,   4],\n"
+"        [  5,   6,   7,   8,   9]]])\n"
+">>> q = p < 0\n"
+">>> q\n"
+"array([[[ True,  True,  True,  True,  True],\n"
+"        [ True,  True,  True,  True,  True]],\n"
+"\n"
+"       [[False, False, False, False, False],\n"
+"        [False, False, False, False, False]]])\n"
+">>> p[q] = 0\n"
+">>> p\n"
+"array([[[0, 0, 0, 0, 0],\n"
+"        [0, 0, 0, 0, 0]],\n"
+"\n"
+"       [[0, 1, 2, 3, 4],\n"
+"        [5, 6, 7, 8, 9]]])"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:266
+msgid "Fetch indices of max/min values"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:268
+msgid "Use :meth:`argmax` and :meth:`argmin`::"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:270
+msgid ""
+">>> a = np.arange(30).reshape(2, 3, 5)\n"
+">>> np.argmax(a)\n"
+"29\n"
+">>> np.argmin(a)\n"
+"0"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:276
+msgid ""
+"Use the ``axis`` keyword to get the indices of maximum and minimum values "
+"along a specific axis::"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:279
+msgid ""
+">>> np.argmax(a, axis=0)\n"
+"array([[1, 1, 1, 1, 1],\n"
+"       [1, 1, 1, 1, 1],\n"
+"       [1, 1, 1, 1, 1]])\n"
+">>> np.argmax(a, axis=1)\n"
+"array([[2, 2, 2, 2, 2],\n"
+"       [2, 2, 2, 2, 2]])\n"
+">>> np.argmax(a, axis=2)\n"
+"array([[4, 4, 4],\n"
+"       [4, 4, 4]])\n"
+"\n"
+">>> np.argmin(a, axis=1)\n"
+"array([[0, 0, 0, 0, 0],\n"
+"       [0, 0, 0, 0, 0]])\n"
+">>> np.argmin(a, axis=2)\n"
+"array([[0, 0, 0],\n"
+"       [0, 0, 0]])"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:297
+msgid ""
+"Set ``keepdims`` to ``True`` to keep the axes which are reduced in the "
+"result as dimensions with size one::"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:300
+msgid ""
+">>> np.argmin(a, axis=2, keepdims=True)\n"
+"array([[[0],\n"
+"        [0],\n"
+"        [0]],\n"
+"\n"
+"       [[0],\n"
+"        [0],\n"
+"        [0]]])\n"
+">>> np.argmax(a, axis=1, keepdims=True)\n"
+"array([[[2, 2, 2, 2, 2]],\n"
+"\n"
+"       [[2, 2, 2, 2, 2]]])"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:313
+msgid ""
+"To get the indices of each maximum or minimum value for each (N-1)-"
+"dimensional array in an N-dimensional array, use :meth:`reshape` to reshape "
+"the array to a 2D array, apply :meth:`argmax` or :meth:`argmin` along "
+"``axis=1`` and use :meth:`unravel_index` to recover the index of the values "
+"per slice::"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:319
+msgid ""
+">>> x = np.arange(2*2*3).reshape(2, 2, 3) % 7  # 3D example array\n"
+">>> x\n"
+"array([[[0, 1, 2],\n"
+"        [3, 4, 5]],\n"
+"\n"
+"       [[6, 0, 1],\n"
+"        [2, 3, 4]]])\n"
+">>> x_2d = np.reshape(x, (x.shape[0], -1))\n"
+">>> indices_2d = np.argmax(x_2d, axis=1)\n"
+">>> indices_2d\n"
+"array([5, 0])\n"
+">>> np.unravel_index(indices_2d, x.shape[1:])\n"
+"(array([1, 0]), array([2, 0]))"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:333
+msgid ""
+"The first array returned contains the indices along axis 1 in the original "
+"array, the second array contains the indices along axis 2. The highest value "
+"in ``x[0]`` is therefore ``x[0, 1, 2]``."
+msgstr ""
+
+#: ../../../user/how-to-index.rst:338
+msgid "Index the same ndarray multiple times efficiently"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:340
+msgid ""
+"It must be kept in mind that basic indexing produces :term:`views <view>` "
+"and advanced indexing produces :term:`copies <copy>`, which are "
+"computationally less efficient. Hence, you should take care to use basic "
+"indexing wherever possible instead of advanced indexing."
+msgstr ""
+
+#: ../../../user/how-to-index.rst:346
+msgid "Further reading"
+msgstr ""
+
+#: ../../../user/how-to-index.rst:348
+msgid ""
+"Nicolas Rougier's `100 NumPy exercises <https://github.com/rougier/"
+"numpy-100>`_ provide a good insight into how indexing is combined with other "
+"operations. Exercises `6`_, `8`_, `10`_, `15`_, `16`_, `19`_, `20`_, `45`_, "
+"`59`_, `64`_, `65`_, `70`_, `71`_, `72`_, `76`_, `80`_, `81`_, `84`_, `87`_, "
+"`90`_, `93`_, `94`_ are specially focused on indexing."
+msgstr ""

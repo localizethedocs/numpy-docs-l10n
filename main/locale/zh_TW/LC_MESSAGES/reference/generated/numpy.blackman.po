@@ -1,0 +1,199 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.blackman.rst:4
+msgid "numpy.blackman"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:2
+msgid "Return the Blackman window."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:4
+msgid ""
+"The Blackman window is a taper formed by using the first three terms of a "
+"summation of cosines. It was designed to have close to the minimal leakage "
+"possible.  It is close to optimal, only slightly worse than a Kaiser window."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:15
+msgid "**M**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:-1
+msgid "int"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:12
+msgid ""
+"Number of points in the output window. If zero or less, an empty array is "
+"returned."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:27
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:20
+msgid ""
+"The window, with the maximum value normalized to one (the value one appears "
+"only if the number of samples is odd)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:32
+msgid ":obj:`bartlett`, :obj:`hamming`, :obj:`hanning`, :obj:`kaiser`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:36
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:37
+msgid "The Blackman window is defined as"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:39
+msgid ""
+"w(n) = 0.42 - 0.5 \\cos(2\\pi n/M) + 0.08 \\cos(4\\pi n/M)\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:41
+msgid ""
+"Most references to the Blackman window come from the signal processing "
+"literature, where it is used as one of many windowing functions for "
+"smoothing values.  It is also known as an apodization (which means "
+"\"removing the foot\", i.e. smoothing discontinuities at the beginning and "
+"end of the sampled signal) or tapering function. It is known as a \"near "
+"optimal\" tapering function, almost as good (by some measures) as the Kaiser "
+"window."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:50
+msgid "References"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:51
+msgid ""
+"Blackman, R.B. and Tukey, J.W., (1958) The measurement of power spectra, "
+"Dover Publications, New York."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:53
+msgid ""
+"Oppenheim, A.V., and R.W. Schafer. Discrete-Time Signal Processing. Upper "
+"Saddle River, NJ: Prentice-Hall, 1999, pp. 468-471."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:58
+msgid "[Rc1fd98720f4c-1]_, [Rc1fd98720f4c-2]_"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:61
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:74
+msgid "Plot the window and the frequency response."
+msgstr ""
+
+#: ../../../reference/generated/numpy.blackman.rst:2
+msgid ""
+"import matplotlib.pyplot as plt\n"
+"from numpy.fft import fft, fftshift\n"
+"window = np.blackman(51)\n"
+"plt.plot(window)\n"
+"plt.title(\"Blackman window\")\n"
+"plt.ylabel(\"Amplitude\")\n"
+"plt.xlabel(\"Sample\")\n"
+"plt.show()  # doctest: +SKIP"
+msgstr ""
+
+#: ../../../reference/generated/numpy.blackman.rst:36
+msgid ""
+"plt.figure()\n"
+"A = fft(window, 2048) / 25.5\n"
+"mag = np.abs(fftshift(A))\n"
+"freq = np.linspace(-0.5, 0.5, len(A))\n"
+"with np.errstate(divide='ignore', invalid='ignore'):\n"
+"    response = 20 * np.log10(mag)\n"
+"response = np.clip(response, -100, 100)\n"
+"plt.plot(freq, response)\n"
+"plt.title(\"Frequency response of Blackman window\")\n"
+"plt.ylabel(\"Magnitude [dB]\")\n"
+"plt.xlabel(\"Normalized frequency [cycles per sample]\")\n"
+"plt.axis('tight')\n"
+"plt.show()"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:102
+msgid ""
+"<div id=\"b889990f-e0c9-468d-b6cc-9a7cfd6bf953\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('b821dd75-74cd-48f2-96da-04e7871ecd76','b889990f-"
+"e0c9-468d-b6cc-9a7cfd6bf953')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('b821dd75-74cd-48f2-96da-04e7871ecd76','b889990f-e0c9-468d-"
+"b6cc-9a7cfd6bf953')\">Open In Tab</button></div><div id=\"aa1fa836-9dd5-4d0d-"
+"b0d7-27b144a9e5c0\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:102
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

@@ -1,0 +1,323 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/c-api/datetimes.rst:2
+msgid "Datetime API"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:4
+msgid ""
+"NumPy represents dates internally using an int64 counter and a unit metadata "
+"struct. Time differences are represented similarly using an int64 and a unit "
+"metadata struct. The functions described below are available to to "
+"facilitate converting between ISO 8601 date strings, NumPy datetimes, and "
+"Python datetime objects in C."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:11
+msgid "Data types"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:13
+msgid ""
+"In addition to the :c:type:`npy_datetime` and :c:type:`npy_timedelta` "
+"typedefs for :c:type:`npy_int64`, NumPy defines two additional structs that "
+"represent time unit metadata and an \"exploded\" view of a datetime."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:19
+msgid "Represents datetime unit metadata."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:21
+msgid ""
+"typedef struct {\n"
+"    NPY_DATETIMEUNIT base;\n"
+"    int num;\n"
+"} PyArray_DatetimeMetaData;"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:30
+msgid "The unit of the datetime."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:34
+msgid "A multiplier for the unit."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:38
+msgid "An \"exploded\" view of a datetime value"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:40
+msgid ""
+"typedef struct {\n"
+"    npy_int64 year;\n"
+"    npy_int32 month, day, hour, min, sec, us, ps, as;\n"
+"} npy_datetimestruct;"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:49
+msgid ""
+"Time units supported by NumPy. The \"FR\" in the names of the enum variants "
+"is short for frequency."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:54
+msgid "Error or undetermined units."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:58
+msgid "Years"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:62
+msgid "Months"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:66
+msgid "Weeks"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:70
+msgid "Days"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:74
+msgid "Hours"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:78
+msgid "Minutes"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:82
+msgid "Seconds"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:86
+msgid "Milliseconds"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:90
+msgid "Microseconds"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:94
+msgid "Nanoseconds"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:98
+msgid "Picoseconds"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:102
+msgid "Femtoseconds"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:106
+msgid "Attoseconds"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:110
+msgid "Unbound units, can convert to anything"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:114
+msgid "Conversion functions"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:120
+msgid ""
+"Converts a datetime from a datetimestruct to a datetime in the units "
+"specified by the unit metadata. The date is assumed to be valid."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:123
+msgid ""
+"If the ``num`` member of the metadata struct is large, there may be integer "
+"overflow in this function."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:126
+#: ../../../reference/c-api/datetimes.rst:135
+msgid "Returns 0 on success and -1 on failure."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:132
+msgid ""
+"Converts a datetime with units specified by the unit metadata to an exploded "
+"datetime struct."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:141
+msgid ""
+"Tests for and converts a Python ``datetime.datetime`` or ``datetime.date`` "
+"object into a NumPy ``npy_datetimestruct``."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:144
+msgid ""
+"``out_bestunit`` gives a suggested unit based on whether the object was a "
+"``datetime.date`` or ``datetime.datetime`` object."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:147
+msgid ""
+"If ``apply_tzinfo`` is 1, this function uses the tzinfo to convert to UTC "
+"time, otherwise it returns the struct with the local time."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:150
+msgid ""
+"Returns -1 on error, 0 on success, and 1 (with no error set) if obj doesn't "
+"have the needed date or datetime attributes."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:158
+msgid "Parses (almost) standard ISO 8601 date strings. The differences are:"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:160
+msgid ""
+"The date \"20100312\" is parsed as the year 20100312, not as equivalent to "
+"\"2010-03-12\". The '-' in the dates are not optional."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:162
+msgid ""
+"Only seconds may have a decimal point, with up to 18 digits after it "
+"(maximum attoseconds precision)."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:164
+msgid ""
+"Either a 'T' as in ISO 8601 or a ' ' may be used to separate the date and "
+"the time. Both are treated equivalently."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:166
+msgid "Doesn't (yet) handle the \"YYYY-DDD\" or \"YYYY-Www\" formats."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:167
+msgid "Doesn't handle leap seconds (seconds value has 60 in these cases)."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:168
+msgid "Doesn't handle 24:00:00 as synonym for midnight (00:00:00) tomorrow"
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:169
+msgid ""
+"Accepts special values \"NaT\" (not a time), \"Today\", (current day "
+"according to local time) and \"Now\" (current time in UTC)."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:172
+msgid ""
+"``str`` must be a NULL-terminated string, and ``len`` must be its length."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:174
+msgid ""
+"``unit`` should contain -1 if the unit is unknown, or the unit which will be "
+"used if it is."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:177
+msgid ""
+"``casting`` controls how the detected unit from the string is allowed to be "
+"cast to the 'unit' parameter."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:180
+msgid "``out`` gets filled with the parsed date-time."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:182
+msgid ""
+"``out_bestunit`` gives a suggested unit based on the amount of resolution "
+"provided in the string, or -1 for NaT."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:185
+msgid ""
+"``out_special`` gets set to 1 if the parsed time was 'today', 'now', empty "
+"string, or 'NaT'. For 'today', the unit recommended is 'D', for 'now', the "
+"unit recommended is 's', and for 'NaT' the unit recommended is 'Y'."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:190
+msgid "Returns 0 on success, -1 on failure."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:195
+msgid ""
+"Returns the string length to use for converting datetime objects with the "
+"given local time and unit settings to strings. Use this when constructing "
+"strings to supply to ``NpyDatetime_MakeISO8601Datetime``."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:205
+msgid ""
+"Converts an ``npy_datetimestruct`` to an (almost) ISO 8601 NULL-terminated "
+"string. If the string fits in the space exactly, it leaves out the NULL "
+"terminator and returns success."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:209
+msgid ""
+"The differences from ISO 8601 are the 'NaT' string, and the number of year "
+"digits is >= 4 instead of strictly 4."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:212
+msgid ""
+"If ``local`` is non-zero, it produces a string in local time with a +-#### "
+"timezone offset. If ``local`` is zero and ``utc`` is non-zero, produce a "
+"string ending with 'Z' to denote UTC. By default, no time zone information "
+"is attached."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:217
+msgid ""
+"``base`` restricts the output to that unit. Set ``base`` to -1 to auto-"
+"detect a base after which all the values are zero."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:220
+msgid ""
+"``tzoffset`` is used if ``local`` is enabled, and ``tzoffset`` is set to a "
+"value other than -1. This is a manual override for the local time zone to "
+"use, as an offset in minutes."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:224
+msgid ""
+"``casting`` controls whether data loss is allowed by truncating the data to "
+"a coarser unit. This interacts with ``local``, slightly, in order to form a "
+"date unit string as a local time, the casting must be unsafe."
+msgstr ""
+
+#: ../../../reference/c-api/datetimes.rst:229
+msgid ""
+"Returns 0 on success, -1 on failure (for example if the output string was "
+"too short)."
+msgstr ""

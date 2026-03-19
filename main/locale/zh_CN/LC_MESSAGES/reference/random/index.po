@@ -1,0 +1,291 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/index.rst:155
+msgid "Legacy Generator (RandomState)"
+msgstr ""
+
+#: ../../../reference/random/index.rst:155
+msgid "BitGenerators, SeedSequences"
+msgstr ""
+
+#: ../../../reference/random/index.rst:155
+msgid "Upgrading PCG64 with PCG64DXSM"
+msgstr ""
+
+#: ../../../reference/random/index.rst:166
+msgid "Parallel Applications"
+msgstr ""
+
+#: ../../../reference/random/index.rst:166
+msgid "Multithreaded Generation"
+msgstr ""
+
+#: ../../../reference/random/index.rst:166
+msgid "New or Different"
+msgstr ""
+
+#: ../../../reference/random/index.rst:166
+msgid "Comparing Performance"
+msgstr ""
+
+#: ../../../reference/random/index.rst:166
+msgid "C API"
+msgstr ""
+
+#: ../../../reference/random/index.rst:166
+msgid "Examples of using Numba, Cython, CFFI"
+msgstr ""
+
+#: ../../../reference/random/index.rst:8
+msgid "Random sampling"
+msgstr ""
+
+#: ../../../reference/random/index.rst:13
+msgid "Quick start"
+msgstr ""
+
+#: ../../../reference/random/index.rst:15
+msgid ""
+"The :mod:`numpy.random` module implements pseudo-random number generators "
+"(PRNGs or RNGs, for short) with the ability to draw samples from a variety "
+"of probability distributions. In general, users will create a `Generator` "
+"instance with `default_rng` and call the various methods on it to obtain "
+"samples from different distributions."
+msgstr ""
+
+#: ../../../reference/random/index.rst:26
+msgid ""
+"Generate one random float uniformly distributed over the range :math:`[0, "
+"1)`:"
+msgstr ""
+
+#: ../../../reference/random/index.rst:31
+msgid ""
+"Generate an array of 10 numbers according to a unit Gaussian distribution:"
+msgstr ""
+
+#: ../../../reference/random/index.rst:37
+msgid ""
+"Generate an array of 5 integers uniformly over the range :math:`[0, 10)`:"
+msgstr ""
+
+#: ../../../reference/random/index.rst:-1
+msgid ""
+"<div id=\"172f581f-7efe-4365-a70f-38c4bdf77695\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('4e2a1cec-8bcc-4007-"
+"aa60-9ca235cd484c','172f581f-7efe-4365-a70f-38c4bdf77695')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('4e2a1cec-8bcc-4007-aa60-9ca235cd484c','172f581f-7efe-4365-"
+"a70f-38c4bdf77695')\">Open In Tab</button></div><div id=\"e7143eee-4d40-4685-"
+"a575-3aee7441c47d\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../reference/random/index.rst:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""
+
+#: ../../../reference/random/index.rst:42
+msgid ""
+"Our RNGs are deterministic sequences and can be reproduced by specifying a "
+"seed integer to derive its initial state. By default, with no seed provided, "
+"`default_rng` will seed the RNG from nondeterministic data from the "
+"operating system and therefore generate different numbers each time. The "
+"pseudo-random sequences will be independent for all practical purposes, at "
+"least those purposes for which our pseudo-randomness was good for in the "
+"first place."
+msgstr ""
+
+#: ../../../reference/random/index.rst:-1
+msgid ""
+"<div id=\"44e02fd7-1e5e-4892-83a5-2d1e8546563c\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('ffa018ab-86ae-4de7-88b6-0d9bafabdd31','44e02fd7-1e5e-4892-83a5-2d1e8546563c')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('ffa018ab-86ae-4de7-88b6-0d9bafabdd31','44e02fd7-1e5e-4892-83a5-2d1e8546563c')\">Open "
+"In Tab</button></div><div id=\"e52ed584-789a-4ab8-b81a-9ad53a648abf\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/random/index.rst:61
+msgid ""
+"The pseudo-random number generators implemented in this module are designed "
+"for statistical modeling and simulation. They are not suitable for security "
+"or cryptographic purposes. See the :py:mod:`secrets` module from the "
+"standard library for such use cases."
+msgstr ""
+
+#: ../../../reference/random/index.rst:68
+msgid ""
+"Seeds should be large positive integers. `default_rng` can take positive "
+"integers of any size. We recommend using very large, unique numbers to "
+"ensure that your seed is different from anyone else's. This is good practice "
+"to ensure that your results are statistically independent from theirs unless "
+"you are intentionally *trying* to reproduce their result. A convenient way "
+"to get such a seed number is to use :py:func:`secrets.randbits` to get an "
+"arbitrary 128-bit integer."
+msgstr ""
+
+#: ../../../reference/random/index.rst:-1
+msgid ""
+"<div id=\"7fef880b-2db7-4fa0-bca4-20cabead5241\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('ed1f3044-728f-41df-"
+"ad2c-3ca0ff478fba','7fef880b-2db7-4fa0-bca4-20cabead5241')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('ed1f3044-728f-41df-ad2c-3ca0ff478fba','7fef880b-2db7-4fa0-"
+"bca4-20cabead5241')\">Open In Tab</button></div><div id=\"581d5da5-"
+"b115-43aa-8fe0-b2979670223d\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/random/index.rst:90
+msgid ""
+"See the documentation on `default_rng` and `SeedSequence` for more advanced "
+"options for controlling the seed in specialized scenarios."
+msgstr ""
+
+#: ../../../reference/random/index.rst:93
+msgid ""
+"`Generator` and its associated infrastructure was introduced in NumPy "
+"version 1.17.0. There is still a lot of code that uses the older "
+"`RandomState` and the functions in `numpy.random`. While there are no plans "
+"to remove them at this time, we do recommend transitioning to `Generator` as "
+"you can. The algorithms are faster, more flexible, and will receive more "
+"improvements in the future. For the most part, `Generator` can be used as a "
+"replacement for `RandomState`. See :ref:`legacy` for information on the "
+"legacy infrastructure, :ref:`new-or-different` for information on "
+"transitioning, and :ref:`NEP 19 <NEP19>` for some of the reasoning for the "
+"transition."
+msgstr ""
+
+#: ../../../reference/random/index.rst:104
+msgid "Design"
+msgstr ""
+
+#: ../../../reference/random/index.rst:106
+msgid ""
+"Users primarily interact with `Generator` instances. Each `Generator` "
+"instance owns a `BitGenerator` instance that implements the core RNG "
+"algorithm. The `BitGenerator` has a limited set of responsibilities. It "
+"manages state and provides functions to produce random doubles and random "
+"unsigned 32- and 64-bit values."
+msgstr ""
+
+#: ../../../reference/random/index.rst:112
+msgid ""
+"The `Generator` takes the bit generator-provided stream and transforms them "
+"into more useful distributions, e.g., simulated normal random values. This "
+"structure allows alternative bit generators to be used with little code "
+"duplication."
+msgstr ""
+
+#: ../../../reference/random/index.rst:117
+msgid ""
+"NumPy implements several different `BitGenerator` classes implementing "
+"different RNG algorithms. `default_rng` currently uses `~PCG64` as the "
+"default `BitGenerator`. It has better statistical properties and performance "
+"than the `~MT19937` algorithm used in the legacy `RandomState`. See :ref:"
+"`random-bit-generators` for more details on the supported BitGenerators."
+msgstr ""
+
+#: ../../../reference/random/index.rst:123
+msgid ""
+"`default_rng` and BitGenerators delegate the conversion of seeds into RNG "
+"states to `SeedSequence` internally. `SeedSequence` implements a "
+"sophisticated algorithm that intermediates between the user's input and the "
+"internal implementation details of each `BitGenerator` algorithm, each of "
+"which can require different amounts of bits for its state. Importantly, it "
+"lets you use arbitrary-sized integers and arbitrary sequences of such "
+"integers to mix together into the RNG state. This is a useful primitive for "
+"constructing a :ref:`flexible pattern for parallel RNG streams <seedsequence-"
+"spawn>`."
+msgstr ""
+
+#: ../../../reference/random/index.rst:132
+msgid ""
+"For backward compatibility, we still maintain the legacy `RandomState` "
+"class. It continues to use the `~MT19937` algorithm by default, and old "
+"seeds continue to reproduce the same results. The convenience :ref:"
+"`functions-in-numpy-random` are still aliases to the methods on a single "
+"global `RandomState` instance. See :ref:`legacy` for the complete details. "
+"See :ref:`new-or-different` for a detailed comparison between `Generator` "
+"and `RandomState`."
+msgstr ""
+
+#: ../../../reference/random/index.rst:140
+msgid "Parallel Generation"
+msgstr ""
+
+#: ../../../reference/random/index.rst:142
+msgid ""
+"The included generators can be used in parallel, distributed applications in "
+"a number of ways:"
+msgstr ""
+
+#: ../../../reference/random/index.rst:145
+msgid ":ref:`seedsequence-spawn`"
+msgstr ""
+
+#: ../../../reference/random/index.rst:146
+msgid ":ref:`sequence-of-seeds`"
+msgstr ""
+
+#: ../../../reference/random/index.rst:147
+msgid ":ref:`independent-streams`"
+msgstr ""
+
+#: ../../../reference/random/index.rst:148
+msgid ":ref:`parallel-jumped`"
+msgstr ""
+
+#: ../../../reference/random/index.rst:150
+msgid ""
+"Users with a very large amount of parallelism will want to consult :ref:"
+"`upgrading-pcg64`."
+msgstr ""
+
+#: ../../../reference/random/index.rst:154
+msgid "Concepts"
+msgstr ""
+
+#: ../../../reference/random/index.rst:165
+msgid "Features"
+msgstr ""
+
+#: ../../../reference/random/index.rst:177
+msgid "Original Source of the Generator and BitGenerators"
+msgstr ""
+
+#: ../../../reference/random/index.rst:179
+msgid ""
+"This package was developed independently of NumPy and was integrated in "
+"version 1.17.0. The original repo is at https://github.com/bashtage/"
+"randomgen."
+msgstr ""

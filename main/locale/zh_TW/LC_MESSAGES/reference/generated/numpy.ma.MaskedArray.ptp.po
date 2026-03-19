@@ -1,0 +1,179 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.ma.MaskedArray.ptp.rst:4
+msgid "numpy.ma.MaskedArray.ptp"
+msgstr ""
+
+#: ../../../reference/generated/numpy.ma.MaskedArray.ptp.rst:8
+msgid "method"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:2
+msgid ""
+"Return (maximum - minimum) along the given dimension (i.e. peak-to-peak "
+"value)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:6
+msgid ""
+"`ptp` preserves the data type of the array. This means the return value for "
+"an input of signed integers with n bits (e.g. `np.int8`, `np.int16`, etc) is "
+"also a signed integer with n bits.  In that case, peak-to-peak values "
+"greater than ``2**(n-1)-1`` will be returned as negative values. An example "
+"with a work-around is shown below."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:17
+msgid "**axis**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:-1
+msgid "{None, int}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:16
+msgid ""
+"Axis along which to find the peaks.  If None (default) the flattened array "
+"is used."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:22
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:-1
+msgid "{None, array_like}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:20
+msgid ""
+"Alternative output array in which to place the result. It must have the same "
+"shape and buffer length as the expected output but the type will be cast if "
+"necessary."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:25
+msgid "**fill_value**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:-1
+msgid "scalar or None, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:25
+msgid "Value used to fill in the masked values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:32
+msgid "**keepdims**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:28
+msgid ""
+"If this is set to True, the axes which are reduced are left in the result as "
+"dimensions with size one. With this option, the result will broadcast "
+"correctly against the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:47
+msgid "**ptp**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:-1
+msgid "ndarray."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:37
+msgid ""
+"A new array holding the result, unless ``out`` was specified, in which case "
+"a reference to ``out`` is returned."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:50
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:72
+msgid ""
+"This example shows that a negative value can be returned when the input is "
+"an array of signed integers."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:85
+msgid ""
+"A work-around is to use the `view()` method to view the result as unsigned "
+"integers with the same bit width:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:-1
+msgid ""
+"<div id=\"4511f011-a79d-43b1-9d94-153f9bd05aa0\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('60479f25-c731-4b3c-b268-e19553475e73','4511f011-"
+"a79d-43b1-9d94-153f9bd05aa0')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('60479f25-"
+"c731-4b3c-b268-e19553475e73','4511f011-a79d-43b1-9d94-153f9bd05aa0')\">Open "
+"In Tab</button></div><div id=\"7bf88e83-8f24-4697-9acb-28359761a7de\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.ptp:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

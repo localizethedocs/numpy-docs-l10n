@@ -1,0 +1,262 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release/1.6.0-notes.rst:3
+msgid "NumPy 1.6.0 Release Notes"
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:5
+msgid ""
+"This release includes several new features as well as numerous bug fixes and "
+"improved documentation.  It is backward compatible with the 1.5.0 release, "
+"and supports Python 2.4 - 2.7 and 3.1 - 3.2."
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:11
+msgid "Highlights"
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:13
+msgid "Re-introduction of datetime dtype support to deal with dates in arrays."
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:15
+msgid "A new 16-bit floating point type."
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:17
+msgid "A new iterator, which improves performance of many functions."
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:21
+msgid "New features"
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:24
+msgid "New 16-bit floating point type"
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:26
+msgid ""
+"This release adds support for the IEEE 754-2008 binary16 format, available "
+"as the data type ``numpy.half``.  Within Python, the type behaves similarly "
+"to `float` or `double`, and C extensions can add support for it with the "
+"exposed half-float API."
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:33
+msgid "New iterator"
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:35
+msgid ""
+"A new iterator has been added, replacing the functionality of the existing "
+"iterator and multi-iterator with a single object and API. This iterator "
+"works well with general memory layouts different from C or Fortran "
+"contiguous, and handles both standard NumPy and customized broadcasting. The "
+"buffering, automatic data type conversion, and optional output parameters, "
+"offered by ufuncs but difficult to replicate elsewhere, are now exposed by "
+"this iterator."
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:46
+msgid ""
+"Legendre, Laguerre, Hermite, HermiteE polynomials in ``numpy.polynomial``"
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:48
+msgid ""
+"Extend the number of polynomials available in the polynomial package. In "
+"addition, a new ``window`` attribute has been added to the classes in order "
+"to specify the range the ``domain`` maps to. This is mostly useful for the "
+"Laguerre, Hermite, and HermiteE polynomials whose natural domains are "
+"infinite and provides a more intuitive way to get the correct mapping of "
+"values without playing unnatural tricks with the domain."
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:57
+msgid "Fortran assumed shape array and size function support in ``numpy.f2py``"
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:59
+msgid ""
+"F2py now supports wrapping Fortran 90 routines that use assumed shape "
+"arrays.  Before such routines could be called from Python but the "
+"corresponding Fortran routines received assumed shape arrays as zero length "
+"arrays which caused unpredicted results. Thanks to Lorenz Hüdepohl for "
+"pointing out the correct way to interface routines with assumed shape arrays."
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:66
+msgid ""
+"In addition, f2py supports now automatic wrapping of Fortran routines that "
+"use two argument ``size`` function in dimension specifications."
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:71
+msgid "Other new functions"
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:73
+msgid ""
+"``numpy.ravel_multi_index`` : Converts a multi-index tuple into an array of "
+"flat indices, applying boundary modes to the indices."
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:76
+msgid ""
+"``numpy.einsum`` : Evaluate the Einstein summation convention.  Using the "
+"Einstein summation convention, many common multi-dimensional array "
+"operations can be represented in a simple fashion.  This function provides a "
+"way compute such summations."
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:81
+msgid ""
+"``numpy.count_nonzero`` : Counts the number of non-zero elements in an array."
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:83
+msgid ""
+"``numpy.result_type`` and ``numpy.min_scalar_type`` : These functions expose "
+"the underlying type promotion used by the ufuncs and other operations to "
+"determine the types of outputs. These improve upon the ``numpy.common_type`` "
+"and ``numpy.mintypecode`` which provide similar functionality but do not "
+"match the ufunc implementation."
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:91
+msgid "Changes"
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:94
+msgid "``default error handling``"
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:96
+msgid ""
+"The default error handling has been change from ``print`` to ``warn`` for "
+"all except for ``underflow``, which remains as ``ignore``."
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:101 ../../../release/1.6.0-notes.rst:174
+msgid "``numpy.distutils``"
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:103
+msgid ""
+"Several new compilers are supported for building Numpy: the Portland Group "
+"Fortran compiler on OS X, the PathScale compiler suite and the 64-bit Intel "
+"C compiler on Linux."
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:109
+msgid "``numpy.testing``"
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:111
+msgid ""
+"The testing framework gained ``numpy.testing.assert_allclose``, which "
+"provides a more convenient way to compare floating point arrays than "
+"`assert_almost_equal`, `assert_approx_equal` and `assert_array_almost_equal`."
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:117
+msgid "``C API``"
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:119
+msgid ""
+"In addition to the APIs for the new iterator and half data type, a number of "
+"other additions have been made to the C API. The type promotion mechanism "
+"used by ufuncs is exposed via ``PyArray_PromoteTypes``, "
+"``PyArray_ResultType``, and ``PyArray_MinScalarType``. A new enumeration "
+"``NPY_CASTING`` has been added which controls what types of casts are "
+"permitted. This is used by the new functions ``PyArray_CanCastArrayTo`` and "
+"``PyArray_CanCastTypeTo``.  A more flexible way to handle conversion of "
+"arbitrary python objects into arrays is exposed by "
+"``PyArray_GetArrayParamsFromObject``."
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:131
+msgid "Deprecated features"
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:133
+msgid ""
+"The \"normed\" keyword in ``numpy.histogram`` is deprecated. Its "
+"functionality will be replaced by the new \"density\" keyword."
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:138
+msgid "Removed features"
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:141
+msgid "``numpy.fft``"
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:143
+msgid ""
+"The functions `refft`, `refft2`, `refftn`, `irefft`, `irefft2`, `irefftn`, "
+"which were aliases for the same functions without the 'e' in the name, were "
+"removed."
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:149
+msgid "``numpy.memmap``"
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:151
+msgid ""
+"The `sync()` and `close()` methods of memmap were removed.  Use `flush()` "
+"and \"del memmap\" instead."
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:156
+msgid "``numpy.lib``"
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:158
+msgid ""
+"The deprecated functions ``numpy.unique1d``, ``numpy.setmember1d``, ``numpy."
+"intersect1d_nu`` and ``numpy.lib.ufunclike.log2`` were removed."
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:163
+msgid "``numpy.ma``"
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:165
+msgid "Several deprecated items were removed from the ``numpy.ma`` module::"
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:167
+msgid ""
+"* ``numpy.ma.MaskedArray`` \"raw_data\" method\n"
+"* ``numpy.ma.MaskedArray`` constructor \"flag\" keyword\n"
+"* ``numpy.ma.make_mask`` \"flag\" keyword\n"
+"* ``numpy.ma.allclose`` \"fill_value\" keyword"
+msgstr ""
+
+#: ../../../release/1.6.0-notes.rst:176
+msgid ""
+"The ``numpy.get_numpy_include`` function was removed, use ``numpy."
+"get_include`` instead."
+msgstr ""

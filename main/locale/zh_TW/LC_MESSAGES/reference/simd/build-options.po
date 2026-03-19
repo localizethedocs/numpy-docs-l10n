@@ -1,0 +1,986 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/simd/build-options.rst:5
+msgid "CPU Build Options"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:8
+msgid "Overview"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:10
+msgid ""
+"NumPy provides configuration options to optimize performance based on CPU "
+"capabilities. These options allow you to specify which CPU features to "
+"support, balancing performance, compatibility, and binary size. This "
+"document explains how to use these options effectively across various CPU "
+"architectures."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:15
+msgid "Key Configuration Options"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:17
+msgid "NumPy uses several build options to control CPU optimizations:"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:19
+msgid ""
+"``cpu-baseline``: The minimum set of CPU features required to run the "
+"compiled NumPy."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:21
+msgid ""
+"Default: ``min`` (provides compatibility across a wide range of platforms)"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:22
+msgid ""
+"If your target CPU doesn't support all specified baseline features, NumPy "
+"will fail to load with a Python runtime error"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:24
+msgid ""
+"``cpu-baseline-detect``: controls detection of CPU baseline based on "
+"compiler flags. Default value is ``auto`` that enables detection if ``-"
+"march=`` or a similar compiler flag is used. The other possible values are "
+"``enabled`` and ``disabled`` to respective enable or disable it "
+"unconditionally."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:29
+msgid ""
+"``cpu-dispatch``: Additional CPU features for which optimized code paths "
+"will be generated."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:31
+msgid "Default: ``max`` (enables all available optimizations)"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:32
+msgid ""
+"At runtime, NumPy will automatically select the fastest available code path "
+"based on your CPU's capabilities"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:34
+msgid "``disable-optimization``: Completely disables all CPU optimizations."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:36
+msgid "Default: ``false`` (optimizations are enabled)"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:37
+msgid ""
+"When set to ``true``, disables all CPU optimized code including dispatch, "
+"SIMD, and loop unrolling"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:38
+msgid ""
+"Useful for debugging, testing, or in environments where optimization causes "
+"issues"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:40
+msgid "These options are specified at build time via meson-python arguments::"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:42
+msgid ""
+"pip install . -Csetup-args=-Dcpu-baseline=\"min\" -Csetup-args=-Dcpu-"
+"dispatch=\"max\"\n"
+"# or through spin\n"
+"spin build -- -Dcpu-baseline=\"min\" -Dcpu-dispatch=\"max\""
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:46
+msgid ""
+"``cpu-baseline`` and ``cpu-dispatch`` can be set to specific :ref:`CPU "
+"groups, features<opt-supported-features>`, or :ref:`special options <opt-"
+"special-options>` that perform specific actions. The following sections "
+"describe these options in detail."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:50
+msgid "Common Usage Scenarios"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:53
+msgid "Building for Local Use Only"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:55
+msgid "When building for your machine only and not planning to distribute::"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:57
+msgid ""
+"python -m build --wheel -Csetup-args=-Dcpu-baseline=\"native\" -Csetup-args=-"
+"Dcpu-dispatch=\"none\""
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:59
+msgid ""
+"This automatically detects and uses all CPU features available on your "
+"machine."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:62
+msgid ""
+"A fatal error will be raised if ``native`` isn't supported by the host "
+"platform."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:65
+msgid "Excluding Specific Features"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:67
+msgid ""
+"You may want to exclude certain CPU features from the dispatched features::"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:69
+msgid ""
+"# For x86-64: exclude all AVX-512 features\n"
+"python -m build --wheel -Csetup-args=-Dcpu-dispatch=\"max -X86_V4\"\n"
+"\n"
+"# For ARM64: exclude SVE\n"
+"python -m build --wheel -Csetup-args=-Dcpu-dispatch=\"max -SVE\""
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:76
+msgid ""
+"Excluding a feature will also exclude any successor features that are "
+"implied by the excluded feature. For example, excluding ``X86_V4`` will "
+"exclude ``AVX512_ICL`` and ``AVX512_SPR`` as well."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:81
+msgid "Targeting Older CPUs"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:83
+msgid ""
+"On ``x86-64``, by default the baseline is set to ``min`` which maps to "
+"``X86_V2``. This unsuitable for older CPUs (before 2009) or old virtual "
+"machines. To address this, set the baseline to ``none``::"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:87
+msgid "python -m build --wheel -Csetup-args=-Dcpu-baseline=\"none\""
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:89
+msgid ""
+"This will create a build that is compatible with all x86 CPUs, but without "
+"any manual optimizations or SIMD code paths for the baseline. The build will "
+"rely only on dispatched code paths for optimization."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:94
+msgid "Targeting Newer CPUs"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:96
+msgid "Raising the baseline improves performance for two main reasons:"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:98
+msgid "Dispatched kernels don't cover all code paths"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:99
+msgid ""
+"A higher baseline leads to smaller binary size as the compiler won't "
+"generate code paths for excluded dispatched features"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:101
+msgid ""
+"For CPUs from 2015 and newer, setting the baseline to ``X86_V3`` may be "
+"suitable::"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:103
+msgid "python -m build --wheel -Csetup-args=-Dcpu-baseline=\"min+X86_V3\""
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:108
+msgid "Supported CPU Features By Architecture"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:110
+msgid ""
+"NumPy supports optimized code paths for multiple CPU architectures. Below "
+"are the supported feature groups for each architecture. The name of the "
+"feature group can be used in the build options ``cpu-baseline`` and ``cpu-"
+"dispatch``."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:114
+msgid "X86"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:119
+#: ../../../reference/simd/build-options.rst:155
+#: ../../../reference/simd/build-options.rst:172
+#: ../../../reference/simd/build-options.rst:189
+#: ../../../reference/simd/build-options.rst:212
+#: ../../../reference/simd/build-options.rst:235
+#: ../../../reference/simd/build-options.rst:250
+msgid "Name"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:120
+#: ../../../reference/simd/build-options.rst:156
+#: ../../../reference/simd/build-options.rst:173
+#: ../../../reference/simd/build-options.rst:190
+#: ../../../reference/simd/build-options.rst:213
+#: ../../../reference/simd/build-options.rst:236
+#: ../../../reference/simd/build-options.rst:251
+#: ../../../reference/simd/build-options.rst:289
+msgid "Implies"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:121
+msgid "Includes"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:122
+#: ../../../reference/simd/build-options.rst:126
+#: ../../../reference/simd/build-options.rst:291
+#: ../../../reference/simd/build-options.rst:293
+msgid "``X86_V2``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:124
+msgid ""
+"``SSE`` ``SSE2`` ``SSE3`` ``SSSE3`` ``SSE4_1`` ``SSE4_2`` ``POPCNT`` "
+"``CX16`` ``LAHF``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:125
+#: ../../../reference/simd/build-options.rst:129
+msgid "``X86_V3``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:127
+msgid "``AVX`` ``AVX2`` ``FMA3`` ``BMI`` ``BMI2`` ``LZCNT`` ``F16C`` ``MOVBE``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:128
+#: ../../../reference/simd/build-options.rst:132
+msgid "``X86_V4``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:130
+msgid "``AVX512F`` ``AVX512CD`` ``AVX512VL`` ``AVX512BW`` ``AVX512DQ``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:131
+#: ../../../reference/simd/build-options.rst:135
+msgid "``AVX512_ICL``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:133
+msgid ""
+"``AVX512VBMI`` ``AVX512VBMI2`` ``AVX512VNNI`` ``AVX512BITALG`` "
+"``AVX512VPOPCNTDQ`` ``AVX512IFMA`` ``VAES`` ``GFNI`` ``VPCLMULQDQ``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:134
+msgid "``AVX512_SPR``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:136
+msgid "``AVX512FP16``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:138
+msgid "These groups correspond to CPU generations:"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:140
+msgid "``X86_V2``: x86-64-v2 microarchitectures (CPUs since 2009)"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:141
+msgid "``X86_V3``: x86-64-v3 microarchitectures (CPUs since 2015)"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:142
+msgid "``X86_V4``: x86-64-v4 microarchitectures (AVX-512 capable CPUs)"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:143
+msgid "``AVX512_ICL``: Intel Ice Lake and similar CPUs"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:144
+msgid "``AVX512_SPR``: Intel Sapphire Rapids and newer CPUs"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:147
+msgid "On 32-bit x86, ``cx16`` is excluded from ``X86_V2``."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:150
+msgid "On IBM/POWER big-endian"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:157
+#: ../../../reference/simd/build-options.rst:160
+#: ../../../reference/simd/build-options.rst:174
+#: ../../../reference/simd/build-options.rst:177
+msgid "``VSX``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:159
+#: ../../../reference/simd/build-options.rst:175
+#: ../../../reference/simd/build-options.rst:176
+msgid "``VSX2``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:161
+#: ../../../reference/simd/build-options.rst:178
+msgid "``VSX3``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:162
+#: ../../../reference/simd/build-options.rst:179
+#: ../../../reference/simd/build-options.rst:297
+msgid "``VSX`` ``VSX2``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:163
+#: ../../../reference/simd/build-options.rst:180
+msgid "``VSX4``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:164
+#: ../../../reference/simd/build-options.rst:181
+msgid "``VSX`` ``VSX2`` ``VSX3``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:167
+msgid "On IBM/POWER little-endian"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:184
+msgid "On ARMv7/A32"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:191
+#: ../../../reference/simd/build-options.rst:194
+#: ../../../reference/simd/build-options.rst:214
+msgid "``NEON``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:193
+#: ../../../reference/simd/build-options.rst:216
+msgid "``NEON_FP16``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:195
+#: ../../../reference/simd/build-options.rst:218
+msgid "``NEON_VFPV4``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:196
+msgid "``NEON`` ``NEON_FP16``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:197
+#: ../../../reference/simd/build-options.rst:220
+msgid "``ASIMD``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:198
+#: ../../../reference/simd/build-options.rst:221
+msgid "``NEON`` ``NEON_FP16`` ``NEON_VFPV4``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:199
+#: ../../../reference/simd/build-options.rst:222
+msgid "``ASIMDHP``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:200
+#: ../../../reference/simd/build-options.rst:202
+#: ../../../reference/simd/build-options.rst:223
+#: ../../../reference/simd/build-options.rst:225
+#: ../../../reference/simd/build-options.rst:301
+msgid "``NEON`` ``NEON_FP16`` ``NEON_VFPV4`` ``ASIMD``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:201
+#: ../../../reference/simd/build-options.rst:224
+msgid "``ASIMDDP``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:203
+#: ../../../reference/simd/build-options.rst:226
+msgid "``ASIMDFHM``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:204
+#: ../../../reference/simd/build-options.rst:227
+msgid "``NEON`` ``NEON_FP16`` ``NEON_VFPV4`` ``ASIMD`` ``ASIMDHP``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:207
+msgid "On ARMv8/A64"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:215
+msgid "``NEON_FP16`` ``NEON_VFPV4`` ``ASIMD``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:217
+msgid "``NEON`` ``NEON_VFPV4`` ``ASIMD``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:219
+msgid "``NEON`` ``NEON_FP16`` ``ASIMD``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:230
+msgid "On IBM/ZSYSTEM(S390X)"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:237
+#: ../../../reference/simd/build-options.rst:240
+msgid "``VX``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:239
+msgid "``VXE``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:241
+msgid "``VXE2``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:242
+msgid "``VX`` ``VXE``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:245
+msgid "On RISCV64"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:252
+msgid "``RVV``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:258
+msgid "Special Options"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:260
+msgid "Beyond specific feature names, you can use these special values:"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:263
+#: ../../../reference/simd/build-options.rst:295
+#: ../../../reference/simd/build-options.rst:299
+#: ../../../reference/simd/build-options.rst:303
+#: ../../../reference/simd/build-options.rst:305
+msgid "``NONE``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:265
+msgid "Enables no features (equivalent to an empty string)."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:268
+msgid "``NATIVE``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:270
+msgid "Enables all features supported by the host CPU."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:273
+msgid "``DETECT``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:275
+msgid ""
+"Detects the features enabled by the compiler. This option is appended by "
+"default to ``cpu-baseline`` if ``-march``, ``-mcpu``, ``-xhost``, or ``/"
+"QxHost`` is set in the environment variable ``CFLAGS`` unless ``cpu-baseline-"
+"detect`` is ``disabled``."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:280
+msgid "``MIN``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:282
+msgid "Enables the minimum CPU features for each architecture:"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:288
+msgid "For Arch"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:290
+msgid "x86 (32-bit)"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:292
+msgid "x86-64"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:294
+msgid "IBM/POWER (big-endian)"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:296
+msgid "IBM/POWER (little-endian)"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:298
+msgid "ARMv7/ARMHF"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:300
+msgid "ARMv8/AArch64"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:302
+msgid "IBM/ZSYSTEM(S390X)"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:304
+msgid "riscv64"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:309
+msgid "``MAX``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:311
+msgid "Enables all features supported by the compiler and platform."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:314
+msgid "Operator Operators (``-``/``+``)"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:316
+msgid ""
+"Remove or add specific features, useful with ``MAX``, ``MIN``, and "
+"``NATIVE``:"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:318
+msgid "Adding a feature (``+``) includes all implied features"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:319
+msgid ""
+"Removing a feature (``-``) excludes all successor features that imply the "
+"removed feature"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:321
+msgid "Examples::"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:323
+msgid ""
+"python -m build --wheel -Csetup-args=-Dcpu-dispatch=\"max-X86_V4\"\n"
+"python -m build --wheel -Csetup-args=-Dcpu-baseline=\"min+X86_V4\""
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:327
+msgid "Usage And Behaviors"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:330
+msgid "Case Insensitivity"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:332
+msgid "CPU features and options are case-insensitive::"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:334
+msgid "python -m build --wheel -Csetup-args=-Dcpu-dispatch=\"X86_v4\""
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:337
+msgid "Mixing Features across Architectures"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:339
+msgid "You can mix features from different architectures::"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:341
+msgid "python -m build --wheel -Csetup-args=-Dcpu-baseline=\"X86_V4 VSX4 SVE\""
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:344
+msgid "Order Independence"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:346
+msgid "The order of specified features doesn't matter::"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:348
+msgid ""
+"python -m build --wheel -Csetup-args=-Dcpu-dispatch=\"SVE X86_V4 x86_v3\""
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:351
+msgid "Separators"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:353
+msgid "You can use spaces or commas as separators::"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:355
+msgid ""
+"# All of these are equivalent\n"
+"python -m build --wheel -Csetup-args=-Dcpu-dispatch=\"X86_V2 X86_V4\"\n"
+"python -m build --wheel -Csetup-args=-Dcpu-dispatch=X86_V2,X86_V4"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:360
+msgid "Feature Combination"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:362
+msgid ""
+"Features specified in options are automatically combined with all implied "
+"features::"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:364
+msgid "python -m build --wheel -Csetup-args=-Dcpu-baseline=X86_V4"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:366
+msgid "Equivalent to::"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:368
+msgid ""
+"python -m build --wheel -Csetup-args=-Dcpu-baseline=\"X86_V2 X86_V3 X86_V4\""
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:371
+msgid "Baseline Overlapping"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:373
+msgid ""
+"Features specified in ``cpu-baseline`` will be excluded from the ``cpu-"
+"dispatch`` features, along with their implied features, but without "
+"excluding successor features that imply them."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:376
+msgid ""
+"For instance, if you specify ``cpu-baseline=\"X86_V4\"``, it will exclude "
+"``X86_V4`` and its implied features ``X86_V2`` and ``X86_V3`` from the ``cpu-"
+"dispatch`` features."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:380
+msgid "Compile-time Detection"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:382
+msgid ""
+"Specifying features to ``cpu-dispatch`` or ``cpu-baseline`` doesn't "
+"explicitly enable them. Features are detected at compile time, and the "
+"maximum available features based on your specified options will be enabled "
+"according to toolchain and platform support."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:386
+msgid ""
+"This detection occurs by testing feature availability in the compiler "
+"through compile-time source files containing common intrinsics for the "
+"specified features. If both the compiler and assembler support the feature, "
+"it will be enabled."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:390
+msgid ""
+"For example, if you specify ``cpu-dispatch=\"AVX512_ICL\"`` but your "
+"compiler doesn't support it, the feature will be excluded from the build. "
+"However, any implied features will still be enabled if they're supported."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:398
+msgid "Platform differences"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:400
+msgid ""
+"Some exceptional conditions force us to link some features together when it "
+"come to certain compilers or architectures, resulting in the impossibility "
+"of building them separately."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:403
+msgid "These conditions can be divided into two parts, as follows:"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:405
+msgid "**Architectural compatibility**"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:407
+msgid ""
+"The need to align certain CPU features that are assured to be supported by "
+"successive generations of the same architecture, some cases:"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:410
+msgid ""
+"On ppc64le ``VSX(ISA 2.06)`` and ``VSX2(ISA 2.07)`` both imply one another "
+"since the first generation that supports little-endian mode is ``Power-8(ISA "
+"2.07)``"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:412
+msgid ""
+"On AArch64 ``NEON NEON_FP16 NEON_VFPV4 ASIMD`` implies each other since they "
+"are part of the hardware baseline."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:415
+#: ../../../reference/simd/build-options.rst:479
+msgid "For example::"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:417
+msgid ""
+"# On ARMv8/A64, specify NEON is going to enable Advanced SIMD\n"
+"# and all predecessor extensions\n"
+"python -m build --wheel -Csetup-args=-Dcpu-baseline=neon\n"
+"# which is equivalent to\n"
+"python -m build --wheel -Csetup-args=-Dcpu-baseline=\"neon neon_fp16 "
+"neon_vfpv4 asimd\""
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:425
+msgid ""
+"Please take a deep look at :ref:`opt-supported-features`, in order to "
+"determine the features that imply one another."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:431
+msgid "Build report"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:433
+msgid ""
+"In most cases, the CPU build options do not produce any fatal errors that "
+"lead to hanging the build. Most of the errors that may appear in the build "
+"log serve as heavy warnings due to the lack of some expected CPU features by "
+"the compiler."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:437
+msgid ""
+"So we strongly recommend checking the final report log, to be aware of what "
+"kind of CPU features are enabled and what are not."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:440
+msgid ""
+"You can find the final report of CPU optimizations by tracing meson build "
+"log, and here is how it looks on x86_64/gcc:"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:443
+msgid ""
+"<style>#build-report .highlight-bash pre{max-height:450px; overflow-y: "
+"scroll;}</style>"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:447
+msgid ""
+"Test features \"X86_V2\" : Supported \n"
+"Test features \"X86_V3\" : Supported \n"
+"Test features \"X86_V4\" : Supported \n"
+"Test features \"AVX512_ICL\" : Supported \n"
+"Test features \"AVX512_SPR\" : Supported \n"
+"Configuring npy_cpu_dispatch_config.h using configuration\n"
+"Message: \n"
+"CPU Optimization Options\n"
+"  baseline:\n"
+"    Requested : min\n"
+"    Enabled   : X86_V2\n"
+"  dispatch:\n"
+"    Requested : max\n"
+"    Enabled   : X86_V3 X86_V4 AVX512_ICL AVX512_SPR\n"
+"\n"
+"Generating multi-targets for \"_umath_tests.dispatch.h\" \n"
+"  Enabled targets: X86_V3, baseline\n"
+"Generating multi-targets for \"argfunc.dispatch.h\" \n"
+"  Enabled targets: X86_V4, X86_V3, baseline\n"
+"Generating multi-targets for \"x86_simd_argsort.dispatch.h\" \n"
+"  Enabled targets: X86_V4, X86_V3\n"
+"Generating multi-targets for \"x86_simd_qsort.dispatch.h\" \n"
+"  Enabled targets: X86_V4, X86_V3\n"
+"Generating multi-targets for \"x86_simd_qsort_16bit.dispatch.h\" \n"
+"  Enabled targets: AVX512_SPR, AVX512_ICL\n"
+"Generating multi-targets for \"highway_qsort.dispatch.h\" \n"
+"  Enabled targets: \n"
+"Generating multi-targets for \"highway_qsort_16bit.dispatch.h\" \n"
+"  Enabled targets: \n"
+"Generating multi-targets for \"loops_arithm_fp.dispatch.h\" \n"
+"  Enabled targets: X86_V3, baseline\n"
+"Generating multi-targets for \"loops_arithmetic.dispatch.h\" \n"
+"  Enabled targets: X86_V4, X86_V3, baseline\n"
+"Generating multi-targets for \"loops_comparison.dispatch.h\" \n"
+"  Enabled targets: X86_V4, X86_V3, baseline\n"
+"Generating multi-targets for \"loops_exponent_log.dispatch.h\" \n"
+"  Enabled targets: X86_V4, X86_V3, baseline\n"
+"Generating multi-targets for \"loops_hyperbolic.dispatch.h\" \n"
+"  Enabled targets: X86_V4, X86_V3, baseline\n"
+"Generating multi-targets for \"loops_logical.dispatch.h\" \n"
+"  Enabled targets: X86_V4, X86_V3, baseline\n"
+"Generating multi-targets for \"loops_minmax.dispatch.h\" \n"
+"  Enabled targets: X86_V4, X86_V3, baseline\n"
+"Generating multi-targets for \"loops_modulo.dispatch.h\" \n"
+"  Enabled targets: baseline\n"
+"Generating multi-targets for \"loops_trigonometric.dispatch.h\" \n"
+"  Enabled targets: X86_V4, X86_V3, baseline\n"
+"Generating multi-targets for \"loops_umath_fp.dispatch.h\" \n"
+"  Enabled targets: X86_V4, baseline\n"
+"Generating multi-targets for \"loops_unary.dispatch.h\" \n"
+"  Enabled targets: X86_V4, baseline\n"
+"Generating multi-targets for \"loops_unary_fp.dispatch.h\" \n"
+"  Enabled targets: baseline\n"
+"Generating multi-targets for \"loops_unary_fp_le.dispatch.h\" \n"
+"  Enabled targets: baseline\n"
+"Generating multi-targets for \"loops_unary_complex.dispatch.h\" \n"
+"  Enabled targets: X86_V3, baseline\n"
+"Generating multi-targets for \"loops_autovec.dispatch.h\" \n"
+"  Enabled targets: X86_V3, baseline\n"
+"Generating multi-targets for \"loops_half.dispatch.h\" \n"
+"  Enabled targets: AVX512_SPR, X86_V4, baseline\n"
+"WARNING: Project targets '>=1.5.2' but uses feature deprecated since "
+"'1.3.0': Source file src/umath/svml/linux/avx512/svml_z0_acos_d_la.s in the "
+"'objects' kwarg is not an object..\n"
+"Generating multi-targets for \"_simd.dispatch.h\" \n"
+"  Enabled targets: X86_V3, X86_V4, baseline\n"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:454
+msgid "Runtime Dispatch"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:456
+msgid ""
+"Importing NumPy triggers a scan of the available CPU features from the set "
+"of dispatchable features. You can restrict this scan by setting the "
+"environment variable ``NPY_DISABLE_CPU_FEATURES`` to a comma-, tab-, or "
+"space-separated list of features to disable."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:461
+msgid "For instance, on ``x86_64`` this will disable ``X86_V4``::"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:463
+msgid "NPY_DISABLE_CPU_FEATURES=\"X86_V4\""
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:465
+msgid ""
+"This will raise an error if parsing fails or if the feature was not enabled "
+"through the ``cpu-dispatch`` build option. If the feature is supported by "
+"the build but not available on the current CPU, a warning will be emitted "
+"instead."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:469
+msgid "Tracking Dispatched Functions"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:471
+msgid ""
+"You can discover which CPU targets are enabled for different optimized "
+"functions using the Python function ``numpy.lib.introspect.opt_func_info``."
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:474
+msgid "This function offers two optional arguments for filtering results:"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:476
+msgid "``func_name`` - For refining function names"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:477
+msgid "``signature`` - For specifying data types in the signatures"
+msgstr ""
+
+#: ../../../reference/simd/build-options.rst:481
+msgid ""
+" >> func_info = numpy.lib.introspect.opt_func_info(func_name='add|abs', "
+"signature='float64|complex64')\n"
+" >> print(json.dumps(func_info, indent=2))\n"
+" {\n"
+"  \"absolute\": {\n"
+"    \"dd\": {\n"
+"      \"current\": \"baseline(X86_V2)\",\n"
+"      \"available\": \"baseline(X86_V2)\"\n"
+"    },\n"
+"    \"Ff\": {\n"
+"      \"current\": \"X86_V3\",\n"
+"      \"available\": \"X86_V3 baseline(X86_V2)\"\n"
+"    },\n"
+"    \"Dd\": {\n"
+"      \"current\": \"X86_V3\",\n"
+"      \"available\": \"X86_V3 baseline(X86_V2)\"\n"
+"    }\n"
+"  },\n"
+"  \"add\": {\n"
+"    \"ddd\": {\n"
+"      \"current\": \"X86_V3\",\n"
+"      \"available\": \"X86_V3 baseline(X86_V2)\"\n"
+"    },\n"
+"    \"FFF\": {\n"
+"      \"current\": \"X86_V3\",\n"
+"      \"available\": \"X86_V3 baseline(X86_V2)\"\n"
+"    }\n"
+"  }\n"
+"}"
+msgstr ""

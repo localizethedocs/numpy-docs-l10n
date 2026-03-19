@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.fft.rfftfreq.rst:4
+msgid "numpy.fft.rfftfreq"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:2
+msgid ""
+"Return the Discrete Fourier Transform sample frequencies (for usage with "
+"rfft, irfft)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:5
+msgid ""
+"The returned float array `f` contains the frequency bin centers in cycles "
+"per unit of the sample spacing (with zero at the start).  For instance, if "
+"the sample spacing is in seconds, then the frequency unit is cycles/second."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:9
+msgid "Given a window length `n` and a sample spacing `d`::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:11
+msgid ""
+"f = [0, 1, ...,     n/2-1,     n/2] / (d*n)   if n is even\n"
+"f = [0, 1, ..., (n-1)/2-1, (n-1)/2] / (d*n)   if n is odd"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:14
+msgid ""
+"Unlike `fftfreq` (but like `scipy.fftpack.rfftfreq`) the Nyquist frequency "
+"component is considered to be positive."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:20
+msgid "**n**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:-1
+msgid "int"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:20
+msgid "Window length."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:23
+msgid "**d**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:-1
+msgid "scalar, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:23
+msgid "Sample spacing (inverse of the sampling rate). Defaults to 1."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:31
+msgid "**device**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:-1
+msgid "str, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:26
+msgid ""
+"The device on which to place the created array. Default: ``None``. For Array-"
+"API interoperability only, so must be ``\"cpu\"`` if passed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:45
+msgid "**f**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:36
+msgid "Array of length ``n//2 + 1`` containing the sample frequencies."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:48
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:-1
+msgid ""
+"<div id=\"6ec2041e-ef3c-4a9e-b501-9031750a9475\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('368054ba-418f-4700-95d2-d98ac93fd346','6ec2041e-"
+"ef3c-4a9e-b501-9031750a9475')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('368054ba-418f-4700-95d2-d98ac93fd346','6ec2041e-ef3c-4a9e-"
+"b501-9031750a9475')\">Open In Tab</button></div><div id=\"9eab3215-4fec-46de-"
+"bda1-8db0c5d22a5d\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfftfreq:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../f2py/windows/intel.rst:5
+msgid "F2PY and Windows Intel Fortran"
+msgstr ""
+
+#: ../../../f2py/windows/intel.rst:7
+msgid ""
+"As of NumPy 1.23, only the classic Intel compilers (``ifort``) are supported."
+msgstr ""
+
+#: ../../../f2py/windows/intel.rst:11
+msgid ""
+"The licensing restrictions for beta software `have been relaxed`_ during the "
+"transition to the LLVM backed ``ifx/icc`` family of compilers. However this "
+"document does not endorse the usage of Intel in downstream projects due to "
+"the issues pertaining to `disassembly of components and liability`_."
+msgstr ""
+
+#: ../../../f2py/windows/intel.rst:17
+msgid ""
+"Neither the Python Intel installation nor the `Classic Intel C/C++ Compiler` "
+"are required."
+msgstr ""
+
+#: ../../../f2py/windows/intel.rst:20
+msgid ""
+"The `Intel Fortran Compilers`_ come in a combined installer providing both "
+"Classic and Beta versions; these also take around a gigabyte and a half or "
+"so."
+msgstr ""
+
+#: ../../../f2py/windows/intel.rst:23
+msgid ""
+"We will consider the classic example of the generation of Fibonnaci numbers, "
+"``fib1.f``, given by:"
+msgstr ""
+
+#: ../../../f2py/windows/intel.rst:26
+msgid ""
+"C FILE: FIB1.F\n"
+"      SUBROUTINE FIB(A,N)\n"
+"C\n"
+"C     CALCULATE FIRST N FIBONACCI NUMBERS\n"
+"C\n"
+"      INTEGER N\n"
+"      REAL*8 A(N)\n"
+"      DO I=1,N\n"
+"         IF (I.EQ.1) THEN\n"
+"            A(I) = 0.0D0\n"
+"         ELSEIF (I.EQ.2) THEN\n"
+"            A(I) = 1.0D0\n"
+"         ELSE \n"
+"            A(I) = A(I-1) + A(I-2)\n"
+"         ENDIF\n"
+"      ENDDO\n"
+"      END\n"
+"C END FILE FIB1.F\n"
+msgstr ""
+
+#: ../../../f2py/windows/intel.rst:29
+msgid ""
+"For ``cmd.exe`` fans, using the Intel oneAPI command prompt is the easiest "
+"approach, as it loads the required environment for both ``ifort`` and "
+"``msvc``. Helper batch scripts are also provided."
+msgstr ""
+
+#: ../../../f2py/windows/intel.rst:33
+msgid ""
+"# cmd.exe\n"
+"\"C:\\Program Files (x86)\\Intel\\oneAPI\\setvars.bat\"\n"
+"python -m numpy.f2py -c fib1.f -m fib1\n"
+"python -c \"import fib1; import numpy as np; a=np.zeros(8); fib1.fib(a); "
+"print(a)\""
+msgstr ""
+
+#: ../../../f2py/windows/intel.rst:40
+msgid ""
+"Powershell usage is a little less pleasant, and this configuration now works "
+"with MSVC as:"
+msgstr ""
+
+#: ../../../f2py/windows/intel.rst:42
+msgid ""
+"# Powershell\n"
+"python -m numpy.f2py -c fib1.f -m fib1 --f77exec='C:\\Program Files "
+"(x86)\\Intel\\oneAPI\\compiler\\latest\\windows\\bin\\intel64\\ifort.exe' --"
+"f90exec='C:\\Program Files "
+"(x86)\\Intel\\oneAPI\\compiler\\latest\\windows\\bin\\intel64\\ifort.exe' -"
+"L'C:\\Program Files "
+"(x86)\\Intel\\oneAPI\\compiler\\latest\\windows\\compiler\\lib\\ia32'\n"
+"python -c \"import fib1; import numpy as np; a=np.zeros(8); fib1.fib(a); "
+"print(a)\"\n"
+"# Alternatively, set environment and reload Powershell in one line\n"
+"cmd.exe /k '\"C:\\Program Files (x86)\\Intel\\oneAPI\\setvars.bat\" && "
+"powershell'\n"
+"python -m numpy.f2py -c fib1.f -m fib1\n"
+"python -c \"import fib1; import numpy as np; a=np.zeros(8); fib1.fib(a); "
+"print(a)\""
+msgstr ""
+
+#: ../../../f2py/windows/intel.rst:52
+msgid ""
+"Note that the actual path to your local installation of `ifort` may vary, "
+"and the command above will need to be updated accordingly."
+msgstr ""

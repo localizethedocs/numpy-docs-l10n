@@ -1,0 +1,229 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.linalg.tensordot.rst:4
+msgid "numpy.linalg.tensordot"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:2
+msgid "Compute tensor dot product along specified axes."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:4
+msgid ""
+"Given two tensors, `a` and `b`, and an array_like object containing two "
+"array_like objects, ``(a_axes, b_axes)``, sum the products of `a`'s and "
+"`b`'s elements (components) over the axes specified by ``a_axes`` and "
+"``b_axes``. The third argument can be a single non-negative integer_like "
+"scalar, ``N``; if it is such, then the last ``N`` dimensions of `a` and the "
+"first ``N`` dimensions of `b` are summed over."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:14
+msgid "**a, b**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:14
+msgid "Tensors to \"dot\"."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:24
+msgid "**axes**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:-1
+msgid "int or (2,) array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:17
+msgid ""
+"integer_like If an int N, sum over the last N axes of `a` and the first N "
+"axes of `b` in order. The sizes of the corresponding axes must match."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:20
+msgid ""
+"(2,) array_like Or, a list of axes to be summed over, first sequence "
+"applying to `a`, second to `b`. Both elements array_like must be of the same "
+"length. Each axis may appear at most once; repeated axes are not allowed. "
+"For example, ``axes=([1, 1], [0, 0])`` is invalid."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:27
+msgid "**Returns**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:30
+msgid "**-------**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:42
+msgid "**output**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:33
+msgid "The tensor dot product of the input."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:47
+msgid ":obj:`dot`, :obj:`einsum`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:51
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:55
+msgid "Three common use cases are:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:53
+msgid "``axes = 0`` : tensor product :math:`a\\otimes b`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:54
+msgid "``axes = 1`` : tensor dot product :math:`a\\cdot b`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:55
+msgid "``axes = 2`` : (default) tensor double contraction :math:`a:b`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:57
+msgid ""
+"When `axes` is integer_like, the sequence of axes for evaluation will be: "
+"from the -Nth axis to the -1th axis in `a`, and from the 0th axis to (N-1)th "
+"axis in `b`. For example, ``axes = 2`` is the equal to ``axes = [[-2, -1], "
+"[0, 1]]``. When N-1 is smaller than 0, or when -N is larger than -1, the "
+"element of `a` and `b` are defined as the `axes`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:65
+msgid ""
+"When there is more than one axis to sum over - and they are not the last "
+"(first) axes of `a` (`b`) - the argument `axes` should consist of two "
+"sequences of the same length, with the first axis to sum over given first in "
+"both sequences, the second axis second, and so forth. The calculation can be "
+"referred to ``numpy.einsum``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:71
+msgid ""
+"For example, if ``a.shape == (2, 3, 4)`` and ``b.shape == (3, 4, 5)``, then "
+"``axes=([1, 2], [0, 1])`` sums over the ``(3, 4)`` dimensions of both arrays "
+"and produces an output of shape ``(2, 5)``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:75
+msgid ""
+"Each summation axis corresponds to a distinct contraction index; repeating "
+"an axis (for example ``axes=([1, 1], [0, 0])``) is invalid."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:78
+msgid ""
+"The shape of the result consists of the non-contracted axes of the first "
+"tensor, followed by the non-contracted axes of the second."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:83
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:88
+msgid "An example on integer_like:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:105
+msgid "An example on array_like:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:119
+msgid "A slower but equivalent way of computing the same..."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:134
+msgid "An extended example taking advantage of the overloading of + and \\*:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:-1
+msgid ""
+"<div id=\"34f7f0fc-b37a-4d30-ac0c-55ec4bba723a\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('c8ac3120-5932-4aaf-adef-72ff9534fbd9','34f7f0fc-"
+"b37a-4d30-ac0c-55ec4bba723a')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('c8ac3120-5932-4aaf-adef-72ff9534fbd9','34f7f0fc-b37a-4d30-"
+"ac0c-55ec4bba723a')\">Open In Tab</button></div><div id=\"378cffbb-c3d9-4da1-"
+"b098-9b30e9463b3c\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensordot:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

@@ -1,0 +1,256 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:5
+msgid "1 Migrating to ``meson``"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:7
+msgid ""
+"As per the timeline laid out in :ref:`distutils-status-migration`, "
+"``distutils`` has been removed. This page collects common workflows."
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:12
+msgid ""
+"This is a **living** document, `pull requests <https://numpy.org/doc/stable/"
+"dev/howto-docs.html>`_ are very welcome!"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:15
+msgid "1.1 Baseline"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:17
+msgid ""
+"We will start out with a slightly modern variation of the classic Fibonnaci "
+"series generator."
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:20
+msgid ""
+"! fib.f90\n"
+"subroutine fib(a, n)\n"
+"  use iso_c_binding\n"
+"   integer(c_int), intent(in) :: n\n"
+"   integer(c_int), intent(out) :: a(n)\n"
+"   do i = 1, n\n"
+"      if (i .eq. 1) then\n"
+"         a(i) = 0.0d0\n"
+"      elseif (i .eq. 2) then\n"
+"         a(i) = 1.0d0\n"
+"      else\n"
+"         a(i) = a(i - 1) + a(i - 2)\n"
+"      end if\n"
+"   end do\n"
+"end"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:38
+msgid "This will not win any awards, but can be a reasonable starting point."
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:41
+msgid "1.2 Compilation options"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:44
+msgid "1.2.1 Basic Usage"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:46
+msgid ""
+"python -m numpy.f2py -c fib.f90 -m fib\n"
+"❯ python -c \"import fib; print(fib.fib(30))\"\n"
+"[     0      1      1      2      3      5      8     13     21     34\n"
+"     55     89    144    233    377    610    987   1597   2584   4181\n"
+"   6765  10946  17711  28657  46368  75025 121393 196418 317811 514229]"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:55
+msgid "1.2.2 Specify the backend"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:57
+msgid "python -m numpy.f2py -c fib.f90 -m fib"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:61
+msgid ""
+"This is the only option. There used to be a ``distutils`` backend but it was "
+"removed in NumPy2.5.0."
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:65
+msgid "1.2.3 Pass a compiler name"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:67
+msgid "FC=gfortran python -m numpy.f2py -c fib.f90 -m fib"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:71
+msgid "Native files can also be used."
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:73
+msgid ""
+"Similarly, ``CC`` can be used in both cases to set the ``C`` compiler. Since "
+"the environment variables are generally pretty common across both, so a "
+"small sample is included below."
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:80
+msgid "**Name**"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:80
+msgid "**What**"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:82
+msgid "FC"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:82
+msgid "Fortran compiler"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:84
+msgid "CC"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:84
+msgid "C compiler"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:86
+msgid "CFLAGS"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:86
+msgid "C compiler options"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:88
+msgid "FFLAGS"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:88
+msgid "Fortran compiler options"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:90
+msgid "LDFLAGS"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:90
+msgid "Linker options"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:92
+msgid "LD_LIBRARY_PATH"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:92
+msgid "Library file locations (Unix)"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:94
+msgid "LIBS"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:94
+msgid "Libraries to link against"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:96
+msgid "PATH"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:96
+msgid "Search path for executables"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:98
+msgid "CXX"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:98
+msgid "C++ compiler"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:100
+msgid "CXXFLAGS"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:100
+msgid "C++ compiler options"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:106
+msgid ""
+"For Windows, these may not work very reliably, so `native files <https://"
+"mesonbuild.com/Native-environments.html>`_ are likely the best bet, or by "
+"direct `1.3 Customizing builds`_."
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:110
+msgid "1.2.4 Dependencies"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:112
+msgid "python -m numpy.f2py -c fib.f90 -m fib --dep lapack"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:116
+msgid ""
+"This maps to ``dependency(\"lapack\")`` and so can be used for a wide "
+"variety of dependencies. They can be `customized further <https://mesonbuild."
+"com/Dependencies.html>`_ to use CMake or other systems to resolve "
+"dependencies."
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:121
+msgid "1.2.5 Libraries"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:123
+msgid "``meson`` is capable of linking against libraries."
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:125
+msgid "python -m numpy.f2py -c fib.f90 -m fib -lmylib -L/path/to/mylib"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:130
+msgid "1.3 Customizing builds"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:132
+msgid "python -m numpy.f2py -c fib.f90 -m fib --build-dir blah"
+msgstr ""
+
+#: ../../../f2py/buildtools/distutils-to-meson.rst:136
+msgid ""
+"The resulting build can be customized via the `Meson Build How-To Guide "
+"<https://mesonbuild.com/howtox.html>`_. In fact, the resulting set of files "
+"can even be committed directly and used as a meson subproject in a separate "
+"codebase."
+msgstr ""

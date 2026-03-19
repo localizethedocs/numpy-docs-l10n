@@ -1,0 +1,1396 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/arrays.scalars.rst:5
+msgid "Scalars"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:9
+msgid ""
+"Python defines only one type of a particular data class (there is only one "
+"integer type, one floating-point type, etc.). This can be convenient in "
+"applications that don't need to be concerned with all the ways data can be "
+"represented in a computer.  For scientific computing, however, more control "
+"is often needed."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:15
+msgid ""
+"In NumPy, there are 24 new fundamental Python types to describe different "
+"types of scalars. These type descriptors are mostly based on the types "
+"available in the C language that CPython is written in, with several "
+"additional types compatible with Python's types."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:20
+msgid ""
+"Array scalars have the same attributes and methods as :class:`ndarrays "
+"<ndarray>`. [#]_ This allows one to treat items of an array partly on the "
+"same footing as arrays, smoothing out rough edges that result when mixing "
+"scalar and array operations."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:25
+msgid ""
+"Array scalars live in a hierarchy (see the Figure below) of data types. They "
+"can be detected using the hierarchy: For example, ``isinstance(val, np."
+"generic)`` will return :py:data:`True` if *val* is an array scalar object. "
+"Alternatively, what kind of array scalar is present can be determined using "
+"other members of the data type hierarchy. Thus, for example "
+"``isinstance(val, np.complexfloating)`` will return :py:data:`True` if *val* "
+"is a complex valued type, while ``isinstance(val, np.flexible)`` will return "
+"true if *val* is one of the flexible itemsize array types (:class:`str_`, :"
+"class:`bytes_`, :class:`void`)."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:38
+msgid ""
+"**Figure:** Hierarchy of type objects representing the array data types. Not "
+"shown are the two integer types :class:`intp` and :class:`uintp` which are "
+"used for indexing (the same as the default integer since NumPy 2)."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:50
+msgid ""
+"However, array scalars are immutable, so none of the array scalar attributes "
+"are settable."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:58
+msgid "Built-in scalar types"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:60
+msgid ""
+"The built-in scalar types are shown below. The C-like names are associated "
+"with character codes, which are shown in their descriptions. Use of the "
+"character codes, however, is discouraged."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:64
+msgid ""
+"Some of the scalar types are essentially equivalent to fundamental Python "
+"types and therefore inherit from them as well as from the generic array "
+"scalar type:"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:69
+msgid "Array scalar type"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:69
+msgid "Related Python type"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:69
+msgid "Inherits?"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:71
+msgid ":class:`int_`"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:71
+msgid ":class:`int`"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:71
+#: ../../../reference/arrays.scalars.rst:76
+#: ../../../reference/arrays.scalars.rst:77
+#: ../../../reference/arrays.scalars.rst:78
+msgid "no"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:72
+msgid ":class:`double`"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:72
+msgid ":class:`float`"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:72
+#: ../../../reference/arrays.scalars.rst:73
+#: ../../../reference/arrays.scalars.rst:74
+#: ../../../reference/arrays.scalars.rst:75
+msgid "yes"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:73
+msgid ":class:`cdouble`"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:73
+msgid ":class:`complex`"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:74
+msgid ":class:`bytes_`"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:74
+msgid ":class:`bytes`"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:75
+msgid ":class:`str_`"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:75
+msgid ":class:`str`"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:76
+msgid ":class:`bool_`"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:76
+msgid ":class:`bool`"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:77
+msgid ":class:`datetime64`"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:77
+msgid ":class:`datetime.datetime`"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:78
+msgid ":class:`timedelta64`"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:78
+msgid ":class:`datetime.timedelta`"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:81
+msgid ""
+"The :class:`bool_` data type is very similar to the Python :class:`bool` but "
+"does not inherit from it because Python's :class:`bool` does not allow "
+"itself to be inherited from, and on the C-level the size of the actual bool "
+"data is not the same as a Python Boolean scalar."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:89
+msgid ""
+"The :class:`int_` type does **not** inherit from the built-in :class:`int`, "
+"because type :class:`int` is not a fixed-width integer type."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:93
+msgid "The default data type in NumPy is :class:`double`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.generic:2
+msgid "Base class for numpy scalar types."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.generic:4
+msgid ""
+"Class from which most (all?) numpy scalar types are derived.  For "
+"consistency, exposes the same API as `ndarray`, despite many consequent "
+"attributes being either \"get-only,\" or completely irrelevant. This is the "
+"class from which it is strongly suggested users should derive custom scalar "
+"types."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.number:2
+msgid "Abstract base class of all numeric scalar types."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:104
+msgid "Integer types"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.integer:2
+msgid "Abstract base class of all integer scalar types."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:112
+msgid ""
+"The numpy integer types mirror the behavior of C integers, and can therefore "
+"be subject to :ref:`overflow-errors`."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:116
+msgid "Signed integer types"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.signedinteger:2
+msgid "Abstract base class of all signed integer scalar types."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.byte:2
+msgid "int8(value=0, /) --"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.byte:5
+msgid "Signed integer type, compatible with C ``char``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bool:0 numpy.byte:0 numpy.bytes_:0 numpy.cdouble:0
+#: numpy.clongdouble:0 numpy.csingle:0 numpy.datetime64:0 numpy.double:0
+#: numpy.half:0 numpy.int_:0 numpy.intc:0 numpy.longdouble:0 numpy.longlong:0
+#: numpy.object_:0 numpy.short:0 numpy.single:0 numpy.str_:0
+#: numpy.timedelta64:0 numpy.ubyte:0 numpy.uint:0 numpy.uintc:0
+#: numpy.ulonglong:0 numpy.ushort:0 numpy.void:0
+#: ../../../reference/arrays.scalars.rst:0
+msgid "Character code"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.byte:7
+msgid "``'b'``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.byte:0 numpy.cdouble:0 numpy.csingle:0 numpy.double:0 numpy.half:0
+#: numpy.int_:0 numpy.intc:0 numpy.short:0 numpy.single:0 numpy.ubyte:0
+#: numpy.uint:0 numpy.uintc:0 numpy.ushort:0
+msgid "Canonical name"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.byte:8
+msgid "`numpy.byte`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.byte:0 numpy.cdouble:0 numpy.clongdouble:0 numpy.csingle:0
+#: numpy.double:0 numpy.half:0 numpy.int_:0 numpy.intc:0 numpy.longdouble:0
+#: numpy.short:0 numpy.single:0 numpy.ubyte:0 numpy.uint:0 numpy.uintc:0
+#: numpy.ushort:0
+msgid "Alias on this platform (Linux x86_64)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.byte:9
+msgid "`numpy.int8`: 8-bit signed integer (``-128`` to ``127``)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.short:2
+msgid "int16(value=0, /) --"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.short:5
+msgid "Signed integer type, compatible with C ``short``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.short:7
+msgid "``'h'``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.short:8
+msgid "`numpy.short`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.short:9
+msgid "`numpy.int16`: 16-bit signed integer (``-32_768`` to ``32_767``)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.intc:2
+msgid "int32(value=0, /) --"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.intc:5
+msgid "Signed integer type, compatible with C ``int``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.intc:7
+msgid "``'i'``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.intc:8
+msgid "`numpy.intc`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.intc:9
+msgid ""
+"`numpy.int32`: 32-bit signed integer (``-2_147_483_648`` to "
+"``2_147_483_647``)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.int_:2
+msgid "int64(value=0, /) --"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.int_:5
+msgid "Signed integer type, compatible with C ``long``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.int_:7
+msgid "``'l'``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.int_:8
+msgid "`numpy.long`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.int_:9
+msgid ""
+"`numpy.int64`: 64-bit signed integer (``-9_223_372_036_854_775_808`` to "
+"``9_223_372_036_854_775_807``)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.int_:10
+msgid ""
+"`numpy.intp`: Signed integer large enough to fit pointer, compatible with C "
+"``intptr_t``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.longlong:2
+msgid "Signed integer type, compatible with C ``long long``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.longlong:4
+msgid "``'q'``"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:147
+msgid "Unsigned integer types"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unsignedinteger:2
+msgid "Abstract base class of all unsigned integer scalar types."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ubyte:2
+msgid "uint8(value=0, /) --"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ubyte:5
+msgid "Unsigned integer type, compatible with C ``unsigned char``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ubyte:7
+msgid "``'B'``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ubyte:8
+msgid "`numpy.ubyte`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ubyte:9
+msgid "`numpy.uint8`: 8-bit unsigned integer (``0`` to ``255``)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ushort:2
+msgid "uint16(value=0, /) --"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ushort:5
+msgid "Unsigned integer type, compatible with C ``unsigned short``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ushort:7
+msgid "``'H'``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ushort:8
+msgid "`numpy.ushort`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ushort:9
+msgid "`numpy.uint16`: 16-bit unsigned integer (``0`` to ``65_535``)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.uintc:2
+msgid "uint32(value=0, /) --"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.uintc:5
+msgid "Unsigned integer type, compatible with C ``unsigned int``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.uintc:7
+msgid "``'I'``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.uintc:8
+msgid "`numpy.uintc`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.uintc:9
+msgid "`numpy.uint32`: 32-bit unsigned integer (``0`` to ``4_294_967_295``)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.uint:2
+msgid "uint64(value=0, /) --"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.uint:5
+msgid ""
+"Unsigned signed integer type, 64bit on 64bit systems and 32bit on 32bit "
+"systems."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.uint:7
+msgid "``'L'``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.uint:8
+msgid "`numpy.uint`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.uint:9
+msgid ""
+"`numpy.uint64`: 64-bit unsigned integer (``0`` to "
+"``18_446_744_073_709_551_615``)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.uint:10
+msgid ""
+"`numpy.uintp`: Unsigned integer large enough to fit pointer, compatible with "
+"C ``uintptr_t``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ulonglong:2
+msgid "Unsigned integer type, compatible with C ``unsigned long long``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ulonglong:4
+msgid "``'Q'``"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:178
+msgid "Inexact types"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.inexact:2
+msgid ""
+"Abstract base class of all numeric scalar types with a (potentially) inexact "
+"representation of the values in its range, such as floating-point numbers."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:186
+msgid ""
+"Inexact scalars are printed using the fewest decimal digits needed to "
+"distinguish their value from other values of the same datatype, by judicious "
+"rounding. See the ``unique`` parameter of `format_float_positional` and "
+"`format_float_scientific`."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:191
+msgid ""
+"This means that variables with equal binary values but whose datatypes are "
+"of different precisions may display differently:"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:206
+msgid ""
+"Note that none of these floats hold the exact value :math:`\\frac{1}{10}`; "
+"``f16`` prints as ``0.1`` because it is as close to that value as possible, "
+"whereas the other types do not as they have more precision and therefore "
+"have closer values."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:211
+msgid ""
+"Conversely, floating-point scalars of different precisions which approximate "
+"the same decimal value may compare unequal despite printing identically:"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:223
+msgid "Floating-point types"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.floating:2
+msgid "Abstract base class of all floating-point scalar types."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.half:2
+msgid "float16(value=0, /) --"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.half:5
+msgid "Half-precision floating-point number type."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.half:7
+msgid "``'e'``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.half:8
+msgid "`numpy.half`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.half:9
+msgid ""
+"`numpy.float16`: 16-bit-precision floating-point number type: sign bit, 5 "
+"bits exponent, 10 bits mantissa."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.single:2
+msgid "float32(value=0, /) --"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.single:5
+msgid ""
+"Single-precision floating-point number type, compatible with C ``float``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.single:7
+msgid "``'f'``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.single:8
+msgid "`numpy.single`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.single:9
+msgid ""
+"`numpy.float32`: 32-bit-precision floating-point number type: sign bit, 8 "
+"bits exponent, 23 bits mantissa."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.double:2
+msgid "float64(value=0, /) --"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.double:5
+msgid ""
+"Double-precision floating-point number type, compatible with Python :class:"
+"`float` and C ``double``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.double:7
+msgid "``'d'``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.double:8
+msgid "`numpy.double`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.double:9
+msgid ""
+"`numpy.float64`: 64-bit precision floating-point number type: sign bit, 11 "
+"bits exponent, 52 bits mantissa."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.longdouble:2
+msgid ""
+"Extended-precision floating-point number type, compatible with C ``long "
+"double`` but not necessarily with IEEE 754 quadruple-precision."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.longdouble:5
+msgid "``'g'``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.longdouble:6
+msgid ""
+"`numpy.float128`: 128-bit extended-precision floating-point number type."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:246
+msgid "Complex floating-point types"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.complexfloating:2
+msgid ""
+"Abstract base class of all complex number scalar types that are made up of "
+"floating-point numbers."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.csingle:2
+msgid "complex64(real=0, imag=0, /) --"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.csingle:5
+msgid ""
+"Complex number type composed of two single-precision floating-point numbers."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.csingle:7
+msgid "``'F'``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.csingle:8
+msgid "`numpy.csingle`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.csingle:9
+msgid ""
+"`numpy.complex64`: Complex number type composed of 2 32-bit-precision "
+"floating-point numbers."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cdouble:2
+msgid "complex128(real=0, imag=0, /) --"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cdouble:5
+msgid ""
+"Complex number type composed of two double-precision floating-point numbers, "
+"compatible with Python :class:`complex`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cdouble:8
+msgid "``'D'``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cdouble:9
+msgid "`numpy.cdouble`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cdouble:10
+msgid ""
+"`numpy.complex128`: Complex number type composed of 2 64-bit-precision "
+"floating-point numbers."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.clongdouble:2
+msgid ""
+"Complex number type composed of two extended-precision floating-point "
+"numbers."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.clongdouble:4
+msgid "``'G'``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.clongdouble:5
+msgid ""
+"`numpy.complex256`: Complex number type composed of 2 128-bit extended-"
+"precision floating-point numbers."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:265
+msgid "Other types"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bool:2
+msgid "Boolean type (True or False), stored as a byte."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bool:6
+msgid ""
+"The :class:`bool` type is not a subclass of the :class:`int_` type (the :"
+"class:`bool` is not even a number type). This is different than Python's "
+"default implementation of :class:`bool` as a sub-class of :class:`int`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bool:11
+msgid "``'?'``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.datetime64:2
+msgid ""
+"If created from a 64-bit integer, it represents an offset from "
+"``1970-01-01T00:00:00``. If created from string, the string can be in ISO "
+"8601 date or datetime format."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.datetime64:5
+msgid ""
+"When parsing a string to create a datetime object, if the string contains a "
+"trailing timezone (A 'Z' or a timezone offset), the timezone will be dropped "
+"and a User Warning is given."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.datetime64:9
+msgid ""
+"Datetime64 objects should be considered to be UTC and therefore have an "
+"offset of +0000."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.datetime64:19 numpy.timedelta64:4
+msgid "See :ref:`arrays.datetime` for more information."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.datetime64:21
+msgid "``'M'``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.timedelta64:2
+msgid "A timedelta stored as a 64-bit integer."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.timedelta64:6
+msgid "``'m'``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.object_:2
+msgid "Any Python object."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.object_:4
+msgid "``'O'``"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:289
+msgid ""
+"The data actually stored in object arrays (*i.e.*, arrays having dtype :"
+"class:`object_`) are references to Python objects, not the objects "
+"themselves. Hence, object arrays behave more like usual Python :class:`lists "
+"<list>`, in the sense that their contents need not be of the same Python "
+"type."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:295
+msgid ""
+"The object type is also special because an array containing :class:`object_` "
+"items does not return an :class:`object_` object on item access, but instead "
+"returns the actual object that the array item refers to."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:302
+msgid ""
+"The following data types are **flexible**: they have no predefined size and "
+"the data they describe can be of different length in different arrays. (In "
+"the character codes ``#`` is an integer denoting how many elements the data "
+"type consists of.)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.flexible:2
+msgid ""
+"Abstract base class of all scalar types without predefined length. The "
+"actual size of these types depends on the specific `numpy.dtype` "
+"instantiation."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.character:2
+msgid "Abstract base class of all character string scalar types."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bytes_:2
+msgid "A byte string."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bytes_:4
+msgid "When used in arrays, this type strips trailing null bytes."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bytes_:6
+msgid "``'S'``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.str_:2
+msgid "A unicode string."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.str_:4
+msgid "This type strips trailing null codepoints."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.str_:10
+msgid ""
+"Unlike the builtin :class:`str`, this supports the :ref:`python:"
+"bufferobjects`, exposing its contents as UCS4:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.str_:19
+msgid "``'U'``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.void:2
+msgid "Create a new structured or unstructured void scalar."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.void:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.void:13
+msgid "**length_or_data**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.void:-1
+msgid "int, array-like, bytes-like, object"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.void:8
+msgid ""
+"One of multiple meanings (see notes).  The length or bytes data of an "
+"unstructured void.  Or alternatively, the data to be stored in the new "
+"scalar when `dtype` is provided. This can be an array-like, in which case an "
+"array may be returned."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.void:30
+msgid "**dtype**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.void:-1
+msgid "dtype, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.void:16
+msgid ""
+"If provided the dtype of the new scalar.  This dtype must be \"void\" dtype "
+"(i.e. a structured or unstructured void, see also :ref:`defining-structured-"
+"types`)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.void:33
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.void:34
+msgid ""
+"For historical reasons and because void scalars can represent both arbitrary "
+"byte data and structured dtypes, the void constructor has three calling "
+"conventions:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.void:38
+msgid "``np.void(5)`` creates a ``dtype=\"V5\"`` scalar filled with five"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.void:39
+msgid "``\\0`` bytes.  The 5 can be a Python or NumPy integer."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.void:40
+msgid ""
+"``np.void(b\"bytes-like\")`` creates a void scalar from the byte string."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.void:41
+msgid "The dtype itemsize will match the byte string length, here ``\"V10\"``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.void:43
+msgid "When a ``dtype=`` is passed the call is roughly the same as an"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.void:43
+msgid "array creation.  However, a void scalar rather than array is returned."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.void:45
+msgid "Please see the examples which show all three different conventions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.void:49
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.void:63
+msgid "``'V'``"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:330
+msgid ""
+"Numeric Compatibility: If you used old typecode characters in your Numeric "
+"code (which was never recommended), you will need to change some of them to "
+"the new characters. In particular, the needed changes are ``c -> S1``, ``b -"
+"> B``, ``1 -> b``, ``s -> h``, ``w -> H``, and ``u -> I``. These changes "
+"make the type character convention more consistent with other Python modules "
+"such as the :mod:`struct` module."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:341
+msgid "Sized aliases"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:343
+msgid ""
+"Along with their (mostly) C-derived names, the integer, float, and complex "
+"data-types are also available using a bit-width convention so that an array "
+"of the right size can always be ensured. Two aliases (:class:`numpy.intp` "
+"and :class:`numpy.uintp`) pointing to the integer type that is sufficiently "
+"large to hold a C pointer are also provided."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:358
+msgid ""
+"Aliases for the signed integer types (one of `numpy.byte`, `numpy.short`, "
+"`numpy.intc`, `numpy.int_`, `numpy.long` and `numpy.longlong`) with the "
+"specified number of bits."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:362
+msgid ""
+"Compatible with the C99 ``int8_t``, ``int16_t``, ``int32_t``, and "
+"``int64_t``, respectively."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:370
+msgid ""
+"Alias for the unsigned integer types (one of `numpy.ubyte`, `numpy.ushort`, "
+"`numpy.uintc`, `numpy.uint`, `numpy.ulong` and `numpy.ulonglong`) with the "
+"specified number of bits."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:374
+msgid ""
+"Compatible with the C99 ``uint8_t``, ``uint16_t``, ``uint32_t``, and "
+"``uint64_t``, respectively."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:379
+msgid ""
+"Alias for the signed integer type (one of `numpy.byte`, `numpy.short`, "
+"`numpy.intc`, `numpy.int_`, `numpy.long` and `numpy.longlong`) that is used "
+"as a default integer and for indexing."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:383
+msgid "Compatible with the C ``Py_ssize_t``."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:385
+msgid "``'n'``"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:387
+msgid ""
+"Before NumPy 2, this had the same size as a pointer.  In practice this is "
+"almost always identical, but the character code ``'p'`` maps to the C "
+"``intptr_t``.  The character code ``'n'`` was added in NumPy 2.0."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:394
+msgid "Alias for the unsigned integer type that is the same size as ``intp``."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:396
+msgid "Compatible with the C ``size_t``."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:398
+msgid "``'N'``"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:400
+msgid ""
+"Before NumPy 2, this had the same size as a pointer.  In practice this is "
+"almost always identical, but the character code ``'P'`` maps to the C "
+"``uintptr_t``.  The character code ``'N'`` was added in NumPy 2.0."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:414
+msgid ""
+"Alias for `numpy.longdouble`, named after its size in bits. The existence of "
+"these aliases depends on the platform."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:424
+msgid ""
+"Alias for `numpy.clongdouble`, named after its size in bits. The existence "
+"of these aliases depends on the platform."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:428
+msgid "Attributes"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:430
+msgid ""
+"The array scalar objects have an :obj:`array priority <class."
+"__array_priority__>` of :c:data:`NPY_SCALAR_PRIORITY` (-1,000,000.0). They "
+"also do not (yet) have a :attr:`ctypes <ndarray.ctypes>` attribute. "
+"Otherwise, they share the same attributes as arrays:"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid ":py:obj:`generic.flags <numpy.generic.flags>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid "The integer value of flags."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid ":py:obj:`generic.shape <numpy.generic.shape>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid "Tuple of array dimensions."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid ":py:obj:`generic.strides <numpy.generic.strides>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid "Tuple of bytes steps in each dimension."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid ":py:obj:`generic.ndim <numpy.generic.ndim>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid "The number of array dimensions."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid ":py:obj:`generic.data <numpy.generic.data>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid "Pointer to start of data."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid ":py:obj:`generic.size <numpy.generic.size>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid "The number of elements in the gentype."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid ":py:obj:`generic.itemsize <numpy.generic.itemsize>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid "The length of one element in bytes."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid ":py:obj:`generic.base <numpy.generic.base>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid "Scalar attribute identical to `ndarray.base`."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid ":py:obj:`generic.dtype <numpy.generic.dtype>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid "Get array data-descriptor."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid ":py:obj:`generic.real <numpy.generic.real>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid "The real part of the scalar."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid ":py:obj:`generic.imag <numpy.generic.imag>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid "The imaginary part of the scalar."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid ":py:obj:`generic.flat <numpy.generic.flat>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid "A 1-D view of the scalar."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid ":py:obj:`generic.T <numpy.generic.T>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid "Scalar attribute identical to `ndarray.T`."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid ""
+":py:obj:`generic.__array_interface__ <numpy.generic.__array_interface__>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid "Array protocol: Python side"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid ":py:obj:`generic.__array_struct__ <numpy.generic.__array_struct__>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid "Array protocol: struct"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid ""
+":py:obj:`generic.__array_priority__ <numpy.generic.__array_priority__>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+msgid "Array priority."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
+msgid ":py:obj:`generic.__array_wrap__ <numpy.generic.__array_wrap__>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
+msgid "__array_wrap__ implementation for scalar types"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:458
+msgid "Indexing"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:459
+msgid ":ref:`arrays.indexing`, :ref:`arrays.dtypes`"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:461
+msgid ""
+"Array scalars can be indexed like 0-dimensional arrays: if *x* is an array "
+"scalar,"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:464
+msgid "``x[()]`` returns a copy of array scalar"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:465
+msgid "``x[...]`` returns a 0-dimensional :class:`ndarray`"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:466
+msgid ""
+"``x['field-name']`` returns the array scalar in the field *field-name*. (*x* "
+"can have fields, for example, when it corresponds to a structured data type.)"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:470
+msgid "Methods"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:472
+msgid ""
+"Array scalars have exactly the same methods as arrays. The default behavior "
+"of these methods is to internally convert the scalar to an equivalent 0-"
+"dimensional array and to call the corresponding array method. In addition, "
+"math operations on array scalars are defined so that the same hardware flags "
+"are set and used to interpret the results as for :ref:`ufunc <ufuncs>`, so "
+"that the error state used for ufuncs also carries over to the math on array "
+"scalars."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:480
+msgid "The exceptions to the above rules are given below:"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
+msgid ":py:obj:`generic.__array__ <numpy.generic.__array__>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
+msgid "sc.__array__(dtype) return 0-dim array from scalar with specified dtype"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
+msgid ""
+":py:obj:`generic.squeeze <numpy.generic.squeeze>`\\ \\(\\/\\[\\, axis\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
+msgid "Scalar method identical to `ndarray.squeeze`."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
+msgid ""
+":py:obj:`generic.byteswap <numpy.generic.byteswap>`\\ \\(\\/\\[\\, "
+"inplace\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
+msgid "Scalar method identical to `ndarray.byteswap`."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
+msgid ":py:obj:`generic.__reduce__ <numpy.generic.__reduce__>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
+msgid "Helper for pickle."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
+msgid ":py:obj:`generic.__setstate__ <numpy.generic.__setstate__>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
+msgid ""
+":py:obj:`generic.setflags <numpy.generic.setflags>`\\ \\(\\*\\[\\, write\\, "
+"align\\, uic\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
+msgid "Scalar method identical to `ndarray.setflags`."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:493
+msgid "Utility method for typing:"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:500:<autosummary>:1
+msgid ""
+":py:obj:`number.__class_getitem__ <numpy.number.__class_getitem__>`\\ "
+"\\(item\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:500:<autosummary>:1
+msgid "Return a parametrized wrapper around the `~numpy.number` type."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:502
+msgid "Defining new types"
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:504
+msgid ""
+"There are two ways to effectively define a new array scalar type (apart from "
+"composing structured types :ref:`dtypes <arrays.dtypes>` from the built-in "
+"scalar types): One way is to simply subclass the :class:`ndarray` and "
+"overwrite the methods of interest. This will work to a degree, but "
+"internally certain behaviors are fixed by the data type of the array.  To "
+"fully customize the data type of an array you need to define a new data-"
+"type, and register it with NumPy. Such new types can only be defined in C, "
+"using the :ref:`NumPy C-API <c-api>`."
+msgstr ""
+
+#: ../../../reference/arrays.scalars.rst:300
+msgid "flexible"
+msgstr ""

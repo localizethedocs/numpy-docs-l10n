@@ -1,0 +1,202 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.ufunc.resolve_dtypes.rst:4
+msgid "numpy.ufunc.resolve\\_dtypes"
+msgstr ""
+
+#: ../../../reference/generated/numpy.ufunc.resolve_dtypes.rst:8
+msgid "method"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:2
+msgid ""
+"Find the dtypes NumPy will use for the operation.  Both input and output "
+"dtypes are returned and may differ from those provided."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:7
+msgid ""
+"This function always applies NEP 50 rules since it is not provided any "
+"actual values.  The Python types ``int``, ``float``, and ``complex`` thus "
+"behave weak and should be passed for \"untyped\" Python input."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:16 numpy.ufunc.resolve_dtypes:53
+msgid "**dtypes**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:-1
+msgid "tuple of dtypes, None, or literal int, float, complex"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:15
+msgid ""
+"The input dtypes for each operand.  Output operands can be None, indicating "
+"that the dtype must be found."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:21
+msgid "**signature**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:-1
+msgid "tuple of DTypes or None, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:19
+msgid ""
+"If given, enforces exact DType (classes) of the specific operand. The ufunc "
+"``dtype`` argument is equivalent to passing a tuple with only output dtypes "
+"set."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:25
+msgid "**casting**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:-1
+msgid "{'no', 'equiv', 'safe', 'same_kind', 'unsafe'}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:24
+msgid ""
+"The casting mode when casting is necessary.  This is identical to the ufunc "
+"call casting modes."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:38
+msgid "**reduction**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:-1
+msgid "boolean"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:28
+msgid ""
+"If given, the resolution assumes a reduce operation is happening which "
+"slightly changes the promotion and type resolution rules. `dtypes` is "
+"usually something like ``(None, np.dtype(\"i2\"), None)`` for reductions "
+"(first input is also the output)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:35
+msgid ""
+"The default casting mode is \"same_kind\", however, as of NumPy 1.24, NumPy "
+"uses \"unsafe\" for reductions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:-1
+msgid "tuple of dtypes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:43
+msgid ""
+"The dtypes which NumPy would use for the calculation.  Note that dtypes may "
+"not match the passed in ones (casting is necessary)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:56
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:61
+msgid "This API requires passing dtypes, define them for convenience:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:67
+msgid ""
+"The typical ufunc call does not pass an output dtype.  `numpy.add` has two "
+"inputs and one output, so leave the output as ``None`` (not provided):"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:73
+msgid ""
+"The loop found uses \"float64\" for all operands (including the output), the "
+"first input would be cast."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:76
+msgid ""
+"``resolve_dtypes`` supports \"weak\" handling for Python scalars by passing "
+"``int``, ``float``, or ``complex``:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:82
+msgid ""
+"Where the Python ``float`` behaves similar to a Python value ``0.0`` in a "
+"ufunc call.  (See :ref:`NEP 50 <NEP50>` for details.)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:-1
+msgid ""
+"<div id=\"09cdc289-6766-4a81-a410-3af3274e7939\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('961c80e4-b7c6-4026-afe9-"
+"f657b31a4d82','09cdc289-6766-4a81-a410-3af3274e7939')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('961c80e4-b7c6-4026-afe9-f657b31a4d82','09cdc289-6766-4a81-"
+"a410-3af3274e7939')\">Open In Tab</button></div><div id=\"7a2f08a3-f5dc-46ad-"
+"b1fc-44c7227e2e8a\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.resolve_dtypes:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

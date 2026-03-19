@@ -1,0 +1,189 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.arctan.rst:4
+msgid "numpy.arctan"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:2
+msgid "Trigonometric inverse tangent, element-wise."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:4
+msgid "The inverse of tan, so that if ``y = tan(x)`` then ``x = arctan(y)``."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:9
+msgid "**x**"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:15 numpy.arctan:42
+msgid "**out**"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:-1
+msgid "ndarray, None, or tuple of ndarray and None, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:12
+msgid ""
+"A location into which the result is stored. If provided, it must have a "
+"shape that the inputs broadcast to. If not provided or None, a freshly-"
+"allocated array is returned. A tuple (possible only as a keyword argument) "
+"must have length equal to the number of outputs."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:23
+msgid "**where**"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:18
+msgid ""
+"This condition is broadcast over the input. At locations where the condition "
+"is True, the `out` array will be set to the ufunc result. Elsewhere, the "
+"`out` array will retain its original value. Note that if an uninitialized "
+"`out` array is created via the default ``out=None``, locations within it "
+"where the condition is False will remain uninitialized."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:29
+msgid "**\\*\\*kwargs**"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:26
+msgid ""
+"For other keyword-only arguments, see the :ref:`ufunc docs <ufuncs.kwargs>`."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:-1
+msgid "ndarray or scalar"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:34
+msgid ""
+"Out has the same shape as `x`.  Its real part is in ``[-pi/2, pi/2]`` "
+"(``arctan(+/-inf)`` returns ``+/-pi/2``). This is a scalar if `x` is a "
+"scalar."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:47
+msgid ":obj:`arctan2`"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:48
+msgid ""
+"The \"four quadrant\" arctan of the angle formed by (`x`, `y`) and the "
+"positive `x`-axis."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:49
+msgid ":obj:`angle`"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:50
+msgid "Argument of complex values."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:54
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:55
+msgid ""
+"`arctan` is a multi-valued function: for each `x` there are infinitely many "
+"numbers `z` such that tan(`z`) = `x`.  The convention is to return the angle "
+"`z` whose real part lies in [-pi/2, pi/2]."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:59
+msgid ""
+"For real-valued input data types, `arctan` always returns real output. For "
+"each value that cannot be expressed as a real number or infinity, it yields "
+"``nan`` and sets the `invalid` floating point error flag."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:63
+msgid ""
+"For complex-valued input, `arctan` is a complex analytic function that has "
+"[``1j, infj``] and [``-1j, -infj``] as branch cuts, and is continuous from "
+"the left on the former and from the right on the latter."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:67
+msgid "The inverse tangent is also known as `atan` or tan^{-1}."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:70
+msgid "References"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:71
+msgid ""
+"Abramowitz, M. and Stegun, I. A., *Handbook of Mathematical Functions*, 10th "
+"printing, New York: Dover, 1964, pp. 79. https://personal.math.ubc.ca/~cbm/"
+"aands/page_79.htm"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:80
+msgid "Examples"
+msgstr ""
+
+#: ../../../reference/generated/numpy.arctan.rst:3
+msgid "We expect the arctan of 0 to be 0, and of 1 to be pi/4:"
+msgstr ""
+
+#: ../../../reference/generated/numpy.arctan.rst:12
+msgid "Plot arctan:"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:104
+msgid ""
+"<div id=\"1355a6a5-b3f7-4c09-b269-7f78f6b4a8e2\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('782065f0-cf44-4344-9bdd-5d0af6e74330','1355a6a5-"
+"b3f7-4c09-b269-7f78f6b4a8e2')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('782065f0-"
+"cf44-4344-9bdd-5d0af6e74330','1355a6a5-b3f7-4c09-b269-7f78f6b4a8e2')\">Open "
+"In Tab</button></div><div id=\"7710b6a1-d755-4a4c-a7fe-50b44dafbcdd\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan:104
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""
