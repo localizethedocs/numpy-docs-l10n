@@ -1,0 +1,910 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../f2py/usage.rst:3
+msgid "Using F2PY"
+msgstr ""
+
+#: ../../../f2py/usage.rst:5
+msgid ""
+"This page contains a reference to all command-line options for the ``f2py`` "
+"command, as well as a reference to internal functions of the ``numpy.f2py`` "
+"module."
+msgstr ""
+
+#: ../../../f2py/usage.rst:10
+msgid "Using ``f2py`` as a command-line tool"
+msgstr ""
+
+#: ../../../f2py/usage.rst:12
+msgid ""
+"When used as a command-line tool, ``f2py`` has three major modes, "
+"distinguished by the usage of ``-c`` and ``-h`` switches."
+msgstr ""
+
+#: ../../../f2py/usage.rst:16
+msgid "1. Signature file generation"
+msgstr ""
+
+#: ../../../f2py/usage.rst:18
+msgid "To scan Fortran sources and generate a signature file, use"
+msgstr ""
+
+#: ../../../f2py/usage.rst:20
+msgid ""
+"f2py -h <filename.pyf> <options> <fortran files>   \\\n"
+"  [[ only: <fortran functions>  : ]                \\\n"
+"    [ skip: <fortran functions>  : ]]...           \\\n"
+"  [<fortran files> ...]"
+msgstr ""
+
+#: ../../../f2py/usage.rst:29
+msgid ""
+"A Fortran source file can contain many routines, and it is often not "
+"necessary to allow all routines to be usable from Python. In such cases, "
+"either specify which routines should be wrapped (in the ``only: .. :`` part) "
+"or which routines F2PY should ignore (in the ``skip: .. :`` part)."
+msgstr ""
+
+#: ../../../f2py/usage.rst:34
+msgid ""
+"F2PY has no concept of a \"per-file\" ``skip`` or ``only`` list, so if "
+"functions are listed in ``only``, no other functions will be taken from any "
+"other files."
+msgstr ""
+
+#: ../../../f2py/usage.rst:37
+msgid ""
+"If ``<filename.pyf>`` is specified as ``stdout``, then signatures are "
+"written to standard output instead of a file."
+msgstr ""
+
+#: ../../../f2py/usage.rst:40
+msgid ""
+"Among other options (see below), the following can be used in this mode:"
+msgstr ""
+
+#: ../../../f2py/usage.rst:43
+msgid "``--overwrite-signature``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:43
+msgid "Overwrites an existing signature file."
+msgstr ""
+
+#: ../../../f2py/usage.rst:46
+msgid "2. Extension module construction"
+msgstr ""
+
+#: ../../../f2py/usage.rst:48
+msgid "To construct an extension module, use"
+msgstr ""
+
+#: ../../../f2py/usage.rst:50
+msgid ""
+"f2py -m <modulename> <options> <fortran files>   \\\n"
+"  [[ only: <fortran functions>  : ]              \\\n"
+"    [ skip: <fortran functions>  : ]]...          \\\n"
+"  [<fortran files> ...]"
+msgstr ""
+
+#: ../../../f2py/usage.rst:57
+msgid ""
+"The constructed extension module is saved as ``<modulename>module.c`` to the "
+"current directory."
+msgstr ""
+
+#: ../../../f2py/usage.rst:60
+msgid ""
+"Here ``<fortran files>`` may also contain signature files. Among other "
+"options (see below), the following options can be used in this mode:"
+msgstr ""
+
+#: ../../../f2py/usage.rst:66
+msgid "``--debug-capi``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:64
+msgid ""
+"Adds debugging hooks to the extension module. When using this extension "
+"module, various diagnostic information about the wrapper is written to the "
+"standard output, for example, the values of variables, the steps taken, etc."
+msgstr ""
+
+#: ../../../f2py/usage.rst:82
+msgid "``-include'<includefile>'``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:69
+msgid ""
+"Add a CPP ``#include`` statement to the extension module source. "
+"``<includefile>`` should be given in one of the following forms"
+msgstr ""
+
+#: ../../../f2py/usage.rst:72
+msgid ""
+"\"filename.ext\"\n"
+"<filename.ext>"
+msgstr ""
+
+#: ../../../f2py/usage.rst:77
+msgid ""
+"The include statement is inserted just before the wrapper functions. This "
+"feature enables using arbitrary C functions (defined in ``<includefile>``) "
+"in F2PY generated wrappers."
+msgstr ""
+
+#: ../../../f2py/usage.rst:81
+msgid ""
+"This option is deprecated. Use ``usercode`` statement to specify C code "
+"snippets directly in signature files."
+msgstr ""
+
+#: ../../../f2py/usage.rst:87
+msgid "``--[no-]wrap-functions``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:85
+msgid ""
+"Create Fortran subroutine wrappers to Fortran functions. ``--wrap-"
+"functions`` is default because it ensures maximum portability and compiler "
+"independence."
+msgstr ""
+
+#: ../../../f2py/usage.rst:94
+msgid "``--[no-]freethreading-compatible``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:90
+msgid ""
+"Create a module that declares it does or doesn't require the GIL. The "
+"default is ``--no-freethreading-compatible`` for backwards compatibility. "
+"Inspect the fortran code you are wrapping for thread safety issues before "
+"passing ``--freethreading-compatible``, as ``f2py`` does not analyze fortran "
+"code for thread safety issues."
+msgstr ""
+
+#: ../../../f2py/usage.rst:102
+msgid "``--include-paths \"<path1>:<path2>...\"``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:97
+msgid "Search include files from given directories."
+msgstr ""
+
+#: ../../../f2py/usage.rst:99
+msgid ""
+"The paths are to be separated by the correct operating system separator :py:"
+"data:`~os.pathsep`, that is ``:`` on Linux / MacOS and ``;`` on Windows. In "
+"``CMake`` this corresponds to using ``$<SEMICOLON>``."
+msgstr ""
+
+#: ../../../f2py/usage.rst:106
+msgid "``--help-link [<list of resources names>]``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:105
+msgid ""
+"List system resources found by ``numpy_distutils/system_info.py``. For "
+"example, try ``f2py --help-link lapack_opt``."
+msgstr ""
+
+#: ../../../f2py/usage.rst:109
+msgid "3. Building a module"
+msgstr ""
+
+#: ../../../f2py/usage.rst:111
+msgid "To build an extension module, use"
+msgstr ""
+
+#: ../../../f2py/usage.rst:113
+msgid ""
+"f2py -c <options> <fortran files>       \\\n"
+"  [[ only: <fortran functions>  : ]     \\\n"
+"    [ skip: <fortran functions>  : ]]... \\\n"
+"  [ <fortran/c source files> ] [ <.o, .a, .so files> ]"
+msgstr ""
+
+#: ../../../f2py/usage.rst:120
+msgid ""
+"If ``<fortran files>`` contains a signature file, then the source for an "
+"extension module is constructed, all Fortran and C sources are compiled, and "
+"finally all object and library files are linked to the extension module "
+"``<modulename>.so`` which is saved into the current directory."
+msgstr ""
+
+#: ../../../f2py/usage.rst:125
+msgid ""
+"If ``<fortran files>`` does not contain a signature file, then an extension "
+"module is constructed by scanning all Fortran source codes for routine "
+"signatures, before proceeding to build the extension module."
+msgstr ""
+
+#: ../../../f2py/usage.rst:130
+msgid ""
+"From Python 3.12 onwards, ``distutils`` has been removed. Use environment "
+"variables or native files to interact with ``meson`` instead. See its `FAQ "
+"<https://mesonbuild.com/howtox.html>`__ for more information."
+msgstr ""
+
+#: ../../../f2py/usage.rst:134
+msgid ""
+"Among other options (see below) and options described for previous modes, "
+"the following can be used."
+msgstr ""
+
+#: ../../../f2py/usage.rst:138
+msgid ""
+"There are now two separate build backends which can be used, ``distutils`` "
+"and ``meson``. Users are **strongly** recommended to switch to ``meson`` "
+"since it is the default above Python ``3.12``."
+msgstr ""
+
+#: ../../../f2py/usage.rst:143
+msgid "Common build flags:"
+msgstr ""
+
+#: ../../../f2py/usage.rst:147
+msgid "``--backend <backend_type>``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:146
+msgid ""
+"Specify the build backend for the compilation process.  The supported "
+"backends are ``meson`` and ``distutils``.  If not specified, defaults to "
+"``distutils``. On Python 3.12 or higher, the default is ``meson``."
+msgstr ""
+
+#: ../../../f2py/usage.rst:149
+msgid "``--f77flags=<string>``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:150
+msgid "Specify F77 compiler flags"
+msgstr ""
+
+#: ../../../f2py/usage.rst:151
+msgid "``--f90flags=<string>``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:152
+msgid "Specify F90 compiler flags"
+msgstr ""
+
+#: ../../../f2py/usage.rst:153
+msgid "``--debug``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:154
+msgid "Compile with debugging information"
+msgstr ""
+
+#: ../../../f2py/usage.rst:155
+msgid "``-l<libname>``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:156
+msgid "Use the library ``<libname>`` when linking."
+msgstr ""
+
+#: ../../../f2py/usage.rst:157
+msgid "``-D<macro>[=<defn=1>]``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:158
+msgid "Define macro ``<macro>`` as ``<defn>``."
+msgstr ""
+
+#: ../../../f2py/usage.rst:159
+msgid "``-U<macro>``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:160
+msgid "Define macro ``<macro>``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:162
+msgid "``-I<dir>``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:162
+msgid ""
+"Append directory ``<dir>`` to the list of directories searched for include "
+"files."
+msgstr ""
+
+#: ../../../f2py/usage.rst:166
+msgid "``-L<dir>``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:165
+msgid ""
+"Add directory ``<dir>`` to the list of directories to be searched for ``-l``."
+msgstr ""
+
+#: ../../../f2py/usage.rst:168
+msgid "The ``meson`` specific flags are:"
+msgstr ""
+
+#: ../../../f2py/usage.rst:175
+msgid "``--dep <dependency>`` **meson only**"
+msgstr ""
+
+#: ../../../f2py/usage.rst:171
+msgid ""
+"Specify a meson dependency for the module. This may be passed multiple times "
+"for multiple dependencies. Dependencies are stored in a list for further "
+"processing. Example: ``--dep lapack --dep scalapack`` This will identify "
+"\"lapack\" and \"scalapack\" as dependencies and remove them from argv, "
+"leaving a dependencies list containing [\"lapack\", \"scalapack\"]."
+msgstr ""
+
+#: ../../../f2py/usage.rst:177
+msgid "The older ``distutils`` flags are:"
+msgstr ""
+
+#: ../../../f2py/usage.rst:179
+msgid "``--help-fcompiler`` **no meson**"
+msgstr ""
+
+#: ../../../f2py/usage.rst:180
+msgid "List the available Fortran compilers."
+msgstr ""
+
+#: ../../../f2py/usage.rst:181
+msgid "``--fcompiler=<Vendor>`` **no meson**"
+msgstr ""
+
+#: ../../../f2py/usage.rst:182
+msgid "Specify a Fortran compiler type by vendor."
+msgstr ""
+
+#: ../../../f2py/usage.rst:183
+msgid "``--f77exec=<path>`` **no meson**"
+msgstr ""
+
+#: ../../../f2py/usage.rst:184
+msgid "Specify the path to a F77 compiler"
+msgstr ""
+
+#: ../../../f2py/usage.rst:185
+msgid "``--f90exec=<path>`` **no meson**"
+msgstr ""
+
+#: ../../../f2py/usage.rst:186
+msgid "Specify the path to a F90 compiler"
+msgstr ""
+
+#: ../../../f2py/usage.rst:187
+msgid "``--opt=<string>`` **no meson**"
+msgstr ""
+
+#: ../../../f2py/usage.rst:188
+msgid "Specify optimization flags"
+msgstr ""
+
+#: ../../../f2py/usage.rst:189
+msgid "``--arch=<string>`` **no meson**"
+msgstr ""
+
+#: ../../../f2py/usage.rst:190
+msgid "Specify architecture specific optimization flags"
+msgstr ""
+
+#: ../../../f2py/usage.rst:191
+msgid "``--noopt`` **no meson**"
+msgstr ""
+
+#: ../../../f2py/usage.rst:192
+msgid "Compile without optimization flags"
+msgstr ""
+
+#: ../../../f2py/usage.rst:193
+msgid "``--noarch`` **no meson**"
+msgstr ""
+
+#: ../../../f2py/usage.rst:194
+msgid "Compile without arch-dependent optimization flags"
+msgstr ""
+
+#: ../../../f2py/usage.rst:199
+msgid "``link-<resource>`` **no meson**"
+msgstr ""
+
+#: ../../../f2py/usage.rst:196
+msgid ""
+"Link the extension module with <resource> as defined by ``numpy_distutils/"
+"system_info.py``. E.g. to link with optimized LAPACK libraries (vecLib on "
+"MacOSX, ATLAS elsewhere), use ``--link-lapack_opt``. See also ``--help-"
+"link`` switch."
+msgstr ""
+
+#: ../../../f2py/usage.rst:203
+msgid ""
+"The ``f2py -c`` option must be applied either to an existing ``.pyf`` file "
+"(plus the source/object/library files) or one must specify the ``-m "
+"<modulename>`` option (plus the sources/object/library files). Use one of "
+"the following options:"
+msgstr ""
+
+#: ../../../f2py/usage.rst:208
+msgid "f2py -c -m fib1 fib1.f"
+msgstr ""
+
+#: ../../../f2py/usage.rst:212
+msgid "or"
+msgstr ""
+
+#: ../../../f2py/usage.rst:214
+msgid ""
+"f2py -m fib1 fib1.f -h fib1.pyf\n"
+"f2py -c fib1.pyf fib1.f"
+msgstr ""
+
+#: ../../../f2py/usage.rst:219
+msgid ""
+"For more information, see the `Building C and C++ Extensions`__ Python "
+"documentation for details."
+msgstr ""
+
+#: ../../../f2py/usage.rst:225
+msgid ""
+"When building an extension module, a combination of the following macros may "
+"be required for non-gcc Fortran compilers:"
+msgstr ""
+
+#: ../../../f2py/usage.rst:228
+msgid ""
+"-DPREPEND_FORTRAN\n"
+"-DNO_APPEND_FORTRAN\n"
+"-DUPPERCASE_FORTRAN"
+msgstr ""
+
+#: ../../../f2py/usage.rst:234
+msgid ""
+"To test the performance of F2PY generated interfaces, use ``-"
+"DF2PY_REPORT_ATEXIT``. Then a report of various timings is printed out at "
+"the exit of Python. This feature may not work on all platforms, and "
+"currently only Linux is supported."
+msgstr ""
+
+#: ../../../f2py/usage.rst:239
+msgid ""
+"To see whether F2PY generated interface performs copies of array arguments, "
+"use ``-DF2PY_REPORT_ON_ARRAY_COPY=<int>``. When the size of an array "
+"argument is larger than ``<int>``, a message about the copying is sent to "
+"``stderr``."
+msgstr ""
+
+#: ../../../f2py/usage.rst:244
+msgid "Other options"
+msgstr ""
+
+#: ../../../f2py/usage.rst:247
+msgid "``-m <modulename>``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:247
+msgid "Name of an extension module. Default is ``untitled``."
+msgstr ""
+
+#: ../../../f2py/usage.rst:250
+msgid "Don't use this option if a signature file (``*.pyf``) is used."
+msgstr ""
+
+#: ../../../f2py/usage.rst:252
+msgid "Will ignore ``-m`` if a ``pyf`` file is provided."
+msgstr ""
+
+#: ../../../f2py/usage.rst:256
+msgid "``--[no-]lower``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:256
+msgid ""
+"Do [not] lower the cases in ``<fortran files>``. By default, ``--lower`` is "
+"assumed with ``-h`` switch, and ``--no-lower`` without the ``-h`` switch."
+msgstr ""
+
+#: ../../../f2py/usage.rst:260
+msgid "``-include<header>``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:259
+msgid ""
+"Writes additional headers in the C wrapper, can be passed multiple times, "
+"generates #include <header> each time. Note that this is meant to be passed "
+"in single quotes and without spaces, for example ``'-include<stdbool.h>'``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:263
+msgid "``--build-dir <dirname>``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:263
+msgid ""
+"All F2PY generated files are created in ``<dirname>``. Default is ``tempfile."
+"mkdtemp()``."
+msgstr ""
+
+#: ../../../f2py/usage.rst:265
+msgid "``--f2cmap <filename>``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:266
+msgid "Load Fortran-to-C ``KIND`` specifications from the given file."
+msgstr ""
+
+#: ../../../f2py/usage.rst:267
+msgid "``--quiet``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:268
+msgid "Run quietly."
+msgstr ""
+
+#: ../../../f2py/usage.rst:269
+msgid "``--verbose``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:270
+msgid "Run with extra verbosity."
+msgstr ""
+
+#: ../../../f2py/usage.rst:272
+msgid "``--skip-empty-wrappers``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:272
+msgid ""
+"Do not generate wrapper files unless required by the inputs. This is a "
+"backwards compatibility flag to restore pre 1.22.4 behavior."
+msgstr ""
+
+#: ../../../f2py/usage.rst:275
+msgid "``-v``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:275
+msgid "Print the F2PY version and exit."
+msgstr ""
+
+#: ../../../f2py/usage.rst:277
+msgid ""
+"Execute ``f2py`` without any options to get an up-to-date list of available "
+"options."
+msgstr ""
+
+#: ../../../f2py/usage.rst:283
+msgid "Python module ``numpy.f2py``"
+msgstr ""
+
+#: ../../../f2py/usage.rst:289
+msgid ""
+"There used to be a ``f2py.compile`` function, which was removed, users may "
+"wrap ``python -m numpy.f2py`` via ``subprocess.run`` manually, and set "
+"environment variables to interact with ``meson`` as required."
+msgstr ""
+
+#: ../../../f2py/usage.rst:293
+msgid ""
+"When using ``numpy.f2py`` as a module, the following functions can be "
+"invoked."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py:1
+msgid "Fortran to Python Interface Generator."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py:3
+msgid ""
+"Copyright 1999 -- 2011 Pearu Peterson all rights reserved. Copyright 2011 -- "
+"present NumPy Developers. Permission to use, modify, and distribute this "
+"software is given under the terms of the NumPy License."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py:8
+msgid "NO WARRANTY IS EXPRESSED OR IMPLIED.  USE AT YOUR OWN RISK."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.get_include:2
+msgid ""
+"Return the directory that contains the ``fortranobject.c`` and ``.h`` files."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.get_include:6
+msgid ""
+"This function is not needed when building an extension with `numpy."
+"distutils` directly from ``.f`` and/or ``.pyf`` files in one go."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.get_include:10
+msgid ""
+"Python extension modules built with f2py-generated code need to use "
+"``fortranobject.c`` as a source file, and include the ``fortranobject.h`` "
+"header. This function can be used to obtain the directory containing both of "
+"these files."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.get_include:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.get_include:26
+msgid "**include_path**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.get_include:-1
+msgid "str"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.get_include:19
+msgid ""
+"Absolute path to the directory containing ``fortranobject.c`` and "
+"``fortranobject.h``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.get_include:31
+msgid ":obj:`numpy.get_include`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.get_include:32
+msgid "function that returns the numpy include directory"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.get_include:36
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.get_include:39
+msgid ""
+"Unless the build system you are using has specific support for f2py, "
+"building a Python extension using a ``.pyf`` signature file is a two-step "
+"process. For a module ``mymod``:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.get_include:43
+msgid ""
+"Step 1: run ``python -m numpy.f2py mymod.pyf --quiet``. This generates "
+"``mymodmodule.c`` and (if needed) ``mymod-f2pywrappers.f`` files next to "
+"``mymod.pyf``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.get_include:46
+msgid ""
+"Step 2: build your Python extension module. This requires the following "
+"source files:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.get_include:49
+msgid "``mymodmodule.c``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.get_include:50
+msgid "``mymod-f2pywrappers.f`` (if it was generated in Step 1)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.get_include:51
+msgid "``fortranobject.c``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.f2py2e.run_main:2
+msgid "Equivalent to running::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.f2py2e.run_main:4
+msgid "f2py <args>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.f2py2e.run_main:6
+msgid ""
+"where ``<args>=string.join(<list>,' ')``, but in Python.  Unless ``-h`` is "
+"used, this function returns a dictionary containing information on generated "
+"modules and their dependencies on source files."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.f2py2e.run_main:11
+msgid ""
+"You cannot build extension modules with this function, that is, using ``-c`` "
+"is not allowed. Use the ``compile`` command instead."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.f2py2e.run_main:26
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.f2py2e.run_main:31
+msgid ""
+"The command ``f2py -m scalar scalar.f`` can be executed from Python as "
+"follows."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/f2py/__init__.py:docstring
+#: of numpy.f2py.f2py2e.run_main:34
+msgid ""
+">>> import numpy.f2py\n"
+">>> r = numpy.f2py.run_main(['-m','scalar','doc/source/f2py/scalar.f'])\n"
+"Reading fortran codes...\n"
+"        Reading file 'doc/source/f2py/scalar.f' (format:fix,strict)\n"
+"Post-processing...\n"
+"        Block: scalar\n"
+"                        Block: FOO\n"
+"Building modules...\n"
+"        Building module \"scalar\"...\n"
+"        Wrote C/API module \"scalar\" to file \"./scalarmodule.c\"\n"
+">>> print(r)\n"
+"{'scalar': {'h': ['/home/users/pearu/src_cvs/f2py/src/fortranobject.h'],\n"
+"\t 'csrc': ['./scalarmodule.c', \n"
+"                  '/home/users/pearu/src_cvs/f2py/src/fortranobject.c']}}\n"
+msgstr ""
+
+#: ../../../f2py/usage.rst:299
+msgid "Automatic extension module generation"
+msgstr ""
+
+#: ../../../f2py/usage.rst:301
+msgid ""
+"If you want to distribute your f2py extension module, then you only need to "
+"include the .pyf file and the Fortran code. The distutils extensions in "
+"NumPy allow you to define an extension module entirely in terms of this "
+"interface file. A valid ``setup.py`` file allowing distribution of the ``add."
+"f`` module (as part of the package ``f2py_examples`` so that it would be "
+"loaded as ``f2py_examples.add``) is:"
+msgstr ""
+
+#: ../../../f2py/usage.rst:308
+msgid ""
+"def configuration(parent_package='', top_path=None)\n"
+"    from numpy.distutils.misc_util import Configuration\n"
+"    config = Configuration('f2py_examples',parent_package, top_path)\n"
+"    config.add_extension('add', sources=['add.pyf','add.f'])\n"
+"    return config\n"
+"\n"
+"if __name__ == '__main__':\n"
+"    from numpy.distutils.core import setup\n"
+"    setup(**configuration(top_path='').todict())"
+msgstr ""
+
+#: ../../../f2py/usage.rst:320
+msgid "Installation of the new package is easy using::"
+msgstr ""
+
+#: ../../../f2py/usage.rst:322
+msgid "pip install ."
+msgstr ""
+
+#: ../../../f2py/usage.rst:324
+msgid ""
+"assuming you have the proper permissions to write to the main site- packages "
+"directory for the version of Python you are using. For the resulting package "
+"to work, you need to create a file named ``__init__.py`` (in the same "
+"directory as ``add.pyf``). Notice the extension module is defined entirely "
+"in terms of the ``add.pyf`` and ``add.f`` files. The conversion of the .pyf "
+"file to a .c file is handled by `numpy.distutils`."
+msgstr ""
+
+#: ../../../f2py/usage.rst:332
+msgid "Building with Meson (Examples)"
+msgstr ""
+
+#: ../../../f2py/usage.rst:335
+msgid "Using f2py with Meson"
+msgstr ""
+
+#: ../../../f2py/usage.rst:337
+msgid ""
+"Meson is a modern build system recommended for building Python extension "
+"modules, especially starting with Python 3.12 and NumPy 2.x. Meson provides "
+"a robust and maintainable way to build Fortran extensions with f2py."
+msgstr ""
+
+#: ../../../f2py/usage.rst:341
+msgid ""
+"To build a Fortran extension using f2py and Meson, you can use Meson's "
+"``custom_target`` to invoke f2py and generate the extension module. The "
+"following minimal example demonstrates how to do this:"
+msgstr ""
+
+#: ../../../f2py/usage.rst:345
+msgid ""
+"This example shows how to build the ``add`` extension from the ``add.f`` and "
+"``add.pyf`` files described in the :ref:`f2py-examples` (note that you do "
+"not always need a ``.pyf`` file: in many cases ``f2py`` can figure out the "
+"annotations by itself)."
+msgstr ""
+
+#: ../../../f2py/usage.rst:349
+msgid "Project layout:"
+msgstr ""
+
+#: ../../../f2py/usage.rst:355
+msgid "f2py_examples/"
+msgstr ""
+
+#: ../../../f2py/usage.rst:352
+msgid "meson.build add.f add.pyf (optional) __init__.py  (can be empty)"
+msgstr ""
+
+#: ../../../f2py/usage.rst:357
+msgid "Example ``meson.build``:"
+msgstr ""
+
+#: ../../../f2py/usage.rst:359
+msgid ""
+"project('f2py_examples', 'fortran')\n"
+"\n"
+"py = import('python').find_installation()\n"
+"\n"
+"# List your Fortran source files\n"
+"sources = files('add.pyf', 'add.f')\n"
+"\n"
+"# Build the extension by invoking f2py via a custom target\n"
+"add_mod = custom_target(\n"
+"  'add_extension',\n"
+"  input: sources,\n"
+"  output: ['add' + py.extension_suffix()],\n"
+"  command: [\n"
+"    py.full_path(), '-m', 'numpy.f2py',\n"
+"    '-c', 'add.pyf', 'add.f',\n"
+"    '-m', 'add'\n"
+"  ],\n"
+"  build_by_default: true\n"
+")\n"
+"\n"
+"# Install into site-packages under the f2py_examples package\n"
+"install_subdir('.', install_dir: join_paths(py.site_packages_dir(), "
+"'f2py_examples'),\n"
+"               strip_directory: false,\n"
+"               exclude_files: ['meson.build'])\n"
+"\n"
+"# Also install the built extension (place it beside __init__.py)\n"
+"install_data(add_mod, install_dir: join_paths(py.site_packages_dir(), "
+"'f2py_examples'))"
+msgstr ""
+
+#: ../../../f2py/usage.rst:389
+msgid ""
+"For more details and advanced usage, see the Meson build guide in the user "
+"documentation or refer to SciPy's Meson build files for real-world examples: "
+"https://github.com/scipy/scipy/tree/main/meson.build"
+msgstr ""

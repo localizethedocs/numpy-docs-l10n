@@ -1,0 +1,841 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release/1.19.0-notes.rst:5
+msgid "NumPy 1.19.0 Release Notes"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:6
+msgid ""
+"This NumPy release is marked by the removal of much technical debt: support "
+"for Python 2 has been removed, many deprecations have been expired, and "
+"documentation has been improved. The polishing of the random module "
+"continues apace with bug fixes and better usability from Cython."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:11
+msgid ""
+"The Python versions supported for this release are 3.6-3.8. Downstream "
+"developers should use Cython >= 0.29.16 for Python 3.8 support and OpenBLAS "
+">= 3.7 to avoid problems on the Skylake architecture."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:17
+msgid "Highlights"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:19
+msgid ""
+"Code compatibility with Python versions < 3.6 (including Python 2) was "
+"dropped from both the python and C code. The shims in ``numpy.compat`` will "
+"remain to support third-party packages, but they may be deprecated in a "
+"future release. Note that 1.19.x will *not* compile with earlier versions of "
+"Python due to the use of f-strings."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:25
+msgid "(`gh-15233 <https://github.com/numpy/numpy/pull/15233>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:29
+msgid "Expired deprecations"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:32
+msgid ""
+"``numpy.insert`` and ``numpy.delete`` can no longer be passed an axis on 0d "
+"arrays"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:33
+msgid ""
+"This concludes a deprecation from 1.9, where when an ``axis`` argument was "
+"passed to a call to ``~numpy.insert`` and ``~numpy.delete`` on a 0d array, "
+"the ``axis`` and ``obj`` argument and indices would be completely ignored. "
+"In these cases, ``insert(arr, \"nonsense\", 42, axis=0)`` would actually "
+"overwrite the entire array, while ``delete(arr, \"nonsense\", axis=0)`` "
+"would be ``arr.copy()``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:39
+msgid "Now passing ``axis`` on a 0d array raises ``~numpy.AxisError``."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:41
+msgid "(`gh-15802 <https://github.com/numpy/numpy/pull/15802>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:44
+msgid "``numpy.delete`` no longer ignores out-of-bounds indices"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:45
+msgid ""
+"This concludes deprecations from 1.8 and 1.9, where ``np.delete`` would "
+"ignore both negative and out-of-bounds items in a sequence of indices. This "
+"was at odds with its behavior when passed a single index."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:49
+msgid ""
+"Now out-of-bounds items throw ``IndexError``, and negative items index from "
+"the end."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:52
+msgid "(`gh-15804 <https://github.com/numpy/numpy/pull/15804>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:55
+msgid ""
+"``numpy.insert`` and ``numpy.delete`` no longer accept non-integral indices"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:56
+msgid ""
+"This concludes a deprecation from 1.9, where sequences of non-integers "
+"indices were allowed and cast to integers. Now passing sequences of non-"
+"integral indices raises ``IndexError``, just like it does when passing a "
+"single non-integral scalar."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:61
+msgid "(`gh-15805 <https://github.com/numpy/numpy/pull/15805>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:64
+msgid "``numpy.delete`` no longer casts boolean indices to integers"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:65
+msgid ""
+"This concludes a deprecation from 1.8, where ``np.delete`` would cast "
+"boolean arrays and scalars passed as an index argument into integer indices. "
+"The behavior now is to treat boolean arrays as a mask, and to raise an error "
+"on boolean scalars."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:70
+msgid "(`gh-15815 <https://github.com/numpy/numpy/pull/15815>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:74
+msgid "Compatibility notes"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:77
+msgid "Changed random variate stream from ``numpy.random.Generator.dirichlet``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:78
+msgid ""
+"A bug in the generation of random variates for the Dirichlet distribution "
+"with small 'alpha' values was fixed by using a different algorithm when "
+"``max(alpha) < 0.1``.  Because of the change, the stream of variates "
+"generated by ``dirichlet`` in this case will be different from previous "
+"releases."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:84
+msgid "(`gh-14924 <https://github.com/numpy/numpy/pull/14924>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:87
+msgid "Scalar promotion in ``PyArray_ConvertToCommonType``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:88
+msgid ""
+"The promotion of mixed scalars and arrays in ``PyArray_ConvertToCommonType`` "
+"has been changed to adhere to those used by ``np.result_type``. This means "
+"that input such as ``(1000, np.array([1], dtype=np.uint8)))`` will now "
+"return ``uint16`` dtypes. In most cases the behaviour is unchanged. Note "
+"that the use of this C-API function is generally discouraged. This also "
+"fixes ``np.choose`` to behave the same way as the rest of NumPy in this "
+"respect."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:96
+msgid "(`gh-14933 <https://github.com/numpy/numpy/pull/14933>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:99
+msgid "Fasttake and fastputmask slots are deprecated and NULL'ed"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:100
+msgid ""
+"The fasttake and fastputmask slots are now never used and must always be set "
+"to NULL. This will result in no change in behaviour. However, if a user "
+"dtype should set one of these a DeprecationWarning will be given."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:105
+msgid "(`gh-14942 <https://github.com/numpy/numpy/pull/14942>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:108
+msgid "``np.ediff1d`` casting behaviour with ``to_end`` and ``to_begin``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:109
+msgid ""
+"``np.ediff1d`` now uses the ``\"same_kind\"`` casting rule for its "
+"additional ``to_end`` and ``to_begin`` arguments. This ensures type safety "
+"except when the input array has a smaller integer type than ``to_begin`` or "
+"``to_end``. In rare cases, the behaviour will be more strict than it was "
+"previously in 1.16 and 1.17. This is necessary to solve issues with floating "
+"point NaN."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:117
+msgid "(`gh-14981 <https://github.com/numpy/numpy/pull/14981>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:120
+msgid "Converting of empty array-like objects to NumPy arrays"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:121
+msgid ""
+"Objects with ``len(obj) == 0`` which implement an \"array-like\" interface, "
+"meaning an object implementing ``obj.__array__()``, ``obj."
+"__array_interface__``, ``obj.__array_struct__``, or the python buffer "
+"interface and which are also sequences (i.e. Pandas objects) will now always "
+"retain there shape correctly when converted to an array. If such an object "
+"has a shape of ``(0, 1)`` previously, it could be converted into an array of "
+"shape ``(0,)`` (losing all dimensions after the first 0)."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:130
+msgid "(`gh-14995 <https://github.com/numpy/numpy/pull/14995>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:133
+msgid "Removed ``multiarray.int_asbuffer``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:134
+msgid ""
+"As part of the continued removal of Python 2 compatibility, ``multiarray."
+"int_asbuffer`` was removed. On Python 3, it threw a ``NotImplementedError`` "
+"and was unused internally. It is expected that there are no downstream use "
+"cases for this method with Python 3."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:139
+msgid "(`gh-15229 <https://github.com/numpy/numpy/pull/15229>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:142
+msgid "``numpy.distutils.compat`` has been removed"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:143
+msgid ""
+"This module contained only the function ``get_exception()``, which was used "
+"as::"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:145
+msgid ""
+"try:\n"
+"    ...\n"
+"except Exception:\n"
+"    e = get_exception()"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:150
+msgid ""
+"Its purpose was to handle the change in syntax introduced in Python 2.6, "
+"from ``except Exception, e:`` to ``except Exception as e:``, meaning it was "
+"only necessary for codebases supporting Python 2.5 and older."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:154
+msgid "(`gh-15255 <https://github.com/numpy/numpy/pull/15255>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:157
+msgid "``issubdtype`` no longer interprets ``float`` as ``np.floating``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:158
+msgid ""
+"``numpy.issubdtype`` had a FutureWarning since NumPy 1.14 which has expired "
+"now. This means that certain input where the second argument was neither a "
+"datatype nor a NumPy scalar type (such as a string or a python type like "
+"``int`` or ``float``) will now be consistent with passing in ``np."
+"dtype(arg2).type``. This makes the result consistent with expectations and "
+"leads to a false result in some cases which previously returned true."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:166
+msgid "(`gh-15773 <https://github.com/numpy/numpy/pull/15773>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:169
+msgid "Change output of ``round`` on scalars to be consistent with Python"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:171
+msgid ""
+"Output of the ``__round__`` dunder method and consequently the Python built-"
+"in ``round`` has been changed to be a Python ``int`` to be consistent with "
+"calling it on Python ``float`` objects when called with no arguments. "
+"Previously, it would return a scalar of the ``np.dtype`` that was passed in."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:176 ../../../release/1.19.0-notes.rst:276
+msgid "(`gh-15840 <https://github.com/numpy/numpy/pull/15840>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:179
+msgid ""
+"The ``numpy.ndarray`` constructor no longer interprets ``strides=()`` as "
+"``strides=None``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:180
+msgid ""
+"The former has changed to have the expected meaning of setting ``numpy."
+"ndarray.strides`` to ``()``, while the latter continues to result in strides "
+"being chosen automatically."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:184
+msgid "(`gh-15882 <https://github.com/numpy/numpy/pull/15882>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:187
+msgid "C-Level string to datetime casts changed"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:188
+msgid ""
+"The C-level casts from strings were simplified. This changed also fixes "
+"string to datetime and timedelta casts to behave correctly (i.e. like Python "
+"casts using ``string_arr.astype(\"M8\")`` while previously the cast would "
+"behave like ``string_arr.astype(np.int_).astype(\"M8\")``. This only affects "
+"code using low-level C-API to do manual casts (not full array casts) of "
+"single scalar values or using e.g. ``PyArray_GetCastFunc``, and should thus "
+"not affect the vast majority of users."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:198
+msgid "(`gh-16068 <https://github.com/numpy/numpy/pull/16068>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:201
+msgid "``SeedSequence`` with small seeds no longer conflicts with spawning"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:202
+msgid ""
+"Small seeds (less than ``2**96``) were previously implicitly 0-padded out to "
+"128 bits, the size of the internal entropy pool. When spawned, the spawn key "
+"was concatenated before the 0-padding. Since the first spawn key is "
+"``(0,)``, small seeds before the spawn created the same states as the first "
+"spawned ``SeedSequence``.  Now, the seed is explicitly 0-padded out to the "
+"internal pool size before concatenating the spawn key. Spawned "
+"``SeedSequences`` will produce different results than in the previous "
+"release. Unspawned ``SeedSequences`` will still produce the same results."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:211
+msgid "(`gh-16551 <https://github.com/numpy/numpy/pull/16551>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:215
+msgid "Deprecations"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:218
+msgid "Deprecate automatic ``dtype=object`` for ragged input"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:219
+msgid ""
+"Calling ``np.array([[1, [1, 2, 3]])`` will issue a ``DeprecationWarning`` as "
+"per `NEP 34`_. Users should explicitly use ``dtype=object`` to avoid the "
+"warning."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:225
+msgid "(`gh-15119 <https://github.com/numpy/numpy/pull/15119>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:228
+msgid "Passing ``shape=0`` to factory functions in ``numpy.rec`` is deprecated"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:229
+msgid ""
+"``0`` is treated as a special case and is aliased to ``None`` in the "
+"functions:"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:231
+msgid "``numpy.core.records.fromarrays``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:232
+msgid "``numpy.core.records.fromrecords``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:233
+msgid "``numpy.core.records.fromstring``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:234
+msgid "``numpy.core.records.fromfile``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:236
+msgid ""
+"In future, ``0`` will not be special cased, and will be treated as an array "
+"length like any other integer."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:239
+msgid "(`gh-15217 <https://github.com/numpy/numpy/pull/15217>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:242
+msgid "Deprecation of probably unused C-API functions"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:243
+msgid ""
+"The following C-API functions are probably unused and have been deprecated:"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:246
+msgid "``PyArray_GetArrayParamsFromObject``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:247
+msgid "``PyUFunc_GenericFunction``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:248
+msgid "``PyUFunc_SetUsesArraysAsData``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:250
+msgid ""
+"In most cases ``PyArray_GetArrayParamsFromObject`` should be replaced by "
+"converting to an array, while ``PyUFunc_GenericFunction`` can be replaced "
+"with ``PyObject_Call`` (see documentation for details)."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:254
+msgid "(`gh-15427 <https://github.com/numpy/numpy/pull/15427>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:257
+msgid "Converting certain types to dtypes is Deprecated"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:258
+msgid ""
+"The super classes of scalar types, such as ``np.integer``, ``np.generic``, "
+"or ``np.inexact`` will now give a deprecation warning when converted to a "
+"dtype (or used in a dtype keyword argument). The reason for this is that "
+"``np.integer`` is converted to ``np.int_``, while it would be expected to "
+"represent *any* integer (e.g. also ``int8``, ``int16``, etc. For example, "
+"``dtype=np.floating`` is currently identical to ``dtype=np.float64``, even "
+"though also ``np.float32`` is a subclass of ``np.floating``."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:268
+msgid "(`gh-15534 <https://github.com/numpy/numpy/pull/15534>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:271
+msgid "Deprecation of ``round`` for ``np.complexfloating`` scalars"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:272
+msgid ""
+"Output of the ``__round__`` dunder method and consequently the Python built-"
+"in ``round`` has been deprecated on complex scalars. This does not affect "
+"``np.round``."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:279
+msgid "``numpy.ndarray.tostring()`` is deprecated in favor of ``tobytes()``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:280
+msgid ""
+"``~numpy.ndarray.tobytes`` has existed since the 1.9 release, but until this "
+"release ``~numpy.ndarray.tostring`` emitted no warning. The change to emit a "
+"warning brings NumPy in line with the builtin ``array.array`` methods of the "
+"same name."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:285
+msgid "(`gh-15867 <https://github.com/numpy/numpy/pull/15867>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:289
+msgid "C API changes"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:292
+msgid "Better support for ``const`` dimensions in API functions"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:293
+msgid "The following functions now accept a constant array of ``npy_intp``:"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:295
+msgid "``PyArray_BroadcastToShape``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:296
+msgid "``PyArray_IntTupleFromIntp``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:297
+msgid "``PyArray_OverflowMultiplyList``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:299
+msgid ""
+"Previously the caller would have to cast away the const-ness to call these "
+"functions."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:302
+msgid "(`gh-15251 <https://github.com/numpy/numpy/pull/15251>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:305
+msgid "Const qualify UFunc inner loops"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:306
+msgid ""
+"``UFuncGenericFunction`` now expects pointers to const ``dimension`` and "
+"``strides`` as arguments. This means inner loops may no longer modify either "
+"``dimension`` or ``strides``. This change leads to an ``incompatible-pointer-"
+"types`` warning forcing users to either ignore the compiler warnings or to "
+"const qualify their own loop signatures."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:312
+msgid "(`gh-15355 <https://github.com/numpy/numpy/pull/15355>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:316
+msgid "New Features"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:319
+msgid "``numpy.frompyfunc`` now accepts an identity argument"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:320
+msgid ""
+"This allows the :attr:`numpy.ufunc.identity` attribute to be set on the "
+"resulting ufunc, meaning it can be used for empty and multi-dimensional "
+"calls to :meth:`numpy.ufunc.reduce`."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:324
+msgid "(`gh-8255 <https://github.com/numpy/numpy/pull/8255>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:327
+msgid "``np.str_`` scalars now support the buffer protocol"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:328
+msgid ""
+"``np.str_`` arrays are always stored as UCS4, so the corresponding scalars "
+"now expose this through the buffer interface, meaning ``memoryview(np."
+"str_('test'))`` now works."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:332
+msgid "(`gh-15385 <https://github.com/numpy/numpy/pull/15385>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:335
+msgid "``subok`` option for ``numpy.copy``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:336
+msgid ""
+"A new kwarg, ``subok``, was added to ``numpy.copy`` to allow users to toggle "
+"the behavior of ``numpy.copy`` with respect to array subclasses. The default "
+"value is ``False`` which is consistent with the behavior of ``numpy.copy`` "
+"for previous numpy versions. To create a copy that preserves an array "
+"subclass with ``numpy.copy``, call ``np.copy(arr, subok=True)``. This "
+"addition better documents that the default behavior of ``numpy.copy`` "
+"differs from the ``numpy.ndarray.copy`` method which respects array "
+"subclasses by default."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:344
+msgid "(`gh-15685 <https://github.com/numpy/numpy/pull/15685>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:347
+msgid "``numpy.linalg.multi_dot`` now accepts an ``out`` argument"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:349
+msgid ""
+"``out`` can be used to avoid creating unnecessary copies of the final "
+"product computed by ``numpy.linalg.multidot``."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:352
+msgid "(`gh-15715 <https://github.com/numpy/numpy/pull/15715>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:355
+msgid "``keepdims`` parameter for ``numpy.count_nonzero``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:356
+msgid ""
+"The parameter ``keepdims`` was added to ``numpy.count_nonzero``. The "
+"parameter has the same meaning as it does in reduction functions such as "
+"``numpy.sum`` or ``numpy.mean``."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:360
+msgid "(`gh-15870 <https://github.com/numpy/numpy/pull/15870>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:363
+msgid "``equal_nan`` parameter for ``numpy.array_equal``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:364
+msgid ""
+"The keyword argument ``equal_nan`` was added to ``numpy.array_equal``. "
+"``equal_nan`` is a boolean value that toggles whether or not ``nan`` values "
+"are considered equal in comparison (default is ``False``). This matches API "
+"used in related functions such as ``numpy.isclose`` and ``numpy.allclose``."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:369
+msgid "(`gh-16128 <https://github.com/numpy/numpy/pull/16128>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:373
+msgid "Improvements"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:376
+msgid "Improve detection of CPU features"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:377
+msgid ""
+"Replace ``npy_cpu_supports`` which was a gcc specific mechanism to test "
+"support of AVX with more general functions ``npy_cpu_init`` and "
+"``npy_cpu_have``, and expose the results via a ``NPY_CPU_HAVE`` c-macro as "
+"well as a python-level ``__cpu_features__`` dictionary."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:382
+msgid "(`gh-13421 <https://github.com/numpy/numpy/pull/13421>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:385
+msgid "Use 64-bit integer size on 64-bit platforms in fallback lapack_lite"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:386
+msgid ""
+"Use 64-bit integer size on 64-bit platforms in the fallback LAPACK library, "
+"which is used when the system has no LAPACK installed, allowing it to deal "
+"with linear algebra for large arrays."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:390
+msgid "(`gh-15218 <https://github.com/numpy/numpy/pull/15218>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:393
+msgid ""
+"Use AVX512 intrinsic to implement ``np.exp`` when input is ``np.float64``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:394
+msgid ""
+"Use AVX512 intrinsic to implement ``np.exp`` when input is ``np.float64``, "
+"which can improve the performance of ``np.exp`` with ``np.float64`` input "
+"5-7x faster than before. The ``_multiarray_umath.so`` module has grown about "
+"63 KB on linux64."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:399
+msgid "(`gh-15648 <https://github.com/numpy/numpy/pull/15648>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:402
+msgid "Ability to disable madvise hugepages"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:403
+msgid ""
+"On Linux NumPy has previously added support for madavise hugepages which can "
+"improve performance for very large arrays.  Unfortunately, on older Kernel "
+"versions this led to performance regressions, thus by default the support "
+"has been disabled on kernels before version 4.6. To override the default, "
+"you can use the environment variable::"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:409
+msgid "NUMPY_MADVISE_HUGEPAGE=0"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:411
+msgid ""
+"or set it to 1 to force enabling support. Note that this only makes a "
+"difference if the operating system is set up to use madvise transparent "
+"hugepage."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:415
+msgid "(`gh-15769 <https://github.com/numpy/numpy/pull/15769>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:418
+msgid "``numpy.einsum`` accepts NumPy ``int64`` type in subscript list"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:419
+msgid ""
+"There is no longer a type error thrown when ``numpy.einsum`` is passed a "
+"NumPy ``int64`` array as its subscript list."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:422
+msgid "(`gh-16080 <https://github.com/numpy/numpy/pull/16080>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:425
+msgid "``np.logaddexp2.identity`` changed to ``-inf``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:426
+msgid ""
+"The ufunc ``~numpy.logaddexp2`` now has an identity of ``-inf``, allowing it "
+"to be called on empty sequences.  This matches the identity of ``~numpy."
+"logaddexp``."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:429
+msgid "(`gh-16102 <https://github.com/numpy/numpy/pull/16102>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:433
+msgid "Changes"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:436
+msgid "Remove handling of extra argument to ``__array__``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:437
+msgid ""
+"A code path and test have been in the code since NumPy 0.4 for a two-"
+"argument variant of ``__array__(dtype=None, context=None)``. It was "
+"activated when calling ``ufunc(op)`` or ``ufunc.reduce(op)`` if ``op."
+"__array__`` existed. However that variant is not documented, and it is not "
+"clear what the intention was for its use. It has been removed."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:443
+msgid "(`gh-15118 <https://github.com/numpy/numpy/pull/15118>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:446
+msgid "``numpy.random._bit_generator`` moved to ``numpy.random.bit_generator``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:447
+msgid ""
+"In order to expose ``numpy.random.BitGenerator`` and ``numpy.random."
+"SeedSequence`` to Cython, the ``_bitgenerator`` module is now public as "
+"``numpy.random.bit_generator``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:452
+msgid ""
+"Cython access to the random distributions is provided via a ``pxd`` file"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:453
+msgid ""
+"``c_distributions.pxd`` provides access to the c functions behind many of "
+"the random distributions from Cython, making it convenient to use and extend "
+"them."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:456
+msgid "(`gh-15463 <https://github.com/numpy/numpy/pull/15463>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:459
+msgid ""
+"Fixed ``eigh`` and ``cholesky`` methods in ``numpy.random."
+"multivariate_normal``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:460
+msgid ""
+"Previously, when passing ``method='eigh'`` or ``method='cholesky'``, ``numpy."
+"random.multivariate_normal`` produced samples from the wrong distribution. "
+"This is now fixed."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:464
+msgid "(`gh-15872 <https://github.com/numpy/numpy/pull/15872>`__)"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:467
+msgid "Fixed the jumping implementation in ``MT19937.jumped``"
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:468
+msgid ""
+"This fix changes the stream produced from jumped MT19937 generators. It does "
+"not affect the stream produced using ``RandomState`` or ``MT19937`` that are "
+"directly seeded."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:472
+msgid ""
+"The translation of the jumping code for the MT19937 contained a reversed "
+"loop ordering. ``MT19937.jumped`` matches the Makoto Matsumoto's original "
+"implementation of the Horner and Sliding Window jump methods."
+msgstr ""
+
+#: ../../../release/1.19.0-notes.rst:476
+msgid "(`gh-16153 <https://github.com/numpy/numpy/pull/16153>`__)"
+msgstr ""
