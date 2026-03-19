@@ -1,0 +1,201 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.bitwise_invert.rst:4
+msgid "numpy.bitwise\\_invert"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:2
+msgid "Compute bit-wise inversion, or bit-wise NOT, element-wise."
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:4
+msgid ""
+"Computes the bit-wise NOT of the underlying binary representation of the "
+"integers in the input arrays. This ufunc implements the C/Python operator "
+"``~``."
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:8
+msgid ""
+"For signed integer inputs, the bit-wise NOT of the absolute value is "
+"returned. In a two's-complement system, this operation effectively flips all "
+"the bits, resulting in a representation that corresponds to the negative of "
+"the input plus one. This is the most common method of representing signed "
+"integers on computers [Re822a60d084a-1]_. An N-bit two's-complement system "
+"can represent every integer in the range :math:`-2^{N-1}` to :math:"
+"`+2^{N-1}-1`."
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:19
+msgid "**x**"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:19
+msgid "Only integer and boolean types are handled."
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:25 numpy.invert:51
+msgid "**out**"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:-1
+msgid "ndarray, None, or tuple of ndarray and None, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:22
+msgid ""
+"A location into which the result is stored. If provided, it must have a "
+"shape that the inputs broadcast to. If not provided or None, a freshly-"
+"allocated array is returned. A tuple (possible only as a keyword argument) "
+"must have length equal to the number of outputs."
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:33
+msgid "**where**"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:28
+msgid ""
+"This condition is broadcast over the input. At locations where the condition "
+"is True, the `out` array will be set to the ufunc result. Elsewhere, the "
+"`out` array will retain its original value. Note that if an uninitialized "
+"`out` array is created via the default ``out=None``, locations within it "
+"where the condition is False will remain uninitialized."
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:39
+msgid "**\\*\\*kwargs**"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:36
+msgid ""
+"For other keyword-only arguments, see the :ref:`ufunc docs <ufuncs.kwargs>`."
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:-1
+msgid "ndarray or scalar"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:44
+msgid "Result. This is a scalar if `x` is a scalar."
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:56
+msgid ":obj:`bitwise_and`, :obj:`bitwise_or`, :obj:`bitwise_xor`"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:58
+msgid ":obj:`logical_not`"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:60
+msgid ":obj:`binary_repr`"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:61
+msgid "Return the binary representation of the input number as a string."
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:65
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:66
+msgid "``numpy.bitwise_not`` is an alias for `invert`:"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:72
+msgid "References"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:73
+msgid ""
+"Wikipedia, \"Two's complement\", https://en.wikipedia.org/wiki/"
+"Two's_complement"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:78
+msgid "[Re822a60d084a-1]_"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:81
+msgid "Examples"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:88
+msgid ""
+"We've seen that 13 is represented by ``00001101``. The invert or bit-wise "
+"NOT of 13 is then:"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:97
+msgid "The result depends on the bit-width:"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:105
+msgid ""
+"When using signed integer types, the result is the bit-wise NOT of the "
+"unsigned type, interpreted as a signed integer:"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:113
+msgid "Booleans are accepted as well:"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:118
+msgid ""
+"The ``~`` operator can be used as a shorthand for ``np.invert`` on ndarrays."
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:-1
+msgid ""
+"<div id=\"c1a4fa0a-8a73-40c3-ad92-fc6886ba9a54\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('368b118a-a7b3-4c95-9b6d-"
+"e240eaada5b7','c1a4fa0a-8a73-40c3-ad92-fc6886ba9a54')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('368b118a-a7b3-4c95-9b6d-e240eaada5b7','c1a4fa0a-8a73-40c3-ad92-"
+"fc6886ba9a54')\">Open In Tab</button></div><div id=\"63e1b6ee-70d4-43db-"
+"b592-263494e5e0fb\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../docstring of numpy.invert:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

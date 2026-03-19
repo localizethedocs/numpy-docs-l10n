@@ -1,0 +1,168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.hermite.hermvander3d.rst:4
+msgid "numpy.polynomial.hermite.hermvander3d"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:2
+msgid "Pseudo-Vandermonde matrix of given degrees."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:4
+msgid ""
+"Returns the pseudo-Vandermonde matrix of degrees `deg` and sample points "
+"``(x, y, z)``. If `l`, `m`, `n` are the given degrees in `x`, `y`, `z`, then "
+"The pseudo-Vandermonde matrix is defined by"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:8
+msgid ""
+"V[..., (m+1)(n+1)i + (n+1)j + k] = H_i(x)*H_j(y)*H_k(z),\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:10
+msgid ""
+"where ``0 <= i <= l``, ``0 <= j <= m``, and ``0 <= j <= n``.  The leading "
+"indices of `V` index the points ``(x, y, z)`` and the last index encodes the "
+"degrees of the Hermite polynomials."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:14
+msgid ""
+"If ``V = hermvander3d(x, y, z, [xdeg, ydeg, zdeg])``, then the columns of "
+"`V` correspond to the elements of a 3-D coefficient array `c` of shape (xdeg "
+"+ 1, ydeg + 1, zdeg + 1) in the order"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:18
+msgid ""
+"c_{000}, c_{001}, c_{002},... , c_{010}, c_{011}, c_{012},...\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:20
+msgid ""
+"and  ``np.dot(V, c.flat)`` and ``hermval3d(x, y, z, c)`` will be the same up "
+"to roundoff. This equivalence is useful both for least squares fitting and "
+"for the evaluation of a large number of 3-D Hermite series of the same "
+"degrees and sample points."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:31
+msgid "**x, y, z**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:28
+msgid ""
+"Arrays of point coordinates, all of the same shape. The dtypes will be "
+"converted to either float64 or complex128 depending on whether any of the "
+"elements are complex. Scalars are converted to 1-D arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:36
+msgid "**deg**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:-1
+msgid "list of ints"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:34
+msgid "List of maximum degrees of the form [x_deg, y_deg, z_deg]."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:49
+msgid "**vander3d**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:41
+msgid ""
+"The shape of the returned matrix is ``x.shape + (order,)``, where :math:"
+"`order = (deg[0]+1)*(deg[1]+1)*(deg[2]+1)`.  The dtype will be the same as "
+"the converted `x`, `y`, and `z`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:54
+msgid ""
+":obj:`hermvander`, :obj:`hermvander3d`, :obj:`hermval2d`, :obj:`hermval3d`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:60
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:-1
+msgid ""
+"<div id=\"5a1819a8-17ba-420d-b80a-4fc4dfee21a4\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('8edd73ed-dc08-4822-8690-"
+"dbcefb53225d','5a1819a8-17ba-420d-b80a-4fc4dfee21a4')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('8edd73ed-dc08-4822-8690-dbcefb53225d','5a1819a8-17ba-420d-"
+"b80a-4fc4dfee21a4')\">Open In Tab</button></div><div "
+"id=\"d64a03fe-2143-4278-9bd6-0c5ae10a15bf\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermvander3d:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

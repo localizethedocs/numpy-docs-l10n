@@ -1,0 +1,437 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.ma.polyfit.rst:4
+msgid "numpy.ma.polyfit"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:2
+msgid "Least squares polynomial fit."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:5
+msgid ""
+"This forms part of the old polynomial API. Since version 1.4, the new "
+"polynomial API defined in `numpy.polynomial` is preferred. A summary of the "
+"differences can be found in the :doc:`transition guide </reference/routines."
+"polynomials>`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:10
+msgid ""
+"Fit a polynomial ``p[0] * x**deg + ... + p[deg]`` of degree `deg` to points "
+"`(x, y)`. Returns a vector of coefficients `p` that minimises the squared "
+"error in the order `deg`, `deg-1`, ... `0`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:14
+msgid ""
+"The `Polynomial.fit <numpy.polynomial.polynomial.Polynomial.fit>` class "
+"method is recommended for new code as it is more stable numerically. See the "
+"documentation of the method for more information."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:21
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:-1
+msgid "array_like, shape (M,)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:21
+msgid "x-coordinates of the M sample points ``(x[i], y[i])``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:26
+msgid "**y**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:-1
+msgid "array_like, shape (M,) or (M, K)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:24
+msgid ""
+"y-coordinates of the sample points. Several data sets of sample points "
+"sharing the same x-coordinates can be fitted at once by passing in a 2D-"
+"array that contains one dataset per column."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:29
+msgid "**deg**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:-1
+msgid "int"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:29
+msgid "Degree of the fitting polynomial"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:35
+msgid "**rcond**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:-1
+msgid "float, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:32
+msgid ""
+"Relative condition number of the fit. Singular values smaller than this "
+"relative to the largest singular value will be ignored. The default value is "
+"len(x)*eps, where eps is the relative precision of the float type, about "
+"2e-16 in most cases."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:40
+msgid "**full**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:38
+msgid ""
+"Switch determining nature of return value. When it is False (the default) "
+"just the coefficients are returned, when True diagnostic information from "
+"the singular value decomposition is also returned."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:47
+msgid "**w**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:-1
+msgid "array_like, shape (M,), optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:43
+msgid ""
+"Weights. If not None, the weight ``w[i]`` applies to the unsquared residual "
+"``y[i] - y_hat[i]`` at ``x[i]``. Ideally the weights are chosen so that the "
+"errors of the products ``w[i]*y[i]`` all have the same variance.  When using "
+"inverse-variance weighting, use ``w[i] = 1/sigma(y[i])``.  The default value "
+"is None."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:59
+msgid "**cov**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:-1
+msgid "bool or str, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:50
+msgid ""
+"If given and not `False`, return not just the estimate but also its "
+"covariance matrix. By default, the covariance are scaled by chi2/dof, where "
+"dof = M - (deg + 1), i.e., the weights are presumed to be unreliable except "
+"in a relative sense and everything is scaled such that the reduced chi2 is "
+"unity. This scaling is omitted if ``cov='unscaled'``, as is relevant for the "
+"case that the weights are w = 1/sigma, with sigma known to be a reliable "
+"estimate of the uncertainty."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:65
+msgid "**p**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:-1
+msgid "ndarray, shape (deg + 1,) or (deg + 1, K)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:64
+msgid ""
+"Polynomial coefficients, highest power first.  If `y` was 2-D, the "
+"coefficients for `k`-th data set are in ``p[:,k]``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:77
+msgid "residuals, rank, singular_values, rcond"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:68
+msgid "These values are only returned if ``full == True``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:70
+msgid "residuals -- sum of squared residuals of the least squares fit"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:71
+msgid "rank -- the effective rank of the scaled Vandermonde coefficient matrix"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:73
+msgid ""
+"singular_values -- singular values of the scaled Vandermonde coefficient "
+"matrix"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:75
+msgid "rcond -- value of `rcond`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:77
+msgid "For more details, see `numpy.linalg.lstsq`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:88
+msgid "**V**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:-1
+msgid "ndarray, shape (deg + 1, deg + 1) or (deg + 1, deg + 1, K)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:80
+msgid ""
+"Present only if ``full == False`` and ``cov == True``.  The covariance "
+"matrix of the polynomial coefficient estimates.  The diagonal of this matrix "
+"are the variance estimates for each coefficient.  If y is a 2-D array, then "
+"the covariance matrix for the `k`-th data set are in ``V[:,:,k]``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:0
+msgid "Warns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:100
+msgid "RankWarning"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:93
+msgid ""
+"The rank of the coefficient matrix in the least-squares fit is deficient. "
+"The warning is only raised if ``full == False``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:96
+msgid "The warnings can be turned off by"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:105
+msgid ":obj:`polyval`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:106
+msgid "Compute polynomial values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:107
+msgid ":obj:`linalg.lstsq`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:108
+msgid "Computes a least-squares fit."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:109
+msgid ":obj:`scipy.interpolate.UnivariateSpline`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:110
+msgid "Computes spline fits."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:114
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:115
+msgid "Any masked values in x is propagated in y, and vice-versa."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:117
+msgid "The solution minimizes the squared error"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:119
+msgid ""
+"E = \\sum_{j=0}^k |p(x_j) - y_j|^2\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:122
+msgid "in the equations::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:124
+msgid ""
+"x[0]**n * p[0] + ... + x[0] * p[n-1] + p[n] = y[0]\n"
+"x[1]**n * p[0] + ... + x[1] * p[n-1] + p[n] = y[1]\n"
+"...\n"
+"x[k]**n * p[0] + ... + x[k] * p[n-1] + p[n] = y[k]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:129
+msgid "The coefficient matrix of the coefficients `p` is a Vandermonde matrix."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:131
+msgid ""
+"`polyfit` issues a `~exceptions.RankWarning` when the least-squares fit is "
+"badly conditioned. This implies that the best fit is not well-defined due to "
+"numerical error. The results may be improved by lowering the polynomial "
+"degree or by replacing `x` by `x` - `x`.mean(). The `rcond` parameter can "
+"also be set to a value smaller than its default, but the resulting fit may "
+"be spurious: including contributions from the small singular values can add "
+"numerical noise to the result."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:139
+msgid ""
+"Note that fitting polynomial coefficients is inherently badly conditioned "
+"when the degree of the polynomial is large or the interval of sample points "
+"is badly centered. The quality of the fit should always be checked in these "
+"cases. When polynomial fits are not satisfactory, splines may be a good "
+"alternative."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:146
+msgid "References"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:147
+msgid ""
+"Wikipedia, \"Curve fitting\", https://en.wikipedia.org/wiki/Curve_fitting"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:149
+msgid ""
+"Wikipedia, \"Polynomial interpolation\", https://en.wikipedia.org/wiki/"
+"Polynomial_interpolation"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:154
+msgid "[R45cb63e385dd-1]_, [R45cb63e385dd-2]_"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:157
+msgid "Examples"
+msgstr ""
+
+#: ../../../reference/generated/numpy.ma.polyfit.rst:11
+msgid "It is convenient to use `poly1d` objects for dealing with polynomials:"
+msgstr ""
+
+#: ../../../reference/generated/numpy.ma.polyfit.rst:21
+msgid "High-order polynomials may oscillate wildly:"
+msgstr ""
+
+#: ../../../reference/generated/numpy.ma.polyfit.rst:34
+msgid "Illustration:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:204
+msgid ""
+"<div id=\"4cc20b6f-3d19-4e88-9cd1-79e55161fd02\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('a8fb9548-691d-49b9-8215-1fa24367eca3','4cc20b6f-3d19-4e88-9cd1-79e55161fd02')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('a8fb9548-691d-49b9-8215-1fa24367eca3','4cc20b6f-3d19-4e88-9cd1-79e55161fd02')\">Open "
+"In Tab</button></div><div id=\"d676f2e5-2113-411a-b1dd-262e8ff160a4\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.polyfit:204
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

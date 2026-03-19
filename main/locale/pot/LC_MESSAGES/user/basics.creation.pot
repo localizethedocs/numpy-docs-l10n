@@ -1,0 +1,611 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../user/basics.creation.rst:5
+msgid "Array creation"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:7
+msgid ":ref:`Array creation routines <routines.array-creation>`"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:10
+msgid "Introduction"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:12
+msgid "There are 6 general mechanisms for creating arrays:"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:14
+msgid "Conversion from other Python structures (i.e. lists and tuples)"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:15
+msgid ""
+"Intrinsic NumPy array creation functions (e.g. arange, ones, zeros, etc.)"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:17
+msgid "Replicating, joining, or mutating existing arrays"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:18
+msgid "Reading arrays from disk, either from standard or custom formats"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:19
+msgid "Creating arrays from raw bytes through the use of strings or buffers"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:20
+msgid "Use of special library functions (e.g., random)"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:22
+msgid ""
+"You can use these methods to create ndarrays or :ref:`structured_arrays`. "
+"This document will cover general methods for ndarray creation."
+msgstr ""
+
+#: ../../../user/basics.creation.rst:26
+msgid "1) Converting Python sequences to NumPy arrays"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:28
+msgid ""
+"NumPy arrays can be defined using Python sequences such as lists and tuples. "
+"Lists and tuples are defined using ``[...]`` and ``(...)``, respectively. "
+"Lists and tuples can define ndarray creation:"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:32
+msgid "a list of numbers will create a 1D array,"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:33
+msgid "a list of lists will create a 2D array,"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:34
+msgid ""
+"further nested lists will create higher-dimensional arrays. In general, any "
+"array object is called an **ndarray** in NumPy."
+msgstr ""
+
+#: ../../../user/basics.creation.rst:38
+msgid ""
+">>> import numpy as np\n"
+">>> a1D = np.array([1, 2, 3, 4])\n"
+">>> a2D = np.array([[1, 2], [3, 4]])\n"
+">>> a3D = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:43
+msgid ""
+"When you use :func:`numpy.array` to define a new array, you should consider "
+"the :doc:`dtype <basics.types>` of the elements in the array, which can be "
+"specified explicitly. This feature gives you more control over the "
+"underlying data structures and how the elements are handled in C/C++ "
+"functions. When values do not fit and you are using a ``dtype``, NumPy may "
+"raise an error::"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:51
+msgid ""
+">>> import numpy as np\n"
+">>> np.array([127, 128, 129], dtype=np.int8)\n"
+"Traceback (most recent call last):\n"
+"...\n"
+"OverflowError: Python integer 128 out of bounds for int8"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:57
+msgid ""
+"An 8-bit signed integer represents integers from -128 to 127. Assigning the "
+"``int8`` array to integers outside of this range results in overflow. This "
+"feature can often be misunderstood. If you perform calculations with "
+"mismatching ``dtypes``, you can get unwanted results, for example::"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:63
+msgid ""
+">>> import numpy as np\n"
+">>> a = np.array([2, 3, 4], dtype=np.uint32)\n"
+">>> b = np.array([5, 6, 7], dtype=np.uint32)\n"
+">>> c_unsigned32 = a - b\n"
+">>> print('unsigned c:', c_unsigned32, c_unsigned32.dtype)\n"
+"unsigned c: [4294967293 4294967293 4294967293] uint32\n"
+">>> c_signed32 = a - b.astype(np.int32)\n"
+">>> print('signed c:', c_signed32, c_signed32.dtype)\n"
+"signed c: [-3 -3 -3] int64"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:73
+msgid ""
+"Notice when you perform operations with two arrays of the same ``dtype``: "
+"``uint32``, the resulting array is the same type. When you perform "
+"operations with different ``dtype``, NumPy will assign a new type that "
+"satisfies all of the array elements involved in the computation, here "
+"``uint32`` and ``int32`` can both be represented in as ``int64``."
+msgstr ""
+
+#: ../../../user/basics.creation.rst:80
+msgid ""
+"The default NumPy behavior is to create arrays in either 32 or 64-bit signed "
+"integers (platform dependent and matches C ``long`` size) or double "
+"precision floating point numbers. If you expect your integer arrays to be a "
+"specific type, then you need to specify the dtype while you create the array."
+msgstr ""
+
+#: ../../../user/basics.creation.rst:87
+msgid "2) Intrinsic NumPy array creation functions"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:93
+msgid ""
+"NumPy has over 40 built-in functions for creating arrays as laid out in the :"
+"ref:`Array creation routines <routines.array-creation>`. These functions can "
+"be split into roughly three categories, based on the dimension of the array "
+"they create:"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:98
+msgid "1D arrays"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:99
+msgid "2D arrays"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:100
+msgid "ndarrays"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:103
+msgid "1 - 1D array creation functions"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:105
+msgid ""
+"The 1D array creation functions e.g. :func:`numpy.linspace` and :func:`numpy."
+"arange` generally need at least two inputs, ``start`` and ``stop``."
+msgstr ""
+
+#: ../../../user/basics.creation.rst:109
+msgid ""
+":func:`numpy.arange` creates arrays with regularly incrementing values. "
+"Check the documentation for complete information and examples. A few "
+"examples are shown::"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:113
+msgid ""
+">>> import numpy as np\n"
+">>> np.arange(10)\n"
+"array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])\n"
+">>> np.arange(2, 10, dtype=np.float64)\n"
+"array([2., 3., 4., 5., 6., 7., 8., 9.])\n"
+">>> np.arange(2, 3, 0.1)\n"
+"array([2. , 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9])"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:121
+msgid ""
+"Note: best practice for :func:`numpy.arange` is to use integer start, end, "
+"and step values. There are some subtleties regarding ``dtype``. In the "
+"second example, the ``dtype`` is defined. In the third example, the array is "
+"``dtype=np.float64`` to accommodate the step size of ``0.1``. Due to "
+"roundoff error, the ``stop`` value is sometimes included."
+msgstr ""
+
+#: ../../../user/basics.creation.rst:127
+msgid ""
+":func:`numpy.linspace` will create arrays with a specified number of "
+"elements, and spaced equally between the specified beginning and end values. "
+"For example: ::"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:131
+msgid ""
+">>> import numpy as np\n"
+">>> np.linspace(1., 4., 6)\n"
+"array([1. ,  1.6,  2.2,  2.8,  3.4,  4. ])"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:135
+msgid ""
+"The advantage of this creation function is that you guarantee the number of "
+"elements and the starting and end point. The previous ``arange(start, stop, "
+"step)`` will not include the value ``stop``."
+msgstr ""
+
+#: ../../../user/basics.creation.rst:140
+msgid "2 - 2D array creation functions"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:142
+msgid ""
+"The 2D array creation functions e.g. :func:`numpy.eye`, :func:`numpy.diag`, "
+"and :func:`numpy.vander` define properties of special matrices represented "
+"as 2D arrays."
+msgstr ""
+
+#: ../../../user/basics.creation.rst:145
+msgid ""
+"``np.eye(n, m)`` defines a 2D identity matrix. The elements where i=j (row "
+"index and column index are equal) are 1 and the rest are 0, as such::"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:148
+msgid ""
+">>> import numpy as np\n"
+">>> np.eye(3)\n"
+"array([[1., 0., 0.],\n"
+"       [0., 1., 0.],\n"
+"       [0., 0., 1.]])\n"
+">>> np.eye(3, 5)\n"
+"array([[1., 0., 0., 0., 0.],\n"
+"       [0., 1., 0., 0., 0.],\n"
+"       [0., 0., 1., 0., 0.]])"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:158
+msgid ""
+":func:`numpy.diag` can define either a square 2D array with given values "
+"along the diagonal *or* if given a 2D array returns a 1D array that is only "
+"the diagonal elements. The two array creation functions can be helpful while "
+"doing linear algebra, as such::"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:163
+msgid ""
+">>> import numpy as np\n"
+">>> np.diag([1, 2, 3])\n"
+"array([[1, 0, 0],\n"
+"       [0, 2, 0],\n"
+"       [0, 0, 3]])\n"
+">>> np.diag([1, 2, 3], 1)\n"
+"array([[0, 1, 0, 0],\n"
+"       [0, 0, 2, 0],\n"
+"       [0, 0, 0, 3],\n"
+"       [0, 0, 0, 0]])\n"
+">>> a = np.array([[1, 2], [3, 4]])\n"
+">>> np.diag(a)\n"
+"array([1, 4])"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:177
+msgid ""
+"``vander(x, n)`` defines a Vandermonde matrix as a 2D NumPy array. Each "
+"column of the Vandermonde matrix is a decreasing power of the input 1D array "
+"or list or tuple, ``x`` where the highest polynomial order is ``n-1``. This "
+"array creation routine is helpful in generating linear least squares models, "
+"as such::"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:183
+msgid ""
+">>> import numpy as np\n"
+">>> np.vander(np.linspace(0, 2, 5), 2)\n"
+"array([[0. , 1. ],\n"
+"      [0.5, 1. ],\n"
+"      [1. , 1. ],\n"
+"      [1.5, 1. ],\n"
+"      [2. , 1. ]])\n"
+">>> np.vander([1, 2, 3, 4], 2)\n"
+"array([[1, 1],\n"
+"       [2, 1],\n"
+"       [3, 1],\n"
+"       [4, 1]])\n"
+">>> np.vander((1, 2, 3, 4), 4)\n"
+"array([[ 1,  1,  1,  1],\n"
+"       [ 8,  4,  2,  1],\n"
+"       [27,  9,  3,  1],\n"
+"       [64, 16,  4,  1]])"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:202
+msgid "3 - general ndarray creation functions"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:204
+msgid ""
+"The ndarray creation functions e.g. :func:`numpy.ones`, :func:`numpy.zeros`, "
+"and :meth:`~numpy.random.Generator.random` define arrays based upon the "
+"desired shape.  The  ndarray creation functions can create arrays with any "
+"dimension by specifying how many dimensions and length along that dimension "
+"in a tuple or list."
+msgstr ""
+
+#: ../../../user/basics.creation.rst:210
+msgid ""
+":func:`numpy.zeros` will create an array filled with 0 values with the "
+"specified shape. The default dtype is ``float64``::"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:213
+msgid ""
+">>> import numpy as np\n"
+">>> np.zeros((2, 3))\n"
+"array([[0., 0., 0.],\n"
+"       [0., 0., 0.]])\n"
+">>> np.zeros((2, 3, 2))\n"
+"array([[[0., 0.],\n"
+"        [0., 0.],\n"
+"        [0., 0.]],\n"
+"\n"
+"       [[0., 0.],\n"
+"        [0., 0.],\n"
+"        [0., 0.]]])"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:226
+msgid ""
+":func:`numpy.ones` will create an array filled with 1 values. It is "
+"identical to ``zeros`` in all other respects as such::"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:229
+msgid ""
+">>> import numpy as np\n"
+">>> np.ones((2, 3))\n"
+"array([[1., 1., 1.],\n"
+"       [1., 1., 1.]])\n"
+">>> np.ones((2, 3, 2))\n"
+"array([[[1., 1.],\n"
+"        [1., 1.],\n"
+"        [1., 1.]],\n"
+"\n"
+"       [[1., 1.],\n"
+"        [1., 1.],\n"
+"        [1., 1.]]])"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:242
+msgid ""
+"The :meth:`~numpy.random.Generator.random` method of the result of "
+"``default_rng`` will create an array filled with random values between 0 and "
+"1. It is included with the :func:`numpy.random` library. Below, two arrays "
+"are created with shapes (2,3) and (2,3,2), respectively. The seed is set to "
+"42 so you can reproduce these pseudorandom numbers::"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:249
+msgid ""
+">>> import numpy as np\n"
+">>> from numpy.random import default_rng\n"
+">>> default_rng(42).random((2,3))\n"
+"array([[0.77395605, 0.43887844, 0.85859792],\n"
+"       [0.69736803, 0.09417735, 0.97562235]])\n"
+">>> default_rng(42).random((2,3,2))\n"
+"array([[[0.77395605, 0.43887844],\n"
+"        [0.85859792, 0.69736803],\n"
+"        [0.09417735, 0.97562235]],\n"
+"       [[0.7611397 , 0.78606431],\n"
+"        [0.12811363, 0.45038594],\n"
+"        [0.37079802, 0.92676499]]])"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:262
+msgid ""
+":func:`numpy.indices` will create a set of arrays (stacked as a one-higher "
+"dimensioned array), one per dimension with each representing variation in "
+"that dimension::"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:266
+msgid ""
+">>> import numpy as np\n"
+">>> np.indices((3,3))\n"
+"array([[[0, 0, 0],\n"
+"        [1, 1, 1],\n"
+"        [2, 2, 2]],\n"
+"       [[0, 1, 2],\n"
+"        [0, 1, 2],\n"
+"        [0, 1, 2]]])"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:275
+msgid ""
+"This is particularly useful for evaluating functions of multiple dimensions "
+"on a regular grid."
+msgstr ""
+
+#: ../../../user/basics.creation.rst:279
+msgid "3) Replicating, joining, or mutating existing arrays"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:281
+msgid ""
+"Once you have created arrays, you can replicate, join, or mutate those "
+"existing arrays to create new arrays. When you assign an array or its "
+"elements to a new variable, you have to explicitly :func:`numpy.copy` the "
+"array, otherwise the variable is a view into the original array. Consider "
+"the following example::"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:287
+msgid ""
+">>> import numpy as np\n"
+">>> a = np.array([1, 2, 3, 4, 5, 6])\n"
+">>> b = a[:2]\n"
+">>> b += 1\n"
+">>> print('a =', a, '; b =', b)\n"
+"a = [2 3 3 4 5 6] ; b = [2 3]"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:294
+msgid ""
+"In this example, you did not create a new array. You created a variable, "
+"``b`` that viewed the first 2 elements of ``a``. When you added 1 to ``b`` "
+"you would get the same result by adding 1 to ``a[:2]``. If you want to "
+"create a *new* array, use the :func:`numpy.copy` array creation routine as "
+"such::"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:299
+msgid ""
+">>> import numpy as np\n"
+">>> a = np.array([1, 2, 3, 4])\n"
+">>> b = a[:2].copy()\n"
+">>> b += 1\n"
+">>> print('a = ', a, 'b = ', b)\n"
+"a =  [1 2 3 4] b =  [2 3]"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:306
+msgid ""
+"For more information and examples look at :ref:`Copies and Views <quickstart."
+"copies-and-views>`."
+msgstr ""
+
+#: ../../../user/basics.creation.rst:309
+msgid ""
+"There are a number of routines to join existing arrays e.g. :func:`numpy."
+"vstack`, :func:`numpy.hstack`, and :func:`numpy.block`. Here is an example "
+"of joining four 2-by-2 arrays into a 4-by-4 array using ``block``::"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:313
+msgid ""
+">>> import numpy as np\n"
+">>> A = np.ones((2, 2))\n"
+">>> B = np.eye(2, 2)\n"
+">>> C = np.zeros((2, 2))\n"
+">>> D = np.diag((-3, -4))\n"
+">>> np.block([[A, B], [C, D]])\n"
+"array([[ 1.,  1.,  1.,  0.],\n"
+"       [ 1.,  1.,  0.,  1.],\n"
+"       [ 0.,  0., -3.,  0.],\n"
+"       [ 0.,  0.,  0., -4.]])"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:324
+msgid ""
+"Other routines use similar syntax to join ndarrays. Check the routine's "
+"documentation for further examples and syntax."
+msgstr ""
+
+#: ../../../user/basics.creation.rst:328
+msgid "4) Reading arrays from disk, either from standard or custom formats"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:330
+msgid ""
+"This is the most common case of large array creation. The details depend "
+"greatly on the format of data on disk. This section gives general pointers "
+"on how to handle various formats. For more detailed examples of IO look at :"
+"ref:`How to Read and Write files <how-to-io>`."
+msgstr ""
+
+#: ../../../user/basics.creation.rst:336
+msgid "Standard binary formats"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:338
+msgid ""
+"Various fields have standard formats for array data. The following lists the "
+"ones with known Python libraries to read them and return NumPy arrays (there "
+"may be others for which it is possible to read and convert to NumPy arrays "
+"so check the last section as well) ::"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:344
+msgid ""
+"HDF5: h5py\n"
+"FITS: Astropy"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:347
+msgid ""
+"Examples of formats that cannot be read directly but for which it is not "
+"hard to convert are those formats supported by libraries like PIL (able to "
+"read and write many image formats such as jpg, png, etc)."
+msgstr ""
+
+#: ../../../user/basics.creation.rst:352
+msgid "Common ASCII formats"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:354
+msgid ""
+"Delimited files such as comma separated value (csv) and tab separated value "
+"(tsv) files are used for programs like Excel and LabView. Python functions "
+"can read and parse these files line-by-line. NumPy has two standard routines "
+"for importing a file with delimited data :func:`numpy.loadtxt` and :func:"
+"`numpy.genfromtxt`. These functions have more involved use cases in :doc:"
+"`how-to-io`. A simple example given a ``simple.csv``:"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:361
+msgid ""
+"$ cat simple.csv\n"
+"x, y\n"
+"0, 0\n"
+"1, 1\n"
+"2, 4\n"
+"3, 9"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:370
+msgid "Importing ``simple.csv`` is accomplished using :func:`numpy.loadtxt`::"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:372
+msgid ""
+">>> import numpy as np\n"
+">>> np.loadtxt('simple.csv', delimiter = ',', skiprows = 1) \n"
+"array([[0., 0.],\n"
+"       [1., 1.],\n"
+"       [2., 4.],\n"
+"       [3., 9.]])"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:380
+msgid ""
+"More generic ASCII files can be read using `scipy.io` and `Pandas <https://"
+"pandas.pydata.org/>`_."
+msgstr ""
+
+#: ../../../user/basics.creation.rst:384
+msgid "5) Creating arrays from raw bytes through the use of strings or buffers"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:386
+msgid ""
+"There are a variety of approaches one can use. If the file has a relatively "
+"simple format then one can write a simple I/O library and use the NumPy "
+"``fromfile()`` function and ``.tofile()`` method to read and write NumPy "
+"arrays directly (mind your byteorder though!) If a good C or C++ library "
+"exists that read the data, one can wrap that library with a variety of "
+"techniques though that certainly is much more work and requires "
+"significantly more advanced knowledge to interface with C or C++."
+msgstr ""
+
+#: ../../../user/basics.creation.rst:395
+msgid "6) Use of special library functions (e.g., SciPy, pandas, and OpenCV)"
+msgstr ""
+
+#: ../../../user/basics.creation.rst:397
+msgid ""
+"NumPy is the fundamental library for array containers in the Python "
+"Scientific Computing stack. Many Python libraries, including SciPy, Pandas, "
+"and OpenCV, use NumPy ndarrays as the common format for data exchange, These "
+"libraries can create, operate on, and work with NumPy arrays."
+msgstr ""
