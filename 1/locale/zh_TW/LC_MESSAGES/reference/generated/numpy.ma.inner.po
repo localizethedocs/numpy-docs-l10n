@@ -1,0 +1,196 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.ma.inner.rst:4
+msgid "numpy.ma.inner"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:2
+msgid "Inner product of two arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:4
+msgid ""
+"Ordinary inner product of vectors for 1-D arrays (without complex "
+"conjugation), in higher dimensions a sum product over the last axes."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:10
+msgid "**a, b**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:10
+msgid "If `a` and `b` are nonscalar, their last dimensions must match."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:21
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:15
+msgid ""
+"If `a` and `b` are both scalars or both 1-D arrays then a scalar is "
+"returned; otherwise an array is returned. ``out.shape = (*a.shape[:-1], *b."
+"shape[:-1])``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:29
+msgid "ValueError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:26
+msgid ""
+"If both `a` and `b` are nonscalar and their last dimensions have different "
+"sizes."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:34
+msgid ":obj:`tensordot`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:35
+msgid "Sum products over arbitrary axes."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:36
+msgid ":obj:`dot`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:37
+msgid "Generalised matrix product, using second last dimension of `b`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:38
+msgid ":obj:`einsum`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:39
+msgid "Einstein summation convention."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:43
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:44
+msgid "Masked values are replaced by 0."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:46
+msgid "For vectors (1-D arrays) it computes the ordinary inner-product::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:48
+msgid "np.inner(a, b) = sum(a[:]*b[:])"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:50
+msgid "More generally, if ``ndim(a) = r > 0`` and ``ndim(b) = s > 0``::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:52
+msgid "np.inner(a, b) = np.tensordot(a, b, axes=(-1,-1))"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:54
+msgid "or explicitly::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:56
+msgid ""
+"np.inner(a, b)[i0,...,ir-2,j0,...,js-2]\n"
+"     = sum(a[i0,...,ir-2,:]*b[j0,...,js-2,:])"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:59
+msgid "In addition `a` or `b` may be scalars, in which case::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:61
+msgid "np.inner(a,b) = a*b"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:65
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:66
+msgid "Ordinary inner product for vectors:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:73
+msgid "Some multidimensional examples:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.inner:92
+msgid "An example where `b` is a scalar:"
+msgstr ""

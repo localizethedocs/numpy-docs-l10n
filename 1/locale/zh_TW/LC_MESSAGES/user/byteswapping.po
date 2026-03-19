@@ -1,0 +1,207 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../user/byteswapping.rst:3
+msgid "Byte-swapping"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:6
+msgid "Introduction to byte ordering and ndarrays"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:8
+msgid ""
+"The ``ndarray`` is an object that provides a python array interface to data "
+"in memory."
+msgstr ""
+
+#: ../../../user/byteswapping.rst:11
+msgid ""
+"It often happens that the memory that you want to view with an array is not "
+"of the same byte ordering as the computer on which you are running Python."
+msgstr ""
+
+#: ../../../user/byteswapping.rst:15
+msgid ""
+"For example, I might be working on a computer with a little-endian CPU - "
+"such as an Intel Pentium, but I have loaded some data from a file written by "
+"a computer that is big-endian.  Let's say I have loaded 4 bytes from a file "
+"written by a Sun (big-endian) computer.  I know that these 4 bytes represent "
+"two 16-bit integers.  On a big-endian machine, a two-byte integer is stored "
+"with the Most Significant Byte (MSB) first, and then the Least Significant "
+"Byte (LSB). Thus the bytes are, in memory order:"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:23
+msgid "MSB integer 1"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:24
+msgid "LSB integer 1"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:25
+msgid "MSB integer 2"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:26
+msgid "LSB integer 2"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:28
+msgid ""
+"Let's say the two integers were in fact 1 and 770.  Because 770 = 256 * 3 + "
+"2, the 4 bytes in memory would contain respectively: 0, 1, 3, 2. The bytes I "
+"have loaded from the file would have these contents:"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:36
+msgid ""
+"We might want to use an ``ndarray`` to access these integers.  In that case, "
+"we can create an array around this memory, and tell numpy that there are two "
+"integers, and that they are 16 bit and big-endian:"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:47
+msgid ""
+"Note the array ``dtype`` above of ``>i2``.  The ``>`` means 'big-"
+"endian' (``<`` is little-endian) and ``i2`` means 'signed 2-byte integer'.  "
+"For example, if our data represented a single unsigned 4-byte little-endian "
+"integer, the dtype string would be ``<u4``."
+msgstr ""
+
+#: ../../../user/byteswapping.rst:52
+msgid "In fact, why don't we try that?"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:58
+msgid ""
+"Returning to our ``big_end_arr`` - in this case our underlying data is big-"
+"endian (data endianness) and we've set the dtype to match (the dtype is also "
+"big-endian).  However, sometimes you need to flip these around."
+msgstr ""
+
+#: ../../../user/byteswapping.rst:64
+msgid ""
+"Scalars do not include byte order information, so extracting a scalar from "
+"an array will return an integer in native byte order.  Hence:"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:70
+msgid ""
+"NumPy intentionally does not attempt to always preserve byte-order and for "
+"example converts to native byte-order in `numpy.concatenate`."
+msgstr ""
+
+#: ../../../user/byteswapping.rst:74
+msgid "Changing byte ordering"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:76
+msgid ""
+"As you can imagine from the introduction, there are two ways you can affect "
+"the relationship between the byte ordering of the array and the underlying "
+"memory it is looking at:"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:80
+msgid ""
+"Change the byte-ordering information in the array dtype so that it "
+"interprets the underlying data as being in a different byte order. This is "
+"the role of ``arr.newbyteorder()``"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:83
+msgid ""
+"Change the byte-ordering of the underlying data, leaving the dtype "
+"interpretation as it was.  This is what ``arr.byteswap()`` does."
+msgstr ""
+
+#: ../../../user/byteswapping.rst:86
+msgid "The common situations in which you need to change byte ordering are:"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:88
+msgid ""
+"Your data and dtype endianness don't match, and you want to change the dtype "
+"so that it matches the data."
+msgstr ""
+
+#: ../../../user/byteswapping.rst:90
+msgid ""
+"Your data and dtype endianness don't match, and you want to swap the data so "
+"that they match the dtype"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:92
+msgid ""
+"Your data and dtype endianness match, but you want the data swapped and the "
+"dtype to reflect this"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:96
+msgid "Data and dtype endianness don't match, change dtype to match data"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:98
+msgid "We make something where they don't match:"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:104
+msgid ""
+"The obvious fix for this situation is to change the dtype so it gives the "
+"correct endianness:"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:111
+msgid "Note the array has not changed in memory:"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:117
+msgid "Data and type endianness don't match, change data to match dtype"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:119
+msgid ""
+"You might want to do this if you need the data in memory to be a certain "
+"ordering.  For example you might be writing the memory out to a file that "
+"needs a certain byte ordering."
+msgstr ""
+
+#: ../../../user/byteswapping.rst:127
+msgid "Now the array *has* changed in memory:"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:133
+msgid "Data and dtype endianness match, swap data and dtype"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:135
+msgid ""
+"You may have a correctly specified array dtype, but you need the array to "
+"have the opposite byte order in memory, and you want the dtype to match so "
+"the array values make sense.  In this case you just do both of the previous "
+"operations:"
+msgstr ""
+
+#: ../../../user/byteswapping.rst:146
+msgid ""
+"An easier way of casting the data to a specific dtype and byte ordering can "
+"be achieved with the ndarray astype method:"
+msgstr ""

@@ -1,0 +1,368 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/routines.ctypeslib.rst:5
+msgid "C-Types foreign function interface (:mod:`numpy.ctypeslib`)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_array:2
+msgid "Create a numpy array from a ctypes array or POINTER."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_array:4
+msgid "The numpy array shares the memory with the ctypes object."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_array:6
+msgid ""
+"The shape parameter must be given if converting from a ctypes POINTER. The "
+"shape parameter is ignored if converting from a ctypes array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_ctypes:2
+msgid ""
+"Create and return a ctypes object from a numpy array.  Actually anything "
+"that exposes the __array_interface__ is accepted."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_ctypes_type:2
+msgid "Convert a dtype into a ctypes type."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_ctypes_type:0 numpy.ctypeslib.load_library:0
+#: numpy.ctypeslib.ndpointer:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_ctypes_type:8 numpy.ctypeslib.ndpointer:15
+msgid "**dtype**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_ctypes_type:-1
+msgid "dtype"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_ctypes_type:8
+msgid "The dtype to convert"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_ctypes_type:0 numpy.ctypeslib.load_library:0
+#: numpy.ctypeslib.ndpointer:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_ctypes_type:16
+msgid "ctype"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_ctypes_type:13
+msgid "A ctype scalar, union, array, or struct"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_ctypes_type:0 numpy.ctypeslib.load_library:0
+#: numpy.ctypeslib.ndpointer:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_ctypes_type:24
+msgid "NotImplementedError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_ctypes_type:21
+msgid "If the conversion is not possible"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_ctypes_type:27
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_ctypes_type:28
+msgid "This function does not losslessly round-trip in either direction."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_ctypes_type:30
+msgid "``np.dtype(as_ctypes_type(dt))`` will:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_ctypes_type:32 numpy.ctypeslib.as_ctypes_type:42
+msgid "insert padding fields"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_ctypes_type:33
+msgid "reorder fields to be sorted by offset"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_ctypes_type:34
+msgid "discard field titles"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_ctypes_type:36
+msgid "``as_ctypes_type(np.dtype(ctype))`` will:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_ctypes_type:38
+msgid ""
+"discard the class names of `ctypes.Structure`\\ s and `ctypes.Union`\\ s"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.as_ctypes_type:40
+msgid ""
+"convert single-element `ctypes.Union`\\ s into single-element `ctypes."
+"Structure`\\ s"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.load_library:2
+msgid "It is possible to load a library using"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.load_library:6
+msgid ""
+"But there are cross-platform considerations, such as library file "
+"extensions, plus the fact Windows will just load the first library it finds "
+"with that name. NumPy supplies the load_library function as a convenience."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.load_library:10
+msgid ""
+"Allow libname and loader_path to take any :term:`python:path-like object`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.load_library:18
+msgid "**libname**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.load_library:-1
+msgid "path-like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.load_library:17
+msgid ""
+"Name of the library, which can have 'lib' as a prefix, but without an "
+"extension."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.load_library:21
+msgid "**loader_path**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.load_library:21
+msgid "Where the library can be found."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.load_library:29
+msgid "**ctypes.cdll[libpath]**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.load_library:-1
+msgid "library object"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.load_library:26
+msgid "A ctypes library object"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.load_library:43
+msgid "OSError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.load_library:34
+msgid ""
+"If there is no library with the expected extension, or the library is "
+"defective and cannot be loaded."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:2
+msgid "Array-checking restype/argtypes."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:4
+msgid ""
+"An ndpointer instance is used to describe an ndarray in restypes and "
+"argtypes specifications.  This approach is more flexible than using, for "
+"example, ``POINTER(c_double)``, since several restrictions can be specified, "
+"which are verified upon calling the ctypes function. These include data "
+"type, number of dimensions, shape and flags.  If a given array does not "
+"satisfy the specified restrictions, a ``TypeError`` is raised."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:-1
+msgid "data-type, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:15
+msgid "Array data-type."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:18
+msgid "**ndim**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:18
+msgid "Number of array dimensions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:21
+msgid "**shape**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:-1
+msgid "tuple of ints, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:21
+msgid "Array shape."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:31
+msgid "**flags**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:-1
+msgid "str or tuple of str"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:24
+msgid "Array flags; may be one or more of:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:26
+msgid "C_CONTIGUOUS / C / CONTIGUOUS"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:27
+msgid "F_CONTIGUOUS / F / FORTRAN"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:28
+msgid "OWNDATA / O"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:29
+msgid "WRITEABLE / W"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:30
+msgid "ALIGNED / A"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:31
+msgid "WRITEBACKIFCOPY / X"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:40
+msgid "**klass**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:-1
+msgid "ndpointer type object"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:36
+msgid ""
+"A type object, which is an ``_ndtpr`` instance containing dtype, ndim, shape "
+"and flags information."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:50
+msgid "TypeError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:45
+msgid "If a given array does not satisfy the specified restrictions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ctypeslib.py:docstring
+#: of numpy.ctypeslib.ndpointer:53
+msgid "Examples"
+msgstr ""
+
+#: ../../../reference/routines.ctypeslib.rst:17
+msgid "A `ctypes` signed integer type of the same size as `numpy.intp`."
+msgstr ""
+
+#: ../../../reference/routines.ctypeslib.rst:19
+msgid ""
+"Depending on the platform, it can be an alias for either `~ctypes.c_int`, "
+"`~ctypes.c_long` or `~ctypes.c_longlong`."
+msgstr ""

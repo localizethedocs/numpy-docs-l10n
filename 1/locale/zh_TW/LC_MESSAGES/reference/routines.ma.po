@@ -1,0 +1,1782 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/routines.ma.rst:4
+msgid "Masked array operations"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:10
+msgid "Constants"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:17:<autosummary>:1
+msgid ":py:obj:`ma.MaskType <numpy.ma.MaskType>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:17:<autosummary>:1
+msgid "alias of :py:class:`~numpy.bool_`"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:19
+msgid "Creation"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:22
+msgid "From existing data"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:36:<autosummary>:1
+msgid ":py:obj:`ma.masked_array <numpy.ma.masked_array>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:36:<autosummary>:1
+msgid "alias of :py:class:`~numpy.ma.core.MaskedArray`"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:36:<autosummary>:1
+msgid ""
+":py:obj:`ma.array <numpy.ma.array>`\\ \\(data\\[\\, dtype\\, copy\\, "
+"order\\, mask\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:36:<autosummary>:1
+msgid "An array class with possibly masked values."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:36:<autosummary>:1
+msgid ""
+":py:obj:`ma.copy <numpy.ma.copy>`\\ \\(self\\, \\*args\\, \\*\\*params\\) a."
+"copy\\(order\\=\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:36:<autosummary>:1
+msgid "Return a copy of the array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:36:<autosummary>:1
+msgid ""
+":py:obj:`ma.frombuffer <numpy.ma.frombuffer>`\\ \\(buffer\\[\\, dtype\\, "
+"count\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:36:<autosummary>:1
+msgid "Interpret a buffer as a 1-dimensional array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:36:<autosummary>:1
+msgid ""
+":py:obj:`ma.fromfunction <numpy.ma.fromfunction>`\\ \\(function\\, shape\\, "
+"\\*\\*dtype\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:36:<autosummary>:1
+msgid "Construct an array by executing a function over each coordinate."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:36:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.copy <numpy.ma.MaskedArray.copy>`\\ \\(\\[order\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:36:<autosummary>:1
+msgid ":py:obj:`ma.diagflat <numpy.ma.diagflat>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:36:<autosummary>:1
+msgid "diagflat"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:38
+msgid "Ones and zeros"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:52:<autosummary>:1
+msgid ""
+":py:obj:`ma.empty <numpy.ma.empty>`\\ \\(shape\\[\\, dtype\\, order\\, "
+"like\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:52:<autosummary>:1
+msgid ""
+"Return a new array of given shape and type, without initializing entries."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:52:<autosummary>:1
+msgid ""
+":py:obj:`ma.empty_like <numpy.ma.empty_like>`\\ \\(prototype\\[\\, dtype\\, "
+"order\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:52:<autosummary>:1
+msgid "Return a new array with the same shape and type as a given array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:52:<autosummary>:1
+msgid ""
+":py:obj:`ma.masked_all <numpy.ma.masked_all>`\\ \\(shape\\[\\, dtype\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:52:<autosummary>:1
+msgid "Empty masked array with all elements masked."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:52:<autosummary>:1
+msgid ":py:obj:`ma.masked_all_like <numpy.ma.masked_all_like>`\\ \\(arr\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:52:<autosummary>:1
+msgid "Empty masked array with the properties of an existing array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:52:<autosummary>:1
+msgid ":py:obj:`ma.ones <numpy.ma.ones>`\\ \\(shape\\[\\, dtype\\, order\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:52:<autosummary>:1
+msgid "Return a new array of given shape and type, filled with ones."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:52:<autosummary>:1
+msgid ":py:obj:`ma.ones_like <numpy.ma.ones_like>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:52:<autosummary>:1
+msgid "Return an array of ones with the same shape and type as a given array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:52:<autosummary>:1
+msgid ""
+":py:obj:`ma.zeros <numpy.ma.zeros>`\\ \\(shape\\[\\, dtype\\, order\\, "
+"like\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:52:<autosummary>:1
+msgid "Return a new array of given shape and type, filled with zeros."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:52:<autosummary>:1
+msgid ":py:obj:`ma.zeros_like <numpy.ma.zeros_like>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:52:<autosummary>:1
+msgid "Return an array of zeros with the same shape and type as a given array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:56
+msgid "Inspecting the array"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ""
+":py:obj:`ma.all <numpy.ma.all>`\\ \\(self\\[\\, axis\\, out\\, keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid "Returns True if all elements evaluate to True."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ""
+":py:obj:`ma.any <numpy.ma.any>`\\ \\(self\\[\\, axis\\, out\\, keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid "Returns True if any of the elements of `a` evaluate to True."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ""
+":py:obj:`ma.count <numpy.ma.count>`\\ \\(self\\[\\, axis\\, keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid "Count the non-masked elements of the array along the given axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ""
+":py:obj:`ma.count_masked <numpy.ma.count_masked>`\\ \\(arr\\[\\, axis\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid "Count the number of masked elements along the given axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:191:<autosummary>:1
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ":py:obj:`ma.getmask <numpy.ma.getmask>`\\ \\(a\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:191:<autosummary>:1
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid "Return the mask of a masked array, or nomask."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:191:<autosummary>:1
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ":py:obj:`ma.getmaskarray <numpy.ma.getmaskarray>`\\ \\(arr\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:191:<autosummary>:1
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid "Return the mask of a masked array, or full boolean array of False."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ":py:obj:`ma.getdata <numpy.ma.getdata>`\\ \\(a\\[\\, subok\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid "Return the data of a masked array as an ndarray."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ":py:obj:`ma.nonzero <numpy.ma.nonzero>`\\ \\(self\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid "Return the indices of unmasked elements that are not zero."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ":py:obj:`ma.shape <numpy.ma.shape>`\\ \\(obj\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid "Return the shape of an array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ":py:obj:`ma.size <numpy.ma.size>`\\ \\(obj\\[\\, axis\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid "Return the number of elements along a given axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ":py:obj:`ma.is_masked <numpy.ma.is_masked>`\\ \\(x\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid "Determine whether input has masked values."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ":py:obj:`ma.is_mask <numpy.ma.is_mask>`\\ \\(m\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid "Return True if m is a valid, standard mask."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ":py:obj:`ma.isMaskedArray <numpy.ma.isMaskedArray>`\\ \\(x\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid "Test whether input is an instance of MaskedArray."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ":py:obj:`ma.isMA <numpy.ma.isMA>`\\ \\(x\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ":py:obj:`ma.isarray <numpy.ma.isarray>`\\ \\(x\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ""
+":py:obj:`ma.isin <numpy.ma.isin>`\\ \\(element\\, test\\_elements\\[\\, ..."
+"\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ""
+"Calculates `element in test_elements`, broadcasting over `element` only."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ""
+":py:obj:`ma.in1d <numpy.ma.in1d>`\\ \\(ar1\\, ar2\\[\\, assume\\_unique\\, "
+"invert\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ""
+"Test whether each element of an array is also present in a second array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ""
+":py:obj:`ma.unique <numpy.ma.unique>`\\ \\(ar1\\[\\, return\\_index\\, "
+"return\\_inverse\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid "Finds the unique elements of an array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.all <numpy.ma.MaskedArray.all>`\\ \\(\\[axis\\, "
+"out\\, keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.any <numpy.ma.MaskedArray.any>`\\ \\(\\[axis\\, "
+"out\\, keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.count <numpy.ma.MaskedArray.count>`\\ \\(\\[axis\\, "
+"keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:88:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.nonzero <numpy.ma.MaskedArray.nonzero>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:94:<autosummary>:1
+msgid ":py:obj:`ma.MaskedArray.data <numpy.ma.MaskedArray.data>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:94:<autosummary>:1
+msgid "Returns the underlying data, as a view of the masked array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:94:<autosummary>:1
+msgid ":py:obj:`ma.MaskedArray.mask <numpy.ma.MaskedArray.mask>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:191:<autosummary>:1
+#: ../../../reference/routines.ma.rst:94:<autosummary>:1
+msgid "Current mask."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:94:<autosummary>:1
+msgid ":py:obj:`ma.MaskedArray.recordmask <numpy.ma.MaskedArray.recordmask>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:94:<autosummary>:1
+msgid "Get or set the mask of the array if it has no named fields."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:98
+msgid "Manipulating a MaskedArray"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:101
+msgid "Changing the shape"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:115:<autosummary>:1
+msgid ":py:obj:`ma.ravel <numpy.ma.ravel>`\\ \\(self\\[\\, order\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:115:<autosummary>:1
+msgid "Returns a 1D version of self, as a view."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:115:<autosummary>:1
+msgid ""
+":py:obj:`ma.reshape <numpy.ma.reshape>`\\ \\(a\\, new\\_shape\\[\\, "
+"order\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:115:<autosummary>:1
+msgid "Returns an array containing the same data with a new shape."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:115:<autosummary>:1
+msgid ":py:obj:`ma.resize <numpy.ma.resize>`\\ \\(x\\, new\\_shape\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:115:<autosummary>:1
+msgid "Return a new masked array with the specified size and shape."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:115:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.flatten <numpy.ma.MaskedArray.flatten>`\\ "
+"\\(\\[order\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:115:<autosummary>:1
+msgid "Return a copy of the array collapsed into one dimension."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:115:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.ravel <numpy.ma.MaskedArray.ravel>`\\ "
+"\\(\\[order\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:115:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.reshape <numpy.ma.MaskedArray.reshape>`\\ \\(\\*s\\, "
+"\\*\\*kwargs\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:115:<autosummary>:1
+msgid "Give a new shape to the array without changing its data."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:115:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.resize <numpy.ma.MaskedArray.resize>`\\ "
+"\\(newshape\\[\\, refcheck\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:117
+msgid "Modifying axes"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:127:<autosummary>:1
+msgid ""
+":py:obj:`ma.swapaxes <numpy.ma.swapaxes>`\\ \\(self\\, \\*args\\, ...\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:127:<autosummary>:1
+msgid "Return a view of the array with `axis1` and `axis2` interchanged."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:127:<autosummary>:1
+#: ../../../reference/routines.ma.rst:379:<autosummary>:1
+msgid ":py:obj:`ma.transpose <numpy.ma.transpose>`\\ \\(a\\[\\, axes\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:127:<autosummary>:1
+#: ../../../reference/routines.ma.rst:379:<autosummary>:1
+msgid "Permute the dimensions of an array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:127:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.swapaxes <numpy.ma.MaskedArray.swapaxes>`\\ "
+"\\(axis1\\, axis2\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:127:<autosummary>:1
+#: ../../../reference/routines.ma.rst:379:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.transpose <numpy.ma.MaskedArray.transpose>`\\ "
+"\\(\\*axes\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:127:<autosummary>:1
+#: ../../../reference/routines.ma.rst:379:<autosummary>:1
+msgid "Returns a view of the array with axes transposed."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:129
+msgid "Changing the number of dimensions"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+msgid ":py:obj:`ma.atleast_1d <numpy.ma.atleast_1d>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+msgid "atleast_1d"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+msgid ":py:obj:`ma.atleast_2d <numpy.ma.atleast_2d>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+msgid "atleast_2d"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+msgid ":py:obj:`ma.atleast_3d <numpy.ma.atleast_3d>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+msgid "atleast_3d"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+msgid ":py:obj:`ma.expand_dims <numpy.ma.expand_dims>`\\ \\(a\\, axis\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+msgid "Expand the shape of an array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+msgid ":py:obj:`ma.squeeze <numpy.ma.squeeze>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+msgid "Remove axes of length one from `a`."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.squeeze <numpy.ma.MaskedArray.squeeze>`\\ "
+"\\(\\[axis\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+#: ../../../reference/routines.ma.rst:165:<autosummary>:1
+msgid ":py:obj:`ma.stack <numpy.ma.stack>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+#: ../../../reference/routines.ma.rst:165:<autosummary>:1
+msgid "stack"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+#: ../../../reference/routines.ma.rst:165:<autosummary>:1
+msgid ":py:obj:`ma.column_stack <numpy.ma.column_stack>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+#: ../../../reference/routines.ma.rst:165:<autosummary>:1
+msgid "column_stack"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+#: ../../../reference/routines.ma.rst:165:<autosummary>:1
+msgid ""
+":py:obj:`ma.concatenate <numpy.ma.concatenate>`\\ \\(arrays\\[\\, axis\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+#: ../../../reference/routines.ma.rst:165:<autosummary>:1
+msgid "Concatenate a sequence of arrays along the given axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+#: ../../../reference/routines.ma.rst:165:<autosummary>:1
+msgid ":py:obj:`ma.dstack <numpy.ma.dstack>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+#: ../../../reference/routines.ma.rst:165:<autosummary>:1
+msgid "dstack"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+#: ../../../reference/routines.ma.rst:165:<autosummary>:1
+msgid ":py:obj:`ma.hstack <numpy.ma.hstack>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+#: ../../../reference/routines.ma.rst:165:<autosummary>:1
+msgid "hstack"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+msgid ":py:obj:`ma.hsplit <numpy.ma.hsplit>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+msgid "hsplit"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+msgid ":py:obj:`ma.mr_ <numpy.ma.mr_>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+msgid "Translate slice objects to concatenation along the first axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+msgid ":py:obj:`ma.row_stack <numpy.ma.row_stack>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+#: ../../../reference/routines.ma.rst:165:<autosummary>:1
+msgid "vstack"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:151:<autosummary>:1
+#: ../../../reference/routines.ma.rst:165:<autosummary>:1
+msgid ":py:obj:`ma.vstack <numpy.ma.vstack>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:153
+msgid "Joining arrays"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:165:<autosummary>:1
+msgid ":py:obj:`ma.append <numpy.ma.append>`\\ \\(a\\, b\\[\\, axis\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:165:<autosummary>:1
+msgid "Append values to the end of an array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:169
+msgid "Operations on masks"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:172
+msgid "Creating a mask"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:181:<autosummary>:1
+msgid ""
+":py:obj:`ma.make_mask <numpy.ma.make_mask>`\\ \\(m\\[\\, copy\\, shrink\\, "
+"dtype\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:181:<autosummary>:1
+msgid "Create a boolean mask from an array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:181:<autosummary>:1
+msgid ""
+":py:obj:`ma.make_mask_none <numpy.ma.make_mask_none>`\\ \\(newshape\\[\\, "
+"dtype\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:181:<autosummary>:1
+msgid "Return a boolean mask of the given shape, filled with False."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:181:<autosummary>:1
+#: ../../../reference/routines.ma.rst:223:<autosummary>:1
+msgid ""
+":py:obj:`ma.mask_or <numpy.ma.mask_or>`\\ \\(m1\\, m2\\[\\, copy\\, "
+"shrink\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:181:<autosummary>:1
+#: ../../../reference/routines.ma.rst:223:<autosummary>:1
+msgid "Combine two masks with the ``logical_or`` operator."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:181:<autosummary>:1
+msgid ":py:obj:`ma.make_mask_descr <numpy.ma.make_mask_descr>`\\ \\(ndtype\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:181:<autosummary>:1
+msgid "Construct a dtype description list from a given dtype."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:183
+msgid "Accessing a mask"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:191:<autosummary>:1
+msgid ":py:obj:`ma.masked_array.mask <numpy.ma.masked_array.mask>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:193
+msgid "Finding masked data"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:205:<autosummary>:1
+msgid ""
+":py:obj:`ma.ndenumerate <numpy.ma.ndenumerate>`\\ \\(a\\[\\, compressed\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:205:<autosummary>:1
+msgid "Multidimensional index iterator."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:205:<autosummary>:1
+msgid ""
+":py:obj:`ma.flatnotmasked_contiguous <numpy.ma.flatnotmasked_contiguous>`\\ "
+"\\(a\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:205:<autosummary>:1
+msgid "Find contiguous unmasked data in a masked array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:205:<autosummary>:1
+msgid ""
+":py:obj:`ma.flatnotmasked_edges <numpy.ma.flatnotmasked_edges>`\\ \\(a\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:205:<autosummary>:1
+msgid "Find the indices of the first and last unmasked values."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:205:<autosummary>:1
+msgid ""
+":py:obj:`ma.notmasked_contiguous <numpy.ma.notmasked_contiguous>`\\ "
+"\\(a\\[\\, axis\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:205:<autosummary>:1
+msgid "Find contiguous unmasked data in a masked array along the given axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:205:<autosummary>:1
+msgid ""
+":py:obj:`ma.notmasked_edges <numpy.ma.notmasked_edges>`\\ \\(a\\[\\, "
+"axis\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:205:<autosummary>:1
+msgid "Find the indices of the first and last unmasked values along an axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:205:<autosummary>:1
+msgid ":py:obj:`ma.clump_masked <numpy.ma.clump_masked>`\\ \\(a\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:205:<autosummary>:1
+msgid ""
+"Returns a list of slices corresponding to the masked clumps of a 1-D array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:205:<autosummary>:1
+msgid ":py:obj:`ma.clump_unmasked <numpy.ma.clump_unmasked>`\\ \\(a\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:205:<autosummary>:1
+msgid ""
+"Return list of slices corresponding to the unmasked clumps of a 1-D array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:207
+msgid "Modifying a mask"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:223:<autosummary>:1
+msgid ":py:obj:`ma.mask_cols <numpy.ma.mask_cols>`\\ \\(a\\[\\, axis\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:223:<autosummary>:1
+msgid "Mask columns of a 2D array that contain masked values."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:223:<autosummary>:1
+msgid ""
+":py:obj:`ma.mask_rowcols <numpy.ma.mask_rowcols>`\\ \\(a\\[\\, axis\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:223:<autosummary>:1
+msgid "Mask rows and/or columns of a 2D array that contain masked values."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:223:<autosummary>:1
+msgid ":py:obj:`ma.mask_rows <numpy.ma.mask_rows>`\\ \\(a\\[\\, axis\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:223:<autosummary>:1
+msgid "Mask rows of a 2D array that contain masked values."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:223:<autosummary>:1
+msgid ":py:obj:`ma.harden_mask <numpy.ma.harden_mask>`\\ \\(self\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:223:<autosummary>:1
+msgid "Force the mask to hard, preventing unmasking by assignment."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:223:<autosummary>:1
+msgid ":py:obj:`ma.soften_mask <numpy.ma.soften_mask>`\\ \\(self\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:223:<autosummary>:1
+msgid "Force the mask to soft (default), allowing unmasking by assignment."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:223:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.harden_mask <numpy.ma.MaskedArray.harden_mask>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:223:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.soften_mask <numpy.ma.MaskedArray.soften_mask>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:223:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.shrink_mask <numpy.ma.MaskedArray.shrink_mask>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:223:<autosummary>:1
+msgid "Reduce a mask to nomask when possible."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:223:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.unshare_mask <numpy.ma.MaskedArray.unshare_mask>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:223:<autosummary>:1
+msgid "Copy the mask and set the `sharedmask` flag to ``False``."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:227
+msgid "Conversion operations"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:230
+msgid "> to a masked array"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid ""
+":py:obj:`ma.asarray <numpy.ma.asarray>`\\ \\(a\\[\\, dtype\\, order\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid "Convert the input to a masked array of the given data-type."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid ":py:obj:`ma.asanyarray <numpy.ma.asanyarray>`\\ \\(a\\[\\, dtype\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid "Convert the input to a masked array, conserving subclasses."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid ""
+":py:obj:`ma.fix_invalid <numpy.ma.fix_invalid>`\\ \\(a\\[\\, mask\\, copy\\, "
+"fill\\_value\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid "Return input with invalid data masked and replaced by a fill value."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid ""
+":py:obj:`ma.masked_equal <numpy.ma.masked_equal>`\\ \\(x\\, value\\[\\, "
+"copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid "Mask an array where equal to a given value."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid ""
+":py:obj:`ma.masked_greater <numpy.ma.masked_greater>`\\ \\(x\\, value\\[\\, "
+"copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid "Mask an array where greater than a given value."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid ""
+":py:obj:`ma.masked_greater_equal <numpy.ma.masked_greater_equal>`\\ \\(x\\, "
+"value\\[\\, copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid "Mask an array where greater than or equal to a given value."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid ""
+":py:obj:`ma.masked_inside <numpy.ma.masked_inside>`\\ \\(x\\, v1\\, v2\\[\\, "
+"copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid "Mask an array inside a given interval."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid ""
+":py:obj:`ma.masked_invalid <numpy.ma.masked_invalid>`\\ \\(a\\[\\, copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid "Mask an array where invalid values occur (NaNs or infs)."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid ""
+":py:obj:`ma.masked_less <numpy.ma.masked_less>`\\ \\(x\\, value\\[\\, "
+"copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid "Mask an array where less than a given value."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid ""
+":py:obj:`ma.masked_less_equal <numpy.ma.masked_less_equal>`\\ \\(x\\, "
+"value\\[\\, copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid "Mask an array where less than or equal to a given value."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid ""
+":py:obj:`ma.masked_not_equal <numpy.ma.masked_not_equal>`\\ \\(x\\, "
+"value\\[\\, copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid "Mask an array where `not` equal to a given value."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid ""
+":py:obj:`ma.masked_object <numpy.ma.masked_object>`\\ \\(x\\, value\\[\\, "
+"copy\\, shrink\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid "Mask the array `x` where the data are exactly equal to value."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid ""
+":py:obj:`ma.masked_outside <numpy.ma.masked_outside>`\\ \\(x\\, v1\\, "
+"v2\\[\\, copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid "Mask an array outside a given interval."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid ""
+":py:obj:`ma.masked_values <numpy.ma.masked_values>`\\ \\(x\\, value\\[\\, "
+"rtol\\, atol\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid "Mask using floating point equality."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid ""
+":py:obj:`ma.masked_where <numpy.ma.masked_where>`\\ \\(condition\\, a\\[\\, "
+"copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:250:<autosummary>:1
+msgid "Mask an array where a condition is met."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:252
+msgid "> to a ndarray"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:265:<autosummary>:1
+msgid ":py:obj:`ma.compress_cols <numpy.ma.compress_cols>`\\ \\(a\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:265:<autosummary>:1
+msgid "Suppress whole columns of a 2-D array that contain masked values."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:265:<autosummary>:1
+msgid ""
+":py:obj:`ma.compress_rowcols <numpy.ma.compress_rowcols>`\\ \\(x\\[\\, "
+"axis\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:265:<autosummary>:1
+msgid ""
+"Suppress the rows and/or columns of a 2-D array that contain masked values."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:265:<autosummary>:1
+msgid ":py:obj:`ma.compress_rows <numpy.ma.compress_rows>`\\ \\(a\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:265:<autosummary>:1
+msgid "Suppress whole rows of a 2-D array that contain masked values."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:265:<autosummary>:1
+msgid ":py:obj:`ma.compressed <numpy.ma.compressed>`\\ \\(x\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:265:<autosummary>:1
+msgid "Return all the non-masked data as a 1-D array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:265:<autosummary>:1
+msgid ":py:obj:`ma.filled <numpy.ma.filled>`\\ \\(a\\[\\, fill\\_value\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:265:<autosummary>:1
+msgid "Return input as an array with masked data replaced by a fill value."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:265:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.compressed <numpy.ma.MaskedArray.compressed>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:265:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.filled <numpy.ma.MaskedArray.filled>`\\ "
+"\\(\\[fill\\_value\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:265:<autosummary>:1
+msgid "Return a copy of self, with masked values filled with a given value."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:267
+msgid "> to another object"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:276:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.tofile <numpy.ma.MaskedArray.tofile>`\\ \\(fid\\[\\, "
+"sep\\, format\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:276:<autosummary>:1
+msgid "Save a masked array to a file in binary format."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:276:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.tolist <numpy.ma.MaskedArray.tolist>`\\ "
+"\\(\\[fill\\_value\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:276:<autosummary>:1
+msgid ""
+"Return the data portion of the masked array as a hierarchical Python list."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:276:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.torecords <numpy.ma.MaskedArray.torecords>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:276:<autosummary>:1
+msgid "Transforms a masked array into a flexible-type array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:276:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.tobytes <numpy.ma.MaskedArray.tobytes>`\\ "
+"\\(\\[fill\\_value\\, order\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:276:<autosummary>:1
+msgid ""
+"Return the array data as a string containing the raw bytes in the array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:278
+msgid "Filling a masked array"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:290:<autosummary>:1
+msgid ""
+":py:obj:`ma.common_fill_value <numpy.ma.common_fill_value>`\\ \\(a\\, b\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:290:<autosummary>:1
+msgid "Return the common filling value of two masked arrays, if any."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:290:<autosummary>:1
+msgid ""
+":py:obj:`ma.default_fill_value <numpy.ma.default_fill_value>`\\ \\(obj\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:290:<autosummary>:1
+msgid "Return the default fill value for the argument object."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:290:<autosummary>:1
+msgid ""
+":py:obj:`ma.maximum_fill_value <numpy.ma.maximum_fill_value>`\\ \\(obj\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:290:<autosummary>:1
+msgid ""
+"Return the minimum value that can be represented by the dtype of an object."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:290:<autosummary>:1
+msgid ""
+":py:obj:`ma.minimum_fill_value <numpy.ma.minimum_fill_value>`\\ \\(obj\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:290:<autosummary>:1
+msgid ""
+"Return the maximum value that can be represented by the dtype of an object."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:290:<autosummary>:1
+msgid ""
+":py:obj:`ma.set_fill_value <numpy.ma.set_fill_value>`\\ \\(a\\, "
+"fill\\_value\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:290:<autosummary>:1
+msgid "Set the filling value of a, if a is a masked array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:290:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.get_fill_value <numpy.ma.MaskedArray."
+"get_fill_value>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:290:<autosummary>:1
+#: ../../../reference/routines.ma.rst:294:<autosummary>:1
+msgid "The filling value of the masked array is a scalar."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:290:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.set_fill_value <numpy.ma.MaskedArray."
+"set_fill_value>`\\ \\(\\[value\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:294:<autosummary>:1
+msgid ":py:obj:`ma.MaskedArray.fill_value <numpy.ma.MaskedArray.fill_value>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:298
+msgid "Masked arrays arithmetic"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:301
+msgid "Arithmetic"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ":py:obj:`ma.anom <numpy.ma.anom>`\\ \\(self\\[\\, axis\\, dtype\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+"Compute the anomalies (deviations from the arithmetic mean) along the given "
+"axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+":py:obj:`ma.anomalies <numpy.ma.anomalies>`\\ \\(self\\[\\, axis\\, "
+"dtype\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+":py:obj:`ma.average <numpy.ma.average>`\\ \\(a\\[\\, axis\\, weights\\, "
+"returned\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid "Return the weighted average of array over the given axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+":py:obj:`ma.conjugate <numpy.ma.conjugate>`\\ \\(x\\, \\/\\[\\, out\\, "
+"where\\, casting\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid "Return the complex conjugate, element-wise."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+":py:obj:`ma.corrcoef <numpy.ma.corrcoef>`\\ \\(x\\[\\, y\\, rowvar\\, "
+"bias\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid "Return Pearson product-moment correlation coefficients."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+":py:obj:`ma.cov <numpy.ma.cov>`\\ \\(x\\[\\, y\\, rowvar\\, bias\\, "
+"allow\\_masked\\, ddof\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid "Estimate the covariance matrix."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+":py:obj:`ma.cumsum <numpy.ma.cumsum>`\\ \\(self\\[\\, axis\\, dtype\\, "
+"out\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid "Return the cumulative sum of the array elements over the given axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+":py:obj:`ma.cumprod <numpy.ma.cumprod>`\\ \\(self\\[\\, axis\\, dtype\\, "
+"out\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+"Return the cumulative product of the array elements over the given axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+":py:obj:`ma.mean <numpy.ma.mean>`\\ \\(self\\[\\, axis\\, dtype\\, out\\, "
+"keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid "Returns the average of the array elements along given axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+":py:obj:`ma.median <numpy.ma.median>`\\ \\(a\\[\\, axis\\, out\\, "
+"overwrite\\_input\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid "Compute the median along the specified axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ":py:obj:`ma.power <numpy.ma.power>`\\ \\(a\\, b\\[\\, third\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid "Returns element-wise base array raised to power from second array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+":py:obj:`ma.prod <numpy.ma.prod>`\\ \\(self\\[\\, axis\\, dtype\\, out\\, "
+"keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid "Return the product of the array elements over the given axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+":py:obj:`ma.std <numpy.ma.std>`\\ \\(self\\[\\, axis\\, dtype\\, out\\, "
+"ddof\\, keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid "Returns the standard deviation of the array elements along given axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+":py:obj:`ma.sum <numpy.ma.sum>`\\ \\(self\\[\\, axis\\, dtype\\, out\\, "
+"keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid "Return the sum of the array elements over the given axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+":py:obj:`ma.var <numpy.ma.var>`\\ \\(self\\[\\, axis\\, dtype\\, out\\, "
+"ddof\\, keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid "Compute the variance along the specified axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.anom <numpy.ma.MaskedArray.anom>`\\ \\(\\[axis\\, "
+"dtype\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.cumprod <numpy.ma.MaskedArray.cumprod>`\\ "
+"\\(\\[axis\\, dtype\\, out\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.cumsum <numpy.ma.MaskedArray.cumsum>`\\ "
+"\\(\\[axis\\, dtype\\, out\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.mean <numpy.ma.MaskedArray.mean>`\\ \\(\\[axis\\, "
+"dtype\\, out\\, keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.prod <numpy.ma.MaskedArray.prod>`\\ \\(\\[axis\\, "
+"dtype\\, out\\, keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.std <numpy.ma.MaskedArray.std>`\\ \\(\\[axis\\, "
+"dtype\\, out\\, ddof\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.sum <numpy.ma.MaskedArray.sum>`\\ \\(\\[axis\\, "
+"dtype\\, out\\, keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:330:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.var <numpy.ma.MaskedArray.var>`\\ \\(\\[axis\\, "
+"dtype\\, out\\, ddof\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:332
+msgid "Minimum/maximum"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:349:<autosummary>:1
+msgid ""
+":py:obj:`ma.argmax <numpy.ma.argmax>`\\ \\(self\\[\\, axis\\, "
+"fill\\_value\\, out\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:349:<autosummary>:1
+msgid "Returns array of indices of the maximum values along the given axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:349:<autosummary>:1
+msgid ""
+":py:obj:`ma.argmin <numpy.ma.argmin>`\\ \\(self\\[\\, axis\\, "
+"fill\\_value\\, out\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:349:<autosummary>:1
+msgid "Return array of indices to the minimum values along the given axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:349:<autosummary>:1
+msgid ""
+":py:obj:`ma.max <numpy.ma.max>`\\ \\(obj\\[\\, axis\\, out\\, "
+"fill\\_value\\, keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:349:<autosummary>:1
+msgid "Return the maximum along a given axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:349:<autosummary>:1
+msgid ""
+":py:obj:`ma.min <numpy.ma.min>`\\ \\(obj\\[\\, axis\\, out\\, "
+"fill\\_value\\, keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:349:<autosummary>:1
+msgid "Return the minimum along a given axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:349:<autosummary>:1
+msgid ""
+":py:obj:`ma.ptp <numpy.ma.ptp>`\\ \\(obj\\[\\, axis\\, out\\, "
+"fill\\_value\\, keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:349:<autosummary>:1
+msgid "Return (maximum - minimum) along the given dimension (i.e."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:349:<autosummary>:1
+msgid ""
+":py:obj:`ma.diff <numpy.ma.diff>`\\ \\(a\\, \\/\\[\\, n\\, axis\\, "
+"prepend\\, append\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:349:<autosummary>:1
+msgid "Calculate the n-th discrete difference along the given axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:349:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.argmax <numpy.ma.MaskedArray.argmax>`\\ "
+"\\(\\[axis\\, fill\\_value\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:349:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.argmin <numpy.ma.MaskedArray.argmin>`\\ "
+"\\(\\[axis\\, fill\\_value\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:349:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.max <numpy.ma.MaskedArray.max>`\\ \\(\\[axis\\, "
+"out\\, fill\\_value\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:349:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.min <numpy.ma.MaskedArray.min>`\\ \\(\\[axis\\, "
+"out\\, fill\\_value\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:349:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.ptp <numpy.ma.MaskedArray.ptp>`\\ \\(\\[axis\\, "
+"out\\, fill\\_value\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:351
+msgid "Sorting"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:360:<autosummary>:1
+msgid ""
+":py:obj:`ma.argsort <numpy.ma.argsort>`\\ \\(a\\[\\, axis\\, kind\\, "
+"order\\, endwith\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:360:<autosummary>:1
+msgid ""
+"Return an ndarray of indices that sort the array along the specified axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:360:<autosummary>:1
+msgid ""
+":py:obj:`ma.sort <numpy.ma.sort>`\\ \\(a\\[\\, axis\\, kind\\, order\\, "
+"endwith\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:360:<autosummary>:1
+msgid "Return a sorted copy of the masked array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:360:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.argsort <numpy.ma.MaskedArray.argsort>`\\ "
+"\\(\\[axis\\, kind\\, order\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:360:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.sort <numpy.ma.MaskedArray.sort>`\\ \\(\\[axis\\, "
+"kind\\, order\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:360:<autosummary>:1
+msgid "Sort the array, in-place"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:362
+msgid "Algebra"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:379:<autosummary>:1
+msgid ":py:obj:`ma.diag <numpy.ma.diag>`\\ \\(v\\[\\, k\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:379:<autosummary>:1
+msgid "Extract a diagonal or construct a diagonal array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:379:<autosummary>:1
+msgid ":py:obj:`ma.dot <numpy.ma.dot>`\\ \\(a\\, b\\[\\, strict\\, out\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:379:<autosummary>:1
+msgid "Return the dot product of two arrays."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:379:<autosummary>:1
+msgid ":py:obj:`ma.identity <numpy.ma.identity>`\\ \\(n\\[\\, dtype\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:379:<autosummary>:1
+msgid "Return the identity array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:379:<autosummary>:1
+msgid ":py:obj:`ma.inner <numpy.ma.inner>`\\ \\(a\\, b\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:379:<autosummary>:1
+msgid "Inner product of two arrays."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:379:<autosummary>:1
+msgid ":py:obj:`ma.innerproduct <numpy.ma.innerproduct>`\\ \\(a\\, b\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:379:<autosummary>:1
+msgid ":py:obj:`ma.outer <numpy.ma.outer>`\\ \\(a\\, b\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:379:<autosummary>:1
+msgid "Compute the outer product of two vectors."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:379:<autosummary>:1
+msgid ":py:obj:`ma.outerproduct <numpy.ma.outerproduct>`\\ \\(a\\, b\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:379:<autosummary>:1
+msgid ""
+":py:obj:`ma.trace <numpy.ma.trace>`\\ \\(self\\[\\, offset\\, axis1\\, "
+"axis2\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:379:<autosummary>:1
+msgid "Return the sum along diagonals of the array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:379:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.trace <numpy.ma.MaskedArray.trace>`\\ "
+"\\(\\[offset\\, axis1\\, axis2\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:381
+msgid "Polynomial fit"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:388:<autosummary>:1
+msgid ":py:obj:`ma.vander <numpy.ma.vander>`\\ \\(x\\[\\, n\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:388:<autosummary>:1
+msgid "Generate a Vandermonde matrix."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:388:<autosummary>:1
+msgid ""
+":py:obj:`ma.polyfit <numpy.ma.polyfit>`\\ \\(x\\, y\\, deg\\[\\, rcond\\, "
+"full\\, w\\, cov\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:388:<autosummary>:1
+msgid "Least squares polynomial fit."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:390
+msgid "Clipping and rounding"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:400:<autosummary>:1
+msgid ":py:obj:`ma.around <numpy.ma.around>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:400:<autosummary>:1
+msgid "Round an array to the given number of decimals."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:400:<autosummary>:1
+msgid ":py:obj:`ma.clip <numpy.ma.clip>`\\"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:400:<autosummary>:1
+msgid "Clip (limit) the values in an array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:400:<autosummary>:1
+msgid ":py:obj:`ma.round <numpy.ma.round>`\\ \\(a\\[\\, decimals\\, out\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:400:<autosummary>:1
+msgid "Return a copy of a, rounded to 'decimals' places."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:400:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.clip <numpy.ma.MaskedArray.clip>`\\ \\(\\[min\\, "
+"max\\, out\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:400:<autosummary>:1
+msgid "Return an array whose values are limited to ``[min, max]``."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:400:<autosummary>:1
+msgid ""
+":py:obj:`ma.MaskedArray.round <numpy.ma.MaskedArray.round>`\\ "
+"\\(\\[decimals\\, out\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:400:<autosummary>:1
+msgid "Return each element rounded to the given number of decimals."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:402
+msgid "Set operations"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:412:<autosummary>:1
+msgid ""
+":py:obj:`ma.intersect1d <numpy.ma.intersect1d>`\\ \\(ar1\\, ar2\\[\\, "
+"assume\\_unique\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:412:<autosummary>:1
+msgid "Returns the unique elements common to both arrays."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:412:<autosummary>:1
+msgid ""
+":py:obj:`ma.setdiff1d <numpy.ma.setdiff1d>`\\ \\(ar1\\, ar2\\[\\, "
+"assume\\_unique\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:412:<autosummary>:1
+msgid "Set difference of 1D arrays with unique elements."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:412:<autosummary>:1
+msgid ""
+":py:obj:`ma.setxor1d <numpy.ma.setxor1d>`\\ \\(ar1\\, ar2\\[\\, "
+"assume\\_unique\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:412:<autosummary>:1
+msgid "Set exclusive-or of 1-D arrays with unique elements."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:412:<autosummary>:1
+msgid ":py:obj:`ma.union1d <numpy.ma.union1d>`\\ \\(ar1\\, ar2\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:412:<autosummary>:1
+msgid "Union of two arrays."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:414
+msgid "Miscellanea"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:426:<autosummary>:1
+msgid ""
+":py:obj:`ma.allequal <numpy.ma.allequal>`\\ \\(a\\, b\\[\\, "
+"fill\\_value\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:426:<autosummary>:1
+msgid ""
+"Return True if all entries of a and b are equal, using fill_value as a truth "
+"value where either or both are masked."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:426:<autosummary>:1
+msgid ""
+":py:obj:`ma.allclose <numpy.ma.allclose>`\\ \\(a\\, b\\[\\, "
+"masked\\_equal\\, rtol\\, atol\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:426:<autosummary>:1
+msgid "Returns True if two arrays are element-wise equal within a tolerance."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:426:<autosummary>:1
+msgid ""
+":py:obj:`ma.apply_along_axis <numpy.ma.apply_along_axis>`\\ \\(func1d\\, "
+"axis\\, arr\\, ...\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:426:<autosummary>:1
+msgid "Apply a function to 1-D slices along the given axis."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:426:<autosummary>:1
+msgid ""
+":py:obj:`ma.apply_over_axes <numpy.ma.apply_over_axes>`\\ \\(func\\, a\\, "
+"axes\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:426:<autosummary>:1
+msgid "Apply a function repeatedly over multiple axes."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:426:<autosummary>:1
+msgid ""
+":py:obj:`ma.arange <numpy.ma.arange>`\\ \\(\\[start\\,\\] stop\\[\\, step\\,"
+"\\]\\[\\, dtype\\, like\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:426:<autosummary>:1
+msgid "Return evenly spaced values within a given interval."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:426:<autosummary>:1
+msgid ""
+":py:obj:`ma.choose <numpy.ma.choose>`\\ \\(indices\\, choices\\[\\, out\\, "
+"mode\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:426:<autosummary>:1
+msgid "Use an index array to construct a new array from a list of choices."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:426:<autosummary>:1
+msgid ""
+":py:obj:`ma.ediff1d <numpy.ma.ediff1d>`\\ \\(arr\\[\\, to\\_end\\, "
+"to\\_begin\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:426:<autosummary>:1
+msgid "Compute the differences between consecutive elements of an array."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:426:<autosummary>:1
+msgid ""
+":py:obj:`ma.indices <numpy.ma.indices>`\\ \\(dimensions\\[\\, dtype\\, "
+"sparse\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:426:<autosummary>:1
+msgid "Return an array representing the indices of a grid."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:426:<autosummary>:1
+msgid ":py:obj:`ma.where <numpy.ma.where>`\\ \\(condition\\[\\, x\\, y\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:426:<autosummary>:1
+msgid ""
+"Return a masked array with elements from `x` or `y`, depending on condition."
+msgstr ""

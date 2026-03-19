@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release/1.10.4-notes.rst:3
+msgid "NumPy 1.10.4 Release Notes"
+msgstr ""
+
+#: ../../../release/1.10.4-notes.rst:5
+msgid ""
+"This release is a bugfix source release motivated by a segfault regression. "
+"No windows binaries are provided for this release, as there appear to be "
+"bugs in the toolchain we use to generate those files. Hopefully that problem "
+"will be fixed for the next release. In the meantime, we suggest using one of "
+"the providers of windows binaries."
+msgstr ""
+
+#: ../../../release/1.10.4-notes.rst:12
+msgid "Compatibility notes"
+msgstr ""
+
+#: ../../../release/1.10.4-notes.rst:14
+msgid ""
+"The trace function now calls the trace method on subclasses of ndarray, "
+"except for matrix, for which the current behavior is preserved. This is to "
+"help with the units package of AstroPy and hopefully will not cause problems."
+msgstr ""
+
+#: ../../../release/1.10.4-notes.rst:20
+msgid "Issues Fixed"
+msgstr ""
+
+#: ../../../release/1.10.4-notes.rst:22
+msgid "gh-6922 BUG: numpy.recarray.sort segfaults on Windows."
+msgstr ""
+
+#: ../../../release/1.10.4-notes.rst:23
+msgid ""
+"gh-6937 BUG: busday_offset does the wrong thing with modifiedpreceding roll."
+msgstr ""
+
+#: ../../../release/1.10.4-notes.rst:24
+msgid "gh-6949 BUG: Type is lost when slicing a subclass of recarray."
+msgstr ""
+
+#: ../../../release/1.10.4-notes.rst:27
+msgid "Merged PRs"
+msgstr ""
+
+#: ../../../release/1.10.4-notes.rst:29
+msgid ""
+"The following PRs have been merged into 1.10.4. When the PR is a backport, "
+"the PR number for the original PR against master is listed."
+msgstr ""
+
+#: ../../../release/1.10.4-notes.rst:32
+msgid "gh-6840 TST: Update travis testing script in 1.10.x"
+msgstr ""
+
+#: ../../../release/1.10.4-notes.rst:33
+msgid "gh-6843 BUG: Fix use of python 3 only FileNotFoundError in test_f2py."
+msgstr ""
+
+#: ../../../release/1.10.4-notes.rst:34
+msgid ""
+"gh-6884 REL: Update pavement.py and setup.py to reflect current version."
+msgstr ""
+
+#: ../../../release/1.10.4-notes.rst:35
+msgid "gh-6916 BUG: Fix test_f2py so it runs correctly in runtests.py."
+msgstr ""
+
+#: ../../../release/1.10.4-notes.rst:36
+msgid "gh-6924 BUG: Fix segfault gh-6922."
+msgstr ""
+
+#: ../../../release/1.10.4-notes.rst:37
+msgid "gh-6942 Fix datetime roll='modifiedpreceding' bug."
+msgstr ""
+
+#: ../../../release/1.10.4-notes.rst:38
+msgid "gh-6943 DOC,BUG: Fix some latex generation problems."
+msgstr ""
+
+#: ../../../release/1.10.4-notes.rst:39
+msgid "gh-6950 BUG trace is not subclass aware, np.trace(ma) != ma.trace()."
+msgstr ""
+
+#: ../../../release/1.10.4-notes.rst:40
+msgid "gh-6952 BUG recarray slices should preserve subclass."
+msgstr ""

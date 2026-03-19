@@ -1,0 +1,240 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.ma.arange.rst:4
+msgid "numpy.ma.arange"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:2
+msgid "Return evenly spaced values within a given interval."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:4
+msgid "``arange`` can be called with a varying number of positional arguments:"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:6
+msgid ""
+"``arange(stop)``: Values are generated within the half-open interval ``[0, "
+"stop)`` (in other words, the interval including `start` but excluding "
+"`stop`)."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:9
+msgid ""
+"``arange(start, stop)``: Values are generated within the half-open interval "
+"``[start, stop)``."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:11
+msgid ""
+"``arange(start, stop, step)`` Values are generated within the half-open "
+"interval ``[start, stop)``, with spacing between values given by ``step``."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:15
+msgid ""
+"For integer arguments the function is roughly equivalent to the Python built-"
+"in :py:class:`range`, but returns an ndarray rather than a ``range`` "
+"instance."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:19
+msgid ""
+"When using a non-integer step, such as 0.1, it is often better to use `numpy."
+"linspace`."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:22
+msgid "See the Warning sections below for more information."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:28
+msgid "**start**"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:-1
+msgid "integer or real, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:27
+msgid ""
+"Start of interval.  The interval includes this value.  The default start "
+"value is 0."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:33
+msgid "**stop**"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:-1
+msgid "integer or real"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:31
+msgid ""
+"End of interval.  The interval does not include this value, except in some "
+"cases where `step` is not an integer and floating point round-off affects "
+"the length of `out`."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:39
+msgid "**step**"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:36
+msgid ""
+"Spacing between values.  For any output `out`, this is the distance between "
+"two adjacent values, ``out[i+1] - out[i]``.  The default step size is 1.  If "
+"`step` is specified as a position argument, `start` must also be given."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:43
+msgid "**dtype**"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:-1
+msgid "dtype, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:42
+msgid ""
+"The type of the output array.  If `dtype` is not given, infer the data type "
+"from the other input arguments."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:52
+msgid "**like**"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:46
+msgid ""
+"Reference object to allow the creation of arrays which are not NumPy arrays. "
+"If an array-like passed in as ``like`` supports the ``__array_function__`` "
+"protocol, the result will be defined by it. In this case, it ensures the "
+"creation of an array object compatible with that passed in via this argument."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:67
+msgid "**arange**"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:-1
+msgid "MaskedArray"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:57
+msgid "Array of evenly spaced values."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:59
+msgid ""
+"For floating point arguments, the length of the result is ``ceil((stop - "
+"start)/step)``.  Because of floating point overflow, this rule may result in "
+"the last element of `out` being greater than `stop`."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:71
+msgid "The length of the output might not be numerically stable."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:73
+msgid ""
+"Another stability issue is due to the internal implementation of `numpy."
+"arange`. The actual step value used to populate the array is ``dtype(start + "
+"step) - dtype(start)`` and not `step`. Precision loss can occur here, due to "
+"casting or due to using floating points when `start` is much larger than "
+"`step`. This can lead to unexpected behaviour. For example::"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:81
+msgid ""
+">>> np.arange(0, 5, 0.5, dtype=int)\n"
+"array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])\n"
+">>> np.arange(-3, 3, 0.5, dtype=int)\n"
+"array([-3, -2, -1,  0,  1,  2,  3,  4,  5,  6,  7,  8])"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:86
+msgid "In such cases, the use of `numpy.linspace` should be preferred."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:88
+msgid ""
+"The built-in :py:class:`range` generates :std:doc:`Python built-in integers "
+"that have arbitrary size <python:c-api/long>`, while `numpy.arange` produces "
+"`numpy.int32` or `numpy.int64` numbers. This may result in incorrect results "
+"for large integer values::"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:93
+msgid ""
+">>> power = 40\n"
+">>> modulo = 10000\n"
+">>> x1 = [(n ** power) % modulo for n in range(8)]\n"
+">>> x2 = [(n ** power) % modulo for n in np.arange(8)]\n"
+">>> print(x1)\n"
+"[0, 1, 7776, 8801, 6176, 625, 6576, 4001]  # correct\n"
+">>> print(x2)\n"
+"[0, 1, 7776, 7185, 0, 5969, 4816, 3361]  # incorrect"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:105
+msgid ":obj:`numpy.linspace`"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:106
+msgid "Evenly spaced numbers with careful handling of endpoints."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:107
+msgid ":obj:`numpy.ogrid`"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:108
+msgid "Arrays of evenly spaced numbers in N-dimensions."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:109
+msgid ":obj:`numpy.mgrid`"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:110
+msgid "Grid-shaped arrays of evenly spaced numbers in N-dimensions."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:111
+msgid ":ref:`how-to-partition`"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.arange:117
+msgid "Examples"
+msgstr ""

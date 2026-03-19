@@ -1,0 +1,355 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:1
+msgid "A sub-package for efficiently dealing with polynomials."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:3
+msgid ""
+"Within the documentation for this sub-package, a \"finite power series,\" i."
+"e., a polynomial (also referred to simply as a \"series\") is represented by "
+"a 1-D numpy array of the polynomial's coefficients, ordered from lowest "
+"order term to highest.  For example, array([1,2,3]) represents ``P_0 + 2*P_1 "
+"+ 3*P_2``, where P_n is the n-th order basis polynomial applicable to the "
+"specific module in question, e.g., `polynomial` (which \"wraps\" the "
+"\"standard\" basis) or `chebyshev`.  For optimal performance, all operations "
+"on polynomials, including evaluation at an argument, are implemented as "
+"operations on the coefficients.  Additional (module-specific) information "
+"can be found in the docstring for the module of interest."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:14
+msgid ""
+"This package provides *convenience classes* for each of six different kinds "
+"of polynomials:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:18
+msgid "**Name**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:18
+msgid "**Provides**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:20
+msgid "`~polynomial.Polynomial`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:20
+msgid "Power series"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:21
+msgid "`~chebyshev.Chebyshev`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:21
+msgid "Chebyshev series"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:22
+msgid "`~legendre.Legendre`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:22
+msgid "Legendre series"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:23
+msgid "`~laguerre.Laguerre`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:23
+msgid "Laguerre series"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:24
+msgid "`~hermite.Hermite`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:24
+msgid "Hermite series"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:25
+msgid "`~hermite_e.HermiteE`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:25
+msgid "HermiteE series"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:28
+msgid ""
+"These *convenience classes* provide a consistent interface for creating, "
+"manipulating, and fitting data with polynomials of different bases. The "
+"convenience classes are the preferred interface for the `~numpy.polynomial` "
+"package, and are available from the ``numpy.polynomial`` namespace. This "
+"eliminates the need to navigate to the corresponding submodules, e.g. ``np."
+"polynomial.Polynomial`` or ``np.polynomial.Chebyshev`` instead of ``np."
+"polynomial.polynomial.Polynomial`` or ``np.polynomial.chebyshev.Chebyshev``, "
+"respectively. The classes provide a more consistent and concise interface "
+"than the type-specific functions defined in the submodules for each type of "
+"polynomial. For example, to fit a Chebyshev polynomial with degree ``1`` to "
+"data given by arrays ``xdata`` and ``ydata``, the `~chebyshev.Chebyshev.fit` "
+"class method::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:42
+msgid ""
+">>> from numpy.polynomial import Chebyshev\n"
+">>> c = Chebyshev.fit(xdata, ydata, deg=1)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:45
+msgid ""
+"is preferred over the `chebyshev.chebfit` function from the ``np.polynomial."
+"chebyshev`` module::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:48
+msgid ""
+">>> from numpy.polynomial.chebyshev import chebfit\n"
+">>> c = chebfit(xdata, ydata, deg=1)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:51
+msgid "See :doc:`routines.polynomials.classes` for more details."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:54
+msgid "Convenience Classes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:56
+msgid ""
+"The following lists the various constants and methods common to all of the "
+"classes representing the various kinds of polynomials. In the following, the "
+"term ``Poly`` represents any one of the convenience classes (e.g. "
+"`~polynomial.Polynomial`, `~chebyshev.Chebyshev`, `~hermite.Hermite`, etc.) "
+"while the lowercase ``p`` represents an **instance** of a polynomial class."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:63
+msgid "Constants"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:65
+msgid "``Poly.domain``     -- Default domain"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:66
+msgid "``Poly.window``     -- Default window"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:67
+msgid "``Poly.basis_name`` -- String used to represent the basis"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:68
+msgid ""
+"``Poly.maxpower``   -- Maximum value ``n`` such that ``p**n`` is allowed"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:69
+msgid "``Poly.nickname``   -- String used in printing"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:72
+msgid "Creation"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:74
+msgid "Methods for creating polynomial instances."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:76
+msgid "``Poly.basis(degree)``    -- Basis polynomial of given degree"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:77
+msgid "``Poly.identity()``       -- ``p`` where ``p(x) = x`` for all ``x``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:78
+msgid ""
+"``Poly.fit(x, y, deg)``   -- ``p`` of degree ``deg`` with coefficients "
+"determined by the least-squares fit to the data ``x``, ``y``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:80
+msgid "``Poly.fromroots(roots)`` -- ``p`` with specified roots"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:81
+msgid "``p.copy()``              -- Create a copy of ``p``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:84
+msgid "Conversion"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:86
+msgid "Methods for converting a polynomial instance of one kind to another."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:88
+msgid "``p.cast(Poly)``    -- Convert ``p`` to instance of kind ``Poly``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:89
+msgid ""
+"``p.convert(Poly)`` -- Convert ``p`` to instance of kind ``Poly`` or map "
+"between ``domain`` and ``window``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:93
+msgid "Calculus"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:94
+msgid "``p.deriv()`` -- Take the derivative of ``p``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:95
+msgid "``p.integ()`` -- Integrate ``p``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:98
+msgid "Validation"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:99
+msgid "``Poly.has_samecoef(p1, p2)``   -- Check if coefficients match"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:100
+msgid "``Poly.has_samedomain(p1, p2)`` -- Check if domains match"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:101
+msgid "``Poly.has_sametype(p1, p2)``   -- Check if types match"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:102
+msgid "``Poly.has_samewindow(p1, p2)`` -- Check if windows match"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:105
+msgid "Misc"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:106
+msgid ""
+"``p.linspace()`` -- Return ``x, p(x)`` at equally-spaced points in ``domain``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:107
+msgid ""
+"``p.mapparms()`` -- Return the parameters for the linear mapping between "
+"``domain`` and ``window``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:109
+msgid "``p.roots()``    -- Return the roots of `p`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:110
+msgid "``p.trim()``     -- Remove trailing coefficients."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:111
+msgid "``p.cutdeg(degree)`` -- Truncate p to given degree"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/__init__.py:docstring
+#: of numpy.polynomial:112
+msgid "``p.truncate(size)`` -- Truncate p to given size"
+msgstr ""
+
+#: ../../../reference/routines.polynomials.package.rst:9
+msgid "Configuration"
+msgstr ""
+
+#: ../../../reference/routines.polynomials.package.rst:14:<autosummary>:1
+msgid ""
+":py:obj:`numpy.polynomial.set_default_printstyle <numpy.polynomial."
+"set_default_printstyle>`\\ \\(style\\)"
+msgstr ""
+
+#: ../../../reference/routines.polynomials.package.rst:14:<autosummary>:1
+msgid "Set the default format for the string representation of polynomials."
+msgstr ""

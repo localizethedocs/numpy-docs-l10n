@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.memmap.view.rst:4
+msgid "numpy.memmap.view"
+msgstr ""
+
+#: ../../../reference/generated/numpy.memmap.view.rst:8
+msgid "method"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:2
+msgid "New view of array with the same data."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:5
+msgid ""
+"Passing None for ``dtype`` is different from omitting the parameter, since "
+"the former invokes ``dtype(None)`` which is an alias for ``dtype('float_')``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:16
+msgid "**dtype**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:-1
+msgid "data-type or ndarray sub-class, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:12
+msgid ""
+"Data-type descriptor of the returned view, e.g., float32 or int16. Omitting "
+"it results in the view having the same data-type as `a`. This argument can "
+"also be specified as an ndarray sub-class, which then specifies the type of "
+"the returned object (this is equivalent to setting the ``type`` parameter)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:28
+msgid "**type**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:-1
+msgid "Python type, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:19
+msgid ""
+"Type of the returned view, e.g., ndarray or matrix.  Again, omission of the "
+"parameter results in type preservation."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:31
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:32
+msgid "``a.view()`` is used two different ways:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:34
+msgid ""
+"``a.view(some_dtype)`` or ``a.view(dtype=some_dtype)`` constructs a view of "
+"the array's memory with a different data-type.  This can cause a "
+"reinterpretation of the bytes of memory."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:38
+msgid ""
+"``a.view(ndarray_subclass)`` or ``a.view(type=ndarray_subclass)`` just "
+"returns an instance of `ndarray_subclass` that looks at the same array (same "
+"shape, dtype, etc.)  This does not cause a reinterpretation of the memory."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:43
+msgid ""
+"For ``a.view(some_dtype)``, if ``some_dtype`` has a different number of "
+"bytes per entry than the previous dtype (for example, converting a regular "
+"array to a structured array), then the last axis of ``a`` must be "
+"contiguous. This axis will be resized in the result."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:48
+msgid ""
+"Only the last axis needs to be contiguous. Previously, the entire array had "
+"to be C-contiguous."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:54
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:57
+msgid "Viewing array data using a different type and dtype:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:65
+msgid "Creating a view on a structured array so it can be used in calculations"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:75
+msgid "Making changes to the view changes the underlying array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:81
+msgid "Using a view to convert an array to a recarray:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:87
+msgid "Views share data:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:93
+msgid ""
+"Views that change the dtype size (bytes per entry) should normally be "
+"avoided on arrays defined by slices, transposes, fortran-ordering, etc.:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.view:110
+msgid ""
+"However, views that change dtype are totally fine for arrays with a "
+"contiguous last axis, even if the rest of the axes are not C-contiguous:"
+msgstr ""

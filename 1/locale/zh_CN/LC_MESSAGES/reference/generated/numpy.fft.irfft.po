@@ -1,0 +1,259 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.fft.irfft.rst:4
+msgid "numpy.fft.irfft"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:2
+msgid "Computes the inverse of `rfft`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:4
+msgid ""
+"This function computes the inverse of the one-dimensional *n*-point discrete "
+"Fourier Transform of real input computed by `rfft`. In other words, "
+"``irfft(rfft(a), len(a)) == a`` to within numerical accuracy. (See Notes "
+"below for why ``len(a)`` is necessary here.)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:9
+msgid ""
+"The input is expected to be in the form returned by `rfft`, i.e. the real "
+"zero-frequency term followed by the complex positive frequency terms in "
+"order of increasing frequency.  Since the discrete Fourier Transform of real "
+"input is Hermitian-symmetric, the negative frequency terms are taken to be "
+"the complex conjugates of the corresponding positive frequency terms."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:18
+msgid "**a**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:18
+msgid "The input array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:26
+msgid "**n**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:21
+msgid ""
+"Length of the transformed axis of the output. For `n` output points, "
+"``n//2+1`` input points are necessary.  If the input is longer than this, it "
+"is cropped.  If it is shorter than this, it is padded with zeros.  If `n` is "
+"not given, it is taken to be ``2*(m-1)`` where ``m`` is the length of the "
+"input along the axis specified by `axis`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:30
+msgid "**axis**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:29
+msgid ""
+"Axis over which to compute the inverse FFT. If not given, the last axis is "
+"used."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:41
+msgid "**norm**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:-1
+msgid "{\"backward\", \"ortho\", \"forward\"}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:35
+msgid ""
+"Normalization mode (see `numpy.fft`). Default is \"backward\". Indicates "
+"which direction of the forward/backward pair of transforms is scaled and "
+"with what normalization factor."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:41
+msgid "The \"backward\", \"forward\" values were added."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:53
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:46
+msgid ""
+"The truncated or zero-padded input, transformed along the axis indicated by "
+"`axis`, or the last one if `axis` is not specified. The length of the "
+"transformed axis is `n`, or, if `n` is not given, ``2*(m-1)`` where ``m`` is "
+"the length of the transformed axis of the input. To get an odd number of "
+"output points, `n` must be specified."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:60
+msgid "IndexError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:58
+msgid "If `axis` is not a valid axis of `a`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:65
+msgid ":obj:`numpy.fft`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:66
+msgid "For definition of the DFT and conventions used."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:67
+msgid ":obj:`rfft`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:68
+msgid "The one-dimensional FFT of real input, of which `irfft` is inverse."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:69
+msgid ":obj:`fft`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:70
+msgid "The one-dimensional FFT."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:71
+msgid ":obj:`irfft2`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:72
+msgid "The inverse of the two-dimensional FFT of real input."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:73
+msgid ":obj:`irfftn`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:74
+msgid "The inverse of the *n*-dimensional FFT of real input."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:78
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:79
+msgid ""
+"Returns the real valued `n`-point inverse discrete Fourier transform of `a`, "
+"where `a` contains the non-negative frequency terms of a Hermitian-symmetric "
+"sequence. `n` is the length of the result, not the input."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:84
+msgid ""
+"If you specify an `n` such that `a` must be zero-padded or truncated, the "
+"extra/removed values will be added/removed at high frequencies. One can thus "
+"resample a series to `m` points via Fourier interpolation by: ``a_resamp = "
+"irfft(rfft(a), m)``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:89
+msgid ""
+"The correct interpretation of the hermitian input depends on the length of "
+"the original data, as given by `n`. This is because each input shape could "
+"correspond to either an odd or even length signal. By default, `irfft` "
+"assumes an even output length which puts the last entry at the Nyquist "
+"frequency; aliasing with its symmetric counterpart. By Hermitian symmetry, "
+"the value is thus treated as purely real. To avoid losing information, the "
+"correct length of the real input **must** be given."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:99
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.irfft:105
+msgid ""
+"Notice how the last term in the input to the ordinary `ifft` is the complex "
+"conjugate of the second term, and the output has zero imaginary part "
+"everywhere.  When calling `irfft`, the negative frequencies are not "
+"specified, and the output array is purely real."
+msgstr ""

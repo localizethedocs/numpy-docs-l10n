@@ -1,0 +1,200 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/generated/numpy.random.Generator.lognormal.rst:4
+msgid "numpy.random.Generator.lognormal"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.lognormal.rst:8
+msgid "method"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:2
+msgid "Draw samples from a log-normal distribution."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:4
+msgid ""
+"Draw samples from a log-normal distribution with specified mean, standard "
+"deviation, and array shape.  Note that the mean and standard deviation are "
+"not the values for the distribution itself, but of the underlying normal "
+"distribution it is derived from."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:12
+msgid "**mean**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:-1
+msgid "float or array_like of floats, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:12
+msgid "Mean value of the underlying normal distribution. Default is 0."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:16
+msgid "**sigma**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:15
+msgid ""
+"Standard deviation of the underlying normal distribution. Must be non-"
+"negative. Default is 1."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:22
+msgid "**size**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:-1
+msgid "int or tuple of ints, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:19
+msgid ""
+"Output shape.  If the given shape is, e.g., ``(m, n, k)``, then ``m * n * "
+"k`` samples are drawn.  If size is ``None`` (default), a single value is "
+"returned if ``mean`` and ``sigma`` are both scalars. Otherwise, ``np."
+"broadcast(mean, sigma).size`` samples are drawn."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:33
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:-1
+msgid "ndarray or scalar"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:27
+msgid "Drawn samples from the parameterized log-normal distribution."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:38
+msgid ":obj:`scipy.stats.lognorm`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:39
+msgid ""
+"probability density function, distribution, cumulative density function, etc."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:43
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:44
+msgid ""
+"A variable `x` has a log-normal distribution if `log(x)` is normally "
+"distributed.  The probability density function for the log-normal "
+"distribution is:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:48
+msgid ""
+"p(x) = \\frac{1}{\\sigma x \\sqrt{2\\pi}}\n"
+"e^{(-\\frac{(ln(x)-\\mu)^2}{2\\sigma^2})}\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:51
+msgid ""
+"where :math:`\\mu` is the mean and :math:`\\sigma` is the standard deviation "
+"of the normally distributed logarithm of the variable. A log-normal "
+"distribution results if a random variable is the *product* of a large number "
+"of independent, identically-distributed variables in the same way that a "
+"normal distribution results if the variable is the *sum* of a large number "
+"of independent, identically-distributed variables."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:60
+msgid "References"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:61
+msgid ""
+"Limpert, E., Stahel, W. A., and Abbt, M., \"Log-normal Distributions across "
+"the Sciences: Keys and Clues,\" BioScience, Vol. 51, No. 5, May, 2001. "
+"https://stat.ethz.ch/~stahel/lognormal/bioscience.pdf"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:65
+msgid ""
+"Reiss, R.D. and Thomas, M., \"Statistical Analysis of Extreme Values,\" "
+"Basel: Birkhauser Verlag, 2001, pp. 31-32."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:70
+msgid "[R4b7a1f944cc4-1]_, [R4b7a1f944cc4-2]_"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.lognormal:73
+msgid "Examples"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.lognormal.rst:3
+msgid "Draw samples from the distribution:"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.lognormal.rst:9
+msgid ""
+"Display the histogram of the samples, along with the probability density "
+"function:"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.lognormal.rst:48
+msgid ""
+"Demonstrate that taking the products of random samples from a uniform "
+"distribution can be fit well by a log-normal probability density function."
+msgstr ""

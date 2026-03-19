@@ -1,0 +1,233 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.linalg.eigh.rst:4
+msgid "numpy.linalg.eigh"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:2
+msgid ""
+"Return the eigenvalues and eigenvectors of a complex Hermitian (conjugate "
+"symmetric) or a real symmetric matrix."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:5
+msgid ""
+"Returns two objects, a 1-D array containing the eigenvalues of `a`, and a 2-"
+"D square array or matrix (depending on the input type) of the corresponding "
+"eigenvectors (in columns)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:13
+msgid "**a**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:-1
+msgid "(..., M, M) array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:12
+msgid ""
+"Hermitian or real symmetric matrices whose eigenvalues and eigenvectors are "
+"to be computed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:21
+msgid "**UPLO**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:-1
+msgid "{'L', 'U'}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:16
+msgid ""
+"Specifies whether the calculation is done with the lower triangular part of "
+"`a` ('L', default) or the upper triangular part ('U'). Irrespective of this "
+"value only the real parts of the diagonal will be considered in the "
+"computation to preserve the notion of a Hermitian matrix. It therefore "
+"follows that the imaginary part of the diagonal will always be treated as "
+"zero."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:26
+msgid "A namedtuple with the following attributes:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:30
+msgid "**eigenvalues**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:-1
+msgid "(..., M) ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:29
+msgid ""
+"The eigenvalues in ascending order, each repeated according to its "
+"multiplicity."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:38
+msgid "**eigenvectors**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:-1
+msgid "{(..., M, M) ndarray, (..., M, M) matrix}"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:33
+msgid ""
+"The column ``eigenvectors[:, i]`` is the normalized eigenvector "
+"corresponding to the eigenvalue ``eigenvalues[i]``.  Will return a matrix "
+"object if `a` is a matrix object."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:45
+msgid "LinAlgError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:43
+msgid "If the eigenvalue computation does not converge."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:50
+msgid ":obj:`eigvalsh`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:51
+msgid ""
+"eigenvalues of real symmetric or complex Hermitian (conjugate symmetric) "
+"arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:52
+msgid ":obj:`eig`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:53
+msgid "eigenvalues and right eigenvectors for non-symmetric arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:54
+msgid ":obj:`eigvals`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:55
+msgid "eigenvalues of non-symmetric arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:56
+msgid ":obj:`scipy.linalg.eigh`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:57
+msgid ""
+"Similar function in SciPy (but also solves the generalized eigenvalue "
+"problem)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:61
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:64
+msgid ""
+"Broadcasting rules apply, see the `numpy.linalg` documentation for details."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:67
+msgid ""
+"The eigenvalues/eigenvectors are computed using LAPACK routines ``_syevd``, "
+"``_heevd``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:70
+msgid ""
+"The eigenvalues of real symmetric or complex Hermitian matrices are always "
+"real. [Rc702e98a756a-1]_ The array `eigenvalues` of (column) eigenvectors is "
+"unitary and `a`, `eigenvalues`, and `eigenvectors` satisfy the equations "
+"``dot(a, eigenvectors[:, i]) = eigenvalues[i] * eigenvectors[:, i]``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:76
+msgid "References"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:77
+msgid ""
+"G. Strang, *Linear Algebra and Its Applications*, 2nd Ed., Orlando, FL, "
+"Academic Press, Inc., 1980, pg. 222."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:82
+msgid "[Rc702e98a756a-1]_"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.eigh:85
+msgid "Examples"
+msgstr ""

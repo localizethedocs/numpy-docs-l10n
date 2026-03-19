@@ -1,0 +1,334 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release/1.26.1-notes.rst:5
+msgid "NumPy 1.26.1 Release Notes"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:7
+msgid ""
+"NumPy 1.26.1 is a maintenance release that fixes bugs and regressions "
+"discovered after the 1.26.0 release. In addition, it adds new functionality "
+"for detecting BLAS and LAPACK when building from source. Highlights are:"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:11
+msgid "Improved detection of BLAS and LAPACK libraries for meson builds"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:12
+msgid "Pickle compatibility with the upcoming NumPy 2.0."
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:14
+msgid ""
+"The 1.26.release series is the last planned minor release series before "
+"NumPy 2.0. The Python versions supported by this release are 3.9-3.12."
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:19
+msgid "Build system changes"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:22
+msgid "Improved BLAS/LAPACK detection and control"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:24
+msgid ""
+"Auto-detection for a number of BLAS and LAPACK is now implemented for Meson. "
+"By default, the build system will try to detect MKL, Accelerate (on macOS "
+">=13.3), OpenBLAS, FlexiBLAS, BLIS and reference BLAS/LAPACK. Support for "
+"MKL was significantly improved, and support for FlexiBLAS was added."
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:29
+msgid ""
+"New command-line flags are available to further control the selection of the "
+"BLAS and LAPACK libraries to build against."
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:32
+msgid ""
+"To select a specific library, use the config-settings interface via ``pip`` "
+"or ``pypa/build``. E.g., to select ``libblas``/``liblapack``, use::"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:35
+msgid ""
+"$ pip install numpy -Csetup-args=-Dblas=blas -Csetup-args=-Dlapack=lapack\n"
+"$ # OR\n"
+"$ python -m build . -Csetup-args=-Dblas=blas -Csetup-args=-Dlapack=lapack"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:39
+msgid ""
+"This works not only for the libraries named above, but for any library that "
+"Meson is able to detect with the given name through ``pkg-config`` or CMake."
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:42
+msgid ""
+"Besides ``-Dblas`` and ``-Dlapack``, a number of other new flags are "
+"available to control BLAS/LAPACK selection and behavior:"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:45
+msgid ""
+"``-Dblas-order`` and ``-Dlapack-order``: a list of library names to search "
+"for in order, overriding the default search order."
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:47
+msgid ""
+"``-Duse-ilp64``: if set to ``true``, use ILP64 (64-bit integer) BLAS and "
+"LAPACK. Note that with this release, ILP64 support has been extended to "
+"include MKL and FlexiBLAS. OpenBLAS and Accelerate were supported in "
+"previous releases."
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:51
+msgid ""
+"``-Dallow-noblas``: if set to ``true``, allow NumPy to build with its "
+"internal (very slow) fallback routines instead of linking against an "
+"external BLAS/LAPACK library. *The default for this flag may be changed to "
+"``true`` in a future 1.26.x release, however for 1.26.1 we'd prefer to keep "
+"it as ``false`` because if failures to detect an installed library are "
+"happening, we'd like a bug report for that, so we can quickly assess whether "
+"the new auto-detection machinery needs further improvements.*"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:58
+msgid ""
+"``-Dmkl-threading``: to select the threading layer for MKL. There are four "
+"options: ``seq``, ``iomp``, ``gomp`` and ``tbb``. The default is ``auto``, "
+"which selects from those four as appropriate given the version of MKL "
+"selected."
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:62
+msgid ""
+"``-Dblas-symbol-suffix``: manually select the symbol suffix to use for the "
+"library - should only be needed for linking against libraries built in a non-"
+"standard way."
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:68
+msgid "New features"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:71
+msgid "``numpy._core`` submodule stubs"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:73
+msgid ""
+"``numpy._core`` submodule stubs were added to provide compatibility with "
+"pickled arrays created using NumPy 2.0 when running Numpy 1.26."
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:78
+msgid "Contributors"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:80
+msgid ""
+"A total of 13 people contributed to this release.  People with a \"+\" by "
+"their names contributed a patch for the first time."
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:83
+msgid "Andrew Nelson"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:84
+msgid "Anton Prosekin +"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:85
+msgid "Charles Harris"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:86
+msgid "Chongyun Lee +"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:87
+msgid "Ivan A. Melnikov +"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:88
+msgid "Jake Lishman +"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:89
+msgid "Mahder Gebremedhin +"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:90
+msgid "Mateusz Sokół"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:91
+msgid "Matti Picus"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:92
+msgid "Munira Alduraibi +"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:93
+msgid "Ralf Gommers"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:94
+msgid "Rohit Goswami"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:95
+msgid "Sayed Adel"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:99
+msgid "Pull requests merged"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:101
+msgid "A total of 20 pull requests were merged for this release."
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:103
+msgid ""
+"`#24742 <https://github.com/numpy/numpy/pull/24742>`__: MAINT: Update "
+"cibuildwheel version"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:104
+msgid ""
+"`#24748 <https://github.com/numpy/numpy/pull/24748>`__: MAINT: fix version "
+"string in wheels built with setup.py"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:105
+msgid ""
+"`#24771 <https://github.com/numpy/numpy/pull/24771>`__: BLD, BUG: Fix build "
+"failure for host flags e.g. ``-march=native``..."
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:106
+msgid ""
+"`#24773 <https://github.com/numpy/numpy/pull/24773>`__: DOC: Updated the "
+"f2py docs to remove a note on -fimplicit-none"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:107
+msgid ""
+"`#24776 <https://github.com/numpy/numpy/pull/24776>`__: BUG: Fix SIMD f32 "
+"trunc test on s390x when baseline is none"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:108
+msgid ""
+"`#24785 <https://github.com/numpy/numpy/pull/24785>`__: BLD: add libquadmath "
+"to licences and other tweaks (#24753)"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:109
+msgid ""
+"`#24786 <https://github.com/numpy/numpy/pull/24786>`__: MAINT: Activate "
+"``use-compute-credits`` for Cirrus."
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:110
+msgid ""
+"`#24803 <https://github.com/numpy/numpy/pull/24803>`__: BLD: updated "
+"vendored-meson/meson for mips64 fix"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:111
+msgid ""
+"`#24804 <https://github.com/numpy/numpy/pull/24804>`__: MAINT: fix licence "
+"path win"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:112
+msgid ""
+"`#24813 <https://github.com/numpy/numpy/pull/24813>`__: BUG: Fix order of "
+"Windows OS detection macros."
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:113
+msgid ""
+"`#24831 <https://github.com/numpy/numpy/pull/24831>`__: BUG, SIMD: use "
+"scalar cmul on bad Apple clang x86_64 (#24828)"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:114
+msgid ""
+"`#24840 <https://github.com/numpy/numpy/pull/24840>`__: BUG: Fix DATA "
+"statements for f2py"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:115
+msgid ""
+"`#24870 <https://github.com/numpy/numpy/pull/24870>`__: API: Add "
+"``NumpyUnpickler`` for backporting"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:116
+msgid ""
+"`#24872 <https://github.com/numpy/numpy/pull/24872>`__: MAINT: Xfail test "
+"failing on PyPy."
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:117
+msgid ""
+"`#24879 <https://github.com/numpy/numpy/pull/24879>`__: BLD: fix math func "
+"feature checks, fix FreeBSD build, add CI..."
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:118
+msgid ""
+"`#24899 <https://github.com/numpy/numpy/pull/24899>`__: ENH: meson: "
+"implement BLAS/LAPACK auto-detection and many CI..."
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:119
+msgid ""
+"`#24902 <https://github.com/numpy/numpy/pull/24902>`__: DOC: add a 1.26.1 "
+"release notes section for BLAS/LAPACK build..."
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:120
+msgid ""
+"`#24906 <https://github.com/numpy/numpy/pull/24906>`__: MAINT: Backport "
+"``numpy._core`` stubs. Remove ``NumpyUnpickler``"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:121
+msgid ""
+"`#24911 <https://github.com/numpy/numpy/pull/24911>`__: MAINT: Bump pypa/"
+"cibuildwheel from 2.16.1 to 2.16.2"
+msgstr ""
+
+#: ../../../release/1.26.1-notes.rst:122
+msgid ""
+"`#24912 <https://github.com/numpy/numpy/pull/24912>`__: BUG: loongarch "
+"doesn't use REAL(10)"
+msgstr ""

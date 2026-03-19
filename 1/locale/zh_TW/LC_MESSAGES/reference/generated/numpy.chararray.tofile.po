@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.chararray.tofile.rst:4
+msgid "numpy.chararray.tofile"
+msgstr ""
+
+#: ../../../reference/generated/numpy.chararray.tofile.rst:8
+msgid "method"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray.tofile:2
+msgid "Write array to a file as text or binary (default)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray.tofile:4
+msgid ""
+"Data is always written in 'C' order, independent of the order of `a`. The "
+"data produced by this method can be recovered using the function fromfile()."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray.tofile:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray.tofile:14
+msgid "**fid**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray.tofile:-1
+msgid "file or str or Path"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray.tofile:11
+msgid "An open file object, or a string containing a filename."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray.tofile:13
+msgid "`pathlib.Path` objects are now accepted."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray.tofile:19
+msgid "**sep**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray.tofile:-1
+msgid "str"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray.tofile:17
+msgid ""
+"Separator between array items for text output. If \"\" (empty), a binary "
+"file is written, equivalent to ``file.write(a.tobytes())``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray.tofile:32
+msgid "**format**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray.tofile:22
+msgid ""
+"Format string for text file output. Each entry in the array is formatted to "
+"text by first converting it to the closest Python type, and then using "
+"\"format\" % item."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray.tofile:35
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray.tofile:36
+msgid ""
+"This is a convenience function for quick storage of array data. Information "
+"on endianness and precision is lost, so this method is not a good choice for "
+"files intended to archive data or transport data between machines with "
+"different endianness. Some of these problems can be overcome by outputting "
+"the data as text files, at the expense of speed and file size."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray.tofile:43
+msgid ""
+"When fid is a file object, array contents are directly written to the file, "
+"bypassing the file object's ``write`` method. As a result, tofile cannot be "
+"used with files objects supporting compression (e.g., GzipFile) or file-like "
+"objects that do not support ``fileno()`` (e.g., BytesIO)."
+msgstr ""

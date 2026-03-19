@@ -1,0 +1,1192 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release/1.8.0-notes.rst:3
+msgid "NumPy 1.8.0 Release Notes"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:5
+msgid "This release supports  Python 2.6 -2.7 and 3.2 - 3.3."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:9
+msgid "Highlights"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:12
+msgid ""
+"New, no 2to3, Python 2 and Python 3 are supported by a common code base."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:13
+msgid "New, gufuncs for linear algebra, enabling operations on stacked arrays."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:14
+msgid "New, inplace fancy indexing for ufuncs with the ``.at`` method."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:15
+msgid ""
+"New, ``partition`` function, partial sorting via selection for fast median."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:16
+msgid "New, ``nanmean``, ``nanvar``, and ``nanstd`` functions skipping NaNs."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:17
+msgid ""
+"New, ``full`` and ``full_like`` functions to create value initialized arrays."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:18
+msgid ""
+"New, ``PyUFunc_RegisterLoopForDescr``, better ufunc support for user dtypes."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:19
+msgid "Numerous performance improvements in many areas."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:23
+msgid "Dropped Support"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:26
+msgid "Support for Python versions 2.4 and 2.5 has been dropped,"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:28
+msgid "Support for SCons has been removed."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:32
+msgid "Future Changes"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:35
+msgid ""
+"The Datetime64 type remains experimental in this release. In 1.9 there will "
+"probably be some changes to make it more usable."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:38
+msgid ""
+"The diagonal method currently returns a new array and raises a "
+"FutureWarning. In 1.9 it will return a readonly view."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:41
+msgid ""
+"Multiple field selection from an array of structured type currently returns "
+"a new array and raises a FutureWarning. In 1.9 it will return a readonly "
+"view."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:45
+msgid ""
+"The numpy/oldnumeric and numpy/numarray compatibility modules will be "
+"removed in 1.9."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:50
+msgid "Compatibility notes"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:53
+msgid ""
+"The doc/sphinxext content has been moved into its own github repository, and "
+"is included in numpy as a submodule. See the instructions in doc/"
+"HOWTO_BUILD_DOCS.rst for how to access the content."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:59
+msgid ""
+"The hash function of numpy.void scalars has been changed.  Previously the "
+"pointer to the data was hashed as an integer.  Now, the hash function uses "
+"the tuple-hash algorithm to combine the hash functions of the elements of "
+"the scalar, but only if the scalar is read-only."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:64
+msgid ""
+"Numpy has switched its build system to using 'separate compilation' by "
+"default.  In previous releases this was supported, but not default. This "
+"should produce the same results as the old system, but if you're trying to "
+"do something complicated like link numpy statically or using an unusual "
+"compiler, then it's possible you will encounter problems. If so, please file "
+"a bug and as a temporary workaround you can re-enable the old build system "
+"by exporting the shell variable NPY_SEPARATE_COMPILATION=0."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:72
+msgid ""
+"For the AdvancedNew iterator the ``oa_ndim`` flag should now be -1 to "
+"indicate that no ``op_axes`` and ``itershape`` are passed in. The ``oa_ndim "
+"== 0`` case, now indicates a 0-D iteration and ``op_axes`` being NULL and "
+"the old usage is deprecated. This does not effect the ``NpyIter_New`` or "
+"``NpyIter_MultiNew`` functions."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:78
+msgid ""
+"The functions nanargmin and nanargmax now return np.iinfo['intp'].min for "
+"the index in all-NaN slices. Previously the functions would raise a "
+"ValueError for array returns and NaN for scalar returns."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:83
+msgid "NPY_RELAXED_STRIDES_CHECKING"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:84
+msgid ""
+"There is a new compile time environment variable "
+"``NPY_RELAXED_STRIDES_CHECKING``. If this variable is set to 1, then numpy "
+"will consider more arrays to be C- or F-contiguous -- for example, it "
+"becomes possible to have a column vector which is considered both C- and F-"
+"contiguous simultaneously. The new definition is more accurate, allows for "
+"faster code that makes fewer unnecessary copies, and simplifies numpy's code "
+"internally. However, it may also break third-party libraries that make too-"
+"strong assumptions about the stride values of C- and F-contiguous arrays. "
+"(It is also currently known that this breaks Cython code using memoryviews, "
+"which will be fixed in Cython.) THIS WILL BECOME THE DEFAULT IN A FUTURE "
+"RELEASE, SO PLEASE TEST YOUR CODE NOW AGAINST NUMPY BUILT WITH::"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:97
+msgid "NPY_RELAXED_STRIDES_CHECKING=1 python setup.py install"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:99
+msgid ""
+"You can check whether NPY_RELAXED_STRIDES_CHECKING is in effect by running::"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:102
+msgid "np.ones((10, 1), order=\"C\").flags.f_contiguous"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:104
+msgid ""
+"This will be ``True`` if relaxed strides checking is enabled, and ``False`` "
+"otherwise. The typical problem we've seen so far is C code that works with C-"
+"contiguous arrays, and assumes that the itemsize can be accessed by looking "
+"at the last element in the ``PyArray_STRIDES(arr)`` array. When relaxed "
+"strides are in effect, this is not true (and in fact, it never was true in "
+"some corner cases). Instead, use ``PyArray_ITEMSIZE(arr)``."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:112
+msgid ""
+"For more information check the \"Internal memory layout of an ndarray\" "
+"section in the documentation."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:116
+msgid "Binary operations with non-arrays as second argument"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:117
+msgid ""
+"Binary operations of the form ``<array-or-subclass> * <non-array-subclass>`` "
+"where ``<non-array-subclass>`` declares an ``__array_priority__`` higher "
+"than that of ``<array-or-subclass>`` will now unconditionally return "
+"*NotImplemented*, giving ``<non-array-subclass>`` a chance to handle the "
+"operation.  Previously, `NotImplemented` would only be returned if ``<non-"
+"array-subclass>`` actually implemented the reversed operation, and after a "
+"(potentially expensive) array conversion of ``<non-array-subclass>`` had "
+"been attempted. (`bug <https://github.com/numpy/numpy/issues/3375>`_, `pull "
+"request <https://github.com/numpy/numpy/pull/3501>`_)"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:128
+msgid ""
+"Function `median` used with `overwrite_input` only partially sorts array"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:129
+msgid ""
+"If `median` is used with `overwrite_input` option the input array will now "
+"only be partially sorted instead of fully sorted."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:133
+msgid "Fix to financial.npv"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:134
+msgid ""
+"The npv function had a bug. Contrary to what the documentation stated, it "
+"summed from indexes ``1`` to ``M`` instead of from ``0`` to ``M - 1``. The "
+"fix changes the returned value. The mirr function called the npv function, "
+"but worked around the problem, so that was also fixed and the return value "
+"of the mirr function remains unchanged."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:141
+msgid "Runtime warnings when comparing NaN numbers"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:142
+msgid ""
+"Comparing ``NaN`` floating point numbers now raises the ``invalid`` runtime "
+"warning. If a ``NaN`` is expected the warning can be ignored using np."
+"errstate. E.g.::"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:146
+msgid ""
+"with np.errstate(invalid='ignore'):\n"
+"    operation()"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:151
+msgid "New Features"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:155
+msgid "Support for linear algebra on stacked arrays"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:156
+msgid ""
+"The gufunc machinery is now used for np.linalg, allowing operations on "
+"stacked arrays and vectors. For example::"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:159
+msgid ""
+">>> a\n"
+"array([[[ 1.,  1.],\n"
+"        [ 0.,  1.]],\n"
+"\n"
+"       [[ 1.,  1.],\n"
+"        [ 0.,  1.]]])\n"
+"\n"
+">>> np.linalg.inv(a)\n"
+"array([[[ 1., -1.],\n"
+"        [ 0.,  1.]],\n"
+"\n"
+"       [[ 1., -1.],\n"
+"        [ 0.,  1.]]])"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:174
+msgid "In place fancy indexing for ufuncs"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:175
+msgid ""
+"The function ``at`` has been added to ufunc objects to allow in place ufuncs "
+"with no buffering when fancy indexing is used. For example, the following "
+"will increment the first and second items in the array, and will increment "
+"the third item twice: ``numpy.add.at(arr, [0, 1, 2, 2], 1)``"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:180
+msgid ""
+"This is what many have mistakenly thought ``arr[[0, 1, 2, 2]] += 1`` would "
+"do, but that does not work as the incremented value of ``arr[2]`` is simply "
+"copied into the third slot in ``arr`` twice, not incremented twice."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:185
+msgid "New functions `partition` and `argpartition`"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:186
+msgid "New functions to partially sort arrays via a selection algorithm."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:188
+msgid ""
+"A ``partition`` by index ``k`` moves the ``k`` smallest element to the front "
+"of an array.  All elements before ``k`` are then smaller or equal than the "
+"value in position ``k`` and all elements following ``k`` are then greater or "
+"equal than the value in position ``k``. The ordering of the values within "
+"these bounds is undefined. A sequence of indices can be provided to sort all "
+"of them into their sorted position at once iterative partitioning. This can "
+"be used to efficiently obtain order statistics like median or percentiles of "
+"samples. ``partition`` has a linear time complexity of ``O(n)`` while a full "
+"sort has ``O(n log(n))``."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:201
+msgid "New functions `nanmean`, `nanvar` and `nanstd`"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:202
+msgid ""
+"New nan aware statistical functions are added. In these functions the "
+"results are what would be obtained if nan values were omitted from all "
+"computations."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:207
+msgid "New functions `full` and `full_like`"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:208
+msgid ""
+"New convenience functions to create arrays filled with a specific value; "
+"complementary to the existing `zeros` and `zeros_like` functions."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:212
+msgid "IO compatibility with large files"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:213
+msgid "Large NPZ files >2GB can be loaded on 64-bit systems."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:216
+msgid "Building against OpenBLAS"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:217
+msgid "It is now possible to build numpy against OpenBLAS by editing site.cfg."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:220
+msgid "New constant"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:221
+msgid "Euler's constant is now exposed in numpy as euler_gamma."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:224
+msgid "New modes for qr"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:225
+msgid ""
+"New modes 'complete', 'reduced', and 'raw' have been added to the qr "
+"factorization and the old 'full' and 'economic' modes are deprecated. The "
+"'reduced' mode replaces the old 'full' mode and is the default as was the "
+"'full' mode, so backward compatibility can be maintained by not specifying "
+"the mode."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:231
+msgid ""
+"The 'complete' mode returns a full dimensional factorization, which can be "
+"useful for obtaining a basis for the orthogonal complement of the range "
+"space. The 'raw' mode returns arrays that contain the Householder reflectors "
+"and scaling factors that can be used in the future to apply q without "
+"needing to convert to a matrix. The 'economic' mode is simply deprecated, "
+"there isn't much use for it and it isn't any more efficient than the 'raw' "
+"mode."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:240
+msgid "New `invert` argument to `in1d`"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:241
+msgid ""
+"The function `in1d` now accepts a `invert` argument which, when `True`, "
+"causes the returned array to be inverted."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:245
+msgid "Advanced indexing using `np.newaxis`"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:246
+msgid ""
+"It is now possible to use `np.newaxis`/`None` together with index arrays "
+"instead of only in simple indices. This means that ``array[np.newaxis, [0, "
+"1]]`` will now work as expected and select the first two rows while "
+"prepending a new axis to the array."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:253
+msgid "C-API"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:254
+msgid ""
+"New ufuncs can now be registered with builtin input types and a custom "
+"output type. Before this change, NumPy wouldn't be able to find the right "
+"ufunc loop function when the ufunc was called from Python, because the ufunc "
+"loop signature matching logic wasn't looking at the output operand type. Now "
+"the correct ufunc loop is found, as long as the user provides an output "
+"argument with the correct output type."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:262
+msgid "runtests.py"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:263
+msgid ""
+"A simple test runner script ``runtests.py`` was added. It also builds Numpy "
+"via ``setup.py build`` and can be used to run tests easily during "
+"development."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:268
+msgid "Improvements"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:271
+msgid "IO performance improvements"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:272
+msgid ""
+"Performance in reading large files was improved by chunking (see also IO "
+"compatibility)."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:275
+msgid "Performance improvements to `pad`"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:276
+msgid ""
+"The `pad` function has a new implementation, greatly improving performance "
+"for all inputs except `mode=<function>` (retained for backwards "
+"compatibility). Scaling with dimensionality is dramatically improved for "
+"rank >= 4."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:281
+msgid "Performance improvements to `isnan`, `isinf`, `isfinite` and `byteswap`"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:282
+msgid ""
+"`isnan`, `isinf`, `isfinite` and `byteswap` have been improved to take "
+"advantage of compiler builtins to avoid expensive calls to libc. This "
+"improves performance of these operations by about a factor of two on gnu "
+"libc systems."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:288
+msgid "Performance improvements via SSE2 vectorization"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:289
+msgid ""
+"Several functions have been optimized to make use of SSE2 CPU SIMD "
+"instructions."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:294
+msgid "Float32 and float64:"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:292
+msgid "base math (`add`, `subtract`, `divide`, `multiply`)"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:293
+msgid "`sqrt`"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:294
+msgid "`minimum/maximum`"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:295
+msgid "`absolute`"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:299
+msgid "Bool:"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:297
+msgid "`logical_or`"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:298
+msgid "`logical_and`"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:299
+msgid "`logical_not`"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:301
+msgid ""
+"This improves performance of these operations up to 4x/2x for float32/"
+"float64 and up to 10x for bool depending on the location of the data in the "
+"CPU caches. The performance gain is greatest for in-place operations."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:305
+msgid ""
+"In order to use the improved functions the SSE2 instruction set must be "
+"enabled at compile time. It is enabled by default on x86_64 systems. On "
+"x86_32 with a capable CPU it must be enabled by passing the appropriate flag "
+"to the CFLAGS build variable (-msse2 with gcc)."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:311
+msgid "Performance improvements to `median`"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:312
+msgid ""
+"`median` is now implemented in terms of `partition` instead of `sort` which "
+"reduces its time complexity from O(n log(n)) to O(n). If used with the "
+"`overwrite_input` option the array will now only be partially sorted instead "
+"of fully sorted."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:319
+msgid "Overridable operand flags in ufunc C-API"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:320
+msgid ""
+"When creating a ufunc, the default ufunc operand flags can be overridden via "
+"the new op_flags attribute of the ufunc object. For example, to set the "
+"operand flag for the first input to read/write:"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:324
+msgid ""
+"PyObject \\*ufunc = PyUFunc_FromFuncAndData(...); ufunc->op_flags[0] = "
+"NPY_ITER_READWRITE;"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:327
+msgid ""
+"This allows a ufunc to perform an operation in place. Also, global nditer "
+"flags can be overridden via the new iter_flags attribute of the ufunc "
+"object. For example, to set the reduce flag for a ufunc:"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:331
+msgid "ufunc->iter_flags = NPY_ITER_REDUCE_OK;"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:335
+msgid "Changes"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:339 ../../../release/1.8.0-notes.rst:391
+msgid "General"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:340
+msgid "The function np.take now allows 0-d arrays as indices."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:342
+msgid "The separate compilation mode is now enabled by default."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:344
+msgid "Several changes to np.insert and np.delete:"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:346
+msgid ""
+"Previously, negative indices and indices that pointed past the end of the "
+"array were simply ignored. Now, this will raise a Future or Deprecation "
+"Warning. In the future they will be treated like normal indexing treats them "
+"-- negative indices will wrap around, and out-of-bound indices will generate "
+"an error."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:351
+msgid ""
+"Previously, boolean indices were treated as if they were integers (always "
+"referring to either the 0th or 1st item in the array). In the future, they "
+"will be treated as masks. In this release, they raise a FutureWarning "
+"warning of this coming change."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:355
+msgid ""
+"In Numpy 1.7. np.insert already allowed the syntax `np.insert(arr, 3, "
+"[1,2,3])` to insert multiple items at a single position. In Numpy 1.8. this "
+"is also possible for `np.insert(arr, [3], [1, 2, 3])`."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:359
+msgid "Padded regions from np.pad are now correctly rounded, not truncated."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:362
+msgid "C-API Array Additions"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:363
+msgid "Four new functions have been added to the array C-API."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:365
+msgid "PyArray_Partition"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:366
+msgid "PyArray_ArgPartition"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:367
+msgid "PyArray_SelectkindConverter"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:368
+msgid "PyDataMem_NEW_ZEROED"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:371
+msgid "C-API Ufunc Additions"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:372
+msgid ""
+"One new function has been added to the ufunc C-API that allows to register "
+"an inner loop for user types using the descr."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:375
+msgid "PyUFunc_RegisterLoopForDescr"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:378
+msgid "C-API Developer Improvements"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:379
+msgid ""
+"The ``PyArray_Type`` instance creation function ``tp_new`` now uses "
+"``tp_basicsize`` to determine how much memory to allocate. In previous "
+"releases only ``sizeof(PyArrayObject)`` bytes of memory were allocated, "
+"often requiring C-API subtypes to reimplement ``tp_new``."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:386
+msgid "Deprecations"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:388
+msgid "The 'full' and 'economic' modes of qr factorization are deprecated."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:392
+msgid ""
+"The use of non-integer for indices and most integer arguments has been "
+"deprecated. Previously float indices and function arguments such as axes or "
+"shapes were truncated to integers without warning. For example `arr."
+"reshape(3., -1)` or `arr[0.]` will trigger a deprecation warning in NumPy "
+"1.8., and in some future version of NumPy they will raise an error."
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:400
+msgid "Authors"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:402
+msgid ""
+"This release contains work by the following people who contributed at least "
+"one patch to this release. The names are in alphabetical order by first name:"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:405
+msgid "87"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:406
+msgid "Adam Ginsburg +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:407
+msgid "Adam Griffiths +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:408
+msgid "Alexander Belopolsky +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:409
+msgid "Alex Barth +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:410
+msgid "Alex Ford +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:411
+msgid "Andreas Hilboll +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:412
+msgid "Andreas Kloeckner +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:413
+msgid "Andreas Schwab +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:414
+msgid "Andrew Horton +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:415
+msgid "argriffing +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:416
+msgid "Arink Verma +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:417
+msgid "Bago Amirbekian +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:418
+msgid "Bartosz Telenczuk +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:419
+msgid "bebert218 +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:420
+msgid "Benjamin Root +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:421
+msgid "Bill Spotz +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:422
+msgid "Bradley M. Froehle"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:423
+msgid "Carwyn Pelley +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:424
+msgid "Charles Harris"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:425
+msgid "Chris"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:426
+msgid "Christian Brueffer +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:427
+msgid "Christoph Dann +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:428
+msgid "Christoph Gohlke"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:429
+msgid "Dan Hipschman +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:430
+msgid "Daniel +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:431
+msgid "Dan Miller +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:432
+msgid "daveydave400 +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:433
+msgid "David Cournapeau"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:434
+msgid "David Warde-Farley"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:435
+msgid "Denis Laxalde"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:436
+msgid "dmuellner +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:437
+msgid "Edward Catmur +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:438
+msgid "Egor Zindy +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:439
+msgid "endolith"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:440
+msgid "Eric Firing"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:441
+msgid "Eric Fode"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:442
+msgid "Eric Moore +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:443
+msgid "Eric Price +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:444
+msgid "Fazlul Shahriar +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:445
+msgid "Félix Hartmann +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:446
+msgid "Fernando Perez"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:447
+msgid "Frank B +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:448
+msgid "Frank Breitling +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:449
+msgid "Frederic"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:450
+msgid "Gabriel"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:451
+msgid "GaelVaroquaux"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:452
+msgid "Guillaume Gay +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:453
+msgid "Han Genuit"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:454
+msgid "HaroldMills +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:455
+msgid "hklemm +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:456
+msgid "jamestwebber +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:457
+msgid "Jason Madden +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:458
+msgid "Jay Bourque"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:459
+msgid "jeromekelleher +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:460
+msgid "Jesús Gómez +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:461
+msgid "jmozmoz +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:462
+msgid "jnothman +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:463
+msgid "Johannes Schönberger +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:464
+msgid "John Benediktsson +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:465
+msgid "John Salvatier +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:466
+msgid "John Stechschulte +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:467
+msgid "Jonathan Waltman +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:468
+msgid "Joon Ro +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:469
+msgid "Jos de Kloe +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:470
+msgid "Joseph Martinot-Lagarde +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:471
+msgid "Josh Warner (Mac) +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:472
+msgid "Jostein Bø Fløystad +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:473
+msgid "Juan Luis Cano Rodríguez +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:474
+msgid "Julian Taylor +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:475
+msgid "Julien Phalip +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:476
+msgid "K.-Michael Aye +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:477
+msgid "Kumar Appaiah +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:478
+msgid "Lars Buitinck"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:479
+msgid "Leon Weber +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:480
+msgid "Luis Pedro Coelho"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:481
+msgid "Marcin Juszkiewicz"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:482
+msgid "Mark Wiebe"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:483
+msgid "Marten van Kerkwijk +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:484
+msgid "Martin Baeuml +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:485
+msgid "Martin Spacek"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:486
+msgid "Martin Teichmann +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:487
+msgid "Matt Davis +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:488
+msgid "Matthew Brett"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:489
+msgid "Maximilian Albert +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:490
+msgid "m-d-w +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:491
+msgid "Michael Droettboom"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:492
+msgid "mwtoews +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:493
+msgid "Nathaniel J. Smith"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:494
+msgid "Nicolas Scheffer +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:495
+msgid "Nils Werner +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:496
+msgid "ochoadavid +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:497
+msgid "Ondřej Čertík"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:498
+msgid "ovillellas +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:499
+msgid "Paul Ivanov"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:500
+msgid "Pauli Virtanen"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:501
+msgid "peterjc"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:502
+msgid "Ralf Gommers"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:503
+msgid "Raul Cota +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:504
+msgid "Richard Hattersley +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:505
+msgid "Robert Costa +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:506
+msgid "Robert Kern"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:507
+msgid "Rob Ruana +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:508
+msgid "Ronan Lamy"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:509
+msgid "Sandro Tosi"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:510
+msgid "Sascha Peilicke +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:511
+msgid "Sebastian Berg"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:512
+msgid "Skipper Seabold"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:513
+msgid "Stefan van der Walt"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:514
+msgid "Steve +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:515
+msgid "Takafumi Arakaki +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:516
+msgid "Thomas Robitaille +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:517
+msgid "Tomas Tomecek +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:518
+msgid "Travis E. Oliphant"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:519
+msgid "Valentin Haenel"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:520
+msgid "Vladimir Rutsky +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:521
+msgid "Warren Weckesser"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:522
+msgid "Yaroslav Halchenko"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:523
+msgid "Yury V. Zaytsev +"
+msgstr ""
+
+#: ../../../release/1.8.0-notes.rst:525
+msgid ""
+"A total of 119 people contributed to this release. People with a \"+\" by "
+"their names contributed a patch for the first time."
+msgstr ""
