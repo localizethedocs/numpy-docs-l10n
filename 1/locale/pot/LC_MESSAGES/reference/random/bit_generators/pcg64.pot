@@ -1,0 +1,185 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/bit_generators/pcg64.rst:2
+msgid "Permuted Congruential Generator (64-bit, PCG64)"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._pcg64.PCG64:2
+msgid "BitGenerator for the PCG-64 pseudo-random number generator."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._pcg64.PCG64:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._pcg64.PCG64:20
+msgid "**seed**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._pcg64.PCG64:-1
+msgid "{None, int, array_like[ints], SeedSequence}, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._pcg64.PCG64:8
+msgid ""
+"A seed to initialize the `BitGenerator`. If None, then fresh, unpredictable "
+"entropy will be pulled from the OS. If an ``int`` or ``array_like[ints]`` is "
+"passed, then it will be passed to `SeedSequence` to derive the initial "
+"`BitGenerator` state. One may also pass in a `SeedSequence` instance."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._pcg64.PCG64:23
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._pcg64.PCG64:24
+msgid ""
+"PCG-64 is a 128-bit implementation of O'Neill's permutation congruential "
+"generator ([R4523891264fe-1]_, [R4523891264fe-2]_). PCG-64 has a period of :"
+"math:`2^{128}` and supports advancing an arbitrary number of steps as well "
+"as :math:`2^{127}` streams. The specific member of the PCG family that we "
+"use is PCG XSL RR 128/64 as described in the paper ([R4523891264fe-2]_)."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._pcg64.PCG64:30
+msgid ""
+"``PCG64`` provides a capsule containing function pointers that produce "
+"doubles, and unsigned 32 and 64- bit integers. These are not directly "
+"consumable in Python and must be consumed by a ``Generator`` or similar "
+"object that supports low-level access."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._pcg64.PCG64:35
+msgid ""
+"Supports the method :meth:`advance` to advance the RNG an arbitrary number "
+"of steps. The state of the PCG-64 RNG is represented by 2 128-bit unsigned "
+"integers."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._pcg64.PCG64:39
+msgid "**State and Seeding**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._pcg64.PCG64:41
+msgid ""
+"The ``PCG64`` state vector consists of 2 unsigned 128-bit values, which are "
+"represented externally as Python ints. One is the state of the PRNG, which "
+"is advanced by a linear congruential generator (LCG). The second is a fixed "
+"odd increment used in the LCG."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._pcg64.PCG64:46
+msgid ""
+"The input seed is processed by `SeedSequence` to generate both values. The "
+"increment is not independently settable."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._pcg64.PCG64:49
+msgid "**Parallel Features**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._pcg64.PCG64:51
+msgid ""
+"The preferred way to use a BitGenerator in parallel applications is to use "
+"the `SeedSequence.spawn` method to obtain entropy values, and to use these "
+"to generate new BitGenerators:"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._pcg64.PCG64:59
+msgid "**Compatibility Guarantee**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._pcg64.PCG64:61
+msgid ""
+"``PCG64`` makes a guarantee that a fixed seed will always produce the same "
+"random integer stream."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._pcg64.PCG64:65
+msgid "References"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._pcg64.PCG64:66
+msgid ""
+"`\"PCG, A Family of Better Random Number Generators\" <http://www.pcg-random."
+"org/>`_"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._pcg64.PCG64:68
+msgid ""
+"O'Neill, Melissa E. `\"PCG: A Family of Simple Fast Space-Efficient "
+"Statistically Good Algorithms for Random Number Generation\" <https://www.cs."
+"hmc.edu/tr/hmc-cs-2014-0905.pdf>`_"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._pcg64.PCG64:74
+msgid "[R4523891264fe-1]_, [R4523891264fe-2]_"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/pcg64.rst:11
+msgid "State"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/pcg64.rst:17:<autosummary>:1
+msgid ":py:obj:`state <numpy.random.PCG64.state>`\\"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/pcg64.rst:17:<autosummary>:1
+msgid "Get or set the PRNG state"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/pcg64.rst:19
+msgid "Parallel generation"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/pcg64.rst:25:<autosummary>:1
+msgid ":py:obj:`advance <numpy.random.PCG64.advance>`\\ \\(delta\\)"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/pcg64.rst:25:<autosummary>:1
+msgid "Advance the underlying RNG as-if delta draws have occurred."
+msgstr ""
+
+#: ../../../reference/random/bit_generators/pcg64.rst:25:<autosummary>:1
+msgid ":py:obj:`jumped <numpy.random.PCG64.jumped>`\\ \\(\\[jumps\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/pcg64.rst:25:<autosummary>:1
+msgid "Returns a new bit generator with the state jumped."
+msgstr ""
+
+#: ../../../reference/random/bit_generators/pcg64.rst:27
+msgid "Extending"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/pcg64.rst:32:<autosummary>:1
+msgid ":py:obj:`cffi <numpy.random.PCG64.cffi>`\\"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/pcg64.rst:32:<autosummary>:1
+msgid "CFFI interface"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/pcg64.rst:32:<autosummary>:1
+msgid ":py:obj:`ctypes <numpy.random.PCG64.ctypes>`\\"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/pcg64.rst:32:<autosummary>:1
+msgid "ctypes interface"
+msgstr ""

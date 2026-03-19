@@ -1,0 +1,520 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/c-api/dtype.rst:2
+msgid "Data Type API"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:6
+msgid ""
+"The standard array can have 24 different data types (and has some support "
+"for adding your own types). These data types all have an enumerated type, an "
+"enumerated type-character, and a corresponding array scalar Python type "
+"object (placed in a hierarchy). There are also standard C typedefs to make "
+"it easier to manipulate elements of the given data type. For the numeric "
+"types, there are also bit-width equivalent C typedefs and named typenumbers "
+"that make it easier to select the precision desired."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:17
+msgid ""
+"The names for the types in c code follows c naming conventions more closely. "
+"The Python names for these types follow Python conventions.  Thus, :c:data:"
+"`NPY_FLOAT` picks up a 32-bit float in C, but :class:`numpy.float_` in "
+"Python corresponds to a 64-bit double. The bit-width names can be used in "
+"both Python and C for clarity."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:26
+msgid "Enumerated Types"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:30
+msgid ""
+"There is a list of enumerated types defined providing the basic 24 data "
+"types plus some useful generic names. Whenever the code requires a type "
+"number, one of these enumerated types is requested. The types are all called "
+"``NPY_{NAME}``:"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:37
+msgid ""
+"The enumeration value for the boolean type, stored as one byte. It may only "
+"be set to the values 0 and 1."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:43
+msgid "The enumeration value for an 8-bit/1-byte signed integer."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:48
+msgid "The enumeration value for a 16-bit/2-byte signed integer."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:53
+msgid "The enumeration value for a 32-bit/4-byte signed integer."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:57
+msgid ""
+"Equivalent to either NPY_INT or NPY_LONGLONG, depending on the platform."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:63
+msgid "The enumeration value for a 64-bit/8-byte signed integer."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:68
+msgid "The enumeration value for an 8-bit/1-byte unsigned integer."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:73
+msgid "The enumeration value for a 16-bit/2-byte unsigned integer."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:78
+msgid "The enumeration value for a 32-bit/4-byte unsigned integer."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:82
+msgid ""
+"Equivalent to either NPY_UINT or NPY_ULONGLONG, depending on the platform."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:88
+msgid "The enumeration value for a 64-bit/8-byte unsigned integer."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:93
+msgid ""
+"The enumeration value for a 16-bit/2-byte IEEE 754-2008 compatible floating "
+"point type."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:99
+msgid ""
+"The enumeration value for a 32-bit/4-byte IEEE 754 compatible floating point "
+"type."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:105
+msgid ""
+"The enumeration value for a 64-bit/8-byte IEEE 754 compatible floating point "
+"type."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:110
+msgid ""
+"The enumeration value for a platform-specific floating point type which is "
+"at least as large as NPY_DOUBLE, but larger on many platforms."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:116
+msgid ""
+"The enumeration value for a 64-bit/8-byte complex type made up of two "
+"NPY_FLOAT values."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:122
+msgid ""
+"The enumeration value for a 128-bit/16-byte complex type made up of two "
+"NPY_DOUBLE values."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:127
+msgid ""
+"The enumeration value for a platform-specific complex floating point type "
+"which is made up of two NPY_LONGDOUBLE values."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:132
+msgid ""
+"The enumeration value for a data type which holds dates or datetimes with a "
+"precision based on selectable date or time units."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:137
+msgid ""
+"The enumeration value for a data type which holds lengths of times in "
+"integers of selectable date or time units."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:142
+msgid ""
+"The enumeration value for ASCII strings of a selectable size. The strings "
+"have a fixed maximum size within a given array."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:147
+msgid ""
+"The enumeration value for UCS4 strings of a selectable size. The strings "
+"have a fixed maximum size within a given array."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:152
+msgid "The enumeration value for references to arbitrary Python objects."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:156
+msgid ""
+"Primarily used to hold struct dtypes, but can contain arbitrary binary data."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:159
+msgid "Some useful aliases of the above types are"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:163
+msgid ""
+"The enumeration value for a signed integer type which is the same size as a "
+"(void \\*) pointer. This is the type used by all arrays of indices."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:169
+msgid ""
+"The enumeration value for an unsigned integer type which is the same size as "
+"a (void \\*) pointer."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:174
+msgid ""
+"The enumeration value of the type used for masks, such as with the :c:data:"
+"`NPY_ITER_ARRAYMASK` iterator flag. This is equivalent to :c:data:"
+"`NPY_UINT8`."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:180
+msgid ""
+"The default type to use when no dtype is explicitly specified, for example "
+"when calling np.zero(shape). This is equivalent to :c:data:`NPY_DOUBLE`."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:184
+msgid "Other useful related constants are"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:188
+msgid ""
+"The total number of built-in NumPy types. The enumeration covers the range "
+"from 0 to NPY_NTYPES-1."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:193
+msgid "A signal value guaranteed not to be a valid type enumeration number."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:197
+msgid "The start of type numbers used for Custom Data types."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:199
+msgid ""
+"The various character codes indicating certain types are also part of an "
+"enumerated list. References to type characters (should they be needed at "
+"all) should always use these enumerations. The form of them is ``NPY_{NAME}"
+"LTR`` where ``{NAME}`` can be"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:204
+msgid ""
+"**BOOL**, **BYTE**, **UBYTE**, **SHORT**, **USHORT**, **INT**, **UINT**, "
+"**LONG**, **ULONG**, **LONGLONG**, **ULONGLONG**, **HALF**, **FLOAT**, "
+"**DOUBLE**, **LONGDOUBLE**, **CFLOAT**, **CDOUBLE**, **CLONGDOUBLE**, "
+"**DATETIME**, **TIMEDELTA**, **OBJECT**, **STRING**, **VOID**"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:210
+msgid "**INTP**, **UINTP**"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:212
+msgid "**GENBOOL**, **SIGNED**, **UNSIGNED**, **FLOATING**, **COMPLEX**"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:214
+msgid ""
+"The latter group of ``{NAME}s`` corresponds to letters used in the array "
+"interface typestring specification."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:219
+msgid "Defines"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:222
+msgid "Max and min values for integers"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:228
+msgid "``NPY_MAX_INT{bits}``, ``NPY_MAX_UINT{bits}``, ``NPY_MIN_INT{bits}``"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:225
+msgid ""
+"These are defined for ``{bits}`` = 8, 16, 32, 64, 128, and 256 and provide "
+"the maximum (minimum) value of the corresponding (unsigned) integer type. "
+"Note: the actual integer type may not be available on all platforms (i.e. "
+"128-bit and 256-bit integers are rare)."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:232
+msgid "``NPY_MIN_{type}``"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:231
+msgid ""
+"This is defined for ``{type}`` = **BYTE**, **SHORT**, **INT**, **LONG**, "
+"**LONGLONG**, **INTP**"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:238
+msgid "``NPY_MAX_{type}``"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:235
+msgid ""
+"This is defined for all defined for ``{type}`` = **BYTE**, **UBYTE**, "
+"**SHORT**, **USHORT**, **INT**, **UINT**, **LONG**, **ULONG**, **LONGLONG**, "
+"**ULONGLONG**, **INTP**, **UINTP**"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:241
+msgid "Number of bits in data types"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:243
+msgid ""
+"All ``NPY_SIZEOF_{CTYPE}`` constants have corresponding ``NPY_BITSOF_{CTYPE}"
+"`` constants defined. The ``NPY_BITSOF_{CTYPE}`` constants provide the "
+"number of bits in the data type.  Specifically, the available ``{CTYPE}s`` "
+"are"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:248
+msgid ""
+"**BOOL**, **CHAR**, **SHORT**, **INT**, **LONG**, **LONGLONG**, **FLOAT**, "
+"**DOUBLE**, **LONGDOUBLE**"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:253
+msgid "Bit-width references to enumerated typenums"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:255
+msgid ""
+"All of the numeric data types (integer, floating point, and complex) have "
+"constants that are defined to be a specific enumerated type number. Exactly "
+"which enumerated type a bit-width type refers to is platform dependent. In "
+"particular, the constants available are ``PyArray_{NAME}{BITS}`` where "
+"``{NAME}`` is **INT**, **UINT**, **FLOAT**, **COMPLEX** and ``{BITS}`` can "
+"be 8, 16, 32, 64, 80, 96, 128, 160, 192, 256, and 512.  Obviously not all "
+"bit-widths are available on all platforms for all the kinds of numeric "
+"types. Commonly 8-, 16-, 32-, 64-bit integers; 32-, 64-bit floats; and 64-, "
+"128-bit complex types are available."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:268
+msgid "Integer that can hold a pointer"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:270
+msgid ""
+"The constants **NPY_INTP** and **NPY_UINTP** refer to an enumerated integer "
+"type that is large enough to hold a pointer on the platform. Index arrays "
+"should always be converted to **NPY_INTP** , because the dimension of the "
+"array is of type npy_intp."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:277
+msgid "C-type names"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:279
+msgid ""
+"There are standard variable types for each of the numeric data types and the "
+"bool data type. Some of these are already available in the C-specification. "
+"You can create variables in extension code with these types."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:286
+msgid "Boolean"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:290
+msgid ""
+"unsigned char; The constants :c:data:`NPY_FALSE` and :c:data:`NPY_TRUE` are "
+"also defined."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:295
+msgid "(Un)Signed Integer"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:297
+msgid ""
+"Unsigned versions of the integers can be defined by pre-pending a 'u' to the "
+"front of the integer name."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:302
+msgid "char"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:306
+msgid "unsigned char"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:310
+msgid "short"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:314
+msgid "unsigned short"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:318
+msgid "int"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:322
+msgid "unsigned int"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:326
+msgid "16-bit integer"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:330
+msgid "16-bit unsigned integer"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:334
+msgid "32-bit integer"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:338
+msgid "32-bit unsigned integer"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:342
+msgid "64-bit integer"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:346
+msgid "64-bit unsigned integer"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:350
+msgid "long int"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:354
+msgid "unsigned long int"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:358
+msgid "long long int"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:362
+msgid "unsigned long long int"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:366
+msgid "Py_intptr_t (an integer that is the size of a pointer on the platform)."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:371
+msgid ""
+"unsigned Py_intptr_t (an integer that is the size of a pointer on the "
+"platform)."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:376
+msgid "(Complex) Floating point"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:380
+msgid "16-bit float"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:384
+msgid "32-bit float"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:388
+msgid "32-bit complex float"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:392
+msgid "64-bit double"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:396
+msgid "64-bit complex double"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:400
+msgid "long double"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:404
+msgid "long complex double"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:406
+msgid ""
+"complex types are structures with **.real** and **.imag** members (in that "
+"order)."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:411
+msgid "Bit-width names"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:413
+msgid ""
+"There are also typedefs for signed integers, unsigned integers, floating "
+"point, and complex floating point types of specific bit- widths. The "
+"available type names are"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:417
+msgid ""
+"``npy_int{bits}``, ``npy_uint{bits}``, ``npy_float{bits}``, and "
+"``npy_complex{bits}``"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:420
+msgid ""
+"where ``{bits}`` is the number of bits in the type and can be **8**, **16**, "
+"**32**, **64**, 128, and 256 for integer types; 16, **32** , **64**, 80, 96, "
+"128, and 256 for floating-point types; and 32, **64**, **128**, 160, 192, "
+"and 512 for complex-valued types. Which bit-widths are available is platform "
+"dependent. The bolded bit-widths are usually available on all platforms."
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:429
+msgid "Printf Formatting"
+msgstr ""
+
+#: ../../../reference/c-api/dtype.rst:431
+msgid ""
+"For help in printing, the following strings are defined as the correct "
+"format specifier in printf and related commands."
+msgstr ""

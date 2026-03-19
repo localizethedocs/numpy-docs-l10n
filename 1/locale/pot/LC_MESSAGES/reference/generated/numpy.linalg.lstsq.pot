@@ -1,0 +1,234 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.linalg.lstsq.rst:4
+msgid "numpy.linalg.lstsq"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:2
+msgid "Return the least-squares solution to a linear matrix equation."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:4
+msgid ""
+"Computes the vector `x` that approximately solves the equation ``a @ x = "
+"b``. The equation may be under-, well-, or over-determined (i.e., the number "
+"of linearly independent rows of `a` can be less than, equal to, or greater "
+"than its number of linearly independent columns). If `a` is square and of "
+"full rank, then `x` (but for round-off error) is the \"exact\" solution of "
+"the equation. Else, `x` minimizes the Euclidean 2-norm :math:`||b - ax||`. "
+"If there are multiple minimizing solutions, the one with the smallest 2-"
+"norm :math:`||x||` is returned."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:16
+msgid "**a**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:-1
+msgid "(M, N) array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:16
+msgid "\"Coefficient\" matrix."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:21
+msgid "**b**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:-1
+msgid "{(M,), (M, K)} array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:19
+msgid ""
+"Ordinate or \"dependent variable\" values. If `b` is two-dimensional, the "
+"least-squares solution is calculated for each of the `K` columns of `b`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:34
+msgid "**rcond**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:-1
+msgid "float, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:24
+msgid ""
+"Cut-off ratio for small singular values of `a`. For the purposes of rank "
+"determination, singular values are treated as zero if they are smaller than "
+"`rcond` times the largest singular value of `a`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:29
+msgid ""
+"If not set, a FutureWarning is given. The previous default of ``-1`` will "
+"use the machine precision as `rcond` parameter, the new default will use the "
+"machine precision times `max(M, N)`. To silence the warning and use the new "
+"default, use ``rcond=None``, to keep using the old behavior, use "
+"``rcond=-1``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:40
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:-1
+msgid "{(N,), (N, K)} ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:39
+msgid ""
+"Least-squares solution. If `b` is two-dimensional, the solutions are in the "
+"`K` columns of `x`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:47
+msgid "**residuals**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:-1
+msgid "{(1,), (K,), (0,)} ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:43
+msgid ""
+"Sums of squared residuals: Squared Euclidean 2-norm for each column in ``b - "
+"a @ x``. If the rank of `a` is < N or M <= N, this is an empty array. If `b` "
+"is 1-dimensional, this is a (1,) shape array. Otherwise the shape is (K,)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:50
+msgid "**rank**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:-1
+msgid "int"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:50
+msgid "Rank of matrix `a`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:56
+msgid "**s**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:-1
+msgid "(min(M, N),) ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:53
+msgid "Singular values of `a`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:63
+msgid "LinAlgError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:61
+msgid "If computation does not converge."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:68
+msgid ":obj:`scipy.linalg.lstsq`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:69
+msgid "Similar function in SciPy."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:73
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:74
+msgid "If `b` is a matrix, then all array results are returned as matrices."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.lstsq:78
+msgid "Examples"
+msgstr ""
+
+#: ../../../reference/generated/numpy.linalg.lstsq.rst:3
+msgid "Fit a line, ``y = mx + c``, through some noisy data-points:"
+msgstr ""
+
+#: ../../../reference/generated/numpy.linalg.lstsq.rst:8
+msgid ""
+"By examining the coefficients, we see that the line should have a gradient "
+"of roughly 1 and cut the y-axis at, more or less, -1."
+msgstr ""
+
+#: ../../../reference/generated/numpy.linalg.lstsq.rst:11
+msgid ""
+"We can rewrite the line equation as ``y = Ap``, where ``A = [[x 1]]`` and "
+"``p = [[m], [c]]``.  Now use `lstsq` to solve for `p`:"
+msgstr ""
+
+#: ../../../reference/generated/numpy.linalg.lstsq.rst:25
+msgid "Plot the data along with the fitted line:"
+msgstr ""

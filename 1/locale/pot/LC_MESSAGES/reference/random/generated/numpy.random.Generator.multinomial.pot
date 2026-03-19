@@ -1,0 +1,222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/generated/numpy.random.Generator.multinomial.rst:4
+msgid "numpy.random.Generator.multinomial"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.multinomial.rst:8
+msgid "method"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:2
+msgid "Draw samples from a multinomial distribution."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:4
+msgid ""
+"The multinomial distribution is a multivariate generalization of the "
+"binomial distribution.  Take an experiment with one of ``p`` possible "
+"outcomes.  An example of such an experiment is throwing a dice, where the "
+"outcome can be 1 through 6.  Each sample drawn from the distribution "
+"represents `n` such experiments.  Its values, ``X_i = [X_0, X_1, ..., "
+"X_p]``, represent the number of times the outcome was ``i``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:15
+msgid "**n**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:-1
+msgid "int or array-like of ints"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:15
+msgid "Number of experiments."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:23
+msgid "**pvals**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:-1
+msgid "array-like of floats"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:18
+msgid ""
+"Probabilities of each of the ``p`` different outcomes with shape ``(k0, "
+"k1, ..., kn, p)``. Each element ``pvals[i,j,...,:]`` must sum to 1 (however, "
+"the last element is always assumed to account for the remaining probability, "
+"as long as ``sum(pvals[..., :-1], axis=-1) <= 1.0``. Must have at least 1 "
+"dimension where pvals.shape[-1] > 0."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:33
+msgid "**size**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:-1
+msgid "int or tuple of ints, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:26
+msgid ""
+"Output shape.  If the given shape is, e.g., ``(m, n, k)``, then ``m * n * "
+"k`` samples are drawn each with ``p`` elements. Default is None where the "
+"output size is determined by the broadcast shape of ``n`` and all by the "
+"final dimension of ``pvals``, which is denoted as ``b=(b0, b1, ..., bq)``. "
+"If size is not None, then it must be compatible with the broadcast shape "
+"``b``. Specifically, size must have ``q`` or more elements and size[-(q-j):] "
+"must equal ``bj``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:58
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:38
+msgid ""
+"The drawn samples, of shape size, if provided. When size is provided, the "
+"output shape is size + (p,)  If not specified, the shape is determined by "
+"the broadcast shape of ``n`` and ``pvals``, ``(b0, b1, ..., bq)`` augmented "
+"with the dimension of the multinomial, ``p``, so that that output shape is "
+"``(b0, b1, ..., bq, p)``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:45
+msgid ""
+"Each entry ``out[i,j,...,:]`` is a ``p``-dimensional value drawn from the "
+"distribution."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:48
+msgid "Added support for broadcasting `pvals` against `n`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:61
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:62
+msgid "Throw a dice 20 times:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:68
+msgid "It landed 4 times on 1, once on 2, etc."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:70
+msgid "Now, throw the dice 20 times, and 20 times again:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:76
+msgid ""
+"For the first run, we threw 3 times 1, 4 times 2, etc.  For the second, we "
+"threw 2 times 1, 4 times 2, etc."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:79
+msgid ""
+"Now, do one experiment throwing the dice 10 time, and 10 times again, and "
+"another throwing the dice 20 times, and 20 times again:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:88
+msgid ""
+"The first array shows the outcomes of throwing the dice 10 times, and the "
+"second shows the outcomes from throwing the dice 20 times."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:91
+msgid "A loaded die is more likely to land on number 6:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:96
+msgid "Simulate 10 throws of a 4-sided die and 20 throws of a 6-sided die"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:102
+msgid ""
+"Generate categorical random variates from two categories where the first has "
+"3 outcomes and the second has 2."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:109
+msgid "``argmax(axis=-1)`` is then used to return the categories."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:119
+msgid "The same output dimension can be produced using broadcasting."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:128
+msgid ""
+"The probability inputs should be normalized. As an implementation detail, "
+"the value of the last entry is ignored and assumed to take up any leftover "
+"probability mass, but this should not be relied on. A biased coin which has "
+"twice as much weight on one side as on the other should be sampled like so:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.multinomial:137
+msgid "not like:"
+msgstr ""

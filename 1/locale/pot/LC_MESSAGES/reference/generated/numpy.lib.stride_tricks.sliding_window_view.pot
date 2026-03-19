@@ -1,0 +1,265 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.lib.stride_tricks.sliding_window_view.rst:4
+msgid "numpy.lib.stride\\_tricks.sliding\\_window\\_view"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:2
+msgid ""
+"Create a sliding window view into the array with the given window shape."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:4
+msgid ""
+"Also known as rolling or moving window, the window slides across all "
+"dimensions of the array and extracts subsets of the array at all window "
+"positions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:13
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:13
+msgid "Array to create the sliding window view from."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:19
+msgid "**window_shape**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:-1
+msgid "int or tuple of int"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:16
+msgid ""
+"Size of window over each axis that takes part in the sliding window. If "
+"`axis` is not present, must have same length as the number of input array "
+"dimensions. Single integers `i` are treated as if they were the tuple `(i,)`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:27
+msgid "**axis**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:-1
+msgid "int or tuple of int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:22
+msgid ""
+"Axis or axes along which the sliding window is applied. By default, the "
+"sliding window is applied to all axes and `window_shape[i]` will refer to "
+"axis `i` of `x`. If `axis` is given as a `tuple of int`, `window_shape[i]` "
+"will refer to the axis `axis[i]` of `x`. Single integers `i` are treated as "
+"if they were the tuple `(i,)`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:31
+msgid "**subok**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:30
+msgid ""
+"If True, sub-classes will be passed-through, otherwise the returned array "
+"will be forced to be a base-class array (default)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:37
+msgid "**writeable**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:34
+msgid ""
+"When true, allow writing to the returned view. The default is false, as this "
+"should be used with caution: the returned view contains the same memory "
+"location multiple times, so writing to one location will cause others to "
+"change."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:53
+msgid "**view**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:42
+msgid ""
+"Sliding window view of the array. The sliding window dimensions are inserted "
+"at the end, and the original dimensions are trimmed as required by the size "
+"of the sliding window. That is, ``view.shape = x_shape_trimmed + "
+"window_shape``, where ``x_shape_trimmed`` is ``x.shape`` with every entry "
+"reduced by one less than the corresponding window size."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:58
+msgid ":obj:`lib.stride_tricks.as_strided`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:59
+msgid ""
+"A lower-level and less safe routine for creating arbitrary views from custom "
+"shape and strides."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:60
+msgid ":obj:`broadcast_to`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:61
+msgid "broadcast an array to a given shape."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:65
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:66
+msgid ""
+"For many applications using a sliding window view can be convenient, but "
+"potentially very slow. Often specialized solutions exist, for example:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:69
+msgid "`scipy.signal.fftconvolve`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:71
+msgid "filtering functions in `scipy.ndimage`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:73
+msgid ""
+"moving window functions provided by `bottleneck <https://github.com/pydata/"
+"bottleneck>`_."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:76
+msgid ""
+"As a rough estimate, a sliding window approach with an input size of `N` and "
+"a window size of `W` will scale as `O(N*W)` where frequently a special "
+"algorithm can achieve `O(N)`. That means that the sliding window variant for "
+"a window size of 100 can be a 100 times slower than a more specialized "
+"version."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:82
+msgid ""
+"Nevertheless, for small window sizes, when no custom algorithm exists, or as "
+"a prototyping and developing tool, this function can be a good solution."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:87
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:100
+msgid "This also works in more dimensions, e.g."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:128
+msgid "The axis can be specified explicitly:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:139
+msgid ""
+"The same axis can be used several times. In that case, every use reduces the "
+"corresponding original dimension:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:153
+msgid ""
+"Combining with stepped slicing (`::step`), this can be used to take sliding "
+"views which skip elements:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:162
+msgid "or views which move by multiple elements"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:170
+msgid ""
+"A common application of `sliding_window_view` is the calculation of running "
+"statistics. The simplest example is the `moving average <https://en."
+"wikipedia.org/wiki/Moving_average>`_:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.sliding_window_view:189
+msgid ""
+"Note that a sliding window approach is often **not** optimal (see Notes)."
+msgstr ""

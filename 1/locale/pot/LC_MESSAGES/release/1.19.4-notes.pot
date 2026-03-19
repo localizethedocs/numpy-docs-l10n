@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release/1.19.4-notes.rst:5
+msgid "NumPy 1.19.4 Release Notes"
+msgstr ""
+
+#: ../../../release/1.19.4-notes.rst:7
+msgid ""
+"NumPy 1.19.4 is a quick release to revert the OpenBLAS library version.  It "
+"was hoped that the 0.3.12 OpenBLAS version used in 1.19.3 would work around "
+"the Microsoft fmod bug, but problems in some docker environments turned up. "
+"Instead, 1.19.4 will use the older library and run a sanity check on import, "
+"raising an error if the problem is detected. Microsoft is aware of the "
+"problem and has promised a fix, users should upgrade when it becomes "
+"available."
+msgstr ""
+
+#: ../../../release/1.19.4-notes.rst:14
+msgid "This release supports Python 3.6-3.9"
+msgstr ""
+
+#: ../../../release/1.19.4-notes.rst:17
+msgid "Contributors"
+msgstr ""
+
+#: ../../../release/1.19.4-notes.rst:19
+msgid ""
+"A total of 1 people contributed to this release.  People with a \"+\" by "
+"their names contributed a patch for the first time."
+msgstr ""
+
+#: ../../../release/1.19.4-notes.rst:22
+msgid "Charles Harris"
+msgstr ""
+
+#: ../../../release/1.19.4-notes.rst:25
+msgid "Pull requests merged"
+msgstr ""
+
+#: ../../../release/1.19.4-notes.rst:27
+msgid "A total of 2 pull requests were merged for this release."
+msgstr ""
+
+#: ../../../release/1.19.4-notes.rst:29
+msgid ""
+"`#17679 <https://github.com/numpy/numpy/pull/17679>`__: MAINT: Add check for "
+"Windows 10 version 2004 bug."
+msgstr ""
+
+#: ../../../release/1.19.4-notes.rst:30
+msgid ""
+"`#17680 <https://github.com/numpy/numpy/pull/17680>`__: REV: Revert OpenBLAS "
+"to 1.19.2 version for 1.19.4"
+msgstr ""

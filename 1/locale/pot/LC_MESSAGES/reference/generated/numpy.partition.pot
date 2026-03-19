@@ -1,0 +1,303 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.partition.rst:4
+msgid "numpy.partition"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:2
+msgid "Return a partitioned copy of an array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:4
+msgid ""
+"Creates a copy of the array with its elements rearranged in such a way that "
+"the value of the element in k-th position is in the position the value would "
+"be in a sorted array.  In the partitioned array, all elements before the k-"
+"th element are less than or equal to that element, and all the elements "
+"after the k-th element are greater than or equal to that element.  The "
+"ordering of the elements in the two partitions is undefined."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:17
+msgid "**a**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:17
+msgid "Array to be sorted."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:28
+msgid "**kth**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:-1
+msgid "int or sequence of ints"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:20
+msgid ""
+"Element index to partition by. The k-th value of the element will be in its "
+"final sorted position and all smaller elements will be moved before it and "
+"all equal or greater elements behind it. The order of all elements in the "
+"partitions is undefined. If provided with a sequence of k-th it will "
+"partition all elements indexed by k-th  of them into their sorted position "
+"at once."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:27
+msgid "Passing booleans as index is deprecated."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:32
+msgid "**axis**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:-1
+msgid "int or None, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:31
+msgid ""
+"Axis along which to sort. If None, the array is flattened before sorting. "
+"The default is -1, which sorts along the last axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:35
+msgid "**kind**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:-1
+msgid "{'introselect'}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:35
+msgid "Selection algorithm. Default is 'introselect'."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:42
+msgid "**order**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:-1
+msgid "str or list of str, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:38
+msgid ""
+"When `a` is an array with fields defined, this argument specifies which "
+"fields to compare first, second, etc.  A single field can be specified as a "
+"string.  Not all fields need be specified, but unspecified fields will still "
+"be used, in the order in which they come up in the dtype, to break ties."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:53
+msgid "**partitioned_array**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:47
+msgid "Array of the same type and shape as `a`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:58
+msgid ":obj:`ndarray.partition`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:59
+msgid "Method to sort an array in-place."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:60
+msgid ":obj:`argpartition`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:61
+msgid "Indirect partition."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:62
+msgid ":obj:`sort`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:63
+msgid "Full sorting"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:67
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:68
+msgid ""
+"The various selection algorithms are characterized by their average speed, "
+"worst case performance, work space size, and whether they are stable. A "
+"stable sort keeps items with the same key in the same relative order. The "
+"available algorithms have the following properties:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:75
+msgid "kind"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:75
+msgid "speed"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:75
+msgid "worst case"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:75
+msgid "work space"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:75
+msgid "stable"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:77
+msgid "'introselect'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:77
+msgid "1"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:77
+msgid "O(n)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:77
+msgid "0"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:77
+msgid "no"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:80
+msgid ""
+"All the partition algorithms make temporary copies of the data when "
+"partitioning along any but the last axis.  Consequently, partitioning along "
+"the last axis is faster and uses less space than partitioning along any "
+"other axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:85
+msgid ""
+"The sort order for complex numbers is lexicographic. If both the real and "
+"imaginary parts are non-nan then the order is determined by the real parts "
+"except when they are equal, in which case the order is determined by the "
+"imaginary parts."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:92
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:98
+msgid ""
+"``p[4]`` is 2;  all elements in ``p[:4]`` are less than or equal to "
+"``p[4]``, and all elements in ``p[5:]`` are greater than or equal to "
+"``p[4]``.  The partition is::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:102
+msgid "[0, 1, 2, 1], [2], [5, 2, 3, 3, 6, 7, 7, 7, 7]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:104
+msgid "The next example shows the use of multiple values passed to `kth`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:110
+msgid ""
+"``p2[4]`` is 2  and ``p2[8]`` is 5.  All elements in ``p2[:4]`` are less "
+"than or equal to ``p2[4]``, all elements in ``p2[5:8]`` are greater than or "
+"equal to ``p2[4]`` and less than or equal to ``p2[8]``, and all elements in "
+"``p2[9:]`` are greater than or equal to ``p2[8]``.  The partition is::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.partition:116
+msgid "[0, 1, 2, 1], [2], [3, 3, 2], [5], [6, 7, 7, 7, 7]"
+msgstr ""

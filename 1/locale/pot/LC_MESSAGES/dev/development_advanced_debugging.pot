@@ -1,0 +1,365 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../dev/development_advanced_debugging.rst:5
+msgid "Advanced debugging tools"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:7
+msgid ""
+"If you reached here, you want to dive into, or use, more advanced tooling. "
+"This is usually not necessary for first time contributors and most day-to-"
+"day development. These are used more rarely, for example close to a new "
+"NumPy release, or when a large or particular complex change was made."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:13
+msgid ""
+"Since not all of these tools are used on a regular bases and only available "
+"on some systems, please expect differences, issues, or quirks; we will be "
+"happy to help if you get stuck and appreciate any improvements or "
+"suggestions to these workflows."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:20
+msgid "Finding C errors with additional tooling"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:22
+msgid ""
+"Most development will not require more than a typical debugging toolchain as "
+"shown in :ref:`Debugging <debugging>`. But for example memory leaks can be "
+"particularly subtle or difficult to narrow down."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:27
+msgid ""
+"We do not expect any of these tools to be run by most contributors. However, "
+"you can ensure that we can track down such issues more easily:"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:30
+msgid "Tests should cover all code paths, including error paths."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:31
+msgid ""
+"Try to write short and simple tests. If you have a very complicated test "
+"consider creating an additional simpler test as well. This can be helpful, "
+"because often it is only easy to find which test triggers an issue and not "
+"which line of the test."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:35
+msgid ""
+"Never use ``np.empty`` if data is read/used. ``valgrind`` will notice this "
+"and report an error. When you do not care about values, you can generate "
+"random values instead."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:39
+msgid ""
+"This will help us catch any oversights before your change is released and "
+"means you do not have to worry about making reference counting errors, which "
+"can be intimidating."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:45
+msgid "Python debug build"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:47
+msgid ""
+"Debug builds of Python are easily available for example via the system "
+"package manager on Linux systems, but are also available on other platforms, "
+"possibly in a less convenient format. If you cannot easily install a debug "
+"build of Python from a system package manager, you can build one yourself "
+"using `pyenv <https://github.com/pyenv/pyenv>`_. For example, to install and "
+"globally activate a debug build of Python 3.10.8, one would do::"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:54
+msgid ""
+"pyenv install -g 3.10.8\n"
+"pyenv global 3.10.8"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:57
+msgid ""
+"Note that ``pyenv install`` builds Python from source, so you must ensure "
+"that Python's dependencies are installed before building, see the pyenv "
+"documentation for platform-specific installation instructions. You can use "
+"``pip`` to install Python dependencies you may need for your debugging "
+"session. If there is no debug wheel available on `pypi,` you will need to "
+"build the dependencies from source and ensure that your dependencies are "
+"also compiled as debug builds."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:64
+msgid ""
+"Often debug builds of Python name the Python executable ``pythond`` instead "
+"of ``python``. To check if you have a debug build of Python installed, you "
+"can run e.g. ``pythond -m sysconfig`` to get the build configuration for the "
+"Python executable. A debug build will be built with debug compiler options "
+"in ``CFLAGS`` (e.g. ``-g -Og``)."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:70
+msgid ""
+"Running the Numpy tests or an interactive terminal is usually as easy as::"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:72
+msgid ""
+"python3.8d runtests.py\n"
+"# or\n"
+"python3.8d runtests.py --ipython"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:76
+msgid "and were already mentioned in :ref:`Debugging <debugging>`."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:78
+msgid "A Python debug build will help:"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:80
+msgid ""
+"Find bugs which may otherwise cause random behaviour. One example is when an "
+"object is still used after it has been deleted."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:83
+msgid ""
+"Python debug builds allows to check correct reference counting. This works "
+"using the additional commands::"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:86
+msgid ""
+"sys.gettotalrefcount()\n"
+"sys.getallocatedblocks()"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:89
+msgid ""
+"Python debug builds allow easier debugging with gdb and other C debuggers."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:93
+#: ../../../dev/development_advanced_debugging.rst:187
+msgid "Use together with ``pytest``"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:95
+msgid ""
+"Running the test suite only with a debug python build will not find many "
+"errors on its own. An additional advantage of a debug build of Python is "
+"that it allows detecting memory leaks."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:99
+msgid ""
+"A tool to make this easier is `pytest-leaks`_, which can be installed using "
+"``pip``. Unfortunately, ``pytest`` itself may leak memory, but good results "
+"can usually (currently) be achieved by removing::"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:103
+msgid ""
+"@pytest.fixture(autouse=True)\n"
+"def add_np(doctest_namespace):\n"
+"    doctest_namespace['np'] = numpy\n"
+"\n"
+"@pytest.fixture(autouse=True)\n"
+"def env_setup(monkeypatch):\n"
+"    monkeypatch.setenv('PYTHONHASHSEED', '0')"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:111
+msgid ""
+"from ``numpy/conftest.py`` (This may change with new ``pytest-leaks`` "
+"versions or ``pytest`` updates)."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:114
+msgid "This allows to run the test suite, or part of it, conveniently::"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:116
+msgid ""
+"python3.8d runtests.py -t numpy/core/tests/test_multiarray.py -- -R2:3 -s"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:118
+msgid ""
+"where ``-R2:3`` is the ``pytest-leaks`` command (see its documentation), the "
+"``-s`` causes output to print and may be necessary (in some versions "
+"captured output was detected as a leak)."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:122
+msgid ""
+"Note that some tests are known (or even designed) to leak references, we try "
+"to mark them, but expect some false positives."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:128
+msgid "``valgrind``"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:130
+msgid ""
+"Valgrind is a powerful tool to find certain memory access problems and "
+"should be run on complicated C code. Basic use of ``valgrind`` usually "
+"requires no more than::"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:134
+msgid "PYTHONMALLOC=malloc valgrind python runtests.py"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:136
+msgid ""
+"where ``PYTHONMALLOC=malloc`` is necessary to avoid false positives from "
+"python itself. Depending on the system and valgrind version, you may see "
+"more false positives. ``valgrind`` supports \"suppressions\" to ignore some "
+"of these, and Python does have a suppression file (and even a compile time "
+"option) which may help if you find it necessary."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:143
+msgid "Valgrind helps:"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:145
+msgid "Find use of uninitialized variables/memory."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:147
+msgid ""
+"Detect memory access violations (reading or writing outside of allocated "
+"memory)."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:150
+msgid ""
+"Find *many* memory leaks. Note that for *most* leaks the python debug build "
+"approach (and ``pytest-leaks``) is much more sensitive. The reason is that "
+"``valgrind`` can only detect if memory is definitely lost. If::"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:155
+msgid ""
+"dtype = np.dtype(np.int64)\n"
+"arr.astype(dtype=dtype)"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:158
+msgid ""
+"Has incorrect reference counting for ``dtype``, this is a bug, but valgrind "
+"cannot see it because ``np.dtype(np.int64)`` always returns the same object. "
+"However, not all dtypes are singletons, so this might leak memory for "
+"different input. In rare cases NumPy uses ``malloc`` and not the Python "
+"memory allocators which are invisible to the Python debug build. ``malloc`` "
+"should normally be avoided, but there are some exceptions (e.g. the "
+"``PyArray_Dims`` structure is public API and cannot use the Python "
+"allocators.)"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:168
+msgid ""
+"Even though using valgrind for memory leak detection is slow and less "
+"sensitive it can be a convenient: you can run most programs with valgrind "
+"without modification."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:172
+msgid "Things to be aware of:"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:174
+msgid ""
+"Valgrind does not support the numpy ``longdouble``, this means that tests "
+"will fail or be flagged errors that are completely fine."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:177
+msgid "Expect some errors before and after running your NumPy code."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:179
+msgid ""
+"Caches can mean that errors (specifically memory leaks) may not be detected "
+"or are only detect at a later, unrelated time."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:182
+msgid ""
+"A big advantage of valgrind is that it has no requirements aside from "
+"valgrind itself (although you probably want to use debug builds for better "
+"tracebacks)."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:188
+msgid ""
+"You can run the test suite with valgrind which may be sufficient when you "
+"are only interested in a few tests::"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:191
+msgid ""
+"PYTHOMMALLOC=malloc valgrind python runtests.py \\\n"
+" -t numpy/core/tests/test_multiarray.py -- --continue-on-collection-errors"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:194
+msgid ""
+"Note the ``--continue-on-collection-errors``, which is currently necessary "
+"due to missing ``longdouble`` support causing failures (this will usually "
+"not be necessary if you do not run the full test suite)."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:198
+msgid ""
+"If you wish to detect memory leaks you will also require ``--show-leak-"
+"kinds=definite`` and possibly more valgrind options.  Just as for ``pytest-"
+"leaks`` certain tests are known to leak cause errors in valgrind and may or "
+"may not be marked as such."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:203
+msgid "We have developed `pytest-valgrind`_ which:"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:205
+msgid "Reports errors for each test individually"
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:207
+msgid ""
+"Narrows down memory leaks to individual tests (by default valgrind only "
+"checks for memory leaks after a program stops, which is very cumbersome)."
+msgstr ""
+
+#: ../../../dev/development_advanced_debugging.rst:211
+msgid ""
+"Please refer to its ``README`` for more information (it includes an example "
+"command for NumPy)."
+msgstr ""

@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../f2py/windows/conda.rst:5
+msgid "F2PY and Conda on Windows"
+msgstr ""
+
+#: ../../../f2py/windows/conda.rst:7
+msgid ""
+"As a convenience measure, we will additionally assume the existence of "
+"``scoop``, which can be used to install tools without administrative access."
+msgstr ""
+
+#: ../../../f2py/windows/conda.rst:11
+msgid ""
+"Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://"
+"get.scoop.sh')"
+msgstr ""
+
+#: ../../../f2py/windows/conda.rst:15
+msgid "Now we will setup a ``conda`` environment."
+msgstr ""
+
+#: ../../../f2py/windows/conda.rst:17
+msgid ""
+"scoop install miniconda3\n"
+"# For conda activate / deactivate in powershell\n"
+"conda install -n root -c pscondaenvs pscondaenvs\n"
+"Powershell -c Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope "
+"CurrentUser\n"
+"conda init powershell\n"
+"# Open a new shell for the rest"
+msgstr ""
+
+#: ../../../f2py/windows/conda.rst:26
+msgid ""
+"``conda`` pulls packages from ``msys2``, however, the UX is sufficiently "
+"different enough to warrant a separate discussion."
+msgstr ""
+
+#: ../../../f2py/windows/conda.rst:30
+msgid ""
+"As of 30-01-2022, the `MSYS2 binaries`_ shipped with ``conda`` are "
+"**outdated** and this approach is **not preferred**."
+msgstr ""
