@@ -1,0 +1,242 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.trapezoid.rst:4
+msgid "numpy.trapezoid"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:2
+msgid "Integrate along the given axis using the composite trapezoidal rule."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:4
+msgid ""
+"If `x` is provided, the integration happens in sequence along its elements - "
+"they are not sorted."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:7
+msgid ""
+"Integrate `y` (`x`) along each 1d slice on the given axis, compute :math:"
+"`\\int y(x) dx`. When `x` is specified, this integrates along the parametric "
+"curve, computing :math:`\\int_t y(t) dt = \\int_t y(t) \\left.\\frac{dx}"
+"{dt}\\right|_{x=x(t)} dt`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:18
+msgid "**y**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:18
+msgid "Input array to integrate."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:23
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:21
+msgid ""
+"The sample points corresponding to the `y` values. If `x` is None, the "
+"sample points are assumed to be evenly spaced `dx` apart. The default is "
+"None."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:26
+msgid "**dx**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:-1
+msgid "scalar, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:26
+msgid "The spacing between sample points when `x` is None. The default is 1."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:29
+msgid "**axis**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:29
+msgid "The axis along which to integrate."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:43
+msgid "**trapezoid**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:-1
+msgid "float or ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:34
+msgid ""
+"Definite integral of `y` = n-dimensional array as approximated along a "
+"single axis by the trapezoidal rule. If `y` is a 1-dimensional array, then "
+"the result is a float. If `n` is greater than 1, then the result is an `n`-1 "
+"dimensional array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:48
+msgid ":obj:`sum`, :obj:`cumsum`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:52
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:53
+msgid ""
+"Image [R1ffe72fc1dc5-2]_ illustrates trapezoidal rule -- y-axis locations of "
+"points will be taken from `y` array, by default x-axis distances between "
+"points will be 1.0, alternatively they can be provided with `x` array or "
+"with `dx` scalar.  Return value will be equal to combined area under the red "
+"lines."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:60
+msgid "References"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:61
+msgid "Wikipedia page: https://en.wikipedia.org/wiki/Trapezoidal_rule"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:63
+msgid ""
+"Illustration image: https://en.wikipedia.org/wiki/File:"
+"Composite_trapezoidal_rule_illustration.png"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:68
+msgid "[R1ffe72fc1dc5-1]_, [R1ffe72fc1dc5-2]_"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:71
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:78
+msgid "Use the trapezoidal rule on evenly spaced points:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:83
+msgid ""
+"The spacing between sample points can be selected by either the ``x`` or "
+"``dx`` arguments:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:91
+msgid "Using a decreasing ``x`` corresponds to integrating in reverse:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:96
+msgid ""
+"More generally ``x`` is used to integrate along a parametric curve. We can "
+"estimate the integral :math:`\\int_0^1 x^2 = 1/3` using:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:104
+msgid ""
+"Or estimate the area of a circle, noting we repeat the sample which closes "
+"the curve:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:111
+msgid ""
+"``np.trapezoid`` can be applied along a specified axis to do multiple "
+"computations in one call:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:-1
+msgid ""
+"<div id=\"9c479fad-eb16-4bf3-91ee-3e4fd5279f35\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('c041985e-1d48-42ab-b0aa-b6163b0c6c7b','9c479fad-"
+"eb16-4bf3-91ee-3e4fd5279f35')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('c041985e-1d48-42ab-b0aa-b6163b0c6c7b','9c479fad-"
+"eb16-4bf3-91ee-3e4fd5279f35')\">Open In Tab</button></div><div "
+"id=\"091c4e6d-1ca2-4ae2-981a-3b08f08c88df\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.trapezoid:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

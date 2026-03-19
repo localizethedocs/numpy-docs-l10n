@@ -1,0 +1,448 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../user/basics.broadcasting.rst:6
+msgid "Broadcasting"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:9
+msgid ":class:`numpy.broadcast`"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:12
+msgid ""
+"The term broadcasting describes how NumPy treats arrays with different "
+"shapes during arithmetic operations. Subject to certain constraints, the "
+"smaller array is \"broadcast\" across the larger array so that they have "
+"compatible shapes. Broadcasting provides a means of vectorizing array "
+"operations so that looping occurs in C instead of Python. It does this "
+"without making needless copies of data and usually leads to efficient "
+"algorithm implementations. There are, however, cases where broadcasting is a "
+"bad idea because it leads to inefficient use of memory that slows "
+"computation."
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:22
+msgid ""
+"NumPy operations are usually done on pairs of arrays on an element-by-"
+"element basis.  In the simplest case, the two arrays must have exactly the "
+"same shape, as in the following example:"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:32
+msgid ""
+"NumPy's broadcasting rule relaxes this constraint when the arrays' shapes "
+"meet certain constraints. The simplest broadcasting example occurs when an "
+"array and a scalar value are combined in an operation:"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:42
+msgid ""
+"The result is equivalent to the previous example where ``b`` was an array. "
+"We can think of the scalar ``b`` being *stretched* during the arithmetic "
+"operation into an array with the same shape as ``a``. The new elements in "
+"``b``, as shown in :ref:`broadcasting.figure-1`, are simply copies of the "
+"original scalar. The stretching analogy is only conceptual.  NumPy is smart "
+"enough to use the original scalar value without actually making copies so "
+"that broadcasting operations are as memory and computationally efficient as "
+"possible."
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:-1
+msgid ""
+"A scalar is broadcast to match the shape of the 1-d array it\n"
+"is being multiplied to."
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:56
+msgid "*Figure 1*"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:58
+msgid ""
+"*In the simplest example of broadcasting, the scalar* ``b`` *is stretched to "
+"become an array of same shape as* ``a`` *so the shapes are compatible for "
+"element-by-element multiplication.*"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:62
+msgid ""
+"The code in the second example is more efficient than that in the first "
+"because broadcasting moves less memory around during the multiplication "
+"(``b`` is a scalar rather than an array)."
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:69
+msgid "General broadcasting rules"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:70
+msgid ""
+"When operating on two arrays, NumPy compares their shapes element-wise. It "
+"starts with the trailing (i.e. rightmost) dimension and works its way left.  "
+"Two dimensions are compatible when"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:74
+msgid "they are equal, or"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:75
+msgid "one of them is 1."
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:77
+msgid ""
+"If these conditions are not met, a ``ValueError: operands could not be "
+"broadcast together`` exception is thrown, indicating that the arrays have "
+"incompatible shapes."
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:81
+msgid ""
+"Input arrays do not need to have the same *number* of dimensions.  The "
+"resulting array will have the same number of dimensions as the input array "
+"with the greatest number of dimensions, where the *size* of each dimension "
+"is the largest size of the corresponding dimension among the input arrays.  "
+"Note that missing dimensions are assumed to have size one."
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:87
+msgid ""
+"For example, if you have a ``256x256x3`` array of RGB values, and you want "
+"to scale each color in the image by a different value, you can multiply the "
+"image by a one-dimensional array with 3 values. Lining up the sizes of the "
+"trailing axes of these arrays according to the broadcast rules, shows that "
+"they are compatible::"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:93
+msgid ""
+"Image  (3d array): 256 x 256 x 3\n"
+"Scale  (1d array):             3\n"
+"Result (3d array): 256 x 256 x 3"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:97
+msgid ""
+"When either of the dimensions compared is one, the other is used.  In other "
+"words, dimensions with size 1 are stretched or \"copied\" to match the other."
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:101
+msgid ""
+"In the following example, both the ``A`` and ``B`` arrays have axes with "
+"length one that are expanded to a larger size during the broadcast "
+"operation::"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:105
+msgid ""
+"A      (4d array):  8 x 1 x 6 x 1\n"
+"B      (3d array):      7 x 1 x 5\n"
+"Result (4d array):  8 x 7 x 6 x 5"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:113
+msgid "Broadcastable arrays"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:117
+msgid ""
+"A set of arrays is called \"broadcastable\" to the same shape if the above "
+"rules produce a valid result."
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:120
+msgid ""
+"For example, if ``a.shape`` is (5,1), ``b.shape`` is (1,6), ``c.shape`` is "
+"(6,) and ``d.shape`` is () so that *d* is a scalar, then *a*, *b*, *c*, and "
+"*d* are all broadcastable to dimension (5,6); and"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:124
+msgid ""
+"*a* acts like a (5,6) array where ``a[:,0]`` is broadcast to the other "
+"columns,"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:127
+msgid ""
+"*b* acts like a (5,6) array where ``b[0,:]`` is broadcast to the other rows,"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:130
+msgid ""
+"*c* acts like a (1,6) array and therefore like a (5,6) array where ``c[:]`` "
+"is broadcast to every row, and finally,"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:133
+msgid "*d* acts like a (5,6) array where the single value is repeated."
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:135
+msgid "Here are some more examples::"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:137
+msgid ""
+"A      (2d array):  5 x 4\n"
+"B      (1d array):      1\n"
+"Result (2d array):  5 x 4\n"
+"\n"
+"A      (2d array):  5 x 4\n"
+"B      (1d array):      4\n"
+"Result (2d array):  5 x 4\n"
+"\n"
+"A      (3d array):  15 x 3 x 5\n"
+"B      (3d array):  15 x 1 x 5\n"
+"Result (3d array):  15 x 3 x 5\n"
+"\n"
+"A      (3d array):  15 x 3 x 5\n"
+"B      (2d array):       3 x 5\n"
+"Result (3d array):  15 x 3 x 5\n"
+"\n"
+"A      (3d array):  15 x 3 x 5\n"
+"B      (2d array):       3 x 1\n"
+"Result (3d array):  15 x 3 x 5"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:157
+msgid "Here are examples of shapes that do not broadcast::"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:159
+msgid ""
+"A      (1d array):  3\n"
+"B      (1d array):  4 # trailing dimensions do not match\n"
+"\n"
+"A      (2d array):      2 x 1\n"
+"B      (3d array):  8 x 4 x 3 # second from last dimensions mismatched"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:165
+msgid "An example of broadcasting when a 1-d array is added to a 2-d array::"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:167
+msgid ""
+">>> import numpy as np\n"
+">>> a = np.array([[ 0.0,  0.0,  0.0],\n"
+"...               [10.0, 10.0, 10.0],\n"
+"...               [20.0, 20.0, 20.0],\n"
+"...               [30.0, 30.0, 30.0]])\n"
+">>> b = np.array([1.0, 2.0, 3.0])\n"
+">>> a + b\n"
+"array([[  1.,   2.,   3.],\n"
+"        [11.,  12.,  13.],\n"
+"        [21.,  22.,  23.],\n"
+"        [31.,  32.,  33.]])\n"
+">>> b = np.array([1.0, 2.0, 3.0, 4.0])\n"
+">>> a + b\n"
+"Traceback (most recent call last):\n"
+"ValueError: operands could not be broadcast together with shapes (4,3) (4,)"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:183
+msgid ""
+"As shown in :ref:`broadcasting.figure-2`, ``b`` is added to each row of "
+"``a``. In :ref:`broadcasting.figure-3`, an exception is raised because of "
+"the incompatible shapes."
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:-1
+msgid ""
+"A 1-d array with shape (3) is stretched to match the 2-d array of\n"
+"shape (4, 3) it is being added to, and the result is a 2-d array of shape\n"
+"(4, 3)."
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:193
+msgid "*Figure 2*"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:195
+msgid ""
+"*A one dimensional array added to a two dimensional array results in "
+"broadcasting if number of 1-d array elements matches the number of 2-d array "
+"columns.*"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:-1
+msgid ""
+"A huge cross over the 2-d array of shape (4, 3) and the 1-d array\n"
+"of shape (4) shows that they can not be broadcast due to mismatch\n"
+"of shapes and thus produce no result."
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:205
+msgid "*Figure 3*"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:207
+msgid ""
+"*When the trailing dimensions of the arrays are unequal, broadcasting fails "
+"because it is impossible to align the values in the rows of the 1st array "
+"with the elements of the 2nd arrays for element-by-element addition.*"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:211
+msgid ""
+"Broadcasting provides a convenient way of taking the outer product (or any "
+"other outer operation) of two arrays. The following example shows an outer "
+"addition operation of two 1-d arrays::"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:215
+msgid ""
+">>> import numpy as np\n"
+">>> a = np.array([0.0, 10.0, 20.0, 30.0])\n"
+">>> b = np.array([1.0, 2.0, 3.0])\n"
+">>> a[:, np.newaxis] + b\n"
+"array([[ 1.,   2.,   3.],\n"
+"       [11.,  12.,  13.],\n"
+"       [21.,  22.,  23.],\n"
+"       [31.,  32.,  33.]])"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:-1
+msgid ""
+"A 2-d array of shape (4, 1) and a 1-d array of shape (3) are\n"
+"stretched to match their shapes and produce a resultant array\n"
+"of shape (4, 3)."
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:230
+msgid "*Figure 4*"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:232
+msgid ""
+"*In some cases, broadcasting stretches both arrays to form an output array "
+"larger than either of the initial arrays.*"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:235
+msgid ""
+"Here the ``newaxis`` index operator inserts a new axis into ``a``, making it "
+"a two-dimensional ``4x1`` array.  Combining the ``4x1`` array with ``b``, "
+"which has shape ``(3,)``, yields a ``4x3`` array."
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:240
+msgid "A practical example: vector quantization"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:242
+msgid ""
+"Broadcasting comes up quite often in real world problems. A typical example "
+"occurs in the vector quantization (VQ) algorithm used in information theory, "
+"classification, and other related areas. The basic operation in VQ finds the "
+"closest point in a set of points, called ``codes`` in VQ jargon, to a given "
+"point, called the ``observation``. In the very simple, two-dimensional case "
+"shown below, the values in ``observation`` describe the weight and height of "
+"an athlete to be classified. The ``codes`` represent different classes of "
+"athletes. [#f1]_ Finding the closest point requires calculating the distance "
+"between observation and each of the codes. The shortest distance provides "
+"the best match. In this example, ``codes[0]`` is the closest class "
+"indicating that the athlete is likely a basketball player."
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:265
+msgid ""
+"In this example, the ``observation`` array is stretched to match the shape "
+"of the ``codes`` array::"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:268
+msgid ""
+"Observation      (1d array):      2\n"
+"Codes            (2d array):  4 x 2\n"
+"Diff             (2d array):  4 x 2"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:-1
+msgid ""
+"A height versus weight graph that shows data of a female\n"
+"gymnast, marathon runner, basketball player, football\n"
+"lineman and the athlete to be classified. Shortest distance\n"
+"is found between the basketball player and the athlete\n"
+"to be classified."
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:280
+msgid "*Figure 5*"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:282
+msgid ""
+"*The basic operation of vector quantization calculates the distance between "
+"an object to be classified, the dark square, and multiple known codes, the "
+"gray circles. In this simple case, the codes represent individual classes. "
+"More complex cases use multiple codes per class.*"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:287
+msgid ""
+"Typically, a large number of ``observations``, perhaps read from a database, "
+"are compared to a set of ``codes``. Consider this scenario::"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:290
+msgid ""
+"Observation      (2d array):      10 x 3\n"
+"Codes            (3d array):   5 x 1 x 3\n"
+"Diff             (3d array):  5 x 10 x 3"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:294
+msgid ""
+"The three-dimensional array, ``diff``, is a consequence of broadcasting, not "
+"a necessity for the calculation. Large data sets will generate a large "
+"intermediate array that is computationally inefficient. Instead, if each "
+"observation is calculated individually using a Python loop around the code "
+"in the two-dimensional example above, a much smaller array is used."
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:300
+msgid ""
+"Broadcasting is a powerful tool for writing short and usually intuitive code "
+"that does its computations very efficiently in C. However, there are cases "
+"when broadcasting uses unnecessarily large amounts of memory for a "
+"particular algorithm. In these cases, it is better to write the algorithm's "
+"outer loop in Python. This may also produce more readable code, as "
+"algorithms that use broadcasting tend to become more difficult to interpret "
+"as the number of dimensions in the broadcast increases."
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:309
+msgid "Footnotes"
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:311
+msgid ""
+"In this example, weight has more impact on the distance calculation than "
+"height because of the larger values. In practice, it is important to "
+"normalize the height and weight, often by their standard deviation across "
+"the data set, so that both have equal influence on the distance calculation."
+msgstr ""
+
+#: ../../../user/basics.broadcasting.rst:115
+msgid "broadcastable"
+msgstr ""

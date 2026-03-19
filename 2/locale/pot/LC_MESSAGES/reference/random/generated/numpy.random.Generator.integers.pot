@@ -1,0 +1,202 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/generated/numpy.random.Generator.integers.rst:4
+msgid "numpy.random.Generator.integers"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.integers.rst:8
+msgid "method"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:2
+msgid ""
+"Return random integers from `low` (inclusive) to `high` (exclusive), or if "
+"endpoint=True, `low` (inclusive) to `high` (inclusive). Replaces "
+"`RandomState.randint` (with endpoint=False) and `RandomState."
+"random_integers` (with endpoint=True)"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:7
+msgid ""
+"Return random integers from the \"discrete uniform\" distribution of the "
+"specified dtype. If `high` is None (the default), then results are from 0 to "
+"`low`."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:16
+msgid "**low**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:-1
+msgid "int or array-like of ints"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:14
+msgid ""
+"Lowest (signed) integers to be drawn from the distribution (unless "
+"``high=None``, in which case this parameter is 0 and this value is used for "
+"`high`)."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:21
+msgid "**high**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:-1
+msgid "int or array-like of ints, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:19
+msgid ""
+"If provided, one above the largest (signed) integer to be drawn from the "
+"distribution (see above for behavior if ``high=None``). If array-like, must "
+"contain integer values"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:26
+msgid "**size**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:-1
+msgid "int or tuple of ints, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:24
+msgid ""
+"Output shape.  If the given shape is, e.g., ``(m, n, k)``, then ``m * n * "
+"k`` samples are drawn.  Default is None, in which case a single value is "
+"returned."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:30
+msgid "**dtype**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:-1
+msgid "dtype, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:29
+msgid ""
+"Desired dtype of the result. Byteorder must be native. The default value is "
+"np.int64."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:35
+msgid "**endpoint**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:33
+msgid ""
+"If true, sample from the interval [low, high] instead of the default [low, "
+"high) Defaults to False"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:48
+msgid "**out**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:-1
+msgid "int or ndarray of ints"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:40
+msgid ""
+"`size`-shaped array of random integers from the appropriate distribution, or "
+"a single such random int if `size` not provided."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:51
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:52
+msgid ""
+"When using broadcasting with uint64 dtypes, the maximum value (2**64) cannot "
+"be represented as a standard integer type. The high array (or low if high is "
+"None) must have object dtype, e.g., array([2**64])."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:57
+msgid "References"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:58
+msgid ""
+"Daniel Lemire., \"Fast Random Integer Generation in an Interval\", ACM "
+"Transactions on Modeling and Computer Simulation 29 (1), 2019, https://arxiv."
+"org/abs/1805.10941."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:64
+msgid "[R4fdcbec07432-1]_"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:67
+msgid "Examples"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:78
+msgid "Generate a 2 x 4 array of ints between 0 and 4, inclusive:"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:84
+msgid "Generate a 1 x 3 array with 3 different upper bounds"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:89
+msgid "Generate a 1 by 3 array with 3 different lower bounds"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:94
+msgid "Generate a 2 by 4 array using broadcasting with dtype of uint8"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:-1
+msgid ""
+"<div id=\"d9ed8a11-8f4e-4135-b743-5142b1f990ce\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('3542ce0a-9b66-44d4-9152-0bbf001e1cd3','d9ed8a11-8f4e-4135-"
+"b743-5142b1f990ce')\">Go Back</button><button class=\"try_examples_button\" "
+"onclick=\"window."
+"openInNewTab('3542ce0a-9b66-44d4-9152-0bbf001e1cd3','d9ed8a11-8f4e-4135-"
+"b743-5142b1f990ce')\">Open In Tab</button></div><div "
+"id=\"2a33ad8b-8a19-4602-8607-2056f043b6d2\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.integers:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../../try_examples.json\");});</script>"
+msgstr ""

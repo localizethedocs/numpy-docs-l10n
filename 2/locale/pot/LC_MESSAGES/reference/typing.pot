@@ -1,0 +1,559 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:3
+msgid "Typing (:mod:`numpy.typing`)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:7
+msgid ""
+"Large parts of the NumPy API have :pep:`484`-style type annotations. In "
+"addition a number of type aliases are available to users, most prominently "
+"the two below:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:11
+msgid "`ArrayLike`: objects that can be converted to arrays"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:12
+msgid "`DTypeLike`: objects that can be converted to dtypes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:17
+msgid "Mypy plugin"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/mypy_plugin.py:docstring
+#: of numpy.typing.mypy_plugin:1
+msgid ""
+"A mypy_ plugin for managing a number of platform-specific annotations. Its "
+"functionality can be split into three distinct parts:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/mypy_plugin.py:docstring
+#: of numpy.typing.mypy_plugin:4
+msgid ""
+"Assigning the (platform-dependent) precisions of certain `~numpy.number` "
+"subclasses, including the likes of `~numpy.int_`, `~numpy.intp` and `~numpy."
+"longlong`. See the documentation on :ref:`scalar types <arrays.scalars.built-"
+"in>` for a comprehensive overview of the affected classes. Without the "
+"plugin the precision of all relevant classes will be inferred as `~typing."
+"Any`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/mypy_plugin.py:docstring
+#: of numpy.typing.mypy_plugin:10
+msgid ""
+"Removing all extended-precision `~numpy.number` subclasses that are "
+"unavailable for the platform in question. Most notably this includes the "
+"likes of `~numpy.float128` and `~numpy.complex256`. Without the plugin *all* "
+"extended-precision types will, as far as mypy is concerned, be available to "
+"all platforms."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/mypy_plugin.py:docstring
+#: of numpy.typing.mypy_plugin:15
+msgid ""
+"Assigning the (platform-dependent) precision of `~numpy.ctypeslib.c_intp`. "
+"Without the plugin the type will default to `ctypes.c_int64`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/mypy_plugin.py:docstring
+#: of numpy.typing.mypy_plugin:20
+msgid ""
+"The :mod:`numpy.typing.mypy_plugin` entry-point is deprecated in favor of "
+"platform-agnostic static type inference. Remove ``numpy.typing.mypy_plugin`` "
+"from the ``plugins`` section of your mypy configuration; if that surfaces "
+"new errors, please open an issue with a minimal reproducer."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:204 numpy.typing:240 numpy.typing:263
+#: numpy.typing.NBitBase:27
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/mypy_plugin.py:docstring
+#: numpy.typing.mypy_plugin:28
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/mypy_plugin.py:docstring
+#: of numpy.typing.mypy_plugin:29
+msgid ""
+"To enable the plugin, one must add it to their mypy `configuration file`_:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/mypy_plugin.py:docstring
+#: of numpy.typing.mypy_plugin:31
+msgid ""
+"[mypy]\n"
+"plugins = numpy.typing.mypy_plugin"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:26
+msgid "Differences from the runtime NumPy API"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:28
+msgid ""
+"NumPy is very flexible. Trying to describe the full range of possibilities "
+"statically would result in types that are not very helpful. For that reason, "
+"the typed NumPy API is often stricter than the runtime NumPy API. This "
+"section describes some notable differences."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:35
+msgid "ArrayLike"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:37
+msgid ""
+"The `ArrayLike` type tries to avoid creating object arrays. For example,"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:40
+msgid ""
+">>> np.array(x**2 for x in range(10))\n"
+"array(<generator object <genexpr> at ...>, dtype=object)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:45
+msgid ""
+"is valid NumPy code which will create a 0-dimensional object array. Type "
+"checkers will complain about the above example when using the NumPy types "
+"however. If you really intended to do the above, then you can either use a "
+"``# type: ignore`` comment:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:50
+msgid ">>> np.array(x**2 for x in range(10))  # type: ignore"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:54
+msgid "or explicitly type the array like object as `~typing.Any`:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:56
+msgid ""
+">>> from typing import Any\n"
+">>> array_like: Any = (x**2 for x in range(10))\n"
+">>> np.array(array_like)\n"
+"array(<generator object <genexpr> at ...>, dtype=object)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:64
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:66
+msgid ""
+"It's possible to mutate the dtype of an array at runtime. For example, the "
+"following code is valid:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:69
+msgid ""
+">>> x = np.array([1, 2])\n"
+">>> x.dtype = np.bool"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:74
+msgid ""
+"This sort of mutation is not allowed by the types. Users who want to write "
+"statically typed code should instead use the `numpy.ndarray.view` method to "
+"create a view of the array with a different dtype."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:79
+msgid "DTypeLike"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:81
+msgid ""
+"The `DTypeLike` type tries to avoid creation of dtype objects using "
+"dictionary of fields like below:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:84
+msgid ">>> x = np.dtype({\"field1\": (float, 1), \"field2\": (int, 3)})"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:88
+msgid ""
+"Although this is valid NumPy code, the type checker will complain about it, "
+"since its usage is discouraged. Please see : :ref:`Data type objects <arrays."
+"dtypes>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:93
+msgid "Number precision"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:95
+msgid ""
+"The precision of `numpy.number` subclasses is treated as a invariant generic "
+"parameter (see :class:`~NBitBase`), simplifying the annotating of processes "
+"involving precision-based casting."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:99
+msgid ""
+">>> from typing import TypeVar\n"
+">>> import numpy as np\n"
+">>> import numpy.typing as npt\n"
+"\n"
+">>> T = TypeVar(\"T\", bound=npt.NBitBase)\n"
+">>> def func(a: np.floating[T], b: np.floating[T]) -> np.floating[T]:\n"
+"...     ..."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:109
+msgid ""
+"Consequently, the likes of `~numpy.float16`, `~numpy.float32` and `~numpy."
+"float64` are still sub-types of `~numpy.floating`, but, contrary to runtime, "
+"they're not necessarily considered as sub-classes."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:113
+msgid ""
+"The :class:`~numpy.typing.NBitBase` helper is deprecated and will be  "
+"removed in a future release. Prefer expressing precision relationships via  "
+"``typing.overload`` or ``TypeVar`` definitions bounded by concrete scalar  "
+"classes. For example:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:119
+msgid ""
+"from typing import TypeVar\n"
+"import numpy as np\n"
+"\n"
+"S = TypeVar(\"S\", bound=np.floating)\n"
+"\n"
+"def func(a: S, b: S) -> S:\n"
+"    ..."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:129
+msgid ""
+"or in the case of different input types mapping to different output types:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:131
+msgid ""
+"from typing import overload\n"
+"import numpy as np\n"
+"\n"
+"@overload\n"
+"def phase(x: np.complex64) -> np.float32: ...\n"
+"@overload\n"
+"def phase(x: np.complex128) -> np.float64: ...\n"
+"@overload\n"
+"def phase(x: np.clongdouble) -> np.longdouble: ...\n"
+"def phase(x: np.complexfloating) -> np.floating:\n"
+"    ..."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:146
+msgid "Timedelta64"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:148
+msgid ""
+"The `~numpy.timedelta64` class is not considered a subclass of `~numpy."
+"signedinteger`, the former only inheriting from `~numpy.generic` while "
+"static type checking."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:153
+msgid "0D arrays"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:155
+msgid ""
+"During runtime numpy aggressively casts any passed 0D arrays into their "
+"corresponding `~numpy.generic` instance. Until the introduction of shape "
+"typing (see :pep:`646`) it is unfortunately not possible to make the "
+"necessary distinction between 0D and >0D arrays. While thus not strictly "
+"correct, all operations that can potentially perform a 0D-array -> scalar "
+"cast are currently annotated as exclusively returning an `~numpy.ndarray`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:162
+msgid ""
+"If it is known in advance that an operation *will* perform a 0D-array -> "
+"scalar cast, then one can consider manually remedying the situation with "
+"either `typing.cast` or a ``# type: ignore`` comment."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:167
+msgid "Record array dtypes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:169
+msgid ""
+"The dtype of `numpy.recarray`, and the :ref:`routines.array-creation.rec` "
+"functions in general, can be specified in one of two ways:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:172
+msgid "Directly via the ``dtype`` argument."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:173
+msgid ""
+"With up to five helper arguments that operate via `numpy.rec.format_parser`: "
+"``formats``, ``names``, ``titles``, ``aligned`` and ``byteorder``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:176
+msgid ""
+"These two approaches are currently typed as being mutually exclusive, *i.e.* "
+"if ``dtype`` is specified than one may not specify ``formats``. While this "
+"mutual exclusivity is not (strictly) enforced during runtime, combining both "
+"dtype specifiers can lead to unexpected or even downright buggy behavior."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:183
+msgid "API"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:188
+msgid ""
+"A `~typing.Union` representing objects that can be coerced into an `~numpy."
+"ndarray`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:191 numpy.typing:225
+msgid "Among others this includes the likes of:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:193
+msgid "Scalars."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:194
+msgid "(Nested) sequences."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:195
+msgid "Objects implementing the `~class.__array__` protocol."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:199 numpy.typing:233
+msgid "See Also"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:201
+msgid ":term:`array_like`:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:202
+msgid "Any scalar or sequence that can be interpreted as an ndarray."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:210
+msgid ""
+">>> import numpy as np\n"
+">>> import numpy.typing as npt\n"
+"\n"
+">>> def as_array(a: npt.ArrayLike) -> np.ndarray:\n"
+"...     return np.array(a)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:222
+msgid ""
+"A `~typing.Union` representing objects that can be coerced into a `~numpy."
+"dtype`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:227
+msgid ":class:`type` objects."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:228
+msgid "Character codes or the names of :class:`type` objects."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:229
+msgid "Objects with the ``.dtype`` attribute."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:236
+msgid ""
+":ref:`Specifying and constructing data types <arrays.dtypes.constructing>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:236
+msgid ""
+"A comprehensive overview of all objects that can be coerced into data types."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:241
+msgid ""
+">>> import numpy as np\n"
+">>> import numpy.typing as npt\n"
+"\n"
+">>> def as_dtype(d: npt.DTypeLike) -> np.dtype:\n"
+"...     return np.dtype(d)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:253
+msgid ""
+"A `np.ndarray[tuple[Any, ...], np.dtype[ScalarT]] <numpy.ndarray>` type "
+"alias :term:`generic <generic type>` w.r.t. its `dtype.type <numpy.dtype."
+"type>`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:257
+msgid ""
+"Can be used during runtime for typing arrays with a given dtype and "
+"unspecified shape."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:264
+msgid ""
+">>> import numpy as np\n"
+">>> import numpy.typing as npt\n"
+"\n"
+">>> print(npt.NDArray)\n"
+"numpy.ndarray[tuple[typing.Any, ...], numpy.dtype[~_ScalarT]]\n"
+"\n"
+">>> print(npt.NDArray[np.float64])\n"
+"numpy.ndarray[tuple[typing.Any, ...], numpy.dtype[numpy.float64]]\n"
+"\n"
+">>> NDArrayInt = npt.NDArray[np.int_]\n"
+">>> a: NDArrayInt = np.arange(10)\n"
+"\n"
+">>> def func(a: npt.ArrayLike) -> npt.NDArray[Any]:\n"
+"...     return np.array(a)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing.NBitBase:2
+msgid ""
+"A type representing `numpy.number` precision during static type checking."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing.NBitBase:4
+msgid ""
+"Used exclusively for the purpose of static type checking, `NBitBase` "
+"represents the base of a hierarchical set of subclasses. Each subsequent "
+"subclass is herein used for representing a lower level of precision, *e.g.* "
+"``64Bit > 32Bit > 16Bit``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing.NBitBase:11
+msgid ""
+"Use ``@typing.overload`` or a ``TypeVar`` with a scalar-type as upper bound, "
+"instead."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing.NBitBase:32
+msgid ""
+"Below is a typical usage example: `NBitBase` is herein used for annotating a "
+"function that takes a float and integer of arbitrary precision as arguments "
+"and returns a new float of whichever precision is largest (*e.g.* ``np."
+"float16 + np.int64 -> np.float64``)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing.NBitBase:37
+msgid ""
+">>> from typing import TypeVar, TYPE_CHECKING\n"
+">>> import numpy as np\n"
+">>> import numpy.typing as npt\n"
+"\n"
+">>> S = TypeVar(\"S\", bound=npt.NBitBase)\n"
+">>> T = TypeVar(\"T\", bound=npt.NBitBase)\n"
+"\n"
+">>> def add(a: np.floating[S], b: np.integer[T]) -> np.floating[S | T]:\n"
+"...     return a + b\n"
+"\n"
+">>> a = np.float16()\n"
+">>> b = np.int64()\n"
+">>> out = add(a, b)\n"
+"\n"
+">>> if TYPE_CHECKING:\n"
+"...     reveal_locals()\n"
+"...     # note: Revealed local types are:\n"
+"...     # note:     a: numpy.floating[numpy.typing._16Bit*]\n"
+"...     # note:     b: numpy.signedinteger[numpy.typing._64Bit*]\n"
+"...     # note:     out: numpy.floating[numpy.typing._64Bit*]"
+msgstr ""

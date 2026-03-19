@@ -1,0 +1,475 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.lib.format.rst:2
+msgid "numpy.lib.format"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:1
+msgid "Binary serialization"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:4
+msgid "NPY format"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:6
+msgid ""
+"A simple format for saving numpy arrays to disk with the full information "
+"about them."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:9
+msgid ""
+"The ``.npy`` format is the standard binary file format in NumPy for "
+"persisting a *single* arbitrary NumPy array on disk. The format stores all "
+"of the shape and dtype information necessary to reconstruct the array "
+"correctly even on another machine with a different architecture. The format "
+"is designed to be as simple as possible while achieving its limited goals."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:16
+msgid ""
+"The ``.npz`` format is the standard format for persisting *multiple* NumPy "
+"arrays on disk. A ``.npz`` file is a zip file containing multiple ``.npy`` "
+"files, one for each array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:21
+msgid "Capabilities"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:23
+msgid ""
+"Can represent all NumPy arrays including nested record arrays and object "
+"arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:26
+msgid "Represents the data in its native binary form."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:28
+msgid "Supports Fortran-contiguous arrays directly."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:30
+msgid ""
+"Stores all of the necessary information to reconstruct the array including "
+"shape and dtype on a machine of a different architecture.  Both little-"
+"endian and big-endian arrays are supported, and a file with little-endian "
+"numbers will yield a little-endian array on any machine reading the file. "
+"The types are described in terms of their actual sizes. For example, if a "
+"machine with a 64-bit C \"long int\" writes out an array with \"long ints\", "
+"a reading machine with 32-bit C \"long ints\" will yield an array with 64-"
+"bit integers."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:40
+msgid ""
+"Is straightforward to reverse engineer. Datasets often live longer than the "
+"programs that created them. A competent developer should be able to create a "
+"solution in their preferred programming language to read most ``.npy`` files "
+"that they have been given without much documentation."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:46
+msgid "Allows memory-mapping of the data. See `open_memmap`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:48
+msgid "Can be read from a filelike stream object instead of an actual file."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:50
+msgid ""
+"Stores object arrays, i.e. arrays containing elements that are arbitrary "
+"Python objects. Files with object arrays are not to be mmapable, but can be "
+"read and written to disk."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:55
+msgid "Limitations"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:57
+msgid ""
+"Arbitrary subclasses of numpy.ndarray are not completely preserved. "
+"Subclasses will be accepted for writing, but only the array data will be "
+"written out. A regular numpy.ndarray object will be created upon reading the "
+"file."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:64
+msgid ""
+"Due to limitations in the interpretation of structured dtypes, dtypes with "
+"fields with empty names will have the names replaced by 'f0', 'f1', etc. "
+"Such arrays will not round-trip through the format entirely accurately. The "
+"data is intact; only the field names will differ. We are working on a fix "
+"for this. This fix will not require a change in the file format. The arrays "
+"with such structures can still be saved and restored, and the correct dtype "
+"may be restored by using the ``loadedarray.view(correct_dtype)`` method."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:74
+msgid "File extensions"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:76
+msgid ""
+"We recommend using the ``.npy`` and ``.npz`` extensions for files saved in "
+"this format. This is by no means a requirement; applications may wish to use "
+"these file formats but use an extension specific to the application. In the "
+"absence of an obvious alternative, however, we suggest using ``.npy`` and ``."
+"npz``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:83
+msgid "Version numbering"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:85
+msgid ""
+"The version numbering of these formats is independent of NumPy version "
+"numbering. If the format is upgraded, the code in `numpy.io` will still be "
+"able to read and write Version 1.0 files."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:90
+msgid "Format Version 1.0"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:92
+msgid "The first 6 bytes are a magic string: exactly ``\\x93NUMPY``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:94
+msgid ""
+"The next 1 byte is an unsigned byte: the major version number of the file "
+"format, e.g. ``\\x01``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:97
+msgid ""
+"The next 1 byte is an unsigned byte: the minor version number of the file "
+"format, e.g. ``\\x00``. Note: the version of the file format is not tied to "
+"the version of the numpy package."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:101
+msgid ""
+"The next 2 bytes form a little-endian unsigned short int: the length of the "
+"header data HEADER_LEN."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:104
+msgid ""
+"The next HEADER_LEN bytes form the header data describing the array's "
+"format. It is an ASCII string which contains a Python literal expression of "
+"a dictionary. It is terminated by a newline (``\\n``) and padded with spaces "
+"(``\\x20``) to make the total of ``len(magic string) + 2 + len(length) + "
+"HEADER_LEN`` be evenly divisible by 64 for alignment purposes."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:111
+msgid "The dictionary contains three keys:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:114
+msgid "\"descr\""
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:-1
+msgid "dtype.descr"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:114
+msgid ""
+"An object that can be passed as an argument to the `numpy.dtype` constructor "
+"to create the array's dtype."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:118
+msgid "\"fortran_order\""
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:-1
+msgid "bool"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:117
+msgid ""
+"Whether the array data is Fortran-contiguous or not. Since Fortran-"
+"contiguous arrays are a common form of non-C-contiguity, we allow them to be "
+"written directly to disk for efficiency."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:121
+msgid "\"shape\""
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:-1
+msgid "tuple of int"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:121
+msgid "The shape of the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:123
+msgid ""
+"For repeatability and readability, the dictionary keys are sorted in "
+"alphabetic order. This is for convenience only. A writer SHOULD implement "
+"this if possible. A reader MUST NOT depend on this."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:127
+msgid ""
+"Following the header comes the array data. If the dtype contains Python "
+"objects (i.e. ``dtype.hasobject is True``), then the data is a Python pickle "
+"of the array. Otherwise the data is the contiguous (either C- or Fortran-, "
+"depending on ``fortran_order``) bytes of the array. Consumers can figure out "
+"the number of bytes by multiplying the number of elements given by the shape "
+"(noting that ``shape=()`` means there is 1 element) by ``dtype.itemsize``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:136
+msgid "Format Version 2.0"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:138
+msgid ""
+"The version 1.0 format only allowed the array header to have a total size of "
+"65535 bytes.  This can be exceeded by structured arrays with a large number "
+"of columns.  The version 2.0 format extends the header size to 4 GiB. `numpy."
+"save` will automatically save in 2.0 format if the data requires it, else it "
+"will always use the more compatible 1.0 format."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:144
+msgid ""
+"The description of the fourth element of the header therefore has become: "
+"\"The next 4 bytes form a little-endian unsigned int: the length of the "
+"header data HEADER_LEN.\""
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:149
+msgid "Format Version 3.0"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:151
+msgid ""
+"This version replaces the ASCII string (which in practice was latin1) with a "
+"utf8-encoded string, so supports structured types with any unicode field "
+"names."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:156
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
+#: of numpy.lib.format:157
+msgid ""
+"The ``.npy`` format, including motivation for creating it and a comparison "
+"of alternatives, is described in the :doc:`\"npy-format\" NEP <neps:nep-0001-"
+"npy-format>`, however details have evolved with time and this document is "
+"more current."
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:13
+msgid "Functions"
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid ""
+":py:obj:`descr_to_dtype <numpy.lib.format.descr_to_dtype>`\\ \\(descr\\)"
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid "Returns a dtype based off the given description."
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid ""
+":py:obj:`drop_metadata <numpy.lib.format.drop_metadata>`\\ \\(dtype\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid ""
+"Returns the dtype unchanged if it contained no metadata or a copy of the "
+"dtype if it (or any of its structure dtypes) contained metadata."
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid ""
+":py:obj:`dtype_to_descr <numpy.lib.format.dtype_to_descr>`\\ \\(dtype\\)"
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid "Get a serializable descriptor from the dtype."
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid ""
+":py:obj:`header_data_from_array_1_0 <numpy.lib.format."
+"header_data_from_array_1_0>`\\ \\(array\\)"
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid "Get the dictionary of header metadata from a numpy.ndarray."
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid ":py:obj:`isfileobj <numpy.lib.format.isfileobj>`\\ \\(f\\)"
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid ":py:obj:`magic <numpy.lib.format.magic>`\\ \\(major\\, minor\\)"
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid "Return the magic string for the given file format version."
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid ""
+":py:obj:`open_memmap <numpy.lib.format.open_memmap>`\\ \\(filename\\[\\, "
+"mode\\, dtype\\, shape\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid "Open a .npy file as a memory-mapped array."
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid ""
+":py:obj:`read_array <numpy.lib.format.read_array>`\\ \\(fp\\[\\, "
+"allow\\_pickle\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid "Read an array from an NPY file."
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid ""
+":py:obj:`read_array_header_1_0 <numpy.lib.format.read_array_header_1_0>`\\ "
+"\\(fp\\[\\, max\\_header\\_size\\]\\)"
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid ""
+"Read an array header from a filelike object using the 1.0 file format "
+"version."
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid ""
+":py:obj:`read_array_header_2_0 <numpy.lib.format.read_array_header_2_0>`\\ "
+"\\(fp\\[\\, max\\_header\\_size\\]\\)"
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid ""
+"Read an array header from a filelike object using the 2.0 file format "
+"version."
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid ":py:obj:`read_magic <numpy.lib.format.read_magic>`\\ \\(fp\\)"
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid "Read the magic string to get the version of the file format."
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid ""
+":py:obj:`write_array <numpy.lib.format.write_array>`\\ \\(fp\\, array\\[\\, "
+"version\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid "Write an array to an NPY file, including a header."
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid ""
+":py:obj:`write_array_header_1_0 <numpy.lib.format.write_array_header_1_0>`\\ "
+"\\(fp\\, d\\)"
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid "Write the header for an array using the 1.0 format."
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid ""
+":py:obj:`write_array_header_2_0 <numpy.lib.format.write_array_header_2_0>`\\ "
+"\\(fp\\, d\\)"
+msgstr ""
+
+#: ../../../reference/generated/numpy.lib.format.rst:30:<autosummary>:1
+msgid "Write the header for an array using the 2.0 format."
+msgstr ""

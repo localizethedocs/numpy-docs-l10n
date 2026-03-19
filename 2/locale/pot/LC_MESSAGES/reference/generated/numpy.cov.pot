@@ -1,0 +1,297 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.cov.rst:4
+msgid "numpy.cov"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:2
+msgid "Estimate a covariance matrix, given data and weights."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:4
+msgid ""
+"Covariance indicates the level to which two variables vary together. If we "
+"examine N-dimensional samples, :math:`X = [x_1, x_2, ..., x_N]^T`, then the "
+"covariance matrix element :math:`C_{ij}` is the covariance of :math:`x_i` "
+"and :math:`x_j`. The element :math:`C_{ii}` is the variance of :math:`x_i`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:10
+msgid "See the notes for an outline of the algorithm."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:17
+msgid "**m**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:15
+msgid ""
+"A 1-D or 2-D array containing multiple variables and observations. Each row "
+"of `m` represents a variable, and each column a single observation of all "
+"those variables. Also see `rowvar` below."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:21
+msgid "**y**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:20
+msgid ""
+"An additional set of variables and observations. `y` has the same form as "
+"that of `m`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:27
+msgid "**rowvar**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:24
+msgid ""
+"If `rowvar` is True (default), then each row represents a variable, with "
+"observations in the columns. Otherwise, the relationship is transposed: each "
+"column represents a variable, while the rows contain observations."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:33
+msgid "**bias**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:30
+msgid ""
+"Default normalization (False) is by ``(N - 1)``, where ``N`` is the number "
+"of observations given (unbiased estimate). If `bias` is True, then "
+"normalization is by ``N``. These values can be overridden by using the "
+"keyword ``ddof`` in numpy versions >= 1.5."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:40
+msgid "**ddof**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:36
+msgid ""
+"If not ``None`` the default value implied by `bias` is overridden. Note that "
+"``ddof=1`` will return the unbiased estimate, even if both `fweights` and "
+"`aweights` are specified, and ``ddof=0`` will return the simple average. See "
+"the notes for the details. The default value is ``None``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:44
+msgid "**fweights**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:-1
+msgid "array_like, int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:43
+msgid ""
+"1-D array of integer frequency weights; the number of times each observation "
+"vector should be repeated."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:50
+msgid "**aweights**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:47
+msgid ""
+"1-D array of observation vector weights. These relative weights are "
+"typically large for observations considered \"important\" and smaller for "
+"observations considered less \"important\". If ``ddof=0`` the array of "
+"weights can be used to assign probabilities to observation vectors."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:56
+msgid "**dtype**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:-1
+msgid "data-type, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:53
+msgid ""
+"Data-type of the result. By default, the return data-type will have at least "
+"`numpy.float64` precision."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:67
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:61
+msgid "The covariance matrix of the variables."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:72
+msgid ":obj:`corrcoef`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:73
+msgid "Normalized covariance matrix"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:77
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:78
+msgid ""
+"Assume that the observations are in the columns of the observation array `m` "
+"and let ``f = fweights`` and ``a = aweights`` for brevity. The steps to "
+"compute the weighted covariance are as follows::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:82
+msgid ""
+">>> m = np.arange(10, dtype=np.float64)\n"
+">>> f = np.arange(10) * 2\n"
+">>> a = np.arange(10) ** 2.\n"
+">>> ddof = 1\n"
+">>> w = f * a\n"
+">>> v1 = np.sum(w)\n"
+">>> v2 = np.sum(w * a)\n"
+">>> m -= np.sum(m * w, axis=None, keepdims=True) / v1\n"
+">>> cov = np.dot(m * w, m.T) * v1 / (v1**2 - ddof * v2)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:92
+msgid ""
+"Note that when ``a == 1``, the normalization factor ``v1 / (v1**2 - ddof * "
+"v2)`` goes over to ``1 / (np.sum(f) - ddof)`` as it should."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:98
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:105
+msgid ""
+"Consider two variables, :math:`x_0` and :math:`x_1`, which correlate "
+"perfectly, but in opposite directions:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:113
+msgid ""
+"Note how :math:`x_0` increases while :math:`x_1` decreases. The covariance "
+"matrix shows this clearly:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:120
+msgid ""
+"Note that element :math:`C_{0,1}`, which shows the correlation between :math:"
+"`x_0` and :math:`x_1`, is negative."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:123
+msgid "Further, note how `x` and `y` are combined:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:-1
+msgid ""
+"<div id=\"6b40ed38-68fb-4b00-af83-86f11ec5d250\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('d8007cb3-28e4-4e7f-9e40-"
+"ad7097f82182','6b40ed38-68fb-4b00-af83-86f11ec5d250')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('d8007cb3-28e4-4e7f-9e40-ad7097f82182','6b40ed38-68fb-4b00-"
+"af83-86f11ec5d250')\">Open In Tab</button></div><div "
+"id=\"363f204e-2b80-40f6-8a76-37da356520a2\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.cov:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

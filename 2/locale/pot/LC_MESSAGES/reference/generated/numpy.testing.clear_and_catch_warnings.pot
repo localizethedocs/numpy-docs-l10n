@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.testing.clear_and_catch_warnings.rst:2
+msgid "numpy.testing.clear\\_and\\_catch\\_warnings"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.clear_and_catch_warnings:2
+msgid "Context manager that resets warning registry for catching warnings"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.clear_and_catch_warnings:4
+msgid ""
+"Warnings can be slippery, because, whenever a warning is triggered, Python "
+"adds a ``__warningregistry__`` member to the *calling* module.  This makes "
+"it impossible to retrigger the warning in this module, whatever you put in "
+"the warnings filters.  This context manager accepts a sequence of `modules` "
+"as a keyword argument to its constructor and:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.clear_and_catch_warnings:10
+msgid ""
+"stores and removes any ``__warningregistry__`` entries in given `modules` on "
+"entry;"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.clear_and_catch_warnings:12
+msgid "resets ``__warningregistry__`` to its previous state on exit."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.clear_and_catch_warnings:14
+msgid ""
+"This makes it possible to trigger any warning afresh inside the context "
+"manager without disturbing the state of warnings outside."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.clear_and_catch_warnings:17
+msgid ""
+"For compatibility with Python, please consider all arguments to be keyword-"
+"only."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.clear_and_catch_warnings:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.clear_and_catch_warnings:27
+msgid "**record**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.clear_and_catch_warnings:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.clear_and_catch_warnings:23
+msgid ""
+"Specifies whether warnings should be captured by a custom implementation of "
+"``warnings.showwarning()`` and be appended to a list returned by the context "
+"manager. Otherwise None is returned by the context manager. The objects "
+"appended to the list are arguments whose attributes mirror the arguments to "
+"``showwarning()``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.clear_and_catch_warnings:42
+msgid "**modules**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.clear_and_catch_warnings:-1
+msgid "sequence, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.clear_and_catch_warnings:30
+msgid ""
+"Sequence of modules for which to reset warnings registry on entry and "
+"restore on exit. To work correctly, all 'ignore' filters should filter by "
+"one of these modules."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.clear_and_catch_warnings:45
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.clear_and_catch_warnings:-1
+msgid ""
+"<div id=\"42bdd1d5-354e-4409-b3cd-6ff88b33508e\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('6f917cb0-5139-47a2-8b27-258d651b6b91','42bdd1d5-354e-4409-"
+"b3cd-6ff88b33508e')\">Go Back</button><button class=\"try_examples_button\" "
+"onclick=\"window."
+"openInNewTab('6f917cb0-5139-47a2-8b27-258d651b6b91','42bdd1d5-354e-4409-"
+"b3cd-6ff88b33508e')\">Open In Tab</button></div><div id=\"a847a27b-"
+"ed01-4a5c-9c70-791d57995cd5\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.clear_and_catch_warnings:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""
