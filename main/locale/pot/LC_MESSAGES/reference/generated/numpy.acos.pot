@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.acos.rst:4
+msgid "numpy.acos"
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:2
+msgid "Trigonometric inverse cosine, element-wise."
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:4
+msgid ""
+"The inverse of `cos` so that, if ``y = cos(x)``, then ``x = arccos(y)``."
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:10
+msgid "**x**"
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:9
+msgid ""
+"`x`-coordinate on the unit circle. For real arguments, the domain is [-1, 1]."
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:16
+msgid "**out**"
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:-1
+msgid "ndarray, None, or tuple of ndarray and None, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:13
+msgid ""
+"A location into which the result is stored. If provided, it must have a "
+"shape that the inputs broadcast to. If not provided or None, a freshly-"
+"allocated array is returned. A tuple (possible only as a keyword argument) "
+"must have length equal to the number of outputs."
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:24
+msgid "**where**"
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:19
+msgid ""
+"This condition is broadcast over the input. At locations where the condition "
+"is True, the `out` array will be set to the ufunc result. Elsewhere, the "
+"`out` array will retain its original value. Note that if an uninitialized "
+"`out` array is created via the default ``out=None``, locations within it "
+"where the condition is False will remain uninitialized."
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:30
+msgid "**\\*\\*kwargs**"
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:27
+msgid ""
+"For other keyword-only arguments, see the :ref:`ufunc docs <ufuncs.kwargs>`."
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:43
+msgid "**angle**"
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:35
+msgid ""
+"The angle of the ray intersecting the unit circle at the given `x`-"
+"coordinate in radians [0, pi]. This is a scalar if `x` is a scalar."
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:48
+msgid ":obj:`cos`, :obj:`arctan`, :obj:`arcsin`, :obj:`emath.arccos`"
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:52
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:53
+msgid ""
+"`arccos` is a multivalued function: for each `x` there are infinitely many "
+"numbers `z` such that ``cos(z) = x``. The convention is to return the angle "
+"`z` whose real part lies in `[0, pi]`."
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:57
+msgid ""
+"For real-valued input data types, `arccos` always returns real output. For "
+"each value that cannot be expressed as a real number or infinity, it yields "
+"``nan`` and sets the `invalid` floating point error flag."
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:61
+msgid ""
+"For complex-valued input, `arccos` is a complex analytic function that has "
+"branch cuts ``[-inf, -1]`` and `[1, inf]` and is continuous from above on "
+"the former and from below on the latter."
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:65
+msgid "The inverse `cos` is also known as `acos` or cos^-1."
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:68
+msgid "References"
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:69
+msgid ""
+"M. Abramowitz and I.A. Stegun, \"Handbook of Mathematical Functions\", 10th "
+"printing, 1964, pp. 79. https://personal.math.ubc.ca/~cbm/aands/page_79.htm"
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:78
+msgid "Examples"
+msgstr ""
+
+#: ../../../reference/generated/numpy.acos.rst:5
+msgid "We expect the arccos of 1 to be 0, and of -1 to be pi:"
+msgstr ""
+
+#: ../../../reference/generated/numpy.acos.rst:10
+msgid "Plot arccos:"
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:100
+msgid ""
+"<div id=\"28dd162a-06fc-4759-97d4-deb7a8d32893\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('9fac2e49-fc29-41d6-"
+"a583-8f13383e3981','28dd162a-06fc-4759-97d4-deb7a8d32893')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('9fac2e49-fc29-41d6-a583-8f13383e3981','28dd162a-06fc-4759-97d4-"
+"deb7a8d32893')\">Open In Tab</button></div><div id=\"f3f3aa1e-83f9-4549-bc3b-"
+"e55fdec5100b\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../docstring of numpy.arccos:100
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

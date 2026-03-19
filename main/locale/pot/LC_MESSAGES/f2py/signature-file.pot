@@ -1,0 +1,1207 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../f2py/signature-file.rst:3
+msgid "Signature file"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:5
+msgid ""
+"The interface definition file (.pyf) is how you can fine-tune the interface "
+"between Python and Fortran. The syntax specification for signature files (``."
+"pyf`` files) is modeled on the Fortran 90/95 language specification. Almost "
+"all Fortran standard constructs are understood, both in free and fixed "
+"format (recall that Fortran 77 is a subset of Fortran 90/95). F2PY "
+"introduces some extensions to the Fortran 90/95 language specification that "
+"help in the design of the Fortran to Python interface, making it more "
+"\"Pythonic\"."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:13
+msgid ""
+"Signature files may contain arbitrary Fortran code so that any Fortran 90/95 "
+"codes can be treated as signature files. F2PY silently ignores Fortran "
+"constructs that are irrelevant for creating the interface. However, this "
+"also means that syntax errors are not caught by F2PY and will only be caught "
+"when the library is built."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:21
+msgid ""
+"Currently, F2PY may fail with some valid Fortran constructs. If this "
+"happens, you can check the `NumPy GitHub issue tracker <https://github.com/"
+"numpy/numpy/issues>`_ for possible workarounds or work-in-progress ideas."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:26
+msgid ""
+"In general, the contents of the signature files are case-sensitive. When "
+"scanning Fortran codes to generate a signature file, F2PY lowers all cases "
+"automatically except in multi-line blocks or when the ``--no-lower`` option "
+"is used."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:31
+msgid "The syntax of signature files is presented below."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:34
+msgid "Signature files syntax"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:37
+msgid "Python module block"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:39
+msgid ""
+"A signature file may contain one (recommended) or more ``python module`` "
+"blocks. The ``python module`` block describes the contents of a Python/C "
+"extension module ``<modulename>module.c`` that F2PY generates."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:46
+msgid ""
+"Exception: if ``<modulename>`` contains a substring ``__user__``, then the "
+"corresponding ``python module`` block describes the signatures of call-back "
+"functions (see :ref:`Call-back arguments`)."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:50
+msgid "A ``python module`` block has the following structure::"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:52
+msgid ""
+"python module <modulename>\n"
+"  [<usercode statement>]...\n"
+"  [\n"
+"  interface\n"
+"    <usercode statement>\n"
+"    <Fortran block data signatures>\n"
+"    <Fortran/C routine signatures>\n"
+"  end [interface]\n"
+"  ]...\n"
+"  [\n"
+"  interface\n"
+"    module <F90 modulename>\n"
+"      [<F90 module data type declarations>]\n"
+"      [<F90 module routine signatures>]\n"
+"    end [module [<F90 modulename>]]\n"
+"  end [interface]\n"
+"  ]...\n"
+"end [python module [<modulename>]]"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:71
+msgid ""
+"Here brackets ``[]`` indicate an optional section, dots ``...`` indicate one "
+"or more of a previous section. So, ``[]...`` is to be read as zero or more "
+"of a previous section."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:77
+msgid "Fortran/C routine signatures"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:79
+msgid "The signature of a Fortran routine has the following structure::"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:81
+msgid ""
+"[<typespec>] function | subroutine <routine name> \\\n"
+"              [ ( [<arguments>] ) ] [ result ( <entityname> ) ]\n"
+"  [<argument/variable type declarations>]\n"
+"  [<argument/variable attribute statements>]\n"
+"  [<use statements>]\n"
+"  [<common block statements>]\n"
+"  [<other statements>]\n"
+"end [ function | subroutine [<routine name>] ]"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:90
+msgid ""
+"From a Fortran routine signature F2PY generates a Python/C extension "
+"function that has the following signature::"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:93
+msgid ""
+"def <routine name>(<required arguments>[,<optional arguments>]):\n"
+"     ...\n"
+"     return <return variables>"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:97
+msgid "The signature of a Fortran block data has the following structure::"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:99
+msgid ""
+"block data [ <block data name> ]\n"
+"  [<variable type declarations>]\n"
+"  [<variable attribute statements>]\n"
+"  [<use statements>]\n"
+"  [<common block statements>]\n"
+"  [<include statements>]\n"
+"end [ block data [<block data name>] ]"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:110
+msgid "Type declarations"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:112
+msgid "The definition of the ``<argument/variable type declaration>`` part is"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:117
+msgid "<typespec> [ [<attrspec>] :: ] <entitydecl>"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:119 ../../../f2py/signature-file.rst:175
+#: ../../../f2py/signature-file.rst:193 ../../../f2py/signature-file.rst:234
+msgid "where"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:123
+msgid ""
+"<typespec> := byte | character [<charselector>]\n"
+"           | complex [<kindselector>] | real [<kindselector>]\n"
+"           | double complex | double precision\n"
+"           | integer [<kindselector>] | logical [<kindselector>]\n"
+"\n"
+"<charselector> := * <charlen>\n"
+"               | ( [len=] <len> [ , [kind=] <kind>] )\n"
+"               | ( kind= <kind> [ , len= <len> ] )\n"
+"<kindselector> := * <intlen> | ( [kind=] <kind> )\n"
+"\n"
+"<entitydecl> := <name> [ [ * <charlen> ] [ ( <arrayspec> ) ]\n"
+"                      | [ ( <arrayspec> ) ] * <charlen> ]\n"
+"                     | [ / <init_expr> / | = <init_expr> ] \\\n"
+"                       [ , <entitydecl> ]"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:138
+msgid "and"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:140
+msgid "``<attrspec>`` is a comma separated list of attributes_;"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:142
+msgid "``<arrayspec>`` is a comma separated list of dimension bounds;"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:144
+msgid "``<init_expr>`` is a :ref:`C expression <c-expressions>`;"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:146
+msgid ""
+"``<intlen>`` may be negative integer for ``integer`` type specifications. In "
+"such cases ``integer*<negintlen>`` represents unsigned C integers;"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:150
+msgid ""
+"If an argument has no ``<argument type declaration>``, its type is "
+"determined by applying ``implicit`` rules to its name."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:154
+msgid "Statements"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:157
+msgid "Attribute statements"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:159
+msgid ""
+"The ``<argument/variable attribute statement>`` is similar to the "
+"``<argument/variable type declaration>``, but without ``<typespec>``."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:162
+msgid ""
+"An attribute statement cannot contain other attributes, and ``<entitydecl>`` "
+"can be only a list of names. See :ref:`f2py-attributes` for more details on "
+"the attributes that can be used by F2PY."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:167
+msgid "Use statements"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:169
+msgid "The definition of the ``<use statement>`` part is"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:173
+msgid "use <modulename> [ , <rename_list> | , ONLY : <only_list> ]"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:179
+msgid "<rename_list> := <local_name> => <use_name> [ , <rename_list> ]"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:181
+msgid ""
+"Currently F2PY uses ``use`` statements only for linking call-back modules "
+"and ``external`` arguments (call-back functions). See :ref:`Call-back "
+"arguments`."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:185
+msgid "Common block statements"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:187
+msgid "The definition of the ``<common block statement>`` part is"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:191
+msgid "common / <common name> / <shortentitydecl>"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:197
+msgid "<shortentitydecl> := <name> [ ( <arrayspec> ) ] [ , <shortentitydecl> ]"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:199
+msgid ""
+"If a ``python module`` block contains two or more ``common`` blocks with the "
+"same name, the variables from the additional declarations are appended.  The "
+"types of variables in ``<shortentitydecl>`` are defined using ``<argument "
+"type declarations>``. Note that the corresponding ``<argument type "
+"declarations>`` may contain array specifications; then these need not be "
+"specified in ``<shortentitydecl>``."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:207
+msgid "Other statements"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:209
+msgid ""
+"The ``<other statement>`` part refers to any other Fortran language "
+"constructs that are not described above. F2PY ignores most of them except "
+"the following:"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:213
+msgid ""
+"``call`` statements and function calls of ``external`` arguments (see :ref:"
+"`more details on external arguments <external>`);"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:226
+msgid "``include`` statements"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:219
+msgid ""
+"include '<filename>'\n"
+"include \"<filename>\""
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:222
+msgid ""
+"If a file ``<filename>`` does not exist, the ``include`` statement is "
+"ignored. Otherwise, the file ``<filename>`` is included to a signature "
+"file.  ``include`` statements can be used in any part of a signature file, "
+"also outside the Fortran/C routine signature blocks."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:247
+msgid "``implicit`` statements"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:231
+msgid ""
+"implicit none\n"
+"implicit <list of implicit maps>"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:238
+msgid "<implicit map> := <typespec> ( <list of letters or range of letters> )"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:240
+msgid ""
+"Implicit rules are used to determine the type specification of a variable "
+"(from the first-letter of its name) if the variable is not defined using "
+"``<variable type declaration>``.  Default implicit rules are given by:"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:247
+msgid "implicit real (a-h,o-z,$_), integer (i-m)"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:264
+msgid "``entry`` statements"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:252
+msgid "entry <entry name> [([<arguments>])]"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:254
+msgid ""
+"F2PY generates wrappers for all entry names using the signature of the "
+"routine block."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:259
+msgid ""
+"The ``entry`` statement can be used to describe the signature of an "
+"arbitrary subroutine or function allowing F2PY to generate a number of "
+"wrappers from only one routine block signature. There are few restrictions "
+"while doing this: ``fortranname`` cannot be used, ``callstatement`` and "
+"``callprotoargument`` can be used only if they are valid for all entry "
+"routines, etc."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:267
+msgid "F2PY statements"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:269
+msgid "In addition, F2PY introduces the following statements:"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:273
+msgid "``threadsafe``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:272
+msgid ""
+"Uses a ``Py_BEGIN_ALLOW_THREADS .. Py_END_ALLOW_THREADS`` block around the "
+"call to Fortran/C function."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:281
+msgid "``callstatement <C-expr|multi-line block>``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:276
+msgid ""
+"Replaces the  F2PY generated call statement to Fortran/C function with ``<C-"
+"expr|multi-line block>``. The wrapped Fortran/C function is available as "
+"``(*f2py_func)``."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:280
+msgid ""
+"To raise an exception, set ``f2py_success = 0`` in ``<C-expr|multi-line "
+"block>``."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:291
+msgid "``callprotoargument <C-typespecs>``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:284
+msgid ""
+"When the ``callstatement`` statement is used, F2PY may not generate proper "
+"prototypes for Fortran/C functions (because ``<C-expr>`` may contain "
+"function calls, and F2PY has no way to determine what should be the proper "
+"prototype)."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:288
+msgid ""
+"With this statement you can explicitly specify the arguments of the "
+"corresponding prototype::"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:291
+msgid ""
+"extern <return type> FUNC_F(<routine name>,<ROUTINE NAME>)"
+"(<callprotoargument>);"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:300
+msgid "``fortranname [<actual Fortran/C routine name>]``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:294
+msgid ""
+"F2PY allows for the use of an arbitrary ``<routine name>`` for a given "
+"Fortran/C function. Then this statement is used for the ``<actual Fortran/C "
+"routine name>``."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:298
+msgid ""
+"If ``fortranname`` statement is used without ``<actual Fortran/C routine "
+"name>`` then a dummy wrapper is generated."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:322
+msgid "``usercode <multi-line block>``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:303
+msgid ""
+"When this is used inside a ``python module`` block, the given C code will be "
+"inserted to generated C/API source just before wrapper function definitions."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:307
+msgid ""
+"Here you can define arbitrary C functions to be used for the initialization "
+"of optional arguments."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:310
+msgid ""
+"For example, if ``usercode`` is used twice inside ``python module`` block "
+"then the second multi-line block is inserted after the definition of the "
+"external routines."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:314
+msgid ""
+"When used inside ``<routine signature>``, then the given C code will be "
+"inserted into the corresponding wrapper function just after the declaration "
+"of  variables but before any C statements. So, the ``usercode`` follow-up "
+"can contain both declarations and C statements."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:319
+msgid ""
+"When used inside the first ``interface`` block, then the given C code will "
+"be inserted at the end of the initialization function of the extension "
+"module. This is how the extension modules dictionary can be modified and has "
+"many use-cases; for example, to define additional variables."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:331
+msgid "``pymethoddef <multiline block>``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:325
+msgid ""
+"This is a multi-line block which will be inserted into the definition of a "
+"module methods ``PyMethodDef``-array. It must be a comma-separated list of C "
+"arrays (see `Extending and Embedding`__ Python documentation for details).  "
+"``pymethoddef`` statement can be used only inside ``python module`` block."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:336
+msgid "Attributes"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:338
+msgid "The following attributes can be used by F2PY."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:350
+msgid "``optional``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:341
+msgid ""
+"The corresponding argument is moved to the end of ``<optional arguments>`` "
+"list. A default value for an optional argument can be specified via "
+"``<init_expr>`` (see the ``entitydecl`` :ref:`definition <type-"
+"declarations>`)"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:347
+msgid "The default value must be given as a valid C expression."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:348
+msgid ""
+"Whenever ``<init_expr>`` is used, the ``optional`` attribute is set "
+"automatically by F2PY."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:350
+msgid "For an optional array argument, all its dimensions must be bounded."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:360
+msgid "``required``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:353
+msgid ""
+"The corresponding argument with this attribute is considered mandatory. This "
+"is the default. ``required`` should only be specified if there is a need to "
+"disable the automatic ``optional`` setting when ``<init_expr>`` is used."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:357
+msgid ""
+"If a Python ``None`` object is used as a required argument, the argument is "
+"treated as optional. That is, in the case of array arguments, the memory is "
+"allocated. If ``<init_expr>`` is given, then the corresponding "
+"initialization is carried out."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:364
+msgid "``dimension(<arrayspec>)``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:363
+msgid ""
+"The corresponding variable is considered as an array with dimensions given "
+"in ``<arrayspec>``."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:514
+msgid "``intent(<intentspec>)``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:367
+msgid ""
+"This specifies the \"intention\" of the corresponding argument. "
+"``<intentspec>`` is a comma separated list of the following keys:"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:373
+msgid "``in``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:371
+msgid ""
+"The corresponding argument is considered to be input-only. This means that "
+"the value of the argument is passed to a Fortran/C function and that the "
+"function is expected to not change the value of this argument."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:390
+msgid "``inout``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:376
+msgid ""
+"The corresponding argument is marked for input/output or as an *in situ* "
+"output argument. ``intent(inout)`` arguments can be only :term:`contiguous` "
+"NumPy arrays (in either the Fortran or C sense) with proper type and size. "
+"The latter coincides with the default contiguous concept used in NumPy and "
+"is effective only if ``intent(c)`` is used. F2PY assumes Fortran contiguous "
+"arguments by default."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:385
+msgid ""
+"Using ``intent(inout)`` is generally not recommended, as it can cause "
+"unexpected results. For example, scalar arguments using ``intent(inout)`` "
+"are assumed to be array objects in order to have *in situ* changes be "
+"effective. Use ``intent(in,out)`` instead."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:390
+msgid "See also the ``intent(inplace)`` attribute."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:403
+msgid "``inplace``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:393
+msgid ""
+"The corresponding argument is considered to be an input/output or *in situ* "
+"output argument. ``intent(inplace)`` arguments must be NumPy arrays of a "
+"proper size. If the size of an array is not \"proper\" or the array is non-"
+"contiguous then the routine will be passed a fixed copy of array, which has "
+"the :c:data:`NPY_ARRAY_WRITEBACKIFCOPY` flag set, so that the result will be "
+"copied back to the original array on exit."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:402
+msgid ""
+"Since copies may be made, ``intent(inplace)`` can be slower than expected. "
+"It is recommended over ``inout``, but not over ``in,out``."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:413
+msgid "``out``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:406
+msgid ""
+"The corresponding argument is considered to be a return variable. It is "
+"appended to the ``<returned variables>`` list. Using ``intent(out)`` sets "
+"``intent(hide)`` automatically, unless  ``intent(in)`` or ``intent(inout)`` "
+"are specified as well."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:411
+msgid ""
+"By default, returned multidimensional arrays are Fortran-contiguous. If "
+"``intent(c)`` attribute is used, then the returned multidimensional arrays "
+"are C-contiguous."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:422
+msgid "``hide``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:416
+msgid ""
+"The corresponding argument is removed from the list of required or optional "
+"arguments. Typically ``intent(hide)`` is used with ``intent(out)`` or when "
+"``<init_expr>`` completely determines the value of the argument like in the "
+"following example::"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:421
+msgid ""
+"integer intent(hide),depend(a) :: n = len(a)\n"
+"real intent(in),dimension(n) :: a"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:442
+msgid "``c``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:425
+msgid ""
+"The corresponding argument is treated as a C scalar or C array argument. For "
+"the case of a scalar argument, its value is passed to a C function as a C "
+"scalar argument (recall that Fortran scalar arguments are actually C pointer "
+"arguments).  For array arguments, the wrapper function is assumed to treat "
+"multidimensional arrays as C-contiguous arrays."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:431
+msgid ""
+"There is no need to use ``intent(c)`` for one-dimensional arrays, "
+"irrespective of whether the wrapped function is in Fortran or C. This is "
+"because the concepts of Fortran- and C contiguity overlap in one-dimensional "
+"cases."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:436
+msgid ""
+"If ``intent(c)`` is used as a statement but without an entity declaration "
+"list, then F2PY adds the ``intent(c)`` attribute to all arguments."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:440
+msgid ""
+"Also, when wrapping C functions, one must use ``intent(c)`` attribute for "
+"``<routine name>`` in order to disable Fortran specific ``F_FUNC(..,..)`` "
+"macros."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:448
+msgid "``cache``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:445
+msgid ""
+"The corresponding argument is treated as junk memory. No Fortran nor C "
+"contiguity checks are carried out. Using ``intent(cache)`` makes sense only "
+"for array arguments, also in conjunction with ``intent(hide)`` or "
+"``optional`` attributes."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:454
+msgid "``copy``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:451
+msgid ""
+"Ensures that the original contents of ``intent(in)`` argument is preserved. "
+"Typically used with the ``intent(in,out)`` attribute. F2PY creates an "
+"optional argument ``overwrite_<argument name>`` with the default value ``0``."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:459
+msgid "``overwrite``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:457
+msgid ""
+"This indicates that the original contents of the ``intent(in)`` argument may "
+"be altered by the Fortran/C function.  F2PY creates an optional argument "
+"``overwrite_<argument name>`` with the default value ``1``."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:463
+msgid "``out=<new name>``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:462
+msgid ""
+"Replaces the returned name with ``<new name>`` in the ``__doc__`` string of "
+"the wrapper function."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:483
+msgid "``callback``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:466
+msgid ""
+"Constructs an external function suitable for calling Python functions from "
+"Fortran. ``intent(callback)`` must be specified before the corresponding "
+"``external`` statement. If the 'argument' is not in the argument list then "
+"it will be added to Python wrapper but only by initializing an external "
+"function."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:474
+msgid ""
+"Use ``intent(callback)`` in situations where the Fortran/C code assumes that "
+"the user implemented a function with a given prototype and linked it to an "
+"executable. Don't use ``intent(callback)`` if the function appears in the "
+"argument list of a Fortran routine."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:479
+msgid ""
+"With ``intent(hide)`` or ``optional`` attributes specified and using a "
+"wrapper function without specifying the callback argument in the argument "
+"list; then the call-back function is assumed to be found in the  namespace "
+"of the F2PY generated extension module where it can be set as a module "
+"attribute by a user."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:492
+msgid "``aux``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:486
+msgid ""
+"Defines an auxiliary C variable in the F2PY generated wrapper function. "
+"Useful to save parameter values so that they can be accessed in "
+"initialization expressions for other variables."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:492
+msgid "``intent(aux)`` silently implies ``intent(c)``."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:494
+msgid "The following rules apply:"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:496
+msgid ""
+"If none of ``intent(in | inout | out | hide)`` are specified, ``intent(in)`` "
+"is assumed."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:499
+msgid "``intent(in,inout)`` is ``intent(in)``;"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:501
+msgid "``intent(in,hide)`` or ``intent(inout,hide)`` is ``intent(hide)``;"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:503
+msgid ""
+"``intent(out)`` is ``intent(out,hide)`` unless ``intent(in)`` or "
+"``intent(inout)`` is specified."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:506
+msgid ""
+"If ``intent(copy)`` or ``intent(overwrite)`` is used, then an additional "
+"optional argument is introduced with a name ``overwrite_<argument name>`` "
+"and a default value 0 or 1, respectively."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:510
+msgid "``intent(inout,inplace)`` is ``intent(inplace)``;"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:512
+msgid "``intent(in,inplace)`` is ``intent(inplace)``;"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:514
+msgid "``intent(hide)`` disables ``optional`` and ``required``."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:525
+msgid "``check([<C-booleanexpr>])``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:517
+msgid ""
+"Performs a consistency check on the arguments by evaluating ``<C-"
+"booleanexpr>``; if ``<C-booleanexpr>`` returns 0, an exception is raised."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:522
+msgid ""
+"If ``check(..)`` is not used then F2PY automatically generates a few "
+"standard checks (e.g.  in a case of an array argument, it checks for the "
+"proper shape and size). Use ``check()`` to disable checks generated by F2PY."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:540
+msgid "``depend([<names>])``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:528
+msgid ""
+"This declares that the corresponding argument depends on the values of "
+"variables in the ``<names>`` list. For example, ``<init_expr>`` may use the "
+"values of other arguments.  Using information given by ``depend(..)`` "
+"attributes, F2PY ensures that arguments are initialized in a proper order. "
+"If the ``depend(..)`` attribute is not used then F2PY determines dependence "
+"relations automatically. Use ``depend()`` to disable the dependence "
+"relations generated by F2PY."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:536
+msgid ""
+"When you edit dependence relations that were initially generated by F2PY, be "
+"careful not to break the dependence relations of other relevant variables. "
+"Another thing to watch out for is cyclic dependencies. F2PY is able to "
+"detect cyclic dependencies when constructing wrappers and it complains if "
+"any are found."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:544
+msgid "``allocatable``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:543
+msgid ""
+"The corresponding variable is a Fortran 90 allocatable array defined as "
+"Fortran 90 module data."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:590
+msgid "``external``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:549
+msgid ""
+"The corresponding argument is a function provided by user. The signature of "
+"this call-back function can be defined"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:552
+msgid "in ``__user__`` module block,"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:553
+msgid ""
+"or by demonstrative (or real, if the signature file is a real Fortran code) "
+"call in the ``<other statements>`` block."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:556
+msgid "For example, F2PY generates from:"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:558
+msgid ""
+"external cb_sub, cb_fun\n"
+"integer n\n"
+"real a(n),r\n"
+"call cb_sub(a,n)\n"
+"r = cb_fun(4)"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:566
+msgid "the following call-back signatures:"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:568
+msgid ""
+"subroutine cb_sub(a,n)\n"
+"    real dimension(n) :: a\n"
+"    integer optional,check(len(a)>=n),depend(a) :: n=len(a)\n"
+"end subroutine cb_sub\n"
+"function cb_fun(e_4_e) result (r)\n"
+"    integer :: e_4_e\n"
+"    real :: r\n"
+"end function cb_fun"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:579
+msgid "The corresponding user-provided Python function are then:"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:581
+msgid ""
+"def cb_sub(a,[n]):\n"
+"    ...\n"
+"    return\n"
+"def cb_fun(e_4_e):\n"
+"    ...\n"
+"    return r"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:590
+msgid "See also the ``intent(callback)`` attribute."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:595
+msgid "``parameter``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:593
+msgid ""
+"This indicates that the corresponding variable is a parameter and it must "
+"have a fixed value. F2PY replaces all parameter occurrences by their "
+"corresponding values."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:598
+msgid "Extensions"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:601
+msgid "F2PY directives"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:603
+msgid ""
+"The F2PY directives allow using F2PY signature file constructs in Fortran "
+"77/90 source codes. With this feature one  can (almost) completely skip the "
+"intermediate signature file generation and apply F2PY directly to Fortran "
+"source codes."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:608
+msgid "F2PY directives have the following form::"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:610
+msgid "<comment char>f2py ..."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:612
+msgid ""
+"where allowed comment characters for fixed and free format Fortran codes are "
+"``cC*!#`` and ``!``, respectively. Everything that follows ``<comment "
+"char>f2py`` is ignored by a compiler but read by F2PY as a normal non-"
+"comment  Fortran line:"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:618
+msgid ""
+"When F2PY finds a line with F2PY directive, the directive is first replaced "
+"by 5 spaces and then the line is reread."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:621
+msgid ""
+"For fixed format Fortran codes, ``<comment char>`` must be at the first "
+"column of a file, of course. For free format Fortran codes, the F2PY "
+"directives can appear anywhere in a file."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:628
+msgid "C expressions"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:630
+msgid "C expressions are used in the following parts of signature files:"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:632
+msgid "``<init_expr>`` for variable initialization;"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:633
+msgid "``<C-booleanexpr>`` of the ``check`` attribute;"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:634
+msgid "``<arrayspec>`` of the ``dimension`` attribute;"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:635
+msgid ""
+"``callstatement`` statement, here also a C multi-line block can be used."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:637
+msgid "A C expression may contain:"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:639
+msgid "standard C constructs;"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:640
+msgid "functions from ``math.h`` and ``Python.h``;"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:641
+msgid ""
+"variables from the argument list, presumably initialized before according to "
+"given dependence relations;"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:643
+msgid "the following CPP macros:"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:645
+msgid "``f2py_rank(<name>)``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:646
+msgid "Returns the rank of an array ``<name>``."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:647
+msgid "``f2py_shape(<name>, <n>)``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:648
+msgid "Returns the ``<n>``-th dimension of an array ``<name>``."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:649
+msgid "``f2py_len(<name>)``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:650
+msgid "Returns the length of an array ``<name>``."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:651
+msgid "``f2py_size(<name>)``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:652
+msgid "Returns the size of an array ``<name>``."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:653
+msgid "``f2py_itemsize(<name>)``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:654
+msgid "Returns the itemsize of an array ``<name>``."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:657
+msgid "``f2py_slen(<name>)``"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:656
+msgid "Returns the length of a string ``<name>``."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:659
+msgid ""
+"For initializing an array ``<array name>``, F2PY generates a loop over all "
+"indices and dimensions that executes the following pseudo-statement::"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:663
+msgid "<array name>(_i[0],_i[1],...) = <init_expr>;"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:665
+msgid ""
+"where ``_i[<i>]`` refers to the ``<i>``-th index value and that runs from "
+"``0`` to ``shape(<array name>,<i>)-1``."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:668
+msgid ""
+"For example, a function ``myrange(n)`` generated from the following signature"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:671
+msgid ""
+"subroutine myrange(a,n)\n"
+"  fortranname        ! myrange is a dummy wrapper\n"
+"  integer intent(in) :: n\n"
+"  real*8 intent(c,out),dimension(n),depend(n) :: a = _i[0]\n"
+"end subroutine myrange"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:679
+msgid "is equivalent to ``numpy.arange(n,dtype=float)``."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:683
+msgid ""
+"F2PY may lower cases also in C expressions when scanning Fortran codes (see "
+"``--[no]-lower`` option)."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:687
+msgid "Multi-line blocks"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:689
+msgid ""
+"A multi-line block starts with ``'''`` (triple single-quotes) and ends with "
+"``'''`` in some *strictly* subsequent line.  Multi-line blocks can be used "
+"only within .pyf files. The contents of a multi-line block can be arbitrary "
+"(except that it cannot contain ``'''``) and no transformations (e.g. "
+"lowering cases) are applied to it."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:695
+msgid "Currently, multi-line blocks can be used in the following constructs:"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:697
+msgid "as a C expression of the ``callstatement`` statement;"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:699
+msgid "as a C type specification of the ``callprotoargument`` statement;"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:701
+msgid "as a C code block of the ``usercode`` statement;"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:703
+msgid "as a list of C arrays of the ``pymethoddef`` statement;"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:705
+msgid "as documentation string."
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:708
+msgid "Extended char-selector"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:710
+msgid ""
+"F2PY extends char-selector specification, usable within a signature file or "
+"a F2PY directive, as follows::"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:713
+msgid ""
+"<extended-charselector> := <charselector>\n"
+"                        | (f2py_len= <len>)"
+msgstr ""
+
+#: ../../../f2py/signature-file.rst:716
+msgid "See :ref:`Character Strings` for usage."
+msgstr ""
