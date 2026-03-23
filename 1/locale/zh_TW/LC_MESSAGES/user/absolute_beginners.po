@@ -100,7 +100,7 @@ msgstr ""
 
 #: ../../../user/absolute_beginners.rst:60
 msgid "How to import NumPy"
-msgstr ""
+msgstr "如何匯入 NumPy"
 
 #: ../../../user/absolute_beginners.rst:62
 msgid ""
@@ -109,7 +109,7 @@ msgstr ""
 
 #: ../../../user/absolute_beginners.rst:64
 msgid "import numpy as np"
-msgstr ""
+msgstr "import numpy as np"
 
 #: ../../../user/absolute_beginners.rst:66
 msgid ""
@@ -412,6 +412,8 @@ msgid ""
 ">>> np.arange(2, 9, 2)\n"
 "array([2, 4, 6, 8])"
 msgstr ""
+">>> np.arange(2, 9, 2)\n"
+"array([2, 4, 6, 8])"
 
 #: ../../../user/absolute_beginners.rst:246
 msgid ""
@@ -441,6 +443,9 @@ msgid ""
 ">>> x\n"
 "array([1, 1])"
 msgstr ""
+">>> x = np.ones(2, dtype=np.int64)\n"
+">>> x\n"
+"array([1, 1])"
 
 #: ../../../user/absolute_beginners.rst:261
 msgid ""
@@ -528,6 +533,8 @@ msgid ""
 ">>> np.concatenate((a, b))\n"
 "array([1, 2, 3, 4, 5, 6, 7, 8])"
 msgstr ""
+">>> np.concatenate((a, b))\n"
+"array([1, 2, 3, 4, 5, 6, 7, 8])"
 
 #: ../../../user/absolute_beginners.rst:301
 msgid "Or, if you start with these arrays::"
@@ -616,6 +623,8 @@ msgid ""
 ">>> array_example.ndim\n"
 "3"
 msgstr ""
+">>> array_example.ndim\n"
+"3"
 
 #: ../../../user/absolute_beginners.rst:351
 msgid "To find the total number of elements in the array, run::"
@@ -679,6 +688,11 @@ msgid ""
 " [2 3]\n"
 " [4 5]]"
 msgstr ""
+">>> b = a.reshape(3, 2)\n"
+">>> print(b)\n"
+"[[0 1]\n"
+" [2 3]\n"
+" [4 5]]"
 
 #: ../../../user/absolute_beginners.rst:392
 msgid "With ``np.reshape``, you can specify a few optional parameters::"
@@ -768,10 +782,13 @@ msgid ""
 ">>> a.shape\n"
 "(6,)"
 msgstr ""
+">>> a = np.array([1, 2, 3, 4, 5, 6])\n"
+">>> a.shape\n"
+"(6,)"
 
 #: ../../../user/absolute_beginners.rst:445
 msgid "You can use ``np.newaxis`` to add a new axis::"
-msgstr ""
+msgstr "你可以使用 ``np.newaxis`` 來新增一個軸： ::"
 
 #: ../../../user/absolute_beginners.rst:447
 msgid ""
@@ -779,6 +796,9 @@ msgid ""
 ">>> a2.shape\n"
 "(1, 6)"
 msgstr ""
+">>> a2 = a[np.newaxis, :]\n"
+">>> a2.shape\n"
+"(1, 6)"
 
 #: ../../../user/absolute_beginners.rst:451
 msgid ""
@@ -843,7 +863,7 @@ msgstr ""
 
 #: ../../../user/absolute_beginners.rst:491
 msgid "Indexing and slicing"
-msgstr ""
+msgstr "索引與切片"
 
 #: ../../../user/absolute_beginners.rst:493
 msgid ""
@@ -934,6 +954,9 @@ msgid ""
 ">>> print(c)\n"
 "[ 3  4  5  6  7  8  9 10]"
 msgstr ""
+">>> c = a[(a > 2) & (a < 11)]\n"
+">>> print(c)\n"
+"[ 3  4  5  6  7  8  9 10]"
 
 #: ../../../user/absolute_beginners.rst:548
 msgid ""
@@ -951,6 +974,11 @@ msgid ""
 " [ True  True  True  True]\n"
 " [ True  True  True True]]"
 msgstr ""
+">>> five_up = (a > 5) | (a == 5)\n"
+">>> print(five_up)\n"
+"[[False False False False]\n"
+" [ True  True  True  True]\n"
+" [ True  True  True True]]"
 
 #: ../../../user/absolute_beginners.rst:559
 msgid ""
@@ -1440,7 +1468,7 @@ msgstr ""
 
 #: ../../../user/absolute_beginners.rst:865
 msgid "Creating matrices"
-msgstr ""
+msgstr "建立矩陣"
 
 #: ../../../user/absolute_beginners.rst:867
 msgid ""
@@ -1617,7 +1645,7 @@ msgstr ""
 
 #: ../../../user/absolute_beginners.rst:999
 msgid "Generating random numbers"
-msgstr ""
+msgstr "生成隨機數"
 
 #: ../../../user/absolute_beginners.rst:1001
 msgid ""
@@ -1853,7 +1881,7 @@ msgstr ""
 
 #: ../../../user/absolute_beginners.rst:1149
 msgid "How to reverse an array"
-msgstr ""
+msgstr "如何反轉陣列"
 
 #: ../../../user/absolute_beginners.rst:1151
 msgid "*This section covers* ``np.flip()``"
