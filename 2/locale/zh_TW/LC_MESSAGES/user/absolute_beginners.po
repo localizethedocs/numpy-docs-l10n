@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../../user/absolute_beginners.rst:19
 msgid "How to import NumPy"
-msgstr ""
+msgstr "如何匯入 NumPy"
 
 #: ../../../user/absolute_beginners.rst:21
 msgid ""
@@ -48,7 +48,7 @@ msgstr ""
 
 #: ../../../user/absolute_beginners.rst:24
 msgid "import numpy as np"
-msgstr ""
+msgstr "import numpy as np"
 
 #: ../../../user/absolute_beginners.rst:26
 msgid ""
@@ -73,6 +73,10 @@ msgid ""
 ">>> a.shape\n"
 "(2, 3)"
 msgstr ""
+">>> a = np.array([[1, 2, 3],\n"
+"...               [4, 5, 6]])\n"
+">>> a.shape\n"
+"(2, 3)"
 
 #: ../../../user/absolute_beginners.rst:40
 msgid ""
@@ -205,6 +209,9 @@ msgid ""
 ">>> a\n"
 "array([1, 2, 3, 4, 5, 6])"
 msgstr ""
+">>> a = np.array([1, 2, 3, 4, 5, 6])\n"
+">>> a\n"
+"array([1, 2, 3, 4, 5, 6])"
 
 #: ../../../user/absolute_beginners.rst:125
 msgid ""
@@ -257,6 +264,11 @@ msgid ""
 "       [ 5,  6,  7,  8],\n"
 "       [ 9, 10, 11, 12]])"
 msgstr ""
+">>> a = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])\n"
+">>> a\n"
+"array([[ 1,  2,  3,  4],\n"
+"       [ 5,  6,  7,  8],\n"
+"       [ 9, 10, 11, 12]])"
 
 #: ../../../user/absolute_beginners.rst:172
 msgid ""
@@ -406,6 +418,8 @@ msgid ""
 ">>> np.arange(2, 9, 2)\n"
 "array([2, 4, 6, 8])"
 msgstr ""
+">>> np.arange(2, 9, 2)\n"
+"array([2, 4, 6, 8])"
 
 #: ../../../user/absolute_beginners.rst:284
 msgid ""
@@ -435,6 +449,9 @@ msgid ""
 ">>> x\n"
 "array([1, 1])"
 msgstr ""
+">>> x = np.ones(2, dtype=np.int64)\n"
+">>> x\n"
+"array([1, 1])"
 
 #: ../../../user/absolute_beginners.rst:299
 msgid ""
@@ -522,6 +539,8 @@ msgid ""
 ">>> np.concatenate((a, b))\n"
 "array([1, 2, 3, 4, 5, 6, 7, 8])"
 msgstr ""
+">>> np.concatenate((a, b))\n"
+"array([1, 2, 3, 4, 5, 6, 7, 8])"
 
 #: ../../../user/absolute_beginners.rst:339
 msgid "Or, if you start with these arrays::"
@@ -610,6 +629,8 @@ msgid ""
 ">>> array_example.ndim\n"
 "3"
 msgstr ""
+">>> array_example.ndim\n"
+"3"
 
 #: ../../../user/absolute_beginners.rst:389
 msgid "To find the total number of elements in the array, run::"
@@ -673,6 +694,11 @@ msgid ""
 " [2 3]\n"
 " [4 5]]"
 msgstr ""
+">>> b = a.reshape(3, 2)\n"
+">>> print(b)\n"
+"[[0 1]\n"
+" [2 3]\n"
+" [4 5]]"
 
 #: ../../../user/absolute_beginners.rst:430
 msgid "With ``np.reshape``, you can specify a few optional parameters::"
@@ -762,10 +788,13 @@ msgid ""
 ">>> a.shape\n"
 "(6,)"
 msgstr ""
+">>> a = np.array([1, 2, 3, 4, 5, 6])\n"
+">>> a.shape\n"
+"(6,)"
 
 #: ../../../user/absolute_beginners.rst:483
 msgid "You can use ``np.newaxis`` to add a new axis::"
-msgstr ""
+msgstr "你可以使用 ``np.newaxis`` 來新增一個軸： ::"
 
 #: ../../../user/absolute_beginners.rst:485
 msgid ""
@@ -773,6 +802,9 @@ msgid ""
 ">>> a2.shape\n"
 "(1, 6)"
 msgstr ""
+">>> a2 = a[np.newaxis, :]\n"
+">>> a2.shape\n"
+"(1, 6)"
 
 #: ../../../user/absolute_beginners.rst:489
 msgid ""
@@ -837,7 +869,7 @@ msgstr ""
 
 #: ../../../user/absolute_beginners.rst:529
 msgid "Indexing and slicing"
-msgstr ""
+msgstr "索引與切片"
 
 #: ../../../user/absolute_beginners.rst:531
 msgid ""
@@ -930,6 +962,9 @@ msgid ""
 ">>> print(c)\n"
 "[ 3  4  5  6  7  8  9 10]"
 msgstr ""
+">>> c = a[(a > 2) & (a < 11)]\n"
+">>> print(c)\n"
+"[ 3  4  5  6  7  8  9 10]"
 
 #: ../../../user/absolute_beginners.rst:586
 msgid ""
@@ -947,6 +982,11 @@ msgid ""
 " [ True  True  True  True]\n"
 " [ True  True  True True]]"
 msgstr ""
+">>> five_up = (a > 5) | (a == 5)\n"
+">>> print(five_up)\n"
+"[[False False False False]\n"
+" [ True  True  True  True]\n"
+" [ True  True  True True]]"
 
 #: ../../../user/absolute_beginners.rst:597
 msgid ""
@@ -1443,7 +1483,7 @@ msgstr ""
 
 #: ../../../user/absolute_beginners.rst:908
 msgid "Creating matrices"
-msgstr ""
+msgstr "建立矩陣"
 
 #: ../../../user/absolute_beginners.rst:910
 msgid ""
@@ -1620,7 +1660,7 @@ msgstr ""
 
 #: ../../../user/absolute_beginners.rst:1042
 msgid "Generating random numbers"
-msgstr ""
+msgstr "生成隨機數"
 
 #: ../../../user/absolute_beginners.rst:1044
 msgid ""
@@ -1856,7 +1896,7 @@ msgstr ""
 
 #: ../../../user/absolute_beginners.rst:1192
 msgid "How to reverse an array"
-msgstr ""
+msgstr "如何反轉陣列"
 
 #: ../../../user/absolute_beginners.rst:1194
 msgid "*This section covers* ``np.flip()``"
