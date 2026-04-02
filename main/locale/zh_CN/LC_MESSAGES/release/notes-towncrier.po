@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"POT-Creation-Date: 2026-03-30 09:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,19 +33,33 @@ msgstr ""
 
 #: ../../../release/notes-towncrier.rst:9
 msgid ""
+"`numpy.take` now correctly checks if the result can be cast to the provided "
+"``out=out`` under the same-kind rule. A ``DeprecationWarning`` is given now "
+"when this check fails. Previously, ``take`` incorrectly checked if ``out`` "
+"could be cast to the result (the wrong direction). This deprecation also "
+"affects ``compress`` and possibly other functions. (Future versions of NumPy "
+"may tighten the casting check further.)"
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:17
+msgid "(`gh-30615 <https://github.com/numpy/numpy/pull/30615>`__)"
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:19
+msgid ""
 "The ``numpy.char.[as]array`` functions are deprecated. Use an ``numpy."
 "[as]array`` with a string or bytes dtype instead."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:11
+#: ../../../release/notes-towncrier.rst:21
 msgid "(`gh-30802 <https://github.com/numpy/numpy/pull/30802>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:14
+#: ../../../release/notes-towncrier.rst:24
 msgid "Setting the ``shape`` attribute is deprecated"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:15
+#: ../../../release/notes-towncrier.rst:25
 msgid ""
 "Setting the shape attribute is now deprecated since mutating an array is "
 "unsafe if an array is shared, especially by multiple threads.  As an "
@@ -55,247 +69,282 @@ msgid ""
 "copy=False)``."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:21
+#: ../../../release/notes-towncrier.rst:31
 msgid ""
 "Directly setting the shape on an array is discouraged, but for cases where "
 "it is difficult to work around, e.g., in ``__array_finalize__`` possible "
 "with the private method `np.ndarray._set_shape`."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:24
+#: ../../../release/notes-towncrier.rst:34
 msgid "(`gh-29536 <https://github.com/numpy/numpy/pull/29536>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:27
+#: ../../../release/notes-towncrier.rst:37
+msgid "Deprecation of the ``generic`` unit in `numpy.timedelta64`"
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:39
+msgid ""
+"Using the ``generic`` unit in `numpy.timedelta64` is now deprecated since "
+"this can lead to unexpected behavior such as non-transitive comparisons. "
+"(see `gh-28287 <https://github.com/numpy/numpy/issues/28287>`__ for details)."
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:43
+msgid ""
+"As an alternative, please specify an explicit unit such as ``'s'`` (seconds) "
+"or ``'D'`` (days) when constructing `numpy.timedelta64`."
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:46
+msgid ""
+"Due to this change, operations that implicitly rely on the ``generic`` unit "
+"are also deprecated. For example::"
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:49
+msgid ""
+"arr = np.array([1, 2, 3], dtype=\"m8[s]\")\n"
+"\n"
+"# `1` is implicitly converted to generic timedelta64\n"
+"arr + 1"
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:56
+msgid "(`gh-29619 <https://github.com/numpy/numpy/pull/29619>`__)"
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:59
 msgid "Resizing a Numpy array inplace is deprecated"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:28
+#: ../../../release/notes-towncrier.rst:60
 msgid ""
 "Resizing a Numpy array inplace is deprecated since mutating an array is "
 "unsafe if an array is shared, especially by multiple threads.  As an "
 "alternative, you can create a resized array via ``np.resize``."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:32
+#: ../../../release/notes-towncrier.rst:64
 msgid "(`gh-30181 <https://github.com/numpy/numpy/pull/30181>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:35
+#: ../../../release/notes-towncrier.rst:67
 msgid "``numpy.fix`` is deprecated"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:37
+#: ../../../release/notes-towncrier.rst:69
 msgid ""
 "`numpy.fix` is deprecated. Use `numpy.trunc` instead, which is faster and "
 "follows the Array API standard. Both functions provide identical "
 "functionality: rounding array elements towards zero."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:41
+#: ../../../release/notes-towncrier.rst:73
 msgid "(`gh-30644 <https://github.com/numpy/numpy/pull/30644>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:44
+#: ../../../release/notes-towncrier.rst:76
 msgid "``numpy.ma.round_`` is deprecated"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:45
+#: ../../../release/notes-towncrier.rst:77
 msgid ""
 "``numpy.ma.round_`` is deprecated. ``numpy.ma.round`` can be used as a "
 "replacement."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:48
+#: ../../../release/notes-towncrier.rst:80
 msgid "(`gh-30738 <https://github.com/numpy/numpy/pull/30738>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:51
+#: ../../../release/notes-towncrier.rst:83
 msgid "``typename`` is deprecated"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:52
+#: ../../../release/notes-towncrier.rst:84
 msgid ""
 "``numpy.typename`` is deprecated because the names returned by it were "
 "outdated and inconsistent. ``numpy.dtype.name`` can be used as a replacement."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:55
+#: ../../../release/notes-towncrier.rst:87
 msgid "(`gh-30774 <https://github.com/numpy/numpy/pull/30774>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:58
+#: ../../../release/notes-towncrier.rst:90
 msgid "Inputs other than ``integers`` is deprecated"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:59
+#: ../../../release/notes-towncrier.rst:91
 msgid ""
 "Inputs other than integers is deprecated for ``numpy.triu_indices`` and "
 "``numpy.tril_indices``."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:61
+#: ../../../release/notes-towncrier.rst:93
 msgid ""
 "The ``M``, ``k`` and ``N`` parameters of ``numpy.tri`` also deprecate non-"
 "integer arguments."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:63
+#: ../../../release/notes-towncrier.rst:95
 msgid ""
 "The ``k`` parameter of both ``numpy.tril_indices_from`` and ``numpy."
 "triu_indices_from`` deprecates non-integer arguments."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:65
-#: ../../../release/notes-towncrier.rst:352
+#: ../../../release/notes-towncrier.rst:97
+#: ../../../release/notes-towncrier.rst:417
 msgid "(`gh-30869 <https://github.com/numpy/numpy/pull/30869>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:69
+#: ../../../release/notes-towncrier.rst:101
 msgid "Expired deprecations"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:71
+#: ../../../release/notes-towncrier.rst:103
 msgid "``numpy.distutils`` has been removed"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:73
+#: ../../../release/notes-towncrier.rst:105
 msgid "(`gh-30340 <https://github.com/numpy/numpy/pull/30340>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:75
+#: ../../../release/notes-towncrier.rst:107
 msgid ""
 "Passing ``None`` as dtype to ``np.finfo`` will now raise a ``TypeError`` "
 "(deprecated since 1.25)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:77
+#: ../../../release/notes-towncrier.rst:109
 msgid "(`gh-30460 <https://github.com/numpy/numpy/pull/30460>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:79
+#: ../../../release/notes-towncrier.rst:111
 msgid ""
 "``numpy.cross`` no longer supports 2-dimensional vectors (deprecated since "
 "2.0)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:81
+#: ../../../release/notes-towncrier.rst:113
 msgid "(`gh-30461 <https://github.com/numpy/numpy/pull/30461>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:83
+#: ../../../release/notes-towncrier.rst:115
 msgid ""
 "``numpy._core.numerictypes.maximum_sctype`` has been removed (deprecated "
 "since 2.0)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:85
+#: ../../../release/notes-towncrier.rst:117
 msgid "(`gh-30462 <https://github.com/numpy/numpy/pull/30462>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:87
+#: ../../../release/notes-towncrier.rst:119
 msgid ""
 "``numpy.row_stack`` has been removed in favor of ``numpy.vstack`` "
 "(deprecated since 2.0)."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:88
+#: ../../../release/notes-towncrier.rst:120
 msgid "``get_array_wrap`` has been removed (deprecated since 2.0)."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:90
+#: ../../../release/notes-towncrier.rst:122
 msgid "(`gh-30463 <https://github.com/numpy/numpy/pull/30463>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:92
+#: ../../../release/notes-towncrier.rst:124
 msgid ""
 "``recfromtxt`` and ``recfromcsv`` have been removed from ``numpy.lib."
 "_npyio`` in favor of ``numpy.genfromtxt`` (deprecated since 2.0)."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:94
+#: ../../../release/notes-towncrier.rst:126
 msgid "(`gh-30467 <https://github.com/numpy/numpy/pull/30467>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:96
+#: ../../../release/notes-towncrier.rst:128
 msgid ""
 "The ``numpy.chararray`` re-export of ``numpy.char.chararray`` has been "
 "removed (deprecated since 2.0)."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:98
+#: ../../../release/notes-towncrier.rst:130
 msgid "(`gh-30604 <https://github.com/numpy/numpy/pull/30604>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:100
+#: ../../../release/notes-towncrier.rst:132
 msgid ""
 "``bincount`` now raises a ``TypeError`` for non-integer inputs (deprecated "
 "since 2.1)."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:102
+#: ../../../release/notes-towncrier.rst:134
 msgid "(`gh-30610 <https://github.com/numpy/numpy/pull/30610>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:104
+#: ../../../release/notes-towncrier.rst:136
 msgid ""
 "The ``numpy.lib.math`` alias for the standard library ``math`` module has "
 "been removed (deprecated since 1.25)."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:106
+#: ../../../release/notes-towncrier.rst:138
 msgid "(`gh-30612 <https://github.com/numpy/numpy/pull/30612>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:108
+#: ../../../release/notes-towncrier.rst:140
 msgid ""
 "Data type alias ``'a'`` was removed in favor of ``'S'`` (deprecated since "
 "2.0)."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:110
+#: ../../../release/notes-towncrier.rst:142
 msgid "(`gh-30613 <https://github.com/numpy/numpy/pull/30613>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:112
+#: ../../../release/notes-towncrier.rst:144
 msgid ""
 "``_add_newdoc_ufunc(ufunc, newdoc)`` has been removed in favor of ``ufunc."
 "__doc__ = newdoc`` (deprecated in 2.2)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:114
+#: ../../../release/notes-towncrier.rst:146
 msgid "(`gh-30614 <https://github.com/numpy/numpy/pull/30614>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:118
+#: ../../../release/notes-towncrier.rst:150
 msgid "Compatibility notes"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:121
+#: ../../../release/notes-towncrier.rst:153
 msgid "``linalg.eig`` and ``linalg.eigvals`` now always return complex arrays"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:123
+#: ../../../release/notes-towncrier.rst:155
 msgid ""
 "Previously, the return values depended on whether the eigenvalues happen to "
 "lie on the real line (which, for a general, non-symmetric matrix, is not "
 "guaranteed)."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:126
+#: ../../../release/notes-towncrier.rst:158
 msgid ""
 "The change makes consistent what was a value-dependent result. To retain the "
 "previous behavior, do::"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:129
+#: ../../../release/notes-towncrier.rst:161
 msgid ""
 "w = eigvals(a)\n"
 "if np.any(w.imag == 0):  # this is what NumPy used to do\n"
 "    w = w.real"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:133
+#: ../../../release/notes-towncrier.rst:165
 msgid ""
 "If your matrix is symmetrix/hermitian, use ``eigh`` and ``eigvalsh`` instead "
 "of ``eig`` and ``eigvals``. These are guaranteed to return real values. A "
@@ -303,30 +352,30 @@ msgid ""
 "definite by construction."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:138
+#: ../../../release/notes-towncrier.rst:170
 msgid "(`gh-30411 <https://github.com/numpy/numpy/pull/30411>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:141
+#: ../../../release/notes-towncrier.rst:173
 msgid "MSVC support"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:142
+#: ../../../release/notes-towncrier.rst:174
 msgid ""
 "NumPy now requires minimum MSVC 19.35 toolchain version on Windows "
 "platforms. This corresponds to Visual Studio 2022 version 17.5 Preview 2 or "
 "newer."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:146
+#: ../../../release/notes-towncrier.rst:178
 msgid "(`gh-30489 <https://github.com/numpy/numpy/pull/30489>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:149
+#: ../../../release/notes-towncrier.rst:181
 msgid "Cython support"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:151
+#: ../../../release/notes-towncrier.rst:183
 msgid ""
 "NumPy's Cython headers (accessed via ``cimport numpy``) now require Cython "
 "3.0 or newer to build. If you try to compile a project that depends on "
@@ -334,7 +383,7 @@ msgid ""
 "like this:"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:158
+#: ../../../release/notes-towncrier.rst:190
 msgid ""
 "Error compiling Cython file:\n"
 "------------------------------------------------------------\n"
@@ -353,7 +402,7 @@ msgid ""
 "aborted: the NumPy Cython headers require Cython 3.0.0 or newer.'"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:172
+#: ../../../release/notes-towncrier.rst:204
 msgid ""
 "Note that the invalid integer is not a bug in NumPy - we are intentionally "
 "generating this error to avoid triggering a more obscure error later in the "
@@ -361,80 +410,131 @@ msgid ""
 "not available in the old Cython version."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:177
+#: ../../../release/notes-towncrier.rst:209
 msgid "(`gh-30770 <https://github.com/numpy/numpy/pull/30770>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:180
+#: ../../../release/notes-towncrier.rst:212
 msgid "``numpy.where`` no longer truncates Python integers"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:182
+#: ../../../release/notes-towncrier.rst:214
 msgid ""
 "Previously, if the ``x`` or ``y`` argument of ``numpy.where`` was a Python "
 "integer that was out of range of the output type, it would be silently "
 "truncated. Now, an `OverflowError` will be raised instead."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:186
+#: ../../../release/notes-towncrier.rst:218
 msgid ""
 "This change also applies to the underlying C API function ``PyArray_Where``."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:188
+#: ../../../release/notes-towncrier.rst:220
 msgid "(`gh-30803 <https://github.com/numpy/numpy/pull/30803>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:191
+#: ../../../release/notes-towncrier.rst:223
 msgid "Default memory allocator change"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:192
+#: ../../../release/notes-towncrier.rst:224
 msgid ""
 "NumPy now uses ``PyMem_RawMalloc`` and ``PyMem_RawFree`` as the default "
 "memory allocator, instead of system's ``malloc`` and ``free`` directly."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:195
-#: ../../../release/notes-towncrier.rst:291
+#: ../../../release/notes-towncrier.rst:227
+#: ../../../release/notes-towncrier.rst:356
 msgid "(`gh-30846 <https://github.com/numpy/numpy/pull/30846>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:199
+#: ../../../release/notes-towncrier.rst:230
+msgid "``from_dlpack`` raises ``BufferError`` instead of ``RuntimeError``"
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:232
+msgid ""
+"``np.from_dlpack`` now raises ``BufferError`` instead of ``RuntimeError`` "
+"when the incoming DLPack tensor has an unsupported device, dtype, or exceeds "
+"the maximum number of dimensions. This aligns with the DLPack and Array API "
+"specifications, which recommend ``BufferError`` for data that cannot be "
+"imported."
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:238
+msgid "(`gh-30937 <https://github.com/numpy/numpy/pull/30937>`__)"
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:242
+msgid "C API changes"
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:244
+msgid ""
+"Added ``PyDataType_TYPE``, ``PyDataType_KIND``, ``PyDataType_BYTEORDER`` and "
+"``PyDataType_TYPEOBJ`` accessor macros to the C API. Together with the other "
+"accessor macros added for the NumPy 2.0 transition, these allow accessing "
+"the fields of ``PyArray_Descr`` structs without any direct field accesses."
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:249
+msgid "(`gh-30994 <https://github.com/numpy/numpy/pull/30994>`__)"
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:252
+msgid "``PyArray_DescrFromScalar`` now preserves parametric dtype information"
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:253
+msgid ""
+"``PyArray_DescrFromScalar`` now correctly returns the full dtype descriptor "
+"for scalars of user-defined parametric data types, including any dtype "
+"parameters. Previously, parameters were silently discarded, which could "
+"cause incorrect results in operations like ``astype`` on scalar objects. "
+"Internally, the function now delegates to ``discover_descr_from_pyobject``, "
+"which handles parametric dtypes correctly."
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:260
+msgid "(`gh-31067 <https://github.com/numpy/numpy/pull/31067>`__)"
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:264
 msgid "New Features"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:202
+#: ../../../release/notes-towncrier.rst:267
 msgid "Pixi package definitions"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:203
+#: ../../../release/notes-towncrier.rst:268
 msgid ""
 "Pixi package definitions have been added for different kinds of from-source "
 "builds of NumPy. These can be used in downstream Pixi workspaces via the "
 "``pixi-build`` feature."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:207
+#: ../../../release/notes-towncrier.rst:272
 msgid ""
 "Definitions for both ``default`` and AddressSanitizer-instrumented "
 "(``asan``) builds are available in the source code under the ``pixi-packages/"
 "`` directory."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:211
+#: ../../../release/notes-towncrier.rst:276
 msgid "``linux-64`` and ``osx-arm64`` platforms are supported."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:213
+#: ../../../release/notes-towncrier.rst:278
 msgid "(`gh-30381 <https://github.com/numpy/numpy/pull/30381>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:216
+#: ../../../release/notes-towncrier.rst:281
 msgid "``numpy.ndarray`` now supports structural pattern matching"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:217
+#: ../../../release/notes-towncrier.rst:282
 msgid ""
 "`numpy.ndarray` and its subclasses now have the ``Py_TPFLAGS_SEQUENCE`` flag "
 "set, enabling structural pattern matching (PEP 634) with ``match``/``case`` "
@@ -442,15 +542,15 @@ msgid ""
 "operations. See :ref:`arrays.ndarray.pattern-matching` for details."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:222
+#: ../../../release/notes-towncrier.rst:287
 msgid "(`gh-30653 <https://github.com/numpy/numpy/pull/30653>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:226
+#: ../../../release/notes-towncrier.rst:291
 msgid "Improvements"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:228
+#: ../../../release/notes-towncrier.rst:293
 msgid ""
 "For ``f2py``, the behaviour of ``intent(inplace)`` has improved. Previously, "
 "if an input array did not have the right dtype or order, the input array was "
@@ -463,7 +563,7 @@ msgid ""
 "copy at the end of the call)."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:239
+#: ../../../release/notes-towncrier.rst:304
 msgid ""
 "A potential problem would be that one might get very different results if "
 "one, e.g., previously passed in an integer array where a double array was "
@@ -474,33 +574,33 @@ msgid ""
 "to receive float, but would raise on integer input."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:248
+#: ../../../release/notes-towncrier.rst:313
 msgid "(`gh-29929 <https://github.com/numpy/numpy/pull/29929>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:251
+#: ../../../release/notes-towncrier.rst:316
 msgid "``f2py`` modules now show allocatable arrays in ``dir()``"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:252
+#: ../../../release/notes-towncrier.rst:317
 msgid ""
 "Allocatable module variables wrapped by ``f2py`` now appear in ``dir()`` "
 "output, matching their accessibility by name."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:255
+#: ../../../release/notes-towncrier.rst:320
 msgid "(`gh-30965 <https://github.com/numpy/numpy/pull/30965>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:259
+#: ../../../release/notes-towncrier.rst:324
 msgid "Performance improvements and changes"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:262
+#: ../../../release/notes-towncrier.rst:327
 msgid "Improved performance of ``numpy.searchsorted``"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:263
+#: ../../../release/notes-towncrier.rst:328
 msgid ""
 "The C++ binary search implementation used by ``numpy.searchsorted`` now has "
 "a much better performance when searching for multiple keys. The new "
@@ -510,35 +610,35 @@ msgid ""
 "performance remains comparable to previous versions."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:270
+#: ../../../release/notes-towncrier.rst:335
 msgid "(`gh-30517 <https://github.com/numpy/numpy/pull/30517>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:273
+#: ../../../release/notes-towncrier.rst:338
 msgid "Improved scaling of ufuncs on free-threading"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:275
+#: ../../../release/notes-towncrier.rst:340
 msgid ""
 "NumPy's ufuncs now scale significantly better on free-threading builds of "
 "CPython due to the following optimizations:"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:278
+#: ../../../release/notes-towncrier.rst:343
 msgid ""
 "**Lock-free dispatch table:** The ufuncs dispatch table is now implemented "
 "as a lock-free concurrent hash map, allowing multiple threads to call ufuncs "
 "without contention."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:282
+#: ../../../release/notes-towncrier.rst:347
 msgid ""
 "**Immortal shared objects:** Certain shared objects, such as global memory "
 "handlers, have been made immortal. This effectively reduces reference "
 "counting contention across threads."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:286
+#: ../../../release/notes-towncrier.rst:351
 msgid ""
 "**Optimized memory allocation:** NumPy now utilizes ``PyMem_RawMalloc`` and "
 "``PyMem_RawFree`` for memory allocation. On Python 3.15 and newer, this "
@@ -546,16 +646,16 @@ msgid ""
 "in multi-threaded workloads."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:295
+#: ../../../release/notes-towncrier.rst:360
 msgid "Typing improvements and changes"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:298
+#: ../../../release/notes-towncrier.rst:363
 msgid ""
 "``numpy.linalg`` typing improvements and preliminary shape-typing support"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:299
+#: ../../../release/notes-towncrier.rst:364
 msgid ""
 "Input and output dtypes for ``numpy.linalg`` functions are now more precise. "
 "Several of these functions also gain preliminary shape-typing support while "
@@ -567,15 +667,15 @@ msgid ""
 "implemented for the most common lower-rank cases."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:306
+#: ../../../release/notes-towncrier.rst:371
 msgid "(`gh-30480 <https://github.com/numpy/numpy/pull/30480>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:309
+#: ../../../release/notes-towncrier.rst:374
 msgid "``numpy.ma`` typing annotations"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:310
+#: ../../../release/notes-towncrier.rst:375
 msgid ""
 "The ``numpy.ma`` module is now fully covered by typing annotations. This "
 "includes annotations for masked arrays, masks, and various functions and "
@@ -583,19 +683,19 @@ msgid ""
 "submodules."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:314
+#: ../../../release/notes-towncrier.rst:379
 msgid "(`gh-30566 <https://github.com/numpy/numpy/pull/30566>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:318
+#: ../../../release/notes-towncrier.rst:383
 msgid "Changes"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:321
+#: ../../../release/notes-towncrier.rst:386
 msgid "``numpy.ctypeslib.as_ctypes`` now does not support scalar types"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:322
+#: ../../../release/notes-towncrier.rst:387
 msgid ""
 "The function ``numpy.ctypeslib.as_ctypes`` has been updated to only accept "
 "``numpy.ndarray``. Passing a scalar type (e.g., ``numpy.int32(5)``) will now "
@@ -608,11 +708,11 @@ msgid ""
 "as_ctypes``."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:332
+#: ../../../release/notes-towncrier.rst:397
 msgid "``__array_interface__`` changes on scalars"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:333
+#: ../../../release/notes-towncrier.rst:398
 msgid ""
 "Scalars now export the ``__array_interface__`` directly rather than "
 "including an array copy as a ``__ref`` entry. This means that scalars are "
@@ -621,32 +721,60 @@ msgid ""
 "NumPy itself."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:339
+#: ../../../release/notes-towncrier.rst:404
 msgid "(`gh-30538 <https://github.com/numpy/numpy/pull/30538>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:342
+#: ../../../release/notes-towncrier.rst:407
 msgid "``meshgrid`` now always returns a tuple"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:343
+#: ../../../release/notes-towncrier.rst:408
 msgid ""
 "``np.meshgrid`` previously used to return a list when ``sparse`` was true "
 "and ``copy`` was false. Now, it always returns a tuple regardless of the "
 "arguments."
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:346
+#: ../../../release/notes-towncrier.rst:411
 msgid "(`gh-30707 <https://github.com/numpy/numpy/pull/30707>`__)"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:349
+#: ../../../release/notes-towncrier.rst:414
 msgid "``numpy.triu_indices`` now accepts ``unsigned integers``"
 msgstr ""
 
-#: ../../../release/notes-towncrier.rst:350
+#: ../../../release/notes-towncrier.rst:415
 msgid ""
 "``numpy.triu_indices`` previously used to error in some cases when "
 "``unsigned integers`` were given as arguments. Now, it accepts them in all "
 "cases."
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:420
+msgid "``object`` dtype in ``.real`` and ``.imag`` and related functions"
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:421
+msgid ""
+"The array attributes ``.real`` and ``.imag`` now behave differently for "
+"object arrays and return ``getattr(element, \"real\", element)`` or "
+"``getattr(element, \"imag\", 0)`` elementwise. Additionally, the return for "
+"both is now read-only to avoid possible in-place changes having no effect."
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:427
+msgid "This change also affects ``np.isreal()`` which uses ``arr.imag``."
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:429
+msgid ""
+"Previously, ``.imag`` always returned ``0`` while ``.real`` returned the "
+"original array unmodified. The new behavior now returnes the correct values "
+"for complex Python objects but may also lead to surprises for example if "
+"``element.real()`` is a method and not a property."
+msgstr ""
+
+#: ../../../release/notes-towncrier.rst:435
+msgid "(`gh-30984 <https://github.com/numpy/numpy/pull/30984>`__)"
 msgstr ""
