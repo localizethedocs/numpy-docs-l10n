@@ -23,12 +23,12 @@ msgstr "numpy.ufunc.reduceat"
 
 #: ../../../reference/generated/numpy.ufunc.reduceat.rst:8
 msgid "method"
-msgstr ""
+msgstr "方法"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:2
 msgid "Performs a (local) reduce with specified slices over a single axis."
-msgstr ""
+msgstr "對單一軸上的指定切片執行（局部）歸約。"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:4
@@ -39,6 +39,10 @@ msgid ""
 "example, if `axis = 0`, it becomes the i-th row, but if `axis = 1`, it "
 "becomes the i-th column).  There are three exceptions to this:"
 msgstr ""
+"對於 `range(len(indices))` 中的每個 i，`reduceat` 計算 `ufunc."
+"reduce(array[indices[i]:indices[i+1]])`，它成為最終結果中沿 `axis` 方向的第 "
+"i 個廣義“行”（例如，在二維數組中，``axis` 方向的第 i 個廣義“行”（例如，在二維"
+"數組中，`` axis = i1 行列）。但有三個例外："
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:10
@@ -46,6 +50,8 @@ msgid ""
 "when ``i = len(indices) - 1`` (so for the last index), ``indices[i+1] = "
 "array.shape[axis]``."
 msgstr ""
+"當「`i = len(indices) - 1``（即最後一個索引）時，``indices[i+1] = array."
+"shape[axis]``。"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:12
@@ -53,12 +59,15 @@ msgid ""
 "if ``indices[i] >= indices[i + 1]``, the i-th generalized \"row\" is simply "
 "``array[indices[i]]``."
 msgstr ""
+"如果“indices[i] >= indices[i + 1]”，則第 i 個廣義“行”就"
+"是“array[indices[i]]”。"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:14
 msgid ""
 "if ``indices[i] >= len(array)`` or ``indices[i] < 0``, an error is raised."
 msgstr ""
+"如果 ``indices[i] >= len(array)`` 或 ``indices[i] < 0``，則會引發錯誤。"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:16
@@ -66,16 +75,18 @@ msgid ""
 "The shape of the output depends on the size of `indices`, and may be larger "
 "than `array` (this happens if ``len(indices) > array.shape[axis]``)."
 msgstr ""
+"輸出的形狀取決於 `indices` 的大小，可能大於 `array`（如果 ``len(indices) > "
+"array.shape[axis]`` 就會發生這種情況）。"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:22
 msgid "**array**"
-msgstr ""
+msgstr "**array**"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:-1
@@ -101,7 +112,7 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:29
 msgid "**axis**"
-msgstr ""
+msgstr "**axis**"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:-1
@@ -116,7 +127,7 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:35
 msgid "**dtype**"
-msgstr ""
+msgstr "**dtype**"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:-1
@@ -135,7 +146,7 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:44
 msgid "**out**"
-msgstr ""
+msgstr "**out**"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:-1
@@ -154,7 +165,7 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:0
 msgid "Returns"
-msgstr ""
+msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:57
@@ -201,7 +212,7 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:75
 msgid "Examples"
-msgstr ""
+msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:80
