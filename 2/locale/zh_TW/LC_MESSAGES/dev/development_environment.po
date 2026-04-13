@@ -23,7 +23,7 @@ msgstr "設定並使用您的開發環境"
 
 #: ../../../dev/development_environment.rst:9
 msgid "Recommended development setup"
-msgstr ""
+msgstr "推薦的開發設定"
 
 #: ../../../dev/development_environment.rst:11
 msgid ""
@@ -32,6 +32,10 @@ msgid ""
 "development headers installed - see :ref:`building-from-source`. Building "
 "NumPy as of version ``2.0`` requires C11 and C++17 compliant compilers."
 msgstr ""
+"由於 NumPy 包含用 C 和 Cython 編寫的部分，這些部分在使用前需要編譯，請確保已"
+"安裝必要的編譯器和 Python 開發標頭檔—請參見\\ :ref:`building-from-"
+"source`\\ 。從 ``2.0`` 版本開始，建置 NumPy 需要符合 C11 和 C++17 標準的編譯"
+"器。"
 
 #: ../../../dev/development_environment.rst:16
 msgid ""
@@ -66,13 +70,15 @@ msgstr ""
 
 #: ../../../dev/development_environment.rst:42
 msgid "Using virtual environments"
-msgstr ""
+msgstr "使用虛擬環境"
 
 #: ../../../dev/development_environment.rst:44
 msgid ""
 "A frequently asked question is \"How do I set up a development version of "
 "NumPy in parallel to a released version that I use to do my job/research?\"."
 msgstr ""
+"經常有人問「如何設定一個 NumPy 開發版本，與我用於工作/研究的已發行版本並"
+"行？」。"
 
 #: ../../../dev/development_environment.rst:47
 msgid ""
@@ -88,6 +94,9 @@ msgid ""
 "(this will create the environment and install all development dependencies "
 "at once)::"
 msgstr ""
+"如果您使用 conda，我們建議使用儲存庫根目錄下的 ``environment.yml`` 檔案為 "
+"numpy 開發建立一個單獨的虛擬環境（這將一次性建立環境並安裝所有開發依賴）："
+"\\ ::"
 
 #: ../../../dev/development_environment.rst:56
 msgid ""
@@ -109,6 +118,9 @@ msgid ""
 "$ source numpy-dev/bin/activate # activate virtual environment\n"
 "$ python -m pip install -r requirements/all_requirements.txt"
 msgstr ""
+"$ virtualenv numpy-dev\n"
+"$ source numpy-dev/bin/activate # activate virtual environment\n"
+"$ python -m pip install -r requirements/all_requirements.txt"
 
 #: ../../../dev/development_environment.rst:68
 msgid ""
@@ -119,7 +131,7 @@ msgstr ""
 
 #: ../../../dev/development_environment.rst:73
 msgid "Building from source"
-msgstr ""
+msgstr "從來源碼建置"
 
 #: ../../../dev/development_environment.rst:75
 msgid "See :ref:`building-from-source`."
@@ -138,6 +150,8 @@ msgid ""
 "$ python -m pip install -r requirements/test_requirements.txt\n"
 "$ python -m pip install asv # only for running benchmarks"
 msgstr ""
+"$ python -m pip install -r requirements/test_requirements.txt\n"
+"$ python -m pip install asv # 僅用於執行基準測試"
 
 #: ../../../dev/development_environment.rst:87
 msgid ""
@@ -181,7 +195,7 @@ msgstr ""
 
 #: ../../../dev/development_environment.rst:111
 msgid "$ spin test -t numpy/tests/test_scripts.py::test_f2py -- --pdb"
-msgstr ""
+msgstr "$ spin test -t numpy/tests/test_scripts.py::test_f2py -- --pdb"
 
 #: ../../../dev/development_environment.rst:113
 msgid ""
@@ -316,7 +330,7 @@ msgstr ""
 
 #: ../../../dev/development_environment.rst:194
 msgid "$ spin mypy"
-msgstr ""
+msgstr "$ spin mypy"
 
 #: ../../../dev/development_environment.rst:196
 msgid ""
@@ -326,7 +340,7 @@ msgstr ""
 
 #: ../../../dev/development_environment.rst:200
 msgid "Running linting"
-msgstr ""
+msgstr "執行梳理"
 
 #: ../../../dev/development_environment.rst:201
 msgid "Lint checks can be performed on newly added lines of Python code."
@@ -455,7 +469,7 @@ msgstr ""
 #: ../../../dev/development_environment.rst:273
 msgid ""
 "To generate source-level debug information within the build process run::"
-msgstr ""
+msgstr "若要在建置過程中生成來源碼級別的除錯資訊，請執行：\\ ::"
 
 #: ../../../dev/development_environment.rst:275
 msgid "$ spin build --clean -- -Dbuildtype=debug -Ddisable-optimization=true"
