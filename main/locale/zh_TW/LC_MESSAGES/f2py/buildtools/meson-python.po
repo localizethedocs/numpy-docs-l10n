@@ -158,7 +158,7 @@ msgstr ""
 
 #: ../../../f2py/buildtools/meson-python.rst:70
 msgid "``meson.build``"
-msgstr ""
+msgstr "``meson.build``"
 
 #: ../../../f2py/buildtools/meson-python.rst:72
 msgid ""
@@ -369,6 +369,13 @@ msgid ""
 "  install : true,\n"
 ")"
 msgstr ""
+"lapack_dep = dependency('lapack')\n"
+"\n"
+"py.extension_module('mymod',\n"
+"  [sources, generated, incdir_f2py / 'fortranobject.c'],\n"
+"  dependencies : [np_dep, f2py_dep, lapack_dep],\n"
+"  install : true,\n"
+")"
 
 #: ../../../f2py/buildtools/meson-python.rst:186
 msgid ""
@@ -401,15 +408,15 @@ msgstr ""
 
 #: ../../../f2py/buildtools/meson-python.rst:201
 msgid "Further reading"
-msgstr ""
+msgstr "延伸閱讀"
 
 #: ../../../f2py/buildtools/meson-python.rst:203
 msgid "`meson-python documentation <https://meson-python.readthedocs.io/>`_"
-msgstr ""
+msgstr "`meson-python 文件 <https://meson-python.readthedocs.io/>`_"
 
 #: ../../../f2py/buildtools/meson-python.rst:204
 msgid "`Meson build system <https://mesonbuild.com/>`_"
-msgstr ""
+msgstr "`Meson 建置系統 <https://mesonbuild.com/>`_"
 
 #: ../../../f2py/buildtools/meson-python.rst:205
 msgid ""
