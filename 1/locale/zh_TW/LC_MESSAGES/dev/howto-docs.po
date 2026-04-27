@@ -142,7 +142,7 @@ msgstr ""
 
 #: ../../../dev/howto-docs.rst:89
 msgid "Documentation framework"
-msgstr ""
+msgstr "文件框架"
 
 #: ../../../dev/howto-docs.rst:91
 msgid ""
@@ -236,11 +236,11 @@ msgstr ""
 
 #: ../../../dev/howto-docs.rst:160
 msgid "Documentation style"
-msgstr ""
+msgstr "文件風格"
 
 #: ../../../dev/howto-docs.rst:165
 msgid "User documentation"
-msgstr ""
+msgstr "使用者文件"
 
 #: ../../../dev/howto-docs.rst:167
 msgid ""
@@ -291,7 +291,7 @@ msgstr ""
 
 #: ../../../dev/howto-docs.rst:196
 msgid "Docstrings"
-msgstr ""
+msgstr "文件字串"
 
 #: ../../../dev/howto-docs.rst:198
 msgid ""
@@ -633,7 +633,7 @@ msgstr ""
 
 #: ../../../dev/howto-docs.rst:345
 msgid "``doxygenfunction``"
-msgstr ""
+msgstr "``doxygenfunction``"
 
 #: ../../../dev/howto-docs.rst:347
 msgid ""
@@ -647,6 +647,9 @@ msgid ""
 "    :outline:\n"
 "    :no-link:"
 msgstr ""
+".. doxygenfunction:: <function name>\n"
+"    :outline:\n"
+"    :no-link:"
 
 #: ../../../dev/howto-docs.rst:356
 msgid ""
@@ -656,7 +659,7 @@ msgstr ""
 
 #: ../../../dev/howto-docs.rst:360
 msgid "``doxygenclass``"
-msgstr ""
+msgstr "``doxygenclass``"
 
 #: ../../../dev/howto-docs.rst:362
 msgid ""
@@ -678,6 +681,15 @@ msgid ""
 "   :outline:\n"
 "   :no-link:"
 msgstr ""
+".. doxygenclass:: <class name>\n"
+"   :members: [...]\n"
+"   :protected-members:\n"
+"   :private-members:\n"
+"   :undoc-members:\n"
+"   :membergroups: ...\n"
+"   :members-only:\n"
+"   :outline:\n"
+"   :no-link:"
 
 #: ../../../dev/howto-docs.rst:379
 msgid ""
@@ -687,7 +699,7 @@ msgstr ""
 
 #: ../../../dev/howto-docs.rst:382
 msgid "``doxygennamespace``"
-msgstr ""
+msgstr "``doxygennamespace``"
 
 #: ../../../dev/howto-docs.rst:384
 msgid ""
@@ -710,6 +722,14 @@ msgid ""
 "   :undoc-members:\n"
 "   :no-link:"
 msgstr ""
+".. doxygennamespace:: <namespace>\n"
+"   :content-only:\n"
+"   :outline:\n"
+"   :members:\n"
+"   :protected-members:\n"
+"   :private-members:\n"
+"   :undoc-members:\n"
+"   :no-link:"
 
 #: ../../../dev/howto-docs.rst:401
 msgid ""

@@ -46,6 +46,8 @@ msgid ""
 ">>> import numpy as np\n"
 ">>> from io import StringIO"
 msgstr ""
+">>> import numpy as np\n"
+">>> from io import StringIO"
 
 #: ../../../user/basics.io.genfromtxt.rst:27
 msgid "Defining the input"
@@ -387,6 +389,10 @@ msgid ""
 "array([(1., 2., 3.), (4., 5., 6.)],\n"
 "      dtype=[('A', '<f8'), ('B', '<f8'), ('C', '<f8')])"
 msgstr ""
+">>> data = StringIO(\"1 2 3\\n 4 5 6\")\n"
+">>> np.genfromtxt(data, names=\"A, B, C\")\n"
+"array([(1., 2., 3.), (4., 5., 6.)],\n"
+"      dtype=[('A', '<f8'), ('B', '<f8'), ('C', '<f8')])"
 
 #: ../../../user/basics.io.genfromtxt.rst:262
 msgid ""
@@ -409,6 +415,10 @@ msgid ""
 "array([(1., 2., 3.), (4., 5., 6.)],\n"
 "      dtype=[('a', '<f8'), ('b', '<f8'), ('c', '<f8')])"
 msgstr ""
+">>> data = StringIO(\"So it goes\\n#a b c\\n1 2 3\\n 4 5 6\")\n"
+">>> np.genfromtxt(data, skip_header=1, names=True)\n"
+"array([(1., 2., 3.), (4., 5., 6.)],\n"
+"      dtype=[('a', '<f8'), ('b', '<f8'), ('c', '<f8')])"
 
 #: ../../../user/basics.io.genfromtxt.rst:276
 msgid ""

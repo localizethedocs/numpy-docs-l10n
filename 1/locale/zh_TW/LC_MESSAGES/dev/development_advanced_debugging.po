@@ -39,7 +39,7 @@ msgstr ""
 
 #: ../../../dev/development_advanced_debugging.rst:20
 msgid "Finding C errors with additional tooling"
-msgstr ""
+msgstr "使用額外工具尋找 C 語言錯誤"
 
 #: ../../../dev/development_advanced_debugging.rst:22
 msgid ""
@@ -166,7 +166,7 @@ msgstr ""
 #: ../../../dev/development_advanced_debugging.rst:93
 #: ../../../dev/development_advanced_debugging.rst:187
 msgid "Use together with ``pytest``"
-msgstr ""
+msgstr "與 ``pytest`` 搭配使用"
 
 #: ../../../dev/development_advanced_debugging.rst:95
 msgid ""
@@ -192,6 +192,13 @@ msgid ""
 "def env_setup(monkeypatch):\n"
 "    monkeypatch.setenv('PYTHONHASHSEED', '0')"
 msgstr ""
+"@pytest.fixture(autouse=True)\n"
+"def add_np(doctest_namespace):\n"
+"    doctest_namespace['np'] = numpy\n"
+"\n"
+"@pytest.fixture(autouse=True)\n"
+"def env_setup(monkeypatch):\n"
+"    monkeypatch.setenv('PYTHONHASHSEED', '0')"
 
 #: ../../../dev/development_advanced_debugging.rst:111
 msgid ""
@@ -223,7 +230,7 @@ msgstr ""
 
 #: ../../../dev/development_advanced_debugging.rst:128
 msgid "``valgrind``"
-msgstr ""
+msgstr "``valgrind``"
 
 #: ../../../dev/development_advanced_debugging.rst:130
 msgid ""
@@ -234,7 +241,7 @@ msgstr ""
 
 #: ../../../dev/development_advanced_debugging.rst:134
 msgid "PYTHONMALLOC=malloc valgrind python runtests.py"
-msgstr ""
+msgstr "PYTHONMALLOC=malloc valgrind python runtests.py"
 
 #: ../../../dev/development_advanced_debugging.rst:136
 msgid ""

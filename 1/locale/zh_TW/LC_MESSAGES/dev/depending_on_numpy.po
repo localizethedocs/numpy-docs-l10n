@@ -77,6 +77,8 @@ msgid ""
 "pip install -U --pre --only-binary :all: -i https://pypi.anaconda.org/"
 "scientific-python-nightly-wheels/simple numpy"
 msgstr ""
+"pip install -U --pre --only-binary :all: -i https://pypi.anaconda.org/"
+"scientific-python-nightly-wheels/simple numpy"
 
 #: ../../../dev/depending_on_numpy.rst:44
 msgid ""
@@ -134,7 +136,7 @@ msgstr ""
 
 #: ../../../dev/depending_on_numpy.rst:86
 msgid "#define NPY_TARGET_VERSION NPY_1_22_API_VERSION"
-msgstr ""
+msgstr "#define NPY_TARGET_VERSION NPY_1_22_API_VERSION"
 
 #: ../../../dev/depending_on_numpy.rst:88
 msgid ""
@@ -156,6 +158,9 @@ msgid ""
 "    #define NPY_TARGET_VERSION NPY_API_VERSION\n"
 "#endif"
 msgstr ""
+"#ifndef NPY_TARGET_VERSION\n"
+"    #define NPY_TARGET_VERSION NPY_API_VERSION\n"
+"#endif"
 
 #: ../../../dev/depending_on_numpy.rst:100
 msgid ""
