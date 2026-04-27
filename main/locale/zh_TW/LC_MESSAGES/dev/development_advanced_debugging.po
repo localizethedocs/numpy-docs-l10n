@@ -47,7 +47,7 @@ msgstr ""
 
 #: ../../../dev/development_advanced_debugging.rst:24
 msgid "Finding C errors with additional tooling"
-msgstr ""
+msgstr "使用額外工具尋找 C 語言錯誤"
 
 #: ../../../dev/development_advanced_debugging.rst:26
 msgid ""
@@ -107,6 +107,8 @@ msgid ""
 "pyenv install -g 3.13.3\n"
 "pyenv global 3.13.3"
 msgstr ""
+"pyenv install -g 3.13.3\n"
+"pyenv global 3.13.3"
 
 #: ../../../dev/development_advanced_debugging.rst:62
 msgid ""
@@ -175,7 +177,7 @@ msgstr ""
 #: ../../../dev/development_advanced_debugging.rst:193
 #: ../../../dev/development_advanced_debugging.rst:371
 msgid "Use together with ``pytest``"
-msgstr ""
+msgstr "與 ``pytest`` 搭配使用"
 
 #: ../../../dev/development_advanced_debugging.rst:100
 msgid ""
@@ -201,6 +203,13 @@ msgid ""
 "def env_setup(monkeypatch):\n"
 "    monkeypatch.setenv('PYTHONHASHSEED', '0')"
 msgstr ""
+"@pytest.fixture(autouse=True)\n"
+"def add_np(doctest_namespace):\n"
+"    doctest_namespace['np'] = numpy\n"
+"\n"
+"@pytest.fixture(autouse=True)\n"
+"def env_setup(monkeypatch):\n"
+"    monkeypatch.setenv('PYTHONHASHSEED', '0')"
 
 #: ../../../dev/development_advanced_debugging.rst:116
 msgid ""
@@ -216,6 +225,7 @@ msgstr ""
 msgid ""
 "python3.8d runtests.py -t numpy/_core/tests/test_multiarray.py -- -R2:3 -s"
 msgstr ""
+"python3.8d runtests.py -t numpy/_core/tests/test_multiarray.py -- -R2:3 -s"
 
 #: ../../../dev/development_advanced_debugging.rst:123
 msgid ""
@@ -232,7 +242,7 @@ msgstr ""
 
 #: ../../../dev/development_advanced_debugging.rst:133
 msgid "``valgrind``"
-msgstr ""
+msgstr "``valgrind``"
 
 #: ../../../dev/development_advanced_debugging.rst:135
 msgid ""
@@ -243,7 +253,7 @@ msgstr ""
 
 #: ../../../dev/development_advanced_debugging.rst:140
 msgid "PYTHONMALLOC=malloc valgrind python runtests.py"
-msgstr ""
+msgstr "PYTHONMALLOC=malloc valgrind python runtests.py"
 
 #: ../../../dev/development_advanced_debugging.rst:142
 msgid ""
@@ -338,6 +348,8 @@ msgid ""
 "PYTHONMALLOC=malloc valgrind python runtests.py \\\n"
 " -t numpy/_core/tests/test_multiarray.py -- --continue-on-collection-errors"
 msgstr ""
+"PYTHONMALLOC=malloc valgrind python runtests.py \\\n"
+" -t numpy/_core/tests/test_multiarray.py -- --continue-on-collection-errors"
 
 #: ../../../dev/development_advanced_debugging.rst:200
 msgid ""
@@ -401,7 +413,7 @@ msgstr ""
 
 #: ../../../dev/development_advanced_debugging.rst:243
 msgid "Building With Debug Symbols"
-msgstr ""
+msgstr "使用除錯符號進行建置"
 
 #: ../../../dev/development_advanced_debugging.rst:245
 msgid ""
@@ -625,7 +637,7 @@ msgstr ""
 
 #: ../../../dev/development_advanced_debugging.rst:400
 msgid "Compiler Sanitizers"
-msgstr ""
+msgstr "編譯器淨化器"
 
 #: ../../../dev/development_advanced_debugging.rst:402
 msgid ""
@@ -721,7 +733,7 @@ msgstr ""
 
 #: ../../../dev/development_advanced_debugging.rst:466
 msgid "ASAN_OPTIONS=allocator_may_return_null=1 spin test"
-msgstr ""
+msgstr "ASAN_OPTIONS=allocator_may_return_null=1 spin test"
 
 #: ../../../dev/development_advanced_debugging.rst:470
 msgid ""
@@ -736,6 +748,8 @@ msgid ""
 "ASAN_OPTIONS=allocator_may_return_null=1:halt_on_error=1:detect_leaks=1 spin "
 "test"
 msgstr ""
+"ASAN_OPTIONS=allocator_may_return_null=1:halt_on_error=1:detect_leaks=1 spin "
+"test"
 
 #: ../../../dev/development_advanced_debugging.rst:479
 msgid ""

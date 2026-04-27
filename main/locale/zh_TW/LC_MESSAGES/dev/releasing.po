@@ -129,7 +129,7 @@ msgstr ""
 
 #: ../../../../HOWTO_RELEASE.rst:54
 msgid "Toolchains"
-msgstr ""
+msgstr "工具鏈"
 
 #: ../../../../HOWTO_RELEASE.rst:55
 msgid "For building wheels, we use the following toolchains:"
@@ -178,7 +178,7 @@ msgstr ""
 
 #: ../../../../HOWTO_RELEASE.rst:82
 msgid "Building docs"
-msgstr ""
+msgstr "建置文件"
 
 #: ../../../../HOWTO_RELEASE.rst:83
 msgid ""
@@ -263,7 +263,7 @@ msgstr ""
 
 #: ../../../../HOWTO_RELEASE.rst:135
 msgid "Check the C API version number"
-msgstr ""
+msgstr "檢查 C API 版本號"
 
 #: ../../../../HOWTO_RELEASE.rst:136
 msgid "The C API version needs to be tracked in three places"
@@ -271,15 +271,15 @@ msgstr ""
 
 #: ../../../../HOWTO_RELEASE.rst:138
 msgid "numpy/_core/meson.build"
-msgstr ""
+msgstr "numpy/_core/meson.build"
 
 #: ../../../../HOWTO_RELEASE.rst:139
 msgid "numpy/_core/code_generators/cversions.txt"
-msgstr ""
+msgstr "numpy/_core/code_generators/cversions.txt"
 
 #: ../../../../HOWTO_RELEASE.rst:140
 msgid "numpy/_core/include/numpy/numpyconfig.h"
-msgstr ""
+msgstr "numpy/_core/include/numpy/numpyconfig.h"
 
 #: ../../../../HOWTO_RELEASE.rst:142
 msgid "There are three steps to the process."
@@ -366,7 +366,7 @@ msgstr ""
 
 #: ../../../../HOWTO_RELEASE.rst:191
 msgid "supported Python versions"
-msgstr ""
+msgstr "支援的 Python 版本"
 
 #: ../../../../HOWTO_RELEASE.rst:192
 msgid "for SciPy, supported NumPy version(s)"
@@ -443,7 +443,7 @@ msgstr ""
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:43
 msgid "Update 2.4.0 milestones"
-msgstr ""
+msgstr "更新 2.4.0 里程碑"
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:45
 msgid ""
@@ -485,7 +485,7 @@ msgstr ""
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:64
 msgid "The ``pyproject.toml`` file"
-msgstr ""
+msgstr "``pyproject.toml`` 檔案"
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:66
 msgid ""
@@ -506,7 +506,7 @@ msgstr ""
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:79
 msgid "Set the release version"
-msgstr ""
+msgstr "設定發行版本"
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:81
 msgid ""
@@ -517,11 +517,11 @@ msgstr ""
 #: ../../../../RELEASE_WALKTHROUGH.rst:84
 #: ../../../../RELEASE_WALKTHROUGH.rst:290
 msgid "$ gvim pyproject.toml"
-msgstr ""
+msgstr "$ gvim pyproject.toml"
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:88
 msgid "Check the ``doc/source/release.rst`` file"
-msgstr ""
+msgstr "檢查 ``doc/source/release.rst`` 檔案"
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:90
 msgid ""
@@ -549,6 +549,8 @@ msgid ""
 "$ spin changelog $GITHUB v2.3.0..maintenance/2.4.x > doc/changelog/2.4.0-"
 "changelog.rst"
 msgstr ""
+"$ spin changelog $GITHUB v2.3.0..maintenance/2.4.x > doc/changelog/2.4.0-"
+"changelog.rst"
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:104
 msgid ""
@@ -578,6 +580,9 @@ msgid ""
 "$ gvim doc/source/release/notes-towncrier.rst doc/source/release/2.4.0-notes."
 "rst"
 msgstr ""
+"$ spin notes\n"
+"$ gvim doc/source/release/notes-towncrier.rst doc/source/release/2.4.0-notes."
+"rst"
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:123
 msgid ""
@@ -657,6 +662,8 @@ msgid ""
 "$ git tag -a -s v2.4.0 -m\"NumPy 2.4.0 release\"\n"
 "$ git push upstream v2.4.0"
 msgstr ""
+"$ git tag -a -s v2.4.0 -m\"NumPy 2.4.0 release\"\n"
+"$ git push upstream v2.4.0"
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:176
 msgid "If you need to delete the tag due to error::"
@@ -687,7 +694,7 @@ msgstr ""
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:197
 msgid "3. Upload files to GitHub Releases"
-msgstr ""
+msgstr "3. 上傳檔案至 GitHub Releases"
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:199
 msgid ""
@@ -700,7 +707,7 @@ msgstr ""
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:205
 msgid "$ python tools/write_release.py 2.4.0"
-msgstr ""
+msgstr "$ python tools/write_release.py 2.4.0"
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:207
 msgid ""
@@ -731,7 +738,7 @@ msgstr ""
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:218
 msgid "Hit the ``Publish release`` button at the bottom."
-msgstr ""
+msgstr "點擊底部的 ``Publish release`` 按鈕。"
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:221
 msgid ""
@@ -774,7 +781,7 @@ msgstr ""
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:244
 msgid "$ gvim index.html +/'insert here'"
-msgstr ""
+msgstr "$ gvim index.html +/'insert here'"
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:246
 msgid ""
@@ -784,11 +791,11 @@ msgstr ""
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:249
 msgid "$ gvim _static/versions.json"
-msgstr ""
+msgstr "$ gvim _static/versions.json"
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:251
 msgid "Then run ``update.py`` to update the version in ``_static``::"
-msgstr ""
+msgstr "然後執行 ``update.py`` 以更新 ``_static`` 中的版本：\\ ::"
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:253
 msgid "$ python3 update.py"
@@ -867,6 +874,9 @@ msgid ""
 "$ git rebase -i HEAD^\n"
 "$ git push origin HEAD"
 msgstr ""
+"$ git commit -a -m\"MAINT: Prepare 2.4.x for further development\"\n"
+"$ git rebase -i HEAD^\n"
+"$ git push origin HEAD"
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:299
 msgid "Go to GitHub and make a PR. It should be merged quickly."
