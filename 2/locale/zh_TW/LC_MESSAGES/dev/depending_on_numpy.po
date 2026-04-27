@@ -91,6 +91,8 @@ msgid ""
 "pip install -U --pre --only-binary :all: -i https://pypi.anaconda.org/"
 "scientific-python-nightly-wheels/simple numpy"
 msgstr ""
+"pip install -U --pre --only-binary :all: -i https://pypi.anaconda.org/"
+"scientific-python-nightly-wheels/simple numpy"
 
 #: ../../../dev/depending_on_numpy.rst:57
 msgid ""
@@ -162,7 +164,7 @@ msgstr ""
 
 #: ../../../dev/depending_on_numpy.rst:107
 msgid "#define NPY_TARGET_VERSION NPY_1_22_API_VERSION"
-msgstr ""
+msgstr "#define NPY_TARGET_VERSION NPY_1_22_API_VERSION"
 
 #: ../../../dev/depending_on_numpy.rst:109
 msgid ""
@@ -184,6 +186,9 @@ msgid ""
 "    #define NPY_TARGET_VERSION NPY_API_VERSION\n"
 "#endif"
 msgstr ""
+"#ifndef NPY_TARGET_VERSION\n"
+"    #define NPY_TARGET_VERSION NPY_API_VERSION\n"
+"#endif"
 
 #: ../../../dev/depending_on_numpy.rst:121
 msgid ""
@@ -278,12 +283,16 @@ msgid ""
 "building wheels that work on both 2.0 and 1.xx releases. It's important to "
 "understand that:"
 msgstr ""
+"NumPy 2.0 是一個會破壞 ABI 的發行版，但它確實支援建置可同時在 2.0 和 1.xx 發"
+"行版上運作的 wheel。請務必理解以下幾點："
 
 #: ../../../dev/depending_on_numpy.rst:189
 msgid ""
 "When you build wheels for your package using a NumPy 1.xx version at build "
 "time, those **will not work** with NumPy 2.0."
 msgstr ""
+"當您在建置時期使用 NumPy 1.xx 版本為您的套件建置 wheel 時，這些 wheel **將無"
+"法**\\ 與 NumPy 2.0 相容。"
 
 #: ../../../dev/depending_on_numpy.rst:191
 msgid ""
