@@ -1,0 +1,617 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-20 10:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/routines.char.rst:4
+msgid "Legacy fixed-width string functionality"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:-1
+msgid "Legacy"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:12
+msgid ""
+"This submodule is considered legacy and will no longer receive updates. This "
+"could also mean it will be removed in future NumPy versions. The string "
+"operations in this module are planned to be deprecated in the future, and "
+"the `numpy.char.chararray` class is deprecated in NumPy 2.5. Use `numpy."
+"strings` instead."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:15
+msgid ""
+"The `numpy.char` module provides a set of vectorized string operations for "
+"arrays of type `numpy.str_` or `numpy.bytes_`. For example"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:-1
+msgid ""
+"<div id=\"e9bd8c2a-4d0c-4b97-87e2-3d6069021323\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('463ecb3f-3cb4-4e73-98ca-1ff1b6a2a6b8','e9bd8c2a-4d0c-4b97-87e2-3d6069021323')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('463ecb3f-3cb4-4e73-98ca-1ff1b6a2a6b8','e9bd8c2a-4d0c-4b97-87e2-3d6069021323')\">Open "
+"In Tab</button></div><div id=\"86bf1f47-bb92-4a27-a516-bc70a816ec5d\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../try_examples.json\");});</script>"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:26
+msgid "The methods in this module are based on the methods in :py:mod:`string`"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:29
+msgid "String operations"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+":py:obj:`add <numpy.char.add>`\\ \\(x1\\, x2\\, \\/\\[\\, out\\, where\\, "
+"casting\\, order\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid "Add arguments element-wise."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ":py:obj:`multiply <numpy.char.multiply>`\\ \\(a\\, i\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid "Return (a * i), that is string multiple concatenation, element-wise."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ":py:obj:`mod <numpy.char.mod>`\\ \\(a\\, values\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+"Return (a % i), that is pre-Python 2.6 string formatting (interpolation), "
+"element-wise for a pair of array_likes of str or unicode."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ":py:obj:`capitalize <numpy.char.capitalize>`\\ \\(a\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+"Return a copy of ``a`` with only the first character of each element "
+"capitalized."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+":py:obj:`center <numpy.char.center>`\\ \\(a\\, width\\[\\, fillchar\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+"Return a copy of `a` with its elements centered in a string of length "
+"`width`."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+":py:obj:`decode <numpy.char.decode>`\\ \\(a\\[\\, encoding\\, errors\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid "Calls :meth:`bytes.decode` element-wise."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+":py:obj:`encode <numpy.char.encode>`\\ \\(a\\[\\, encoding\\, errors\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid "Calls :meth:`str.encode` element-wise."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ":py:obj:`expandtabs <numpy.char.expandtabs>`\\ \\(a\\[\\, tabsize\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+"Return a copy of each string element where all tab characters are replaced "
+"by one or more spaces."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ":py:obj:`join <numpy.char.join>`\\ \\(sep\\, seq\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+"Return a string which is the concatenation of the strings in the sequence "
+"`seq`."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ":py:obj:`ljust <numpy.char.ljust>`\\ \\(a\\, width\\[\\, fillchar\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+"Return an array with the elements of `a` left-justified in a string of "
+"length `width`."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ":py:obj:`lower <numpy.char.lower>`\\ \\(a\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid "Return an array with the elements converted to lowercase."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ":py:obj:`lstrip <numpy.char.lstrip>`\\ \\(a\\[\\, chars\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+"For each element in `a`, return a copy with the leading characters removed."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ":py:obj:`partition <numpy.char.partition>`\\ \\(a\\, sep\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid "Partition each element in `a` around `sep`."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+":py:obj:`replace <numpy.char.replace>`\\ \\(a\\, old\\, new\\[\\, count\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+"For each element in ``a``, return a copy of the string with occurrences of "
+"substring ``old`` replaced by ``new``."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ":py:obj:`rjust <numpy.char.rjust>`\\ \\(a\\, width\\[\\, fillchar\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+"Return an array with the elements of `a` right-justified in a string of "
+"length `width`."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ":py:obj:`rpartition <numpy.char.rpartition>`\\ \\(a\\, sep\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid "Partition (split) each element around the right-most separator."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ":py:obj:`rsplit <numpy.char.rsplit>`\\ \\(a\\[\\, sep\\, maxsplit\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+"For each element in `a`, return a list of the words in the string, using "
+"`sep` as the delimiter string."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ":py:obj:`rstrip <numpy.char.rstrip>`\\ \\(a\\[\\, chars\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+"For each element in `a`, return a copy with the trailing characters removed."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ":py:obj:`split <numpy.char.split>`\\ \\(a\\[\\, sep\\, maxsplit\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+":py:obj:`splitlines <numpy.char.splitlines>`\\ \\(a\\[\\, keepends\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+"For each element in `a`, return a list of the lines in the element, breaking "
+"at line boundaries."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ":py:obj:`strip <numpy.char.strip>`\\ \\(a\\[\\, chars\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+"For each element in `a`, return a copy with the leading and trailing "
+"characters removed."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ":py:obj:`swapcase <numpy.char.swapcase>`\\ \\(a\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+"Return element-wise a copy of the string with uppercase characters converted "
+"to lowercase and vice versa."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ":py:obj:`title <numpy.char.title>`\\ \\(a\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid "Return element-wise title cased version of string or unicode."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+":py:obj:`translate <numpy.char.translate>`\\ \\(a\\, table\\[\\, "
+"deletechars\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ""
+"For each element in `a`, return a copy of the string where all characters "
+"occurring in the optional argument `deletechars` are removed, and the "
+"remaining characters have been mapped through the given translation table."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ":py:obj:`upper <numpy.char.upper>`\\ \\(a\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid "Return an array with the elements converted to uppercase."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid ":py:obj:`zfill <numpy.char.zfill>`\\ \\(a\\, width\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:60:<autosummary>:1
+msgid "Return the numeric string left-filled with zeros."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:62
+msgid "Comparison"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:64
+msgid ""
+"Unlike the standard numpy comparison operators, the ones in the `char` "
+"module strip trailing whitespace characters before performing the comparison."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:78:<autosummary>:1
+msgid ":py:obj:`equal <numpy.char.equal>`\\ \\(x1\\, x2\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:78:<autosummary>:1
+msgid "Return (x1 == x2) element-wise."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:78:<autosummary>:1
+msgid ":py:obj:`not_equal <numpy.char.not_equal>`\\ \\(x1\\, x2\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:78:<autosummary>:1
+msgid "Return (x1 != x2) element-wise."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:78:<autosummary>:1
+msgid ":py:obj:`greater_equal <numpy.char.greater_equal>`\\ \\(x1\\, x2\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:78:<autosummary>:1
+msgid "Return (x1 >= x2) element-wise."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:78:<autosummary>:1
+msgid ":py:obj:`less_equal <numpy.char.less_equal>`\\ \\(x1\\, x2\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:78:<autosummary>:1
+msgid "Return (x1 <= x2) element-wise."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:78:<autosummary>:1
+msgid ":py:obj:`greater <numpy.char.greater>`\\ \\(x1\\, x2\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:78:<autosummary>:1
+msgid "Return (x1 > x2) element-wise."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:78:<autosummary>:1
+msgid ":py:obj:`less <numpy.char.less>`\\ \\(x1\\, x2\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:78:<autosummary>:1
+msgid "Return (x1 < x2) element-wise."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:78:<autosummary>:1
+msgid ""
+":py:obj:`compare_chararrays <numpy.char.compare_chararrays>`\\ \\(a1\\, "
+"a2\\, cmp\\, rstrip\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:78:<autosummary>:1
+msgid ""
+"Performs element-wise comparison of two string arrays using the comparison "
+"operator specified by `cmp`."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:80
+msgid "String information"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+":py:obj:`count <numpy.char.count>`\\ \\(a\\, sub\\[\\, start\\, end\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+"Returns an array with the number of non-overlapping occurrences of substring "
+"``sub`` in the range [``start``, ``end``)."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+":py:obj:`endswith <numpy.char.endswith>`\\ \\(a\\, suffix\\[\\, start\\, "
+"end\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+"Returns a boolean array which is `True` where the string element in ``a`` "
+"ends with ``suffix``, otherwise `False`."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ":py:obj:`find <numpy.char.find>`\\ \\(a\\, sub\\[\\, start\\, end\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+"For each element, return the lowest index in the string where substring "
+"``sub`` is found, such that ``sub`` is contained in the range [``start``, "
+"``end``)."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+":py:obj:`index <numpy.char.index>`\\ \\(a\\, sub\\[\\, start\\, end\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+"Like `find`, but raises :exc:`ValueError` when the substring is not found."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+":py:obj:`isalpha <numpy.char.isalpha>`\\ \\(x\\, \\/\\[\\, out\\, where\\, "
+"casting\\, order\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+"Returns true for each element if all characters in the data interpreted as a "
+"string are alphabetic and there is at least one character, false otherwise."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+":py:obj:`isalnum <numpy.char.isalnum>`\\ \\(x\\, \\/\\[\\, out\\, where\\, "
+"casting\\, order\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+"Returns true for each element if all characters in the string are "
+"alphanumeric and there is at least one character, false otherwise."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+":py:obj:`isdecimal <numpy.char.isdecimal>`\\ \\(x\\, \\/\\[\\, out\\, "
+"where\\, casting\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+"For each element, return True if there are only decimal characters in the "
+"element."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+":py:obj:`isdigit <numpy.char.isdigit>`\\ \\(x\\, \\/\\[\\, out\\, where\\, "
+"casting\\, order\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+"Returns true for each element if all characters in the string are digits and "
+"there is at least one character, false otherwise."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+":py:obj:`islower <numpy.char.islower>`\\ \\(x\\, \\/\\[\\, out\\, where\\, "
+"casting\\, order\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+"Returns true for each element if all cased characters in the string are "
+"lowercase and there is at least one cased character, false otherwise."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+":py:obj:`isnumeric <numpy.char.isnumeric>`\\ \\(x\\, \\/\\[\\, out\\, "
+"where\\, casting\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+"For each element, return True if there are only numeric characters in the "
+"element."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+":py:obj:`isspace <numpy.char.isspace>`\\ \\(x\\, \\/\\[\\, out\\, where\\, "
+"casting\\, order\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+"Returns true for each element if there are only whitespace characters in the "
+"string and there is at least one character, false otherwise."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+":py:obj:`istitle <numpy.char.istitle>`\\ \\(x\\, \\/\\[\\, out\\, where\\, "
+"casting\\, order\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+"Returns true for each element if the element is a titlecased string and "
+"there is at least one character, false otherwise."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+":py:obj:`isupper <numpy.char.isupper>`\\ \\(x\\, \\/\\[\\, out\\, where\\, "
+"casting\\, order\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+"Return true for each element if all cased characters in the string are "
+"uppercase and there is at least one character, false otherwise."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+":py:obj:`rfind <numpy.char.rfind>`\\ \\(a\\, sub\\[\\, start\\, end\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+"For each element, return the highest index in the string where substring "
+"``sub`` is found, such that ``sub`` is contained in the range [``start``, "
+"``end``)."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+":py:obj:`rindex <numpy.char.rindex>`\\ \\(a\\, sub\\[\\, start\\, end\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+"Like `rfind`, but raises :exc:`ValueError` when the substring `sub` is not "
+"found."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+":py:obj:`startswith <numpy.char.startswith>`\\ \\(a\\, prefix\\[\\, start\\, "
+"end\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+"Returns a boolean array which is `True` where the string element in ``a`` "
+"starts with ``prefix``, otherwise `False`."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid ""
+":py:obj:`str_len <numpy.char.str_len>`\\ \\(x\\, \\/\\[\\, out\\, where\\, "
+"casting\\, order\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:102:<autosummary>:1
+msgid "Returns the length of each element."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:104
+msgid "Convenience class"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:111:<autosummary>:1
+msgid ""
+":py:obj:`array <numpy.char.array>`\\ \\(obj\\[\\, itemsize\\, copy\\, "
+"unicode\\, order\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:111:<autosummary>:1
+msgid "Create a `~numpy.char.chararray`."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:111:<autosummary>:1
+msgid ""
+":py:obj:`asarray <numpy.char.asarray>`\\ \\(obj\\[\\, itemsize\\, unicode\\, "
+"order\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:111:<autosummary>:1
+msgid ""
+"Convert the input to a `~numpy.char.chararray`, copying the data only if "
+"necessary."
+msgstr ""
+
+#: ../../../reference/routines.char.rst:111:<autosummary>:1
+msgid ""
+":py:obj:`chararray <numpy.char.chararray>`\\ \\(shape\\[\\, itemsize\\, "
+"unicode\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.char.rst:111:<autosummary>:1
+msgid "Provides a convenient view on arrays of string and unicode values."
+msgstr ""

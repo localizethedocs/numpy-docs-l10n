@@ -1,0 +1,223 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-20 10:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/generated/numpy.random.RandomState.multinomial.rst:4
+msgid "numpy.random.RandomState.multinomial"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.RandomState.multinomial.rst:8
+msgid "method"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:2
+msgid "Draw samples from a multinomial distribution."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:4
+msgid ""
+"The multinomial distribution is a multivariate generalization of the "
+"binomial distribution.  Take an experiment with one of ``p`` possible "
+"outcomes.  An example of such an experiment is throwing a dice, where the "
+"outcome can be 1 through 6.  Each sample drawn from the distribution "
+"represents `n` such experiments.  Its values, ``X_i = [X_0, X_1, ..., "
+"X_p]``, represent the number of times the outcome was ``i``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:13
+msgid ""
+"New code should use the `~numpy.random.Generator.multinomial` method of a "
+"`~numpy.random.Generator` instance instead; please see the :ref:`random-"
+"quick-start`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:18
+msgid ""
+"This function defaults to the C-long dtype, which is 32bit on windows and "
+"otherwise 64bit on 64bit platforms (and 32bit on 32bit ones). Since NumPy "
+"2.0, NumPy's default integer is 32bit on 32bit platforms and 64bit on 64bit "
+"platforms."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:26
+msgid "**n**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:-1
+msgid "int"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:26
+msgid "Number of experiments."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:32
+msgid "**pvals**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:-1
+msgid "sequence of floats, length p"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:29
+msgid ""
+"Probabilities of each of the ``p`` different outcomes.  These must sum to 1 "
+"(however, the last element is always assumed to account for the remaining "
+"probability, as long as ``sum(pvals[:-1]) <= 1)``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:39
+msgid "**size**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:-1
+msgid "int or tuple of ints, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:35
+msgid ""
+"Output shape.  If the given shape is, e.g., ``(m, n, k)``, then ``m * n * "
+"k`` samples are drawn.  Default is None, in which case a single value is "
+"returned."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:54
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:44
+msgid ""
+"The drawn samples, of shape *size*, if that was provided.  If not, the shape "
+"is ``(N,)``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:47
+msgid ""
+"In other words, each entry ``out[i,j,...,:]`` is an N-dimensional value "
+"drawn from the distribution."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:59
+msgid ":obj:`random.Generator.multinomial`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:60
+msgid "which should be used for new code."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:66
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:71
+msgid "Throw a dice 20 times:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:76
+msgid "It landed 4 times on 1, once on 2, etc."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:78
+msgid "Now, throw the dice 20 times, and 20 times again:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:84
+msgid ""
+"For the first run, we threw 3 times 1, 4 times 2, etc.  For the second, we "
+"threw 2 times 1, 4 times 2, etc."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:87
+msgid "A loaded die is more likely to land on number 6:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:92
+msgid ""
+"The probability inputs should be normalized. As an implementation detail, "
+"the value of the last entry is ignored and assumed to take up any leftover "
+"probability mass, but this should not be relied on. A biased coin which has "
+"twice as much weight on one side as on the other should be sampled like so:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:101
+msgid "not like:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:-1
+msgid ""
+"<div id=\"2506c107-93dc-4c28-ba62-15d89f275f37\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('4ba65dc9-9550-4dd5-ac4e-"
+"fe33ec2af28d','2506c107-93dc-4c28-ba62-15d89f275f37')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('4ba65dc9-9550-4dd5-ac4e-fe33ec2af28d','2506c107-93dc-4c28-"
+"ba62-15d89f275f37')\">Open In Tab</button></div><div id=\"3955b472-"
+"d062-4905-8ac3-a2d76f0c0aee\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multinomial:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../../try_examples.json\");});</script>"
+msgstr ""

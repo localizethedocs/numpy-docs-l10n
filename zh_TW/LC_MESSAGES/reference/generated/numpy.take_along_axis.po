@@ -1,0 +1,229 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-20 10:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.take_along_axis.rst:4
+msgid "numpy.take\\_along\\_axis"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:2
+msgid "Take values from the input array by matching 1d index and data slices."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:4
+msgid ""
+"This iterates over matching 1d slices oriented along the specified axis in "
+"the index and data arrays, and uses the former to look up values in the "
+"latter. These slices can be different lengths."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:8
+msgid ""
+"Functions returning an index along an axis, like `argsort` and "
+"`argpartition`, produce suitable indices for this function."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:14
+msgid "**arr**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:-1
+msgid "ndarray (Ni..., M, Nk...)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:14
+msgid "Source array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:19
+msgid "**indices**"
+msgstr "**indices**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:-1
+msgid "ndarray (Ni..., J, Nk...)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:17
+msgid ""
+"Indices to take along each 1d slice of ``arr``. This must match the "
+"dimension of ``arr``, but dimensions Ni and Nj only need to broadcast "
+"against ``arr``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:29
+msgid "**axis**"
+msgstr "**axis**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:-1
+msgid "int or None, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:22
+msgid ""
+"The axis to take 1d slices along. If axis is None, the input array is "
+"treated as if it had first been flattened to 1d, for consistency with `sort` "
+"and `argsort`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:26
+msgid "The default value is now ``-1``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:40
+msgid "out: ndarray (Ni..., J, Nk...)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:34
+msgid "The indexed result."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:45
+msgid ":obj:`take`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:46
+msgid "Take along an axis, using the same indices for every 1d slice"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:47
+msgid ":obj:`put_along_axis`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:48
+msgid ""
+"Put values into the destination array by matching 1d index and data slices"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:52
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:53
+msgid ""
+"This is equivalent to (but faster than) the following use of `ndindex` and "
+"`s_`, which sets each of ``ii`` and ``kk`` to a tuple of indices::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:56
+msgid ""
+"Ni, M, Nk = a.shape[:axis], a.shape[axis], a.shape[axis+1:]\n"
+"J = indices.shape[axis]  # Need not equal M\n"
+"out = np.empty(Ni + (J,) + Nk)\n"
+"\n"
+"for ii in ndindex(Ni):\n"
+"    for kk in ndindex(Nk):\n"
+"        a_1d       = a      [ii + s_[:,] + kk]\n"
+"        indices_1d = indices[ii + s_[:,] + kk]\n"
+"        out_1d     = out    [ii + s_[:,] + kk]\n"
+"        for j in range(J):\n"
+"            out_1d[j] = a_1d[indices_1d[j]]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:68
+msgid "Equivalently, eliminating the inner loop, the last two lines would be::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:70
+msgid "out_1d[:] = a_1d[indices_1d]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:74
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:81
+msgid "For this sample array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:85
+msgid "We can sort either by using sort directly, or argsort and this function"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:98
+msgid ""
+"The same works for max and min, if you maintain the trivial dimension with "
+"``keepdims``:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:112
+msgid ""
+"If we want to get the max and min at the same time, we can stack the indices "
+"first"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:-1
+msgid ""
+"<div id=\"f5e83a5a-9b6b-45bf-8be5-ab6793019625\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('8cfe754e-8061-40a1-"
+"a420-088afa676639','f5e83a5a-9b6b-45bf-8be5-ab6793019625')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('8cfe754e-8061-40a1-a420-088afa676639','f5e83a5a-9b6b-45bf-8be5-"
+"ab6793019625')\">Open In Tab</button></div><div id=\"c3a35401-b7ae-481b-"
+"a605-73a451501e78\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take_along_axis:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

@@ -1,0 +1,153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/arrays.nditer.cython.rst:2
+msgid "Putting the inner loop in Cython"
+msgstr ""
+
+#: ../../../reference/arrays.nditer.cython.rst:4
+msgid ""
+"Those who want really good performance out of their low level operations "
+"should strongly consider directly using the iteration API provided in C, but "
+"for those who are not comfortable with C or C++, Cython is a good middle "
+"ground with reasonable performance tradeoffs. For the :class:`~numpy.nditer` "
+"object, this means letting the iterator take care of broadcasting, dtype "
+"conversion, and buffering, while giving the inner loop to Cython."
+msgstr ""
+
+#: ../../../reference/arrays.nditer.cython.rst:12
+msgid ""
+"For our example, we'll create a sum of squares function. To start, let's "
+"implement this function in straightforward Python. We want to support an "
+"'axis' parameter similar to the numpy :func:`sum` function, so we will need "
+"to construct a list for the `op_axes` parameter. Here's how this looks."
+msgstr ""
+
+#: ../../../reference/arrays.nditer.cython.rst:18
+#: ../../../reference/arrays.nditer.cython.rst:118
+msgid "Example"
+msgstr ""
+
+#: ../../../reference/arrays.nditer.cython.rst:56
+msgid ""
+"To Cython-ize this function, we replace the inner loop (y[...] += x*x) with "
+"Cython code that's specialized for the float64 dtype. With the "
+"'external_loop' flag enabled, the arrays provided to the inner loop will "
+"always be one-dimensional, so very little checking needs to be done."
+msgstr ""
+
+#: ../../../reference/arrays.nditer.cython.rst:61
+msgid "Here's the listing of sum_squares.pyx::"
+msgstr ""
+
+#: ../../../reference/arrays.nditer.cython.rst:63
+msgid ""
+"import numpy as np\n"
+"cimport numpy as np\n"
+"cimport cython\n"
+"\n"
+"def axis_to_axeslist(axis, ndim):\n"
+"    if axis is None:\n"
+"        return [-1] * ndim\n"
+"    else:\n"
+"        if type(axis) is not tuple:\n"
+"            axis = (axis,)\n"
+"        axeslist = [1] * ndim\n"
+"        for i in axis:\n"
+"            axeslist[i] = -1\n"
+"        ax = 0\n"
+"        for i in range(ndim):\n"
+"            if axeslist[i] != -1:\n"
+"                axeslist[i] = ax\n"
+"                ax += 1\n"
+"        return axeslist\n"
+"\n"
+"@cython.boundscheck(False)\n"
+"def sum_squares_cy(arr, axis=None, out=None):\n"
+"    cdef np.ndarray[double] x\n"
+"    cdef np.ndarray[double] y\n"
+"    cdef int size\n"
+"    cdef double value\n"
+"\n"
+"    axeslist = axis_to_axeslist(axis, arr.ndim)\n"
+"    it = np.nditer([arr, out], flags=['reduce_ok', 'external_loop',\n"
+"                                      'buffered', 'delay_bufalloc'],\n"
+"                op_flags=[['readonly'], ['readwrite', 'allocate']],\n"
+"                op_axes=[None, axeslist],\n"
+"                op_dtypes=['float64', 'float64'])\n"
+"    with it:\n"
+"        it.operands[1][...] = 0\n"
+"        it.reset()\n"
+"        for xarr, yarr in it:\n"
+"            x = xarr\n"
+"            y = yarr\n"
+"            size = x.shape[0]\n"
+"            for i in range(size):\n"
+"               value = x[i]\n"
+"               y[i] = y[i] + value * value\n"
+"        return it.operands[1]"
+msgstr ""
+
+#: ../../../reference/arrays.nditer.cython.rst:108
+msgid ""
+"On this machine, building the .pyx file into a module looked like the "
+"following, but you may have to find some Cython tutorials to tell you the "
+"specifics for your system configuration.::"
+msgstr ""
+
+#: ../../../reference/arrays.nditer.cython.rst:112
+msgid ""
+"$ cython sum_squares.pyx\n"
+"$ gcc -shared -pthread -fPIC -fwrapv -O2 -Wall -I/usr/include/python2.7 -fno-"
+"strict-aliasing -o sum_squares.so sum_squares.c"
+msgstr ""
+
+#: ../../../reference/arrays.nditer.cython.rst:115
+msgid ""
+"Running this from the Python interpreter produces the same answers as our "
+"native Python/NumPy code did."
+msgstr ""
+
+#: ../../../reference/arrays.nditer.cython.rst:127
+msgid ""
+"Doing a little timing in IPython shows that the reduced overhead and memory "
+"allocation of the Cython inner loop is providing a very nice speedup over "
+"both the straightforward Python code and an expression using NumPy's built-"
+"in sum function.::"
+msgstr ""
+
+#: ../../../reference/arrays.nditer.cython.rst:132
+msgid ""
+">>> a = np.random.rand(1000,1000)\n"
+"\n"
+">>> timeit sum_squares_py(a, axis=-1)\n"
+"10 loops, best of 3: 37.1 ms per loop\n"
+"\n"
+">>> timeit np.sum(a*a, axis=-1)\n"
+"10 loops, best of 3: 20.9 ms per loop\n"
+"\n"
+">>> timeit sum_squares_cy(a, axis=-1)\n"
+"100 loops, best of 3: 11.8 ms per loop\n"
+"\n"
+">>> np.all(sum_squares_cy(a, axis=-1) == np.sum(a*a, axis=-1))\n"
+"True\n"
+"\n"
+">>> np.all(sum_squares_py(a, axis=-1) == np.sum(a*a, axis=-1))\n"
+"True"
+msgstr ""

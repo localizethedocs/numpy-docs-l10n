@@ -1,0 +1,187 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-20 10:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.ma.diff.rst:4
+msgid "numpy.ma.diff"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:2
+msgid ""
+"Calculate the n-th discrete difference along the given axis. The first "
+"difference is given by ``out[i] = a[i+1] - a[i]`` along the given axis, "
+"higher differences are calculated by using `diff` recursively. Preserves the "
+"input mask."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:12
+msgid "**a**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:12
+msgid "Input array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:16
+msgid "**n**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:15
+msgid ""
+"The number of times values are differenced. If zero, the input is returned "
+"as-is."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:20
+msgid "**axis**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:19
+msgid "The axis along which the difference is taken, default is the last axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:29
+msgid "**prepend, append**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:23
+msgid ""
+"Values to prepend or append to `a` along axis prior to performing the "
+"difference.  Scalar values are expanded to arrays with length 1 in the "
+"direction of axis and the shape of the input array in along all other axes.  "
+"Otherwise the dimension and shape must match `a` except along axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:45
+msgid "**diff**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:-1
+msgid "MaskedArray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:34
+msgid ""
+"The n-th differences. The shape of the output is the same as `a` except "
+"along `axis` where the dimension is smaller by `n`. The type of the output "
+"is the same as the type of the difference between any two elements of `a`. "
+"This is the same as the type of `a` in most cases. A notable exception is "
+"`datetime64`, which results in a `timedelta64` output array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:50
+msgid ":obj:`numpy.diff`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:51
+msgid "Equivalent function in the top-level NumPy module."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:55
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:56
+msgid ""
+"Type is preserved for boolean arrays, so the result will contain `False` "
+"when consecutive elements are the same and `True` when they differ."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:60
+msgid ""
+"For unsigned integer arrays, the results will also be unsigned. This should "
+"not be surprising, as the result is consistent with calculating the "
+"difference directly:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:73
+msgid ""
+"If this is not desirable, then the array should be cast to a larger integer "
+"type first:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:85
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:-1
+msgid ""
+"<div id=\"fc3339e3-dd65-4f8d-8c51-75178caad457\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('af754c78-8864-4dbc-b74b-446e2479c1ef','fc3339e3-"
+"dd65-4f8d-8c51-75178caad457')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('af754c78-8864-4dbc-b74b-446e2479c1ef','fc3339e3-"
+"dd65-4f8d-8c51-75178caad457')\">Open In Tab</button></div><div "
+"id=\"68b7520a-6791-471f-b026-a3be6a7fc870\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.diff:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

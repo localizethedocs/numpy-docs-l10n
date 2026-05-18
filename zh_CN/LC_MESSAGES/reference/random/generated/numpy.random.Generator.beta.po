@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-20 10:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/generated/numpy.random.Generator.beta.rst:4
+msgid "numpy.random.Generator.beta"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.beta.rst:8
+msgid "method"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:2
+msgid "Draw samples from a Beta distribution."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:4
+msgid ""
+"The Beta distribution is a special case of the Dirichlet distribution, and "
+"is related to the Gamma distribution. It has the probability distribution "
+"function"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:8
+msgid ""
+"f(x; a,b) = \\frac{1}{B(\\alpha, \\beta)} x^{\\alpha - 1}\n"
+"(1 - x)^{\\beta - 1},\n"
+"\n"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:11
+msgid "where the normalization, B, is the beta function,"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:13
+msgid ""
+"B(\\alpha, \\beta) = \\int_0^1 t^{\\alpha - 1}\n"
+"(1 - t)^{\\beta - 1} dt.\n"
+"\n"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:16
+msgid "It is often seen in Bayesian inference and order statistics."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:21
+msgid "**a**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:-1
+msgid "float or array_like of floats"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:21
+msgid "Alpha, positive (>0)."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:24
+msgid "**b**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:24
+msgid "Beta, positive (>0)."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:32
+msgid "**size**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:-1
+msgid "int or tuple of ints, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:27
+msgid ""
+"Output shape.  If the given shape is, e.g., ``(m, n, k)``, then ``m * n * "
+"k`` samples are drawn.  If size is ``None`` (default), a single value is "
+"returned if ``a`` and ``b`` are both scalars. Otherwise, ``np.broadcast(a, "
+"b).size`` samples are drawn."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:45
+msgid "**out**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:-1
+msgid "ndarray or scalar"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:37
+msgid "Drawn samples from the parameterized beta distribution."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:48
+msgid "References"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:49
+msgid ""
+"Wikipedia, \"Beta distribution\", https://en.wikipedia.org/wiki/"
+"Beta_distribution"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:54
+msgid "[Rf4969234dab6-1]_"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:57
+msgid "Examples"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.beta.rst:3
+msgid ""
+"The beta distribution has mean a/(a+b). If ``a == b`` and both are > 1, the "
+"distribution is symmetric with mean 0.5."
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.beta.rst:12
+msgid ""
+"Otherwise the distribution is skewed left or right according to whether "
+"``a`` or ``b`` is greater. The distribution is mirror symmetric. See for "
+"example:"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.beta.rst:27
+msgid "Display the histogram of the two samples:"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:95
+msgid ""
+"<div id=\"c63cb515-0ac7-4ac6-88ab-dd9ed27f6aff\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('7516509c-a86f-439b-a7d3-"
+"a3f8bb1c5177','c63cb515-0ac7-4ac6-88ab-dd9ed27f6aff')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('7516509c-a86f-439b-a7d3-a3f8bb1c5177','c63cb515-0ac7-4ac6-88ab-"
+"dd9ed27f6aff')\">Open In Tab</button></div><div id=\"3b136de9-8d8c-425b-"
+"a729-624dd6453f17\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.beta:95
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../../try_examples.json\");});</script>"
+msgstr ""

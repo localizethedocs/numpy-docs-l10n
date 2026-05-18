@@ -1,0 +1,207 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-20 10:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/generated/numpy.random.Generator.multinomial.rst:4
+msgid "numpy.random.Generator.multinomial"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.multinomial.rst:8
+msgid "method"
+msgstr "方法"
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:2
+msgid "Draw samples from a multinomial distribution."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:4
+msgid ""
+"The multinomial distribution is a multivariate generalization of the "
+"binomial distribution.  Take an experiment with one of ``p`` possible "
+"outcomes.  An example of such an experiment is throwing a dice, where the "
+"outcome can be 1 through 6.  Each sample drawn from the distribution "
+"represents `n` such experiments.  Its values, ``X_i = [X_0, X_1, ..., "
+"X_p]``, represent the number of times the outcome was ``i``."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:15
+msgid "**n**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:-1
+msgid "int or array-like of ints"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:15
+msgid "Number of experiments."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:23
+msgid "**pvals**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:-1
+msgid "array-like of floats"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:18
+msgid ""
+"Probabilities of each of the ``p`` different outcomes with shape ``(k0, "
+"k1, ..., kn, p)``. Each element ``pvals[i,j,...,:]`` must sum to 1 (however, "
+"the last element is always assumed to account for the remaining probability, "
+"as long as ``sum(pvals[..., :-1], axis=-1) <= 1.0``. Must have at least 1 "
+"dimension where pvals.shape[-1] > 0."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:35
+msgid "**size**"
+msgstr "**size**"
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:-1
+msgid "int or tuple of ints, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:26
+msgid ""
+"Output shape.  If the given shape is, e.g., ``(m, n, k)``, then ``m * n * "
+"k`` samples are drawn each with ``p`` elements. Default is None where the "
+"output size is determined by the broadcast shape of ``n`` and all by the "
+"final dimension of ``pvals``, which is denoted as ``b=(b0, b1, ..., bq)``. "
+"If size is not None, then it must be compatible with the broadcast shape "
+"``b``. Specifically, size must have ``q`` or more elements and size[-(q-j):] "
+"must equal ``bj``."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:57
+msgid "**out**"
+msgstr "**out**"
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:-1
+msgid "ndarray"
+msgstr "ndarray"
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:40
+msgid ""
+"The drawn samples, of shape size, if provided. When size is provided, the "
+"output shape is size + (p,)  If not specified, the shape is determined by "
+"the broadcast shape of ``n`` and ``pvals``, ``(b0, b1, ..., bq)`` augmented "
+"with the dimension of the multinomial, ``p``, so that that output shape is "
+"``(b0, b1, ..., bq, p)``."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:47
+msgid ""
+"Each entry ``out[i,j,...,:]`` is a ``p``-dimensional value drawn from the "
+"distribution."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:60
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:65
+msgid "Throw a dice 20 times:"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:71
+msgid "It landed 4 times on 1, once on 2, etc."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:73
+msgid "Now, throw the dice 20 times, and 20 times again:"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:79
+msgid ""
+"For the first run, we threw 3 times 1, 4 times 2, etc.  For the second, we "
+"threw 2 times 1, 4 times 2, etc."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:82
+msgid ""
+"Now, do one experiment throwing the dice 10 time, and 10 times again, and "
+"another throwing the dice 20 times, and 20 times again:"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:91
+msgid ""
+"The first array shows the outcomes of throwing the dice 10 times, and the "
+"second shows the outcomes from throwing the dice 20 times."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:94
+msgid "A loaded die is more likely to land on number 6:"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:99
+msgid "Simulate 10 throws of a 4-sided die and 20 throws of a 6-sided die"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:105
+msgid ""
+"Generate categorical random variates from two categories where the first has "
+"3 outcomes and the second has 2."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:112
+msgid "``argmax(axis=-1)`` is then used to return the categories."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:122
+msgid "The same output dimension can be produced using broadcasting."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:131
+msgid ""
+"The probability inputs should be normalized. As an implementation detail, "
+"the value of the last entry is ignored and assumed to take up any leftover "
+"probability mass, but this should not be relied on. A biased coin which has "
+"twice as much weight on one side as on the other should be sampled like so:"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:140
+msgid "not like:"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:-1
+msgid ""
+"<div id=\"23f33489-deb5-4563-b50f-b49342d13a22\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('bd6a1667-38f2-4577-a5d5-0a814d118a86','23f33489-"
+"deb5-4563-b50f-b49342d13a22')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('bd6a1667-38f2-4577-a5d5-0a814d118a86','23f33489-deb5-4563-b50f-"
+"b49342d13a22')\">Open In Tab</button></div><div id=\"c138b41b-bb91-4768-ace1-"
+"e768ae02316a\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.multinomial:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../../try_examples.json\");});</script>"
+msgstr ""

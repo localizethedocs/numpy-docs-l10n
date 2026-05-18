@@ -1,0 +1,188 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-20 10:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.recarray.view.rst:4
+msgid "numpy.recarray.view"
+msgstr ""
+
+#: ../../../reference/generated/numpy.recarray.view.rst:8
+msgid "method"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:2
+msgid "New view of array with the same data."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:5
+msgid ""
+"Passing None for ``dtype`` is different from omitting the parameter, since "
+"the former invokes ``dtype(None)`` which is an alias for ``dtype(np."
+"float64)``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:16
+msgid "**dtype**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:-1
+msgid "data-type or ndarray sub-class, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:12
+msgid ""
+"Data-type descriptor of the returned view, e.g., float32 or int16. Omitting "
+"it results in the view having the same data-type as `a`. This argument can "
+"also be specified as an ndarray sub-class, which then specifies the type of "
+"the returned object (this is equivalent to setting the ``type`` parameter)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:30
+msgid "**type**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:-1
+msgid "Python type, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:19
+msgid ""
+"Type of the returned view, e.g., ndarray or matrix.  Again, omission of the "
+"parameter results in type preservation."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:33
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:34
+msgid "``a.view()`` is used two different ways:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:36
+msgid ""
+"``a.view(some_dtype)`` or ``a.view(dtype=some_dtype)`` constructs a view of "
+"the array's memory with a different data-type.  This can cause a "
+"reinterpretation of the bytes of memory."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:40
+msgid ""
+"``a.view(ndarray_subclass)`` or ``a.view(type=ndarray_subclass)`` just "
+"returns an instance of `ndarray_subclass` that looks at the same array (same "
+"shape, dtype, etc.)  This does not cause a reinterpretation of the memory."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:45
+msgid ""
+"For ``a.view(some_dtype)``, if ``some_dtype`` has a different number of "
+"bytes per entry than the previous dtype (for example, converting a regular "
+"array to a structured array), then the last axis of ``a`` must be "
+"contiguous. This axis will be resized in the result."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:50
+msgid ""
+"Only the last axis needs to be contiguous. Previously, the entire array had "
+"to be C-contiguous."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:56
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:64
+msgid "Viewing array data using a different type and dtype:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:73
+msgid "Creating a view on a structured array so it can be used in calculations"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:83
+msgid "Making changes to the view changes the underlying array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:89
+msgid "Using a view to convert an array to a recarray:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:95
+msgid "Views share data:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:101
+msgid ""
+"Views that change the dtype size (bytes per entry) should normally be "
+"avoided on arrays defined by slices, transposes, fortran-ordering, etc.:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:118
+msgid ""
+"However, views that change dtype are totally fine for arrays with a "
+"contiguous last axis, even if the rest of the axes are not C-contiguous:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:-1
+msgid ""
+"<div id=\"2d3ca65c-c477-4897-88c6-e20b94a68361\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('841fe524-f454-4eaf-bd10-3ad5f2375498','2d3ca65c-"
+"c477-4897-88c6-e20b94a68361')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('841fe524-"
+"f454-4eaf-bd10-3ad5f2375498','2d3ca65c-c477-4897-88c6-e20b94a68361')\">Open "
+"In Tab</button></div><div id=\"9030b9d9-c093-4ca4-a0d2-6dc8804d60fc\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.view:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

@@ -1,0 +1,239 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-20 10:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.ma.MaskedArray.take.rst:4
+msgid "numpy.ma.MaskedArray.take"
+msgstr ""
+
+#: ../../../reference/generated/numpy.ma.MaskedArray.take.rst:8
+msgid "method"
+msgstr "方法"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:2
+msgid "Take elements from a masked array along an axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:4
+msgid ""
+"This function does the same thing as \"fancy\" indexing (indexing arrays "
+"using arrays) for masked arrays. It can be easier to use if you need "
+"elements along a given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:11
+msgid "**a**"
+msgstr "**a**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:-1
+msgid "masked_array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:11
+msgid "The source masked array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:14
+msgid "**indices**"
+msgstr "**indices**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:-1
+msgid "array_like"
+msgstr "array_like"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:14
+msgid "The indices of the values to extract. Also allow scalars for indices."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:18
+msgid "**axis**"
+msgstr "**axis**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:17
+msgid ""
+"The axis over which to select values. By default, the flattened input array "
+"is used."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:23 numpy.ma.core.MaskedArray.take:47
+msgid "**out**"
+msgstr "**out**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:-1
+msgid "MaskedArray, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:21
+msgid ""
+"If provided, the result will be placed in this array. It should be of the "
+"appropriate shape and dtype. Note that `out` is always buffered if "
+"`mode='raise'`; use other modes for better performance."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:36
+msgid "**mode**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:-1
+msgid "{'raise', 'wrap', 'clip'}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:26
+msgid "Specifies how out-of-bounds indices will behave."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:28
+msgid "'raise' -- raise an error (default)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:29
+msgid "'wrap' -- wrap around"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:30
+msgid "'clip' -- clip to the range"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:32
+msgid ""
+"'clip' mode means that all indices that are too large are replaced by the "
+"index that addresses the last element along that axis. Note that this "
+"disables indexing with negative numbers."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:-1
+msgid "MaskedArray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:41
+msgid "The returned array has the same type as `a`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:52
+msgid ":obj:`numpy.take`"
+msgstr ":obj:`numpy.take`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:53
+msgid "Equivalent function for ndarrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:54
+msgid ":obj:`compress`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:55
+msgid "Take elements using a boolean mask."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:56
+msgid ":obj:`take_along_axis`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:57
+msgid "Take elements by matching the array and the index arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:61
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:62
+msgid ""
+"This function behaves similarly to `numpy.take`, but it handles masked "
+"values. The mask is retained in the output array, and masked values in the "
+"input array remain masked in the output."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:68
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:81
+msgid ""
+"When `indices` is not one-dimensional, the output also has these dimensions:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:-1
+msgid ""
+"<div id=\"0a95448e-1a88-42ae-bb8f-96c855825f95\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('9c68bedb-03c4-4a3d-8b37-"
+"dc9f1cad000b','0a95448e-1a88-42ae-bb8f-96c855825f95')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('9c68bedb-03c4-4a3d-8b37-dc9f1cad000b','0a95448e-1a88-42ae-"
+"bb8f-96c855825f95')\">Open In Tab</button></div><div id=\"0e263579-56ac-4c5d-"
+"aa33-df8e84a68fbf\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.MaskedArray.take:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

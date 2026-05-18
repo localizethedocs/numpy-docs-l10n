@@ -1,0 +1,2488 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-20 10:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../user/basics.rec.rst:5
+msgid "Structured arrays"
+msgstr "結構化陣列"
+
+#: ../../../user/basics.rec.rst:8
+msgid "Introduction"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:10
+msgid ""
+"Structured arrays are ndarrays whose datatype is a composition of simpler "
+"datatypes organized as a sequence of named :term:`fields <field>`. For "
+"example, ::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:14
+msgid ""
+">>> x = np.array([('Rex', 9, 81.0), ('Fido', 3, 27.0)],\n"
+"...              dtype=[('name', 'U10'), ('age', 'i4'), ('weight', 'f4')])\n"
+">>> x\n"
+"array([('Rex', 9, 81.), ('Fido', 3, 27.)],\n"
+"      dtype=[('name', '<U10'), ('age', '<i4'), ('weight', '<f4')])"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:20
+msgid ""
+"Here ``x`` is a one-dimensional array of length two whose datatype is a "
+"structure with three fields: 1. A string of length 10 or less named 'name', "
+"2. a 32-bit integer named 'age', and 3. a 32-bit float named 'weight'."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:24
+msgid "If you index ``x`` at position 1 you get a structure::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:26
+msgid ""
+">>> x[1]\n"
+"np.void(('Fido', 3, 27.0), dtype=[('name', '<U10'), ('age', '<i4'), "
+"('weight', '<f4')])"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:29
+msgid ""
+"You can access and modify individual fields of a structured array by "
+"indexing with the field name::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:32
+msgid ""
+">>> x['age']\n"
+"array([9, 3], dtype=int32)\n"
+">>> x['age'] = 5\n"
+">>> x\n"
+"array([('Rex', 5, 81.), ('Fido', 5, 27.)],\n"
+"      dtype=[('name', '<U10'), ('age', '<i4'), ('weight', '<f4')])"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:39
+msgid ""
+"Structured datatypes are designed to be able to mimic 'structs' in the C "
+"language, and share a similar memory layout. They are meant for interfacing "
+"with C code and for low-level manipulation of structured buffers, for "
+"example for interpreting binary blobs. For these purposes they support "
+"specialized features such as subarrays, nested datatypes, and unions, and "
+"allow control over the memory layout of the structure."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:46
+msgid ""
+"Users looking to manipulate tabular data, such as stored in csv files, may "
+"find other pydata projects more suitable, such as xarray, pandas, or "
+"DataArray. These provide a high-level interface for tabular data analysis "
+"and are better optimized for that use. For instance, the C-struct-like "
+"memory layout of structured arrays in numpy can lead to poor cache behavior "
+"in comparison."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:55
+msgid "Structured datatypes"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:57
+msgid ""
+"A structured datatype can be thought of as a sequence of bytes of a certain "
+"length (the structure's :term:`itemsize`) which is interpreted as a "
+"collection of fields. Each field has a name, a datatype, and a byte offset "
+"within the structure. The datatype of a field may be any numpy datatype "
+"including other structured datatypes, and it may also be a :term:`subarray "
+"data type` which behaves like an ndarray of a specified shape. The offsets "
+"of the fields are arbitrary, and fields may even overlap. These offsets are "
+"usually determined automatically by numpy, but can also be specified."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:67
+msgid "Structured datatype creation"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:69
+msgid ""
+"Structured datatypes may be created using the function :func:`numpy.dtype`. "
+"There are 4 alternative forms of specification which vary in flexibility and "
+"conciseness. These are further documented in the :ref:`Data Type Objects "
+"<arrays.dtypes.constructing>` reference page, and in summary they are:"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:75
+msgid "A list of tuples, one tuple per field"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:77
+msgid ""
+"Each tuple has the form ``(fieldname, datatype, shape)`` where shape is "
+"optional. ``fieldname`` is a string (or tuple if titles are used, see :ref:"
+"`Field Titles <titles>` below), ``datatype`` may be any object convertible "
+"to a datatype, and ``shape`` is a tuple of integers specifying subarray "
+"shape."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:86
+msgid ""
+"If ``fieldname`` is the empty string ``''``, the field will be given a "
+"default name of the form ``f#``, where ``#`` is the integer index of the "
+"field, counting from 0 from the left::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:90
+msgid ""
+">>> np.dtype([('x', 'f4'), ('', 'i4'), ('z', 'i8')])\n"
+"dtype([('x', '<f4'), ('f1', '<i4'), ('z', '<i8')])"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:93
+msgid ""
+"The byte offsets of the fields within the structure and the total structure "
+"itemsize are determined automatically."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:96
+msgid "A string of comma-separated dtype specifications"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:98
+msgid ""
+"In this shorthand notation any of the :ref:`string dtype specifications "
+"<arrays.dtypes.constructing>` may be used in a string and separated by "
+"commas. The itemsize and byte offsets of the fields are determined "
+"automatically, and the field names are given the default names ``f0``, "
+"``f1``, etc. ::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:104
+msgid ""
+">>> np.dtype('i8, f4, S3')\n"
+"dtype([('f0', '<i8'), ('f1', '<f4'), ('f2', 'S3')])\n"
+">>> np.dtype('3int8, float32, (2, 3)float64')\n"
+"dtype([('f0', 'i1', (3,)), ('f1', '<f4'), ('f2', '<f8', (2, 3))])"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:109
+msgid "A dictionary of field parameter arrays"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:111
+msgid ""
+"This is the most flexible form of specification since it allows control over "
+"the byte-offsets of the fields and the itemsize of the structure."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:114
+msgid ""
+"The dictionary has two required keys, 'names' and 'formats', and four "
+"optional keys, 'offsets', 'itemsize', 'aligned' and 'titles'. The values for "
+"'names' and 'formats' should respectively be a list of field names and a "
+"list of dtype specifications, of the same length. The optional 'offsets' "
+"value should be a list of integer byte-offsets, one for each field within "
+"the structure. If 'offsets' is not given the offsets are determined "
+"automatically. The optional 'itemsize' value should be an integer describing "
+"the total size in bytes of the dtype, which must be large enough to contain "
+"all the fields. ::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:125
+msgid ""
+">>> np.dtype({'names': ['col1', 'col2'], 'formats': ['i4', 'f4']})\n"
+"dtype([('col1', '<i4'), ('col2', '<f4')])\n"
+">>> np.dtype({'names': ['col1', 'col2'],\n"
+"...           'formats': ['i4', 'f4'],\n"
+"...           'offsets': [0, 4],\n"
+"...           'itemsize': 12})\n"
+"dtype({'names': ['col1', 'col2'], 'formats': ['<i4', '<f4'], 'offsets': [0, "
+"4], 'itemsize': 12})"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:133
+msgid ""
+"Offsets may be chosen such that the fields overlap, though this will mean "
+"that assigning to one field may clobber any overlapping field's data. As an "
+"exception, fields of :class:`numpy.object_` type cannot overlap with other "
+"fields, because of the risk of clobbering the internal object pointer and "
+"then dereferencing it."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:139
+msgid ""
+"The optional 'aligned' value can be set to ``True`` to make the automatic "
+"offset computation use aligned offsets (see :ref:`offsets-and-alignment`), "
+"as if the 'align' keyword argument of :func:`numpy.dtype` had been set to "
+"True."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:144
+msgid ""
+"The optional 'titles' value should be a list of titles of the same length as "
+"'names', see :ref:`Field Titles <titles>` below."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:147
+msgid "A dictionary of field names"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:149
+msgid ""
+"The keys of the dictionary are the field names and the values are tuples "
+"specifying type and offset::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:152
+msgid ""
+">>> np.dtype({'col1': ('i1', 0), 'col2': ('f4', 1)})\n"
+"dtype([('col1', 'i1'), ('col2', '<f4')])"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:155
+msgid ""
+"This form was discouraged because Python dictionaries did not preserve order "
+"in Python versions before Python 3.6. :ref:`Field Titles <titles>` may be "
+"specified by using a 3-tuple, see below."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:160
+msgid "Manipulating and displaying structured datatypes"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:162
+msgid ""
+"The list of field names of a structured datatype can be found in the "
+"``names`` attribute of the dtype object::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:165
+msgid ""
+">>> d = np.dtype([('x', 'i8'), ('y', 'f4')])\n"
+">>> d.names\n"
+"('x', 'y')"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:169
+msgid "The dtype of each individual field can be looked up by name::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:171
+msgid ""
+">>> d['x']\n"
+"dtype('int64')"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:174
+msgid ""
+"The field names may be modified by assigning to the ``names`` attribute "
+"using a sequence of strings of the same length."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:177
+msgid ""
+"The dtype object also has a dictionary-like attribute, ``fields``, whose "
+"keys are the field names (and :ref:`Field Titles <titles>`, see below) and "
+"whose values are tuples containing the dtype and byte offset of each "
+"field. ::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:181
+msgid ""
+">>> d.fields\n"
+"mappingproxy({'x': (dtype('int64'), 0), 'y': (dtype('float32'), 8)})"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:184
+msgid ""
+"Both the ``names`` and ``fields`` attributes will equal ``None`` for "
+"unstructured arrays. The recommended way to test if a dtype is structured is "
+"with `if dt.names is not None` rather than `if dt.names`, to account for "
+"dtypes with 0 fields."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:189
+msgid ""
+"The string representation of a structured datatype is shown in the \"list of "
+"tuples\" form if possible, otherwise numpy falls back to using the more "
+"general dictionary form."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:196
+msgid "Automatic byte offsets and alignment"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:198
+msgid ""
+"Numpy uses one of two methods to automatically determine the field byte "
+"offsets and the overall itemsize of a structured datatype, depending on "
+"whether ``align=True`` was specified as a keyword argument to :func:`numpy."
+"dtype`."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:202
+msgid ""
+"By default (``align=False``), numpy will pack the fields together such that "
+"each field starts at the byte offset the previous field ended, and the "
+"fields are contiguous in memory. ::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:206
+msgid ""
+">>> def print_offsets(d):\n"
+"...     print(\"offsets:\", [d.fields[name][1] for name in d.names])\n"
+"...     print(\"itemsize:\", d.itemsize)\n"
+">>> print_offsets(np.dtype('u1, u1, i4, u1, i8, u2'))\n"
+"offsets: [0, 1, 2, 6, 7, 15]\n"
+"itemsize: 17"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:213
+msgid ""
+"If ``align=True`` is set, numpy will pad the structure in the same way many "
+"C compilers would pad a C-struct. Aligned structures can give a performance "
+"improvement in some cases, at the cost of increased datatype size. Padding "
+"bytes are inserted between fields such that each field's byte offset will be "
+"a multiple of that field's alignment, which is usually equal to the field's "
+"size in bytes for simple datatypes, see :c:member:`PyArray_Descr."
+"alignment`.  The structure will also have trailing padding added so that its "
+"itemsize is a multiple of the largest field's alignment. ::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:222
+msgid ""
+">>> print_offsets(np.dtype('u1, u1, i4, u1, i8, u2', align=True))\n"
+"offsets: [0, 1, 4, 8, 16, 24]\n"
+"itemsize: 32"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:226
+msgid ""
+"Note that although almost all modern C compilers pad in this way by default, "
+"padding in C structs is C-implementation-dependent so this memory layout is "
+"not guaranteed to exactly match that of a corresponding struct in a C "
+"program. Some work may be needed, either on the numpy side or the C side, to "
+"obtain exact correspondence."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:232
+msgid ""
+"If offsets were specified using the optional ``offsets`` key in the "
+"dictionary-based dtype specification, setting ``align=True`` will check that "
+"each field's offset is a multiple of its size and that the itemsize is a "
+"multiple of the largest field size, and raise an exception if not."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:237
+msgid ""
+"If the offsets of the fields and itemsize of a structured array satisfy the "
+"alignment conditions, the array will have the ``ALIGNED`` :attr:`flag <numpy."
+"ndarray.flags>` set."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:241
+msgid ""
+"A convenience function :func:`numpy.lib.recfunctions.repack_fields` converts "
+"an aligned dtype or array to a packed one and vice versa. It takes either a "
+"dtype or structured ndarray as an argument, and returns a copy with fields "
+"re-packed, with or without padding bytes."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:249
+msgid "Field titles"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:251
+msgid ""
+"In addition to field names, fields may also have an associated :term:"
+"`title`, an alternate name, which is sometimes used as an additional "
+"description or alias for the field. The title may be used to index an array, "
+"just like a field name."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:256
+msgid ""
+"To add titles when using the list-of-tuples form of dtype specification, the "
+"field name may be specified as a tuple of two strings instead of a single "
+"string, which will be the field's title and field name respectively. For "
+"example::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:261
+msgid ""
+">>> np.dtype([(('my title', 'name'), 'f4')])\n"
+"dtype([(('my title', 'name'), '<f4')])"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:264
+msgid ""
+"When using the first form of dictionary-based specification, the titles may "
+"be supplied as an extra ``'titles'`` key as described above. When using the "
+"second (discouraged) dictionary-based specification, the title can be "
+"supplied by providing a 3-element tuple ``(datatype, offset, title)`` "
+"instead of the usual 2-element tuple::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:270
+msgid ""
+">>> np.dtype({'name': ('i4', 0, 'my title')})\n"
+"dtype([(('my title', 'name'), '<i4')])"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:273
+msgid ""
+"The ``dtype.fields`` dictionary will contain titles as keys, if any titles "
+"are used.  This means effectively that a field with a title will be "
+"represented twice in the fields dictionary. The tuple values for these "
+"fields will also have a third element, the field title. Because of this, and "
+"because the ``names`` attribute preserves the field order while the "
+"``fields`` attribute may not, it is recommended to iterate through the "
+"fields of a dtype using the ``names`` attribute of the dtype, which will not "
+"list titles, as in::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:282
+msgid ""
+">>> for name in d.names:\n"
+"...     print(d.fields[name][:2])\n"
+"(dtype('int64'), 0)\n"
+"(dtype('float32'), 8)"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:288
+msgid "Union types"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:290
+msgid ""
+"Structured datatypes are implemented in numpy to have base type :class:"
+"`numpy.void` by default, but it is possible to interpret other numpy types "
+"as structured types using the ``(base_dtype, dtype)`` form of dtype "
+"specification described in :ref:`Data Type Objects <arrays.dtypes."
+"constructing>`.  Here, ``base_dtype`` is the desired underlying dtype, and "
+"fields and flags will be copied from ``dtype``. This dtype is similar to a "
+"'union' in C."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:299
+msgid "Indexing and assignment to structured arrays"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:302
+msgid "Assigning data to a structured array"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:304
+msgid ""
+"There are a number of ways to assign values to a structured array: Using "
+"python tuples, using scalar values, or using other structured arrays."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:308
+msgid "Assignment from Python Native Types (Tuples)"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:310
+msgid ""
+"The simplest way to assign values to a structured array is using python "
+"tuples. Each assigned value should be a tuple of length equal to the number "
+"of fields in the array, and not a list or array as these will trigger "
+"numpy's broadcasting rules. The tuple's elements are assigned to the "
+"successive fields of the array, from left to right::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:316
+msgid ""
+">>> x = np.array([(1, 2, 3), (4, 5, 6)], dtype='i8, f4, f8')\n"
+">>> x[1] = (7, 8, 9)\n"
+">>> x\n"
+"array([(1, 2., 3.), (7, 8., 9.)],\n"
+"     dtype=[('f0', '<i8'), ('f1', '<f4'), ('f2', '<f8')])"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:323
+msgid "Assignment from Scalars"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:325
+msgid ""
+"A scalar assigned to a structured element will be assigned to all fields. "
+"This happens when a scalar is assigned to a structured array, or when an "
+"unstructured array is assigned to a structured array::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:329
+msgid ""
+">>> x = np.zeros(2, dtype='i8, f4, ?, S1')\n"
+">>> x[:] = 3\n"
+">>> x\n"
+"array([(3, 3., True, b'3'), (3, 3., True, b'3')],\n"
+"      dtype=[('f0', '<i8'), ('f1', '<f4'), ('f2', '?'), ('f3', 'S1')])\n"
+">>> x[:] = np.arange(2)\n"
+">>> x\n"
+"array([(0, 0., False, b'0'), (1, 1., True, b'1')],\n"
+"      dtype=[('f0', '<i8'), ('f1', '<f4'), ('f2', '?'), ('f3', 'S1')])"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:339
+msgid ""
+"Structured arrays can also be assigned to unstructured arrays, but only if "
+"the structured datatype has just a single field::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:342
+msgid ""
+">>> twofield = np.zeros(2, dtype=[('A', 'i4'), ('B', 'i4')])\n"
+">>> onefield = np.zeros(2, dtype=[('A', 'i4')])\n"
+">>> nostruct = np.zeros(2, dtype='i4')\n"
+">>> nostruct[:] = twofield\n"
+"Traceback (most recent call last):\n"
+"...\n"
+"TypeError: Cannot cast array data from dtype([('A', '<i4'), ('B', '<i4')]) "
+"to dtype('int32') according to the rule 'unsafe'"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:351
+msgid "Assignment from other Structured Arrays"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:353
+msgid ""
+"Assignment between two structured arrays occurs as if the source elements "
+"had been converted to tuples and then assigned to the destination elements. "
+"That is, the first field of the source array is assigned to the first field "
+"of the destination array, and the second field likewise, and so on, "
+"regardless of field names. Structured arrays with a different number of "
+"fields cannot be assigned to each other. Bytes of the destination structure "
+"which are not included in any of the fields are unaffected. ::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:361
+msgid ""
+">>> a = np.zeros(3, dtype=[('a', 'i8'), ('b', 'f4'), ('c', 'S3')])\n"
+">>> b = np.ones(3, dtype=[('x', 'f4'), ('y', 'S3'), ('z', 'O')])\n"
+">>> b[:] = a\n"
+">>> b\n"
+"array([(0., b'0.0', b''), (0., b'0.0', b''), (0., b'0.0', b'')],\n"
+"      dtype=[('x', '<f4'), ('y', 'S3'), ('z', 'O')])"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:370
+msgid "Assignment involving subarrays"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:372
+msgid ""
+"When assigning to fields which are subarrays, the assigned value will first "
+"be broadcast to the shape of the subarray."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:376
+msgid "Indexing structured arrays"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:379
+msgid "Accessing Individual Fields"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:381
+msgid ""
+"Individual fields of a structured array may be accessed and modified by "
+"indexing the array with the field name. ::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:384
+msgid ""
+">>> x = np.array([(1, 2), (3, 4)], dtype=[('foo', 'i8'), ('bar', 'f4')])\n"
+">>> x['foo']\n"
+"array([1, 3])\n"
+">>> x['foo'] = 10\n"
+">>> x\n"
+"array([(10, 2.), (10, 4.)],\n"
+"      dtype=[('foo', '<i8'), ('bar', '<f4')])"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:392
+msgid ""
+"The resulting array is a view into the original array. It shares the same "
+"memory locations and writing to the view will modify the original array. ::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:395
+msgid ""
+">>> y = x['bar']\n"
+">>> y[:] = 11\n"
+">>> x\n"
+"array([(10, 11.), (10, 11.)],\n"
+"      dtype=[('foo', '<i8'), ('bar', '<f4')])"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:401
+msgid ""
+"This view has the same dtype and itemsize as the indexed field, so it is "
+"typically a non-structured array, except in the case of nested structures."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:407
+msgid ""
+"If the accessed field is a subarray, the dimensions of the subarray are "
+"appended to the shape of the result::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:410
+msgid ""
+">>> x = np.zeros((2, 2), dtype=[('a', np.int32), ('b', np.float64, (3, "
+"3))])\n"
+">>> x['a'].shape\n"
+"(2, 2)\n"
+">>> x['b'].shape\n"
+"(2, 2, 3, 3)"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:417
+msgid "Accessing Multiple Fields"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:419
+msgid ""
+"One can index and assign to a structured array with a multi-field index, "
+"where the index is a list of field names."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:423
+msgid ""
+"The behavior of multi-field indexes changed from Numpy 1.15 to Numpy 1.16."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:425
+msgid ""
+"The result of indexing with a multi-field index is a view into the original "
+"array, as follows::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:428
+msgid ""
+">>> a = np.zeros(3, dtype=[('a', 'i4'), ('b', 'i4'), ('c', 'f4')])\n"
+">>> a[['a', 'c']]\n"
+"array([(0, 0.), (0, 0.), (0, 0.)],\n"
+"     dtype={'names': ['a', 'c'], 'formats': ['<i4', '<f4'], 'offsets': [0, "
+"8], 'itemsize': 12})"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:433
+msgid ""
+"Assignment to the view modifies the original array. The view's fields will "
+"be in the order they were indexed. Note that unlike for single-field "
+"indexing, the dtype of the view has the same itemsize as the original array, "
+"and has fields at the same offsets as in the original array, and unindexed "
+"fields are merely missing."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:440
+msgid ""
+"In Numpy 1.15, indexing an array with a multi-field index returned a copy of "
+"the result above, but with fields packed together in memory as if passed "
+"through :func:`numpy.lib.recfunctions.repack_fields`."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:444
+msgid ""
+"The new behavior as of Numpy 1.16 leads to extra \"padding\" bytes at the "
+"location of unindexed fields compared to 1.15. You will need to update any "
+"code which depends on the data having a \"packed\" layout. For instance code "
+"such as::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:449
+msgid ""
+">>> a[['a', 'c']].view('i8')  # Fails in Numpy 1.16\n"
+"Traceback (most recent call last):\n"
+"   File \"<stdin>\", line 1, in <module>\n"
+"ValueError: When changing to a smaller dtype, its size must be a divisor of "
+"the size of original dtype"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:454
+msgid ""
+"will need to be changed. This code has raised a ``FutureWarning`` since "
+"Numpy 1.12, and similar code has raised ``FutureWarning`` since 1.7."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:457
+msgid ""
+"In 1.16 a number of functions have been introduced in the :mod:`numpy.lib."
+"recfunctions` module to help users account for this change. These are :func:"
+"`numpy.lib.recfunctions.repack_fields`. :func:`numpy.lib.recfunctions."
+"structured_to_unstructured`, :func:`numpy.lib.recfunctions."
+"unstructured_to_structured`, :func:`numpy.lib.recfunctions."
+"apply_along_fields`, :func:`numpy.lib.recfunctions.assign_fields_by_name`,  "
+"and :func:`numpy.lib.recfunctions.require_fields`."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:467
+msgid ""
+"The function :func:`numpy.lib.recfunctions.repack_fields` can always be used "
+"to reproduce the old behavior, as it will return a packed copy of the "
+"structured array. The code above, for example, can be replaced with:"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:475
+msgid ""
+"Furthermore, numpy now provides a new function :func:`numpy.lib.recfunctions."
+"structured_to_unstructured` which is a safer and more efficient alternative "
+"for users who wish to convert structured arrays to unstructured arrays, as "
+"the view above is often intended to do. This function allows safe conversion "
+"to an unstructured type taking into account padding, often avoids a copy, "
+"and also casts the datatypes as needed, unlike the view. Code such as:"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:487
+msgid "can be made safer by replacing with:"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:496
+msgid ""
+"Assignment to an array with a multi-field index modifies the original array::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:498
+msgid ""
+">>> a[['a', 'c']] = (2, 3)\n"
+">>> a\n"
+"array([(2, 0, 3.), (2, 0, 3.), (2, 0, 3.)],\n"
+"      dtype=[('a', '<i4'), ('b', '<i4'), ('c', '<f4')])"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:503
+msgid ""
+"This obeys the structured array assignment rules described above. For "
+"example, this means that one can swap the values of two fields using "
+"appropriate multi-field indexes::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:507
+msgid ">>> a[['a', 'c']] = a[['c', 'a']]"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:510
+msgid "Indexing with an Integer to get a Structured Scalar"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:512
+msgid ""
+"Indexing a single element of a structured array (with an integer index) "
+"returns a structured scalar::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:515
+msgid ""
+">>> x = np.array([(1, 2., 3.)], dtype='i, f, f')\n"
+">>> scalar = x[0]\n"
+">>> scalar\n"
+"np.void((1, 2.0, 3.0), dtype=[('f0', '<i4'), ('f1', '<f4'), ('f2', '<f4')])\n"
+">>> type(scalar)\n"
+"<class 'numpy.void'>"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:522
+msgid ""
+"Unlike other numpy scalars, structured scalars are mutable and act like "
+"views into the original array, such that modifying the scalar will modify "
+"the original array. Structured scalars also support access and assignment by "
+"field name::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:527
+msgid ""
+">>> x = np.array([(1, 2), (3, 4)], dtype=[('foo', 'i8'), ('bar', 'f4')])\n"
+">>> s = x[0]\n"
+">>> s['bar'] = 100\n"
+">>> x\n"
+"array([(1, 100.), (3, 4.)],\n"
+"      dtype=[('foo', '<i8'), ('bar', '<f4')])"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:534
+msgid ""
+"Similarly to tuples, structured scalars can also be indexed with an integer::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:536
+msgid ""
+">>> scalar = np.array([(1, 2., 3.)], dtype='i, f, f')[0]\n"
+">>> scalar[0]\n"
+"np.int32(1)\n"
+">>> scalar[1] = 4"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:541
+msgid ""
+"Thus, tuples might be thought of as the native Python equivalent to numpy's "
+"structured types, much like native python integers are the equivalent to "
+"numpy's integer types. Structured scalars may be converted to a tuple by "
+"calling `numpy.ndarray.item`::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:546
+msgid ""
+">>> scalar.item(), type(scalar.item())\n"
+"((1, 4.0, 3.0), <class 'tuple'>)"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:550
+msgid "Viewing structured arrays containing objects"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:552
+msgid ""
+"In order to prevent clobbering object pointers in fields of :class:`object` "
+"type, numpy currently does not allow views of structured arrays containing "
+"objects."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:559
+msgid "Structure comparison and promotion"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:561
+msgid ""
+"If the dtypes of two void structured arrays are equal, testing the equality "
+"of the arrays will result in a boolean array with the dimensions of the "
+"original arrays, with elements set to ``True`` where all fields of the "
+"corresponding structures are equal::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:566
+msgid ""
+">>> a = np.array([(1, 1), (2, 2)], dtype=[('a', 'i4'), ('b', 'i4')])\n"
+">>> b = np.array([(1, 1), (2, 3)], dtype=[('a', 'i4'), ('b', 'i4')])\n"
+">>> a == b\n"
+"array([True, False])"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:571
+msgid ""
+"NumPy will promote individual field datatypes to perform the comparison. So "
+"the following is also valid (note the ``'f4'`` dtype for the ``'a'`` field):"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:578
+msgid ""
+"To compare two structured arrays, it must be possible to promote them to a "
+"common dtype as returned by `numpy.result_type` and `numpy.promote_types`. "
+"This enforces that the number of fields, the field names, and the field "
+"titles must match precisely. When promotion is not possible, for example due "
+"to mismatching field names, NumPy will raise an error. Promotion between two "
+"structured dtypes results in a canonical dtype that ensures native byte-"
+"order for all fields::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:587
+msgid ""
+">>> np.result_type(np.dtype(\"i,>i\"))\n"
+"dtype([('f0', '<i4'), ('f1', '<i4')])\n"
+">>> np.result_type(np.dtype(\"i,>i\"), np.dtype(\"i,i\"))\n"
+"dtype([('f0', '<i4'), ('f1', '<i4')])"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:592
+msgid ""
+"The resulting dtype from promotion is also guaranteed to be packed, meaning "
+"that all fields are ordered contiguously and any unnecessary padding is "
+"removed::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:596
+msgid ""
+">>> dt = np.dtype(\"i1,V3,i4,V1\")[[\"f0\", \"f2\"]]\n"
+">>> dt\n"
+"dtype({'names': ['f0', 'f2'], 'formats': ['i1', '<i4'], 'offsets': [0, 4], "
+"'itemsize': 9})\n"
+">>> np.result_type(dt)\n"
+"dtype([('f0', 'i1'), ('f2', '<i4')])"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:602
+msgid ""
+"Note that the result prints without ``offsets`` or ``itemsize`` indicating "
+"no additional padding. If a structured dtype is created with ``align=True`` "
+"ensuring that ``dtype.isalignedstruct`` is true, this property is preserved::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:607
+msgid ""
+">>> dt = np.dtype(\"i1,V3,i4,V1\", align=True)[[\"f0\", \"f2\"]]\n"
+">>> dt\n"
+"dtype({'names': ['f0', 'f2'], 'formats': ['i1', '<i4'], 'offsets': [0, 4], "
+"'itemsize': 12}, align=True)\n"
+"\n"
+">>> np.result_type(dt)\n"
+"dtype([('f0', 'i1'), ('f2', '<i4')], align=True)\n"
+">>> np.result_type(dt).isalignedstruct\n"
+"True"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:616
+msgid ""
+"When promoting multiple dtypes, the result is aligned if any of the inputs "
+"is::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:618
+msgid ""
+">>> np.result_type(np.dtype(\"i,i\"), np.dtype(\"i,i\", align=True))\n"
+"dtype([('f0', '<i4'), ('f1', '<i4')], align=True)"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:621
+msgid ""
+"The ``<`` and ``>`` operators always return ``False`` when comparing void "
+"structured arrays, and arithmetic and bitwise operations are not supported."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:624
+msgid ""
+"Before NumPy 1.23, a warning was given and ``False`` returned when promotion "
+"to a common dtype failed. Further, promotion was much more restrictive: It "
+"would reject the mixed float/integer comparison example above."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:631
+msgid "Record arrays"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:633
+msgid ""
+"As an optional convenience numpy provides an ndarray subclass, :class:`numpy."
+"recarray` that allows access to fields of structured arrays by attribute "
+"instead of only by index. Record arrays use a special datatype, :class:"
+"`numpy.record`, that allows field access by attribute on the structured "
+"scalars obtained from the array. The ``numpy.rec`` module provides functions "
+"for creating recarrays from various objects. Additional helper functions for "
+"creating and manipulating structured arrays can be found in :mod:`numpy.lib."
+"recfunctions`."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:643
+msgid ""
+"The simplest way to create a record array is with :func:`numpy.rec.array "
+"<numpy.rec.array>`::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:646
+msgid ""
+">>> recordarr = np.rec.array([(1, 2., 'Hello'), (2, 3., \"World\")],\n"
+"...                    dtype=[('foo', 'i4'),('bar', 'f4'), ('baz', 'S10')])\n"
+">>> recordarr.bar\n"
+"array([2., 3.], dtype=float32)\n"
+">>> recordarr[1:2]\n"
+"rec.array([(2, 3., b'World')],\n"
+"      dtype=[('foo', '<i4'), ('bar', '<f4'), ('baz', 'S10')])\n"
+">>> recordarr[1:2].foo\n"
+"array([2], dtype=int32)\n"
+">>> recordarr.foo[1:2]\n"
+"array([2], dtype=int32)\n"
+">>> recordarr[1].baz\n"
+"b'World'"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:660
+msgid ""
+":func:`numpy.rec.array <numpy.rec.array>` can convert a wide variety of "
+"arguments into record arrays, including structured arrays::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:663
+msgid ""
+">>> arr = np.array([(1, 2., 'Hello'), (2, 3., \"World\")],\n"
+"...             dtype=[('foo', 'i4'), ('bar', 'f4'), ('baz', 'S10')])\n"
+">>> recordarr = np.rec.array(arr)"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:667
+msgid ""
+"The ``numpy.rec`` module provides a number of other convenience functions "
+"for creating record arrays, see :ref:`record array creation routines "
+"<routines.array-creation.rec>`."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:671
+msgid ""
+"A record array representation of a structured array can be obtained using "
+"the appropriate :meth:`view <numpy.ndarray.view>`::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:674
+msgid ""
+">>> arr = np.array([(1, 2., 'Hello'), (2, 3., \"World\")],\n"
+"...                dtype=[('foo', 'i4'),('bar', 'f4'), ('baz', 'S10')])\n"
+">>> recordarr = arr.view(dtype=np.dtype((np.record, arr.dtype)),\n"
+"...                      type=np.recarray)"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:679
+msgid ""
+"For convenience, viewing an ndarray as type :class:`numpy.recarray` will "
+"automatically convert to :class:`numpy.record` datatype, so the dtype can be "
+"left out of the view::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:683
+msgid ""
+">>> recordarr = arr.view(np.recarray)\n"
+">>> recordarr.dtype\n"
+"dtype((numpy.record, [('foo', '<i4'), ('bar', '<f4'), ('baz', 'S10')]))"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:687
+msgid ""
+"To get back to a plain ndarray both the dtype and type must be reset. The "
+"following view does so, taking into account the unusual case that the "
+"recordarr was not a structured type::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:691
+msgid ""
+">>> arr2 = recordarr.view(recordarr.dtype.fields or recordarr.dtype, np."
+"ndarray)"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:693
+msgid ""
+"Record array fields accessed by index or by attribute are returned as a "
+"record array if the field has a structured type but as a plain ndarray "
+"otherwise. ::"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:696
+msgid ""
+">>> recordarr = np.rec.array([('Hello', (1, 2)), (\"World\", (3, 4))],\n"
+"...                 dtype=[('foo', 'S6'),('bar', [('A', int), ('B', "
+"int)])])\n"
+">>> type(recordarr.foo)\n"
+"<class 'numpy.ndarray'>\n"
+">>> type(recordarr.bar)\n"
+"<class 'numpy.rec.recarray'>"
+msgstr ""
+
+#: ../../../user/basics.rec.rst:703
+msgid ""
+"Note that if a field has the same name as an ndarray attribute, the ndarray "
+"attribute takes precedence. Such fields will be inaccessible by attribute "
+"but will still be accessible by index."
+msgstr ""
+
+#: ../../../user/basics.rec.rst:709
+msgid "Recarray helper functions"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions:1
+msgid "Collection of utilities to manipulate structured arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions:3
+msgid ""
+"Most of these functions were initially implemented by John Hunter for "
+"matplotlib.  They have been rewritten and extended for convenience."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:2
+#: numpy.lib.recfunctions.rec_append_fields:2
+msgid "Add new fields to an existing array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:4
+#: numpy.lib.recfunctions.rec_append_fields:4
+msgid ""
+"The names of the fields are given with the `names` arguments, the "
+"corresponding values with the `data` arguments. If a single field is "
+"appended, `names`, `data` and `dtypes` do not have to be lists but just "
+"values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:0
+#: numpy.lib.recfunctions.apply_along_fields:0
+#: numpy.lib.recfunctions.assign_fields_by_name:0
+#: numpy.lib.recfunctions.drop_fields:0
+#: numpy.lib.recfunctions.find_duplicates:0
+#: numpy.lib.recfunctions.get_fieldstructure:0
+#: numpy.lib.recfunctions.get_names:0 numpy.lib.recfunctions.get_names_flat:0
+#: numpy.lib.recfunctions.join_by:0 numpy.lib.recfunctions.merge_arrays:0
+#: numpy.lib.recfunctions.rec_append_fields:0
+#: numpy.lib.recfunctions.recursive_fill_fields:0
+#: numpy.lib.recfunctions.rename_fields:0
+#: numpy.lib.recfunctions.repack_fields:0
+#: numpy.lib.recfunctions.require_fields:0
+#: numpy.lib.recfunctions.stack_arrays:0
+#: numpy.lib.recfunctions.structured_to_unstructured:0
+#: numpy.lib.recfunctions.unstructured_to_structured:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:12
+#: numpy.lib.recfunctions.drop_fields:9
+#: numpy.lib.recfunctions.rec_append_fields:12
+#: numpy.lib.recfunctions.rename_fields:9
+msgid "**base**"
+msgstr "**base**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:-1
+#: numpy.lib.recfunctions.drop_fields:-1
+#: numpy.lib.recfunctions.rec_append_fields:-1
+msgid "array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:12
+#: numpy.lib.recfunctions.rec_append_fields:12
+msgid "Input array to extend."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:16
+#: numpy.lib.recfunctions.rec_append_fields:16
+#: numpy.lib.recfunctions.unstructured_to_structured:23
+msgid "**names**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:-1
+#: numpy.lib.recfunctions.rec_append_fields:-1
+msgid "string, sequence"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:15
+#: numpy.lib.recfunctions.rec_append_fields:15
+msgid ""
+"String or sequence of strings corresponding to the names of the new fields."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:19
+#: numpy.lib.recfunctions.rec_append_fields:19
+msgid "**data**"
+msgstr "**data**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:-1
+#: numpy.lib.recfunctions.rec_append_fields:-1
+msgid "array or sequence of arrays"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:19
+#: numpy.lib.recfunctions.rec_append_fields:19
+msgid "Array or sequence of arrays storing the fields to add to the base."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:23
+#: numpy.lib.recfunctions.rec_append_fields:25
+msgid "**dtypes**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:-1
+#: numpy.lib.recfunctions.rec_append_fields:-1
+msgid "sequence of datatypes, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:22
+#: numpy.lib.recfunctions.rec_append_fields:22
+msgid ""
+"Datatype or sequence of datatypes. If None, the datatypes are estimated from "
+"the `data`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:26
+#: numpy.lib.recfunctions.merge_arrays:11
+msgid "**fill_value**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:-1
+#: numpy.lib.recfunctions.merge_arrays:-1
+msgid "{float}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:26
+#: numpy.lib.recfunctions.merge_arrays:11
+msgid "Filling value used to pad missing data on the shorter arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:29
+#: numpy.lib.recfunctions.drop_fields:16 numpy.lib.recfunctions.join_by:40
+#: numpy.lib.recfunctions.merge_arrays:17
+#: numpy.lib.recfunctions.stack_arrays:15
+msgid "**usemask**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:-1
+#: numpy.lib.recfunctions.drop_fields:-1
+#: numpy.lib.recfunctions.find_duplicates:-1 numpy.lib.recfunctions.join_by:-1
+#: numpy.lib.recfunctions.merge_arrays:-1
+#: numpy.lib.recfunctions.stack_arrays:-1
+msgid "{False, True}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:29
+#: numpy.lib.recfunctions.drop_fields:16 numpy.lib.recfunctions.merge_arrays:17
+msgid "Whether to return a masked array or not."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:45
+#: numpy.lib.recfunctions.drop_fields:33 numpy.lib.recfunctions.join_by:54
+#: numpy.lib.recfunctions.merge_arrays:30
+#: numpy.lib.recfunctions.stack_arrays:19
+msgid "**asrecarray**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.append_fields:32
+#: numpy.lib.recfunctions.merge_arrays:20
+msgid "Whether to return a recarray (MaskedRecords) or not."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.apply_along_fields:2
+msgid ""
+"Apply function 'func' as a reduction across fields of a structured array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.apply_along_fields:4
+msgid ""
+"This is similar to `numpy.apply_along_axis`, but treats the fields of a "
+"structured array as an extra axis. The fields are all first cast to a common "
+"type following the type-promotion rules from `numpy.result_type` applied to "
+"the field's dtypes."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.apply_along_fields:13
+msgid "**func**"
+msgstr "**func**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.apply_along_fields:-1
+msgid "function"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.apply_along_fields:12
+msgid ""
+"Function to apply on the \"field\" dimension. This function must support an "
+"`axis` argument, like `numpy.mean`, `numpy.sum`, etc."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.apply_along_fields:18
+#: numpy.lib.recfunctions.structured_to_unstructured:15
+#: numpy.lib.recfunctions.unstructured_to_structured:16
+msgid "**arr**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.apply_along_fields:-1
+#: numpy.lib.recfunctions.assign_fields_by_name:-1
+#: numpy.lib.recfunctions.recursive_fill_fields:-1
+#: numpy.lib.recfunctions.rename_fields:-1
+#: numpy.lib.recfunctions.require_fields:-1
+#: numpy.lib.recfunctions.structured_to_unstructured:-1
+#: numpy.lib.recfunctions.unstructured_to_structured:-1
+msgid "ndarray"
+msgstr "ndarray"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.apply_along_fields:16
+msgid "Structured array for which to apply func."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.apply_along_fields:0
+#: numpy.lib.recfunctions.rec_append_fields:0
+#: numpy.lib.recfunctions.repack_fields:0
+#: numpy.lib.recfunctions.require_fields:0
+#: numpy.lib.recfunctions.structured_to_unstructured:0
+#: numpy.lib.recfunctions.unstructured_to_structured:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.apply_along_fields:32
+#: numpy.lib.recfunctions.require_fields:35
+msgid "**out**"
+msgstr "**out**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.apply_along_fields:23
+msgid "Result of the reduction operation"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.apply_along_fields:35
+#: numpy.lib.recfunctions.drop_fields:36
+#: numpy.lib.recfunctions.find_duplicates:33
+#: numpy.lib.recfunctions.flatten_descr:19
+#: numpy.lib.recfunctions.get_fieldstructure:30
+#: numpy.lib.recfunctions.get_names:24 numpy.lib.recfunctions.get_names_flat:25
+#: numpy.lib.recfunctions.merge_arrays:46
+#: numpy.lib.recfunctions.recursive_fill_fields:30
+#: numpy.lib.recfunctions.rename_fields:27
+#: numpy.lib.recfunctions.repack_fields:50
+#: numpy.lib.recfunctions.require_fields:38
+#: numpy.lib.recfunctions.stack_arrays:37
+#: numpy.lib.recfunctions.structured_to_unstructured:51
+#: numpy.lib.recfunctions.unstructured_to_structured:54
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.apply_along_fields:-1
+msgid ""
+"<div id=\"070c52f9-5ac0-4c57-a507-afc29bd6211c\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('423fcdeb-1fb2-4408-832d-27be5e658e11','070c52f9-5ac0-4c57-"
+"a507-afc29bd6211c')\">Go Back</button><button class=\"try_examples_button\" "
+"onclick=\"window."
+"openInNewTab('423fcdeb-1fb2-4408-832d-27be5e658e11','070c52f9-5ac0-4c57-a507-"
+"afc29bd6211c')\">Open In Tab</button></div><div id=\"aa239d3e-73bc-4412-"
+"a450-31b481d22573\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.apply_along_fields:-1
+#: numpy.lib.recfunctions.drop_fields:-1
+#: numpy.lib.recfunctions.find_duplicates:-1
+#: numpy.lib.recfunctions.flatten_descr:-1
+#: numpy.lib.recfunctions.get_fieldstructure:-1
+#: numpy.lib.recfunctions.get_names:-1 numpy.lib.recfunctions.get_names_flat:-1
+#: numpy.lib.recfunctions.merge_arrays:-1
+#: numpy.lib.recfunctions.recursive_fill_fields:-1
+#: numpy.lib.recfunctions.rename_fields:-1
+#: numpy.lib.recfunctions.repack_fields:-1
+#: numpy.lib.recfunctions.require_fields:-1
+#: numpy.lib.recfunctions.stack_arrays:-1
+#: numpy.lib.recfunctions.structured_to_unstructured:-1
+#: numpy.lib.recfunctions.unstructured_to_structured:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../try_examples.json\");});</script>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.assign_fields_by_name:2
+msgid "Assigns values from one structured array to another by field name."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.assign_fields_by_name:4
+msgid ""
+"Normally in numpy >= 1.14, assignment of one structured array to another "
+"copies fields \"by position\", meaning that the first field from the src is "
+"copied to the first field of the dst, and so on, regardless of field name."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.assign_fields_by_name:8
+msgid ""
+"This function instead copies \"by field name\", such that fields in the dst "
+"are assigned from the identically named field in the src. This applies "
+"recursively for nested structures. This is how structure assignment worked "
+"in numpy >= 1.6 to <= 1.13."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.assign_fields_by_name:16
+msgid "**dst**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.assign_fields_by_name:19
+msgid "**src**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.assign_fields_by_name:19
+msgid "The source and destination arrays during assignment."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.assign_fields_by_name:38
+msgid "**zero_unassigned**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.assign_fields_by_name:-1
+#: numpy.lib.recfunctions.structured_to_unstructured:-1
+#: numpy.lib.recfunctions.unstructured_to_structured:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.assign_fields_by_name:22
+msgid ""
+"If True, fields in the dst for which there was no matching field in the src "
+"are filled with the value 0 (zero). This was the behavior of numpy <= 1.13. "
+"If False, those fields are not modified."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.drop_fields:2
+msgid "Return a new array with fields in `drop_names` dropped."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.drop_fields:4
+#: numpy.lib.recfunctions.rename_fields:4
+msgid "Nested fields are supported."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.drop_fields:9
+#: numpy.lib.recfunctions.find_duplicates:8
+msgid "Input array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.drop_fields:13
+msgid "**drop_names**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.drop_fields:-1
+msgid "string or sequence"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.drop_fields:12
+msgid ""
+"String or sequence of strings corresponding to the names of the fields to "
+"drop."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.drop_fields:-1
+msgid "string or sequence, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.drop_fields:19
+msgid ""
+"Whether to return a recarray or a mrecarray (`asrecarray=True`) or a plain "
+"ndarray or masked array with flexible dtype. The default is False."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.drop_fields:-1
+msgid ""
+"<div id=\"0df8af6d-ca3f-4801-bcdf-f38eda1d0a04\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('9f3c1edf-738d-45a5-b217-e225ea6f820c','0df8af6d-"
+"ca3f-4801-bcdf-f38eda1d0a04')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('9f3c1edf-738d-45a5-b217-e225ea6f820c','0df8af6d-ca3f-4801-bcdf-"
+"f38eda1d0a04')\">Open In Tab</button></div><div id=\"1ec11e9b-a2cc-4596-a43e-"
+"ac382c6a3395\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.find_duplicates:2
+msgid "Find the duplicates in a structured array along a given key"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.find_duplicates:8
+#: numpy.lib.recfunctions.repack_fields:24
+#: numpy.lib.recfunctions.require_fields:15
+msgid "**a**"
+msgstr "**a**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.find_duplicates:-1
+msgid "array-like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.find_duplicates:12
+#: numpy.lib.recfunctions.join_by:15
+msgid "**key**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.find_duplicates:-1
+msgid "{string, None}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.find_duplicates:11
+msgid ""
+"Name of the fields along which to check the duplicates. If None, the search "
+"is performed by records"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.find_duplicates:15
+msgid "**ignoremask**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.find_duplicates:-1
+#: numpy.lib.recfunctions.join_by:-1 numpy.lib.recfunctions.stack_arrays:-1
+msgid "{True, False}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.find_duplicates:15
+msgid "Whether masked data should be discarded or considered as duplicates."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.find_duplicates:30
+msgid "**return_index**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.find_duplicates:18
+msgid "Whether to return the indices of the duplicated values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.find_duplicates:-1
+msgid ""
+"<div id=\"eecba5f1-9e7b-4e7e-a430-a23a30a0dd7b\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('1391667e-0c0e-46ef-"
+"bd73-882c3b0f280c','eecba5f1-9e7b-4e7e-a430-a23a30a0dd7b')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('1391667e-0c0e-46ef-bd73-882c3b0f280c','eecba5f1-9e7b-4e7e-a430-"
+"a23a30a0dd7b')\">Open In Tab</button></div><div "
+"id=\"f78a6a3a-7f1d-455a-8dcf-3f174eccd353\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.flatten_descr:2
+msgid "Flatten a structured data-type description."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.flatten_descr:-1
+msgid ""
+"<div id=\"abbd3f8d-48de-49cc-9074-3ff644f7c092\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('41000ae1-4dec-4890-9fcd-506b8a1972de','abbd3f8d-48de-49cc-9074-3ff644f7c092')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('41000ae1-4dec-4890-9fcd-506b8a1972de','abbd3f8d-48de-49cc-9074-3ff644f7c092')\">Open "
+"In Tab</button></div><div id=\"1186f4de-04ba-420f-9486-db49db53f580\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.get_fieldstructure:2
+msgid "Returns a dictionary with fields indexing lists of their parent fields."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.get_fieldstructure:4
+msgid ""
+"This function is used to simplify access to fields nested in other fields."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.get_fieldstructure:9
+#: numpy.lib.recfunctions.get_names:21 numpy.lib.recfunctions.get_names_flat:22
+msgid "**adtype**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.get_fieldstructure:-1
+msgid "np.dtype"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.get_fieldstructure:9
+#: numpy.lib.recfunctions.get_names:9 numpy.lib.recfunctions.get_names_flat:10
+msgid "Input datatype"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.get_fieldstructure:12
+msgid "**lastname**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.get_fieldstructure:-1
+msgid "optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.get_fieldstructure:12
+msgid "Last processed field name (used internally during recursion)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.get_fieldstructure:27
+msgid "**parents**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.get_fieldstructure:-1
+#: numpy.lib.recfunctions.rename_fields:-1
+msgid "dictionary"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.get_fieldstructure:15
+msgid "Dictionary of parent fields (used internally during recursion)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.get_fieldstructure:-1
+msgid ""
+"<div id=\"e78851a8-5fcd-4e70-821e-11216499592a\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('03b9503b-f35a-41a7-"
+"b333-9994dfdb538c','e78851a8-5fcd-4e70-821e-11216499592a')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('03b9503b-f35a-41a7-"
+"b333-9994dfdb538c','e78851a8-5fcd-4e70-821e-11216499592a')\">Open In Tab</"
+"button></div><div id=\"56146ee7-69c8-4b15-821e-f28733d7d2b3\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.get_names:2
+msgid ""
+"Returns the field names of the input datatype as a tuple. Input datatype "
+"must have fields otherwise error is raised."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.get_names:-1
+#: numpy.lib.recfunctions.get_names_flat:-1
+#: numpy.lib.recfunctions.require_fields:-1
+msgid "dtype"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.get_names:-1
+msgid ""
+"<div id=\"e776280b-2045-4b7d-b840-f7538425218b\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('2864572d-6e11-47dc-ab85-"
+"cf37759ce2e6','e776280b-2045-4b7d-b840-f7538425218b')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('2864572d-6e11-47dc-ab85-cf37759ce2e6','e776280b-2045-4b7d-b840-"
+"f7538425218b')\">Open In Tab</button></div><div id=\"9691282d-"
+"d00b-4d3a-87c4-890a5bec0e32\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.get_names_flat:2
+msgid ""
+"Returns the field names of the input datatype as a tuple. Input datatype "
+"must have fields otherwise error is raised. Nested structure are flattened "
+"beforehand."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.get_names_flat:-1
+msgid ""
+"<div id=\"52cb05d2-e52b-432a-9f0a-cb4b057cf33c\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('8c407df8-0bd8-4cfe-8dcf-cd0b184dbe41','52cb05d2-"
+"e52b-432a-9f0a-cb4b057cf33c')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('8c407df8-0bd8-4cfe-8dcf-cd0b184dbe41','52cb05d2-e52b-432a-9f0a-"
+"cb4b057cf33c')\">Open In Tab</button></div><div id=\"6bc116b4-9fa7-4dd2-aa70-"
+"f7382ce562b4\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:2
+msgid "Join arrays `r1` and `r2` on key `key`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:4
+msgid ""
+"The key should be either a string or a sequence of string corresponding to "
+"the fields used to join the array.  An exception is raised if the `key` "
+"field cannot be found in the two input arrays.  Neither `r1` nor `r2` should "
+"have any duplicates along `key`: the presence of duplicates will make the "
+"output quite unreliable. Note that duplicates are not looked for by the "
+"algorithm."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:-1
+msgid "{string, sequence}"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:14
+msgid ""
+"A string or a sequence of strings corresponding to the fields used for "
+"comparison."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:18
+msgid "**r1, r2**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:-1
+msgid "arrays"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:18
+msgid "Structured arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:25
+msgid "**jointype**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:-1
+msgid "{'inner', 'outer', 'leftouter'}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:21
+msgid ""
+"If 'inner', returns the elements common to both r1 and r2. If 'outer', "
+"returns the common elements as well as the elements of r1 not in r2 and the "
+"elements of not in r2. If 'leftouter', returns the common elements and the "
+"elements of r1 not in r2."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:29
+msgid "**r1postfix**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:-1
+msgid "string, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:28
+msgid ""
+"String appended to the names of the fields of r1 that are present in r2 but "
+"absent of the key."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:33
+msgid "**r2postfix**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:32
+msgid ""
+"String appended to the names of the fields of r2 that are present in r1 but "
+"absent of the key."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:36 numpy.lib.recfunctions.stack_arrays:11
+msgid "**defaults**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:-1
+msgid "{dictionary}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:36 numpy.lib.recfunctions.stack_arrays:11
+msgid "Dictionary mapping field names to the corresponding default values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:39 numpy.lib.recfunctions.stack_arrays:14
+msgid ""
+"Whether to return a MaskedArray (or MaskedRecords is `asrecarray==True`) or "
+"an ndarray."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:43 numpy.lib.recfunctions.stack_arrays:18
+msgid ""
+"Whether to return a recarray (or MaskedRecords if `usemask==True`) or just a "
+"flexible-type ndarray."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:57 numpy.lib.recfunctions.merge_arrays:33
+#: numpy.lib.recfunctions.recursive_fill_fields:25
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:58
+msgid "The output is sorted along the key."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.join_by:59
+msgid ""
+"A temporary array is formed by dropping the fields not in the key for the "
+"two arrays and concatenating the result. This array is then sorted, and the "
+"common entries selected. The output is constructed by filling the fields "
+"with the selected entries. Matching is not preserved if there are some "
+"duplicates..."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.merge_arrays:2
+msgid "Merge arrays field by field."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.merge_arrays:8
+msgid "**seqarrays**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.merge_arrays:-1
+msgid "sequence of ndarrays"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.merge_arrays:8
+msgid "Sequence of arrays"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.merge_arrays:14
+msgid "**flatten**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.merge_arrays:14
+msgid "Whether to collapse nested fields."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.merge_arrays:34
+msgid ""
+"Without a mask, the missing value will be filled with something, depending "
+"on what its corresponding type:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.merge_arrays:37
+msgid "``-1``      for integers"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.merge_arrays:38
+msgid "``-1.0``    for floating point numbers"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.merge_arrays:39
+msgid "``'-'``     for characters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.merge_arrays:40
+msgid "``'-1'``    for strings"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.merge_arrays:41
+msgid "``True``    for boolean values"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.merge_arrays:42
+msgid "XXX: I just obtained these values empirically"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.merge_arrays:-1
+msgid ""
+"<div id=\"f676560d-b82f-47f3-9806-148d48eb2550\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('d524902f-3ea0-4007-b71b-4a55e2c82eae','f676560d-"
+"b82f-47f3-9806-148d48eb2550')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('d524902f-3ea0-4007-b71b-4a55e2c82eae','f676560d-"
+"b82f-47f3-9806-148d48eb2550')\">Open In Tab</button></div><div "
+"id=\"72d9205b-860f-4204-8dbe-0a13002ee878\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.rec_append_fields:36
+msgid "**appended_array**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.rec_append_fields:-1
+msgid "np.recarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.rec_append_fields:41
+msgid ":obj:`append_fields`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.rec_drop_fields:2
+msgid "Returns a new numpy.recarray with fields in `drop_names` dropped."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.rec_join:2
+msgid ""
+"Join arrays `r1` and `r2` on keys. Alternative to join_by, that always "
+"returns a np.recarray."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.rec_join:19
+msgid ":obj:`join_by`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.rec_join:20
+msgid "equivalent function"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.recursive_fill_fields:2
+msgid ""
+"Fills fields from output with fields from input, with support for nested "
+"structures."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.recursive_fill_fields:9
+msgid "**input**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.recursive_fill_fields:9
+msgid "Input array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.recursive_fill_fields:22
+msgid "**output**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.recursive_fill_fields:12
+msgid "Output array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.recursive_fill_fields:26
+msgid "`output` should be at least the same size as `input`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.recursive_fill_fields:-1
+msgid ""
+"<div id=\"33d4b993-e7c4-43f6-85b2-97bf3924f65b\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('6d3e13b6-9018-4c51-ab8b-8fadc88a08e6','33d4b993-"
+"e7c4-43f6-85b2-97bf3924f65b')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('6d3e13b6-9018-4c51-ab8b-8fadc88a08e6','33d4b993-"
+"e7c4-43f6-85b2-97bf3924f65b')\">Open In Tab</button></div><div "
+"id=\"854a0452-70f0-42b5-91ef-ef397caa8e53\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.rename_fields:2
+msgid "Rename the fields from a flexible-datatype ndarray or recarray."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.rename_fields:9
+msgid "Input array whose fields must be modified."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.rename_fields:24
+msgid "**namemapper**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.rename_fields:12
+msgid "Dictionary mapping old field names to their new version."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.rename_fields:-1
+msgid ""
+"<div id=\"33c2c824-9f39-46be-a504-c21f58b13ba0\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('4e065b3a-d5e7-47f6-"
+"b22e-8a9ee95abf20','33c2c824-9f39-46be-a504-c21f58b13ba0')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('4e065b3a-d5e7-47f6-b22e-8a9ee95abf20','33c2c824-9f39-46be-a504-"
+"c21f58b13ba0')\">Open In Tab</button></div><div id=\"81397f74-542a-4313-a139-"
+"ecc59d04160c\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.repack_fields:2
+msgid "Re-pack the fields of a structured array or dtype in memory."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.repack_fields:4
+msgid ""
+"The memory layout of structured datatypes allows fields at arbitrary byte "
+"offsets. This means the fields can be separated by padding bytes, their "
+"offsets can be non-monotonically increasing, and they can overlap."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.repack_fields:8
+msgid ""
+"This method removes any overlaps and reorders the fields in memory so they "
+"have increasing byte offsets, and adds or removes padding bytes depending on "
+"the `align` option, which behaves like the `align` option to `numpy.dtype`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.repack_fields:13
+msgid ""
+"If `align=False`, this method produces a \"packed\" memory layout in which "
+"each field starts at the byte the previous field ended, and any padding "
+"bytes are removed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.repack_fields:17
+msgid ""
+"If `align=True`, this methods produces an \"aligned\" memory layout in which "
+"each field's offset is a multiple of its alignment, and the total itemsize "
+"is a multiple of the largest alignment, by adding padding bytes as needed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.repack_fields:-1
+msgid "ndarray or dtype"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.repack_fields:24
+msgid "array or dtype for which to repack the fields."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.repack_fields:27
+#: numpy.lib.recfunctions.unstructured_to_structured:26
+msgid "**align**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.repack_fields:-1
+msgid "boolean"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.repack_fields:27
+msgid ""
+"If true, use an \"aligned\" memory layout, otherwise use a \"packed\" layout."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.repack_fields:32
+msgid "**recurse**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.repack_fields:30
+msgid "If True, also repack nested structures."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.repack_fields:47
+msgid "**repacked**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.repack_fields:37
+msgid ""
+"Copy of `a` with fields repacked, or `a` itself if no repacking was needed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.repack_fields:-1
+msgid ""
+"<div id=\"3eb0a504-7cae-42a1-977e-87f3d9a29bc0\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('b664f860-e9be-4657-997e-"
+"a1d4e12746d2','3eb0a504-7cae-42a1-977e-87f3d9a29bc0')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('b664f860-e9be-4657-997e-"
+"a1d4e12746d2','3eb0a504-7cae-42a1-977e-87f3d9a29bc0')\">Open In Tab</"
+"button></div><div id=\"1daa5851-898d-4d8f-bf64-ba0ddeb1794a\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.require_fields:2
+msgid "Casts a structured array to a new dtype using assignment by field-name."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.require_fields:4
+msgid ""
+"This function assigns from the old to the new array by name, so the value of "
+"a field in the output array is the value of the field with the same name in "
+"the source array. This has the effect of creating a new ndarray containing "
+"only the fields \"required\" by the required_dtype."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.require_fields:9
+msgid ""
+"If a field name in the required_dtype does not exist in the input array, "
+"that field is created and set to 0 in the output array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.require_fields:15
+msgid "array to cast"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.require_fields:20
+msgid "**required_dtype**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.require_fields:18
+msgid "datatype for output array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.require_fields:25
+msgid ""
+"array with the new dtype, with field values copied from the fields in the "
+"input array with the same name"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.require_fields:-1
+msgid ""
+"<div id=\"5bbee35d-79ff-4a8b-8218-51b88e439739\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('3f1ced31-5b3f-42fc-85bb-1b886aefb118','5bbee35d-79ff-4a8b-8218-51b88e439739')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('3f1ced31-5b3f-42fc-85bb-1b886aefb118','5bbee35d-79ff-4a8b-8218-51b88e439739')\">Open "
+"In Tab</button></div><div id=\"4b5d0ee5-90be-4d6b-858d-24c5fb7479cb\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.stack_arrays:2
+msgid "Superposes arrays fields by fields"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.stack_arrays:8
+msgid "**arrays**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.stack_arrays:-1
+msgid "array or sequence"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.stack_arrays:8
+msgid "Sequence of input arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.stack_arrays:-1
+msgid "dictionary, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.stack_arrays:34
+msgid "**autoconvert**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.stack_arrays:22
+msgid "Whether automatically cast the type of the field to the maximum."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.stack_arrays:-1
+msgid ""
+"<div id=\"a3cfa842-06ed-4209-9904-8e3a99b8914f\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('2af4bf69-0790-4741-95bc-84e44fb82acb','a3cfa842-06ed-4209-9904-8e3a99b8914f')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('2af4bf69-0790-4741-95bc-84e44fb82acb','a3cfa842-06ed-4209-9904-8e3a99b8914f')\">Open "
+"In Tab</button></div><div id=\"bfc22bf7-cf57-4314-a57c-887cca3f412e\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.structured_to_unstructured:2
+msgid "Converts an n-D structured array into an (n+1)-D unstructured array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.structured_to_unstructured:4
+msgid ""
+"The new array will have a new last dimension equal in size to the number of "
+"field-elements of the input array. If not supplied, the output datatype is "
+"determined from the numpy type promotion rules applied to all the field "
+"datatypes."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.structured_to_unstructured:9
+msgid ""
+"Nested fields, as well as each element of any subarray fields, all count as "
+"a single field-elements."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.structured_to_unstructured:15
+msgid "Structured array or dtype to convert. Cannot contain object datatype."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.structured_to_unstructured:18
+#: numpy.lib.recfunctions.unstructured_to_structured:19
+msgid "**dtype**"
+msgstr "**dtype**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.structured_to_unstructured:-1
+#: numpy.lib.recfunctions.unstructured_to_structured:-1
+msgid "dtype, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.structured_to_unstructured:18
+msgid "The dtype of the output unstructured array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.structured_to_unstructured:28
+#: numpy.lib.recfunctions.unstructured_to_structured:31
+msgid "**copy**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.structured_to_unstructured:21
+msgid ""
+"If true, always return a copy. If false, a view is returned if possible, "
+"such as when the `dtype` and strides of the fields are suitable and the "
+"array subtype is one of `numpy.ndarray`, `numpy.recarray` or `numpy.memmap`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.structured_to_unstructured:26
+msgid ""
+"A view can now be returned if the fields are separated by a uniform stride."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.structured_to_unstructured:34
+#: numpy.lib.recfunctions.unstructured_to_structured:37
+msgid "**casting**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.structured_to_unstructured:-1
+#: numpy.lib.recfunctions.unstructured_to_structured:-1
+msgid "{'no', 'equiv', 'safe', 'same_kind', 'unsafe'}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.structured_to_unstructured:31
+#: numpy.lib.recfunctions.unstructured_to_structured:34
+msgid ""
+"See casting argument of `numpy.ndarray.astype`. Controls what kind of data "
+"casting may occur."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.structured_to_unstructured:48
+msgid "**unstructured**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.structured_to_unstructured:39
+msgid "Unstructured array with one more dimension."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.structured_to_unstructured:-1
+msgid ""
+"<div id=\"8d380247-8997-4e78-a103-770e67f38385\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('6ae600a2-741b-40fa-88f6-"
+"bc603e7ab1a0','8d380247-8997-4e78-a103-770e67f38385')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('6ae600a2-741b-40fa-88f6-bc603e7ab1a0','8d380247-8997-4e78-"
+"a103-770e67f38385')\">Open In Tab</button></div><div id=\"12c1bb93-f630-4f7b-"
+"a2e7-d36b3ac8f34f\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.unstructured_to_structured:2
+msgid "Converts an n-D unstructured array into an (n-1)-D structured array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.unstructured_to_structured:4
+msgid ""
+"The last dimension of the input array is converted into a structure, with "
+"number of field-elements equal to the size of the last dimension of the "
+"input array. By default all output fields have the input array's dtype, but "
+"an output structured dtype with an equal number of fields-elements can be "
+"supplied instead."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.unstructured_to_structured:10
+msgid ""
+"Nested fields, as well as each element of any subarray fields, all count "
+"towards the number of field-elements."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.unstructured_to_structured:16
+msgid "Unstructured array or dtype to convert."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.unstructured_to_structured:19
+msgid "The structured dtype of the output array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.unstructured_to_structured:-1
+msgid "list of strings, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.unstructured_to_structured:22
+msgid ""
+"If dtype is not supplied, this specifies the field names for the output "
+"dtype, in order. The field dtypes will be the same as the input array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.unstructured_to_structured:-1
+msgid "boolean, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.unstructured_to_structured:26
+msgid "Whether to create an aligned memory layout."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.unstructured_to_structured:29
+msgid ""
+"See copy argument to `numpy.ndarray.astype`. If true, always return a copy. "
+"If false, and `dtype` requirements are satisfied, a view is returned."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.unstructured_to_structured:51
+msgid "**structured**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.unstructured_to_structured:42
+msgid "Structured array with fewer dimensions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/recfunctions.py:docstring
+#: of numpy.lib.recfunctions.unstructured_to_structured:-1
+msgid ""
+"<div id=\"a735fdb4-bf20-4cd1-bf4a-f3fccc18689c\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('85d03d94-1fb3-407b-b3db-d7967aa3425a','a735fdb4-"
+"bf20-4cd1-bf4a-f3fccc18689c')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('85d03d94-1fb3-407b-b3db-d7967aa3425a','a735fdb4-bf20-4cd1-bf4a-"
+"f3fccc18689c')\">Open In Tab</button></div><div id=\"e9c3b59b-8572-4c7e-b35a-"
+"e63b2e751cdd\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""

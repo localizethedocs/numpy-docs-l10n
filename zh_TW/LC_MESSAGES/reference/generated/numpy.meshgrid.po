@@ -1,0 +1,243 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-20 10:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.meshgrid.rst:4
+msgid "numpy.meshgrid"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:2
+msgid "Return a tuple of coordinate matrices from coordinate vectors."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:4
+msgid ""
+"Make N-D coordinate arrays for vectorized evaluations of N-D scalar/vector "
+"fields over N-D grids, given one-dimensional coordinate arrays x1, x2,..., "
+"xn."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:11
+msgid "**x1, x2,..., xn**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:-1
+msgid "array_like"
+msgstr "array_like"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:11
+msgid "1-D arrays representing the coordinates of a grid."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:15
+msgid "**indexing**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:-1
+msgid "{'xy', 'ij'}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:14
+msgid ""
+"Cartesian ('xy', default) or matrix ('ij') indexing of output. See Notes for "
+"more details."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:25
+msgid "**sparse**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:18
+msgid ""
+"If True the shape of the returned coordinate array for dimension *i* is "
+"reduced from ``(N1, ..., Ni, ... Nn)`` to ``(1, ..., 1, Ni, 1, ..., 1)``.  "
+"These sparse coordinate grids are intended to be used with :ref:`basics."
+"broadcasting`.  When all coordinates are used in an expression, broadcasting "
+"still leads to a fully-dimensional result array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:25
+msgid "Default is False."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:35
+msgid "**copy**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:28
+msgid ""
+"If False, a view into the original arrays are returned in order to conserve "
+"memory.  Default is True.  Please note that ``sparse=False, copy=False`` "
+"will likely return non-contiguous arrays.  Furthermore, more than one "
+"element of a broadcast array may refer to a single memory location.  If you "
+"need to write to the arrays, make copies first."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:50
+msgid "**X1, X2,..., XN**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:-1
+msgid "tuple of ndarrays"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:40
+msgid ""
+"For vectors `x1`, `x2`,..., `xn` with lengths ``Ni=len(xi)``, returns ``(N1, "
+"N2, N3,..., Nn)`` shaped arrays if indexing='ij' or ``(N2, N1, N3,..., Nn)`` "
+"shaped arrays if indexing='xy' with the elements of `xi` repeated to fill "
+"the matrix along the first dimension for `x1`, the second for `x2` and so on."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:55
+msgid ":obj:`mgrid`"
+msgstr ":obj:`mgrid`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:56
+msgid "Construct a multi-dimensional \"meshgrid\" using indexing notation."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:57
+msgid ":obj:`ogrid`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:58
+msgid ""
+"Construct an open multi-dimensional \"meshgrid\" using indexing notation."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:59
+msgid ":ref:`how-to-index`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:63
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:64
+msgid ""
+"This function supports both indexing conventions through the indexing "
+"keyword argument.  Giving the string 'ij' returns a meshgrid with matrix "
+"indexing, while 'xy' returns a meshgrid with Cartesian indexing. In the 2-D "
+"case with inputs of length M and N, the outputs are of shape (N, M) for 'xy' "
+"indexing and (M, N) for 'ij' indexing.  In the 3-D case with inputs of "
+"length M, N and P, outputs are of shape (N, M, P) for 'xy' indexing and (M, "
+"N, P) for 'ij' indexing.  The difference is illustrated by the following "
+"code snippet::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:73
+msgid ""
+"xv, yv = np.meshgrid(x, y, indexing='ij')\n"
+"for i in range(nx):\n"
+"    for j in range(ny):\n"
+"        # treat xv[i,j], yv[i,j]\n"
+"\n"
+"xv, yv = np.meshgrid(x, y, indexing='xy')\n"
+"for i in range(nx):\n"
+"    for j in range(ny):\n"
+"        # treat xv[j,i], yv[j,i]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:83
+msgid ""
+"In the 1-D and 0-D case, the indexing and sparse keywords have no effect."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:87
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../reference/generated/numpy.meshgrid.rst:15
+msgid "The result of `meshgrid` is a coordinate grid:"
+msgstr ""
+
+#: ../../../reference/generated/numpy.meshgrid.rst:46
+msgid ""
+"You can create sparse output arrays to save memory and computation time."
+msgstr ""
+
+#: ../../../reference/generated/numpy.meshgrid.rst:55
+msgid ""
+"`meshgrid` is very useful to evaluate functions on a grid. If the function "
+"depends on all coordinates, both dense and sparse outputs can be used."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:145
+msgid ""
+"<div id=\"b04caa16-8d48-422c-bb9f-b79fd9a398d0\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('2b694edc-d985-4ea6-"
+"bf2e-52df1c0202e6','b04caa16-8d48-422c-bb9f-b79fd9a398d0')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('2b694edc-d985-4ea6-bf2e-52df1c0202e6','b04caa16-8d48-422c-bb9f-"
+"b79fd9a398d0')\">Open In Tab</button></div><div id=\"8713ba76-2449-4912-"
+"ad3b-8d59ff51340f\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.meshgrid:145
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

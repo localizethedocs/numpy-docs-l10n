@@ -1,0 +1,168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-20 10:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.lib.npyio.DataSource.rst:2
+msgid "numpy.lib.npyio.DataSource"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:2
+msgid "A generic data source file (file, http, ftp, ...)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:4
+msgid ""
+"DataSources can be local files or remote files/URLs.  The files may also be "
+"compressed or uncompressed. DataSource hides some of the low-level details "
+"of downloading the file, allowing you to simply pass in a valid file path "
+"(or URL) and obtain a file object."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:15
+msgid "**destpath**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:-1
+msgid "str or None, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:12
+msgid ""
+"Path to the directory where the source file gets downloaded to for use.  If "
+"`destpath` is None, a temporary directory will be created. The default path "
+"is the current directory."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:18
+msgid "Methods"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:33:<autosummary>:1
+msgid ":py:obj:`abspath <numpy.lib.npyio.DataSource.abspath>`\\ \\(path\\)"
+msgstr ":py:obj:`abspath <numpy.lib.npyio.DataSource.abspath>`\\ \\(path\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:33:<autosummary>:1
+msgid "Return absolute path of file in the DataSource directory."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:33:<autosummary>:1
+msgid ":py:obj:`exists <numpy.lib.npyio.DataSource.exists>`\\ \\(path\\)"
+msgstr ":py:obj:`exists <numpy.lib.npyio.DataSource.exists>`\\ \\(path\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:33:<autosummary>:1
+msgid "Test if path exists."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:33:<autosummary>:1
+msgid ""
+":py:obj:`open <numpy.lib.npyio.DataSource.open>`\\ \\(path\\[\\, mode\\, "
+"encoding\\, newline\\]\\)"
+msgstr ""
+":py:obj:`open <numpy.lib.npyio.DataSource.open>`\\ \\(path\\[\\, mode\\, "
+"encoding\\, newline\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:33:<autosummary>:1
+msgid "Open and return file-like object."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:35
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:36
+msgid ""
+"URLs require a scheme string (``http://``) to be used, without it they will "
+"fail::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:39
+msgid ""
+">>> repos = np.lib.npyio.DataSource()\n"
+">>> repos.exists('www.google.com/index.html')\n"
+"False\n"
+">>> repos.exists('http://www.google.com/index.html')\n"
+"True"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:45
+msgid "Temporary directories are deleted when the DataSource is deleted."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:49
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:56
+msgid ""
+">>> ds = np.lib.npyio.DataSource('/home/guido')\n"
+">>> urlname = 'http://www.google.com/'\n"
+">>> gfile = ds.open('http://www.google.com/')\n"
+">>> ds.abspath(urlname)\n"
+"'/home/guido/www.google.com/index.html'\n"
+"\n"
+">>> ds = np.lib.npyio.DataSource(None)  # use with temporary file\n"
+">>> ds.open('/home/guido/foobar.txt')\n"
+"<open file '/home/guido.foobar.txt', mode 'r' at 0x91d4430>\n"
+">>> ds.abspath('/home/guido/foobar.txt')\n"
+"'/tmp/.../home/guido/foobar.txt'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:-1
+msgid ""
+"<div id=\"528944b0-2f3f-4847-885a-c9372d7d77bc\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('9e117257-d5d6-444c-"
+"a8dc-1a35476c80d7','528944b0-2f3f-4847-885a-c9372d7d77bc')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('9e117257-d5d6-444c-a8dc-1a35476c80d7','528944b0-2f3f-4847-885a-"
+"c9372d7d77bc')\">Open In Tab</button></div><div id=\"31798ea1-6718-4372-bb1c-"
+"d92a95c8ce57\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""
