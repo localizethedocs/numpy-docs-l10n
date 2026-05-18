@@ -1,0 +1,142 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.result_type.rst:4
+msgid "numpy.result\\_type"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.result_type:2
+msgid ""
+"Returns the type that results from applying the NumPy type promotion rules "
+"to the arguments."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.result_type:5
+msgid ""
+"Type promotion in NumPy works similarly to the rules in languages like C++, "
+"with some slight differences.  When both scalars and arrays are used, the "
+"array's type takes precedence and the actual value of the scalar is taken "
+"into account."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.result_type:10
+msgid ""
+"For example, calculating 3*a, where a is an array of 32-bit floats, "
+"intuitively should result in a 32-bit float output.  If the 3 is a 32-bit "
+"integer, the NumPy rules indicate it can't convert losslessly into a 32-bit "
+"float, so a 64-bit float should be the result type. By examining the value "
+"of the constant, '3', we see that it fits in an 8-bit integer, which can be "
+"cast losslessly into the 32-bit float."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.result_type:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.result_type:20
+msgid "**arrays_and_dtypes**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.result_type:-1
+msgid "list of arrays and dtypes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.result_type:20
+msgid "The operands of some operation whose result type is needed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.result_type:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.result_type:31
+msgid "**out**"
+msgstr "**out**"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.result_type:-1
+msgid "dtype"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.result_type:25
+msgid "The result type."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.result_type:36
+msgid ""
+":obj:`dtype`, :obj:`promote_types`, :obj:`min_scalar_type`, :obj:`can_cast`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.result_type:40
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.result_type:43
+msgid "The specific algorithm used is as follows."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.result_type:45
+msgid ""
+"Categories are determined by first checking which of boolean, integer (int/"
+"uint), or floating point (float/complex) the maximum kind of all the arrays "
+"and the scalars are."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.result_type:49
+msgid ""
+"If there are only scalars or the maximum category of the scalars is higher "
+"than the maximum category of the arrays, the data types are combined with :"
+"func:`promote_types` to produce the return value."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.result_type:54
+msgid ""
+"Otherwise, `min_scalar_type` is called on each scalar, and the resulting "
+"data types are all combined with :func:`promote_types` to produce the return "
+"value."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.result_type:58
+msgid ""
+"The set of int values is not a subset of the uint values for types with the "
+"same number of bits, something not reflected in :func:`min_scalar_type`, but "
+"handled as a special case in `result_type`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.result_type:64
+msgid "Examples"
+msgstr "範例"

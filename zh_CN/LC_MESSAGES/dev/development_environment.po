@@ -1,0 +1,498 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../dev/development_environment.rst:4
+msgid "Setting up and using your development environment"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:9
+msgid "Recommended development setup"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:11
+msgid ""
+"Since NumPy contains parts written in C and Cython that need to be compiled "
+"before use, make sure you have the necessary compilers and Python "
+"development headers installed - see :ref:`building-from-source`. Building "
+"NumPy as of version ``1.17`` requires a C99 compliant compiler."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:16
+msgid ""
+"Having compiled code also means that importing NumPy from the development "
+"sources needs some additional steps, which are explained below.  For the "
+"rest of this chapter we assume that you have set up your git repo as "
+"described in :ref:`using-git`."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:23
+msgid ""
+"If you are having trouble building NumPy from source or setting up your "
+"local development environment, you can try to build NumPy with GitHub "
+"Codespaces. It allows you to create the correct development environment "
+"right in your browser, reducing the need to install local development "
+"environments and deal with incompatible dependencies."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:29
+msgid ""
+"If you have good internet connectivity and want a temporary set-up, it is "
+"often faster to work on NumPy in a Codespaces environment. For documentation "
+"on how to get started with Codespaces, see `the Codespaces docs <https://"
+"docs.github.com/en/codespaces>`__. When creating a codespace for the ``numpy/"
+"numpy`` repository, the default 2-core machine type works; 4-core will build "
+"and work a bit faster (but of course at a cost of halving your number of "
+"free usage hours). Once your codespace has started, you can run ``conda "
+"activate numpy-dev`` and your development environment is completely set up - "
+"you can then follow the relevant parts of the NumPy documentation to build, "
+"test, develop, write docs, and contribute to NumPy."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:42
+msgid "Using virtual environments"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:44
+msgid ""
+"A frequently asked question is \"How do I set up a development version of "
+"NumPy in parallel to a released version that I use to do my job/research?\"."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:47
+msgid ""
+"One simple way to achieve this is to install the released version in site-"
+"packages, by using pip or conda for example, and set up the development "
+"version in a virtual environment."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:51
+msgid ""
+"If you use conda, we recommend creating a separate virtual environment for "
+"numpy development using the ``environment.yml`` file in the root of the repo "
+"(this will create the environment and install all development dependencies "
+"at once)::"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:56
+msgid ""
+"$ conda env create -f environment.yml  # `mamba` works too for this command\n"
+"$ conda activate numpy-dev"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:59
+msgid ""
+"If you installed Python some other way than conda, first install "
+"`virtualenv`_ (optionally use `virtualenvwrapper`_), then create your "
+"virtualenv (named ``numpy-dev`` here) with::"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:63
+msgid "$ virtualenv numpy-dev"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:65
+msgid ""
+"Now, whenever you want to switch to the virtual environment, you can use the "
+"command ``source numpy-dev/bin/activate``, and ``deactivate`` to exit from "
+"the virtual environment and back to your previous shell."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:73
+msgid "Testing builds"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:75
+msgid "Before running the tests, first install the test dependencies::"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:77
+msgid ""
+"$ python -m pip install -r test_requirements.txt\n"
+"$ python -m pip install asv # only for running benchmarks"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:80
+msgid ""
+"To build the development version of NumPy and run tests, spawn interactive "
+"shells with the Python import paths properly set up etc., use the `spin "
+"<https://github.com/scientific-python/spin>`_ utility. To run tests, do one "
+"of::"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:85
+msgid ""
+"$ spin test -v\n"
+"$ spin test numpy/random  # to run the tests in a specific module\n"
+"$ spin test -v -t numpy/core/tests/test_nditer.py::test_iter_c_order"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:89
+msgid "This builds NumPy first, so the first time it may take a few minutes."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:91
+msgid ""
+"You can also use ``spin bench`` for benchmarking. See ``spin --help`` for "
+"more command line options."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:96
+msgid ""
+"If the above commands result in ``RuntimeError: Cannot parse version "
+"0+untagged.xxxxx``, run ``git pull upstream main --tags``."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:99
+msgid ""
+"Additional arguments may be forwarded to ``pytest`` by passing the extra "
+"arguments after a bare ``--``. For example, to run a test method with the "
+"``--pdb`` flag forwarded to the target, run the following::"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:103
+msgid "$ spin test -t numpy/tests/test_scripts.py::test_f2py -- --pdb"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:105
+msgid ""
+"You can also  `match test names using python operators`_ by passing the ``-"
+"k`` argument to pytest::"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:108
+msgid ""
+"$ spin test -v -t numpy/core/tests/test_multiarray.py -- -k \"MatMul and not "
+"vector\""
+msgstr ""
+
+#: ../../../dev/development_environment.rst:112
+msgid ""
+"Remember that all tests of NumPy should pass before committing your changes."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:116
+msgid ""
+"Some of the tests in the test suite require a large amount of memory, and "
+"are skipped if your system does not have enough."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:126
+msgid "Other build options"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:128
+msgid ""
+"For more options including selecting compilers, setting custom compiler "
+"flags and controlling parallelism, see :doc:`scipy:building/"
+"compilers_and_options` (from the SciPy documentation.)"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:134
+msgid "Running tests"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:136
+msgid ""
+"Besides using ``spin``, there are various ways to run the tests.  Inside the "
+"interpreter, tests can be run like this::"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:139
+msgid ""
+">>> np.test()  \n"
+">>> np.test('full')   # Also run tests marked as slow\n"
+">>> np.test('full', verbose=2)   # Additionally print test name/file\n"
+"\n"
+"An example of a successful test :\n"
+"``4686 passed, 362 skipped, 9 xfailed, 5 warnings in 213.99 seconds``"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:146
+msgid "Or a similar way from the command line::"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:148
+msgid "$ python -c \"import numpy as np; np.test()\""
+msgstr ""
+
+#: ../../../dev/development_environment.rst:150
+msgid ""
+"Tests can also be run with ``pytest numpy``, however then the NumPy-specific "
+"plugin is not found which causes strange side effects."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:153
+msgid ""
+"Running individual test files can be useful; it's much faster than running "
+"the whole test suite or that of a whole module (example: ``np.random."
+"test()``). This can be done with::"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:157
+msgid "$ python path_to_testfile/test_file.py"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:159
+msgid ""
+"That also takes extra arguments, like ``--pdb`` which drops you into the "
+"Python debugger when a test fails or an exception is raised."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:162
+msgid ""
+"Running tests with `tox`_ is also supported.  For example, to build NumPy "
+"and run the test suite with Python 3.9, use::"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:165
+msgid "$ tox -e py39"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:167
+msgid "For more extensive information, see :ref:`testing-guidelines`."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:169
+msgid ""
+"Note: do not run the tests from the root directory of your numpy git repo "
+"without ``spin``, that will result in strange test errors."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:173
+msgid "Running Linting"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:174
+msgid "Lint checks can be performed on newly added lines of Python code."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:176
+msgid "Install all dependent packages using pip::"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:178
+msgid "$ python -m pip install -r linter_requirements.txt"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:180
+msgid "To run lint checks before committing new code, run::"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:182
+msgid "$ python tools/linter.py"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:184
+msgid ""
+"To check all changes in newly added Python code of current branch with "
+"target branch, run::"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:186
+msgid "$ python tools/linter.py --branch main"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:188
+msgid ""
+"If there are no errors, the script exits with no message. In case of errors, "
+"check the error message for details::"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:191
+msgid ""
+"$ python tools/linter.py --branch main\n"
+"./numpy/core/tests/test_scalarmath.py:34:5: E303 too many blank lines (3)\n"
+"1       E303 too many blank lines (3)"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:195
+msgid ""
+"It is advisable to run lint checks before pushing commits to a remote branch "
+"since the linter runs as part of the CI pipeline."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:198
+msgid "For more details on Style Guidelines:"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:200
+msgid "`Python Style Guide`_"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:201
+msgid "`C Style Guide`_"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:204
+msgid "Rebuilding & cleaning the workspace"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:206
+msgid ""
+"Rebuilding NumPy after making changes to compiled code can be done with the "
+"same build command as you used previously - only the changed files will be "
+"re-built.  Doing a full build, which sometimes is necessary, requires "
+"cleaning the workspace first.  The standard way of doing this is (*note: "
+"deletes any uncommitted files!*)::"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:212
+msgid "$ git clean -xdf"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:214
+msgid ""
+"When you want to discard all changes and go back to the last commit in the "
+"repo, use one of::"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:217
+msgid ""
+"$ git checkout .\n"
+"$ git reset --hard"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:224
+msgid "Debugging"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:226
+msgid ""
+"Another frequently asked question is \"How do I debug C code inside NumPy?"
+"\". First, ensure that you have gdb installed on your system with the Python "
+"extensions (often the default on Linux). You can see which version of Python "
+"is running inside gdb to verify your setup::"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:231
+msgid ""
+"(gdb) python\n"
+">import sys\n"
+">print(sys.version_info)\n"
+">end\n"
+"sys.version_info(major=3, minor=7, micro=0, releaselevel='final', serial=0)"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:237
+msgid ""
+"Most python builds do not include debug symbols and are built with compiler "
+"optimizations enabled. To get the best debugging experience using a debug "
+"build of Python is encouraged, see :ref:`advanced_debugging`."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:241
+msgid ""
+"Next you need to write a Python script that invokes the C code whose "
+"execution you want to debug. For instance ``mytest.py``::"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:244
+msgid ""
+"import numpy as np\n"
+"x = np.arange(5)\n"
+"np.empty_like(x)"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:248
+msgid "Now, you can run::"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:250
+msgid "$ spin gdb mytest.py"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:252
+msgid "And then in the debugger::"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:254
+msgid ""
+"(gdb) break array_empty_like\n"
+"(gdb) run"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:257
+msgid ""
+"The execution will now stop at the corresponding C function and you can step "
+"through it as usual. A number of useful Python-specific commands are "
+"available. For example to see where in the Python code you are, use ``py-"
+"list``, to see the python traceback, use ``py-bt``.  For more details, see "
+"`DebuggingWithGdb`_. Here are some commonly used commands:"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:263
+msgid "``list``: List specified function or line."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:264
+msgid "``next``: Step program, proceeding through subroutine calls."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:265
+msgid "``step``: Continue program being debugged, after signal or breakpoint."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:266
+msgid "``print``: Print value of expression EXP."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:268
+msgid ""
+"Rich support for Python debugging requires that the ``python-gdb.py`` script "
+"distributed with Python is installed in a path where gdb can find it. If you "
+"installed your Python build from your system package manager, you likely do "
+"not need to manually do anything. However, if you built Python from source, "
+"you will likely need to create a ``.gdbinit`` file in your home directory "
+"pointing gdb at the location of your Python installation. For example, a "
+"version of python installed via `pyenv <https://github.com/pyenv/pyenv>`_ "
+"needs a ``.gdbinit`` file with the following contents:"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:277
+msgid "add-auto-load-safe-path ~/.pyenv"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:281
+msgid ""
+"Building NumPy with a Python built with debug support (on Linux "
+"distributions typically packaged as ``python-dbg``) is highly recommended."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:294
+msgid "Understanding the code & getting started"
+msgstr ""
+
+#: ../../../dev/development_environment.rst:296
+msgid ""
+"The best strategy to better understand the code base is to pick something "
+"you want to change and start reading the code to figure out how it works. "
+"When in doubt, you can ask questions on the mailing list. It is perfectly "
+"okay if your pull requests aren't perfect, the community is always happy to "
+"help. As a volunteer project, things do sometimes get dropped and it's "
+"totally fine to ping us if something has sat without a response for about "
+"two to four weeks."
+msgstr ""
+
+#: ../../../dev/development_environment.rst:303
+msgid ""
+"So go ahead and pick something that annoys or confuses you about NumPy, "
+"experiment with the code, hang around for discussions or go through the "
+"reference documents to try to fix it. Things will fall in place and soon "
+"you'll have a pretty good understanding of the project as a whole. Good Luck!"
+msgstr ""
