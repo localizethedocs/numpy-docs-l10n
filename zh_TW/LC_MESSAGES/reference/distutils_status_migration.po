@@ -1,0 +1,228 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/distutils_status_migration.rst:4
+msgid "Status of ``numpy.distutils`` and migration advice"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:6
+msgid ""
+"`numpy.distutils` has been deprecated in NumPy ``1.23.0``. It will be "
+"removed for Python 3.12; for Python <= 3.11 it will not be removed until 2 "
+"years after the Python 3.12 release (Oct 2025)."
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:13
+msgid ""
+"``numpy.distutils`` is only tested with ``setuptools < 60.0``, newer "
+"versions may break. See :ref:`numpy-setuptools-interaction` for details."
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:18
+msgid "Migration advice"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:20
+msgid ""
+"There are several build systems which are good options to migrate to. "
+"Assuming you have compiled code in your package (if not, you have several "
+"good options, e.g. the build backends offered by Poetry, Hatch or PDM) and "
+"you want to be using a well-designed, modern and reliable build system, we "
+"recommend:"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:25
+msgid "Meson_, and the meson-python_ build backend"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:26
+msgid "CMake_, and the scikit-build-core_ build backend"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:28
+msgid ""
+"If you have modest needs (only simple Cython/C extensions; no need for "
+"Fortran, BLAS/LAPACK, nested ``setup.py`` files, or other features of "
+"``numpy.distutils``) and have been happy with ``numpy.distutils`` so far, "
+"you can also consider switching to ``setuptools``. Note that most "
+"functionality of ``numpy.distutils`` is unlikely to be ported to "
+"``setuptools``."
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:35
+msgid "Moving to Meson"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:37
+msgid ""
+"SciPy has moved to Meson and meson-python for its 1.9.0 release. During this "
+"process, remaining issues with Meson's Python support and feature parity "
+"with ``numpy.distutils`` were resolved. *Note: parity means a large superset "
+"(because Meson is a good general-purpose build system); only a few BLAS/"
+"LAPACK library selection niceties are missing*. SciPy uses almost all "
+"functionality that ``numpy.distutils`` offers, so if SciPy has successfully "
+"made a release with Meson as the build system, there should be no blockers "
+"left to migrate, and SciPy will be a good reference for other packages who "
+"are migrating. For more details about the SciPy migration, see:"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:47
+msgid ""
+"`RFC: switch to Meson as a build system <https://github.com/scipy/scipy/"
+"issues/13615>`__"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:48
+msgid ""
+"`Tracking issue for Meson support <https://github.com/rgommers/scipy/"
+"issues/22>`__"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:50
+msgid "NumPy will migrate to Meson for the 1.26 release."
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:54
+msgid "Moving to CMake / scikit-build"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:56
+msgid ""
+"The next generation of scikit-build is called scikit-build-core_. Where the "
+"older ``scikit-build`` used ``setuptools`` underneath, the rewrite does not. "
+"Like Meson, CMake is a good general-purpose build system."
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:62
+msgid "Moving to ``setuptools``"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:64
+msgid ""
+"For projects that only use ``numpy.distutils`` for historical reasons, and "
+"do not actually use features beyond those that ``setuptools`` also supports, "
+"moving to ``setuptools`` is likely the solution which costs the least "
+"effort. To assess that, there are the ``numpy.distutils`` features that are "
+"*not* present in ``setuptools``:"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:70
+msgid "Nested ``setup.py`` files"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:71
+msgid "Fortran build support"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:72
+msgid ""
+"BLAS/LAPACK library support (OpenBLAS, MKL, ATLAS, Netlib LAPACK/BLAS, BLIS, "
+"64-bit ILP interface, etc.)"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:73
+msgid "Support for a few other scientific libraries, like FFTW and UMFPACK"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:74
+msgid "Better MinGW support"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:75
+msgid ""
+"Per-compiler build flag customization (e.g. `-O3` and `SSE2` flags are "
+"default)"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:76
+msgid ""
+"a simple user build config system, see `site.cfg.example <https://github.com/"
+"numpy/numpy/blob/master/site.cfg.example>`__"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:77
+msgid "SIMD intrinsics support"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:78
+msgid ""
+"Support for the NumPy-specific ``.src`` templating format for ``.c``/``.h`` "
+"files"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:80
+msgid ""
+"The most widely used feature is nested ``setup.py`` files. This feature may "
+"perhaps still be ported to ``setuptools`` in the future (it needs a "
+"volunteer though, see `gh-18588 <https://github.com/numpy/numpy/"
+"issues/18588>`__ for status). Projects only using that feature could move to "
+"``setuptools`` after that is done. In case a project uses only a couple of "
+"``setup.py`` files, it also could make sense to simply aggregate all the "
+"content of those files into a single ``setup.py`` file and then move to "
+"``setuptools``. This involves dropping all ``Configuration`` instances, and "
+"using ``Extension`` instead. E.g.,::"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:90
+msgid ""
+"from distutils.core import setup\n"
+"from distutils.extension import Extension\n"
+"setup(name='foobar',\n"
+"      version='1.0',\n"
+"      ext_modules=[\n"
+"          Extension('foopkg.foo', ['foo.c']),\n"
+"          Extension('barpkg.bar', ['bar.c']),\n"
+"          ],\n"
+"      )"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:100
+msgid ""
+"For more details, see the `setuptools documentation <https://setuptools.pypa."
+"io/en/latest/setuptools.html>`__"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:107
+msgid "Interaction of ``numpy.distutils`` with ``setuptools``"
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:109
+msgid ""
+"It is recommended to use ``setuptools < 60.0``. Newer versions may work, but "
+"are not guaranteed to. The reason for this is that ``setuptools`` 60.0 "
+"enabled a vendored copy of ``distutils``, including backwards incompatible "
+"changes that affect some functionality in ``numpy.distutils``."
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:114
+msgid ""
+"If you are using only simple Cython or C extensions with minimal use of "
+"``numpy.distutils`` functionality beyond nested ``setup.py`` files (its most "
+"popular feature, see :class:`Configuration <numpy.distutils.misc_util."
+"Configuration>`), then latest ``setuptools`` is likely to continue working. "
+"In case of problems, you can also try ``SETUPTOOLS_USE_DISTUTILS=stdlib`` to "
+"avoid the backwards incompatible changes in ``setuptools``."
+msgstr ""
+
+#: ../../../reference/distutils_status_migration.rst:121
+msgid ""
+"Whatever you do, it is recommended to put an upper bound on your "
+"``setuptools`` build requirement in ``pyproject.toml`` to avoid future "
+"breakage - see :ref:`for-downstream-package-authors`."
+msgstr ""

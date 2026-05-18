@@ -1,0 +1,881 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/generator.rst:4
+msgid "Random ``Generator``"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:5
+msgid ""
+"The `Generator` provides access to a wide range of distributions, and served "
+"as a replacement for :class:`~numpy.random.RandomState`.  The main "
+"difference between the two is that `Generator` relies on an additional "
+"BitGenerator to manage state and generate the random bits, which are then "
+"transformed into random values from useful distributions. The default "
+"BitGenerator used by `Generator` is `PCG64`.  The BitGenerator can be "
+"changed by passing an instantized BitGenerator to `Generator`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.default_rng:2
+msgid "Construct a new Generator with the default BitGenerator (PCG64)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.default_rng:0 ../../../../docstring
+#: numpy.random._generator.Generator:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.default_rng:15
+msgid "**seed**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.default_rng:-1
+msgid ""
+"{None, int, array_like[ints], SeedSequence, BitGenerator, Generator, "
+"RandomState}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.default_rng:8
+msgid ""
+"A seed to initialize the `BitGenerator`. If None, then fresh, unpredictable "
+"entropy will be pulled from the OS. If an ``int`` or ``array_like[ints]`` is "
+"passed, then all values must be non-negative and will be passed to "
+"`SeedSequence` to derive the initial `BitGenerator` state. One may also pass "
+"in a `SeedSequence` instance. Additionally, when passed a `BitGenerator`, it "
+"will be wrapped by `Generator`. If passed a `Generator`, it will be returned "
+"unaltered. When passed a legacy `RandomState` instance it will be coerced to "
+"a `Generator`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.default_rng:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.default_rng:27
+msgid "Generator"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.default_rng:20
+msgid "The initialized generator object."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.default_rng:30 ../../../../docstring
+#: numpy.random._generator.Generator:40
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.default_rng:31
+msgid ""
+"If ``seed`` is not a `BitGenerator` or a `Generator`, a new `BitGenerator` "
+"is instantiated. This function does not manage a default global instance."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.default_rng:34
+msgid "See :ref:`seeding_and_entropy` for more information about seeding."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.default_rng:38 ../../../../docstring
+#: numpy.random._generator.Generator:51
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.default_rng:43
+msgid ""
+"`default_rng` is the recommended constructor for the random number class "
+"`Generator`. Here are several ways we can construct a random number "
+"generator using `default_rng` and the `Generator` class."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.default_rng:47
+msgid "Here we use `default_rng` to generate a random float:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.default_rng:59
+msgid ""
+"Here we use `default_rng` to generate 3 random integers between 0 "
+"(inclusive) and 10 (exclusive):"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.default_rng:70
+msgid "Here we specify a seed so that we have reproducible results:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.default_rng:82
+msgid ""
+"If we exit and restart our Python interpreter, we'll see that we generate "
+"the same random numbers again:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.default_rng:-1
+msgid ""
+"<div id=\"b07cc511-43c6-485c-a99e-758c0e2234c1\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('1edabfcf-21f2-4bfd-a795-"
+"a26ebbeb164e','b07cc511-43c6-485c-a99e-758c0e2234c1')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('1edabfcf-21f2-4bfd-a795-a26ebbeb164e','b07cc511-43c6-485c-"
+"a99e-758c0e2234c1')\">Open In Tab</button></div><div id=\"9268e050-6526-4235-"
+"a8a2-0b6184ec1f0f\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.default_rng:-1 ../../../reference/random/generator.rst:-1
+#: ../../../../docstring numpy.random._generator.Generator:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator:2
+msgid "Container for the BitGenerators."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator:4
+msgid ""
+"`Generator` exposes a number of methods for generating random numbers drawn "
+"from a variety of probability distributions. In addition to the distribution-"
+"specific arguments, each method takes a keyword argument `size` that "
+"defaults to ``None``. If `size` is ``None``, then a single value is "
+"generated and returned. If `size` is an integer, then a 1-D array filled "
+"with generated values is returned. If `size` is a tuple, then an array with "
+"that shape is filled and returned."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator:12
+msgid ""
+"The function :func:`numpy.random.default_rng` will instantiate a `Generator` "
+"with numpy's default `BitGenerator`."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator:15
+msgid "**No Compatibility Guarantee**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator:17
+msgid ""
+"`Generator` does not provide a version compatibility guarantee. In "
+"particular, as better algorithms evolve the bit stream may change."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator:30
+msgid "**bit_generator**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator:-1
+msgid "BitGenerator"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator:23
+msgid "BitGenerator to use as the core generator."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator:35
+msgid ":obj:`default_rng`"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator:36
+msgid "Recommended constructor for `Generator`."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator:41
+msgid ""
+"The Python stdlib module :external+python:mod:`random` contains pseudo-"
+"random number generator with a number of methods that are similar to the "
+"ones available in `Generator`. It uses Mersenne Twister, and this bit "
+"generator can be accessed using `MT19937`. `Generator`, besides being NumPy-"
+"aware, has the advantage that it provides a much larger number of "
+"probability distributions to choose from."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator:-1
+msgid ""
+"<div id=\"22d9e936-0582-495e-8982-a4da3e594f3a\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('be6ccd73-433e-47af-9c0a-0d71debc2750','22d9e936-0582-495e-8982-"
+"a4da3e594f3a')\">Go Back</button><button class=\"try_examples_button\" "
+"onclick=\"window."
+"openInNewTab('be6ccd73-433e-47af-9c0a-0d71debc2750','22d9e936-0582-495e-8982-"
+"a4da3e594f3a')\">Open In Tab</button></div><div id=\"4be5b062-1f5d-445c-"
+"ad80-293994cb3e75\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:22
+msgid "Accessing the BitGenerator and spawning"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:28:<autosummary>:1
+msgid ":py:obj:`bit_generator <numpy.random.Generator.bit_generator>`\\"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:28:<autosummary>:1
+msgid "Gets the bit generator instance used by the generator"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:28:<autosummary>:1
+msgid ":py:obj:`spawn <numpy.random.Generator.spawn>`\\ \\(n\\_children\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:28:<autosummary>:1
+msgid "Create new independent child generators."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:30
+msgid "Simple random data"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:38:<autosummary>:1
+msgid ""
+":py:obj:`integers <numpy.random.Generator.integers>`\\ \\(low\\[\\, high\\, "
+"size\\, dtype\\, endpoint\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:38:<autosummary>:1
+msgid ""
+"Return random integers from `low` (inclusive) to `high` (exclusive), or if "
+"endpoint=True, `low` (inclusive) to `high` (inclusive)."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:38:<autosummary>:1
+msgid ""
+":py:obj:`random <numpy.random.Generator.random>`\\ \\(\\[size\\, dtype\\, "
+"out\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:38:<autosummary>:1
+msgid "Return random floats in the half-open interval [0.0, 1.0)."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:38:<autosummary>:1
+msgid ""
+":py:obj:`choice <numpy.random.Generator.choice>`\\ \\(a\\[\\, size\\, "
+"replace\\, p\\, axis\\, shuffle\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:38:<autosummary>:1
+msgid "Generates a random sample from a given array"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:38:<autosummary>:1
+msgid ":py:obj:`bytes <numpy.random.Generator.bytes>`\\ \\(length\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:38:<autosummary>:1
+msgid "Return random bytes."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:40
+msgid "Permutations"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:41
+msgid "The methods for randomly permuting a sequence are"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:49:<autosummary>:1
+msgid ""
+":py:obj:`shuffle <numpy.random.Generator.shuffle>`\\ \\(x\\[\\, axis\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:49:<autosummary>:1
+msgid "Modify an array or sequence in-place by shuffling its contents."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:49:<autosummary>:1
+msgid ""
+":py:obj:`permutation <numpy.random.Generator.permutation>`\\ \\(x\\[\\, "
+"axis\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:49:<autosummary>:1
+msgid "Randomly permute a sequence, or return a permuted range."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:49:<autosummary>:1
+msgid ""
+":py:obj:`permuted <numpy.random.Generator.permuted>`\\ \\(x\\[\\, axis\\, "
+"out\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:49:<autosummary>:1
+msgid "Randomly permute `x` along axis `axis`."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:50
+msgid "The following table summarizes the behaviors of the methods."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:53
+msgid "method"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:53
+msgid "copy/in-place"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:53
+msgid "axis handling"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:55
+msgid "shuffle"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:55
+msgid "in-place"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:55
+#: ../../../reference/random/generator.rst:57
+msgid "as if 1d"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:57
+msgid "permutation"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:57
+msgid "copy"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:59
+msgid "permuted"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:59
+msgid "either (use 'out' for in-place)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:59
+msgid "axis independent"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:63
+msgid "The following subsections provide more details about the differences."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:66
+msgid "In-place vs. copy"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:67
+msgid ""
+"The main difference between `Generator.shuffle` and `Generator.permutation` "
+"is that `Generator.shuffle` operates in-place, while `Generator.permutation` "
+"returns a copy."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:71
+msgid ""
+"By default, `Generator.permuted` returns a copy.  To operate in-place with "
+"`Generator.permuted`, pass the same array as the first argument *and* as the "
+"value of the ``out`` parameter.  For example,"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:90
+msgid "Note that when ``out`` is given, the return value is ``out``:"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:-1
+msgid ""
+"<div id=\"b7a94e6a-f956-4b94-88a1-1cf28b9cbaf4\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('760465c5-ef39-4061-875e-de964d698307','b7a94e6a-"
+"f956-4b94-88a1-1cf28b9cbaf4')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('760465c5-"
+"ef39-4061-875e-de964d698307','b7a94e6a-f956-4b94-88a1-1cf28b9cbaf4')\">Open "
+"In Tab</button></div><div id=\"627b8604-cd54-44a9-8ecc-08d20e51f6ef\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:98
+msgid "Handling the ``axis`` parameter"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:99
+msgid ""
+"An important distinction for these methods is how they handle the ``axis`` "
+"parameter.  Both `Generator.shuffle` and `Generator.permutation` treat the "
+"input as a one-dimensional sequence, and the ``axis`` parameter determines "
+"which dimension of the input array to use as the sequence. In the case of a "
+"two-dimensional array, ``axis=0`` will, in effect, rearrange the rows of the "
+"array, and  ``axis=1`` will rearrange the columns.  For example"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:-1
+msgid ""
+"<div id=\"ff214073-c304-486c-8c95-3961eba6b1b3\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('519fa7d2-d567-462e-bec1-4d6d06b8797e','ff214073-"
+"c304-486c-8c95-3961eba6b1b3')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('519fa7d2-"
+"d567-462e-bec1-4d6d06b8797e','ff214073-c304-486c-8c95-3961eba6b1b3')\">Open "
+"In Tab</button></div><div id=\"01aae4b9-0940-42ba-89a7-15d9bce4ffd7\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:120
+msgid ""
+"Note that the columns have been rearranged \"in bulk\": the values within "
+"each column have not changed."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:123
+msgid ""
+"The method `Generator.permuted` treats the ``axis`` parameter similar to how "
+"`numpy.sort` treats it.  Each slice along the given axis is shuffled "
+"independently of the others.  Compare the following example of the use of "
+"`Generator.permuted` to the above example of `Generator.permutation`:"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:-1
+msgid ""
+"<div id=\"00d36e42-e97e-4d82-aaac-7a138b5d94fc\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('e4d2dd1a-fe13-4518-8310-b1f236bc2136','00d36e42-"
+"e97e-4d82-aaac-7a138b5d94fc')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('e4d2dd1a-"
+"fe13-4518-8310-b1f236bc2136','00d36e42-e97e-4d82-aaac-7a138b5d94fc')\">Open "
+"In Tab</button></div><div id=\"ff5824e2-f016-48d6-8692-abd7dfaf20f3\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:137
+msgid ""
+"In this example, the values within each row (i.e. the values along "
+"``axis=1``) have been shuffled independently.  This is not a \"bulk\" "
+"shuffle of the columns."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:142
+msgid "Shuffling non-NumPy sequences"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:143
+msgid ""
+"`Generator.shuffle` works on non-NumPy sequences.  That is, if it is given a "
+"sequence that is not a NumPy array, it shuffles that sequence in-place."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:-1
+msgid ""
+"<div id=\"3a286ed8-e56a-4079-ac0a-85d954ec05c9\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('f5f80fa8-fc91-4cbe-afb1-430162dfc9be','3a286ed8-"
+"e56a-4079-ac0a-85d954ec05c9')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('f5f80fa8-"
+"fc91-4cbe-afb1-430162dfc9be','3a286ed8-e56a-4079-ac0a-85d954ec05c9')\">Open "
+"In Tab</button></div><div id=\"704595d8-6006-4396-aebe-d9d93fcc86e9\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:156
+msgid "Distributions"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`beta <numpy.random.Generator.beta>`\\ \\(a\\, b\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a Beta distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`binomial <numpy.random.Generator.binomial>`\\ \\(n\\, p\\[\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a binomial distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`chisquare <numpy.random.Generator.chisquare>`\\ \\(df\\[\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a chi-square distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`dirichlet <numpy.random.Generator.dirichlet>`\\ \\(alpha\\[\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from the Dirichlet distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`exponential <numpy.random.Generator.exponential>`\\ \\(\\[scale\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from an exponential distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`f <numpy.random.Generator.f>`\\ \\(dfnum\\, dfden\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from an F distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`gamma <numpy.random.Generator.gamma>`\\ \\(shape\\[\\, scale\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a Gamma distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`geometric <numpy.random.Generator.geometric>`\\ \\(p\\[\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from the geometric distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`gumbel <numpy.random.Generator.gumbel>`\\ \\(\\[loc\\, scale\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a Gumbel distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`hypergeometric <numpy.random.Generator.hypergeometric>`\\ "
+"\\(ngood\\, nbad\\, nsample\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a Hypergeometric distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`laplace <numpy.random.Generator.laplace>`\\ \\(\\[loc\\, scale\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+"Draw samples from the Laplace or double exponential distribution with "
+"specified location (or mean) and scale (decay)."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`logistic <numpy.random.Generator.logistic>`\\ \\(\\[loc\\, scale\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a logistic distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`lognormal <numpy.random.Generator.lognormal>`\\ \\(\\[mean\\, "
+"sigma\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a log-normal distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`logseries <numpy.random.Generator.logseries>`\\ \\(p\\[\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a logarithmic series distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`multinomial <numpy.random.Generator.multinomial>`\\ \\(n\\, "
+"pvals\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a multinomial distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`multivariate_hypergeometric <numpy.random.Generator."
+"multivariate_hypergeometric>`\\ \\(colors\\, nsample\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Generate variates from a multivariate hypergeometric distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`multivariate_normal <numpy.random.Generator.multivariate_normal>`\\ "
+"\\(mean\\, cov\\[\\, size\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw random samples from a multivariate normal distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`negative_binomial <numpy.random.Generator.negative_binomial>`\\ "
+"\\(n\\, p\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a negative binomial distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`noncentral_chisquare <numpy.random.Generator."
+"noncentral_chisquare>`\\ \\(df\\, nonc\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a noncentral chi-square distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`noncentral_f <numpy.random.Generator.noncentral_f>`\\ \\(dfnum\\, "
+"dfden\\, nonc\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from the noncentral F distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`normal <numpy.random.Generator.normal>`\\ \\(\\[loc\\, scale\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw random samples from a normal (Gaussian) distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`pareto <numpy.random.Generator.pareto>`\\ \\(a\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+"Draw samples from a Pareto II (AKA Lomax) distribution with specified shape."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`poisson <numpy.random.Generator.poisson>`\\ \\(\\[lam\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a Poisson distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ":py:obj:`power <numpy.random.Generator.power>`\\ \\(a\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+"Draws samples in [0, 1] from a power distribution with positive exponent a - "
+"1."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`rayleigh <numpy.random.Generator.rayleigh>`\\ \\(\\[scale\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a Rayleigh distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`standard_cauchy <numpy.random.Generator.standard_cauchy>`\\ "
+"\\(\\[size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a standard Cauchy distribution with mode = 0."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`standard_exponential <numpy.random.Generator."
+"standard_exponential>`\\ \\(\\[size\\, dtype\\, method\\, out\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from the standard exponential distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`standard_gamma <numpy.random.Generator.standard_gamma>`\\ "
+"\\(shape\\[\\, size\\, dtype\\, out\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a standard Gamma distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`standard_normal <numpy.random.Generator.standard_normal>`\\ "
+"\\(\\[size\\, dtype\\, out\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a standard Normal distribution (mean=0, stdev=1)."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`standard_t <numpy.random.Generator.standard_t>`\\ \\(df\\[\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+"Draw samples from a standard Student's t distribution with `df` degrees of "
+"freedom."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`triangular <numpy.random.Generator.triangular>`\\ \\(left\\, "
+"mode\\, right\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+"Draw samples from the triangular distribution over the interval ``[left, "
+"right]``."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`uniform <numpy.random.Generator.uniform>`\\ \\(\\[low\\, high\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a uniform distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`vonmises <numpy.random.Generator.vonmises>`\\ \\(mu\\, kappa\\[\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a von Mises distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`wald <numpy.random.Generator.wald>`\\ \\(mean\\, scale\\[\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a Wald, or inverse Gaussian, distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ""
+":py:obj:`weibull <numpy.random.Generator.weibull>`\\ \\(a\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a Weibull distribution."
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid ":py:obj:`zipf <numpy.random.Generator.zipf>`\\ \\(a\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/generator.rst:195:<autosummary>:1
+msgid "Draw samples from a Zipf distribution."
+msgstr ""

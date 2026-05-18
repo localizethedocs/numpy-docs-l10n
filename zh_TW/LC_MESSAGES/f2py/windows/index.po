@@ -1,0 +1,408 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../f2py/windows/index.rst:5
+msgid "F2PY and Windows"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:9
+msgid "F2PY support for Windows is not always at par with Linux support"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:12
+msgid ""
+"`SciPy's documentation`_ has some information on system-level dependencies "
+"which are well tested for Fortran as well."
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:15
+msgid "Broadly speaking, there are two issues working with F2PY on Windows:"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:17
+msgid "the lack of actively developed FOSS Fortran compilers, and,"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:18
+msgid ""
+"the linking issues related to the C runtime library for building Python-C "
+"extensions."
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:20
+msgid ""
+"The focus of this section is to establish a guideline for developing and "
+"extending Fortran modules for Python natively, via F2PY on Windows."
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:23
+msgid "Currently supported toolchains are:"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:25
+msgid "Mingw-w64 C/C++/Fortran compilers"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:26
+msgid "Intel compilers"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:27
+msgid "Clang-cl + Flang"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:28
+msgid "MSVC + Flang"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:31
+msgid "Overview"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:33
+msgid ""
+"From a user perspective, the most UNIX compatible Windows development "
+"environment is through emulation, either via the Windows Subsystem on Linux, "
+"or facilitated by Docker. In a similar vein, traditional virtualization "
+"methods like VirtualBox are also reasonable methods to develop UNIX tools on "
+"Windows."
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:39
+msgid ""
+"Native Windows support is typically stunted beyond the usage of commercial "
+"compilers. However, as of 2022, most commercial compilers have free plans "
+"which are sufficient for general use. Additionally, the Fortran language "
+"features supported by ``f2py`` (partial coverage of Fortran 2003), means "
+"that newer toolchains are often not required. Briefly, then, for an end "
+"user, in order of use:"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:50
+msgid "Classic Intel Compilers (commercial)"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:46
+msgid ""
+"These are maintained actively, though licensing restrictions may apply as "
+"further detailed in :ref:`f2py-win-intel`."
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:49
+msgid ""
+"Suitable for general use for those building native Windows programs by "
+"building off of MSVC."
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:54
+msgid "MSYS2 (FOSS)"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:53
+msgid ""
+"In conjunction with the ``mingw-w64`` project, ``gfortran`` and ``gcc`` "
+"toolchains can be used to natively build Windows programs."
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:58
+msgid "Windows Subsystem for Linux"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:57
+msgid ""
+"Assuming the usage of ``gfortran``, this can be used for cross-compiling "
+"Windows applications, but is significantly more complicated."
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:62
+msgid "Conda"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:61
+msgid ""
+"Windows support for compilers in ``conda`` is facilitated by pulling MSYS2 "
+"binaries, however these `are outdated`_, and therefore not recommended (as "
+"of 30-01-2022)."
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:67
+msgid "PGI Compilers (commercial)"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:65
+msgid ""
+"Unmaintained but sufficient if an existing license is present. Works "
+"natively, but has been superseded by the Nvidia HPC SDK, with no `native "
+"Windows support`_."
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:72
+msgid "Cygwin (FOSS)"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:70
+msgid ""
+"Can also be used for ``gfortran``. However, the POSIX API compatibility "
+"layer provided by Cygwin is meant to compile UNIX software on Windows, "
+"instead of building native Windows programs. This means cross compilation is "
+"required."
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:74
+msgid ""
+"The compilation suites described so far are compatible with the `now "
+"deprecated`_ ``np.distutils`` build backend which is exposed by the F2PY "
+"CLI. Additional build system usage (``meson``, ``cmake``) as described in :"
+"ref:`f2py-bldsys` allows for a more flexible set of compiler backends "
+"including:"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:82
+msgid "Intel oneAPI"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:81
+msgid ""
+"The newer Intel compilers (``ifx``, ``icx``) are based on LLVM and can be "
+"used for native compilation. Licensing requirements can be onerous."
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:87
+msgid "Classic Flang (FOSS)"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:85
+msgid ""
+"The backbone of the PGI compilers were cannibalized to form the \"classic\" "
+"or `legacy version of Flang`_. This may be compiled from source and used "
+"natively. `LLVM Flang`_ does not support Windows yet (30-01-2022)."
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:92
+msgid "LFortran (FOSS)"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:90
+msgid ""
+"One of two LLVM based compilers. Not all of F2PY supported Fortran can be "
+"compiled yet (30-01-2022) but uses MSVC for native linking."
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:95
+msgid "Baseline"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:97
+msgid "For this document we will assume the following basic tools:"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:99
+msgid ""
+"The IDE being considered is the community supported `Microsoft Visual Studio "
+"Code`_"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:100
+msgid "The terminal being used is the `Windows Terminal`_"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:101
+msgid "The shell environment is assumed to be `Powershell 7.x`_"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:103
+msgid "Python 3.10 from `the Microsoft Store`_ and this can be tested with"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:103
+msgid ""
+"``Get-Command python.exe`` resolving to ``C:\\Users\\"
+"$USERNAME\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe``"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:105
+msgid "The Microsoft Visual C++ (MSVC) toolset"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:107
+msgid ""
+"With this baseline configuration, we will further consider a configuration "
+"matrix as follows:"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:112
+msgid "Support matrix, exe implies a Windows installer"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:115
+msgid "**Fortran Compiler**"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:115
+msgid "**C/C++ Compiler**"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:115
+msgid "**Source**"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:117
+msgid "Intel Fortran"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:117
+msgid "MSVC / ICC"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:117 ../../../f2py/windows/index.rst:125
+msgid "exe"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:119 ../../../f2py/windows/index.rst:121
+msgid "GFortran"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:119 ../../../f2py/windows/index.rst:123
+msgid "MSVC"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:119
+msgid "MSYS2/exe"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:121
+msgid "GCC"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:121
+msgid "WSL"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:123
+msgid "Classic Flang"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:123
+msgid "Source / Conda"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:125
+msgid "Anaconda GFortran"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:125
+msgid "Anaconda GCC"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:128
+msgid ""
+"For an understanding of the key issues motivating the need for such a matrix "
+"`Pauli Virtanen's in-depth post on wheels with Fortran for Windows`_ is an "
+"excellent resource. An entertaining explanation of an application binary "
+"interface (ABI) can be found in this post by `JeanHeyd Meneide`_."
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:134
+msgid "PowerShell and MSVC"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:136
+msgid ""
+"MSVC is installed either via the Visual Studio Bundle or the lighter "
+"(preferred) `Build Tools for Visual Studio`_ with the ``Desktop development "
+"with C++`` setting."
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:142
+msgid ""
+"This can take a significant amount of time as it includes a download of "
+"around 2GB and requires a restart."
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:145
+msgid ""
+"It is possible to use the resulting environment from a `standard command "
+"prompt`_. However, it is more pleasant to use a `developer powershell`_, "
+"with a `profile in Windows Terminal`_. This can be achieved by adding the "
+"following block to the ``profiles->list`` section of the JSON file used to "
+"configure Windows Terminal (see ``Settings->Open JSON file``):"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:151
+msgid ""
+"{\n"
+"\"name\": \"Developer PowerShell for VS 2019\",\n"
+"\"commandline\": \"powershell.exe -noe -c \\\"$vsPath = (Join-Path ${env:"
+"ProgramFiles(x86)} -ChildPath 'Microsoft Visual Studio\\\\2019\\"
+"\\BuildTools'); Import-Module (Join-Path $vsPath 'Common7\\\\Tools\\"
+"\\Microsoft.VisualStudio.DevShell.dll'); Enter-VsDevShell -VsInstallPath "
+"$vsPath -SkipAutomaticLocation\\\"\",\n"
+"\"icon\": \"ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}."
+"png\"\n"
+"}"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:159
+msgid "Now, testing the compiler toolchain could look like:"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:161
+msgid ""
+" # New Windows Developer Powershell instance / tab\n"
+" # or\n"
+" $vsPath = (Join-Path ${env:ProgramFiles(x86)} -ChildPath 'Microsoft Visual "
+"Studio\\\\2019\\\\BuildTools');\n"
+" Import-Module (Join-Path $vsPath 'Common7\\\\Tools\\\\Microsoft."
+"VisualStudio.DevShell.dll');\n"
+" Enter-VsDevShell -VsInstallPath $vsPath -SkipAutomaticLocation\n"
+" **********************************************************************\n"
+" ** Visual Studio 2019 Developer PowerShell v16.11.9\n"
+" ** Copyright (c) 2021 Microsoft Corporation\n"
+" **********************************************************************\n"
+" cd $HOME\n"
+" echo \"#include<stdio.h>\" > blah.cpp; echo 'int main(){printf(\"Hi\");"
+"return 1;}' >> blah.cpp\n"
+" cl blah.cpp\n"
+".\\blah.exe\n"
+" # Hi\n"
+" rm blah.cpp"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:179
+msgid ""
+"It is also possible to check that the environment has been updated correctly "
+"with ``$ENV:PATH``."
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:184
+msgid "Microsoft Store Python paths"
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:186
+msgid ""
+"The MS Windows version of Python discussed here installs to a non-"
+"deterministic path using a hash. This needs to be added to the ``PATH`` "
+"variable."
+msgstr ""
+
+#: ../../../f2py/windows/index.rst:189
+msgid ""
+"$Env:Path += \";$env:LOCALAPPDATA\\packages\\pythonsoftwarefoundation."
+"python.3.10_qbz5n2kfra8p0\\localcache\\local-packages\\python310\\scripts\""
+msgstr ""

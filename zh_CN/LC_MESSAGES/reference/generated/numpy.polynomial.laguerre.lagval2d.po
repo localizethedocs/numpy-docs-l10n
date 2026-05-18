@@ -1,0 +1,153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.laguerre.lagval2d.rst:4
+msgid "numpy.polynomial.laguerre.lagval2d"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval2d:2
+msgid "Evaluate a 2-D Laguerre series at points (x, y)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval2d:4
+msgid "This function returns the values:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval2d:6
+msgid ""
+"p(x,y) = \\sum_{i,j} c_{i,j} * L_i(x) * L_j(y)\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval2d:8
+msgid ""
+"The parameters `x` and `y` are converted to arrays only if they are tuples "
+"or a lists, otherwise they are treated as a scalars and they must have the "
+"same shape after conversion. In either case, either `x` and `y` or their "
+"elements must support multiplication and addition both with themselves and "
+"with the elements of `c`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval2d:14
+msgid ""
+"If `c` is a 1-D array a one is implicitly appended to its shape to make it 2-"
+"D. The shape of the result will be c.shape[2:] + x.shape."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval2d:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval2d:23
+msgid "**x, y**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval2d:-1
+msgid "array_like, compatible objects"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval2d:20
+msgid ""
+"The two dimensional series is evaluated at the points ``(x, y)``, where `x` "
+"and `y` must have the same shape. If `x` or `y` is a list or tuple, it is "
+"first converted to an ndarray, otherwise it is left unchanged and if it "
+"isn't an ndarray it is treated as a scalar."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval2d:29
+msgid "**c**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval2d:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval2d:26
+msgid ""
+"Array of coefficients ordered so that the coefficient of the term of multi-"
+"degree i,j is contained in ``c[i,j]``. If `c` has dimension greater than two "
+"the remaining indices enumerate multiple sets of coefficients."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval2d:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval2d:41
+msgid "**values**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval2d:-1
+msgid "ndarray, compatible object"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval2d:34
+msgid ""
+"The values of the two dimensional polynomial at points formed with pairs of "
+"corresponding values from `x` and `y`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval2d:46
+msgid ":obj:`lagval`, :obj:`laggrid2d`, :obj:`lagval3d`, :obj:`laggrid3d`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval2d:52
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval2d:-1
+msgid ""
+"<div id=\"c1faf48e-36c3-4a09-9e34-3f146ca44729\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('9552f369-d29d-4a29-8892-"
+"a1c90c62894b','c1faf48e-36c3-4a09-9e34-3f146ca44729')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('9552f369-d29d-4a29-8892-"
+"a1c90c62894b','c1faf48e-36c3-4a09-9e34-3f146ca44729')\">Open In Tab</"
+"button></div><div id=\"fd79450e-4bdd-46c4-85ba-9b37d6295359\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval2d:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.char.chararray.setflags.rst:4
+msgid "numpy.char.chararray.setflags"
+msgstr ""
+
+#: ../../../reference/generated/numpy.char.chararray.setflags.rst:8
+msgid "method"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.char.chararray.setflags:2
+msgid "Set array flags WRITEABLE, ALIGNED, WRITEBACKIFCOPY, respectively."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.char.chararray.setflags:5
+msgid ""
+"These Boolean-valued flags affect how numpy interprets the memory area used "
+"by `a` (see Notes below). The ALIGNED flag can only be set to True if the "
+"data is actually aligned according to the type. The WRITEBACKIFCOPY flag can "
+"never be set to True. The flag WRITEABLE can only be set to True if the "
+"array owns its own memory, or the ultimate owner of the memory exposes a "
+"writeable buffer interface, or is a string. (The exception for string is "
+"made so that unpickling can be done without copying memory.)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.char.chararray.setflags:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.char.chararray.setflags:17
+msgid "**write**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.char.chararray.setflags:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.char.chararray.setflags:17
+msgid "Describes whether or not `a` can be written to."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.char.chararray.setflags:20
+msgid "**align**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.char.chararray.setflags:20
+msgid "Describes whether or not `a` is aligned properly for its type."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.char.chararray.setflags:31
+msgid "**uic**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.char.chararray.setflags:23
+msgid "Describes whether or not `a` is a copy of another \"base\" array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.char.chararray.setflags:34
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.char.chararray.setflags:35
+msgid ""
+"Array flags provide information about how the memory area used for the array "
+"is to be interpreted. There are 7 Boolean flags in use, only three of which "
+"can be changed by the user: WRITEBACKIFCOPY, WRITEABLE, and ALIGNED."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.char.chararray.setflags:40
+msgid "WRITEABLE (W) the data area can be written to;"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.char.chararray.setflags:42
+msgid ""
+"ALIGNED (A) the data and strides are aligned appropriately for the hardware "
+"(as determined by the compiler);"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.char.chararray.setflags:45
+msgid ""
+"WRITEBACKIFCOPY (X) this array is a copy of some other array (referenced by ."
+"base). When the C-API function PyArray_ResolveWritebackIfCopy is called, the "
+"base array will be updated with the contents of this array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.char.chararray.setflags:49
+msgid ""
+"All flags can be accessed using the single (upper case) letter as well as "
+"the full name."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.char.chararray.setflags:54
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.char.chararray.setflags:-1
+msgid ""
+"<div id=\"19706781-1056-42a8-8507-b12d416798f9\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('0f61e836-19b0-4007-"
+"a202-9c1bd7532920','19706781-1056-42a8-8507-b12d416798f9')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('0f61e836-19b0-4007-a202-9c1bd7532920','19706781-1056-42a8-8507-"
+"b12d416798f9')\">Open In Tab</button></div><div id=\"e45de042-cde2-4d77-a08e-"
+"defb9c14fc26\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.char.chararray.setflags:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

@@ -1,0 +1,245 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.histogramdd.rst:4
+msgid "numpy.histogramdd"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:2
+msgid "Compute the multidimensional histogram of some data."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:17
+msgid "**sample**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:-1
+msgid "(N, D) array, or (N, D) array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:8
+msgid "The data to be histogrammed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:10
+msgid "Note the unusual interpretation of sample when an array_like:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:12
+msgid ""
+"When an array, each row is a coordinate in a D-dimensional space - such as "
+"``histogramdd(np.array([p1, p2, p3]))``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:14
+msgid ""
+"When an array_like, each element is the list of values for single coordinate "
+"- such as ``histogramdd((X, Y, Z))``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:17
+msgid "The first form should be preferred."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:25
+msgid "**bins**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:-1
+msgid "sequence or int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:20
+msgid "The bin specification:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:22
+msgid ""
+"A sequence of arrays describing the monotonically increasing bin edges along "
+"each dimension."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:24
+msgid "The number of bins for each dimension (nx, ny, ... =bins)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:25
+msgid "The number of bins for all dimensions (nx=ny=...=bins)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:33
+msgid "**range**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:-1
+msgid "sequence, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:28
+msgid ""
+"A sequence of length D, each an optional (lower, upper) tuple giving the "
+"outer bin edges to be used if the edges are not given explicitly in `bins`. "
+"An entry of None in the sequence results in the minimum and maximum values "
+"being used for the corresponding dimension. The default, None, is equivalent "
+"to passing a tuple of D None values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:38
+msgid "**density**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:36
+msgid ""
+"If False, the default, returns the number of samples in each bin. If True, "
+"returns the probability *density* function at the bin, ``bin_count / "
+"sample_count / bin_volume``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:44
+msgid "**weights**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:-1
+msgid "(N,) array_like, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:41
+msgid ""
+"An array of values `w_i` weighing each sample `(x_i, y_i, z_i, ...)`. "
+"Weights are normalized to 1 if density is True. If density is False, the "
+"values of the returned histogram are equal to the sum of the weights "
+"belonging to the samples falling into each bin."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:50
+msgid "**H**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:49
+msgid ""
+"The multidimensional histogram of sample x. See density and weights for the "
+"different possible semantics."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:59
+msgid "**edges**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:-1
+msgid "tuple of ndarrays"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:53
+msgid "A tuple of D arrays describing the bin edges for each dimension."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:64
+msgid ":obj:`histogram`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:65
+msgid "1-D histogram"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:66
+msgid ":obj:`histogram2d`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:67
+msgid "2-D histogram"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:73
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:-1
+msgid ""
+"<div id=\"1cd4d5c0-031d-4f72-9c34-7ab418bdcc93\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('5620029c-95e4-4658-b416-"
+"cf0bbee05667','1cd4d5c0-031d-4f72-9c34-7ab418bdcc93')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('5620029c-95e4-4658-b416-"
+"cf0bbee05667','1cd4d5c0-031d-4f72-9c34-7ab418bdcc93')\">Open In Tab</"
+"button></div><div id=\"357d3ed3-4f64-491f-b5b0-aaa693472be7\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogramdd:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

@@ -1,0 +1,164 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.hermite.hermfromroots.rst:4
+msgid "numpy.polynomial.hermite.hermfromroots"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:2
+msgid "Generate a Hermite series with given roots."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:4
+msgid "The function returns the coefficients of the polynomial"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:6
+msgid ""
+"p(x) = (x - r_0) * (x - r_1) * ... * (x - r_n),\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:8
+msgid ""
+"in Hermite form, where the :math:`r_n` are the roots specified in `roots`. "
+"If a zero has multiplicity n, then it must appear in `roots` n times. For "
+"instance, if 2 is a root of multiplicity three and 3 is a root of "
+"multiplicity 2, then `roots` looks something like [2, 2, 2, 3, 3]. The roots "
+"can appear in any order."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:14
+msgid "If the returned coefficients are `c`, then"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:16
+msgid ""
+"p(x) = c_0 + c_1 * H_1(x) + ... +  c_n * H_n(x)\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:18
+msgid ""
+"The coefficient of the last term is not generally 1 for monic polynomials in "
+"Hermite form."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:24
+msgid "**roots**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:24
+msgid "Sequence containing the roots."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:38
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:29
+msgid ""
+"1-D array of coefficients.  If all roots are real then `out` is a real "
+"array, if some of the roots are complex, then `out` is complex even if all "
+"the coefficients in the result are real (see Examples below)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:43
+msgid ":obj:`numpy.polynomial.polynomial.polyfromroots`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:45
+msgid ":obj:`numpy.polynomial.legendre.legfromroots`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:47
+msgid ":obj:`numpy.polynomial.laguerre.lagfromroots`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:49
+msgid ":obj:`numpy.polynomial.chebyshev.chebfromroots`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:51
+msgid ":obj:`numpy.polynomial.hermite_e.hermefromroots`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:57
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:-1
+msgid ""
+"<div id=\"26ab041a-babc-412f-9bc9-1859b5b10ce5\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('9925339b-93e2-45ab-bb11-b879f685493c','26ab041a-"
+"babc-412f-9bc9-1859b5b10ce5')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('9925339b-93e2-45ab-bb11-b879f685493c','26ab041a-"
+"babc-412f-9bc9-1859b5b10ce5')\">Open In Tab</button></div><div id=\"ef6c408a-"
+"d51e-44a8-ba47-9bd41c630289\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermfromroots:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

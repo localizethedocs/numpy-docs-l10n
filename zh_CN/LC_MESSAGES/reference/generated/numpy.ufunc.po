@@ -1,0 +1,330 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.ufunc.rst:2
+msgid "numpy.ufunc"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:2
+msgid "Functions that operate element by element on whole arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:4
+msgid ""
+"To see the documentation for a specific ufunc, use `info`.  For example, "
+"``np.info(np.sin)``.  Because ufuncs are written in C (for speed) and linked "
+"into Python with NumPy's ufunc facility, Python's help() function finds this "
+"page whenever help() is called on a ufunc."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:10
+msgid ""
+"A detailed explanation of ufuncs can be found in the docs for :ref:`ufuncs`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:12
+msgid "**Calling ufuncs:** ``op(*x[, out], where=True, **kwargs)``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:14
+msgid ""
+"Apply `op` to the arguments `*x` elementwise, broadcasting the arguments."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:16
+msgid "The broadcasting rules are:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:18
+msgid "Dimensions of length 1 may be prepended to either array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:19
+msgid "Arrays may be repeated along dimensions of length 1."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:24
+msgid "**\\*x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:24
+msgid "Input arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:35
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:-1
+msgid "ndarray, None, ..., or tuple of ndarray and None, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:27
+msgid ""
+"Location(s) into which the result(s) are stored. If not provided or None, "
+"new array(s) are created by the ufunc. If passed as a keyword argument, can "
+"be Ellipses (``out=...``) to ensure an array is returned even if the result "
+"is 0-dimensional, or a tuple with length equal to the number of outputs "
+"(where None can be used for allocation by the ufunc)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:34
+msgid "Support for ``out=...`` was added."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:43
+msgid "**where**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:38
+msgid ""
+"This condition is broadcast over the input. At locations where the condition "
+"is True, the `out` array will be set to the ufunc result. Elsewhere, the "
+"`out` array will retain its original value. Note that if an uninitialized "
+"`out` array is created via the default ``out=None``, locations within it "
+"where the condition is False will remain uninitialized."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:46
+msgid "**\\*\\*kwargs**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:46
+msgid ""
+"For other keyword-only arguments, see the :ref:`ufunc docs <ufuncs.kwargs>`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:64
+msgid "**r**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:-1
+msgid "ndarray or tuple of ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:51
+msgid ""
+"`r` will have the shape that the arrays in `x` broadcast to; if `out` is "
+"provided, it will be returned. If not, `r` will be allocated and may contain "
+"uninitialized values. If the function has more than one output, then the "
+"result will be a tuple of arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:0
+msgid "Attributes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:69
+msgid ":obj:`identity <identity>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:69
+msgid "The identity value."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:72
+msgid ":obj:`nargs <nargs>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:72
+msgid "The number of arguments."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:75
+msgid ":obj:`nin <nin>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:75
+msgid "The number of inputs."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:78
+msgid ":obj:`nout <nout>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:78
+msgid "The number of outputs."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:81
+msgid ":obj:`ntypes <ntypes>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:81
+msgid "The number of types."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:84
+msgid ":obj:`signature <signature>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:84
+msgid "Definition of the core elements a generalized ufunc operates on."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:87
+msgid ":obj:`types <types>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:87
+msgid "Returns a list with types grouped input->output."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:90
+msgid "Methods"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:101:<autosummary>:1
+msgid ""
+":py:obj:`__call__ <numpy.ufunc.__call__>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:101:<autosummary>:1
+msgid "Call self as a function."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:101:<autosummary>:1
+msgid ""
+":py:obj:`accumulate <numpy.ufunc.accumulate>`\\ \\(array\\[\\, axis\\, "
+"dtype\\, out\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:101:<autosummary>:1
+msgid "Accumulate the result of applying the operator to all elements."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:101:<autosummary>:1
+msgid ":py:obj:`at <numpy.ufunc.at>`\\ \\(a\\, indices\\[\\, b\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:101:<autosummary>:1
+msgid ""
+"Performs unbuffered in place operation on operand 'a' for elements specified "
+"by 'indices'."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:101:<autosummary>:1
+msgid ""
+":py:obj:`outer <numpy.ufunc.outer>`\\ \\(A\\, B\\, \\/\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:101:<autosummary>:1
+msgid "Apply the ufunc `op` to all pairs (a, b) with a in `A` and b in `B`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:101:<autosummary>:1
+msgid ""
+":py:obj:`reduce <numpy.ufunc.reduce>`\\ \\(array\\[\\, axis\\, dtype\\, "
+"out\\, keepdims\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:101:<autosummary>:1
+msgid "Reduces `array`'s dimension by one, by applying ufunc along one axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:101:<autosummary>:1
+msgid ""
+":py:obj:`reduceat <numpy.ufunc.reduceat>`\\ \\(array\\, indices\\[\\, "
+"axis\\, dtype\\, out\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:101:<autosummary>:1
+msgid "Performs a (local) reduce with specified slices over a single axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:101:<autosummary>:1
+msgid ""
+":py:obj:`resolve_dtypes <numpy.ufunc.resolve_dtypes>`\\ \\(dtypes\\, "
+"\\*\\[\\, signature\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc:101:<autosummary>:1
+msgid "Find the dtypes NumPy will use for the operation."
+msgstr ""

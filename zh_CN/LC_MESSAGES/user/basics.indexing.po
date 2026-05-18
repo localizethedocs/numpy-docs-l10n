@@ -1,0 +1,1318 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../user/basics.indexing.rst:8
+msgid "Indexing on :class:`ndarrays <.ndarray>`"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:12
+msgid ":ref:`Indexing routines <routines.indexing>`"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:20
+msgid ""
+":class:`ndarrays <ndarray>` can be indexed using the standard Python "
+"``x[obj]`` syntax, where *x* is the array and *obj* the selection. There are "
+"different kinds of indexing available depending on *obj*: basic indexing, "
+"advanced indexing and field access."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:25
+msgid ""
+"Most of the following examples show the use of indexing when referencing "
+"data in an array. The examples work just as well when assigning to an array. "
+"See :ref:`assigning-values-to-indexed-arrays` for specific examples and "
+"explanations on how assignments work."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:30
+msgid ""
+"Note that in Python, ``x[(exp1, exp2, ..., expN)]`` is equivalent to "
+"``x[exp1, exp2, ..., expN]``; the latter is just syntactic sugar for the "
+"former."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:37
+msgid "Basic indexing"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:42
+msgid "Single element indexing"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:44
+msgid ""
+"Single element indexing works exactly like that for other standard Python "
+"sequences. It is 0-based, and accepts negative indices for indexing from the "
+"end of the array. ::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:48
+msgid ""
+">>> x = np.arange(10)\n"
+">>> x[2]\n"
+"2\n"
+">>> x[-2]\n"
+"8"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:54
+msgid ""
+"It is not necessary to separate each dimension's index into its own set of "
+"square brackets. ::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:57
+msgid ""
+">>> x.shape = (2, 5)  # now x is 2-dimensional\n"
+">>> x[1, 3]\n"
+"8\n"
+">>> x[1, -1]\n"
+"9"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:63
+msgid ""
+"Note that if one indexes a multidimensional array with fewer indices than "
+"dimensions, one gets a subdimensional array. For example: ::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:66
+msgid ""
+">>> x[0]\n"
+"array([0, 1, 2, 3, 4])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:69
+msgid ""
+"That is, each index specified selects the array corresponding to the rest of "
+"the dimensions selected. In the above example, choosing 0 means that the "
+"remaining dimension of length 5 is being left unspecified, and that what is "
+"returned is an array of that dimensionality and size. It must be noted that "
+"the returned array is a :term:`view`, i.e., it is not a copy of the "
+"original, but points to the same values in memory as does the original "
+"array. In  this case, the 1-D array at the first position (0) is returned. "
+"So using a single index on the returned array, results in a single element "
+"being returned. That is: ::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:80
+msgid ""
+">>> x[0][2]\n"
+"2"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:83
+msgid ""
+"So note that ``x[0, 2] == x[0][2]`` though the second case is more "
+"inefficient as a new temporary array is created after the first index that "
+"is subsequently indexed by 2."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:89
+msgid ""
+"NumPy uses C-order indexing. That means that the last index usually "
+"represents the most rapidly changing memory location, unlike Fortran or IDL, "
+"where the first index represents the most rapidly changing location in "
+"memory. This difference represents a great potential for confusion."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:98
+msgid "Slicing and striding"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:100
+msgid ""
+"Basic slicing extends Python's basic concept of slicing to N dimensions. "
+"Basic slicing occurs when *obj* is a :class:`slice` object (constructed by "
+"``start:stop:step`` notation inside of brackets), an integer, or a tuple of "
+"slice objects and integers. :py:data:`Ellipsis` and :const:`newaxis` objects "
+"can be interspersed with these as well."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:113
+msgid ""
+"The simplest case of indexing with *N* integers returns an :ref:`array "
+"scalar <arrays.scalars>` representing the corresponding item.  As in Python, "
+"all indices are zero-based: for the *i*-th index :math:`n_i`, the valid "
+"range is :math:`0 \\le n_i < d_i` where :math:`d_i` is the *i*-th element of "
+"the shape of the array.  Negative indices are interpreted as counting from "
+"the end of the array (*i.e.*, if :math:`n_i < 0`, it means :math:`n_i + "
+"d_i`)."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:122
+msgid ""
+"All arrays generated by basic slicing are always :term:`views <view>` of the "
+"original array."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:127
+msgid ""
+"NumPy slicing creates a :term:`view` instead of a copy as in the case of "
+"built-in Python sequences such as string, tuple and list. Care must be taken "
+"when extracting a small portion from a large array which becomes useless "
+"after the extraction, because the small portion extracted contains a "
+"reference to the large original array whose memory will not be released "
+"until all arrays derived from it are garbage-collected. In such cases an "
+"explicit ``copy()`` is recommended."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:136
+msgid ""
+"The standard rules of sequence slicing apply to basic slicing on a per-"
+"dimension basis (including using a step index). Some useful concepts to "
+"remember include:"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:140
+msgid ""
+"The basic slice syntax is ``i:j:k`` where *i* is the starting index, *j* is "
+"the stopping index, and *k* is the step (:math:`k\\neq0`). This selects the "
+"*m* elements (in the corresponding dimension) with index values *i*, *i + "
+"k*, ..., *i + (m - 1) k* where :math:`m = q + (r\\neq0)` and *q* and *r* are "
+"the quotient and remainder obtained by dividing *j - i* by *k*: *j - i = q k "
+"+ r*, so that *i + (m - 1) k < j*. For example::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:149
+msgid ""
+">>> x = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])\n"
+">>> x[1:7:2]\n"
+"array([1, 3, 5])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:153
+msgid ""
+"Negative *i* and *j* are interpreted as *n + i* and *n + j* where *n* is the "
+"number of elements in the corresponding dimension. Negative *k* makes "
+"stepping go towards smaller indices. From the above example::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:158
+msgid ""
+">>> x[-2:10]\n"
+"array([8, 9])\n"
+">>> x[-3:3:-1]\n"
+"array([7, 6, 5, 4])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:163
+msgid ""
+"Assume *n* is the number of elements in the dimension being sliced. Then, if "
+"*i* is not given it defaults to 0 for *k > 0* and *n - 1* for *k < 0* . If "
+"*j* is not given it defaults to *n* for *k > 0* and *-n-1* for *k < 0* . If "
+"*k* is not given it defaults to 1. Note that ``::`` is the same as ``:`` and "
+"means select all indices along this axis. From the above example::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:171
+msgid ""
+">>> x[5:]\n"
+"array([5, 6, 7, 8, 9])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:174
+msgid ""
+"If the number of objects in the selection tuple is less than *N*, then ``:`` "
+"is assumed for any subsequent dimensions. For example::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:178
+msgid ""
+">>> x = np.array([[[1],[2],[3]], [[4],[5],[6]]])\n"
+">>> x.shape\n"
+"(2, 3, 1)\n"
+">>> x[1:2]\n"
+"array([[[4],\n"
+"        [5],\n"
+"        [6]]])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:186
+msgid ""
+"An integer, *i*, returns the same values as ``i:i+1`` **except** the "
+"dimensionality of the returned object is reduced by 1. In particular, a "
+"selection tuple with the *p*-th element an integer (and all other entries ``:"
+"``) returns the corresponding sub-array with dimension *N - 1*. If *N = 1* "
+"then the returned object is an array scalar. These objects are explained in :"
+"ref:`arrays.scalars`."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:194
+msgid ""
+"If the selection tuple has all entries ``:`` except the *p*-th entry which "
+"is a slice object ``i:j:k``, then the returned array has dimension *N* "
+"formed by stacking, along the *p*-th axis, the sub-arrays returned by "
+"integer indexing of elements *i*, *i+k*, ..., *i + (m - 1) k < j*."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:200
+msgid ""
+"Basic slicing with more than one non-``:`` entry in the slicing tuple, acts "
+"like repeated application of slicing using a single non-``:`` entry, where "
+"the non-``:`` entries are successively taken (with all other non-``:`` "
+"entries replaced by ``:``). Thus, ``x[ind1, ..., ind2,:]`` acts like "
+"``x[ind1][..., ind2, :]`` under basic slicing."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:207
+msgid "The above is **not** true for advanced indexing."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:209
+msgid ""
+"You may use slicing to set values in the array, but (unlike lists) you can "
+"never grow the array. The size of the value to be set in ``x[obj] = value`` "
+"must be (broadcastable to) the same shape as ``x[obj]``."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:214
+msgid ""
+"A slicing tuple can always be constructed as *obj* and used in the "
+"``x[obj]`` notation. Slice objects can be used in the construction in place "
+"of the ``[start:stop:step]`` notation. For example, ``x[1:10:5, ::-1]`` can "
+"also be implemented as ``obj = (slice(1, 10, 5), slice(None, None, -1)); "
+"x[obj]`` . This can be useful for constructing generic code that works on "
+"arrays of arbitrary dimensions. See :ref:`dealing-with-variable-indices` for "
+"more information."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:229
+msgid "Dimensional indexing tools"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:231
+msgid ""
+"There are some tools to facilitate the easy matching of array shapes with "
+"expressions and in assignments."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:234
+msgid ""
+":py:data:`Ellipsis` expands to the number of ``:`` objects needed for the "
+"selection tuple to index all dimensions. In most cases, this means that the "
+"length of the expanded selection tuple is ``x.ndim``. There may only be a "
+"single ellipsis present. From the above example::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:240
+msgid ""
+">>> x[..., 0]\n"
+"array([[1, 2, 3],\n"
+"      [4, 5, 6]])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:244
+msgid "This is equivalent to::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:246
+msgid ""
+">>> x[:, :, 0]\n"
+"array([[1, 2, 3],\n"
+"      [4, 5, 6]])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:250
+msgid ""
+"Each :const:`newaxis` object in the selection tuple serves to expand the "
+"dimensions of the resulting selection by one unit-length dimension.  The "
+"added dimension is the position of the :const:`newaxis` object in the "
+"selection tuple. :const:`newaxis` is an alias for ``None``, and ``None`` can "
+"be used in place of this with the same result. From the above example::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:257
+msgid ""
+">>> x[:, np.newaxis, :, :].shape\n"
+"(2, 1, 3, 1)\n"
+">>> x[:, None, :, :].shape\n"
+"(2, 1, 3, 1)"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:262
+msgid ""
+"This can be handy to combine two arrays in a way that otherwise would "
+"require explicit reshaping operations. For example::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:266
+msgid ""
+">>> x = np.arange(5)\n"
+">>> x[:, np.newaxis] + x[np.newaxis, :]\n"
+"array([[0, 1, 2, 3, 4],\n"
+"      [1, 2, 3, 4, 5],\n"
+"      [2, 3, 4, 5, 6],\n"
+"      [3, 4, 5, 6, 7],\n"
+"      [4, 5, 6, 7, 8]])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:278
+msgid "Advanced indexing"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:280
+msgid ""
+"Advanced indexing is triggered when the selection object, *obj*, is a non-"
+"tuple sequence object, an :class:`ndarray` (of data type integer or bool), "
+"or a tuple with at least one sequence object or ndarray (of data type "
+"integer or bool). There are two types of advanced indexing: integer and "
+"Boolean."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:286
+msgid ""
+"Advanced indexing always returns a *copy* of the data (contrast with basic "
+"slicing that returns a :term:`view`)."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:291
+msgid ""
+"The definition of advanced indexing means that ``x[(1, 2, 3),]`` is "
+"fundamentally different than ``x[(1, 2, 3)]``. The latter is equivalent to "
+"``x[1, 2, 3]`` which will trigger basic selection while the former will "
+"trigger advanced indexing. Be sure to understand why this occurs."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:298
+msgid "Integer array indexing"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:300
+msgid ""
+"Integer array indexing allows selection of arbitrary items in the array "
+"based on their *N*-dimensional index. Each integer array represents a number "
+"of indices into that dimension."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:304
+msgid ""
+"Negative values are permitted in the index arrays and work as they do with "
+"single indices or slices::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:307
+msgid ""
+">>> x = np.arange(10, 1, -1)\n"
+">>> x\n"
+"array([10,  9,  8,  7,  6,  5,  4,  3,  2])\n"
+">>> x[np.array([3, 3, 1, 8])]\n"
+"array([7, 7, 9, 2])\n"
+">>> x[np.array([3, 3, -3, 8])]\n"
+"array([7, 7, 4, 2])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:315
+msgid ""
+"If the index values are out of bounds then an ``IndexError`` is thrown::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:317
+msgid ""
+">>> x = np.array([[1, 2], [3, 4], [5, 6]])\n"
+">>> x[np.array([1, -1])]\n"
+"array([[3, 4],\n"
+"      [5, 6]])\n"
+">>> x[np.array([3, 4])]\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"IndexError: index 3 is out of bounds for axis 0 with size 3"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:326
+msgid ""
+"When the index consists of as many integer arrays as dimensions of the array "
+"being indexed, the indexing is straightforward, but different from slicing."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:329
+msgid ""
+"Advanced indices always are :ref:`broadcast<basics.broadcasting>` and "
+"iterated as *one*::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:332
+msgid ""
+"result[i_1, ..., i_M] == x[ind_1[i_1, ..., i_M], ind_2[i_1, ..., i_M],\n"
+"                           ..., ind_N[i_1, ..., i_M]]"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:335
+msgid ""
+"Note that the resulting shape is identical to the (broadcast) indexing array "
+"shapes ``ind_1, ..., ind_N``. If the indices cannot be broadcast to the same "
+"shape, an exception ``IndexError: shape mismatch: indexing arrays could not "
+"be broadcast together with shapes...`` is raised."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:340
+msgid ""
+"Indexing with multidimensional index arrays tend to be more unusual uses, "
+"but they are permitted, and they are useful for some problems. We’ll start "
+"with the simplest multidimensional case::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:344
+msgid ""
+">>> y = np.arange(35).reshape(5, 7)\n"
+">>> y\n"
+"array([[ 0,  1,  2,  3,  4,  5,  6],\n"
+"       [ 7,  8,  9, 10, 11, 12, 13],\n"
+"       [14, 15, 16, 17, 18, 19, 20],\n"
+"       [21, 22, 23, 24, 25, 26, 27],\n"
+"       [28, 29, 30, 31, 32, 33, 34]])\n"
+">>> y[np.array([0, 2, 4]), np.array([0, 1, 2])]\n"
+"array([ 0, 15, 30])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:354
+msgid ""
+"In this case, if the index arrays have a matching shape, and there is an "
+"index array for each dimension of the array being indexed, the resultant "
+"array has the same shape as the index arrays, and the values correspond to "
+"the index set for each position in the index arrays. In this example, the "
+"first index value is 0 for both index arrays, and thus the first value of "
+"the resultant array is ``y[0, 0]``. The next value is ``y[2, 1]``, and the "
+"last is ``y[4, 2]``."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:362
+msgid ""
+"If the index arrays do not have the same shape, there is an attempt to "
+"broadcast them to the same shape. If they cannot be broadcast to the same "
+"shape, an exception is raised::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:366
+msgid ""
+">>> y[np.array([0, 2, 4]), np.array([0, 1])]\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"IndexError: shape mismatch: indexing arrays could not be broadcast\n"
+"together with shapes (3,) (2,)"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:372
+msgid ""
+"The broadcasting mechanism permits index arrays to be combined with scalars "
+"for other indices. The effect is that the scalar value is used for all the "
+"corresponding values of the index arrays::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:376
+msgid ""
+">>> y[np.array([0, 2, 4]), 1]\n"
+"array([ 1, 15, 29])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:379
+msgid ""
+"Jumping to the next level of complexity, it is possible to only partially "
+"index an array with index arrays. It takes a bit of thought to understand "
+"what happens in such cases. For example if we just use one index array with "
+"y::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:384
+msgid ""
+">>> y[np.array([0, 2, 4])]\n"
+"array([[ 0,  1,  2,  3,  4,  5,  6],\n"
+"       [14, 15, 16, 17, 18, 19, 20],\n"
+"       [28, 29, 30, 31, 32, 33, 34]])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:389
+msgid ""
+"It results in the construction of a new array where each value of the index "
+"array selects one row from the array being indexed and the resultant array "
+"has the resulting shape (number of index elements, size of row)."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:393
+msgid ""
+"In general, the shape of the resultant array will be the concatenation of "
+"the shape of the index array (or the shape that all the index arrays were "
+"broadcast to) with the shape of any unused dimensions (those not indexed) in "
+"the array being indexed."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:399 ../../../user/basics.indexing.rst:414
+#: ../../../user/basics.indexing.rst:462 ../../../user/basics.indexing.rst:537
+#: ../../../user/basics.indexing.rst:553 ../../../user/basics.indexing.rst:582
+#: ../../../user/basics.indexing.rst:667 ../../../user/basics.indexing.rst:677
+#: ../../../user/basics.indexing.rst:691
+msgid "Example"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:400
+msgid ""
+"From each row, a specific element should be selected. The row index is just "
+"``[0, 1, 2]`` and the column index specifies the element to choose for the "
+"corresponding row, here ``[0, 1, 0]``. Using both together the task can be "
+"solved using advanced indexing::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:405
+msgid ""
+">>> x = np.array([[1, 2], [3, 4], [5, 6]])\n"
+">>> x[[0, 1, 2], [0, 1, 0]]\n"
+"array([1, 4, 5])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:409
+msgid ""
+"To achieve a behaviour similar to the basic slicing above, broadcasting can "
+"be used. The function :func:`ix_` can help with this broadcasting. This is "
+"best understood with an example."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:415
+msgid ""
+"From a 4x3 array the corner elements should be selected using advanced "
+"indexing. Thus all elements for which the column is one of ``[0, 2]`` and "
+"the row is one of ``[0, 3]`` need to be selected. To use advanced indexing "
+"one needs to select all elements *explicitly*. Using the method explained "
+"previously one could write::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:421
+msgid ""
+">>> x = np.array([[ 0,  1,  2],\n"
+"...               [ 3,  4,  5],\n"
+"...               [ 6,  7,  8],\n"
+"...               [ 9, 10, 11]])\n"
+">>> rows = np.array([[0, 0],\n"
+"...                  [3, 3]], dtype=np.intp)\n"
+">>> columns = np.array([[0, 2],\n"
+"...                     [0, 2]], dtype=np.intp)\n"
+">>> x[rows, columns]\n"
+"array([[ 0,  2],\n"
+"       [ 9, 11]])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:433
+msgid ""
+"However, since the indexing arrays above just repeat themselves, "
+"broadcasting can be used (compare operations such as ``rows[:, np.newaxis] + "
+"columns``) to simplify this::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:437
+msgid ""
+">>> rows = np.array([0, 3], dtype=np.intp)\n"
+">>> columns = np.array([0, 2], dtype=np.intp)\n"
+">>> rows[:, np.newaxis]\n"
+"array([[0],\n"
+"       [3]])\n"
+">>> x[rows[:, np.newaxis], columns]\n"
+"array([[ 0,  2],\n"
+"       [ 9, 11]])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:446
+msgid "This broadcasting can also be achieved using the function :func:`ix_`:"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:452
+msgid ""
+"Note that without the ``np.ix_`` call, only the diagonal elements would be "
+"selected::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:455
+msgid ""
+">>> x[rows, columns]\n"
+"array([ 0, 11])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:458
+msgid ""
+"This difference is the most important thing to remember about indexing with "
+"multiple advanced indices."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:463
+msgid ""
+"A real-life example of where advanced indexing may be useful is for a color "
+"lookup table where we want to map the values of an image into RGB triples "
+"for display. The lookup table could have a shape (nlookup, 3). Indexing such "
+"an array with an image with shape (ny, nx) with dtype=np.uint8 (or any "
+"integer type so long as values are with the bounds of the lookup table) will "
+"result in an array of shape (ny, nx, 3) where a triple of RGB values is "
+"associated with each pixel location."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:474
+msgid "Boolean array indexing"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:476
+msgid ""
+"This advanced indexing occurs when *obj* is an array object of Boolean type, "
+"such as may be returned from comparison operators. A single boolean index "
+"array is practically identical to ``x[obj.nonzero()]`` where, as described "
+"above, :meth:`obj.nonzero() <ndarray.nonzero>` returns a tuple (of length :"
+"attr:`obj.ndim <ndarray.ndim>`) of integer index arrays showing the :py:data:"
+"`True` elements of *obj*. However, it is faster when ``obj.shape == x."
+"shape``."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:484
+msgid ""
+"If ``obj.ndim == x.ndim``, ``x[obj]`` returns a 1-dimensional array filled "
+"with the elements of *x* corresponding to the :py:data:`True` values of "
+"*obj*. The search order will be :term:`row-major`, C-style. An index error "
+"will be raised if the shape of *obj* does not match the corresponding "
+"dimensions of *x*, regardless of whether those values are :py:data:`True` "
+"or :py:data:`False`."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:492
+msgid ""
+"A common use case for this is filtering for desired element values. For "
+"example, one may wish to select all entries from an array which are not :"
+"const:`numpy.nan`::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:496
+msgid ""
+">>> x = np.array([[1., 2.], [np.nan, 3.], [np.nan, np.nan]])\n"
+">>> x[~np.isnan(x)]\n"
+"array([1., 2., 3.])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:500
+msgid "Or wish to add a constant to all negative elements::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:502
+msgid ""
+">>> x = np.array([1., -1., -2., 3])\n"
+">>> x[x < 0] += 20\n"
+">>> x\n"
+"array([ 1., 19., 18., 3.])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:507
+msgid ""
+"In general if an index includes a Boolean array, the result will be "
+"identical to inserting ``obj.nonzero()`` into the same position and using "
+"the integer array indexing mechanism described above. ``x[ind_1, "
+"boolean_array, ind_2]`` is equivalent to ``x[(ind_1,) + boolean_array."
+"nonzero() + (ind_2,)]``."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:513
+msgid ""
+"If there is only one Boolean array and no integer indexing array present, "
+"this is straightforward. Care must only be taken to make sure that the "
+"boolean index has *exactly* as many dimensions as it is supposed to work "
+"with."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:518
+msgid ""
+"In general, when the boolean array has fewer dimensions than the array being "
+"indexed, this is equivalent to ``x[b, ...]``, which means x is indexed by b "
+"followed by as many ``:`` as are needed to fill out the rank of x. Thus the "
+"shape of the result is one dimension containing the number of True elements "
+"of the boolean array, followed by the remaining dimensions of the array "
+"being indexed::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:525
+msgid ""
+">>> x = np.arange(35).reshape(5, 7)\n"
+">>> b = x > 20\n"
+">>> b[:, 5]\n"
+"array([False, False, False,  True,  True])\n"
+">>> x[b[:, 5]]\n"
+"array([[21, 22, 23, 24, 25, 26, 27],\n"
+"      [28, 29, 30, 31, 32, 33, 34]])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:533
+msgid ""
+"Here the 4th and 5th rows are selected from the indexed array and combined "
+"to make a 2-D array."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:538
+msgid "From an array, select all rows which sum up to less or equal two::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:540
+msgid ""
+">>> x = np.array([[0, 1], [1, 1], [2, 2]])\n"
+">>> rowsum = x.sum(-1)\n"
+">>> x[rowsum <= 2, :]\n"
+"array([[0, 1],\n"
+"       [1, 1]])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:547
+msgid ""
+"Combining multiple Boolean indexing arrays or a Boolean with an integer "
+"indexing array can best be understood with the :meth:`obj.nonzero() <ndarray."
+"nonzero>` analogy. The function :func:`ix_` also supports boolean arrays and "
+"will work without any surprises."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:554
+msgid ""
+"Use boolean indexing to select all rows adding up to an even number. At the "
+"same time columns 0 and 2 should be selected with an advanced integer index. "
+"Using the :func:`ix_` function this can be done with::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:559
+msgid ""
+">>> x = np.array([[ 0,  1,  2],\n"
+"...               [ 3,  4,  5],\n"
+"...               [ 6,  7,  8],\n"
+"...               [ 9, 10, 11]])\n"
+">>> rows = (x.sum(-1) % 2) == 0\n"
+">>> rows\n"
+"array([False,  True, False,  True])\n"
+">>> columns = [0, 2]\n"
+">>> x[np.ix_(rows, columns)]\n"
+"array([[ 3,  5],\n"
+"       [ 9, 11]])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:571
+msgid ""
+"Without the ``np.ix_`` call, only the diagonal elements would be selected."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:574
+msgid "Or without ``np.ix_`` (compare the integer array examples)::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:576
+msgid ""
+">>> rows = rows.nonzero()[0]\n"
+">>> x[rows[:, np.newaxis], columns]\n"
+"array([[ 3,  5],\n"
+"       [ 9, 11]])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:583
+msgid ""
+"Use a 2-D boolean array of shape (2, 3) with four True elements to select "
+"rows from a 3-D array of shape (2, 3, 5) results in a 2-D result of shape "
+"(4, 5)::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:587
+msgid ""
+">>> x = np.arange(30).reshape(2, 3, 5)\n"
+">>> x\n"
+"array([[[ 0,  1,  2,  3,  4],\n"
+"        [ 5,  6,  7,  8,  9],\n"
+"        [10, 11, 12, 13, 14]],\n"
+"      [[15, 16, 17, 18, 19],\n"
+"        [20, 21, 22, 23, 24],\n"
+"        [25, 26, 27, 28, 29]]])\n"
+">>> b = np.array([[True, True, False], [False, True, True]])\n"
+">>> x[b]\n"
+"array([[ 0,  1,  2,  3,  4],\n"
+"      [ 5,  6,  7,  8,  9],\n"
+"      [20, 21, 22, 23, 24],\n"
+"      [25, 26, 27, 28, 29]])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:606
+msgid "Combining advanced and basic indexing"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:608
+msgid ""
+"When there is at least one slice (``:``), ellipsis (``...``) or :const:"
+"`newaxis` in the index (or the array has more dimensions than there are "
+"advanced indices), then the behaviour can be more complicated. It is like "
+"concatenating the indexing result for each advanced index element."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:613
+msgid ""
+"In the simplest case, there is only a *single* advanced index combined with "
+"a slice. For example::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:616
+msgid ""
+">>> y = np.arange(35).reshape(5,7)\n"
+">>> y[np.array([0, 2, 4]), 1:3]\n"
+"array([[ 1,  2],\n"
+"       [15, 16],\n"
+"       [29, 30]])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:622
+msgid ""
+"In effect, the slice and index array operation are independent. The slice "
+"operation extracts columns with index 1 and 2, (i.e. the 2nd and 3rd "
+"columns), followed by the index array operation which extracts rows with "
+"index 0, 2 and 4 (i.e the first, third and fifth rows). This is equivalent "
+"to::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:627
+msgid ""
+">>> y[:, 1:3][np.array([0, 2, 4]), :]\n"
+"array([[ 1,  2],\n"
+"       [15, 16],\n"
+"       [29, 30]])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:632
+msgid ""
+"A single advanced index can, for example, replace a slice and the result "
+"array will be the same. However, it is a copy and may have a different "
+"memory layout. A slice is preferable when it is possible. For example::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:637
+msgid ""
+">>> x = np.array([[ 0,  1,  2],\n"
+"...               [ 3,  4,  5],\n"
+"...               [ 6,  7,  8],\n"
+"...               [ 9, 10, 11]])\n"
+">>> x[1:2, 1:3]\n"
+"array([[4, 5]])\n"
+">>> x[1:2, [1, 2]]\n"
+"array([[4, 5]])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:646
+msgid ""
+"The easiest way to understand a combination of *multiple* advanced indices "
+"may be to think in terms of the resulting shape. There are two parts to the "
+"indexing operation, the subspace defined by the basic indexing (excluding "
+"integers) and the subspace from the advanced indexing part. Two cases of "
+"index combination need to be distinguished:"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:652
+msgid ""
+"The advanced indices are separated by a slice, :py:data:`Ellipsis` or :const:"
+"`newaxis`. For example ``x[arr1, :, arr2]``."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:654
+msgid ""
+"The advanced indices are all next to each other. For example ``x[..., arr1, "
+"arr2, :]`` but *not* ``x[arr1, :, 1]`` since ``1`` is an advanced index in "
+"this regard."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:658
+msgid ""
+"In the first case, the dimensions resulting from the advanced indexing "
+"operation come first in the result array, and the subspace dimensions after "
+"that. In the second case, the dimensions from the advanced indexing "
+"operations are inserted into the result array at the same spot as they were "
+"in the initial array (the latter logic is what makes simple advanced "
+"indexing behave just like slicing)."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:668
+msgid ""
+"Suppose ``x.shape`` is (10, 20, 30) and ``ind`` is a (2, 5, 2)-shaped "
+"indexing :class:`intp` array, then ``result = x[..., ind, :]`` has shape "
+"(10, 2, 5, 2, 30) because the (20,)-shaped subspace has been replaced with a "
+"(2, 5, 2)-shaped broadcasted indexing subspace. If we let *i, j, k* loop "
+"over the (2, 5, 2)-shaped subspace then ``result[..., i, j, k, :] = x[..., "
+"ind[i, j, k], :]``. This example produces the same result as :meth:`x."
+"take(ind, axis=-2) <ndarray.take>`."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:678
+msgid ""
+"Let ``x.shape`` be (10, 20, 30, 40, 50) and suppose ``ind_1`` and ``ind_2`` "
+"can be broadcast to the shape (2, 3, 4). Then ``x[:, ind_1, ind_2]`` has "
+"shape (10, 2, 3, 4, 40, 50) because the (20, 30)-shaped subspace from X has "
+"been replaced with the (2, 3, 4) subspace from the indices. However, ``x[:, "
+"ind_1, :, ind_2]`` has shape (2, 3, 4, 10, 30, 50) because there is no "
+"unambiguous place to drop in the indexing subspace, thus it is tacked-on to "
+"the beginning. It is always possible to use :meth:`.transpose() <ndarray."
+"transpose>` to move the subspace anywhere desired. Note that this example "
+"cannot be replicated using :func:`take`."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:692
+msgid "Slicing can be combined with broadcasted boolean indices::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:694
+msgid ""
+">>> x = np.arange(35).reshape(5, 7)\n"
+">>> b = x > 20\n"
+">>> b\n"
+"array([[False, False, False, False, False, False, False],\n"
+"      [False, False, False, False, False, False, False],\n"
+"      [False, False, False, False, False, False, False],\n"
+"      [ True,  True,  True,  True,  True,  True,  True],\n"
+"      [ True,  True,  True,  True,  True,  True,  True]])\n"
+">>> x[b[:, 5], 1:3]\n"
+"array([[22, 23],\n"
+"      [29, 30]])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:710
+msgid "Field access"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:712
+msgid ":ref:`structured_arrays`"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:714
+msgid ""
+"If the :class:`ndarray` object is a structured array the :term:`fields "
+"<field>` of the array can be accessed by indexing the array with strings, "
+"dictionary-like."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:718
+msgid ""
+"Indexing ``x['field-name']`` returns a new :term:`view` to the array, which "
+"is of the same shape as *x* (except when the field is a sub-array) but of "
+"data type ``x.dtype['field-name']`` and contains only the part of the data "
+"in the specified field. Also, :ref:`record array <arrays.classes.rec>` "
+"scalars can be \"indexed\" this way."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:724
+msgid ""
+"Indexing into a structured array can also be done with a list of field "
+"names, e.g. ``x[['field-name1', 'field-name2']]``. As of NumPy 1.16, this "
+"returns a view containing only those fields. In older versions of NumPy, it "
+"returned a copy. See the user guide section on :ref:`structured_arrays` for "
+"more information on multifield indexing."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:730
+msgid ""
+"If the accessed field is a sub-array, the dimensions of the sub-array are "
+"appended to the shape of the result. For example::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:734
+msgid ""
+">>> x = np.zeros((2, 2), dtype=[('a', np.int32), ('b', np.float64, (3, "
+"3))])\n"
+">>> x['a'].shape\n"
+"(2, 2)\n"
+">>> x['a'].dtype\n"
+"dtype('int32')\n"
+">>> x['b'].shape\n"
+"(2, 2, 3, 3)\n"
+">>> x['b'].dtype\n"
+"dtype('float64')"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:747
+msgid "Flat iterator indexing"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:749
+msgid ""
+":attr:`x.flat <ndarray.flat>` returns an iterator that will iterate over the "
+"entire array (in C-contiguous style with the last index varying the "
+"fastest). This iterator object can also be indexed using basic slicing or "
+"advanced indexing as long as the selection object is not a tuple. This "
+"should be clear from the fact that :attr:`x.flat <ndarray.flat>` is a 1-"
+"dimensional view. It can be used for integer indexing with 1-dimensional C-"
+"style-flat indices. The shape of any returned array is therefore the shape "
+"of the integer indexing object."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:766
+msgid "Assigning values to indexed arrays"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:768
+msgid ""
+"As mentioned, one can select a subset of an array to assign to using a "
+"single index, slices, and index and mask arrays. The value being assigned to "
+"the indexed array must be shape consistent (the same shape or broadcastable "
+"to the shape the index produces). For example, it is permitted to assign a "
+"constant to a slice: ::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:774
+msgid ""
+">>> x = np.arange(10)\n"
+">>> x[2:7] = 1"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:777
+msgid "or an array of the right size: ::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:779
+msgid ">>> x[2:7] = np.arange(5)"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:781
+msgid ""
+"Note that assignments may result in changes if assigning higher types to "
+"lower types (like floats to ints) or even exceptions (assigning complex to "
+"floats or ints): ::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:785
+msgid ""
+">>> x[1] = 1.2\n"
+">>> x[1]\n"
+"1\n"
+">>> x[1] = 1.2j  \n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"TypeError: can't convert complex to int"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:794
+msgid ""
+"Unlike some of the references (such as array and mask indices) assignments "
+"are always made to the original data in the array (indeed, nothing else "
+"would make sense!). Note though, that some actions may not work as one may "
+"naively expect. This particular example is often surprising to people: ::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:800
+msgid ""
+">>> x = np.arange(0, 50, 10)\n"
+">>> x\n"
+"array([ 0, 10, 20, 30, 40])\n"
+">>> x[np.array([1, 1, 3, 1])] += 1\n"
+">>> x\n"
+"array([ 0, 11, 20, 31, 40])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:807
+msgid ""
+"Where people expect that the 1st location will be incremented by 3. In fact, "
+"it will only be incremented by 1. The reason is that a new array is "
+"extracted from the original (as a temporary) containing the values at 1, 1, "
+"3, 1, then the value 1 is added to the temporary, and then the temporary is "
+"assigned back to the original array. Thus the value of the array at ``x[1] + "
+"1`` is assigned to ``x[1]`` three times, rather than being incremented 3 "
+"times."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:818
+msgid "Dealing with variable numbers of indices within programs"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:820
+msgid ""
+"The indexing syntax is very powerful but limiting when dealing with a "
+"variable number of indices. For example, if you want to write a function "
+"that can handle arguments with various numbers of dimensions without having "
+"to write special case code for each number of possible dimensions, how can "
+"that be done? If one supplies to the index a tuple, the tuple will be "
+"interpreted as a list of indices. For example::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:828
+msgid ""
+">>> z = np.arange(81).reshape(3, 3, 3, 3)\n"
+">>> indices = (1, 1, 1, 1)\n"
+">>> z[indices]\n"
+"40"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:833
+msgid ""
+"So one can use code to construct tuples of any number of indices and then "
+"use these within an index."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:836
+msgid ""
+"Slices can be specified within programs by using the slice() function in "
+"Python. For example: ::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:839
+msgid ""
+">>> indices = (1, 1, 1, slice(0, 2))  # same as [1, 1, 1, 0:2]\n"
+">>> z[indices]\n"
+"array([39, 40])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:843
+msgid ""
+"Likewise, ellipsis can be specified by code by using the Ellipsis object: ::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:846
+msgid ""
+">>> indices = (1, Ellipsis, 1)  # same as [1, ..., 1]\n"
+">>> z[indices]\n"
+"array([[28, 31, 34],\n"
+"       [37, 40, 43],\n"
+"       [46, 49, 52]])"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:852
+msgid ""
+"For this reason, it is possible to use the output from the :meth:`np."
+"nonzero() <ndarray.nonzero>` function directly as an index since it always "
+"returns a tuple of index arrays."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:856
+msgid ""
+"Because of the special treatment of tuples, they are not automatically "
+"converted to an array as a list would be. As an example: ::"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:859
+msgid ""
+">>> z[[1, 1, 1, 1]]  # produces a large array\n"
+"array([[[[27, 28, 29],\n"
+"         [30, 31, 32], ...\n"
+">>> z[(1, 1, 1, 1)]  # returns a single value\n"
+"40"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:867
+msgid "Detailed notes"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:869
+msgid ""
+"These are some detailed notes, which are not of importance for day to day "
+"indexing (in no particular order):"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:872
+msgid ""
+"The native NumPy indexing type is ``intp`` and may differ from the default "
+"integer array type. ``intp`` is the smallest data type sufficient to safely "
+"index any array; for advanced indexing it may be faster than other types."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:876
+msgid ""
+"For advanced assignments, there is in general no guarantee for the iteration "
+"order. This means that if an element is set more than once, it is not "
+"possible to predict the final result."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:879
+msgid ""
+"An empty (tuple) index is a full scalar index into a zero-dimensional array. "
+"``x[()]`` returns a *scalar* if ``x`` is zero-dimensional and a view "
+"otherwise. On the other hand, ``x[...]`` always returns a view."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:882
+msgid ""
+"If a zero-dimensional array is present in the index *and* it is a full "
+"integer index the result will be a *scalar* and not a zero-dimensional "
+"array. (Advanced indexing is not triggered.)"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:885
+msgid ""
+"When an ellipsis (``...``) is present but has no size (i.e. replaces zero ``:"
+"``) the result will still always be an array. A view if no advanced index is "
+"present, otherwise a copy."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:888
+msgid ""
+"The ``nonzero`` equivalence for Boolean arrays does not hold for zero "
+"dimensional boolean arrays."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:890
+msgid ""
+"When the result of an advanced indexing operation has no elements but an "
+"individual index is out of bounds, whether or not an ``IndexError`` is "
+"raised is undefined (e.g. ``x[[], [123]]`` with ``123`` being out of bounds)."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:893
+msgid ""
+"When a *casting* error occurs during assignment (for example updating a "
+"numerical array using a sequence of strings), the array being assigned to "
+"may end up in an unpredictable partially updated state. However, if any "
+"other error (such as an out of bounds index) occurs, the array will remain "
+"unchanged."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:898
+msgid ""
+"The memory layout of an advanced indexing result is optimized for each "
+"indexing operation and no particular memory order can be assumed."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:900
+msgid ""
+"When using a subclass (especially one which manipulates its shape), the "
+"default ``ndarray.__setitem__`` behaviour will call ``__getitem__`` for "
+"*basic* indexing but not for *advanced* indexing. For such a subclass it may "
+"be preferable to call ``ndarray.__setitem__`` with a *base class* ndarray "
+"view on the data. This *must* be done if the subclasses ``__getitem__`` does "
+"not return views."
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:18 ../../../user/basics.indexing.rst:758
+msgid "indexing"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:18
+msgid "slicing"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:107 ../../../user/basics.indexing.rst:223
+#: ../../../user/basics.indexing.rst:758
+msgid "ndarray"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:107
+msgid "special methods"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:107
+msgid "getitem"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:107
+msgid "setitem"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:107
+msgid "ellipsis"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:107
+msgid "newaxis"
+msgstr ""
+
+#: ../../../user/basics.indexing.rst:223
+msgid "view"
+msgstr ""

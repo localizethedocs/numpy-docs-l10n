@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.hermite.hermroots.rst:4
+msgid "numpy.polynomial.hermite.hermroots"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:2
+msgid "Compute the roots of a Hermite series."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:4
+msgid "Return the roots (a.k.a. \"zeros\") of the polynomial"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:6
+msgid ""
+"p(x) = \\sum_i c[i] * H_i(x).\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:11
+msgid "**c**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:-1
+msgid "1-D array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:11
+msgid "1-D array of coefficients."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:23
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:16
+msgid ""
+"Array of the roots of the series. If all the roots are real, then `out` is "
+"also real, otherwise it is complex."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:28
+msgid ":obj:`numpy.polynomial.polynomial.polyroots`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:30
+msgid ":obj:`numpy.polynomial.legendre.legroots`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:32
+msgid ":obj:`numpy.polynomial.laguerre.lagroots`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:34
+msgid ":obj:`numpy.polynomial.chebyshev.chebroots`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:36
+msgid ":obj:`numpy.polynomial.hermite_e.hermeroots`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:40
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:41
+msgid ""
+"The root estimates are obtained as the eigenvalues of the companion matrix, "
+"Roots far from the origin of the complex plane may have large errors due to "
+"the numerical instability of the series for such values. Roots with "
+"multiplicity greater than 1 will also show larger errors as the value of the "
+"series near such points is relatively insensitive to errors in the roots. "
+"Isolated roots near the origin can be improved by a few iterations of "
+"Newton's method."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:49
+msgid ""
+"The Hermite series basis polynomials aren't powers of `x` so the results of "
+"this function may seem unintuitive."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:54
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:-1
+msgid ""
+"<div id=\"b1e4af8c-772e-413d-8e98-268f2a2fcf80\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('ed525e28-"
+"c1d4-445c-8d93-6a96e44aadd1','b1e4af8c-772e-413d-8e98-268f2a2fcf80')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('ed525e28-"
+"c1d4-445c-8d93-6a96e44aadd1','b1e4af8c-772e-413d-8e98-268f2a2fcf80')\">Open "
+"In Tab</button></div><div id=\"5a75a16a-9a77-4415-9e90-dce796e43193\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermroots:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

@@ -1,0 +1,164 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.chebyshev.chebfromroots.rst:4
+msgid "numpy.polynomial.chebyshev.chebfromroots"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:2
+msgid "Generate a Chebyshev series with given roots."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:4
+msgid "The function returns the coefficients of the polynomial"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:6
+msgid ""
+"p(x) = (x - r_0) * (x - r_1) * ... * (x - r_n),\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:8
+msgid ""
+"in Chebyshev form, where the :math:`r_n` are the roots specified in "
+"`roots`.  If a zero has multiplicity n, then it must appear in `roots` n "
+"times.  For instance, if 2 is a root of multiplicity three and 3 is a root "
+"of multiplicity 2, then `roots` looks something like [2, 2, 2, 3, 3]. The "
+"roots can appear in any order."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:14
+msgid "If the returned coefficients are `c`, then"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:16
+msgid ""
+"p(x) = c_0 + c_1 * T_1(x) + ... +  c_n * T_n(x)\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:18
+msgid ""
+"The coefficient of the last term is not generally 1 for monic polynomials in "
+"Chebyshev form."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:24
+msgid "**roots**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:-1
+msgid "array_like"
+msgstr "array_like"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:24
+msgid "Sequence containing the roots."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:38
+msgid "**out**"
+msgstr "**out**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:-1
+msgid "ndarray"
+msgstr "ndarray"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:29
+msgid ""
+"1-D array of coefficients.  If all roots are real then `out` is a real "
+"array, if some of the roots are complex, then `out` is complex even if all "
+"the coefficients in the result are real (see Examples below)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:43
+msgid ":obj:`numpy.polynomial.polynomial.polyfromroots`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:45
+msgid ":obj:`numpy.polynomial.legendre.legfromroots`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:47
+msgid ":obj:`numpy.polynomial.laguerre.lagfromroots`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:49
+msgid ":obj:`numpy.polynomial.hermite.hermfromroots`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:51
+msgid ":obj:`numpy.polynomial.hermite_e.hermefromroots`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:57
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:-1
+msgid ""
+"<div id=\"20e14c3b-db7b-481f-84f8-4a4105809381\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('33beb994-13b5-4293-9446-de04ac209f78','20e14c3b-"
+"db7b-481f-84f8-4a4105809381')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('33beb994-13b5-4293-9446-de04ac209f78','20e14c3b-"
+"db7b-481f-84f8-4a4105809381')\">Open In Tab</button></div><div "
+"id=\"5cf2a211-3614-4d68-897c-a9aec4083194\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfromroots:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

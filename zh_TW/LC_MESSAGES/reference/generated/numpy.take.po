@@ -1,0 +1,281 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.take.rst:4
+msgid "numpy.take"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:2
+msgid "Take elements from an array along an axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:4
+msgid ""
+"When axis is not None, this function does the same thing as \"fancy\" "
+"indexing (indexing arrays using arrays); however, it can be easier to use if "
+"you need elements along a given axis. A call such as ``np.take(arr, indices, "
+"axis=3)`` is equivalent to ``arr[:,:,:,indices,...]``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:10
+msgid ""
+"Explained without fancy indexing, this is equivalent to the following use of "
+"`ndindex`, which sets each of ``ii``, ``jj``, and ``kk`` to a tuple of "
+"indices::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:14
+msgid ""
+"Ni, Nk = a.shape[:axis], a.shape[axis+1:]\n"
+"Nj = indices.shape\n"
+"for ii in ndindex(Ni):\n"
+"    for jj in ndindex(Nj):\n"
+"        for kk in ndindex(Nk):\n"
+"            out[ii + jj + kk] = a[ii + (indices[jj],) + kk]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:24
+msgid "**a**"
+msgstr "**a**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:-1
+msgid "array_like (Ni..., M, Nk...)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:24
+msgid "The source array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:28
+msgid "**indices**"
+msgstr "**indices**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:-1
+msgid "array_like (Nj...)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:27
+msgid "The indices of the values to extract. Also allow scalars for indices."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:32
+msgid "**axis**"
+msgstr "**axis**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:31
+msgid ""
+"The axis over which to select values. By default, the flattened input array "
+"is used."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:37 numpy.take:59
+msgid "**out**"
+msgstr "**out**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:-1
+msgid "ndarray, optional (Ni..., Nj..., Nk...)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:35
+msgid ""
+"If provided, the result will be placed in this array. It should be of the "
+"appropriate shape and dtype. Note that `out` is always buffered if "
+"`mode='raise'`; use other modes for better performance."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:48
+msgid "**mode**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:-1
+msgid "{'raise', 'wrap', 'clip'}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:40
+msgid "Specifies how out-of-bounds indices will behave."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:42
+msgid "'raise' -- raise an error (default)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:43
+msgid "'wrap' -- wrap around"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:44
+msgid "'clip' -- clip to the range"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:46
+msgid ""
+"'clip' mode means that all indices that are too large are replaced by the "
+"index that addresses the last element along that axis. Note that this "
+"disables indexing with negative numbers."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:-1
+msgid "ndarray (Ni..., Nj..., Nk...)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:53
+msgid "The returned array has the same type as `a`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:64
+msgid ":obj:`compress`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:65
+msgid "Take elements using a boolean mask"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:66
+msgid ":obj:`ndarray.take`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:67
+msgid "equivalent method"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:68
+msgid ":obj:`take_along_axis`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:69
+msgid "Take elements by matching the array and the index arrays"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:73
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:74
+msgid ""
+"By eliminating the inner loop in the description above, and using `s_` to "
+"build simple slice objects, `take` can be expressed  in terms of applying "
+"fancy indexing to each 1-d slice::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:78
+msgid ""
+"Ni, Nk = a.shape[:axis], a.shape[axis+1:]\n"
+"for ii in ndindex(Ni):\n"
+"    for kk in ndindex(Nk):\n"
+"        out[ii + s_[...,] + kk] = a[ii + s_[:,] + kk][indices]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:83
+msgid ""
+"For this reason, it is equivalent to (but faster than) the following use of "
+"`apply_along_axis`::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:86
+msgid "out = np.apply_along_axis(lambda a_1d: a_1d[indices], axis, a)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:90
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:101
+msgid "In this example if `a` is an ndarray, \"fancy\" indexing can be used."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:107
+msgid ""
+"If `indices` is not one dimensional, the output also has these dimensions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:-1
+msgid ""
+"<div id=\"cb5acd51-ef46-4bdb-8aeb-5132c631aa11\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('c5a9c5cc-1528-4955-bcf8-cf99d3bc2a9b','cb5acd51-"
+"ef46-4bdb-8aeb-5132c631aa11')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('c5a9c5cc-1528-4955-bcf8-cf99d3bc2a9b','cb5acd51-"
+"ef46-4bdb-8aeb-5132c631aa11')\">Open In Tab</button></div><div id=\"48ada3fa-"
+"cf59-4185-be82-014ea58b9723\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.take:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

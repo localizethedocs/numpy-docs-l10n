@@ -1,0 +1,179 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.ma.nonzero.rst:4
+msgid "numpy.ma.nonzero"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:2
+msgid "Return the indices of unmasked elements that are not zero."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:4
+msgid ""
+"Returns a tuple of arrays, one for each dimension, containing the indices of "
+"the non-zero elements in that dimension. The corresponding non-zero values "
+"can be obtained with::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:8
+msgid "a[a.nonzero()]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:10
+msgid "To group the indices by element, rather than dimension, use instead::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:13
+msgid "np.transpose(a.nonzero())"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:15
+msgid ""
+"The result of this is always a 2d array, with a row for each non-zero "
+"element."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:21
+msgid "**None**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:32
+msgid "**tuple_of_arrays**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:-1
+msgid "tuple"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:26
+msgid "Indices of elements that are non-zero."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:37
+msgid ":obj:`numpy.nonzero`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:38
+msgid "Function operating on ndarrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:39
+msgid ":obj:`flatnonzero`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:40
+msgid ""
+"Return indices that are non-zero in the flattened version of the input array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:41
+msgid ":obj:`numpy.ndarray.nonzero`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:42
+msgid "Equivalent ndarray method."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:43
+msgid ":obj:`count_nonzero`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:44
+msgid "Counts the number of non-zero elements in the input array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:50
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:68
+msgid "Masked elements are ignored."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:83
+msgid "Indices can also be grouped by element."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:89
+msgid ""
+"A common use for ``nonzero`` is to find the indices of an array, where a "
+"condition is True.  Given an array `a`, the condition `a` > 3 is a boolean "
+"array and since False is interpreted as 0, ma.nonzero(a > 3) yields the "
+"indices of the `a` where the condition is true."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:105
+msgid "The ``nonzero`` method of the condition array can also be called."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:-1
+msgid ""
+"<div id=\"047ba7cd-2f96-4b91-86ca-ec311b623b87\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('f0a4c9f3-befb-4a99-9a04-"
+"d60cbde19f4d','047ba7cd-2f96-4b91-86ca-ec311b623b87')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('f0a4c9f3-befb-4a99-9a04-d60cbde19f4d','047ba7cd-2f96-4b91-86ca-"
+"ec311b623b87')\">Open In Tab</button></div><div id=\"3311a030-8bf3-41cb-a629-"
+"c7f4731fdb13\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.nonzero:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

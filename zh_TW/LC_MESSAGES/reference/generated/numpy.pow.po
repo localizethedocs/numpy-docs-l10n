@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.pow.rst:4
+msgid "numpy.pow"
+msgstr ""
+
+#: ../../../../docstring of numpy.power:2
+msgid "First array elements raised to powers from second array, element-wise."
+msgstr ""
+
+#: ../../../../docstring of numpy.power:4
+msgid ""
+"Raise each base in `x1` to the positionally-corresponding power in `x2`.  "
+"`x1` and `x2` must be broadcastable to the same shape."
+msgstr ""
+
+#: ../../../../docstring of numpy.power:7
+msgid ""
+"An integer type raised to a negative integer power will raise a "
+"``ValueError``."
+msgstr ""
+
+#: ../../../../docstring of numpy.power:10
+msgid ""
+"Negative values raised to a non-integral value will return ``nan``. To get "
+"complex results, cast the input to complex, or specify the ``dtype`` to be "
+"``complex`` (see the example below)."
+msgstr ""
+
+#: ../../../../docstring of numpy.power:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../docstring of numpy.power:17
+msgid "**x1**"
+msgstr ""
+
+#: ../../../../docstring of numpy.power:-1
+msgid "array_like"
+msgstr "array_like"
+
+#: ../../../../docstring of numpy.power:17
+msgid "The bases."
+msgstr ""
+
+#: ../../../../docstring of numpy.power:22
+msgid "**x2**"
+msgstr ""
+
+#: ../../../../docstring of numpy.power:20
+msgid ""
+"The exponents. If ``x1.shape != x2.shape``, they must be broadcastable to a "
+"common shape (which becomes the shape of the output)."
+msgstr ""
+
+#: ../../../../docstring of numpy.power:28
+msgid "**out**"
+msgstr "**out**"
+
+#: ../../../../docstring of numpy.power:-1
+msgid "ndarray, None, or tuple of ndarray and None, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.power:25
+msgid ""
+"A location into which the result is stored. If provided, it must have a "
+"shape that the inputs broadcast to. If not provided or None, a freshly-"
+"allocated array is returned. A tuple (possible only as a keyword argument) "
+"must have length equal to the number of outputs."
+msgstr ""
+
+#: ../../../../docstring of numpy.power:36
+msgid "**where**"
+msgstr "**where**"
+
+#: ../../../../docstring of numpy.power:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.power:31
+msgid ""
+"This condition is broadcast over the input. At locations where the condition "
+"is True, the `out` array will be set to the ufunc result. Elsewhere, the "
+"`out` array will retain its original value. Note that if an uninitialized "
+"`out` array is created via the default ``out=None``, locations within it "
+"where the condition is False will remain uninitialized."
+msgstr ""
+
+#: ../../../../docstring of numpy.power:40
+msgid "**\\*\\*kwargs**"
+msgstr "**\\*\\*kwargs**"
+
+#: ../../../../docstring of numpy.power:39
+msgid ""
+"For other keyword-only arguments, see the :ref:`ufunc docs <ufuncs.kwargs>`."
+msgstr ""
+
+#: ../../../../docstring of numpy.power:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../docstring of numpy.power:52
+msgid "**y**"
+msgstr "**y**"
+
+#: ../../../../docstring of numpy.power:-1
+msgid "ndarray"
+msgstr "ndarray"
+
+#: ../../../../docstring of numpy.power:45
+msgid ""
+"The bases in `x1` raised to the exponents in `x2`. This is a scalar if both "
+"`x1` and `x2` are scalars."
+msgstr ""
+
+#: ../../../../docstring of numpy.power:57
+msgid ":obj:`float_power`"
+msgstr ":obj:`float_power`"
+
+#: ../../../../docstring of numpy.power:58
+msgid "power function that promotes integers to float"
+msgstr ""
+
+#: ../../../../docstring of numpy.power:64
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../docstring of numpy.power:71
+msgid "Cube each element in an array."
+msgstr ""
+
+#: ../../../../docstring of numpy.power:79
+msgid "Raise the bases to different exponents."
+msgstr ""
+
+#: ../../../../docstring of numpy.power:85
+msgid "The effect of broadcasting."
+msgstr ""
+
+#: ../../../../docstring of numpy.power:95
+msgid ""
+"The ``**`` operator can be used as a shorthand for ``np.power`` on ndarrays."
+msgstr ""
+
+#: ../../../../docstring of numpy.power:103
+msgid ""
+"Negative values raised to a non-integral value will result in ``nan`` (and a "
+"warning will be generated)."
+msgstr ""
+
+#: ../../../../docstring of numpy.power:113
+msgid "To get complex results, give the argument ``dtype=complex``."
+msgstr ""
+
+#: ../../../../docstring of numpy.power:-1
+msgid ""
+"<div id=\"5dabf8b7-47e0-4125-96f8-933c8f66bb9a\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('91bcf6fc-53aa-4f58-ad4c-"
+"b45a8cf521ec','5dabf8b7-47e0-4125-96f8-933c8f66bb9a')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('91bcf6fc-53aa-4f58-ad4c-"
+"b45a8cf521ec','5dabf8b7-47e0-4125-96f8-933c8f66bb9a')\">Open In Tab</"
+"button></div><div id=\"aeb55b69-6fda-42d8-aeb2-25b93b13b50d\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../docstring of numpy.power:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

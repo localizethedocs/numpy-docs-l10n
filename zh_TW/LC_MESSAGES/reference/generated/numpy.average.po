@@ -1,0 +1,272 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.average.rst:4
+msgid "numpy.average"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:2
+msgid "Compute the weighted average along the specified axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:9
+msgid "**a**"
+msgstr "**a**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:-1
+msgid "array_like"
+msgstr "array_like"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:8
+msgid ""
+"Array containing data to be averaged. If `a` is not an array, a conversion "
+"is attempted."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:17
+msgid "**axis**"
+msgstr "**axis**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:-1
+msgid "None or int or tuple of ints, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:12
+msgid ""
+"Axis or axes along which to average `a`.  The default, `axis=None`, will "
+"average over all of the elements of the input array. If axis is negative it "
+"counts from the last to the first axis. If axis is a tuple of ints, "
+"averaging is performed on all of the axes specified in the tuple instead of "
+"a single axis or all the axes as before."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:33
+msgid "**weights**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:20
+msgid ""
+"An array of weights associated with the values in `a`. Each value in `a` "
+"contributes to the average according to its associated weight. The array of "
+"weights must be the same shape as `a` if no axis is specified, otherwise the "
+"weights must have dimensions and shape consistent with `a` along the "
+"specified axis. If `weights=None`, then all data in `a` are assumed to have "
+"a weight equal to one. The calculation is::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:29
+msgid "avg = sum(a * weights) / sum(weights)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:31
+msgid ""
+"where the sum is over all included elements. The only constraint on the "
+"values of `weights` is that `sum(weights)` must not be 0."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:39
+msgid "**returned**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:36
+msgid ""
+"Default is `False`. If `True`, the tuple (`average`, `sum_of_weights`) is "
+"returned, otherwise only the average is returned. If `weights=None`, "
+"`sum_of_weights` is equivalent to the number of elements over which the "
+"average is taken."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:48
+msgid "**keepdims**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:42
+msgid ""
+"If this is set to True, the axes which are reduced are left in the result as "
+"dimensions with size one. With this option, the result will broadcast "
+"correctly against the original `a`. *Note:* `keepdims` will not work with "
+"instances of `numpy.matrix` or other classes whose methods do not support "
+"`keepdims`."
+msgstr ""
+"If this is set to True, the axes which are reduced are left in the result as "
+"dimensions with size one. With this option, the result will broadcast "
+"correctly against the original `a`. *Note:* `keepdims` will not work with "
+"instances of `numpy.matrix` or other classes whose methods do not support "
+"`keepdims`."
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:65
+msgid "**retval, [sum_of_weights]**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:-1
+msgid "array_type or double"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:53
+msgid ""
+"Return the average along the specified axis. When `returned` is `True`, "
+"return a tuple with the average as the first element and the sum of the "
+"weights as the second element. `sum_of_weights` is of the same type as "
+"`retval`. The result dtype follows a general pattern. If `weights` is None, "
+"the result dtype will be that of `a` , or ``float64`` if `a` is integral. "
+"Otherwise, if `weights` is not None and `a` is non- integral, the result "
+"type will be the type of lowest precision capable of representing values of "
+"both `a` and `weights`. If `a` happens to be integral, the previous rules "
+"still applies but the result dtype will at least be ``float64``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:71
+msgid "ZeroDivisionError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:70
+msgid ""
+"When all weights along axis are zero. See `numpy.ma.average` for a version "
+"robust to this type of error."
+msgstr ""
+"When all weights along axis are zero. See `numpy.ma.average` for a version "
+"robust to this type of error."
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:74
+msgid "TypeError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:74
+msgid "When `weights` does not have the same shape as `a`, and `axis=None`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:80
+msgid "ValueError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:77
+msgid ""
+"When `weights` does not have dimensions and shape consistent with `a` along "
+"specified `axis`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:85
+msgid ":obj:`mean`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:87
+msgid ":obj:`ma.average`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:88
+msgid ""
+"average for masked arrays -- useful if your data contains \"missing\" values"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:89
+msgid ":obj:`numpy.result_type`"
+msgstr ":obj:`numpy.result_type`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:90
+msgid ""
+"Returns the type that results from applying the numpy type promotion rules "
+"to the arguments."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:96
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:122
+msgid "With ``keepdims=True``, the following result has shape (3, 1)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:-1
+msgid ""
+"<div id=\"ee154359-4a77-4661-8cd0-8c28dd4dc54f\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('52c558e1-74de-4b7a-"
+"a79b-87da5b69dfc1','ee154359-4a77-4661-8cd0-8c28dd4dc54f')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('52c558e1-74de-4b7a-"
+"a79b-87da5b69dfc1','ee154359-4a77-4661-8cd0-8c28dd4dc54f')\">Open In Tab</"
+"button></div><div id=\"598d9f04-edb1-4599-886a-02e350970f07\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.average:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""
