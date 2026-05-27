@@ -1,0 +1,1141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../numpy_2_0_migration_guide.rst:5
+msgid "NumPy 2.0 migration guide"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:7
+msgid ""
+"This document contains a set of instructions on how to update your code to "
+"work with NumPy 2.0. It covers changes in NumPy's Python and C APIs."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:12
+msgid ""
+"Note that NumPy 2.0 also breaks binary compatibility - if you are "
+"distributing binaries for a Python package that depends on NumPy's C API, "
+"please see :ref:`numpy-2-abi-handling`."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:19
+msgid "Ruff plugin"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:21
+msgid ""
+"Many of the changes covered in the 2.0 release notes and in this migration "
+"guide can be automatically adapted in downstream code with a dedicated `Ruff "
+"<https://docs.astral.sh/ruff/>`__ rule, namely rule `NPY201 <https://docs."
+"astral.sh/ruff/rules/numpy2-deprecation/>`__."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:26
+msgid ""
+"You should install ``ruff>=0.4.8`` and add the ``NPY201`` rule to your "
+"``pyproject.toml``::"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:29
+msgid ""
+"[tool.ruff.lint]\n"
+"select = [\"NPY201\"]"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:32
+msgid "You can also apply the NumPy 2.0 rule directly from the command line::"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:34
+msgid "$ ruff check path/to/code/ --select NPY201"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:40
+msgid "Changes to NumPy data type promotion"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:42
+msgid ""
+"NumPy 2.0 changes promotion (the result of combining dissimilar data types) "
+"as per :ref:`NEP 50 <NEP50>`. Please see the NEP for details on this change. "
+"It includes a table of example changes and a backwards compatibility section."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:46
+msgid ""
+"The largest backwards compatibility change is that the precision of scalars "
+"is now preserved consistently.  Two examples are:"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:49
+msgid ""
+"``np.float32(3) + 3.`` now returns a float32 when it previously returned a "
+"float64."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:51
+msgid ""
+"``np.array([3], dtype=np.float32) + np.float64(3)`` will now return a "
+"float64 array.  (The higher precision of the scalar is not ignored.)"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:54
+msgid ""
+"For floating point values, this can lead to lower precision results when "
+"working with scalars.  For integers, errors or overflows are possible."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:57
+msgid ""
+"To solve this, you may cast explicitly.  Very often, it may also be a good "
+"solution to ensure you are working with Python scalars via ``int()``, "
+"``float()``, or ``numpy_scalar.item()``."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:61
+msgid ""
+"To track down changes, you can enable emitting warnings for changed behavior "
+"(use ``warnings.simplefilter`` to raise it as an error for a traceback)::"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:64
+msgid "np._set_promotion_state(\"weak_and_warn\")"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:66
+msgid ""
+"which is useful during testing. Unfortunately, running this may flag many "
+"changes that are irrelevant in practice."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:72
+msgid "Windows default integer"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:73
+msgid ""
+"The default integer used by NumPy is now 64bit on all 64bit systems (and "
+"32bit on 32bit system).  For historic reasons related to Python 2 it was "
+"previously equivalent to the C ``long`` type. The default integer is now "
+"equivalent to ``np.intp``."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:78
+msgid ""
+"Most end-users should not be affected by this change.  Some operations will "
+"use more memory, but some operations may actually become faster. If you "
+"experience issues due to calling a library written in a compiled language it "
+"may help to explicitly cast to a ``long``, for example with: ``arr = arr."
+"astype(\"long\", copy=False)``."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:84
+msgid ""
+"Libraries interfacing with compiled code that are written in C, Cython, or a "
+"similar language may require updating to accommodate user input if they are "
+"using the ``long`` or equivalent type on the C-side. In this case, you may "
+"wish to use ``intp`` and cast user input or support both ``long`` and "
+"``intp`` (to better support NumPy 1.x as well). When creating a new integer "
+"array in C or Cython, the new ``NPY_DEFAULT_INT`` macro will evaluate to "
+"either ``NPY_LONG`` or ``NPY_INTP`` depending on the NumPy version."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:93
+msgid "Note that the NumPy random API is not affected by this change."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:96
+msgid "C-API Changes"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:98
+msgid ""
+"Some definitions were removed or replaced due to being outdated or "
+"unmaintainable.  Some new API definitions will evaluate differently at "
+"runtime between NumPy 2.0 and NumPy 1.x. Some are defined in ``numpy/_core/"
+"include/numpy/npy_2_compat.h`` (for example ``NPY_DEFAULT_INT``) which can "
+"be vendored in full or part to have the definitions available when compiling "
+"against NumPy 1.x."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:105
+msgid ""
+"If necessary, ``PyArray_RUNTIME_VERSION >= NPY_2_0_API_VERSION`` can be used "
+"to explicitly implement different behavior on NumPy 1.x and 2.0. (The compat "
+"header defines it in a way compatible with such use.)"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:109
+msgid "Please let us know if you require additional workarounds here."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:114
+msgid "The ``PyArray_Descr`` struct has been changed"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:115
+msgid ""
+"One of the most impactful C-API changes is that the ``PyArray_Descr`` struct "
+"is now more opaque to allow us to add additional flags and have itemsizes "
+"not limited by the size of ``int`` as well as allow improving structured "
+"dtypes in the future and not burden new dtypes with their fields."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:120
+msgid ""
+"Code which only uses the type number and other initial fields is unaffected. "
+"Most code will hopefully mainly access the ``->elsize`` field, when the "
+"dtype/descriptor itself is attached to an array (e.g. ``arr->descr-"
+">elsize``) this is best replaced with ``PyArray_ITEMSIZE(arr)``."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:125
+msgid "Where not possible, new accessor functions are required:"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:127
+msgid ""
+"``PyDataType_ELSIZE`` and ``PyDataType_SET_ELSIZE`` (note that the result is "
+"now ``npy_intp`` and not ``int``)."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:129
+msgid "``PyDataType_ALIGNMENT``"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:130
+msgid "``PyDataType_FIELDS``, ``PyDataType_NAMES``, ``PyDataType_SUBARRAY``"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:131
+msgid "``PyDataType_C_METADATA``"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:133
+msgid ""
+"Cython code should use Cython 3, in which case the change is transparent. "
+"(Struct access is available for elsize and alignment when compiling only for "
+"NumPy 2.)"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:137
+msgid ""
+"For compiling with both 1.x and 2.x if you use these new accessors it is "
+"unfortunately necessary to either define them locally via a macro like::"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:140
+msgid ""
+"#if NPY_ABI_VERSION < 0x02000000\n"
+"  #define PyDataType_ELSIZE(descr) ((descr)->elsize)\n"
+"#endif"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:144
+msgid ""
+"or adding ``npy2_compat.h`` into your code base and explicitly include it "
+"when compiling with NumPy 1.x (as they are new API). Including the file has "
+"no effect on NumPy 2."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:148
+msgid ""
+"Please do not hesitate to open a NumPy issue, if you require assistance or "
+"the provided functions are not sufficient."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:151
+msgid ""
+"**Custom User DTypes:** Existing user dtypes must now use :c:type:"
+"`PyArray_DescrProto` to define their dtype and slightly modify the code. See "
+"note in :c:func:`PyArray_RegisterDataType`."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:156
+msgid "Functionality moved to headers requiring ``import_array()``"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:157
+msgid ""
+"If you previously included only ``ndarraytypes.h`` you may find that some "
+"functionality is not available anymore and requires the inclusion of "
+"``ndarrayobject.h`` or similar. This include is also needed when vendoring "
+"``npy_2_compat.h`` into your own codebase to allow use of the new "
+"definitions when compiling with NumPy 1.x."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:163
+msgid "Functionality which previously did not require import includes:"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:165
+msgid ""
+"Functions to access dtype flags: ``PyDataType_FLAGCHK``, "
+"``PyDataType_REFCHK``, and the related ``NPY_BEGIN_THREADS_DESCR``."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:167
+msgid "``PyArray_GETITEM`` and ``PyArray_SETITEM``."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:170
+msgid ""
+"It is important that the ``import_array()`` mechanism is used to ensure that "
+"the full NumPy API is accessible when using the ``npy_2_compat.h`` header.  "
+"In most cases your extension module probably already calls it. However, if "
+"not we have added ``PyArray_ImportNumPyAPI()`` as a preferable way to ensure "
+"the NumPy API is imported.  This function is light-weight when called "
+"multiple times so that you may insert it wherever it may be needed (if you "
+"wish to avoid setting it up at module import)."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:181
+msgid "Increased maximum number of dimensions"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:182
+msgid ""
+"The maximum number of dimensions (and arguments) was increased to 64. This "
+"affects the ``NPY_MAXDIMS`` and ``NPY_MAXARGS`` macros. It may be good to "
+"review their use, and we generally encourage you to not use these macros "
+"(especially ``NPY_MAXARGS``), so that a future version of NumPy can remove "
+"this limitation on the number of dimensions."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:188
+msgid ""
+"``NPY_MAXDIMS`` was also used to signal ``axis=None`` in the C-API, "
+"including the ``PyArray_AxisConverter``. The latter will return "
+"``-2147483648`` as an axis (the smallest integer value). Other functions may "
+"error with ``AxisError: axis 64 is out of bounds for array of dimension`` in "
+"which case you need to pass ``NPY_RAVEL_AXIS`` instead of ``NPY_MAXDIMS``. "
+"``NPY_RAVEL_AXIS`` is defined in the ``npy_2_compat.h`` header and runtime "
+"dependent (mapping to 32 on NumPy 1.x and ``-2147483648`` on NumPy 2.x)."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:198
+msgid "Complex types - Underlying type changes"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:200
+msgid ""
+"The underlying C types for all of the complex types have been changed to use "
+"native C99 types. While the memory layout of those types remains identical "
+"to the types used in NumPy 1.x, the API is slightly different, since direct "
+"field access (like ``c.real`` or ``c.imag``) is no longer possible."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:205
+msgid ""
+"It is recommended to use the functions ``npy_creal`` and ``npy_cimag`` (and "
+"the corresponding float and long double variants) to retrieve the real or "
+"imaginary part of a complex number, as these will work with both NumPy 1.x "
+"and with NumPy 2.x. New functions ``npy_csetreal`` and ``npy_csetimag``, "
+"along with compatibility macros ``NPY_CSETREAL`` and ``NPY_CSETIMAG`` (and "
+"the corresponding float and long double variants), have been added for "
+"setting the real or imaginary part."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:213
+msgid ""
+"The underlying type remains a struct under C++ (all of the above still "
+"remains valid)."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:216
+msgid ""
+"This has implications for Cython. It is recommended to always use the native "
+"typedefs ``cfloat_t``, ``cdouble_t``, ``clongdouble_t`` rather than the "
+"NumPy types ``npy_cfloat``, etc, unless you have to interface with C code "
+"written using the NumPy types. You can still write cython code using the ``c."
+"real`` and ``c.imag`` attributes (using the native typedefs), but you can no "
+"longer use in-place operators ``c.imag += 1`` in Cython's c++ mode."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:223
+msgid ""
+"Because NumPy 2 now includes ``complex.h`` code that uses a variable named "
+"``I`` may see an error such as"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:230
+msgid "to use the name ``I`` requires an ``#undef I`` now."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:233
+msgid ""
+"NumPy 2.0.1 briefly included the ``#undef I`` to help users not already "
+"including ``complex.h``."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:238
+msgid "Changes to namespaces"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:240
+msgid ""
+"In NumPy 2.0 certain functions, modules, and constants were moved or removed "
+"to make the NumPy namespace more user-friendly by removing unnecessary or "
+"outdated functionality and clarifying which parts of NumPy are considered "
+"private. Please see the tables below for guidance on migration.  For most "
+"changes this means replacing it with a backwards compatible alternative."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:247
+msgid "Please refer to :ref:`NEP52` for more details."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:250
+msgid "Main namespace"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:252
+msgid ""
+"About 100 members of the main ``np`` namespace have been deprecated, "
+"removed, or moved to a new place. It was done to reduce clutter and "
+"establish only one way to access a given attribute. The table below shows "
+"members that have been removed:"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:257
+msgid "removed member"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:257
+#: ../../../numpy_2_0_migration_guide.rst:337
+#: ../../../numpy_2_0_migration_guide.rst:396
+msgid "migration guideline"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:259
+msgid "add_docstring"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:259
+msgid "It's still available as ``np.lib.add_docstring``."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:260
+msgid "add_newdoc"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:260
+msgid "It's still available as ``np.lib.add_newdoc``."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:261
+msgid "add_newdoc_ufunc"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:261
+msgid "It's an internal function and doesn't have a replacement."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:262
+msgid "alltrue"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:262
+msgid "Use ``np.all`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:263
+msgid "asfarray"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:263
+msgid "Use ``np.asarray`` with a float dtype instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:264
+msgid "byte_bounds"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:264
+msgid "Now it's available under ``np.lib.array_utils.byte_bounds``"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:265
+msgid "cast"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:265
+msgid "Use ``np.asarray(arr, dtype=dtype)`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:266
+msgid "cfloat"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:266
+#: ../../../numpy_2_0_migration_guide.rst:271
+msgid "Use ``np.complex128`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:267
+msgid "charrarray"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:267
+msgid "It's still available as ``np.char.chararray``."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:268
+msgid "clongfloat"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:268
+#: ../../../numpy_2_0_migration_guide.rst:302
+msgid "Use ``np.clongdouble`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:269
+msgid "compare_chararrays"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:269
+msgid "It's still available as ``np.char.compare_chararrays``."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:270
+msgid "compat"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:270
+msgid "There's no replacement, as Python 2 is no longer supported."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:271
+msgid "complex\\_"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:272
+msgid "cumproduct"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:272
+msgid "Use ``np.cumprod`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:273
+msgid "DataSource"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:273
+msgid "It's still available as ``np.lib.npyio.DataSource``."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:274
+msgid "deprecate"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:274
+#: ../../../numpy_2_0_migration_guide.rst:276
+msgid ""
+"Emit ``DeprecationWarning`` with ``warnings.warn`` directly, or use ``typing."
+"deprecated``."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:276
+msgid "deprecate_with_doc"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:278
+msgid "disp"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:278
+msgid "Use your own printing function instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:279
+msgid "fastCopyAndTranspose"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:279
+msgid "Use ``arr.T.copy()`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:280
+msgid "find_common_type"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:280
+msgid ""
+"Use ``numpy.promote_types`` or ``numpy.result_type`` instead. To achieve "
+"semantics for the ``scalar_types`` argument, use ``numpy.result_type`` and "
+"pass the Python values ``0``, ``0.0``, or ``0j``."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:284
+msgid "format_parser"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:284
+msgid "It's still available as ``np.rec.format_parser``."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:285
+msgid "get_array_wrap"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:286
+msgid "float\\_"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:286
+msgid "Use ``np.float64`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:287
+msgid "geterrobj"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:287
+#: ../../../numpy_2_0_migration_guide.rst:315
+msgid "Use the np.errstate context manager instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:288
+msgid "Inf"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:288
+#: ../../../numpy_2_0_migration_guide.rst:289
+#: ../../../numpy_2_0_migration_guide.rst:290
+#: ../../../numpy_2_0_migration_guide.rst:306
+msgid "Use ``np.inf`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:289
+msgid "Infinity"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:290
+msgid "infty"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:291
+msgid "issctype"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:291
+msgid "Use ``issubclass(rep, np.generic)`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:292
+msgid "issubclass\\_"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:292
+msgid "Use ``issubclass`` builtin instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:293
+msgid "issubsctype"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:293
+msgid "Use ``np.issubdtype`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:294
+msgid "mat"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:294
+msgid "Use ``np.asmatrix`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:295
+msgid "maximum_sctype"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:295
+msgid ""
+"Use a specific dtype instead. You should avoid relying on any implicit "
+"mechanism and select the largest dtype of a kind explicitly in the code."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:298
+msgid "NaN"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:298
+msgid "Use ``np.nan`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:299
+msgid "nbytes"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:299
+msgid "Use ``np.dtype(<dtype>).itemsize`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:300
+msgid "NINF"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:300
+msgid "Use ``-np.inf`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:301
+msgid "NZERO"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:301
+msgid "Use ``-0.0`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:302
+msgid "longcomplex"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:303
+msgid "longfloat"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:303
+msgid "Use ``np.longdouble`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:304
+msgid "lookfor"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:304
+msgid "Search NumPy's documentation directly."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:305
+msgid "obj2sctype"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:305
+msgid "Use ``np.dtype(obj).type`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:306
+msgid "PINF"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:307
+msgid "product"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:307
+msgid "Use ``np.prod`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:308
+msgid "PZERO"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:308
+msgid "Use ``0.0`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:309
+msgid "recfromcsv"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:309
+msgid "Use ``np.genfromtxt`` with comma delimiter instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:310
+msgid "recfromtxt"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:310
+msgid "Use ``np.genfromtxt`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:311
+msgid "round\\_"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:311
+msgid "Use ``np.round`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:312
+msgid "safe_eval"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:312
+msgid "Use ``ast.literal_eval`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:313
+msgid "sctype2char"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:313
+msgid "Use ``np.dtype(obj).char`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:314
+msgid "sctypes"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:314
+msgid "Access dtypes explicitly instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:315
+msgid "seterrobj"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:316
+msgid "set_numeric_ops"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:316
+msgid ""
+"For the general case, use ``PyUFunc_ReplaceLoopBySignature``. For ndarray "
+"subclasses, define the ``__array_ufunc__`` method and override the relevant "
+"ufunc."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:319
+msgid "set_string_function"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:319
+msgid ""
+"Use ``np.set_printoptions`` instead with a formatter for custom printing of "
+"NumPy objects."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:321
+msgid "singlecomplex"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:321
+msgid "Use ``np.complex64`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:322
+msgid "string\\_"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:322
+msgid "Use ``np.bytes_`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:323
+msgid "sometrue"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:323
+msgid "Use ``np.any`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:324
+msgid "source"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:324
+msgid "Use ``inspect.getsource`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:325
+msgid "tracemalloc_domain"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:325
+msgid "It's now available from ``np.lib``."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:326
+msgid "unicode\\_"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:326
+msgid "Use ``np.str_`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:327
+msgid "who"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:327
+msgid "Use an IDE variable explorer or ``locals()`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:330
+msgid ""
+"If the table doesn't contain an item that you were using but was removed in "
+"``2.0``, then it means it was a private member. You should either use the "
+"existing API or, in case it's infeasible, reach out to us with a request to "
+"restore the removed entry."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:334
+msgid ""
+"The next table presents deprecated members, which will be removed in a "
+"release after ``2.0``:"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:337
+msgid "deprecated member"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:339
+msgid "in1d"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:339
+msgid "Use ``np.isin`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:340
+msgid "row_stack"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:340
+msgid "Use ``np.vstack`` instead (``row_stack`` was an alias for ``vstack``)."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:341
+msgid "trapz"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:341
+msgid "Use ``np.trapezoid`` or a ``scipy.integrate`` function instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:345
+msgid ""
+"Finally, a set of internal enums has been removed. As they weren't used in "
+"downstream libraries we don't provide any information on how to replace them:"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:348
+msgid ""
+"[``FLOATING_POINT_SUPPORT``, ``FPE_DIVIDEBYZERO``, ``FPE_INVALID``, "
+"``FPE_OVERFLOW``, ``FPE_UNDERFLOW``, ``UFUNC_BUFSIZE_DEFAULT``, "
+"``UFUNC_PYVALS_NAME``, ``CLIP``, ``WRAP``, ``RAISE``, ``BUFSIZE``, "
+"``ALLOW_THREADS``, ``MAXDIMS``, ``MAY_SHARE_EXACT``, ``MAY_SHARE_BOUNDS``]"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:355
+msgid "numpy.lib namespace"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:357
+msgid ""
+"Most of the functions available within ``np.lib`` are also present in the "
+"main namespace, which is their primary location. To make it unambiguous how "
+"to access each public function, ``np.lib`` is now empty and contains only a "
+"handful of specialized submodules, classes and functions:"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:362
+msgid ""
+"``array_utils``, ``format``, ``introspect``, ``mixins``, ``npyio``, "
+"``scimath`` and ``stride_tricks`` submodules,"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:365
+msgid "``Arrayterator`` and ``NumpyVersion`` classes,"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:367
+msgid "``add_docstring`` and ``add_newdoc`` functions,"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:369
+msgid "``tracemalloc_domain`` constant."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:371
+msgid ""
+"If you get an ``AttributeError`` when accessing an attribute from ``np.lib`` "
+"you should try accessing it from the main ``np`` namespace then. If an item "
+"is also missing from the main namespace, then you're using a private member. "
+"You should either use the existing API or, in case it's infeasible, reach "
+"out to us with a request to restore the removed entry."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:378
+msgid "numpy.core namespace"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:380
+msgid ""
+"The ``np.core`` namespace is now officially private and has been renamed to "
+"``np._core``. The user should never fetch members from the ``_core`` "
+"directly - instead the main namespace should be used to access the attribute "
+"in question. The layout of the ``_core`` module might change in the future "
+"without notice, contrary to public modules which adhere to the deprecation "
+"period policy. If an item is also missing from the main namespace, then you "
+"should either use the existing API or, in case it's infeasible, reach out to "
+"us with a request to restore the removed entry."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:390
+msgid "ndarray and scalar methods"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:392
+msgid ""
+"A few methods from ``np.ndarray`` and ``np.generic`` scalar classes have "
+"been removed. The table below provides replacements for the removed members:"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:396
+msgid "expired member"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:398
+msgid "newbyteorder"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:398
+msgid "Use ``arr.view(arr.dtype.newbyteorder(order))`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:399
+msgid "ptp"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:399
+msgid "Use ``np.ptp(arr, ...)`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:400
+msgid "setitem"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:400
+msgid "Use ``arr[index] = value`` instead."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:405
+msgid "numpy.strings namespace"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:407
+msgid ""
+"A new `numpy.strings` namespace has been created, where most of the string "
+"operations are implemented as ufuncs. The old `numpy.char` namespace still "
+"is available, and, wherever possible, uses the new ufuncs for greater "
+"performance. We recommend using the `~numpy.strings` functions going "
+"forward. The `~numpy.char` namespace may be deprecated in the future."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:415
+msgid "Other changes"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:419
+msgid "Note about pickled files"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:421
+msgid ""
+"NumPy 2.0 is designed to load pickle files created with NumPy 1.26, and vice "
+"versa. For versions 1.25 and earlier loading NumPy 2.0 pickle file will "
+"throw an exception."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:427
+msgid "Adapting to changes in the ``copy`` keyword"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:429
+msgid ""
+"The :ref:`copy keyword behavior changes <copy-keyword-changes-2.0>` in "
+"`~numpy.asarray`, `~numpy.array` and `ndarray.__array__ <numpy.ndarray."
+"__array__>` may require these changes:"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:433
+msgid ""
+"Code using ``np.array(..., copy=False)`` can in most cases be changed to "
+"``np.asarray(...)``. Older code tended to use ``np.array`` like this because "
+"it had less overhead than the default ``np.asarray`` copy-if-needed "
+"behavior. This is no longer true, and ``np.asarray`` is the preferred "
+"function."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:437
+msgid ""
+"For code that explicitly needs to pass ``None``/``False`` meaning \"copy if "
+"needed\" in a way that's compatible with NumPy 1.x and 2.x, see `scipy#20172 "
+"<https://github.com/scipy/scipy/pull/20172>`__ for an example of how to do "
+"so."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:441
+msgid ""
+"For any ``__array__`` method on a non-NumPy array-like object, "
+"``dtype=None`` and ``copy=None`` keywords must be added to the signature - "
+"this will work with older NumPy versions as well (although older numpy "
+"versions will never pass in ``copy`` keyword). If the keywords are added to "
+"the ``__array__`` signature, then for:"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:446
+msgid "``copy=True`` and any ``dtype`` value always return a new copy,"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:447
+msgid "``copy=None`` create a copy if required (for example by ``dtype``),"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:448
+msgid ""
+"``copy=False`` a copy must never be made. If a copy is needed to return a "
+"numpy array or satisfy ``dtype``, then raise an exception (``ValueError``)."
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:452
+msgid "Writing numpy-version-dependent code"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:454
+msgid ""
+"It should be fairly rare to have to write code that explicitly branches on "
+"the ``numpy`` version - in most cases, code can be rewritten to be "
+"compatible with 1.x and 2.0 at the same time. However, if it is necessary, "
+"here is a suggested code pattern to use, using `numpy.lib.NumpyVersion`::"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:459
+msgid ""
+"# example with AxisError, which is no longer available in\n"
+"# the main namespace in 2.0, and not available in the\n"
+"# `exceptions` namespace in <1.25.0 (example uses <2.0.0b1\n"
+"# for illustrative purposes):\n"
+"if np.lib.NumpyVersion(np.__version__) >= '2.0.0b1':\n"
+"    from numpy.exceptions import AxisError\n"
+"else:\n"
+"    from numpy import AxisError"
+msgstr ""
+
+#: ../../../numpy_2_0_migration_guide.rst:468
+msgid ""
+"This pattern will work correctly including with NumPy release candidates, "
+"which is important during the 2.0.0 release period."
+msgstr ""

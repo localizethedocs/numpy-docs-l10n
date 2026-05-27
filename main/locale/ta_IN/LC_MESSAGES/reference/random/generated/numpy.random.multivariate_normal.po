@@ -1,0 +1,313 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-20 10:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/generated/numpy.random.multivariate_normal.rst:4
+msgid "numpy.random.multivariate\\_normal"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:2
+msgid "Draw random samples from a multivariate normal distribution."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:4
+msgid ""
+"The multivariate normal, multinormal or Gaussian distribution is a "
+"generalization of the one-dimensional normal distribution to higher "
+"dimensions.  Such a distribution is specified by its mean and covariance "
+"matrix.  These parameters are analogous to the mean (average or \"center\") "
+"and variance (standard deviation, or \"width,\" squared) of the one-"
+"dimensional normal distribution."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:12
+msgid ""
+"New code should use the `~numpy.random.Generator.multivariate_normal` method "
+"of a `~numpy.random.Generator` instance instead; please see the :ref:`random-"
+"quick-start`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:20
+msgid "**mean**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:-1
+msgid "1-D array_like, of length N"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:20
+msgid "Mean of the N-dimensional distribution."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:24
+msgid "**cov**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:-1
+msgid "2-D array_like, of shape (N, N)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:23
+msgid ""
+"Covariance matrix of the distribution. It must be symmetric and positive-"
+"semidefinite for proper sampling."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:30
+msgid "**size**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:-1
+msgid "int or tuple of ints, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:27
+msgid ""
+"Given a shape of, for example, ``(m,n,k)``, ``m*n*k`` samples are generated, "
+"and packed in an `m`-by-`n`-by-`k` arrangement.  Because each sample is `N`-"
+"dimensional, the output shape is ``(m,n,k,N)``. If no shape is specified, a "
+"single (`N`-D) sample is returned."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:33
+msgid "**check_valid**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:-1
+msgid "{ 'warn', 'raise', 'ignore' }, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:33
+msgid "Behavior when the covariance matrix is not positive semidefinite."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:39
+msgid "**tol**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:-1
+msgid "float, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:36
+msgid ""
+"Tolerance when checking the singular values in covariance matrix. cov is "
+"cast to double before the check."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:54
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:44
+msgid ""
+"The drawn samples, of shape *size*, if that was provided.  If not, the shape "
+"is ``(N,)``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:47
+msgid ""
+"In other words, each entry ``out[i,j,...,:]`` is an N-dimensional value "
+"drawn from the distribution."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:59
+msgid ":obj:`random.Generator.multivariate_normal`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:60
+msgid "which should be used for new code."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:64
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:65
+msgid ""
+"The mean is a coordinate in N-dimensional space, which represents the "
+"location where samples are most likely to be generated.  This is analogous "
+"to the peak of the bell curve for the one-dimensional or univariate normal "
+"distribution."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:70
+msgid ""
+"Covariance indicates the level to which two variables vary together. From "
+"the multivariate normal distribution, we draw N-dimensional samples, :math:"
+"`X = [x_1, x_2, ... x_N]`.  The covariance matrix element :math:`C_{ij}` is "
+"the covariance of :math:`x_i` and :math:`x_j`. The element :math:`C_{ii}` is "
+"the variance of :math:`x_i` (i.e. its \"spread\")."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:77
+msgid ""
+"Instead of specifying the full covariance matrix, popular approximations "
+"include:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:80
+msgid "Spherical covariance (`cov` is a multiple of the identity matrix)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:81
+msgid ""
+"Diagonal covariance (`cov` has non-negative elements, and only on the "
+"diagonal)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:84
+msgid ""
+"This geometrical property can be seen in two dimensions by plotting "
+"generated data-points:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:90
+msgid ""
+"Diagonal covariance means that the variables are independent, and the "
+"probability density contours have their axes aligned with the coordinate "
+"axes:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:99
+msgid ""
+"Note that the covariance matrix must be positive semidefinite (a.k.a. "
+"nonnegative-definite). Otherwise, the behavior of this method is undefined "
+"and backwards compatibility is not guaranteed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:104
+msgid "References"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:105
+msgid ""
+"Papoulis, A., \"Probability, Random Variables, and Stochastic Processes,\" "
+"3rd ed., New York: McGraw-Hill, 1991."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:107
+msgid ""
+"Duda, R. O., Hart, P. E., and Stork, D. G., \"Pattern Classification,\" 2nd "
+"ed., New York: Wiley, 2001."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:112
+msgid "[R0b9feda8a8ed-1]_, [R0b9feda8a8ed-2]_"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:115
+msgid "Examples"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.multivariate_normal.rst:9
+msgid ""
+"Here we generate 800 samples from the bivariate normal distribution with "
+"mean [0, 0] and covariance matrix [[6, -3], [-3, 3.5]].  The expected "
+"variances of the first and second components of the sample are 6 and 3.5, "
+"respectively, and the expected correlation coefficient is -3/sqrt(6*3.5) ≈ "
+"-0.65465."
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.multivariate_normal.rst:18
+msgid ""
+"Check that the mean, covariance, and correlation coefficient of the sample "
+"are close to the expected values:"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.multivariate_normal.rst:29
+msgid ""
+"We can visualize this data with a scatter plot.  The orientation of the "
+"point cloud illustrates the negative correlation of the components of this "
+"sample."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:158
+msgid ""
+"<div id=\"eda20b7d-4e4d-40af-a8c3-a7cae6bec82a\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('9c0f40e3-99e3-4799-bdc3-"
+"e79c37ff43a0','eda20b7d-4e4d-40af-a8c3-a7cae6bec82a')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('9c0f40e3-99e3-4799-bdc3-e79c37ff43a0','eda20b7d-4e4d-40af-a8c3-"
+"a7cae6bec82a')\">Open In Tab</button></div><div "
+"id=\"f88b79a0-9023-4f6f-9b47-46cf29e9dce9\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.multivariate_normal:158
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../../try_examples.json\");});</script>"
+msgstr ""

@@ -1,0 +1,237 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-20 10:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.linalg.pinv.rst:4
+msgid "numpy.linalg.pinv"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:2
+msgid "Compute the (Moore-Penrose) pseudo-inverse of a matrix."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:4
+msgid ""
+"Calculate the generalized inverse of a matrix using its singular-value "
+"decomposition (SVD) and including all *large* singular values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:11
+msgid "**a**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:-1
+msgid "(..., M, N) array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:11
+msgid "Matrix or stack of matrices to be pseudo-inverted."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:17
+msgid "**rcond**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:-1
+msgid "(...) array_like of float, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:14
+msgid ""
+"Cutoff for small singular values. Singular values less than or equal to "
+"``rcond * largest_singular_value`` are set to zero. Broadcasts against the "
+"stack of matrices. Default: ``1e-15``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:22
+msgid "**hermitian**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:20
+msgid ""
+"If True, `a` is assumed to be Hermitian (symmetric if real-valued), enabling "
+"a more efficient method for finding singular values. Defaults to False."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:32
+msgid "**rtol**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:25
+msgid ""
+"Same as `rcond`, but it's an Array API compatible parameter name. Only "
+"`rcond` or `rtol` can be set at a time. If none of them are provided then "
+"NumPy's ``1e-15`` default is used. If ``rtol=None`` is passed then the API "
+"standard default is used."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:41
+msgid "**B**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:-1
+msgid "(..., N, M) ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:37
+msgid ""
+"The pseudo-inverse of `a`. If `a` is a `matrix` instance, then so is `B`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:48
+msgid "LinAlgError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:46
+msgid "If the SVD computation does not converge."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:53
+msgid ":obj:`scipy.linalg.pinv`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:54
+msgid "Similar function in SciPy."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:55
+msgid ":obj:`scipy.linalg.pinvh`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:56
+msgid "Compute the (Moore-Penrose) pseudo-inverse of a Hermitian matrix."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:60
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:61
+msgid ""
+"The pseudo-inverse of a matrix A, denoted :math:`A^+`, is defined as: \"the "
+"matrix that 'solves' [the least-squares problem] :math:`Ax = b`,\" i.e., if :"
+"math:`\\bar{x}` is said solution, then :math:`A^+` is that matrix such that :"
+"math:`\\bar{x} = A^+b`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:66
+msgid ""
+"It can be shown that if :math:`Q_1 \\Sigma Q_2^T = A` is the singular value "
+"decomposition of A, then :math:`A^+ = Q_2 \\Sigma^+ Q_1^T`, where :math:"
+"`Q_{1,2}` are orthogonal matrices, :math:`\\Sigma` is a diagonal matrix "
+"consisting of A's so-called singular values, (followed, typically, by "
+"zeros), and then :math:`\\Sigma^+` is simply the diagonal matrix consisting "
+"of the reciprocals of A's singular values (again, followed by zeros). "
+"[Rec505eafac9d-1]_"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:76
+msgid "References"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:77
+msgid ""
+"G. Strang, *Linear Algebra and Its Applications*, 2nd Ed., Orlando, FL, "
+"Academic Press, Inc., 1980, pp. 139-142."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:82
+msgid "[Rec505eafac9d-1]_"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:85
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:90
+msgid ""
+"The following example checks that ``a * a+ * a == a`` and ``a+ * a * a+ == "
+"a+``:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:-1
+msgid ""
+"<div id=\"d08bc620-1b23-4e2a-bc8e-730f3729a167\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('1a9c732a-7ea1-4cb3-929e-"
+"a1f19fe0f314','d08bc620-1b23-4e2a-bc8e-730f3729a167')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('1a9c732a-7ea1-4cb3-929e-a1f19fe0f314','d08bc620-1b23-4e2a-"
+"bc8e-730f3729a167')\">Open In Tab</button></div><div "
+"id=\"d2c70cfe-8faf-4dbd-849a-6c9fa38df378\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.pinv:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

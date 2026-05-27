@@ -1,0 +1,237 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-20 10:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.format_float_scientific.rst:4
+msgid "numpy.format\\_float\\_scientific"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:2
+msgid ""
+"Format a floating-point scalar as a decimal string in scientific notation."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:4
+msgid ""
+"Provides control over rounding, trimming and padding. Uses and assumes IEEE "
+"unbiased rounding. Uses the \"Dragon4\" algorithm."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:10
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:-1
+msgid "python float or numpy floating scalar"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:10
+msgid "Value to format."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:14
+msgid "**precision**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:-1
+msgid "non-negative integer or None, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:13
+msgid ""
+"Maximum number of digits to print. May be None if `unique` is `True`, but "
+"must be an integer if unique is `False`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:25
+msgid "**unique**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:-1
+msgid "boolean, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:17
+msgid ""
+"If `True`, use a digit-generation strategy which gives the shortest "
+"representation which uniquely identifies the floating-point number from "
+"other values of the same type, by judicious rounding. If `precision` is "
+"given fewer digits than necessary can be printed. If `min_digits` is given "
+"more can be printed, in which cases the last digit is rounded with unbiased "
+"rounding. If `False`, digits are generated as if printing an infinite-"
+"precision value and stopping after `precision` digits, rounding the "
+"remaining value with unbiased rounding"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:34
+msgid "**trim**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:-1
+msgid "one of 'k', '.', '0', '-', optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:28
+msgid "Controls post-processing trimming of trailing digits, as follows:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:30
+msgid "'k' : keep trailing zeros, keep decimal point (no trimming)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:31
+msgid "'.' : trim all trailing zeros, leave decimal point"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:32
+msgid ""
+"'0' : trim all but the zero before the decimal point. Insert the zero if it "
+"is missing."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:34
+msgid "'-' : trim trailing zeros and any trailing decimal point"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:37
+msgid "**sign**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:37
+msgid "Whether to show the sign for positive values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:41
+msgid "**pad_left**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:-1
+msgid "non-negative integer, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:40
+msgid ""
+"Pad the left side of the string with whitespace until at least that many "
+"characters are to the left of the decimal point."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:45
+msgid "**exp_digits**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:44
+msgid ""
+"Pad the exponent with zeros until it contains at least this many digits. If "
+"omitted, the exponent will be at least 2 digits."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:54
+msgid "**min_digits**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:48
+msgid ""
+"Minimum number of digits to print. This only has an effect for "
+"`unique=True`. In that case more digits than necessary to uniquely identify "
+"the value may be printed and rounded unbiased."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:65
+msgid "**rep**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:-1
+msgid "string"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:59
+msgid "The string representation of the floating point value"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:70
+msgid ":obj:`format_float_positional`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:76
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:-1
+msgid ""
+"<div id=\"5069cafb-425f-4725-a71e-8427a139cc73\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('7edc1527-d87f-4f79-"
+"bf74-2d45090a6a3c','5069cafb-425f-4725-a71e-8427a139cc73')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('7edc1527-d87f-4f79-bf74-2d45090a6a3c','5069cafb-425f-4725-"
+"a71e-8427a139cc73')\">Open In Tab</button></div><div "
+"id=\"d93a1b4d-407c-4e88-964b-954e5b611dc9\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_scientific:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

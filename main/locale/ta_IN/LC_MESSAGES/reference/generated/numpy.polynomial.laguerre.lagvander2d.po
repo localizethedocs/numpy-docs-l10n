@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-20 10:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.laguerre.lagvander2d.rst:4
+msgid "numpy.polynomial.laguerre.lagvander2d"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:2
+msgid "Pseudo-Vandermonde matrix of given degrees."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:4
+msgid ""
+"Returns the pseudo-Vandermonde matrix of degrees `deg` and sample points "
+"``(x, y)``. The pseudo-Vandermonde matrix is defined by"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:7
+msgid ""
+"V[..., (deg[1] + 1)*i + j] = L_i(x) * L_j(y),\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:9
+msgid ""
+"where ``0 <= i <= deg[0]`` and ``0 <= j <= deg[1]``. The leading indices of "
+"`V` index the points ``(x, y)`` and the last index encodes the degrees of "
+"the Laguerre polynomials."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:13
+msgid ""
+"If ``V = lagvander2d(x, y, [xdeg, ydeg])``, then the columns of `V` "
+"correspond to the elements of a 2-D coefficient array `c` of shape (xdeg + "
+"1, ydeg + 1) in the order"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:17
+msgid ""
+"c_{00}, c_{01}, c_{02}, ... , c_{10}, c_{11}, c_{12}, ...\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:19
+msgid ""
+"and ``np.dot(V, c.flat)`` and ``lagval2d(x, y, c)`` will be the same up to "
+"roundoff. This equivalence is useful both for least squares fitting and for "
+"the evaluation of a large number of 2-D Laguerre series of the same degrees "
+"and sample points."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:30
+msgid "**x, y**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:27
+msgid ""
+"Arrays of point coordinates, all of the same shape. The dtypes will be "
+"converted to either float64 or complex128 depending on whether any of the "
+"elements are complex. Scalars are converted to 1-D arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:35
+msgid "**deg**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:-1
+msgid "list of ints"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:33
+msgid "List of maximum degrees of the form [x_deg, y_deg]."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:48
+msgid "**vander2d**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:40
+msgid ""
+"The shape of the returned matrix is ``x.shape + (order,)``, where :math:"
+"`order = (deg[0]+1)*(deg[1]+1)`.  The dtype will be the same as the "
+"converted `x` and `y`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:53
+msgid ":obj:`lagvander`, :obj:`lagvander3d`, :obj:`lagval2d`, :obj:`lagval3d`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:59
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:-1
+msgid ""
+"<div id=\"04bf6536-4000-4fc0-8f56-9a0c9c0ef6ea\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('247ba987-7b93-4d80-a251-"
+"b00a4a2ef9cd','04bf6536-4000-4fc0-8f56-9a0c9c0ef6ea')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('247ba987-7b93-4d80-a251-"
+"b00a4a2ef9cd','04bf6536-4000-4fc0-8f56-9a0c9c0ef6ea')\">Open In Tab</"
+"button></div><div id=\"12b820e2-a94f-49d6-aaeb-34c15cef35a2\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvander2d:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""
