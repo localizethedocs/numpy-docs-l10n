@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 09:24+0000\n"
+"POT-Creation-Date: 2026-05-25 11:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1375,6 +1375,26 @@ msgid ""
 msgstr ""
 
 #: ../../../reference/c-api/array.rst:1246
+msgid "**Transitioning to the new DType API**"
+msgstr ""
+
+#: ../../../reference/c-api/array.rst:1248
+msgid ""
+"Users currently using the old DType API may not be able to easily transition "
+"due to NumPy issues that would cause regressions. While new DTypes may "
+"reasonably limit themselves to newer NumPy versions, existing DTypes cannot "
+"do so."
+msgstr ""
+
+#: ../../../reference/c-api/array.rst:1253
+msgid ""
+"You can transition to the new DType API by using the :c:macro:"
+"`NPY_DT_legacy_descriptor_proto` slot when registering. This slot is "
+"available when compiling with NumPy 2.5 and provides support for NumPy 2.0 "
+"and higher (it can also be vendored to compile on older versions of NumPy)."
+msgstr ""
+
+#: ../../../reference/c-api/array.rst:1259
 msgid ""
 "Register a data-type as a new user-defined data type for arrays. The type "
 "must have most of its entries filled in. This is not always checked and "
@@ -1387,7 +1407,7 @@ msgid ""
 "character typecode but this is not enforced and not relied on internally."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1258
+#: ../../../reference/c-api/array.rst:1271
 msgid ""
 "A user-defined type number is returned that uniquely identifies the type. A "
 "pointer to the new structure can then be obtained from :c:func:"
@@ -1397,7 +1417,7 @@ msgid ""
 "number."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1265
+#: ../../../reference/c-api/array.rst:1278
 msgid ""
 "The number of user DTypes known to numpy is stored in ``NPY_NUMUSERTYPES``, "
 "a static global variable that is public in the C API.  Accessing this symbol "
@@ -1406,7 +1426,7 @@ msgid ""
 "does not ensure new data types can be added in a thread-safe manner."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1275
+#: ../../../reference/c-api/array.rst:1288
 msgid ""
 "Register a low-level casting function, *castfunc*, to convert from the data-"
 "type, *descr*, to the given data-type number, *totype*. Any old casting "
@@ -1414,11 +1434,17 @@ msgid ""
 "failure."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1282
+#: ../../../reference/c-api/array.rst:1294
+msgid ""
+"This function will eventually be deprecated. Please migrate to the new DType "
+"API for casts.  See :c:macro:`NPY_DT_legacy_descriptor_proto` for details."
+msgstr ""
+
+#: ../../../reference/c-api/array.rst:1300
 msgid "The function pointer type for low-level casting functions."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1287
+#: ../../../reference/c-api/array.rst:1305
 msgid ""
 "Register the data-type number, *totype*, as castable from data-type object, "
 "*descr*, of the given *scalar* kind. Use *scalar* = :c:data:`NPY_NOSCALAR` "
@@ -1427,11 +1453,19 @@ msgid ""
 "on failure."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1295
+#: ../../../reference/c-api/array.rst:1312
+msgid ""
+"This function will eventually be deprecated. Please migrate to the new DType "
+"API for casts.  See :c:macro:`NPY_DT_legacy_descriptor_proto` for details.  "
+"The new DType API provides more flexibility and speed even for dtypes "
+"compatible with the legacy API."
+msgstr ""
+
+#: ../../../reference/c-api/array.rst:1319
 msgid "Special functions for NPY_OBJECT"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1299
+#: ../../../reference/c-api/array.rst:1323
 msgid ""
 "When working with arrays or buffers filled with objects NumPy tries to "
 "ensure such buffers are filled with ``None`` before any data may be read. "
@@ -1440,7 +1474,7 @@ msgid ""
 "``assert`` non-``NULL`` when compiled in debug mode."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1306
+#: ../../../reference/c-api/array.rst:1330
 msgid ""
 "Because NumPy is not yet consistent about initialization with None, users "
 "**must** expect a value of ``NULL`` when working with buffers created by "
@@ -1448,7 +1482,7 @@ msgid ""
 "NumPy, since NumPy may make this a strong requirement in the future."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1311
+#: ../../../reference/c-api/array.rst:1335
 msgid ""
 "There is currently an intention to ensure that NumPy always initializes "
 "object arrays before they may be read.  Any failure to do so will be "
@@ -1458,14 +1492,14 @@ msgid ""
 "As of NumPy 1.23 known code paths exists where proper filling is not done."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1322
+#: ../../../reference/c-api/array.rst:1346
 msgid ""
 "Used for an array, *op*, that contains any Python objects. It increments the "
 "reference count of every object in the array according to the data-type of "
 "*op*. A -1 is returned if an error occurs, otherwise 0 is returned."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1329
+#: ../../../reference/c-api/array.rst:1353
 msgid ""
 "A function to INCREF all the objects at the location *ptr* according to the "
 "data-type *dtype*. If *ptr* is the start of a structured type with an object "
@@ -1473,14 +1507,14 @@ msgid ""
 "all object-like items in the structured type."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1337
+#: ../../../reference/c-api/array.rst:1361
 msgid ""
 "Used for an array, *op*, that contains any Python objects. It decrements the "
 "reference count of every object in the array according to the data-type of "
 "*op*. Normal return value is 0. A -1 is returned if an error occurs."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1344
+#: ../../../reference/c-api/array.rst:1368
 msgid ""
 "A function to XDECREF all the object-like items at the location *ptr* as "
 "recorded in the data-type, *dtype*. This works recursively so that if "
@@ -1488,7 +1522,7 @@ msgid ""
 "all the object-like fields will be XDECREF ``'d``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1352
+#: ../../../reference/c-api/array.rst:1376
 msgid ""
 "Precondition: ``arr`` is a copy of ``base`` (though possibly with different "
 "strides, ordering, etc.) Sets the :c:data:`NPY_ARRAY_WRITEBACKIFCOPY` flag "
@@ -1497,15 +1531,15 @@ msgid ""
 "to copy any changes back to ``base`` and reset the READONLY flag."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1359
+#: ../../../reference/c-api/array.rst:1383
 msgid "Returns 0 for success, -1 for failure."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1364
+#: ../../../reference/c-api/array.rst:1388
 msgid "Array flags"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1366
+#: ../../../reference/c-api/array.rst:1390
 msgid ""
 "The ``flags`` attribute of the ``PyArrayObject`` structure contains "
 "important information about the memory used by the array (pointed to by the "
@@ -1513,7 +1547,7 @@ msgid ""
 "and even segfaults may result."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1371
+#: ../../../reference/c-api/array.rst:1395
 msgid ""
 "There are 6 (binary) flags that describe the memory area used by the data "
 "buffer.  These constants are defined in ``arrayobject.h`` and determine the "
@@ -1522,7 +1556,7 @@ msgid ""
 "setting) these flags."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1377
+#: ../../../reference/c-api/array.rst:1401
 msgid ""
 "Memory areas of all kinds can be pointed to by an ndarray, necessitating "
 "these flags.  If you get an arbitrary ``PyArrayObject`` in C-code, you need "
@@ -1532,18 +1566,18 @@ msgid ""
 "function."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1384
+#: ../../../reference/c-api/array.rst:1408
 msgid ""
 "In versions 1.6 and earlier of NumPy, the following flags did not have the "
 "_ARRAY_ macro namespace in them. That form of the constant names is "
 "deprecated in 1.7."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1390
+#: ../../../reference/c-api/array.rst:1414
 msgid "Basic Array Flags"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1392
+#: ../../../reference/c-api/array.rst:1416
 msgid ""
 "An ndarray can have a data segment that is not a simple contiguous chunk of "
 "well-behaved memory you can manipulate. It may not be aligned with word "
@@ -1553,25 +1587,25 @@ msgid ""
 "indicate what can be said about data associated with an array."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1402
+#: ../../../reference/c-api/array.rst:1426
 msgid ""
 "The data area is in C-style contiguous order (last index varies the fastest)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1407
+#: ../../../reference/c-api/array.rst:1431
 msgid ""
 "The data area is in Fortran-style contiguous order (first index varies the "
 "fastest)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1412
+#: ../../../reference/c-api/array.rst:1436
 msgid ""
 "Arrays can be both C-style and Fortran-style contiguous simultaneously. This "
 "is clear for 1-dimensional arrays, but can also be true for higher "
 "dimensional arrays."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1416
+#: ../../../reference/c-api/array.rst:1440
 msgid ""
 "Even for contiguous arrays a stride for a given dimension ``arr."
 "strides[dim]`` may be *arbitrary* if ``arr.shape[dim] == 1`` or the array "
@@ -1582,39 +1616,39 @@ msgid ""
 "``PyArray_ITEMSIZE(arr)``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1424
+#: ../../../reference/c-api/array.rst:1448
 msgid ":ref:`Internal memory layout of an ndarray <arrays.ndarray>`"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1428
+#: ../../../reference/c-api/array.rst:1452
 msgid ""
 "The data area is owned by this array. Should never be set manually, instead "
 "create a ``PyObject`` wrapping the data and set the array's base to that "
 "object. For an example, see the test in ``test_mem_policy``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1434
+#: ../../../reference/c-api/array.rst:1458
 msgid "The data area and all array elements are aligned appropriately."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1438
+#: ../../../reference/c-api/array.rst:1462
 msgid "The data area can be written to."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1440
+#: ../../../reference/c-api/array.rst:1464
 msgid ""
 "Notice that the above 3 flags are defined so that a new, well- behaved array "
 "has these flags defined as true."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1445
+#: ../../../reference/c-api/array.rst:1469
 msgid ""
 "The data area represents a (well-behaved) copy whose information should be "
 "transferred back to the original when :c:func:"
 "`PyArray_ResolveWritebackIfCopy` is called."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1449
+#: ../../../reference/c-api/array.rst:1473
 msgid ""
 "This is a special flag that is set if this array represents a copy made "
 "because a user required certain flags in :c:func:`PyArray_FromAny` and a "
@@ -1629,7 +1663,7 @@ msgid ""
 "`NPY_ARRAY_WRITEBACKIFCOPY` would not have been possible."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1462
+#: ../../../reference/c-api/array.rst:1486
 msgid ""
 ":c:func:`PyArray_UpdateFlags` (obj, flags) will update the ``obj->flags`` "
 "for ``flags`` which can be any of :c:data:`NPY_ARRAY_C_CONTIGUOUS`, :c:data:"
@@ -1637,98 +1671,98 @@ msgid ""
 "`NPY_ARRAY_WRITEABLE`."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1469
+#: ../../../reference/c-api/array.rst:1493
 msgid "Combinations of array flags"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1473
+#: ../../../reference/c-api/array.rst:1497
 msgid ":c:data:`NPY_ARRAY_ALIGNED` \\| :c:data:`NPY_ARRAY_WRITEABLE`"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1477
+#: ../../../reference/c-api/array.rst:1501
 msgid ":c:data:`NPY_ARRAY_C_CONTIGUOUS` \\| :c:data:`NPY_ARRAY_BEHAVED`"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1481
-#: ../../../reference/c-api/array.rst:1497
+#: ../../../reference/c-api/array.rst:1505
+#: ../../../reference/c-api/array.rst:1521
 msgid ":c:data:`NPY_ARRAY_C_CONTIGUOUS` \\| :c:data:`NPY_ARRAY_ALIGNED`"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1485
+#: ../../../reference/c-api/array.rst:1509
 msgid ":c:data:`NPY_ARRAY_F_CONTIGUOUS` \\| :c:data:`NPY_ARRAY_BEHAVED`"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1489
-#: ../../../reference/c-api/array.rst:1501
+#: ../../../reference/c-api/array.rst:1513
+#: ../../../reference/c-api/array.rst:1525
 msgid ":c:data:`NPY_ARRAY_F_CONTIGUOUS` \\| :c:data:`NPY_ARRAY_ALIGNED`"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1493
+#: ../../../reference/c-api/array.rst:1517
 msgid ":c:data:`NPY_ARRAY_CARRAY`"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1505
+#: ../../../reference/c-api/array.rst:1529
 msgid ""
 ":c:data:`NPY_ARRAY_C_CONTIGUOUS` \\| :c:data:`NPY_ARRAY_WRITEABLE` \\| :c:"
 "data:`NPY_ARRAY_ALIGNED`"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1510
+#: ../../../reference/c-api/array.rst:1534
 msgid ""
 ":c:data:`NPY_ARRAY_F_CONTIGUOUS` \\| :c:data:`NPY_ARRAY_WRITEABLE` \\| :c:"
 "data:`NPY_ARRAY_ALIGNED`"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1515
+#: ../../../reference/c-api/array.rst:1539
 msgid ""
 ":c:data:`NPY_ARRAY_C_CONTIGUOUS` \\| :c:data:`NPY_ARRAY_WRITEABLE` \\| :c:"
 "data:`NPY_ARRAY_ALIGNED` \\| :c:data:`NPY_ARRAY_WRITEBACKIFCOPY`"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1520
+#: ../../../reference/c-api/array.rst:1544
 msgid ""
 ":c:data:`NPY_ARRAY_F_CONTIGUOUS` \\| :c:data:`NPY_ARRAY_WRITEABLE` \\| :c:"
 "data:`NPY_ARRAY_ALIGNED` \\| :c:data:`NPY_ARRAY_WRITEBACKIFCOPY`"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1525
+#: ../../../reference/c-api/array.rst:1549
 msgid ""
 ":c:data:`NPY_ARRAY_C_CONTIGUOUS` \\| :c:data:`NPY_ARRAY_F_CONTIGUOUS` \\| :c:"
 "data:`NPY_ARRAY_ALIGNED`"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1529
+#: ../../../reference/c-api/array.rst:1553
 msgid "Flag-like constants"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1531
+#: ../../../reference/c-api/array.rst:1555
 msgid ""
 "These constants are used in :c:func:`PyArray_FromAny` (and its macro forms) "
 "to specify desired properties of the new array."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1536
+#: ../../../reference/c-api/array.rst:1560
 msgid ""
 "Cast to the desired type, even if it can't be done without losing "
 "information."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1541
+#: ../../../reference/c-api/array.rst:1565
 msgid "Make sure the resulting array is a copy of the original."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1545
+#: ../../../reference/c-api/array.rst:1569
 msgid ""
 "Make sure the resulting object is an actual ndarray, and not a sub-class."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1547
+#: ../../../reference/c-api/array.rst:1571
 msgid ""
 "These constants are used in :c:func:`PyArray_CheckFromAny` (and its macro "
 "forms) to specify desired properties of the new array."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1552
+#: ../../../reference/c-api/array.rst:1576
 msgid ""
 "Make sure the returned array has a data-type descriptor that is in machine "
 "byte-order, over-riding any specification in the *dtype* argument. Normally, "
@@ -1739,29 +1773,29 @@ msgid ""
 "descriptor is created and used with its byte-order field set to native."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1563
+#: ../../../reference/c-api/array.rst:1587
 msgid ""
 ":c:data:`NPY_ARRAY_ALIGNED` \\| :c:data:`NPY_ARRAY_WRITEABLE` \\| :c:data:"
 "`NPY_ARRAY_NOTSWAPPED`"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1568
+#: ../../../reference/c-api/array.rst:1592
 msgid ""
 "Make sure the returned array has strides that are multiples of the element "
 "size."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1573
+#: ../../../reference/c-api/array.rst:1597
 msgid "Flag checking"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1575
+#: ../../../reference/c-api/array.rst:1599
 msgid ""
 "For all of these macros *arr* must be an instance of a (subclass of) :c:data:"
 "`PyArray_Type`."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1580
+#: ../../../reference/c-api/array.rst:1604
 msgid ""
 "The first parameter, arr, must be an ndarray or subclass. The parameter, "
 "*flags*, should be an integer consisting of bitwise combinations of the "
@@ -1771,73 +1805,73 @@ msgid ""
 "`NPY_ARRAY_WRITEBACKIFCOPY`."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1589
+#: ../../../reference/c-api/array.rst:1613
 msgid "Evaluates true if *arr* is C-style contiguous."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1593
+#: ../../../reference/c-api/array.rst:1617
 msgid "Evaluates true if *arr* is Fortran-style contiguous."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1597
+#: ../../../reference/c-api/array.rst:1621
 msgid ""
 "Evaluates true if *arr* is Fortran-style contiguous and *not* C-style "
 "contiguous. :c:func:`PyArray_IS_F_CONTIGUOUS` is the correct way to test for "
 "Fortran-style contiguity."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1603
+#: ../../../reference/c-api/array.rst:1627
 msgid "Evaluates true if the data area of *arr* can be written to"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1607
+#: ../../../reference/c-api/array.rst:1631
 msgid ""
 "Evaluates true if the data area of *arr* is properly aligned on the machine."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1612
+#: ../../../reference/c-api/array.rst:1636
 msgid ""
 "Evaluates true if the data area of *arr* is aligned and writeable and in "
 "machine byte-order according to its descriptor."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1617
+#: ../../../reference/c-api/array.rst:1641
 msgid ""
 "Evaluates true if the data area of *arr* is aligned and in machine byte-"
 "order."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1622
+#: ../../../reference/c-api/array.rst:1646
 msgid ""
 "Evaluates true if the data area of *arr* is C-style contiguous, and :c:func:"
 "`PyArray_ISBEHAVED` (*arr*) is true."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1627
+#: ../../../reference/c-api/array.rst:1651
 msgid ""
 "Evaluates true if the data area of *arr* is Fortran-style contiguous and :c:"
 "func:`PyArray_ISBEHAVED` (*arr*) is true."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1632
+#: ../../../reference/c-api/array.rst:1656
 msgid ""
 "Evaluates true if the data area of *arr* is C-style contiguous, aligned, and "
 "in machine byte-order."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1637
+#: ../../../reference/c-api/array.rst:1661
 msgid ""
 "Evaluates true if the data area of *arr* is Fortran-style contiguous, "
 "aligned, and in machine byte-order **.**"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1642
+#: ../../../reference/c-api/array.rst:1666
 msgid ""
 "Evaluates true if the data area of *arr* consists of a single (C-style or "
 "Fortran-style) contiguous segment."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1647
+#: ../../../reference/c-api/array.rst:1671
 msgid ""
 "The :c:data:`NPY_ARRAY_C_CONTIGUOUS`, :c:data:`NPY_ARRAY_ALIGNED`, and :c:"
 "data:`NPY_ARRAY_F_CONTIGUOUS` array flags can be \"calculated\" from the "
@@ -1845,7 +1879,7 @@ msgid ""
 "*arr* as specified in *flagmask* by performing the required calculation."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1656
+#: ../../../reference/c-api/array.rst:1680
 msgid ""
 "It is important to keep the flags updated (using :c:func:"
 "`PyArray_UpdateFlags` can help) whenever a manipulation with an array is "
@@ -1854,7 +1888,7 @@ msgid ""
 "them."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1664
+#: ../../../reference/c-api/array.rst:1688
 msgid ""
 "This function does nothing and returns 0 if *obj* is writeable. It raises an "
 "exception and returns -1 if *obj* is not writeable. It may also do other "
@@ -1863,18 +1897,18 @@ msgid ""
 "array."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1670
+#: ../../../reference/c-api/array.rst:1694
 msgid ""
 "*name* is a name for the array, used to give better error messages. It can "
 "be something like \"assignment destination\", \"output array\", or even just "
 "\"array\"."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1675
+#: ../../../reference/c-api/array.rst:1699
 msgid "ArrayMethod API"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1677
+#: ../../../reference/c-api/array.rst:1701
 msgid ""
 "ArrayMethod loops are intended as a generic mechanism for writing loops over "
 "arrays, including ufunc loops and casts. The public API is defined in the "
@@ -1882,18 +1916,18 @@ msgid ""
 "documentation on the C structs exposed in the ArrayMethod API."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1685
+#: ../../../reference/c-api/array.rst:1709
 msgid "Slots and Typedefs"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1687
+#: ../../../reference/c-api/array.rst:1711
 msgid ""
 "These are used to identify which kind of function an ArrayMethod slot "
 "implements. See :ref:`arraymethod-typedefs` below for documentation on the "
 "functions that must be implemented for each slot."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1700
+#: ../../../reference/c-api/array.rst:1724
 msgid ""
 "The function used to set the descriptors for an operation based on the "
 "descriptors of the operands. For example, a ufunc operation with two input "
@@ -1905,7 +1939,7 @@ msgid ""
 "overridden."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1709
+#: ../../../reference/c-api/array.rst:1733
 msgid ""
 "The *method* is a pointer to the underlying cast or ufunc loop. In the "
 "future we may expose this struct publicly but for now this is an opaque "
@@ -1920,7 +1954,7 @@ msgid ""
 "you must return ``(NPY_CASTING)-1`` with an error set."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1727
+#: ../../../reference/c-api/array.rst:1751
 msgid ""
 "One dimensional strided loops implementing the behavior (either a ufunc or "
 "cast).  In most cases, ``NPY_METH_strided_loop`` is the generic and only "
@@ -1929,7 +1963,7 @@ msgid ""
 "used when all inputs and outputs are contiguous."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1734
+#: ../../../reference/c-api/array.rst:1758
 msgid ""
 "To deal with possibly unaligned data, NumPy needs to be able to copy "
 "unaligned to aligned data.  When implementing a new DType, the \"cast\" or "
@@ -1939,7 +1973,7 @@ msgid ""
 "storing::"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1742
+#: ../../../reference/c-api/array.rst:1766
 msgid ""
 "type_in in_value;\n"
 "type_out out_value\n"
@@ -1948,15 +1982,15 @@ msgid ""
 "memcpy(out_data, &out_value, sizeof(type_out)"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1748
+#: ../../../reference/c-api/array.rst:1772
 msgid "while a normal loop can just use::"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1750
+#: ../../../reference/c-api/array.rst:1774
 msgid "*(type_out *)out_data = *(type_in)in_data;"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1752
+#: ../../../reference/c-api/array.rst:1776
 msgid ""
 "The unaligned loops are currently only used in casts and will never be "
 "picked in ufuncs (ufuncs create a temporary copy to ensure aligned inputs).  "
@@ -1964,12 +1998,12 @@ msgid ""
 "instead whichever loop returned by the ``get_loop`` function is used."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1760
+#: ../../../reference/c-api/array.rst:1784
 msgid ""
 "A specialized inner-loop option to speed up common ``ufunc.at`` computations."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1766
+#: ../../../reference/c-api/array.rst:1790
 msgid ""
 "An implementation of an ArrayMethod loop. All of the loop slot IDs listed "
 "above must provide a ``PyArrayMethod_StridedLoop`` implementation. The "
@@ -1984,7 +2018,7 @@ msgid ""
 "multiple strided loop calls."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1781
+#: ../../../reference/c-api/array.rst:1805
 msgid ""
 "Allows more fine-grained control over loop selection. Accepts an "
 "implementation of PyArrayMethod_GetLoop, which in turn returns a strided "
@@ -1992,7 +2026,7 @@ msgid ""
 "slot IDs are ignored, if specified."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1791
+#: ../../../reference/c-api/array.rst:1815
 msgid ""
 "Sets the loop to use for an operation at runtime. The *context* is the "
 "runtime context for the operation. *aligned* indicates whether the data "
@@ -2006,7 +2040,7 @@ msgid ""
 "to indicate if the inner loop requires the Python GIL to be held."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1808
+#: ../../../reference/c-api/array.rst:1832
 msgid ""
 "Query an ArrayMethod for the initial value for use in reduction. The "
 "*context* is the ArrayMethod context, mainly to access the input "
@@ -2015,26 +2049,26 @@ msgid ""
 "value that may differ from the \"identity\" value normally used. For example:"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1815
+#: ../../../reference/c-api/array.rst:1839
 msgid ""
 "``0.0`` is the default for ``sum([])``.  But ``-0.0`` is the correct "
 "identity otherwise as it preserves the sign for ``sum([-0.0])``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1817
+#: ../../../reference/c-api/array.rst:1841
 msgid ""
 "We use no identity for object, but return the default of ``0`` and ``1`` for "
 "the empty ``sum([], dtype=np.object_)`` and ``prod([], dtype=np.object_)``. "
 "This allows ``np.sum(np.array([\"a\", \"b\"], dtype=np.object_))`` to work."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1821
+#: ../../../reference/c-api/array.rst:1845
 msgid ""
 "``-inf`` or ``INT_MIN`` for ``max`` is an identity, but at least ``INT_MIN`` "
 "not a good *default* when there are no items."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1824
+#: ../../../reference/c-api/array.rst:1848
 msgid ""
 "*initial* is a pointer to the data for the initial value, which should be "
 "filled in. Returns -1, 0, or 1 indicating error, no initial value, and the "
@@ -2043,12 +2077,12 @@ msgid ""
 "strictly necessary to do so."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1831
-#: ../../../reference/c-api/array.rst:3547
+#: ../../../reference/c-api/array.rst:1855
+#: ../../../reference/c-api/array.rst:3576
 msgid "Flags"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1835
+#: ../../../reference/c-api/array.rst:1859
 msgid ""
 "These flags allow switching on and off custom runtime behavior for "
 "ArrayMethod loops.  For example, if a ufunc cannot possibly trigger floating "
@@ -2056,50 +2090,50 @@ msgid ""
 "set on the ufunc when it is registered."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1842
+#: ../../../reference/c-api/array.rst:1866
 msgid ""
 "Indicates the method must hold the GIL. If this flag is not set, the GIL is "
 "released before the loop is called."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1847
+#: ../../../reference/c-api/array.rst:1871
 msgid ""
 "Indicates the method cannot generate floating errors, so checking for "
 "floating errors after the loop completes can be skipped."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1852
+#: ../../../reference/c-api/array.rst:1876
 msgid "Indicates the method supports unaligned access."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1856
+#: ../../../reference/c-api/array.rst:1880
 msgid ""
 "Indicates that the result of applying the loop repeatedly (for example, in a "
 "reduction operation) does not depend on the order of application."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1861
+#: ../../../reference/c-api/array.rst:1885
 msgid "The flags that can be changed at runtime."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1864
+#: ../../../reference/c-api/array.rst:1888
 msgid "Typedefs"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1866
+#: ../../../reference/c-api/array.rst:1890
 msgid ""
 "Typedefs for functions that users of the ArrayMethod API can implement are "
 "described below."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1873
+#: ../../../reference/c-api/array.rst:1897
 msgid ""
 "A traverse loop working on a single array. This is similar to the general "
 "strided-loop function. This is designed for loops that need to visit every "
 "element of a single array."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1877
+#: ../../../reference/c-api/array.rst:1901
 msgid ""
 "Currently this is used for array clearing, via the ``NPY_DT_get_clear_loop`` "
 "DType API hook, and zero-filling, via the ``NPY_DT_get_fill_zero_loop`` "
@@ -2107,14 +2141,14 @@ msgid ""
 "references to python objects or heap-allocated data."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1882
+#: ../../../reference/c-api/array.rst:1906
 msgid ""
 "The *descr* is the descriptor for the array, *data* is a pointer to the "
 "array buffer, *size* is the 1D size of the array buffer, *stride* is the "
 "stride, and *auxdata* is optional extra data for the loop."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1886
+#: ../../../reference/c-api/array.rst:1910
 msgid ""
 "The *traverse_context* is passed in because we may need to pass in "
 "Interpreter state or similar in the future, but we don't want to pass in a "
@@ -2123,11 +2157,11 @@ msgid ""
 "just passed through in the future (for structured dtypes)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1898
+#: ../../../reference/c-api/array.rst:1922
 msgid "Simplified get_loop function specific to dtype traversal"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1900
+#: ../../../reference/c-api/array.rst:1924
 msgid ""
 "It should set the flags needed for the traversal loop and set *out_loop* to "
 "the loop function, which must be a valid ``PyArrayMethod_TraverseLoop`` "
@@ -2135,30 +2169,30 @@ msgid ""
 "embedded references."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1906
+#: ../../../reference/c-api/array.rst:1930
 msgid "API Functions and Typedefs"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1908
+#: ../../../reference/c-api/array.rst:1932
 msgid ""
 "These functions are part of the main numpy array API and were added along "
 "with the rest of the ArrayMethod API."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1914
+#: ../../../reference/c-api/array.rst:1938
 msgid ""
 "Add loop directly to a ufunc from a given ArrayMethod spec. the main ufunc "
 "registration function.  This adds a new implementation/loop to a ufunc.  It "
 "replaces `PyUFunc_RegisterLoopForType`."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1920
+#: ../../../reference/c-api/array.rst:1944
 msgid ""
 "Structure used to add multiple loops to ufuncs from ArrayMethod specs. This "
 "is used in `PyUFunc_AddLoopsFromSpecs`."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1927
+#: ../../../reference/c-api/array.rst:1951
 msgid ""
 "The name of the ufunc to add the loop to, in the form like that of entry "
 "points, ``(module ':')? (object '.')* name``, with ``numpy`` the default "
@@ -2168,11 +2202,11 @@ msgid ""
 "ufunc-likes or even ufuncs internally.)"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1937
+#: ../../../reference/c-api/array.rst:1961
 msgid "The ArrayMethod spec to use to create the loop."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1944
+#: ../../../reference/c-api/array.rst:1968
 msgid ""
 "Add multiple loops to ufuncs from ArrayMethod specs. This also handles the "
 "registration of methods for the ufunc-like functions ``sort`` and "
@@ -2181,14 +2215,14 @@ msgid ""
 "DTypes (with ``\"real\"`` and ``\"imag\"`` as names)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1950
+#: ../../../reference/c-api/array.rst:1974
 msgid ""
 "The ``slots`` argument must be a  NULL-terminated array of "
 "`PyUFunc_LoopSlot` (see above), which give the name of the ufunc and spec "
 "needed to create the loop."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1957
+#: ../../../reference/c-api/array.rst:1981
 msgid ""
 "Note that currently the output dtypes are always ``NULL`` unless they are "
 "also part of the signature. This is an implementation detail and could "
@@ -2201,7 +2235,7 @@ msgid ""
 "can mutate it to attempt a new search for a matching loop/promoter."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1973
+#: ../../../reference/c-api/array.rst:1997
 msgid ""
 "Type of the promoter function, which must be wrapped into a ``PyCapsule`` "
 "with name ``\"numpy._ufunc_promoter\"``. It is passed the operation and "
@@ -2210,7 +2244,7 @@ msgid ""
 "inputs to the \"promoted\" DTypes."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1979
+#: ../../../reference/c-api/array.rst:2003
 msgid ""
 "A promoter should honor ``signature[]`` (if set). A promoter must return "
 "``-1`` on failure. A Python error may be set but is not required (a general "
@@ -2222,7 +2256,7 @@ msgid ""
 "be identical to ``op_dtypes``)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1988
+#: ../../../reference/c-api/array.rst:2012
 msgid ""
 "After 2.5 a return of ``1`` indicates that the promoter was successful "
 "skipping a recursion protection step. This mainly allows the promoter to add "
@@ -2230,7 +2264,7 @@ msgid ""
 "(Normally, a promoter must modify the DTypes help find the right loop.)"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:1998
+#: ../../../reference/c-api/array.rst:2022
 msgid ""
 "Checks for a floating point error after performing a floating point "
 "operation in a manner that takes into account the error signaling configured "
@@ -2240,18 +2274,18 @@ msgid ""
 "which error to check for."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2005
+#: ../../../reference/c-api/array.rst:2029
 msgid "Returns -1 on failure (an error was raised) and 0 on success."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2013
+#: ../../../reference/c-api/array.rst:2037
 msgid ""
 "Allows creating of a fairly lightweight wrapper around an existing ufunc "
 "loop.  The idea is mainly for units, as this is currently slightly limited "
 "in that it enforces that you cannot use a loop from another ufunc."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2024
+#: ../../../reference/c-api/array.rst:2048
 msgid ""
 "The function to convert the given descriptors (passed in to "
 "``resolve_descriptors``) and translates them for the wrapped loop. The new "
@@ -2259,7 +2293,7 @@ msgid ""
 "(for output arguments) and should normally be forwarded."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2029
+#: ../../../reference/c-api/array.rst:2053
 msgid ""
 "The output of of this function will be used to construct views of the "
 "arguments as if they were the translated dtypes and does not use a cast. "
@@ -2270,7 +2304,7 @@ msgid ""
 "computing the output unit from the input unit."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2044
+#: ../../../reference/c-api/array.rst:2068
 msgid ""
 "The function to convert the actual loop descriptors (as returned by the "
 "original `resolve_descriptors` function) to the ones the output array should "
@@ -2279,17 +2313,17 @@ msgid ""
 "NULL."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2051
+#: ../../../reference/c-api/array.rst:2075
 msgid "Wrapping Loop Example"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2053
+#: ../../../reference/c-api/array.rst:2077
 msgid ""
 "Suppose you want to wrap the ``float64`` multiply implementation for a "
 "``WrappedDoubleDType``. You would add a wrapping loop like so:"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2056
+#: ../../../reference/c-api/array.rst:2080
 msgid ""
 "PyArray_DTypeMeta *orig_dtypes[3] = {\n"
 "    &WrappedDoubleDType, &WrappedDoubleDType, &WrappedDoubleDType};\n"
@@ -2314,12 +2348,12 @@ msgid ""
 "Py_DECREF(multiply);"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2080
+#: ../../../reference/c-api/array.rst:2104
 msgid ""
 "Note that this also requires two functions to be defined above this code:"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2083
+#: ../../../reference/c-api/array.rst:2107
 msgid ""
 "static int\n"
 "translate_given_descrs(int nin, int nout,\n"
@@ -2357,11 +2391,11 @@ msgid ""
 "}"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2123
+#: ../../../reference/c-api/array.rst:2147
 msgid "Sorting and Argsorting"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2125
+#: ../../../reference/c-api/array.rst:2149
 msgid ""
 "Sorting and argsorting methods for dtypes can be registered using the "
 "ArrayMethod API. This is done by adding an ArrayMethod spec with the name "
@@ -2371,7 +2405,7 @@ msgid ""
 "indices, so the output must be of ``NPY_INTP`` type."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2132
+#: ../../../reference/c-api/array.rst:2156
 msgid ""
 "The ``context`` passed to the loop contains the ``parameters`` field which "
 "for these operations is a ``PyArrayMethod_SortParameters *`` struct. This "
@@ -2382,27 +2416,27 @@ msgid ""
 "not set any of the other loop slots."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2144
+#: ../../../reference/c-api/array.rst:2168
 msgid ""
 "The flags passed to the sort operation. This is a bitwise OR of "
 "``NPY_SORTKIND`` values indicating the kind of sort to perform."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2147
+#: ../../../reference/c-api/array.rst:2171
 msgid ""
 "These specs can be registered using :c:func:`PyUFunc_AddLoopsFromSpecs` "
 "along with other ufunc loops."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2151
+#: ../../../reference/c-api/array.rst:2175
 msgid "API for calling array methods"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2154
+#: ../../../reference/c-api/array.rst:2178
 msgid "Conversion"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2159
+#: ../../../reference/c-api/array.rst:2183
 msgid ""
 "Equivalent to :meth:`ndarray.getfield<numpy.ndarray.getfield>` (*self*, "
 "*dtype*, *offset*). This function `steals a reference <https://docs.python."
@@ -2416,7 +2450,7 @@ msgid ""
 "groups of bytes from any array type."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2174
+#: ../../../reference/c-api/array.rst:2198
 msgid ""
 "Equivalent to :meth:`ndarray.setfield<numpy.ndarray.setfield>` (*self*, "
 "*val*, *dtype*, *offset* ). Set the field starting at *offset* in bytes and "
@@ -2428,7 +2462,7 @@ msgid ""
 "of the number of elements in *val*."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2186
+#: ../../../reference/c-api/array.rst:2210
 msgid ""
 "Equivalent to :meth:`ndarray.byteswap<numpy.ndarray.byteswap>` (*self*, "
 "*inplace*). Return an array whose data area is byteswapped. If *inplace* is "
@@ -2436,7 +2470,7 @@ msgid ""
 "Otherwise, create a byteswapped copy and leave self unchanged."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2193
+#: ../../../reference/c-api/array.rst:2217
 msgid ""
 "Equivalent to :meth:`ndarray.copy<numpy.ndarray.copy>` (*self*, *fortran*). "
 "Make a copy of the *old* array. The returned array is always aligned and "
@@ -2448,19 +2482,19 @@ msgid ""
 "contiguous."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2204
+#: ../../../reference/c-api/array.rst:2228
 msgid ""
 "Equivalent to :meth:`ndarray.tolist<numpy.ndarray.tolist>` (*self*). Return "
 "a nested Python list from *self*."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2209
+#: ../../../reference/c-api/array.rst:2233
 msgid ""
 "Equivalent to :meth:`ndarray.tobytes<numpy.ndarray.tobytes>` (*self*, "
 "*order*). Return the bytes of this array in a Python string."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2215
+#: ../../../reference/c-api/array.rst:2239
 msgid ""
 "Write the contents of *self* to the file pointer *fp* in C-style contiguous "
 "fashion. Write the data as binary bytes if *sep* is the string \"\"or "
@@ -2470,7 +2504,7 @@ msgid ""
 "format string showing how the items are to be written."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2225
+#: ../../../reference/c-api/array.rst:2249
 msgid ""
 "Pickle the object in *self* to the given *file* (either a string or a Python "
 "file object). If *file* is a Python string it is considered to be the name "
@@ -2479,27 +2513,27 @@ msgid ""
 "simple wrapper around cPickle.dump(*self*, *file*, *protocol*)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2234
+#: ../../../reference/c-api/array.rst:2258
 msgid ""
 "Pickle the object in *self* to a Python string and return it. Use the Pickle "
 "*protocol* provided (or the highest available if *protocol* is negative)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2240
+#: ../../../reference/c-api/array.rst:2264
 msgid ""
 "Fill the array, *arr*, with the given scalar object, *obj*. The object is "
 "first converted to the data type of *arr*, and then copied into every "
 "location. A -1 is returned if an error occurs, otherwise 0 is returned."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2248
+#: ../../../reference/c-api/array.rst:2272
 msgid ""
 "Equivalent to :meth:`ndarray.view<numpy.ndarray.view>` (*self*, *dtype*). "
 "Return a new view of the array *self* as possibly a different data-type, "
 "*dtype*, and different array subclass *ptype*."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2252
+#: ../../../reference/c-api/array.rst:2276
 msgid ""
 "If *dtype* is ``NULL``, then the returned array will have the same data type "
 "as *self*. The new data-type must be consistent with the size of *self*. "
@@ -2510,11 +2544,11 @@ msgid ""
 "array and self is exactly the same."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2263
+#: ../../../reference/c-api/array.rst:2287
 msgid "Shape Manipulation"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2268
+#: ../../../reference/c-api/array.rst:2292
 msgid ""
 "Result will be a new array (pointing to the same memory location as *self* "
 "if possible), but having a shape given by *newshape*. If the new shape is "
@@ -2522,7 +2556,7 @@ msgid ""
 "new specified shape will be returned."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2276
+#: ../../../reference/c-api/array.rst:2300
 msgid ""
 "Equivalent to :meth:`ndarray.reshape<numpy.ndarray.reshape>` (*self*, "
 "*shape*) where *shape* is a sequence. Converts *shape* to a :c:type:"
@@ -2530,27 +2564,27 @@ msgid ""
 "For back-ward compatibility -- Not recommended"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2283
+#: ../../../reference/c-api/array.rst:2307
 msgid ""
 "Equivalent to :meth:`ndarray.squeeze<numpy.ndarray.squeeze>` (*self*). "
 "Return a new view of *self* with all of the dimensions of length 1 removed "
 "from the shape."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2288
+#: ../../../reference/c-api/array.rst:2312
 msgid ""
 "matrix objects are always 2-dimensional. Therefore, :c:func:"
 "`PyArray_Squeeze` has no effect on arrays of matrix sub-class."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2293
+#: ../../../reference/c-api/array.rst:2317
 msgid ""
 "Equivalent to :meth:`ndarray.swapaxes<numpy.ndarray.swapaxes>` (*self*, "
 "*a1*, *a2*). The returned array is a new view of the data in *self* with the "
 "given axes, *a1* and *a2*, swapped."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2301
+#: ../../../reference/c-api/array.rst:2325
 msgid ""
 "Equivalent to :meth:`ndarray.resize<numpy.ndarray.resize>` (*self*, "
 "*newshape*, *refcheck*). This function only works on single-segment arrays. "
@@ -2562,7 +2596,7 @@ msgid ""
 "has no effect."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2309
+#: ../../../reference/c-api/array.rst:2333
 msgid ""
 "On Python 3.13 and older, the check allows uniquely referenced objects and "
 "objects with exactly one reference to be reallocated in-place. On Python "
@@ -2572,7 +2606,7 @@ msgid ""
 "difference."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2316
+#: ../../../reference/c-api/array.rst:2340
 msgid ""
 "Reallocating arrays in-place can often lead to memory fragmentation and "
 "should be avoided. If the goal is to reclaim over-allocated memory, "
@@ -2583,11 +2617,11 @@ msgid ""
 "bloats your application."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2324
+#: ../../../reference/c-api/array.rst:2348
 msgid "Returns None on success and NULL on error."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2329
+#: ../../../reference/c-api/array.rst:2353
 msgid ""
 "Equivalent to :meth:`ndarray.transpose<numpy.ndarray.transpose>` (*self*, "
 "*permute*). Permute the axes of the ndarray object *self* according to the "
@@ -2598,7 +2632,7 @@ msgid ""
 "``NULL``, the shape of the result is :math:`30\\times20\\times10.`"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2340
+#: ../../../reference/c-api/array.rst:2364
 msgid ""
 "Equivalent to :meth:`ndarray.flatten<numpy.ndarray.flatten>` (*self*, "
 "*order*). Return a 1-d copy of the array. If *order* is :c:data:"
@@ -2609,18 +2643,18 @@ msgid ""
 "`PyArray_ISFORTRAN` (*self*) is used to determine which order to flatten."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2351
+#: ../../../reference/c-api/array.rst:2375
 msgid ""
 "Equivalent to *self*.ravel(*order*). Same basic functionality as :c:func:"
 "`PyArray_Flatten` (*self*, *order*) except if *order* is 0 and *self* is C-"
 "style contiguous, the shape is altered but no copy is performed."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2358
+#: ../../../reference/c-api/array.rst:2382
 msgid "Item selection and manipulation"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2364
+#: ../../../reference/c-api/array.rst:2388
 msgid ""
 "Equivalent to :meth:`ndarray.take<numpy.ndarray.take>` (*self*, *indices*, "
 "*axis*, *ret*, *clipmode*) except *axis* =None in Python is obtained by "
@@ -2632,14 +2666,14 @@ msgid ""
 "internally."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2377
+#: ../../../reference/c-api/array.rst:2401
 msgid ""
 "Equivalent to *self*.put(*values*, *indices*, *clipmode* ). Put *values* "
 "into *self* at the corresponding (flattened) *indices*. If *values* is too "
 "small it will be repeated as necessary."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2385
+#: ../../../reference/c-api/array.rst:2409
 msgid ""
 "Place the *values* in *self* wherever corresponding positions (using a "
 "flattened context) in *mask* are true. The *mask* and *self* arrays must "
@@ -2647,7 +2681,7 @@ msgid ""
 "repeated as necessary."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2393
+#: ../../../reference/c-api/array.rst:2417
 msgid ""
 "Equivalent to :meth:`ndarray.repeat<numpy.ndarray.repeat>` (*self*, *op*, "
 "*axis*). Copy the elements of *self*, *op* times along the given *axis*. "
@@ -2656,7 +2690,7 @@ msgid ""
 "the axis."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2403
+#: ../../../reference/c-api/array.rst:2427
 msgid ""
 "Equivalent to :meth:`ndarray.choose<numpy.ndarray.choose>` (*self*, *op*, "
 "*ret*, *clipmode*). Create a new array by selecting elements from the "
@@ -2668,21 +2702,21 @@ msgid ""
 "len(*op*)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2414
+#: ../../../reference/c-api/array.rst:2438
 msgid "raise a ValueError;"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2418
+#: ../../../reference/c-api/array.rst:2442
 msgid ""
 "wrap values < 0 by adding len(*op*) and values >=len(*op*) by subtracting "
 "len(*op*) until they are in range;"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2423
+#: ../../../reference/c-api/array.rst:2447
 msgid "all values are clipped to the region [0, len(*op*) )."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2428
+#: ../../../reference/c-api/array.rst:2452
 msgid ""
 "Return an array with the items of ``self`` sorted along ``axis``. The array "
 "is sorted using an algorithm whose properties are specified by the value of "
@@ -2695,14 +2729,14 @@ msgid ""
 "new data-type."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2438
+#: ../../../reference/c-api/array.rst:2462
 msgid ""
 "This is the C level function called by the ndarray method :meth:`ndarray."
 "sort<numpy.ndarray.sort>`, though with a different meaning of ``kind`` -- "
 "see ``NPY_SORTKIND`` below."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2444
+#: ../../../reference/c-api/array.rst:2468
 msgid ""
 "Return an array of indices such that selection of these indices along the "
 "given ``axis`` would return a sorted version of ``self``.  The array is "
@@ -2715,14 +2749,14 @@ msgid ""
 "names and construct a view of the array with that new data-type."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2455
+#: ../../../reference/c-api/array.rst:2479
 msgid ""
 "This is the C level function called by the ndarray method :meth:`ndarray."
 "argsort<numpy.ndarray.argsort>`, though with a different meaning of ``kind`` "
 "-- see ``NPY_SORTKIND`` below."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2461
+#: ../../../reference/c-api/array.rst:2485
 msgid ""
 "Given a sequence of arrays (*sort_keys*) of the same shape, return an array "
 "of indices (similar to :c:func:`PyArray_ArgSort` (...)) that would sort the "
@@ -2737,13 +2771,13 @@ msgid ""
 "two elements)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2474
+#: ../../../reference/c-api/array.rst:2498
 msgid ""
 "If these arrays are all collected in a structured array, then :c:func:"
 "`PyArray_Sort` (...) can also be used to sort the array directly."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2482
+#: ../../../reference/c-api/array.rst:2506
 msgid ""
 "Equivalent to :meth:`ndarray.searchsorted<numpy.ndarray.searchsorted>` "
 "(*self*, *values*, *side*, *perm*). Assuming *self* is a 1-d array in "
@@ -2753,14 +2787,14 @@ msgid ""
 "whether or not self is in ascending order."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2489
+#: ../../../reference/c-api/array.rst:2513
 msgid ""
 "The *side* argument indicates whether the index returned should be that of "
 "the first suitable location (if :c:data:`NPY_SEARCHLEFT`) or of the last "
 "(if :c:data:`NPY_SEARCHRIGHT`)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2493
+#: ../../../reference/c-api/array.rst:2517
 msgid ""
 "The *sorter* argument, if not ``NULL``, must be a 1D array of integer "
 "indices the same length as *self*, that sorts it into ascending order. This "
@@ -2768,7 +2802,7 @@ msgid ""
 "search is used to find the required insertion points."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2502
+#: ../../../reference/c-api/array.rst:2526
 msgid ""
 "Equivalent to :meth:`ndarray.partition<numpy.ndarray.partition>` (*self*, "
 "*ktharray*, *axis*, *kind*). Partitions the array so that the values of the "
@@ -2783,7 +2817,7 @@ msgid ""
 "that new data-type. Returns zero on success and -1 on failure."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2519
+#: ../../../reference/c-api/array.rst:2543
 msgid ""
 "Equivalent to :meth:`ndarray.argpartition<numpy.ndarray.argpartition>` "
 "(*self*, *ktharray*, *axis*, *kind*). Return an array of indices such that "
@@ -2791,18 +2825,18 @@ msgid ""
 "partitioned version of *self*."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2526
+#: ../../../reference/c-api/array.rst:2550
 msgid ""
 "Equivalent to :meth:`ndarray.diagonal<numpy.ndarray.diagonal>` (*self*, "
 "*offset*, *axis1*, *axis2* ). Return the *offset* diagonals of the 2-d "
 "arrays defined by *axis1* and *axis2*."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2532
+#: ../../../reference/c-api/array.rst:2556
 msgid "Counts the number of non-zero elements in the array object *self*."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2536
+#: ../../../reference/c-api/array.rst:2560
 msgid ""
 "Equivalent to :meth:`ndarray.nonzero<numpy.ndarray.nonzero>` (*self*). "
 "Returns a tuple of index arrays that select elements of *self* that are "
@@ -2811,25 +2845,25 @@ msgid ""
 "If a tuple is returned (nd :math:`\\neq` 1), then its length is nd."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2545
+#: ../../../reference/c-api/array.rst:2569
 msgid ""
 "Equivalent to :meth:`ndarray.compress<numpy.ndarray.compress>` (*self*, "
 "*condition*, *axis* ). Return the elements along *axis* corresponding to "
 "elements of *condition* that are true."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2551
+#: ../../../reference/c-api/array.rst:2575
 msgid "Calculation"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2555
+#: ../../../reference/c-api/array.rst:2579
 msgid ""
 "Pass in :c:data:`NPY_RAVEL_AXIS` for axis in order to achieve the same "
 "effect that is obtained by passing in ``axis=None`` in Python (treating the "
 "array as a 1-d array)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2562
+#: ../../../reference/c-api/array.rst:2586
 msgid ""
 "The out argument specifies where to place the result. If out is NULL, then "
 "the output array is created, otherwise the output is placed in out which "
@@ -2838,40 +2872,40 @@ msgid ""
 "responsibility to ``Py_DECREF`` out if not NULL or a memory-leak will occur."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2573
+#: ../../../reference/c-api/array.rst:2597
 msgid ""
 "Equivalent to :meth:`ndarray.argmax<numpy.ndarray.argmax>` (*self*, *axis*). "
 "Return the index of the largest element of *self* along *axis*."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2579
+#: ../../../reference/c-api/array.rst:2603
 msgid ""
 "Equivalent to :meth:`ndarray.argmin<numpy.ndarray.argmin>` (*self*, *axis*). "
 "Return the index of the smallest element of *self* along *axis*."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2585
+#: ../../../reference/c-api/array.rst:2609
 msgid ""
 "Equivalent to :meth:`ndarray.max<numpy.ndarray.max>` (*self*, *axis*). "
 "Returns the largest element of *self* along the given *axis*. When the "
 "result is a single element, returns a numpy scalar instead of an ndarray."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2592
+#: ../../../reference/c-api/array.rst:2616
 msgid ""
 "Equivalent to :meth:`ndarray.min<numpy.ndarray.min>` (*self*, *axis*). "
 "Return the smallest element of *self* along the given *axis*. When the "
 "result is a single element, returns a numpy scalar instead of an ndarray."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2600
+#: ../../../reference/c-api/array.rst:2624
 msgid ""
 "Return the difference between the largest element of *self* along *axis* and "
 "the smallest element of *self* along *axis*. When the result is a single "
 "element, returns a numpy scalar instead of an ndarray."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2609
+#: ../../../reference/c-api/array.rst:2633
 msgid ""
 "The rtype argument specifies the data-type the reduction should take place "
 "over. This is important if the data-type of the array is not \"large\" "
@@ -2880,7 +2914,7 @@ msgid ""
 "(which form the basis for mean, sum, cumsum, prod, and cumprod functions)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2619
+#: ../../../reference/c-api/array.rst:2643
 msgid ""
 "Equivalent to :meth:`ndarray.mean<numpy.ndarray.mean>` (*self*, *axis*, "
 "*rtype*). Returns the mean of the elements along the given *axis*, using the "
@@ -2888,7 +2922,7 @@ msgid ""
 "obtained using :c:data:`NPY_NOTYPE` for *rtype*."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2628
+#: ../../../reference/c-api/array.rst:2652
 msgid ""
 "Equivalent to :meth:`ndarray.trace<numpy.ndarray.trace>` (*self*, *offset*, "
 "*axis1*, *axis2*, *rtype*). Return the sum (using *rtype* as the data type "
@@ -2898,14 +2932,14 @@ msgid ""
 "diagonal."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2638
+#: ../../../reference/c-api/array.rst:2662
 msgid ""
 "Equivalent to :meth:`ndarray.clip<numpy.ndarray.clip>` (*self*, *min*, "
 "*max*). Clip an array, *self*, so that values larger than *max* are fixed to "
 "*max* and values less than *min* are fixed to *min*."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2644
+#: ../../../reference/c-api/array.rst:2668
 msgid ""
 "Equivalent to :meth:`ndarray.conjugate<numpy.ndarray.conjugate>` (*self*). "
 "Return the complex conjugate of *self*. If *self* is not of complex data "
@@ -2916,11 +2950,11 @@ msgstr ""
 msgid "Parameters"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2648
+#: ../../../reference/c-api/array.rst:2672
 msgid "Input array."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2649
+#: ../../../reference/c-api/array.rst:2673
 msgid "Output array. If provided, the result is placed into this array."
 msgstr ""
 
@@ -2928,11 +2962,11 @@ msgstr ""
 msgid "Returns"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2651
+#: ../../../reference/c-api/array.rst:2675
 msgid "The complex conjugate of *self*."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2658
+#: ../../../reference/c-api/array.rst:2682
 msgid ""
 "Equivalent to :meth:`ndarray.round<numpy.ndarray.round>` (*self*, "
 "*decimals*, *out*). Returns the array with elements rounded to the nearest "
@@ -2943,35 +2977,35 @@ msgid ""
 "size and type."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2666
+#: ../../../reference/c-api/array.rst:2690
 msgid ""
 "Equivalent to :meth:`ndarray.std<numpy.ndarray.std>` (*self*, *axis*, "
 "*rtype*). Return the standard deviation using data along *axis* converted to "
 "data type *rtype*."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2673
+#: ../../../reference/c-api/array.rst:2697
 msgid ""
 "Equivalent to :meth:`ndarray.sum<numpy.ndarray.sum>` (*self*, *axis*, "
 "*rtype*). Return 1-d vector sums of elements in *self* along *axis*. Perform "
 "the sum after converting data to data type *rtype*."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2680
+#: ../../../reference/c-api/array.rst:2704
 msgid ""
 "Equivalent to :meth:`ndarray.cumsum<numpy.ndarray.cumsum>` (*self*, *axis*, "
 "*rtype*). Return cumulative 1-d sums of elements in *self* along *axis*. "
 "Perform the sum after converting data to data type *rtype*."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2687
+#: ../../../reference/c-api/array.rst:2711
 msgid ""
 "Equivalent to :meth:`ndarray.prod<numpy.ndarray.prod>` (*self*, *axis*, "
 "*rtype*). Return 1-d products of elements in *self* along *axis*. Perform "
 "the product after converting data to data type *rtype*."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2694
+#: ../../../reference/c-api/array.rst:2718
 msgid ""
 "Equivalent to :meth:`ndarray.cumprod<numpy.ndarray.cumprod>` (*self*, "
 "*axis*, *rtype*). Return 1-d cumulative products of elements in ``self`` "
@@ -2979,29 +3013,29 @@ msgid ""
 "``rtype``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2701
+#: ../../../reference/c-api/array.rst:2725
 msgid ""
 "Equivalent to :meth:`ndarray.all<numpy.ndarray.all>` (*self*, *axis*). "
 "Return an array with True elements for every 1-d sub-array of ``self`` "
 "defined by ``axis`` in which all the elements are True."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2708
+#: ../../../reference/c-api/array.rst:2732
 msgid ""
 "Equivalent to :meth:`ndarray.any<numpy.ndarray.any>` (*self*, *axis*). "
 "Return an array with True elements for every 1-d sub-array of *self* defined "
 "by *axis* in which any of the elements are True."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2713
+#: ../../../reference/c-api/array.rst:2737
 msgid "Functions"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2717
+#: ../../../reference/c-api/array.rst:2741
 msgid "Array Functions"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2723
+#: ../../../reference/c-api/array.rst:2747
 msgid ""
 "Sometimes it is useful to access a multidimensional array as a C-style multi-"
 "dimensional array so that algorithms can be implemented using C's a[i][j][k] "
@@ -3009,7 +3043,7 @@ msgid ""
 "style array, for 1-, 2-, and 3-d ndarrays."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2729
+#: ../../../reference/c-api/array.rst:2753
 msgid ""
 "The address to any Python object. This Python object will be replaced with "
 "an equivalent well-behaved, C-style contiguous, ndarray of the given data "
@@ -3017,31 +3051,31 @@ msgid ""
 "in this way to the input object is justified."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2736
+#: ../../../reference/c-api/array.rst:2760
 msgid ""
 "The address to a (ctype* for 1-d, ctype** for 2-d or ctype*** for 3-d) "
 "variable where ctype is the equivalent C-type for the data type. On return, "
 "*ptr* will be addressable as a 1-d, 2-d, or 3-d array."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2742
+#: ../../../reference/c-api/array.rst:2766
 msgid ""
 "An output array that contains the shape of the array object. This array "
 "gives boundaries on any looping that will take place."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2747
+#: ../../../reference/c-api/array.rst:2771
 msgid "The dimensionality of the array (1, 2, or 3)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2751
+#: ../../../reference/c-api/array.rst:2775
 msgid ""
 "A :c:type:`PyArray_Descr` structure indicating the desired data-type "
 "(including required byteorder). The call will steal a reference to the "
 "parameter."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2759
+#: ../../../reference/c-api/array.rst:2783
 msgid ""
 "The simulation of a C-style array is not complete for 2-d and 3-d arrays. "
 "For example, the simulated arrays of pointers cannot be passed to "
@@ -3050,40 +3084,40 @@ msgid ""
 "the required array and copy data."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2767
+#: ../../../reference/c-api/array.rst:2791
 msgid ""
 "Must be called with the same objects and memory locations returned from :c:"
 "func:`PyArray_AsCArray` (...). This function cleans up memory that otherwise "
 "would get leaked."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2773
+#: ../../../reference/c-api/array.rst:2797
 msgid ""
 "Join the sequence of objects in *obj* together along *axis* into a single "
 "array. If the dimensions or types are not compatible an error is raised."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2779
+#: ../../../reference/c-api/array.rst:2803
 msgid ""
 "Compute a product-sum over the last dimensions of *obj1* and *obj2*. Neither "
 "array is conjugated."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2784
+#: ../../../reference/c-api/array.rst:2808
 msgid ""
 "Compute a product-sum over the last dimension of *obj1* and the second-to-"
 "last dimension of *obj2*. For 2-d arrays this is a matrix-product. Neither "
 "array is conjugated."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2791
+#: ../../../reference/c-api/array.rst:2815
 msgid ""
 "Same as PyArray_MatrixProduct, but store the result in *out*.  The output "
 "array must have the correct shape, type, and be C-contiguous, or an "
 "exception is raised."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2800
+#: ../../../reference/c-api/array.rst:2824
 msgid ""
 "Applies the Einstein summation convention to the array operands provided, "
 "returning a new array or placing the result in *out*. The string in "
@@ -3095,11 +3129,11 @@ msgid ""
 "should be."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2809
+#: ../../../reference/c-api/array.rst:2833
 msgid "See the :func:`~numpy.einsum` function for more details."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2814
+#: ../../../reference/c-api/array.rst:2838
 msgid ""
 "Compute the 1-d correlation of the 1-d arrays *op1* and *op2* . The "
 "correlation is computed at each output point by multiplying *op1* by a "
@@ -3111,19 +3145,19 @@ msgid ""
 "overlap at all is accepted)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2825
-#: ../../../reference/c-api/array.rst:2843
+#: ../../../reference/c-api/array.rst:2849
+#: ../../../reference/c-api/array.rst:2867
 msgid "Notes"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2826
+#: ../../../reference/c-api/array.rst:2850
 msgid ""
 "This does not compute the usual correlation: if op2 is larger than op1, the "
 "arguments are swapped, and the conjugate is never taken for complex arrays. "
 "See PyArray_Correlate2 for the usual signal processing correlation."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2833
+#: ../../../reference/c-api/array.rst:2857
 msgid ""
 "Updated version of PyArray_Correlate, which uses the usual definition of "
 "correlation for 1d arrays. The correlation is computed at each output point "
@@ -3135,15 +3169,15 @@ msgid ""
 "shifts (any overlap at all is accepted)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2844
+#: ../../../reference/c-api/array.rst:2868
 msgid "Compute z as follows::"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2846
+#: ../../../reference/c-api/array.rst:2870
 msgid "z[k] = sum_n op1[n] * conj(op2[n+k])"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2851
+#: ../../../reference/c-api/array.rst:2875
 msgid ""
 "If both ``x`` and ``y`` are ``NULL``, then return :c:func:`PyArray_Nonzero` "
 "(*condition*). Otherwise, both *x* and *y* must be given and the object "
@@ -3151,11 +3185,11 @@ msgid ""
 "*condition* is respectively True or False."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2859
+#: ../../../reference/c-api/array.rst:2883
 msgid "Other functions"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2865
+#: ../../../reference/c-api/array.rst:2889
 msgid ""
 "Determine if *newstrides* is a strides array consistent with the memory of "
 "an *nd* -dimensional array with shape ``dims`` and element-size, *elsize*. "
@@ -3167,23 +3201,23 @@ msgid ""
 "*newstrides* is acceptable, otherwise return :c:data:`NPY_FALSE`."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2879
+#: ../../../reference/c-api/array.rst:2903
 msgid ""
 "Both of these routines multiply an *n* -length array, *seq*, of integers and "
 "return the result. No overflow checking is performed."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2884
+#: ../../../reference/c-api/array.rst:2908
 msgid ""
 "Given two *n* -length arrays of integers, *l1*, and *l2*, return 1 if the "
 "lists are identical; otherwise, return 0."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2889
+#: ../../../reference/c-api/array.rst:2913
 msgid "Auxiliary data with object semantics"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2893
+#: ../../../reference/c-api/array.rst:2917
 msgid ""
 "When working with more complex dtypes which are composed of other dtypes, "
 "such as the struct dtype, creating inner loops that manipulate the dtypes "
@@ -3192,7 +3226,7 @@ msgid ""
 "possible to do this."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2899
+#: ../../../reference/c-api/array.rst:2923
 msgid ""
 "Defining an :c:type:`NpyAuxData` is similar to defining a class in C++, but "
 "the object semantics have to be tracked manually since the API is in C. "
@@ -3200,7 +3234,7 @@ msgid ""
 "element copier function as a primitive."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2904
+#: ../../../reference/c-api/array.rst:2928
 msgid ""
 "typedef struct {\n"
 "    NpyAuxData base;\n"
@@ -3255,40 +3289,40 @@ msgid ""
 "}"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2960
+#: ../../../reference/c-api/array.rst:2984
 msgid "The function pointer type for NpyAuxData free functions."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2964
+#: ../../../reference/c-api/array.rst:2988
 msgid ""
 "The function pointer type for NpyAuxData clone functions. These functions "
 "should never set the Python exception on error, because they may be called "
 "from a multi-threaded context."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2970
+#: ../../../reference/c-api/array.rst:2994
 msgid ""
 "A macro which calls the auxdata's free function appropriately, does nothing "
 "if auxdata is NULL."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2975
+#: ../../../reference/c-api/array.rst:2999
 msgid ""
 "A macro which calls the auxdata's clone function appropriately, returning a "
 "deep copy of the auxiliary data."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2979
+#: ../../../reference/c-api/array.rst:3003
 msgid "Array iterators"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2981
+#: ../../../reference/c-api/array.rst:3005
 msgid ""
 "As of NumPy 1.6.0, these array iterators are superseded by the new array "
 "iterator, :c:type:`NpyIter`."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2984
+#: ../../../reference/c-api/array.rst:3008
 msgid ""
 "An array iterator is a simple way to access the elements of an N-dimensional "
 "array quickly and efficiently, as seen in :ref:`the example <iteration-"
@@ -3296,14 +3330,14 @@ msgid ""
 "over an array from C."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2991
+#: ../../../reference/c-api/array.rst:3015
 msgid ""
 "Return an array iterator object from the array, *arr*. This is equivalent to "
 "*arr*. **flat**. The array iterator object makes it easy to loop over an N-"
 "dimensional non-contiguous array in C-style contiguous fashion."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:2998
+#: ../../../reference/c-api/array.rst:3022
 msgid ""
 "Return an array iterator that will iterate over all axes but the one "
 "provided in *\\*axis*. The returned iterator cannot be used with :c:func:"
@@ -3313,58 +3347,58 @@ msgid ""
 "to the axis having the smallest stride and that axis will be used."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3009
+#: ../../../reference/c-api/array.rst:3033
 msgid ""
 "Return an array iterator that is broadcast to iterate as an array of the "
 "shape provided by *dimensions* and *nd*."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3014
+#: ../../../reference/c-api/array.rst:3038
 msgid ""
 "Evaluates true if *op* is an array iterator (or instance of a subclass of "
 "the array iterator type)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3019
+#: ../../../reference/c-api/array.rst:3043
 msgid "Reset an *iterator* to the beginning of the array."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3023
+#: ../../../reference/c-api/array.rst:3047
 msgid ""
 "Increment the index and the dataptr members of the *iterator* to point to "
 "the next element of the array. If the array is not (C-style) contiguous, "
 "also increment the N-dimensional coordinates array."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3030
+#: ../../../reference/c-api/array.rst:3054
 msgid "A pointer to the current element of the array."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3035
+#: ../../../reference/c-api/array.rst:3059
 msgid ""
 "Set the *iterator* index, dataptr, and coordinates members to the location "
 "in the array indicated by the N-dimensional c-array, *destination*, which "
 "must have size at least *iterator* ->nd_m1+1."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3042
+#: ../../../reference/c-api/array.rst:3066
 msgid ""
 "Set the *iterator* index and dataptr to the location in the array indicated "
 "by the integer *index* which points to an element in the C-styled flattened "
 "array."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3048
+#: ../../../reference/c-api/array.rst:3072
 msgid ""
 "Evaluates TRUE as long as the iterator has not looped through all of the "
 "elements, otherwise it evaluates FALSE."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3053
+#: ../../../reference/c-api/array.rst:3077
 msgid "Broadcasting (multi-iterators)"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3057
+#: ../../../reference/c-api/array.rst:3081
 msgid ""
 "A simplified interface to broadcasting. This function takes the number of "
 "arrays to broadcast and then *num* extra ( :c:type:`PyObject *<PyObject>` ) "
@@ -3375,82 +3409,82 @@ msgid ""
 "and using :c:func:`PyArray_MultiIter_NEXT` (..)"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3068
+#: ../../../reference/c-api/array.rst:3092
 msgid ""
 "Reset all the iterators to the beginning in a multi-iterator object, *multi*."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3073
+#: ../../../reference/c-api/array.rst:3097
 msgid ""
 "Advance each iterator in a multi-iterator object, *multi*, to its next "
 "(broadcasted) element."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3078
+#: ../../../reference/c-api/array.rst:3102
 msgid ""
 "Return the data-pointer of the *i* :math:`^{\\textrm{th}}` iterator in a "
 "multi-iterator object."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3083
+#: ../../../reference/c-api/array.rst:3107
 msgid "Advance the pointer of only the *i* :math:`^{\\textrm{th}}` iterator."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3088
+#: ../../../reference/c-api/array.rst:3112
 msgid ""
 "Advance each iterator in a multi-iterator object, *multi*, to the given :"
 "math:`N` -dimensional *destination* where :math:`N` is the number of "
 "dimensions in the broadcasted array."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3094
+#: ../../../reference/c-api/array.rst:3118
 msgid ""
 "Advance each iterator in a multi-iterator object, *multi*, to the "
 "corresponding location of the *index* into the flattened broadcasted array."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3100
+#: ../../../reference/c-api/array.rst:3124
 msgid ""
 "Evaluates TRUE as long as the multi-iterator has not looped through all of "
 "the elements (of the broadcasted result), otherwise it evaluates FALSE."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3108
+#: ../../../reference/c-api/array.rst:3132
 msgid "Returns the total broadcasted size of a multi-iterator object."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3114
+#: ../../../reference/c-api/array.rst:3138
 msgid ""
 "Returns the number of dimensions in the broadcasted result of a multi-"
 "iterator object."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3121
+#: ../../../reference/c-api/array.rst:3145
 msgid ""
 "Returns the current (1-d) index into the broadcasted result of a multi-"
 "iterator object."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3128
+#: ../../../reference/c-api/array.rst:3152
 msgid ""
 "Returns the number of iterators that are represented by a multi-iterator "
 "object."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3135
+#: ../../../reference/c-api/array.rst:3159
 msgid ""
 "Returns an array of iterator objects that holds the iterators for the arrays "
 "to be broadcast together. On return, the iterators are adjusted for "
 "broadcasting."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3143
+#: ../../../reference/c-api/array.rst:3167
 msgid ""
 "Returns a pointer to the dimensions/shape of the broadcasted result of a "
 "multi-iterator object."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3148
+#: ../../../reference/c-api/array.rst:3172
 msgid ""
 "This function encapsulates the broadcasting rules. The *mit* container "
 "should already contain iterators for all the arrays that need to be "
@@ -3459,7 +3493,7 @@ msgid ""
 "is returned if an error occurs."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3156
+#: ../../../reference/c-api/array.rst:3180
 msgid ""
 "This function takes a multi-iterator object that has been previously "
 "\"broadcasted,\" finds the dimension with the smallest \"sum of strides\" in "
@@ -3473,11 +3507,11 @@ msgid ""
 "the axis that won't require large stride jumps."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3170
+#: ../../../reference/c-api/array.rst:3194
 msgid "Neighborhood iterator"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3172
+#: ../../../reference/c-api/array.rst:3196
 msgid ""
 "Neighborhood iterators are subclasses of the iterator object, and can be "
 "used to iter over a neighborhood of a point. For example, you may want to "
@@ -3487,7 +3521,7 @@ msgid ""
 "handling, at the cost of a slight overhead."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3183
+#: ../../../reference/c-api/array.rst:3207
 msgid ""
 "This function creates a new neighborhood iterator from an existing "
 "iterator.  The neighborhood will be computed relatively to the position "
@@ -3495,7 +3529,7 @@ msgid ""
 "iterator, and the mode argument the boundaries handling mode."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3188
+#: ../../../reference/c-api/array.rst:3212
 msgid ""
 "The *bounds* argument is expected to be a (2 * iter->ao->nd) arrays, such as "
 "the range bound[2*i]->bounds[2*i+1] defines the range where to walk for "
@@ -3503,39 +3537,39 @@ msgid ""
 "should be ordered for each dimension (bounds[2*i] <= bounds[2*i+1])."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3193
+#: ../../../reference/c-api/array.rst:3217
 msgid "The mode should be one of:"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3197
+#: ../../../reference/c-api/array.rst:3221
 msgid "Zero padding. Outside bounds values will be 0."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3201
+#: ../../../reference/c-api/array.rst:3225
 msgid "One padding, Outside bounds values will be 1."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3205
+#: ../../../reference/c-api/array.rst:3229
 msgid ""
 "Constant padding. Outside bounds values will be the same as the first item "
 "in fill_value."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3210
+#: ../../../reference/c-api/array.rst:3234
 msgid ""
 "Mirror padding. Outside bounds values will be as if the array items were "
 "mirrored. For example, for the array [1, 2, 3, 4], x[-2] will be 2, x[-2] "
 "will be 1, x[4] will be 4, x[5] will be 1, etc..."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3217
+#: ../../../reference/c-api/array.rst:3241
 msgid ""
 "Circular padding. Outside bounds values will be as if the array was "
 "repeated. For example, for the array [1, 2, 3, 4], x[-2] will be 3, x[-2] "
 "will be 4, x[4] will be 1, x[5] will be 2, etc..."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3221
+#: ../../../reference/c-api/array.rst:3245
 msgid ""
 "If the mode is constant filling (:c:macro:"
 "`NPY_NEIGHBORHOOD_ITER_CONSTANT_PADDING`), fill_value should point to an "
@@ -3544,36 +3578,36 @@ msgid ""
 "fill_value may be NULL."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3226
+#: ../../../reference/c-api/array.rst:3250
 msgid "The iterator holds a reference to iter"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3227
+#: ../../../reference/c-api/array.rst:3251
 msgid ""
 "Return NULL on failure (in which case the reference count of iter is not "
 "changed)"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3229
+#: ../../../reference/c-api/array.rst:3253
 msgid ""
 "iter itself can be a Neighborhood iterator: this can be useful for .e.g "
 "automatic boundaries handling"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3231
+#: ../../../reference/c-api/array.rst:3255
 msgid ""
 "the object returned by this function should be safe to use as a normal "
 "iterator"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3233
+#: ../../../reference/c-api/array.rst:3257
 msgid ""
 "If the position of iter is changed, any subsequent call to "
 "PyArrayNeighborhoodIter_Next is undefined behavior, and "
 "PyArrayNeighborhoodIter_Reset must be called."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3236
+#: ../../../reference/c-api/array.rst:3260
 msgid ""
 "If the position of iter is not the beginning of the data and the underlying "
 "data for iter is contiguous, the iterator will point to the start of the "
@@ -3582,7 +3616,7 @@ msgid ""
 "iterator, and PyArrayNeighborhoodIter_Reset must be called."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3243
+#: ../../../reference/c-api/array.rst:3267
 msgid ""
 "PyArrayIterObject *iter;\n"
 "PyArrayNeighborhoodIterObject *neigh_iter;\n"
@@ -3605,36 +3639,36 @@ msgid ""
 "}"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3268
+#: ../../../reference/c-api/array.rst:3292
 msgid ""
 "Reset the iterator position to the first point of the neighborhood. This "
 "should be called whenever the iter argument given at "
 "PyArray_NeighborhoodIterObject is changed (see example)"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3275
+#: ../../../reference/c-api/array.rst:3299
 msgid ""
 "After this call, iter->dataptr points to the next point of the neighborhood. "
 "Calling this function after every point of the neighborhood has been visited "
 "is undefined."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3281
+#: ../../../reference/c-api/array.rst:3305
 msgid "Array scalars"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3285
+#: ../../../reference/c-api/array.rst:3309
 msgid "This function steals a reference to *arr*."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3287
+#: ../../../reference/c-api/array.rst:3311
 msgid ""
 "This function checks to see if *arr* is a 0-dimensional array and, if so, "
 "returns the appropriate array scalar. It should be used whenever 0-"
 "dimensional arrays could be returned to Python."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3294
+#: ../../../reference/c-api/array.rst:3318
 msgid ""
 "Return an array scalar object of the given *dtype* by **copying** from "
 "memory pointed to by *data*.  *base* is expected to be the array object that "
@@ -3644,28 +3678,28 @@ msgid ""
 "``NULL``.  Otherwise `base` may be ``NULL``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3302
+#: ../../../reference/c-api/array.rst:3326
 msgid ""
 "If the data is not in native byte order (as indicated by ``dtype-"
 ">byteorder``) then this function will byteswap the data, because array "
 "scalars are always in correct machine-byte order."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3308
+#: ../../../reference/c-api/array.rst:3332
 msgid ""
 "Return an array scalar object of the type and itemsize indicated by the "
 "array object *arr* copied from the memory pointed to by *data* and swapping "
 "if the data in *arr* is not in machine byte-order."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3316
+#: ../../../reference/c-api/array.rst:3340
 msgid ""
 "Return a 0-dimensional array of type determined by *outcode* from *scalar* "
 "which should be an array-scalar object. If *outcode* is NULL, then the type "
 "is determined from *scalar*."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3322
+#: ../../../reference/c-api/array.rst:3346
 msgid ""
 "Return in *ctypeptr* a pointer to the actual value in an array scalar. There "
 "is no error checking so *scalar* must be an array-scalar object, and "
@@ -3675,18 +3709,18 @@ msgid ""
 "*ctypeptr*."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3332
+#: ../../../reference/c-api/array.rst:3356
 msgid ""
 "Return the data (cast to the data type indicated by *outcode*) from the "
 "array-scalar, *scalar*, into the memory pointed to by *ctypeptr* (which must "
 "be large enough to handle the incoming memory)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3337
+#: ../../../reference/c-api/array.rst:3361
 msgid "Returns -1 on failure, and 0 on success."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3341
+#: ../../../reference/c-api/array.rst:3365
 msgid ""
 "Returns a scalar type-object from a type-number, *type* . Equivalent to :c:"
 "func:`PyArray_DescrFromType` (*type*)->typeobj except for reference counting "
@@ -3694,26 +3728,26 @@ msgid ""
 "``NULL`` on failure."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3349
-#: ../../../reference/c-api/array.rst:3357
+#: ../../../reference/c-api/array.rst:3373
+#: ../../../reference/c-api/array.rst:3381
 msgid ""
 "Legacy way to query special promotion for scalar values.  This is not used "
 "in NumPy itself anymore and is expected to be deprecated eventually."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3352
+#: ../../../reference/c-api/array.rst:3376
 msgid "New DTypes can define promotion rules specific to Python scalars."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3360
+#: ../../../reference/c-api/array.rst:3384
 msgid "Use ``PyArray_ResultType`` for similar purposes."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3364
+#: ../../../reference/c-api/array.rst:3388
 msgid "Data-type descriptors"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3370
+#: ../../../reference/c-api/array.rst:3394
 msgid ""
 "Data-type objects must be reference counted so be aware of the action on the "
 "data-type reference of different C-API calls. The standard rule is that when "
@@ -3723,20 +3757,20 @@ msgid ""
 "reference to any data-type object used as input to such a function."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3380
+#: ../../../reference/c-api/array.rst:3404
 msgid ""
 "Evaluates as true if *obj* is a data-type object ( :c:expr:`PyArray_Descr "
 "*` )."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3384
+#: ../../../reference/c-api/array.rst:3408
 msgid ""
 "Return a new data-type object copied from *obj* (the fields reference is "
 "just updated so that the new object points to the same fields dictionary if "
 "any)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3390
+#: ../../../reference/c-api/array.rst:3414
 msgid ""
 "Create a new data-type object from the built-in (or user-registered) data-"
 "type indicated by *typenum*. All builtin types should not have any of their "
@@ -3746,18 +3780,18 @@ msgid ""
 "member in order to be meaningful in array construction."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3401
+#: ../../../reference/c-api/array.rst:3425
 msgid ""
 "Create a new data-type object with the byteorder set according to "
 "*newendian*. All referenced data-type objects (in subdescr and fields "
 "members of the data-type object) are also changed (recursively)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3406
+#: ../../../reference/c-api/array.rst:3430
 msgid "The value of *newendian* is one of these macros:"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3416
+#: ../../../reference/c-api/array.rst:3440
 msgid ""
 "If a byteorder of :c:data:`NPY_IGNORE` is encountered it is left alone. If "
 "newendian is :c:data:`NPY_SWAP`, then all byte-orders are swapped. Other "
@@ -3766,7 +3800,7 @@ msgid ""
 "it's referenced data-type descriptors) to have the corresponding byte- order."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3427
+#: ../../../reference/c-api/array.rst:3451
 msgid ""
 "Determine an appropriate data-type object from the object *op* (which should "
 "be a \"nested\" sequence object) and the minimum data-type descriptor "
@@ -3776,14 +3810,14 @@ msgid ""
 "determines the data-type from the elements it finds."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3437
+#: ../../../reference/c-api/array.rst:3461
 msgid ""
 "Return a data-type object from an array-scalar object. No checking is done "
 "to be sure that *scalar* is an array scalar. If no suitable data-type can be "
 "determined, then a data-type of :c:data:`NPY_OBJECT` is returned by default."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3444
+#: ../../../reference/c-api/array.rst:3468
 msgid ""
 "Returns a data-type object corresponding to *typenum*. The *typenum* can be "
 "one of the enumerated types, a character code for one of the enumerated "
@@ -3792,7 +3826,7 @@ msgid ""
 "parameter to the desired size. The typenum is one of the :c:data:`NPY_TYPES`."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3453
+#: ../../../reference/c-api/array.rst:3477
 msgid ""
 "Convert any compatible Python object, *obj*, to a data-type object in "
 "*dtype*. A large number of Python objects can be converted to data-type "
@@ -3802,7 +3836,7 @@ msgid ""
 "func:`PyArg_ParseTuple` processing."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3464
+#: ../../../reference/c-api/array.rst:3488
 msgid ""
 "Convert any compatible Python object, *obj*, to a data-type object in "
 "*dtype*. This version of the converter converts None objects so that the "
@@ -3810,30 +3844,30 @@ msgid ""
 "\"O&\" character in PyArg_ParseTuple processing."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3473
+#: ../../../reference/c-api/array.rst:3497
 msgid ""
 "Like :c:func:`PyArray_DescrConverter` except it aligns C-struct-like objects "
 "on word-boundaries as the compiler would."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3479
+#: ../../../reference/c-api/array.rst:3503
 msgid ""
 "Like :c:func:`PyArray_DescrConverter2` except it aligns C-struct-like "
 "objects on word-boundaries as the compiler would."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3483
+#: ../../../reference/c-api/array.rst:3507
 msgid "Data Type Promotion and Inspection"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3488
+#: ../../../reference/c-api/array.rst:3512
 msgid ""
 "This function defines the common DType operator. Note that the common DType "
 "will not be ``object`` (unless one of the DTypes is ``object``). Similar to "
 "`numpy.result_type`, but works on the classes and not instances."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3495
+#: ../../../reference/c-api/array.rst:3519
 msgid ""
 "Promotes a list of DTypes with each other in a way that should guarantee "
 "stable results even when changing the order.  This function is smarter and "
@@ -3844,7 +3878,7 @@ msgid ""
 "signed integers are not.)"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3503
+#: ../../../reference/c-api/array.rst:3527
 msgid ""
 "For guaranteed consistent results DTypes must implement common-Dtype "
 "\"transitively\".  If A promotes B and B promotes C, than A must generally "
@@ -3852,7 +3886,7 @@ msgid ""
 "are some exceptions for abstract DTypes)"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3508
+#: ../../../reference/c-api/array.rst:3532
 msgid ""
 "In general this approach always works as long as the most generic dtype is "
 "either strictly larger, or compatible with all other dtypes. For example "
@@ -3860,18 +3894,18 @@ msgid ""
 "again gives a floating point number."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3515
+#: ../../../reference/c-api/array.rst:3539
 msgid ""
 "Given a DType class, returns the default instance (descriptor).  This checks "
 "for a ``singleton`` first and only calls the ``default_descr`` function if "
 "necessary."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3522
+#: ../../../reference/c-api/array.rst:3546
 msgid "Custom Data Types"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3526
+#: ../../../reference/c-api/array.rst:3550
 msgid ""
 "These functions allow defining custom flexible data types outside of NumPy.  "
 "See :ref:`NEP 42 <NEP42>` for more details about the rationale and design of "
@@ -3881,7 +3915,7 @@ msgid ""
 "``PyArrayDTypeMeta_Spec``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3536
+#: ../../../reference/c-api/array.rst:3560
 msgid ""
 "Initialize a new DType.  It must currently be a static Python C type that is "
 "declared as :c:type:`PyArray_DTypeMeta` and not :c:type:`PyTypeObject`. "
@@ -3892,40 +3926,86 @@ msgid ""
 "parametric and non-parametric data types."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3549
+#: ../../../reference/c-api/array.rst:3570
+msgid ""
+"Custom DType registration is expected to happen during module import. The "
+"registration API mutates global state and is not thread-safe."
+msgstr ""
+
+#: ../../../reference/c-api/array.rst:3578
 msgid ""
 "Flags that can be set on the ``PyArrayDTypeMeta_Spec`` to initialize the "
 "DType."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3553
+#: ../../../reference/c-api/array.rst:3582
 msgid ""
 "Indicates the DType is an abstract \"base\" DType in a DType hierarchy and "
 "should not be directly instantiated."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3558
+#: ../../../reference/c-api/array.rst:3587
 msgid ""
 "Indicates the DType is parametric and does not have a unique singleton "
 "instance."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3563
+#: ../../../reference/c-api/array.rst:3592
 msgid "Indicates the DType represents a numerical value."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3569
+#: ../../../reference/c-api/array.rst:3598
 msgid "Slot IDs and API Function Typedefs"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3571
+#: ../../../reference/c-api/array.rst:3600
 msgid ""
 "These IDs correspond to slots in the DType API and are used to identify "
 "implementations of each slot from the items of the ``slots`` array member of "
 "``PyArrayDTypeMeta_Spec`` struct."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3580
+#: ../../../reference/c-api/array.rst:3606
+msgid ""
+"Compatibility slot to transition legacy dtypes to the new DType API. "
+"Existing legacy dtypes that currently use ``PyArray_RegisterDataType`` "
+"should use this to transition to the new DType API. The value of this slot "
+"is the ``PyArray_DescrProto`` struct."
+msgstr ""
+
+#: ../../../reference/c-api/array.rst:3611
+msgid ""
+"This slot allows an *existing* legacy DType to use the new DType API without "
+"breaking backwards compatibility (or with very minor changes). I.e. NumPy "
+"will still consider this a \"legacy\" DType and use old code paths where "
+"applicable, but use new features as they become available."
+msgstr ""
+
+#: ../../../reference/c-api/array.rst:3616
+msgid ""
+"If used, this slot is required to be the first slot.  The ``ArrFuncs`` "
+"fields are copied, but you may also set them via the slots below. (This "
+"allows backporting e.g. sorts, although NumPy 2.4+ does support a new way to "
+"implement sorts.)"
+msgstr ""
+
+#: ../../../reference/c-api/array.rst:3623
+msgid ""
+"This feature is added in NumPy 2.5, but is backported to be compatible with "
+"NumPy 2.0+.  You can vendor this backport from ``npy_2_compat.h`` if you "
+"wish to compile with older NumPy versions."
+msgstr ""
+
+#: ../../../reference/c-api/array.rst:3628
+msgid ""
+"This slot exists for DTypes that currently use ``PyArray_RegisterDataType`` "
+"allowing them to transition when otherwise regressions would block them from "
+"doing so. It is a path for deprecating ``PyArray_RegisterDataType``, "
+"``PyArray_RegisterCastFunc``, ``PyArray_RegisterCanCast`` and further slots "
+"in the future."
+msgstr ""
+
+#: ../../../reference/c-api/array.rst:3640
 msgid ""
 "Used during DType inference to find the correct DType for a given PyObject. "
 "Must return a descriptor instance appropriate to store the data in the "
@@ -3933,28 +4013,28 @@ msgid ""
 "*cls* is the DType class to create a descriptor for."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3590
+#: ../../../reference/c-api/array.rst:3650
 msgid ""
 "Returns the default descriptor instance for the DType. Must be defined for "
 "parametric data types. Non-parametric data types return the singleton by "
 "default."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3599
+#: ../../../reference/c-api/array.rst:3659
 msgid ""
 "Given two input DTypes, determines the appropriate \"common\" DType that can "
 "store values for both types. Returns ``Py_NotImplemented`` if no such type "
 "exists."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3608
+#: ../../../reference/c-api/array.rst:3668
 msgid ""
 "Given two input descriptors, determines the appropriate \"common\" "
 "descriptor that can store values for both instances. Returns ``NULL`` on "
 "error."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3617
+#: ../../../reference/c-api/array.rst:3677
 msgid ""
 "Returns the \"canonical\" representation for a descriptor instance. The "
 "notion of a canonical descriptor generalizes the concept of byte order, in "
@@ -3963,23 +4043,23 @@ msgid ""
 "descriptor."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3627
+#: ../../../reference/c-api/array.rst:3687
 msgid "Implements scalar setitem for an array element given a PyObject."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3633
+#: ../../../reference/c-api/array.rst:3693
 msgid ""
 "Implements scalar getitem for an array element. Must return a python scalar."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3638
+#: ../../../reference/c-api/array.rst:3698
 msgid ""
 "If defined, sets a traversal loop that clears data in the array. This is "
 "most useful for arrays of references that must clean up array entries before "
 "the array is garbage collected. Implements ``PyArrayMethod_GetTraverseLoop``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3645
+#: ../../../reference/c-api/array.rst:3705
 msgid ""
 "If defined, sets a traversal loop that fills an array with \"zero\" values, "
 "which may have a DType-specific meaning. This is called inside `numpy.zeros` "
@@ -3988,7 +4068,7 @@ msgid ""
 "``PyArrayMethod_GetTraverseLoop``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3656
+#: ../../../reference/c-api/array.rst:3716
 msgid ""
 "If defined, a function that is called to \"finalize\" a descriptor instance "
 "after an array is created. One use of this function is to force newly "
@@ -3996,7 +4076,7 @@ msgid ""
 "input descriptor is provided by a user."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3666
+#: ../../../reference/c-api/array.rst:3726
 msgid ""
 "If defined, allows the DType to expose constant values such as machine "
 "limits, special values (infinity, NaN), and floating-point characteristics. "
@@ -4007,115 +4087,115 @@ msgid ""
 "constant is not available, or -1 with an error set."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3675
+#: ../../../reference/c-api/array.rst:3735
 msgid "**Constant IDs**:"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3677
+#: ../../../reference/c-api/array.rst:3737
 msgid ""
 "The following constant IDs are defined for retrieving dtype-specific values:"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3679
+#: ../../../reference/c-api/array.rst:3739
 msgid "**Basic constants** (available for all numeric types):"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3683
+#: ../../../reference/c-api/array.rst:3743
 msgid "The zero value for the dtype."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3687
+#: ../../../reference/c-api/array.rst:3747
 msgid "The one value for the dtype."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3691
+#: ../../../reference/c-api/array.rst:3751
 msgid ""
 "The minimum finite value representable by the dtype. For floating-point "
 "types, this is the most negative finite value (e.g., ``-FLT_MAX``)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3696
+#: ../../../reference/c-api/array.rst:3756
 msgid "The maximum finite value representable by the dtype."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3698
+#: ../../../reference/c-api/array.rst:3758
 msgid "**Floating-point special values**:"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3702
+#: ../../../reference/c-api/array.rst:3762
 msgid "Positive infinity (only for floating-point types)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3706
+#: ../../../reference/c-api/array.rst:3766
 msgid "Negative infinity (only for floating-point types)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3710
+#: ../../../reference/c-api/array.rst:3770
 msgid "Not-a-Number (only for floating-point types)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3712
+#: ../../../reference/c-api/array.rst:3772
 msgid "**Floating-point characteristics** (values of the dtype's native type):"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3716
+#: ../../../reference/c-api/array.rst:3776
 msgid ""
 "The radix (base) of the floating-point representation. This is 2 for all "
 "floating-point types."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3721
+#: ../../../reference/c-api/array.rst:3781
 msgid ""
 "Machine epsilon: the difference between 1.0 and the next representable value "
 "greater than 1.0. Corresponds to C macros like ``FLT_EPSILON``, "
 "``DBL_EPSILON``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3725
+#: ../../../reference/c-api/array.rst:3785
 msgid ""
 "For long double in IBM double-double format (PowerPC), this is defined as "
 "``0x1p-105L`` (2^-105) based on the ~106 bits of mantissa precision."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3730
+#: ../../../reference/c-api/array.rst:3790
 msgid ""
 "The difference between 1.0 and the next representable value less than 1.0. "
 "Typically ``eps / radix`` for binary floating-point types."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3735
+#: ../../../reference/c-api/array.rst:3795
 msgid ""
 "The smallest positive normalized floating-point number. Corresponds to C "
 "macros like ``FLT_MIN``, ``DBL_MIN``. This is the smallest value with a "
 "leading 1 bit in the mantissa."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3741
+#: ../../../reference/c-api/array.rst:3801
 msgid ""
 "The smallest positive subnormal (denormalized) floating-point number. "
 "Corresponds to C macros like ``FLT_TRUE_MIN``, ``DBL_TRUE_MIN``. This is the "
 "smallest representable positive value, with leading 0 bits in the mantissa."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3745
+#: ../../../reference/c-api/array.rst:3805
 msgid "**Floating-point characteristics** (integer values, type ``npy_intp``):"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3747
+#: ../../../reference/c-api/array.rst:3807
 msgid ""
 "These constants return integer metadata about the floating-point "
 "representation. They are marked with the ``1 << 16`` bit to indicate they "
 "return ``npy_intp`` values rather than the dtype's native type."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3753
+#: ../../../reference/c-api/array.rst:3813
 msgid ""
 "Number of mantissa bits (excluding the implicit leading bit). For example, "
 "IEEE 754 binary64 (double) has 52 explicit mantissa bits, so this returns "
 "52. Corresponds to ``MANT_DIG - 1`` from C standard macros."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3759
+#: ../../../reference/c-api/array.rst:3819
 msgid ""
 "Minimum exponent value. This is the minimum negative integer such that the "
 "radix raised to the power of one less than that integer is a normalized "
@@ -4123,7 +4203,7 @@ msgid ""
 "(e.g., ``FLT_MIN_EXP - 1``)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3766
+#: ../../../reference/c-api/array.rst:3826
 msgid ""
 "Maximum exponent value. This is the maximum positive integer such that the "
 "radix raised to the power of one less than that integer is a representable "
@@ -4131,17 +4211,17 @@ msgid ""
 "macros (e.g., ``FLT_MAX_EXP``)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3773
+#: ../../../reference/c-api/array.rst:3833
 msgid ""
 "The number of decimal digits of precision. Corresponds to ``DIG`` from C "
 "standard macros (e.g., ``FLT_DIG``, ``DBL_DIG``)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3777
+#: ../../../reference/c-api/array.rst:3837
 msgid "PyArray_ArrFuncs slots"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3779
+#: ../../../reference/c-api/array.rst:3839
 msgid ""
 "In addition the above slots, the following slots are exposed to allow "
 "filling the :ref:`arrfuncs-type` struct attached to descriptor instances. "
@@ -4149,7 +4229,7 @@ msgid ""
 "for now we have exposed the legacy ``PyArray_ArrFuncs`` slots."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3787
+#: ../../../reference/c-api/array.rst:3847
 msgid ""
 "Allows setting a per-dtype getitem. Note that this is not necessary to "
 "define unless the default version calling the function defined with the "
@@ -4158,106 +4238,106 @@ msgid ""
 "a NULL input array."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3795
+#: ../../../reference/c-api/array.rst:3855
 msgid ""
 "Allows setting a per-dtype setitem. Note that this is not necessary to "
 "define unless the default version calling the function defined with the "
 "``NPY_DT_setitem`` ID is unsuitable for some reason."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3801
+#: ../../../reference/c-api/array.rst:3861
 msgid ""
 "Computes a comparison for `numpy.sort`, implements ``PyArray_CompareFunc``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3805
+#: ../../../reference/c-api/array.rst:3865
 msgid "Computes the argmax for `numpy.argmax`, implements ``PyArray_ArgFunc``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3809
+#: ../../../reference/c-api/array.rst:3869
 msgid "Computes the argmin for `numpy.argmin`, implements ``PyArray_ArgFunc``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3813
+#: ../../../reference/c-api/array.rst:3873
 msgid ""
 "Computes the dot product for `numpy.dot`, implements ``PyArray_DotFunc``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3818
+#: ../../../reference/c-api/array.rst:3878
 msgid ""
 "A formatted input function for `numpy.fromfile`, implements "
 "``PyArray_ScanFunc``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3823
+#: ../../../reference/c-api/array.rst:3883
 msgid ""
 "A string parsing function for `numpy.fromstring`, implements "
 "``PyArray_FromStrFunc``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3828
+#: ../../../reference/c-api/array.rst:3888
 msgid ""
 "Computes the nonzero function for `numpy.nonzero`, implements "
 "``PyArray_NonzeroFunc``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3833
+#: ../../../reference/c-api/array.rst:3893
 msgid ""
 "An array filling function for `numpy.ndarray.fill`, implements "
 "``PyArray_FillFunc``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3838
+#: ../../../reference/c-api/array.rst:3898
 msgid ""
 "A function to fill an array with a scalar value for `numpy.ndarray.fill`, "
 "implements ``PyArray_FillWithScalarFunc``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3843
+#: ../../../reference/c-api/array.rst:3903
 msgid ""
 "An array of PyArray_SortFunc of length ``NPY_NSORTS``. If set, allows "
 "defining custom sorting implementations for each of the sorting algorithms "
 "numpy implements."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3849
+#: ../../../reference/c-api/array.rst:3909
 msgid ""
 "An array of PyArray_ArgSortFunc of length ``NPY_NSORTS``. If set, allows "
 "defining custom argsorting implementations for each of the sorting "
 "algorithms numpy implements."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3854
+#: ../../../reference/c-api/array.rst:3914
 msgid "Macros and Static Inline Functions"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3856
+#: ../../../reference/c-api/array.rst:3916
 msgid ""
 "These macros and static inline functions are provided to allow more "
 "understandable and idiomatic code when working with ``PyArray_DTypeMeta`` "
 "instances."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3862
+#: ../../../reference/c-api/array.rst:3922
 msgid ""
 "Returns a ``PyArray_DTypeMeta *`` pointer to the DType of a given descriptor "
 "instance."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3868
+#: ../../../reference/c-api/array.rst:3928
 msgid ""
 "Returns a ``PyArray_DTypeMeta *`` pointer to a new reference to a DType."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3872
+#: ../../../reference/c-api/array.rst:3932
 msgid "Conversion utilities"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3875
+#: ../../../reference/c-api/array.rst:3935
 msgid "For use with :c:func:`PyArg_ParseTuple`"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3877
+#: ../../../reference/c-api/array.rst:3937
 msgid ""
 "All of these functions can be used in :c:func:`PyArg_ParseTuple` (...) with "
 "the \"O&\" format specifier to automatically convert any Python object to "
@@ -4267,7 +4347,7 @@ msgid ""
 "the C-type to convert the Python object to."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3888
+#: ../../../reference/c-api/array.rst:3948
 msgid ""
 "Be sure to understand what steps you should take to manage the memory when "
 "using these conversion functions. These functions can require freeing "
@@ -4275,7 +4355,7 @@ msgid ""
 "your use."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3895
+#: ../../../reference/c-api/array.rst:3955
 msgid ""
 "Convert any Python object to a :c:type:`PyArrayObject`. If :c:func:"
 "`PyArray_Check` (*obj*) is TRUE then its reference count is incremented and "
@@ -4285,7 +4365,7 @@ msgid ""
 "are done with it."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3905
+#: ../../../reference/c-api/array.rst:3965
 msgid ""
 "This is a default converter for output arrays given to functions. If *obj* "
 "is :c:data:`Py_None` or ``NULL``, then *\\*address* will be ``NULL`` but the "
@@ -4293,7 +4373,7 @@ msgid ""
 "returned in *\\*address* without incrementing its reference count."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3913
+#: ../../../reference/c-api/array.rst:3973
 msgid ""
 "Convert any Python sequence, *obj*, smaller than :c:data:`NPY_MAXDIMS` to a "
 "C-array of :c:type:`npy_intp`. The Python object could also be a single "
@@ -4304,7 +4384,7 @@ msgid ""
 "for sequences intended to be interpreted as array shapes."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3924
+#: ../../../reference/c-api/array.rst:3984
 msgid ""
 "Convert any Python object, *obj*, with a (single-segment) buffer interface "
 "to a variable with members that detail the object's use of its chunk of "
@@ -4320,7 +4400,7 @@ msgid ""
 "has a writeable buffer interface."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3941
+#: ../../../reference/c-api/array.rst:4001
 msgid ""
 "Convert a Python object, *obj*, representing an axis argument to the proper "
 "value for passing to the functions that take an integer axis. Specifically, "
@@ -4328,19 +4408,19 @@ msgid ""
 "interpreted correctly by the C-API functions that take axis arguments."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3949
+#: ../../../reference/c-api/array.rst:4009
 msgid ""
 "Convert any Python object, *obj*, to :c:data:`NPY_TRUE` or :c:data:"
 "`NPY_FALSE`, and place the result in *value*."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3954
+#: ../../../reference/c-api/array.rst:4014
 msgid ""
 "Convert Python strings into the corresponding byte-order character: '>', "
 "'<', 's', '=', or '\\|'."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3960
+#: ../../../reference/c-api/array.rst:4020
 msgid ""
 "Convert Python strings into one of :c:data:`NPY_QUICKSORT` (starts with 'q' "
 "or 'Q'), :c:data:`NPY_HEAPSORT` (starts with 'h' or 'H'), :c:data:"
@@ -4350,20 +4430,20 @@ msgid ""
 "several stable sorting algorithms depending on the data type."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3970
+#: ../../../reference/c-api/array.rst:4030
 msgid ""
 "Convert Python strings into one of :c:data:`NPY_SEARCHLEFT` (starts with 'l' "
 "or 'L'), or :c:data:`NPY_SEARCHRIGHT` (starts with 'r' or 'R')."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3975
+#: ../../../reference/c-api/array.rst:4035
 msgid ""
 "Convert the Python strings 'C', 'F', 'A', and 'K' into the :c:type:"
 "`NPY_ORDER` enumeration :c:data:`NPY_CORDER`, :c:data:`NPY_FORTRANORDER`, :c:"
 "data:`NPY_ANYORDER`, and :c:data:`NPY_KEEPORDER`."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3982
+#: ../../../reference/c-api/array.rst:4042
 msgid ""
 "Convert the Python strings 'no', 'equiv', 'safe', 'same_kind', and 'unsafe' "
 "into the :c:type:`NPY_CASTING` enumeration :c:data:`NPY_NO_CASTING`, :c:data:"
@@ -4371,14 +4451,14 @@ msgid ""
 "`NPY_SAME_KIND_CASTING`, and :c:data:`NPY_UNSAFE_CASTING`."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3990
+#: ../../../reference/c-api/array.rst:4050
 msgid ""
 "Convert the Python strings 'clip', 'wrap', and 'raise' into the :c:type:"
 "`NPY_CLIPMODE` enumeration :c:data:`NPY_CLIP`, :c:data:`NPY_WRAP`, and :c:"
 "data:`NPY_RAISE`."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:3997
+#: ../../../reference/c-api/array.rst:4057
 msgid ""
 "Converts either a sequence of clipmodes or a single clipmode into a C array "
 "of :c:type:`NPY_CLIPMODE` values. The number of clipmodes *n* must be known "
@@ -4386,29 +4466,29 @@ msgid ""
 "allow a different clipmode for each dimension."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4003
+#: ../../../reference/c-api/array.rst:4063
 msgid "Other conversions"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4007
+#: ../../../reference/c-api/array.rst:4067
 msgid ""
 "Convert all kinds of Python objects (including arrays and array scalars) to "
 "a standard integer. On error, -1 is returned and an exception set. You may "
 "find useful the macro:"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4011
+#: ../../../reference/c-api/array.rst:4071
 msgid "#define error_converting(x) (((x) == -1) && PyErr_Occurred())"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4017
+#: ../../../reference/c-api/array.rst:4077
 msgid ""
 "Convert all kinds of Python objects (including arrays and array scalars) to "
 "a (platform-pointer-sized) integer. On error, -1 is returned and an "
 "exception set."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4024
+#: ../../../reference/c-api/array.rst:4084
 msgid ""
 "Convert any Python sequence (or single Python number) passed in as *seq* to "
 "(up to) *maxvals* pointer-sized integers and place them in the *vals* array. "
@@ -4416,18 +4496,18 @@ msgid ""
 "objects is returned."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4032
+#: ../../../reference/c-api/array.rst:4092
 msgid "Including and importing the C API"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4034
+#: ../../../reference/c-api/array.rst:4094
 msgid ""
 "To use the NumPy C-API you typically need to include the ``numpy/"
 "ndarrayobject.h`` header and ``numpy/ufuncobject.h`` for some ufunc related "
 "functionality (``arrayobject.h`` is an alias for ``ndarrayobject.h``)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4038
+#: ../../../reference/c-api/array.rst:4098
 msgid ""
 "These two headers export most relevant functionality.  In general any "
 "project which uses the NumPy API must import NumPy using one of the "
@@ -4437,7 +4517,7 @@ msgid ""
 "include ``numpy/ndarratypes.h``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4045
+#: ../../../reference/c-api/array.rst:4105
 msgid ""
 "For the typical Python project, multiple C or C++ files will be compiled "
 "into a single shared object (the Python C-module) and "
@@ -4445,11 +4525,11 @@ msgid ""
 "initialization."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4049
+#: ../../../reference/c-api/array.rst:4109
 msgid "When you have a single C-file, this will consist of:"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4051
+#: ../../../reference/c-api/array.rst:4111
 msgid ""
 "#include \"numpy/ndarrayobject.h\"\n"
 "\n"
@@ -4462,7 +4542,7 @@ msgid ""
 "}"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4063
+#: ../../../reference/c-api/array.rst:4123
 msgid ""
 "However, most projects will have additional C files which are all linked "
 "together into a single Python module. In this case, the helper C files "
@@ -4470,13 +4550,13 @@ msgid ""
 "should be called (although it is OK and fast to call it often)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4069
+#: ../../../reference/c-api/array.rst:4129
 msgid ""
 "To solve this, NumPy provides the following pattern that the main file is "
 "modified to define ``PY_ARRAY_UNIQUE_SYMBOL`` before the include:"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4072
+#: ../../../reference/c-api/array.rst:4132
 msgid ""
 "/* Main module file */\n"
 "#define PY_ARRAY_UNIQUE_SYMBOL MyModule\n"
@@ -4491,11 +4571,11 @@ msgid ""
 "}"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4086
+#: ../../../reference/c-api/array.rst:4146
 msgid "while the other files use:"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4088
+#: ../../../reference/c-api/array.rst:4148
 msgid ""
 "/* Second file without any import */\n"
 "#define NO_IMPORT_ARRAY\n"
@@ -4503,27 +4583,27 @@ msgid ""
 "#include \"numpy/ndarrayobject.h\""
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4095
+#: ../../../reference/c-api/array.rst:4155
 msgid ""
 "You can of course add the defines to a local header used throughout. You "
 "just have to make sure that the main file does _not_ define "
 "``NO_IMPORT_ARRAY``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4099
+#: ../../../reference/c-api/array.rst:4159
 msgid ""
 "For ``numpy/ufuncobject.h`` the same logic applies, but the unique symbol "
 "mechanism is ``#define PY_UFUNC_UNIQUE_SYMBOL`` (both can match)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4102
+#: ../../../reference/c-api/array.rst:4162
 msgid ""
 "Additionally, you will probably wish to add a ``#define "
 "NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION`` to avoid warnings about possible "
 "use of old API."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4107
+#: ../../../reference/c-api/array.rst:4167
 msgid ""
 "If you are experiencing access violations make sure that the NumPy API was "
 "properly imported and the symbol ``PyArray_API`` is not ``NULL``. When in a "
@@ -4533,11 +4613,11 @@ msgid ""
 "PyArray_API);`` just before the crash.)"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4116
+#: ../../../reference/c-api/array.rst:4176
 msgid "Mechanism details and dynamic linking"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4118
+#: ../../../reference/c-api/array.rst:4178
 msgid ""
 "The main part of the mechanism is that without NumPy needs to define a "
 "``void **PyArray_API`` table for you to look up all functions. Depending on "
@@ -4545,41 +4625,41 @@ msgid ""
 "`NO_IMPORT_ARRAY` and  :c:macro:`PY_ARRAY_UNIQUE_SYMBOL` are defined:"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4124
+#: ../../../reference/c-api/array.rst:4184
 msgid ""
 "If neither is defined, the C-API is declared to ``static void "
 "**PyArray_API``, so it is only visible within the compilation unit/file "
 "using ``#include <numpy/arrayobject.h>``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4127
+#: ../../../reference/c-api/array.rst:4187
 msgid ""
 "If only ``PY_ARRAY_UNIQUE_SYMBOL`` is defined (it could be empty) then the "
 "it is declared to a non-static ``void **`` allowing it to be used by other "
 "files which are linked."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4130
+#: ../../../reference/c-api/array.rst:4190
 msgid ""
 "If ``NO_IMPORT_ARRAY`` is defined, the table is declared as ``extern void "
 "**``, meaning that it must be linked to a file which does not use "
 "``NO_IMPORT_ARRAY``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4134
+#: ../../../reference/c-api/array.rst:4194
 msgid ""
 "The ``PY_ARRAY_UNIQUE_SYMBOL`` mechanism additionally mangles the names to "
 "avoid conflicts."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4137
+#: ../../../reference/c-api/array.rst:4197
 msgid ""
 "2.1 changed the headers to avoid sharing the table outside of a single "
 "shared object/dll (this was always the case on Windows). Please see :c:macro:"
 "`NPY_API_SYMBOL_ATTRIBUTE` for details."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4142
+#: ../../../reference/c-api/array.rst:4202
 msgid ""
 "In order to make use of the C-API from another extension module, the :c:func:"
 "`import_array` function must be called. If the extension module is self-"
@@ -4588,7 +4668,7 @@ msgid ""
 "needed then some additional steps must be taken."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4150
+#: ../../../reference/c-api/array.rst:4210
 msgid ""
 "Ensures that the NumPy C-API is imported and usable.  It returns ``0`` on "
 "success and ``-1`` with an error set if NumPy couldn't be imported. While "
@@ -4596,11 +4676,11 @@ msgid ""
 "light-weight if called multiple times."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4155
+#: ../../../reference/c-api/array.rst:4215
 msgid "This function is backported in the ``npy_2_compat.h`` header."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4160
+#: ../../../reference/c-api/array.rst:4220
 msgid ""
 "This function must be called in the initialization section of a module that "
 "will make use of the C-API. It imports the module where the function-pointer "
@@ -4612,7 +4692,7 @@ msgid ""
 "customizes the return value."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4176
+#: ../../../reference/c-api/array.rst:4236
 msgid ""
 "An additional symbol which can be used to share e.g. visibility beyond "
 "shared object boundaries. By default, NumPy adds the C visibility hidden "
@@ -4623,20 +4703,20 @@ msgid ""
 "the unique symbol)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4185
+#: ../../../reference/c-api/array.rst:4245
 msgid ""
 "Adding an empty ``#define NPY_API_SYMBOL_ATTRIBUTE`` will have the same "
 "behavior as NumPy 1.x."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4189
+#: ../../../reference/c-api/array.rst:4249
 msgid ""
 "Windows never had shared visibility although you can use this macro to "
 "achieve it.  We generally discourage sharing beyond shared boundary lines "
 "since importing the array API includes NumPy version checks."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4195
+#: ../../../reference/c-api/array.rst:4255
 msgid ""
 "Defining ``NO_IMPORT_ARRAY`` before the ``ndarrayobject.h`` include "
 "indicates that the NumPy C API import is handled in a different file and the "
@@ -4644,67 +4724,67 @@ msgid ""
 "``NO_IMPORT_ARRAY`` defined."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4200
+#: ../../../reference/c-api/array.rst:4260
 msgid ""
 "#define PY_ARRAY_UNIQUE_SYMBOL cool_ARRAY_API\n"
 "#include <numpy/arrayobject.h>"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4205
+#: ../../../reference/c-api/array.rst:4265
 msgid "On the other hand, coolhelper.c would contain at the top:"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4207
+#: ../../../reference/c-api/array.rst:4267
 msgid ""
 "#define NO_IMPORT_ARRAY\n"
 "#define PY_ARRAY_UNIQUE_SYMBOL cool_ARRAY_API\n"
 "#include <numpy/arrayobject.h>"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4213
+#: ../../../reference/c-api/array.rst:4273
 msgid ""
 "You can also put the common two last lines into an extension-local header "
 "file as long as you make sure that NO_IMPORT_ARRAY is #defined before "
 "#including that file."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4217
+#: ../../../reference/c-api/array.rst:4277
 msgid "Internally, these #defines work as follows:"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4219
+#: ../../../reference/c-api/array.rst:4279
 msgid ""
 "If neither is defined, the C-API is declared to be ``static void**``, so it "
 "is only visible within the compilation unit that #includes numpy/arrayobject."
 "h."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4222
+#: ../../../reference/c-api/array.rst:4282
 msgid ""
 "If :c:macro:`PY_ARRAY_UNIQUE_SYMBOL` is #defined, but :c:macro:"
 "`NO_IMPORT_ARRAY` is not, the C-API is declared to be ``void**``, so that it "
 "will also be visible to other compilation units."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4226
+#: ../../../reference/c-api/array.rst:4286
 msgid ""
 "If :c:macro:`NO_IMPORT_ARRAY` is #defined, regardless of whether :c:macro:"
 "`PY_ARRAY_UNIQUE_SYMBOL` is, the C-API is declared to be ``extern void**``, "
 "so it is expected to be defined in another compilation unit."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4230
+#: ../../../reference/c-api/array.rst:4290
 msgid ""
 "Whenever :c:macro:`PY_ARRAY_UNIQUE_SYMBOL` is #defined, it also changes the "
 "name of the variable holding the C-API, which defaults to ``PyArray_API``, "
 "to whatever the macro is #defined to."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4237
+#: ../../../reference/c-api/array.rst:4297
 msgid "Checking the API Version"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4239
+#: ../../../reference/c-api/array.rst:4299
 msgid ""
 "Because python extensions are not used in the same way as usual libraries on "
 "most platforms, some errors cannot be automatically detected at build time "
@@ -4719,24 +4799,24 @@ msgid ""
 "corresponds to the runtime numpy's version."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4251
+#: ../../../reference/c-api/array.rst:4311
 msgid "The rules for ABI and API compatibilities can be summarized as follows:"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4253
+#: ../../../reference/c-api/array.rst:4313
 msgid ""
 "Whenever :c:data:`NPY_VERSION` != ``PyArray_GetNDArrayCVersion()``, the "
 "extension has to be recompiled (ABI incompatibility)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4255
+#: ../../../reference/c-api/array.rst:4315
 msgid ""
 ":c:data:`NPY_VERSION` == ``PyArray_GetNDArrayCVersion()`` and :c:data:"
 "`NPY_FEATURE_VERSION` <= ``PyArray_GetNDArrayCFeatureVersion()`` means "
 "backward compatible changes."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4259
+#: ../../../reference/c-api/array.rst:4319
 msgid ""
 "ABI incompatibility is automatically detected in every numpy's version. API "
 "incompatibility detection was added in numpy 1.4.0. If you want to supported "
@@ -4744,17 +4824,17 @@ msgid ""
 "your extension with the lowest :c:data:`NPY_FEATURE_VERSION` as possible."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4266
+#: ../../../reference/c-api/array.rst:4326
 msgid ""
 "The current version of the ndarray object (check to see if this variable is "
 "defined to guarantee the ``numpy/arrayobject.h`` header is being used)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4272
+#: ../../../reference/c-api/array.rst:4332
 msgid "The current version of the C-API."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4276
+#: ../../../reference/c-api/array.rst:4336
 msgid ""
 "This just returns the value :c:data:`NPY_VERSION`. :c:data:`NPY_VERSION` "
 "changes whenever a backward incompatible change at the ABI level. Because it "
@@ -4764,28 +4844,28 @@ msgid ""
 "API. This is automatically checked in the function :c:func:`import_array`."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4285
+#: ../../../reference/c-api/array.rst:4345
 msgid ""
 "This just returns the value :c:data:`NPY_FEATURE_VERSION`. :c:data:"
 "`NPY_FEATURE_VERSION` changes whenever the API changes (e.g. a function is "
 "added). A changed value does not always require a recompile."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4291
+#: ../../../reference/c-api/array.rst:4351
 msgid "Memory management"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4299
+#: ../../../reference/c-api/array.rst:4359
 msgid ""
 "Functions to allocate, free, and reallocate memory. These are used "
 "internally to manage array data memory unless overridden."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4308
+#: ../../../reference/c-api/array.rst:4368
 msgid "Macros to allocate, free, and reallocate dimension and strides memory."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4316
+#: ../../../reference/c-api/array.rst:4376
 msgid ""
 "These macros use different memory allocators, depending on the constant :c:"
 "data:`NPY_USE_PYMEM`. The system malloc is used when :c:data:`NPY_USE_PYMEM` "
@@ -4793,7 +4873,7 @@ msgid ""
 "used."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4325
+#: ../../../reference/c-api/array.rst:4385
 msgid ""
 "If ``obj->flags`` has :c:data:`NPY_ARRAY_WRITEBACKIFCOPY`, this function "
 "clears the flags, ``DECREF`` s ``obj->base`` and makes it writeable, and "
@@ -4805,15 +4885,15 @@ msgid ""
 "`PyArray_DiscardWritebackIfCopy`."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4335
+#: ../../../reference/c-api/array.rst:4395
 msgid "Returns 0 if nothing was done, -1 on error, and 1 if action was taken."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4340
+#: ../../../reference/c-api/array.rst:4400
 msgid "Threading support"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4342
+#: ../../../reference/c-api/array.rst:4402
 msgid ""
 "These macros are only meaningful if :c:data:`NPY_ALLOW_THREADS` evaluates "
 "True during compilation of the extension module. Otherwise, these macros are "
@@ -4830,72 +4910,72 @@ msgid ""
 "c:data:`NPY_ALLOW_THREADS` is false (``0``)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4360
+#: ../../../reference/c-api/array.rst:4420
 msgid "Group 1"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4362
+#: ../../../reference/c-api/array.rst:4422
 msgid ""
 "This group is used to call code that may take some time but does not use any "
 "Python C-API calls. Thus, the GIL should be released during its calculation."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4368
+#: ../../../reference/c-api/array.rst:4428
 msgid ""
 "Equivalent to :c:macro:`Py_BEGIN_ALLOW_THREADS` except it uses :c:data:"
 "`NPY_ALLOW_THREADS` to determine if the macro if replaced with white-space "
 "or not."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4374
+#: ../../../reference/c-api/array.rst:4434
 msgid ""
 "Equivalent to :c:macro:`Py_END_ALLOW_THREADS` except it uses :c:data:"
 "`NPY_ALLOW_THREADS` to determine if the macro if replaced with white-space "
 "or not."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4380
+#: ../../../reference/c-api/array.rst:4440
 msgid ""
 "Place in the variable declaration area. This macro sets up the variable "
 "needed for storing the Python state."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4385
+#: ../../../reference/c-api/array.rst:4445
 msgid ""
 "Place right before code that does not need the Python interpreter (no Python "
 "C-API calls). This macro saves the Python state and releases the GIL."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4391
+#: ../../../reference/c-api/array.rst:4451
 msgid ""
 "Place right after code that does not need the Python interpreter. This macro "
 "acquires the GIL and restores the Python state from the saved variable."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4397
+#: ../../../reference/c-api/array.rst:4457
 msgid ""
 "Useful to release the GIL only if *dtype* does not contain arbitrary Python "
 "objects which may need the Python interpreter during execution of the loop."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4403
+#: ../../../reference/c-api/array.rst:4463
 msgid ""
 "Useful to regain the GIL in situations where it was released using the BEGIN "
 "form of this macro."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4408
+#: ../../../reference/c-api/array.rst:4468
 msgid ""
 "Useful to release the GIL only if *loop_size* exceeds a minimum threshold, "
 "currently set to 500. Should be matched with a :c:macro:`NPY_END_THREADS` to "
 "regain the GIL."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4413
+#: ../../../reference/c-api/array.rst:4473
 msgid "Group 2"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4415
+#: ../../../reference/c-api/array.rst:4475
 msgid ""
 "This group is used to re-acquire the Python GIL after it has been released. "
 "For example, suppose the GIL has been released (using the previous calls), "
@@ -4906,43 +4986,43 @@ msgid ""
 "state."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4425
+#: ../../../reference/c-api/array.rst:4485
 msgid ""
 "Place in the variable declaration area to set up the necessary variable."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4430
+#: ../../../reference/c-api/array.rst:4490
 msgid ""
 "Place before code that needs to call the Python C-API (when it is known that "
 "the GIL has already been released)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4435
+#: ../../../reference/c-api/array.rst:4495
 msgid ""
 "Place after code that needs to call the Python C-API (to re-release the GIL)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4440
+#: ../../../reference/c-api/array.rst:4500
 msgid "Never use semicolons after the threading support macros."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4444
+#: ../../../reference/c-api/array.rst:4504
 msgid "Priority"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4448
+#: ../../../reference/c-api/array.rst:4508
 msgid "Default priority for arrays."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4452
+#: ../../../reference/c-api/array.rst:4512
 msgid "Default subtype priority."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4456
+#: ../../../reference/c-api/array.rst:4516
 msgid "Default scalar priority (very small)"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4460
+#: ../../../reference/c-api/array.rst:4520
 msgid ""
 "Return the :obj:`~numpy.class.__array_priority__` attribute (converted to a "
 "double) of *obj* or *def* if no attribute of that name exists. Fast returns "
@@ -4950,37 +5030,37 @@ msgid ""
 "`PyArray_Type`."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4467
+#: ../../../reference/c-api/array.rst:4527
 msgid "Default buffers"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4471
+#: ../../../reference/c-api/array.rst:4531
 msgid "Default size of the user-settable internal buffers."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4475
+#: ../../../reference/c-api/array.rst:4535
 msgid "Smallest size of user-settable internal buffers."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4479
+#: ../../../reference/c-api/array.rst:4539
 msgid "Largest size allowed for the user-settable buffers."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4483
+#: ../../../reference/c-api/array.rst:4543
 msgid "Other constants"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4487
+#: ../../../reference/c-api/array.rst:4547
 msgid "The number of floating-point types"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4491
+#: ../../../reference/c-api/array.rst:4551
 msgid ""
 "The maximum number of dimensions that may be used by NumPy. This is set to "
 "64 and was 32 before NumPy 2."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4495
+#: ../../../reference/c-api/array.rst:4555
 msgid ""
 "We encourage you to avoid ``NPY_MAXDIMS``.  A future version of NumPy may "
 "wish to remove any dimension limitation (and thus the constant). The "
@@ -4988,13 +5068,13 @@ msgid ""
 "for scratch space."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4500
+#: ../../../reference/c-api/array.rst:4560
 msgid ""
 "If your algorithm has a reasonable maximum number of dimension you could "
 "check and use that locally."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4505
+#: ../../../reference/c-api/array.rst:4565
 msgid ""
 "The maximum number of array arguments that can be used in some functions.  "
 "This used to be 32 before NumPy 2 and is now 64. To continue to allow using "
@@ -5002,66 +5082,66 @@ msgid ""
 "is now runtime dependent."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4511
+#: ../../../reference/c-api/array.rst:4571
 msgid ""
 "We discourage any use of ``NPY_MAXARGS`` that isn't explicitly tied to "
 "checking for known NumPy limitations."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4516
+#: ../../../reference/c-api/array.rst:4576
 msgid "Defined as 0 for use with Bool."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4520
+#: ../../../reference/c-api/array.rst:4580
 msgid "Defined as 1 for use with Bool."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4524
+#: ../../../reference/c-api/array.rst:4584
 msgid ""
 "The return value of failed converter functions which are called using the "
 "\"O&\" syntax in :c:func:`PyArg_ParseTuple`-like functions."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4529
+#: ../../../reference/c-api/array.rst:4589
 msgid ""
 "The return value of successful converter functions which are called using "
 "the \"O&\" syntax in :c:func:`PyArg_ParseTuple`-like functions."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4534
+#: ../../../reference/c-api/array.rst:4594
 msgid ""
 "Some NumPy functions (mainly the C-entrypoints for Python functions) have an "
 "``axis`` argument.  This macro may be passed for ``axis=None``."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4538
+#: ../../../reference/c-api/array.rst:4598
 msgid ""
 "This macro is NumPy version dependent at runtime. The value is now the "
 "minimum integer. However, on NumPy 1.x ``NPY_MAXDIMS`` was used (at the time "
 "set to 32)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4544
+#: ../../../reference/c-api/array.rst:4604
 msgid "Miscellaneous Macros"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4548
+#: ../../../reference/c-api/array.rst:4608
 msgid "Evaluates as True if arrays *a1* and *a2* have the same shape."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4552
+#: ../../../reference/c-api/array.rst:4612
 msgid ""
 "Returns the maximum of *a* and *b*. If (*a*) or (*b*) are expressions they "
 "are evaluated twice."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4557
+#: ../../../reference/c-api/array.rst:4617
 msgid ""
 "Returns the minimum of *a* and *b*. If (*a*) or (*b*) are expressions they "
 "are evaluated twice."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4562
+#: ../../../reference/c-api/array.rst:4622
 msgid ""
 "If ``obj->flags`` has :c:data:`NPY_ARRAY_WRITEBACKIFCOPY`, this function "
 "clears the flags, `DECREF` s ``obj->base`` and makes it writeable, and sets "
@@ -5073,11 +5153,11 @@ msgid ""
 "input."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4573
+#: ../../../reference/c-api/array.rst:4633
 msgid "Enumerated Types"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4577
+#: ../../../reference/c-api/array.rst:4637
 msgid ""
 "A special variable-type which can take on different values to indicate the "
 "sorting algorithm being used. These algorithm types have not been treated "
@@ -5087,11 +5167,11 @@ msgid ""
 "NPY_HEAPSORT will do the same thing as NPY_QUICKSORT."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4592
+#: ../../../reference/c-api/array.rst:4652
 msgid "Used as an alias of :c:data:`NPY_MERGESORT` and vice versa."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4596
+#: ../../../reference/c-api/array.rst:4656
 msgid ""
 "Defined to be the number of sorts. It is fixed at three by the need for "
 "backwards compatibility, and consequently :c:data:`NPY_MERGESORT` and :c:"
@@ -5099,53 +5179,53 @@ msgid ""
 "several stable sorting algorithms depending on the data type."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4601
+#: ../../../reference/c-api/array.rst:4661
 msgid ""
 "In NumPy 2.4 the algorithm names are replaced by requirements. You can still "
 "use the old values, a recompile is not needed, but they are reinterpreted "
 "such that"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4604
+#: ../../../reference/c-api/array.rst:4664
 msgid "NPY_QUICKSORT and NPY_HEAPSORT -> NPY_SORT_DEFAULT"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4605
+#: ../../../reference/c-api/array.rst:4665
 msgid "NPY_MERGESORT and NPY_STABLE -> NPY_SORT_STABLE"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4609
+#: ../../../reference/c-api/array.rst:4669
 msgid ""
 "The default sort for the type. For the NumPy builtin types it may be stable "
 "or not, but will be ascending and sort NaN types to the end. It is usually "
 "chosen for speed and/or low memory."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4615
+#: ../../../reference/c-api/array.rst:4675
 msgid "(Requirement) Specifies that the sort must be stable."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4619
+#: ../../../reference/c-api/array.rst:4679
 msgid ""
 "(Requirement) Specifies that the sort must be in descending order. This "
 "functionality is not yet implemented for any of the NumPy types and cannot "
 "yet be set from the Python interface."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4625
+#: ../../../reference/c-api/array.rst:4685
 msgid ""
 "A special variable type indicating the number of \"kinds\" of scalars "
 "distinguished in determining scalar-coercion rules. This variable can take "
 "on the values:"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4645
+#: ../../../reference/c-api/array.rst:4705
 msgid ""
 "Defined to be the number of scalar kinds (not including :c:data:"
 "`NPY_NOSCALAR`)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4650
+#: ../../../reference/c-api/array.rst:4710
 msgid ""
 "An enumeration type indicating the element order that an array should be "
 "interpreted in. When a brand new array is created, generally only "
@@ -5153,99 +5233,99 @@ msgid ""
 "inputs are provided, the order can be based on them."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4657
+#: ../../../reference/c-api/array.rst:4717
 msgid "Fortran order if all the inputs are Fortran, C otherwise."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4661
+#: ../../../reference/c-api/array.rst:4721
 msgid "C order."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4665
+#: ../../../reference/c-api/array.rst:4725
 msgid "Fortran order."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4669
+#: ../../../reference/c-api/array.rst:4729
 msgid ""
 "An order as close to the order of the inputs as possible, even if the input "
 "is in neither C nor Fortran order."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4674
+#: ../../../reference/c-api/array.rst:4734
 msgid ""
 "A variable type indicating the kind of clipping that should be applied in "
 "certain functions."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4679
+#: ../../../reference/c-api/array.rst:4739
 msgid ""
 "The default for most operations, raises an exception if an index is out of "
 "bounds."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4684
+#: ../../../reference/c-api/array.rst:4744
 msgid "Clips an index to the valid range if it is out of bounds."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4688
+#: ../../../reference/c-api/array.rst:4748
 msgid "Wraps an index to the valid range if it is out of bounds."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4692
+#: ../../../reference/c-api/array.rst:4752
 msgid ""
 "A variable type indicating whether the index returned should be that of the "
 "first suitable location (if :c:data:`NPY_SEARCHLEFT`) or of the last (if :c:"
 "data:`NPY_SEARCHRIGHT`)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4702
+#: ../../../reference/c-api/array.rst:4762
 msgid "A variable type indicating the selection algorithm being used."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4708
+#: ../../../reference/c-api/array.rst:4768
 msgid ""
 "An enumeration type indicating how permissive data conversions should be. "
 "This is used by the iterator added in NumPy 1.6, and is intended to be used "
 "more broadly in a future version."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4714
+#: ../../../reference/c-api/array.rst:4774
 msgid "Only allow identical types."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4718
+#: ../../../reference/c-api/array.rst:4778
 msgid "Allow identical and casts involving byte swapping."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4722
+#: ../../../reference/c-api/array.rst:4782
 msgid ""
 "Only allow casts which will not cause values to be rounded, truncated, or "
 "otherwise changed."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4727
+#: ../../../reference/c-api/array.rst:4787
 msgid ""
 "Allow any safe casts, and casts between types of the same kind. For example, "
 "float64 -> float32 is permitted with this rule."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4732
+#: ../../../reference/c-api/array.rst:4792
 msgid "Allow any cast, no matter what kind of data loss may occur."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4736
+#: ../../../reference/c-api/array.rst:4796
 msgid ""
 "Error if any values change during a cast. Currently supported only in "
 "``ndarray.astype(... casting='same_value')``"
 msgstr ""
 
 #: ../../../reference/c-api/array.rst:15
-#: ../../../reference/c-api/array.rst:4741
+#: ../../../reference/c-api/array.rst:4801
 msgid "ndarray"
 msgstr ""
 
 #: ../../../reference/c-api/array.rst:15
-#: ../../../reference/c-api/array.rst:4741
+#: ../../../reference/c-api/array.rst:4801
 msgid "C-API"
 msgstr ""
 
