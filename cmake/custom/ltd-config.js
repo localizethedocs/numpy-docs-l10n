@@ -3,6 +3,7 @@
 var CONFIG_OPTIONS = {
   CONFIG_LANGUAGES: [
     ["en-us",   "English"],
+    ["ta-in",   "தமிழ்"],
     ["zh-cn",   "简体中文"],
     ["zh-tw",   "繁體中文"],
   ],
