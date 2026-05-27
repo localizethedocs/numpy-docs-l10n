@@ -1,0 +1,197 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.ma.apply_along_axis.rst:4
+msgid "numpy.ma.apply\\_along\\_axis"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:2
+msgid "Apply a function to 1-D slices along the given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:4
+msgid ""
+"Execute `func1d(a, *args, **kwargs)` where `func1d` operates on 1-D arrays "
+"and `a` is a 1-D slice of `arr` along `axis`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:7
+msgid ""
+"This is equivalent to (but faster than) the following use of `ndindex` and "
+"`s_`, which sets each of ``ii``, ``jj``, and ``kk`` to a tuple of indices::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:10
+msgid ""
+"Ni, Nk = a.shape[:axis], a.shape[axis+1:]\n"
+"for ii in ndindex(Ni):\n"
+"    for kk in ndindex(Nk):\n"
+"        f = func1d(arr[ii + s_[:,] + kk])\n"
+"        Nj = f.shape\n"
+"        for jj in ndindex(Nj):\n"
+"            out[ii + jj + kk] = f[jj]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:18
+msgid "Equivalently, eliminating the inner loop, this can be expressed as::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:20
+msgid ""
+"Ni, Nk = a.shape[:axis], a.shape[axis+1:]\n"
+"for ii in ndindex(Ni):\n"
+"    for kk in ndindex(Nk):\n"
+"        out[ii + s_[...,] + kk] = func1d(arr[ii + s_[:,] + kk])"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:29
+msgid "**func1d**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:-1
+msgid "function (M,) -> (Nj...)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:28
+msgid ""
+"This function should accept 1-D arrays. It is applied to 1-D slices of `arr` "
+"along the specified axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:32
+msgid "**axis**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:-1
+msgid "integer"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:32
+msgid "Axis along which `arr` is sliced."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:35
+msgid "**arr**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:-1
+msgid "ndarray (Ni..., M, Nk...)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:35
+msgid "Input array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:38
+msgid "**args**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:-1
+msgid "any"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:38
+msgid "Additional arguments to `func1d`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:43
+msgid "**kwargs**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:41
+msgid "Additional named arguments to `func1d`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:58
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:-1
+msgid "ndarray  (Ni..., Nj..., Nk...)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:48
+msgid ""
+"The output array. The shape of `out` is identical to the shape of `arr`, "
+"except along the `axis` dimension. This axis is removed, and replaced with "
+"new dimensions equal to the shape of the return value of `func1d`. So if "
+"`func1d` returns a scalar `out` will have one fewer dimensions than `arr`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:63
+msgid ":obj:`apply_over_axes`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:64
+msgid "Apply a function repeatedly over multiple axes."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:70
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:80
+msgid ""
+"For a function that returns a 1D array, the number of dimensions in `outarr` "
+"is the same as `arr`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.apply_along_axis:89
+msgid ""
+"For a function that returns a higher dimensional array, those dimensions are "
+"inserted in place of the `axis` dimension."
+msgstr ""
