@@ -1,0 +1,1651 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/maskedarray.baseclass.rst:6
+msgid "Constants of the :mod:`numpy.ma` module"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:8
+msgid ""
+"In addition to the :class:`MaskedArray` class, the :mod:`numpy.ma` module "
+"defines several constants."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:13
+msgid ""
+"The :attr:`masked` constant is a special case of :class:`MaskedArray`, with "
+"a float datatype and a null shape. It is used to test whether a specific "
+"entry of a masked array is masked, or to mask one or several entries of a "
+"masked array::"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:18
+msgid ".. try_examples::"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:34
+msgid ""
+"Value indicating that a masked array has no invalid entry. :attr:`nomask` is "
+"used internally to speed up computations when the mask is not needed. It is "
+"represented internally as ``np.False_``."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:41
+msgid ""
+"String used in lieu of missing data when a masked array is printed. By "
+"default, this string is ``'--'``."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:44
+msgid ""
+"Use ``set_display()`` to change the default string. Example usage: ``numpy."
+"ma.masked_print_option.set_display('X')`` replaces missing data with ``'X'``."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:51
+msgid "The :class:`MaskedArray` class"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:56
+msgid ""
+"A subclass of :class:`~numpy.ndarray` designed to manipulate numerical "
+"arrays with missing data."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:60
+msgid ""
+"An instance of :class:`MaskedArray` can be thought as the combination of "
+"several elements:"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:62
+msgid ""
+"The :attr:`~MaskedArray.data`, as a regular :class:`numpy.ndarray` of any "
+"shape or datatype (the data)."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:63
+msgid ""
+"A boolean :attr:`~numpy.ma.MaskedArray.mask` with the same shape as the "
+"data, where a ``True`` value indicates that the corresponding element of the "
+"data is invalid. The special value :const:`nomask` is also acceptable for "
+"arrays without named fields, and indicates that no data is invalid."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:65
+msgid ""
+"A :attr:`~numpy.ma.MaskedArray.fill_value`, a value that may be used to "
+"replace the invalid entries in order to return a standard :class:`numpy."
+"ndarray`."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:72
+msgid "Attributes and properties of masked arrays"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:74
+msgid ":ref:`Array Attributes <arrays.ndarray.attributes>`"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.MaskedArray.data:2
+msgid "Returns the underlying data, as a view of the masked array."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.MaskedArray.data:4
+msgid ""
+"If the underlying data is a subclass of :class:`numpy.ndarray`, it is "
+"returned as such."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.MaskedArray.data:12
+msgid ""
+"The type of the data can be accessed through the :attr:`baseclass` attribute."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.MaskedArray.mask:2
+msgid "Current mask."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.MaskedArray.recordmask:2
+msgid ""
+"Get or set the mask of the array if it has no named fields. For structured "
+"arrays, returns a ndarray of booleans where entries are ``True`` if **all** "
+"the fields are masked, ``False`` otherwise:"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.MaskedArray.fill_value:2
+msgid ""
+"The filling value of the masked array is a scalar. When setting, None will "
+"set to a default based on the data type."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.MaskedArray.fill_value:18
+#: numpy.ma.MaskedArray.hardmask:27
+msgid "Examples"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.MaskedArray.fill_value:39
+msgid "Reset to default:"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.MaskedArray.fill_value:-1
+msgid ""
+"<div id=\"7f2840f0-b76f-4540-a556-3495d0480edf\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('e9556e46-ead4-445f-9245-3d42edfa20ae','7f2840f0-"
+"b76f-4540-a556-3495d0480edf')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('e9556e46-"
+"ead4-445f-9245-3d42edfa20ae','7f2840f0-b76f-4540-a556-3495d0480edf')\">Open "
+"In Tab</button></div><div id=\"2a02762e-d790-48cf-9326-d3d331729450\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.MaskedArray.fill_value:-1
+#: numpy.ma.MaskedArray.hardmask:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../try_examples.json\");});</script>"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.MaskedArray.baseclass:2
+msgid "Class of the underlying data (read-only)."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.MaskedArray.sharedmask:2
+msgid "Share status of the mask (read-only)."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.MaskedArray.hardmask:2
+msgid "Specifies whether values can be unmasked through assignments."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.MaskedArray.hardmask:4
+msgid ""
+"By default, assigning definite values to masked array entries will unmask "
+"them.  When `hardmask` is ``True``, the mask will not change through "
+"assignments."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.MaskedArray.hardmask:19
+msgid ":obj:`ma.MaskedArray.harden_mask`"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.MaskedArray.hardmask:21
+msgid ":obj:`ma.MaskedArray.soften_mask`"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.MaskedArray.hardmask:37
+msgid ""
+"Since `m` has a soft mask, assigning an element value unmasks that element:"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.MaskedArray.hardmask:47
+msgid "After hardening, the mask is not affected by assignments:"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.MaskedArray.hardmask:-1
+msgid ""
+"<div id=\"fc6d803f-2d02-4984-8ba2-d024529e8e54\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('bb5a0e01-6d40-49d0-8223-94a3d5f6da84','fc6d803f-2d02-4984-8ba2-"
+"d024529e8e54')\">Go Back</button><button class=\"try_examples_button\" "
+"onclick=\"window."
+"openInNewTab('bb5a0e01-6d40-49d0-8223-94a3d5f6da84','fc6d803f-2d02-4984-8ba2-"
+"d024529e8e54')\">Open In Tab</button></div><div "
+"id=\"d6a34b13-1997-4034-94b3-577e57570b8b\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:90
+msgid ""
+"As :class:`MaskedArray` is a subclass of :class:`~numpy.ndarray`, a masked "
+"array also inherits all the attributes and properties of a  :class:`~numpy."
+"ndarray` instance."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid ":py:obj:`MaskedArray.base <numpy.ma.MaskedArray.base>`\\"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid "Base object if memory is from some other object."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid ":py:obj:`MaskedArray.ctypes <numpy.ma.MaskedArray.ctypes>`\\"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid ""
+"An object to simplify the interaction of the array with the ctypes module."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid ":py:obj:`MaskedArray.dtype <numpy.ma.MaskedArray.dtype>`\\"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid "Data-type of the array's elements."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid ":py:obj:`MaskedArray.flags <numpy.ma.MaskedArray.flags>`\\"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid "Information about the memory layout of the array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid ":py:obj:`MaskedArray.itemsize <numpy.ma.MaskedArray.itemsize>`\\"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid "Length of one array element in bytes."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid ":py:obj:`MaskedArray.nbytes <numpy.ma.MaskedArray.nbytes>`\\"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid "Total bytes consumed by the elements of the array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid ":py:obj:`MaskedArray.ndim <numpy.ma.MaskedArray.ndim>`\\"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid "Number of array dimensions."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid ":py:obj:`MaskedArray.shape <numpy.ma.MaskedArray.shape>`\\"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid "Tuple of array dimensions."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid ":py:obj:`MaskedArray.size <numpy.ma.MaskedArray.size>`\\"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid "Number of elements in the array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid ":py:obj:`MaskedArray.strides <numpy.ma.MaskedArray.strides>`\\"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid "Tuple of bytes to step in each dimension when traversing an array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid ":py:obj:`MaskedArray.imag <numpy.ma.MaskedArray.imag>`\\"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid "The imaginary part of the masked array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid ":py:obj:`MaskedArray.real <numpy.ma.MaskedArray.real>`\\"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid "The real part of the masked array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid ":py:obj:`MaskedArray.flat <numpy.ma.MaskedArray.flat>`\\"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid "Return a flat iterator, or set a flattened version of self to value."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:114:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__array_priority__ <numpy.ma.MaskedArray."
+"__array_priority__>`\\"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:116
+msgid ":class:`MaskedArray` methods"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:118
+msgid ":ref:`Array methods <array.ndarray.methods>`"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:122
+msgid "Conversion"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__float__ <numpy.ma.MaskedArray.__float__>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid "Convert to float."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid ":py:obj:`MaskedArray.__int__ <numpy.ma.MaskedArray.__int__>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid "Convert to int."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.view <numpy.ma.MaskedArray.view>`\\ \\(\\[dtype\\, "
+"type\\, fill\\_value\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid "Return a view of the MaskedArray data."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.astype <numpy.ma.MaskedArray.astype>`\\ \\(dtype\\[\\, "
+"order\\, casting\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid "Copy of the array, cast to a specified type."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.byteswap <numpy.ma.MaskedArray.byteswap>`\\ "
+"\\(\\[inplace\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid "Swap the bytes of the array elements"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.compressed <numpy.ma.MaskedArray.compressed>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid "Return all the non-masked data as a 1-D array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.filled <numpy.ma.MaskedArray.filled>`\\ "
+"\\(\\[fill\\_value\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid "Return a copy of self, with masked values filled with a given value."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.tofile <numpy.ma.MaskedArray.tofile>`\\ \\(fid\\[\\, "
+"sep\\, format\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid "Save a masked array to a file in binary format."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid ":py:obj:`MaskedArray.toflex <numpy.ma.MaskedArray.toflex>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid "Transforms a masked array into a flexible-type array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.tolist <numpy.ma.MaskedArray.tolist>`\\ "
+"\\(\\[fill\\_value\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid ""
+"Return the data portion of the masked array as a hierarchical Python list."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.torecords <numpy.ma.MaskedArray.torecords>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.tobytes <numpy.ma.MaskedArray.tobytes>`\\ "
+"\\(\\[fill\\_value\\, order\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:142:<autosummary>:1
+msgid ""
+"Return the array data as a string containing the raw bytes in the array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:144
+msgid "Shape manipulation"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:146
+msgid ""
+"For reshape, resize, and transpose, the single tuple argument may be "
+"replaced with ``n`` integers which will be interpreted as an n-tuple."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.flatten <numpy.ma.MaskedArray.flatten>`\\ "
+"\\(\\[order\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:161:<autosummary>:1
+msgid "Return a copy of the array collapsed into one dimension."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.ravel <numpy.ma.MaskedArray.ravel>`\\ \\(\\[order\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:161:<autosummary>:1
+msgid "Returns a 1D version of self, as a view."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.reshape <numpy.ma.MaskedArray.reshape>`\\ \\(\\*s\\, "
+"\\*\\*kwargs\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:161:<autosummary>:1
+msgid "Give a new shape to the array without changing its data."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.resize <numpy.ma.MaskedArray.resize>`\\ "
+"\\(newshape\\[\\, refcheck\\, order\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.squeeze <numpy.ma.MaskedArray.squeeze>`\\ "
+"\\(\\[axis\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:161:<autosummary>:1
+msgid "Remove axes of length one from `a`."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.swapaxes <numpy.ma.MaskedArray.swapaxes>`\\ \\(axis1\\, "
+"axis2\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:161:<autosummary>:1
+msgid "Return a view of the array with `axis1` and `axis2` interchanged."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:161:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.transpose <numpy.ma.MaskedArray.transpose>`\\ "
+"\\(\\*axes\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:161:<autosummary>:1
+msgid "Returns a view of the array with axes transposed."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:161:<autosummary>:1
+msgid ":py:obj:`MaskedArray.T <numpy.ma.MaskedArray.T>`\\"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:161:<autosummary>:1
+msgid "View of the transposed array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:163
+msgid "Item selection and manipulation"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:165
+msgid ""
+"For array methods that take an ``axis`` keyword, it defaults to None. If "
+"axis is None, then the array is treated as a 1-D array. Any other value for "
+"``axis`` represents the dimension along which the operation should proceed."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.argmax <numpy.ma.MaskedArray.argmax>`\\ \\(\\[axis\\, "
+"fill\\_value\\, out\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid "Returns array of indices of the maximum values along the given axis."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.argmin <numpy.ma.MaskedArray.argmin>`\\ \\(\\[axis\\, "
+"fill\\_value\\, out\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid "Return array of indices to the minimum values along the given axis."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.argsort <numpy.ma.MaskedArray.argsort>`\\ \\(\\[axis\\, "
+"kind\\, order\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid ""
+"Return an ndarray of indices that sort the array along the specified axis."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.choose <numpy.ma.MaskedArray.choose>`\\ "
+"\\(choices\\[\\, out\\, mode\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid "Use an index array to construct a new array from a set of choices."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.compress <numpy.ma.MaskedArray.compress>`\\ "
+"\\(condition\\[\\, axis\\, out\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid "Return `a` where condition is ``True``."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.diagonal <numpy.ma.MaskedArray.diagonal>`\\ "
+"\\(\\[offset\\, axis1\\, axis2\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid "Return specified diagonals."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid ":py:obj:`MaskedArray.fill <numpy.ma.MaskedArray.fill>`\\ \\(value\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid "Fill the array with a scalar value."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid ":py:obj:`MaskedArray.item <numpy.ma.MaskedArray.item>`\\ \\(\\*args\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid "Copy an element of an array to a standard Python scalar and return it."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid ":py:obj:`MaskedArray.nonzero <numpy.ma.MaskedArray.nonzero>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid "Return the indices of unmasked elements that are not zero."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.put <numpy.ma.MaskedArray.put>`\\ \\(indices\\, "
+"values\\[\\, mode\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid "Set storage-indexed locations to corresponding values."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.repeat <numpy.ma.MaskedArray.repeat>`\\ "
+"\\(repeats\\[\\, axis\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid "Repeat elements of an array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.searchsorted <numpy.ma.MaskedArray.searchsorted>`\\ "
+"\\(v\\[\\, side\\, sorter\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid ""
+"Find indices where elements of `v` should be inserted in `a` to maintain "
+"order."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.sort <numpy.ma.MaskedArray.sort>`\\ \\(\\[axis\\, "
+"kind\\, order\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid "Sort the array, in-place"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.take <numpy.ma.MaskedArray.take>`\\ \\(indices\\[\\, "
+"axis\\, out\\, mode\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:188:<autosummary>:1
+msgid "Take elements from a masked array along an axis."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:190
+msgid "Pickling and copy"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:199:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.copy <numpy.ma.MaskedArray.copy>`\\ \\(\\[order\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:199:<autosummary>:1
+msgid "Return a copy of the array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:199:<autosummary>:1
+msgid ":py:obj:`MaskedArray.dump <numpy.ma.MaskedArray.dump>`\\ \\(file\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:199:<autosummary>:1
+msgid "Dump a pickle of the array to the specified file."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:199:<autosummary>:1
+msgid ":py:obj:`MaskedArray.dumps <numpy.ma.MaskedArray.dumps>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:199:<autosummary>:1
+msgid "Returns the pickle of the array as a string."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:201
+msgid "Calculations"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.all <numpy.ma.MaskedArray.all>`\\ \\(\\[axis\\, out\\, "
+"keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid "Returns True if all elements evaluate to True."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.anom <numpy.ma.MaskedArray.anom>`\\ \\(\\[axis\\, "
+"dtype\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ""
+"Compute the anomalies (deviations from the arithmetic mean) along the given "
+"axis."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.any <numpy.ma.MaskedArray.any>`\\ \\(\\[axis\\, out\\, "
+"keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid "Returns True if any of the elements of `a` evaluate to True."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.clip <numpy.ma.MaskedArray.clip>`\\ \\(\\[min\\, max\\, "
+"out\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid "Return an array whose values are limited to ``[min, max]``."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ":py:obj:`MaskedArray.conj <numpy.ma.MaskedArray.conj>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid "Complex-conjugate all elements."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.conjugate <numpy.ma.MaskedArray.conjugate>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid "Return the complex conjugate, element-wise."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.cumprod <numpy.ma.MaskedArray.cumprod>`\\ \\(\\[axis\\, "
+"dtype\\, out\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ""
+"Return the cumulative product of the array elements over the given axis."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.cumsum <numpy.ma.MaskedArray.cumsum>`\\ \\(\\[axis\\, "
+"dtype\\, out\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid "Return the cumulative sum of the array elements over the given axis."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.max <numpy.ma.MaskedArray.max>`\\ \\(\\[axis\\, out\\, "
+"fill\\_value\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid "Return the maximum along a given axis."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.mean <numpy.ma.MaskedArray.mean>`\\ \\(\\[axis\\, "
+"dtype\\, out\\, keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid "Returns the average of the array elements along given axis."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.min <numpy.ma.MaskedArray.min>`\\ \\(\\[axis\\, out\\, "
+"fill\\_value\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid "Return the minimum along a given axis."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.prod <numpy.ma.MaskedArray.prod>`\\ \\(\\[axis\\, "
+"dtype\\, out\\, keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid "Return the product of the array elements over the given axis."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.product <numpy.ma.MaskedArray.product>`\\ \\(\\[axis\\, "
+"dtype\\, out\\, keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.ptp <numpy.ma.MaskedArray.ptp>`\\ \\(\\[axis\\, out\\, "
+"fill\\_value\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ""
+"Return (maximum - minimum) along the given dimension (i.e. peak-to-peak "
+"value)."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.round <numpy.ma.MaskedArray.round>`\\ \\(\\[decimals\\, "
+"out\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid "Return each element rounded to the given number of decimals."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.std <numpy.ma.MaskedArray.std>`\\ \\(\\[axis\\, "
+"dtype\\, out\\, ddof\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid "Returns the standard deviation of the array elements along given axis."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.sum <numpy.ma.MaskedArray.sum>`\\ \\(\\[axis\\, "
+"dtype\\, out\\, keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid "Return the sum of the array elements over the given axis."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.trace <numpy.ma.MaskedArray.trace>`\\ \\(\\[offset\\, "
+"axis1\\, axis2\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid "Return the sum along diagonals of the array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.var <numpy.ma.MaskedArray.var>`\\ \\(\\[axis\\, "
+"dtype\\, out\\, ddof\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:226:<autosummary>:1
+msgid "Compute the variance along the specified axis."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:228
+msgid "Arithmetic and comparison operations"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:233
+msgid "Comparison operators:"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:244:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__lt__ <numpy.ma.MaskedArray.__lt__>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:244:<autosummary>:1
+msgid "Return self<value."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:244:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__le__ <numpy.ma.MaskedArray.__le__>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:244:<autosummary>:1
+msgid "Return self<=value."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:244:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__gt__ <numpy.ma.MaskedArray.__gt__>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:244:<autosummary>:1
+msgid "Return self>value."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:244:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__ge__ <numpy.ma.MaskedArray.__ge__>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:244:<autosummary>:1
+msgid "Return self>=value."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:244:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__eq__ <numpy.ma.MaskedArray.__eq__>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:244:<autosummary>:1
+msgid "Check whether other equals self elementwise."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:244:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__ne__ <numpy.ma.MaskedArray.__ne__>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:244:<autosummary>:1
+msgid "Check whether other does not equal self elementwise."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:246
+msgid "Truth value of an array (:class:`bool() <bool>`):"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:253:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__bool__ <numpy.ma.MaskedArray.__bool__>`\\ \\(\\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:253:<autosummary>:1
+msgid "True if self else False"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:255
+msgid "Arithmetic:"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__abs__ <numpy.ma.MaskedArray.__abs__>`\\ \\(self\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__add__ <numpy.ma.MaskedArray.__add__>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Add self to other, and return a new masked array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__radd__ <numpy.ma.MaskedArray.__radd__>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Add other to self, and return a new masked array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__sub__ <numpy.ma.MaskedArray.__sub__>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Subtract other from self, and return a new masked array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__rsub__ <numpy.ma.MaskedArray.__rsub__>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Subtract self from other, and return a new masked array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__mul__ <numpy.ma.MaskedArray.__mul__>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Multiply self by other, and return a new masked array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__rmul__ <numpy.ma.MaskedArray.__rmul__>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Multiply other by self, and return a new masked array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__truediv__ <numpy.ma.MaskedArray.__truediv__>`\\ "
+"\\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Divide other into self, and return a new masked array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__rtruediv__ <numpy.ma.MaskedArray.__rtruediv__>`\\ "
+"\\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Divide self into other, and return a new masked array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__floordiv__ <numpy.ma.MaskedArray.__floordiv__>`\\ "
+"\\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__rfloordiv__ <numpy.ma.MaskedArray.__rfloordiv__>`\\ "
+"\\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__mod__ <numpy.ma.MaskedArray.__mod__>`\\ \\(value\\, "
+"\\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Return self%value."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__rmod__ <numpy.ma.MaskedArray.__rmod__>`\\ \\(value\\, "
+"\\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Return value%self."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__divmod__ <numpy.ma.MaskedArray.__divmod__>`\\ "
+"\\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Return divmod(self, value)."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__rdivmod__ <numpy.ma.MaskedArray.__rdivmod__>`\\ "
+"\\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Return divmod(value, self)."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__pow__ <numpy.ma.MaskedArray.__pow__>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Raise self to the power other, masking the potential NaNs/Infs"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__rpow__ <numpy.ma.MaskedArray.__rpow__>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Raise other to the power self, masking the potential NaNs/Infs"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__lshift__ <numpy.ma.MaskedArray.__lshift__>`\\ "
+"\\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Return self<<value."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__rlshift__ <numpy.ma.MaskedArray.__rlshift__>`\\ "
+"\\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Return value<<self."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__rshift__ <numpy.ma.MaskedArray.__rshift__>`\\ "
+"\\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Return self>>value."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__rrshift__ <numpy.ma.MaskedArray.__rrshift__>`\\ "
+"\\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Return value>>self."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__and__ <numpy.ma.MaskedArray.__and__>`\\ \\(value\\, "
+"\\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Return self&value."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__rand__ <numpy.ma.MaskedArray.__rand__>`\\ \\(value\\, "
+"\\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Return value&self."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__or__ <numpy.ma.MaskedArray.__or__>`\\ \\(value\\, \\/"
+"\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Return self|value."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__ror__ <numpy.ma.MaskedArray.__ror__>`\\ \\(value\\, "
+"\\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Return value|self."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__xor__ <numpy.ma.MaskedArray.__xor__>`\\ \\(value\\, "
+"\\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Return self^value."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__rxor__ <numpy.ma.MaskedArray.__rxor__>`\\ \\(value\\, "
+"\\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:288:<autosummary>:1
+msgid "Return value^self."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:290
+msgid "Arithmetic, in-place:"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__iadd__ <numpy.ma.MaskedArray.__iadd__>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid "Add other to self in-place."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__isub__ <numpy.ma.MaskedArray.__isub__>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid "Subtract other from self in-place."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__imul__ <numpy.ma.MaskedArray.__imul__>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid "Multiply self by other in-place."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__itruediv__ <numpy.ma.MaskedArray.__itruediv__>`\\ "
+"\\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid "True divide self by other in-place."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__ifloordiv__ <numpy.ma.MaskedArray.__ifloordiv__>`\\ "
+"\\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid "Floor divide self by other in-place."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__imod__ <numpy.ma.MaskedArray.__imod__>`\\ \\(value\\, "
+"\\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid "Return self%=value."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__ipow__ <numpy.ma.MaskedArray.__ipow__>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid "Raise self to the power other, in place."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__ilshift__ <numpy.ma.MaskedArray.__ilshift__>`\\ "
+"\\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid "Return self<<=value."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__irshift__ <numpy.ma.MaskedArray.__irshift__>`\\ "
+"\\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid "Return self>>=value."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__iand__ <numpy.ma.MaskedArray.__iand__>`\\ \\(value\\, "
+"\\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid "Return self&=value."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__ior__ <numpy.ma.MaskedArray.__ior__>`\\ \\(value\\, "
+"\\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid "Return self|=value."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__ixor__ <numpy.ma.MaskedArray.__ixor__>`\\ \\(value\\, "
+"\\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:308:<autosummary>:1
+msgid "Return self^=value."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:310
+msgid "Representation"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:321:<autosummary>:1
+msgid ":py:obj:`MaskedArray.__repr__ <numpy.ma.MaskedArray.__repr__>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:321:<autosummary>:1
+msgid "Literal string representation."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:321:<autosummary>:1
+msgid ":py:obj:`MaskedArray.__str__ <numpy.ma.MaskedArray.__str__>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:321:<autosummary>:1
+msgid "Return str(self)."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:321:<autosummary>:1
+msgid ":py:obj:`MaskedArray.ids <numpy.ma.MaskedArray.ids>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:321:<autosummary>:1
+msgid "Return the addresses of the data and mask areas."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:321:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.iscontiguous <numpy.ma.MaskedArray.iscontiguous>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:321:<autosummary>:1
+msgid "Return a boolean indicating whether the data is contiguous."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:323
+msgid "Special methods"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:325
+msgid "For standard library functions:"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:335:<autosummary>:1
+msgid ":py:obj:`MaskedArray.__copy__ <numpy.ma.MaskedArray.__copy__>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:335:<autosummary>:1
+msgid "Used if :func:`copy.copy` is called on an array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:335:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__deepcopy__ <numpy.ma.MaskedArray.__deepcopy__>`\\ "
+"\\(memo\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:335:<autosummary>:1
+msgid "Used if :func:`copy.deepcopy` is called on an array."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:335:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__getstate__ <numpy.ma.MaskedArray.__getstate__>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:335:<autosummary>:1
+msgid "Return the internal state of the masked array, for pickling purposes."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:335:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__reduce__ <numpy.ma.MaskedArray.__reduce__>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:335:<autosummary>:1
+msgid "Return a 3-tuple for pickling a MaskedArray."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:335:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__setstate__ <numpy.ma.MaskedArray.__setstate__>`\\ "
+"\\(state\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:335:<autosummary>:1
+msgid "Restore the internal state of the masked array, for pickling purposes."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:336
+msgid "Basic customization:"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:344:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__new__ <numpy.ma.MaskedArray.__new__>`\\ \\(cls\\[\\, "
+"data\\, mask\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:344:<autosummary>:1
+msgid "Create a new masked array from scratch."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:344:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__array__ <numpy.ma.MaskedArray.__array__>`\\ "
+"\\(\\[dtype\\]\\, \\*\\[\\, copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:344:<autosummary>:1
+msgid ""
+"For ``dtype`` parameter it returns a new reference to self if ``dtype`` is "
+"not given or it matches array's data type."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:344:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__array_wrap__ <numpy.ma.MaskedArray.__array_wrap__>`\\ "
+"\\(obj\\[\\, context\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:344:<autosummary>:1
+msgid "Special hook for ufuncs."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:345
+msgid "Container customization: (see :ref:`Indexing <arrays.indexing>`)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:357:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__len__ <numpy.ma.MaskedArray.__len__>`\\ \\(\\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:357:<autosummary>:1
+msgid "Return len(self)."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:357:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__getitem__ <numpy.ma.MaskedArray.__getitem__>`\\ "
+"\\(indx\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:357:<autosummary>:1
+msgid "x.__getitem__(y) <==> x[y]"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:357:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__setitem__ <numpy.ma.MaskedArray.__setitem__>`\\ "
+"\\(indx\\, value\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:357:<autosummary>:1
+msgid "x.__setitem__(i, y) <==> x[i]=y"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:357:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__delitem__ <numpy.ma.MaskedArray.__delitem__>`\\ "
+"\\(key\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:357:<autosummary>:1
+msgid "Delete self[key]."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:357:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__contains__ <numpy.ma.MaskedArray.__contains__>`\\ "
+"\\(key\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:357:<autosummary>:1
+msgid "Return bool(key in self)."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:359
+msgid "Specific methods"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:362
+msgid "Handling the mask"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:364
+msgid ""
+"The following methods can be used to access information about the mask or to "
+"manipulate the mask."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:377:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.__setmask__ <numpy.ma.MaskedArray.__setmask__>`\\ "
+"\\(mask\\[\\, copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:377:<autosummary>:1
+msgid "Set the mask."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:377:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.harden_mask <numpy.ma.MaskedArray.harden_mask>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:377:<autosummary>:1
+msgid "Force the mask to hard, preventing unmasking by assignment."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:377:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.soften_mask <numpy.ma.MaskedArray.soften_mask>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:377:<autosummary>:1
+msgid "Force the mask to soft (default), allowing unmasking by assignment."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:377:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.unshare_mask <numpy.ma.MaskedArray.unshare_mask>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:377:<autosummary>:1
+msgid "Copy the mask and set the `sharedmask` flag to ``False``."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:377:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.shrink_mask <numpy.ma.MaskedArray.shrink_mask>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:377:<autosummary>:1
+msgid "Reduce a mask to nomask when possible."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:379
+msgid "Handling the `fill_value`"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:388:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.get_fill_value <numpy.ma.MaskedArray.get_fill_value>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:388:<autosummary>:1
+msgid "The filling value of the masked array is a scalar."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:388:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.set_fill_value <numpy.ma.MaskedArray.set_fill_value>`\\ "
+"\\(\\[value\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:390
+msgid "Counting the missing elements"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:395:<autosummary>:1
+msgid ""
+":py:obj:`MaskedArray.count <numpy.ma.MaskedArray.count>`\\ \\(\\[axis\\, "
+"keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:395:<autosummary>:1
+msgid "Count the non-masked elements of the array along the given axis."
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:230
+msgid "comparison"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:230
+msgid "arithmetic"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:230
+msgid "operation"
+msgstr ""
+
+#: ../../../reference/maskedarray.baseclass.rst:230
+msgid "operator"
+msgstr ""

@@ -1,0 +1,218 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/generated/numpy.random.Generator.weibull.rst:4
+msgid "numpy.random.Generator.weibull"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.weibull.rst:8
+msgid "method"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:2
+msgid "Draw samples from a Weibull distribution."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:4
+msgid ""
+"Draw samples from a 1-parameter Weibull distribution with the given shape "
+"parameter `a`."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:7
+msgid ""
+"X = (-ln(U))^{1/a}\n"
+"\n"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:9
+msgid "Here, U is drawn from the uniform distribution over (0,1]."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:11
+msgid ""
+"The more common 2-parameter Weibull, including a scale parameter :math:"
+"`\\lambda` is just :math:`X = \\lambda(-ln(U))^{1/a}`."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:17
+msgid "**a**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:-1
+msgid "float or array_like of floats"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:17
+msgid "Shape parameter of the distribution.  Must be nonnegative."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:23
+msgid "**size**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:-1
+msgid "int or tuple of ints, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:20
+msgid ""
+"Output shape.  If the given shape is, e.g., ``(m, n, k)``, then ``m * n * "
+"k`` samples are drawn.  If size is ``None`` (default), a single value is "
+"returned if ``a`` is a scalar.  Otherwise, ``np.array(a).size`` samples are "
+"drawn."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:34
+msgid "**out**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:-1
+msgid "ndarray or scalar"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:28
+msgid "Drawn samples from the parameterized Weibull distribution."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:39
+msgid ":obj:`scipy.stats.weibull_max`"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:41
+msgid ":obj:`scipy.stats.weibull_min`"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:43
+msgid ":obj:`scipy.stats.genextreme`"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:45
+msgid ":obj:`gumbel`"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:49
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:50
+msgid ""
+"The Weibull (or Type III asymptotic extreme value distribution for smallest "
+"values, SEV Type III, or Rosin-Rammler distribution) is one of a class of "
+"Generalized Extreme Value (GEV) distributions used in modeling extreme value "
+"problems. This class includes the Gumbel and Frechet distributions."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:56
+msgid "The probability density for the Weibull distribution is"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:58
+msgid ""
+"p(x) = \\frac{a}\n"
+"{\\lambda}(\\frac{x}{\\lambda})^{a-1}e^{-(x/\\lambda)^a},\n"
+"\n"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:61
+msgid "where :math:`a` is the shape and :math:`\\lambda` the scale."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:63
+msgid ""
+"The function has its peak (the mode) at :math:`\\lambda(\\frac{a-1}{a})^{1/a}"
+"`."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:66
+msgid ""
+"When ``a = 1``, the Weibull distribution reduces to the exponential "
+"distribution."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:70
+msgid "References"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:71
+msgid ""
+"Waloddi Weibull, Royal Technical University, Stockholm, 1939 \"A Statistical "
+"Theory Of The Strength Of Materials\", Ingeniorsvetenskapsakademiens "
+"Handlingar Nr 151, 1939, Generalstabens Litografiska Anstalts Forlag, "
+"Stockholm."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:75
+msgid ""
+"Waloddi Weibull, \"A Statistical Distribution Function of Wide "
+"Applicability\", Journal Of Applied Mechanics ASME Paper 1951."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:78
+msgid ""
+"Wikipedia, \"Weibull distribution\", https://en.wikipedia.org/wiki/"
+"Weibull_distribution"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:83
+msgid "[R6c241f843c17-1]_, [R6c241f843c17-2]_, [R6c241f843c17-3]_"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:86
+msgid "Examples"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.weibull.rst:3
+msgid "Draw samples from the distribution:"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.weibull.rst:9
+msgid ""
+"Display the histogram of the samples, along with the probability density "
+"function:"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:114
+msgid ""
+"<div id=\"d9eb9235-3adf-4574-87a0-b7d3075440d9\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('c808153f-1823-4dc8-8318-"
+"c71a324005fc','d9eb9235-3adf-4574-87a0-b7d3075440d9')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('c808153f-1823-4dc8-8318-c71a324005fc','d9eb9235-3adf-4574-87a0-"
+"b7d3075440d9')\">Open In Tab</button></div><div "
+"id=\"ec0c6678-6fb6-4cca-9207-99f621b92854\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.weibull:114
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../../try_examples.json\");});</script>"
+msgstr ""

@@ -1,0 +1,230 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.ma.average.rst:4
+msgid "numpy.ma.average"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:2
+msgid "Return the weighted average of array over the given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:9
+msgid "**a**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:8
+msgid ""
+"Data to be averaged. Masked entries are not taken into account in the "
+"computation."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:16
+msgid "**axis**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:-1
+msgid "None or int or tuple of ints, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:12
+msgid ""
+"Axis or axes along which to average `a`.  The default, `axis=None`, will "
+"average over all of the elements of the input array. If axis is a tuple of "
+"ints, averaging is performed on all of the axes specified in the tuple "
+"instead of a single axis or all the axes as before."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:32
+msgid "**weights**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:19
+msgid ""
+"An array of weights associated with the values in `a`. Each value in `a` "
+"contributes to the average according to its associated weight. The array of "
+"weights must be the same shape as `a` if no axis is specified, otherwise the "
+"weights must have dimensions and shape consistent with `a` along the "
+"specified axis. If `weights=None`, then all data in `a` are assumed to have "
+"a weight equal to one. The calculation is::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:28
+msgid "avg = sum(a * weights) / sum(weights)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:30
+msgid ""
+"where the sum is over all included elements. The only constraint on the "
+"values of `weights` is that `sum(weights)` must not be 0."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:37
+msgid "**returned**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:35
+msgid ""
+"Flag indicating whether a tuple ``(result, sum of weights)`` should be "
+"returned as output (True), or just the result (False). Default is False."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:46
+msgid "**keepdims**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:40
+msgid ""
+"If this is set to True, the axes which are reduced are left in the result as "
+"dimensions with size one. With this option, the result will broadcast "
+"correctly against the original `a`. *Note:* `keepdims` will not work with "
+"instances of `numpy.matrix` or other classes whose methods do not support "
+"`keepdims`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:59
+msgid "**average, [sum_of_weights]**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:-1
+msgid "(tuple of) scalar or MaskedArray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:51
+msgid ""
+"The average along the specified axis. When returned is `True`, return a "
+"tuple with the average as the first element and the sum of the weights as "
+"the second element. The return type is `np.float64` if `a` is of integer "
+"type and floats smaller than `float64`, or the input data-type, otherwise. "
+"If returned, `sum_of_weights` is always `float64`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:65
+msgid "ZeroDivisionError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:64
+msgid ""
+"When all weights along axis are zero. See `numpy.ma.average` for a version "
+"robust to this type of error."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:68
+msgid "TypeError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:68
+msgid "When `weights` does not have the same shape as `a`, and `axis=None`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:77
+msgid "ValueError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:71
+msgid ""
+"When `weights` does not have dimensions and shape consistent with `a` along "
+"specified `axis`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:80
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:121
+msgid "With ``keepdims=True``, the following result has shape (3, 1)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:-1
+msgid ""
+"<div id=\"405d3be6-7791-4e94-8144-699730c9aafd\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('7c255c6f-3e8b-4a8a-"
+"a2c4-9627c15cc962','405d3be6-7791-4e94-8144-699730c9aafd')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('7c255c6f-3e8b-4a8a-"
+"a2c4-9627c15cc962','405d3be6-7791-4e94-8144-699730c9aafd')\">Open In Tab</"
+"button></div><div id=\"9398e59a-ff91-4870-aa2e-908d93be6ca0\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.average:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

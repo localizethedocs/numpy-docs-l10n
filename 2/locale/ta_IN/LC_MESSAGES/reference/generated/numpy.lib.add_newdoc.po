@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.lib.add_newdoc.rst:4
+msgid "numpy.lib.add\\_newdoc"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:2
+msgid "Add documentation to an existing object, typically one defined in C"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:4
+msgid ""
+"The purpose is to allow easier editing of the docstrings without requiring a "
+"re-compile. This exists primarily for internal use within numpy itself."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:10
+msgid "**place**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:-1
+msgid "str"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:10
+msgid "The absolute name of the module to import from"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:14
+msgid "**obj**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:-1
+msgid "str | None"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:13
+msgid ""
+"The name of the object to add documentation to, typically a class or "
+"function name."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:24
+msgid "**doc**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:-1
+msgid "str | tuple[str, str] | list[tuple[str, str]]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:17
+msgid "If a string, the documentation to apply to `obj`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:19
+msgid ""
+"If a tuple, then the first element is interpreted as an attribute of `obj` "
+"and the second as the docstring to apply - ``(method, docstring)``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:23
+msgid ""
+"If a list, then each element of the list should be a tuple of length two - "
+"``[(method1, docstring1), (method2, docstring2), ...]``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:36
+msgid "**warn_on_python**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:-1
+msgid "bool"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:27
+msgid ""
+"If True, the default, emit `UserWarning` if this is used to attach "
+"documentation to a pure-python object."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:39
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:40
+msgid ""
+"This routine never raises an error if the docstring can't be written, but "
+"will raise an error if the object being documented does not exist."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:43
+msgid ""
+"This routine cannot modify read-only docstrings, as appear in new-style "
+"classes or built-in functions. Because this routine never raises an error "
+"the caller must check manually that the docstrings were changed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:48
+msgid ""
+"Since this function grabs the ``char *`` from a c-level str object and puts "
+"it into the ``tp_doc`` slot of the type of `obj`, it violates a number of C-"
+"API best-practices, by:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:52
+msgid "modifying a `PyTypeObject` after calling `PyType_Ready`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:53
+msgid ""
+"calling `Py_INCREF` on the str and losing the reference, so the str will "
+"never be released"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.add_newdoc:56
+msgid "If possible it should be avoided."
+msgstr ""

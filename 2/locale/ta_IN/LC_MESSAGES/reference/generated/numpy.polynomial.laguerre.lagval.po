@@ -1,0 +1,192 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.laguerre.lagval.rst:4
+msgid "numpy.polynomial.laguerre.lagval"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:2
+msgid "Evaluate a Laguerre series at points x."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:4
+msgid "If `c` is of length ``n + 1``, this function returns the value:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:6
+msgid ""
+"p(x) = c_0 * L_0(x) + c_1 * L_1(x) + ... + c_n * L_n(x)\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:8
+msgid ""
+"The parameter `x` is converted to an array only if it is a tuple or a list, "
+"otherwise it is treated as a scalar. In either case, either `x` or its "
+"elements must support multiplication and addition both with themselves and "
+"with the elements of `c`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:13
+msgid ""
+"If `c` is a 1-D array, then ``p(x)`` will have the same shape as `x`.  If "
+"`c` is multidimensional, then the shape of the result depends on the value "
+"of `tensor`. If `tensor` is true the shape will be c.shape[1:] + x.shape. If "
+"`tensor` is false the shape will be c.shape[1:]. Note that scalars have "
+"shape (,)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:19
+msgid ""
+"Trailing zeros in the coefficients will be used in the evaluation, so they "
+"should be avoided if efficiency is a concern."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:28
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:-1
+msgid "array_like, compatible object"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:25
+msgid ""
+"If `x` is a list or tuple, it is converted to an ndarray, otherwise it is "
+"left unchanged and treated as a scalar. In either case, `x` or its elements "
+"must support addition and multiplication with themselves and with the "
+"elements of `c`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:35
+msgid "**c**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:31
+msgid ""
+"Array of coefficients ordered so that the coefficients for terms of degree n "
+"are contained in c[n]. If `c` is multidimensional the remaining indices "
+"enumerate multiple polynomials. In the two dimensional case the coefficients "
+"may be thought of as stored in the columns of `c`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:43
+msgid "**tensor**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:-1
+msgid "boolean, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:38
+msgid ""
+"If True, the shape of the coefficient array is extended with ones on the "
+"right, one for each dimension of `x`. Scalars have dimension 0 for this "
+"action. The result is that every column of coefficients in `c` is evaluated "
+"for every element of `x`. If False, `x` is broadcast over the columns of `c` "
+"for the evaluation.  This keyword is useful when `c` is multidimensional. "
+"The default value is True."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:54
+msgid "**values**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:-1
+msgid "ndarray, algebra_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:48
+msgid "The shape of the return value is described above."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:59
+msgid ":obj:`lagval2d`, :obj:`laggrid2d`, :obj:`lagval3d`, :obj:`laggrid3d`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:63
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:64
+msgid "The evaluation uses Clenshaw recursion, aka synthetic division."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:68
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:-1
+msgid ""
+"<div id=\"6d185ec1-3790-405b-9592-c8581f28326d\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('774ca1c6-295f-48ac-b894-"
+"e5817bccd615','6d185ec1-3790-405b-9592-c8581f28326d')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('774ca1c6-295f-48ac-b894-e5817bccd615','6d185ec1-3790-405b-9592-"
+"c8581f28326d')\">Open In Tab</button></div><div id=\"e14265a2-03f5-4b71-"
+"bd1a-33e6a4a73ea6\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagval:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

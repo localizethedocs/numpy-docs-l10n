@@ -1,0 +1,149 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.linalg.tensorsolve.rst:4
+msgid "numpy.linalg.tensorsolve"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensorsolve:2
+msgid "Solve the tensor equation ``a x = b`` for x."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensorsolve:4
+msgid ""
+"It is assumed that all indices of `x` are summed over in the product, "
+"together with the rightmost indices of `a`, as is done in, for example, "
+"``tensordot(a, x, axes=x.ndim)``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensorsolve:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensorsolve:15
+msgid "**a**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensorsolve:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensorsolve:11
+msgid ""
+"Coefficient tensor, of shape ``b.shape + Q``. `Q`, a tuple, equals the shape "
+"of that sub-tensor of `a` consisting of the appropriate number of its "
+"rightmost indices, and must be such that ``prod(Q) == prod(b.shape)`` (in "
+"which sense `a` is said to be 'square')."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensorsolve:18
+msgid "**b**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensorsolve:18
+msgid "Right-hand tensor, which can be of any shape."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensorsolve:22
+msgid "**axes**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensorsolve:-1
+msgid "tuple of ints, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensorsolve:21
+msgid ""
+"Axes in `a` to reorder to the right, before inversion. If None (default), no "
+"reordering is done."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensorsolve:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensorsolve:30
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensorsolve:-1
+msgid "ndarray, shape Q"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensorsolve:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensorsolve:37
+msgid "LinAlgError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensorsolve:35
+msgid "If `a` is singular or not 'square' (in the above sense)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensorsolve:42
+msgid ":obj:`numpy.tensordot`, :obj:`tensorinv`, :obj:`numpy.einsum`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensorsolve:48
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensorsolve:-1
+msgid ""
+"<div id=\"45288db2-0dac-4816-8574-5fc3b9e3ee7f\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('3b641a30-92bf-4542-876c-"
+"c66acc2e32fb','45288db2-0dac-4816-8574-5fc3b9e3ee7f')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('3b641a30-92bf-4542-876c-"
+"c66acc2e32fb','45288db2-0dac-4816-8574-5fc3b9e3ee7f')\">Open In Tab</"
+"button></div><div id=\"5745b8f4-dd50-4b7d-b479-776ac46d1894\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.tensorsolve:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

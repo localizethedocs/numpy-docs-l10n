@@ -1,0 +1,199 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.char.array.rst:4
+msgid "numpy.char.array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:2
+msgid "Create a `~numpy.char.chararray`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:5
+msgid ""
+"This class is provided for numarray backward-compatibility. New code (not "
+"concerned with numarray compatibility) should use arrays of type `bytes_` or "
+"`str_` and use the free functions in :mod:`numpy.char` for fast vectorized "
+"string operations instead."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:10
+msgid ""
+"Versus a NumPy array of dtype `bytes_` or `str_`, this class adds the "
+"following functionality:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:13
+msgid "values automatically have whitespace removed from the end when indexed"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:16
+msgid ""
+"comparison operators automatically remove whitespace from the end when "
+"comparing values"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:19
+msgid ""
+"vectorized string operations are provided as methods (e.g. `chararray."
+"endswith <numpy.char.chararray.endswith>`) and infix operators (e.g. ``+, *, "
+"%``)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:26
+msgid "**obj**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:-1
+msgid "array of str or unicode-like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:34
+msgid "**itemsize**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:29
+msgid ""
+"`itemsize` is the number of characters per scalar in the resulting array.  "
+"If `itemsize` is None, and `obj` is an object array or a Python list, the "
+"`itemsize` will be automatically determined.  If `itemsize` is provided and "
+"`obj` is of type str or unicode, then the `obj` string will be chunked into "
+"`itemsize` pieces."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:40
+msgid "**copy**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:37
+msgid ""
+"If true (default), then the object is copied.  Otherwise, a copy will only "
+"be made if ``__array__`` returns a copy, if obj is a nested sequence, or if "
+"a copy is needed to satisfy any of the other requirements (`itemsize`, "
+"unicode, `order`, etc.)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:52
+msgid "**unicode**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:43
+msgid ""
+"When true, the resulting `~numpy.char.chararray` can contain Unicode "
+"characters, when false only 8-bit characters.  If unicode is None and `obj` "
+"is one of the following:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:47
+msgid "a `~numpy.char.chararray`,"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:48
+msgid "an ndarray of type :class:`str_` or :class:`bytes_`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:49
+msgid "a Python :class:`str` or :class:`bytes` object,"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:51
+msgid ""
+"then the unicode setting of the output array will be automatically "
+"determined."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:71
+msgid "**order**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:-1
+msgid "{'C', 'F', 'A'}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:55
+msgid ""
+"Specify the order of the array.  If order is 'C' (default), then the array "
+"will be in C-contiguous order (last-index varies the fastest).  If order is "
+"'F', then the returned array will be in Fortran-contiguous order (first-"
+"index varies the fastest).  If order is 'A', then the returned array may be "
+"in any order (either C-, Fortran-contiguous, or even discontiguous)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:74
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:-1
+msgid ""
+"<div id=\"a0b7edb0-2634-432c-a67b-fc4b022778a2\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('5d8bb7d7-1902-4dfa-"
+"b451-8c1e25ee526f','a0b7edb0-2634-432c-a67b-fc4b022778a2')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('5d8bb7d7-1902-4dfa-b451-8c1e25ee526f','a0b7edb0-2634-432c-a67b-"
+"fc4b022778a2')\">Open In Tab</button></div><div id=\"68cf9d26-895c-4c4e-b609-"
+"c9a20b68936a\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

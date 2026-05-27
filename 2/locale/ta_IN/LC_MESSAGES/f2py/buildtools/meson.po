@@ -1,0 +1,281 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../f2py/buildtools/meson.rst:5
+msgid "Using via ``meson``"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:9
+msgid ""
+"Much of this document is now obsoleted, one can run ``f2py`` with ``--build-"
+"dir`` to get a skeleton ``meson`` project with basic dependencies setup."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:15
+msgid ""
+"The default build system for ``f2py`` is now ``meson``, see :ref:`distutils-"
+"status-migration` for some more details.."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:18
+msgid ""
+"The key advantage gained by leveraging ``meson`` over the techniques "
+"described in :ref:`f2py-distutils` is that this feeds into existing systems "
+"and larger projects with ease. ``meson`` has a rather pythonic syntax which "
+"makes it more comfortable and amenable to extension for ``python`` users."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:24
+msgid "Fibonacci walkthrough (F77)"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:26
+msgid ""
+"We will need the generated ``C`` wrapper before we can use a general purpose "
+"build system like ``meson``. We will acquire this by:"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:29
+msgid "python -m numpy.f2py fib1.f -m fib2"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:33
+msgid ""
+"Now, consider the following ``meson.build`` file for the ``fib`` and "
+"``scalar`` examples from :ref:`f2py-getting-started` section:"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:36
+msgid ""
+"project('f2py_examples', 'c',\n"
+"  version : '0.1',\n"
+"  license: 'BSD-3',\n"
+"  meson_version: '>=0.64.0',\n"
+"  default_options : ['warning_level=2'],\n"
+")\n"
+"\n"
+"add_languages('fortran')\n"
+"\n"
+"py_mod = import('python')\n"
+"py = py_mod.find_installation(pure: false)\n"
+"py_dep = py.dependency()\n"
+"\n"
+"incdir_numpy = run_command(py,\n"
+"  ['-c', 'import os; os.chdir(\"..\"); import numpy; print(numpy."
+"get_include())'],\n"
+"  check : true\n"
+").stdout().strip()\n"
+"\n"
+"incdir_f2py = run_command(py,\n"
+"    ['-c', 'import os; os.chdir(\"..\"); import numpy.f2py; print(numpy.f2py."
+"get_include())'],\n"
+"    check : true\n"
+").stdout().strip()\n"
+"\n"
+"inc_np = include_directories(incdir_numpy, incdir_f2py)\n"
+"\n"
+"py.extension_module('fib2',\n"
+"  [\n"
+"    'fib1.f',\n"
+"    'fib2module.c',  # note: this assumes f2py was manually run before!\n"
+"  ],\n"
+"  incdir_f2py / 'fortranobject.c',\n"
+"  include_directories: inc_np,\n"
+"  dependencies : py_dep,\n"
+"  install : true\n"
+")\n"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:38
+msgid "At this point the build will complete, but the import will fail:"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:40
+msgid ""
+"meson setup builddir\n"
+"meson compile -C builddir\n"
+"cd builddir\n"
+"python -c 'import fib2'\n"
+"Traceback (most recent call last):\n"
+"File \"<string>\", line 1, in <module>\n"
+"ImportError: fib2.cpython-39-x86_64-linux-gnu.so: undefined symbol: FIB_\n"
+"# Check this isn't a false positive\n"
+"nm -A fib2.cpython-39-x86_64-linux-gnu.so | grep FIB_\n"
+"fib2.cpython-39-x86_64-linux-gnu.so: U FIB_"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:53
+msgid ""
+"Recall that the original example, as reproduced below, was in SCREAMCASE:"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:55
+msgid ""
+"C FILE: FIB1.F\n"
+"      SUBROUTINE FIB(A,N)\n"
+"C\n"
+"C     CALCULATE FIRST N FIBONACCI NUMBERS\n"
+"C\n"
+"      INTEGER N\n"
+"      REAL*8 A(N)\n"
+"      DO I=1,N\n"
+"         IF (I.EQ.1) THEN\n"
+"            A(I) = 0.0D0\n"
+"         ELSEIF (I.EQ.2) THEN\n"
+"            A(I) = 1.0D0\n"
+"         ELSE \n"
+"            A(I) = A(I-1) + A(I-2)\n"
+"         ENDIF\n"
+"      ENDDO\n"
+"      END\n"
+"C END FILE FIB1.F\n"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:58
+msgid ""
+"With the standard approach, the subroutine exposed to ``python`` is ``fib`` "
+"and not ``FIB``. This means we have a few options. One approach (where "
+"possible) is to lowercase the original Fortran file with say:"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:62
+msgid ""
+"tr \"[:upper:]\" \"[:lower:]\" < fib1.f > fib1.f\n"
+"python -m numpy.f2py fib1.f -m fib2\n"
+"meson --wipe builddir\n"
+"meson compile -C builddir\n"
+"cd builddir\n"
+"python -c 'import fib2'"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:71
+msgid ""
+"However this requires the ability to modify the source which is not always "
+"possible. The easiest way to solve this is to let ``f2py`` deal with it:"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:74
+msgid ""
+"python -m numpy.f2py fib1.f -m fib2 --lower\n"
+"meson --wipe builddir\n"
+"meson compile -C builddir\n"
+"cd builddir\n"
+"python -c 'import fib2'"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:84
+msgid "Automating wrapper generation"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:86
+msgid ""
+"A major pain point in the workflow defined above, is the manual tracking of "
+"inputs. Although it would require more effort to figure out the actual "
+"outputs for reasons discussed in :ref:`f2py-bldsys`."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:92
+msgid ""
+"From NumPy ``1.22.4`` onwards, ``f2py`` will deterministically generate "
+"wrapper files based on the input file Fortran standard (F77 or greater). ``--"
+"skip-empty-wrappers`` can be passed to ``f2py`` to restore the previous "
+"behaviour of only generating wrappers when needed by the input ."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:97
+msgid ""
+"However, we can augment our workflow in a straightforward to take into "
+"account files for which the outputs are known when the build system is set "
+"up."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:100
+msgid ""
+"project('f2py_examples', 'c',\n"
+"  version : '0.1',\n"
+"  license: 'BSD-3',\n"
+"  meson_version: '>=0.64.0',\n"
+"  default_options : ['warning_level=2'],\n"
+")\n"
+"\n"
+"add_languages('fortran')\n"
+"\n"
+"py_mod = import('python')\n"
+"py = py_mod.find_installation(pure: false)\n"
+"py_dep = py.dependency()\n"
+"\n"
+"incdir_numpy = run_command(py,\n"
+"  ['-c', 'import os; os.chdir(\"..\"); import numpy; print(numpy."
+"get_include())'],\n"
+"  check : true\n"
+").stdout().strip()\n"
+"\n"
+"incdir_f2py = run_command(py,\n"
+"    ['-c', 'import os; os.chdir(\"..\"); import numpy.f2py; print(numpy.f2py."
+"get_include())'],\n"
+"    check : true\n"
+").stdout().strip()\n"
+"\n"
+"fibby_source = custom_target('fibbymodule.c',\n"
+"  input : ['fib1.f'],  # .f so no F90 wrappers\n"
+"  output : ['fibbymodule.c', 'fibby-f2pywrappers.f'],\n"
+"  command : [py, '-m', 'numpy.f2py', '@INPUT@', '-m', 'fibby', '--lower']\n"
+")\n"
+"\n"
+"inc_np = include_directories(incdir_numpy, incdir_f2py)\n"
+"\n"
+"py.extension_module('fibby',\n"
+"  ['fib1.f', fibby_source],\n"
+"  incdir_f2py / 'fortranobject.c',\n"
+"  include_directories: inc_np,\n"
+"  dependencies : py_dep,\n"
+"  install : true\n"
+")\n"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:102
+msgid "This can be compiled and run as before."
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:104
+msgid ""
+"rm -rf builddir\n"
+"meson setup builddir\n"
+"meson compile -C builddir\n"
+"cd builddir\n"
+"python -c \"import numpy as np; import fibby; a = np.zeros(9); fibby.fib(a); "
+"print (a)\"\n"
+"# [ 0.  1.  1.  2.  3.  5.  8. 13. 21.]"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:114
+msgid "Salient points"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:116
+msgid "It is worth keeping in mind the following:"
+msgstr ""
+
+#: ../../../f2py/buildtools/meson.rst:118
+msgid ""
+"It is not possible to use SCREAMCASE in this context, so either the contents "
+"of the ``.f`` file or the generated wrapper ``.c`` needs to be lowered to "
+"regular letters; which can be facilitated by the ``--lower`` option of "
+"``F2PY``"
+msgstr ""

@@ -1,0 +1,1815 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release/1.20.0-notes.rst:5
+msgid "NumPy 1.20.0 Release Notes"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:6
+msgid ""
+"This NumPy release is the largest so made to date, some 684 PRs contributed "
+"by 184 people have been merged. See the list of highlights below for more "
+"details. The Python versions supported for this release are 3.7-3.9, support "
+"for Python 3.6 has been dropped. Highlights are"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:11
+msgid ""
+"Annotations for NumPy functions. This work is ongoing and improvements can "
+"be expected pending feedback from users."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:14
+msgid ""
+"Wider use of SIMD to increase execution speed of ufuncs. Much work has been "
+"done in introducing universal functions that will ease use of modern "
+"features across different hardware platforms. This work is ongoing."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:18
+msgid ""
+"Preliminary work in changing the dtype and casting implementations in order "
+"to provide an easier path to extending dtypes. This work is ongoing but "
+"enough has been done to allow experimentation and feedback."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:22
+msgid ""
+"Extensive documentation improvements comprising some 185 PR merges. This "
+"work is ongoing and part of the larger project to improve NumPy's online "
+"presence and usefulness to new users."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:26
+msgid ""
+"Further cleanups related to removing Python 2.7. This improves code "
+"readability and removes technical debt."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:29
+msgid "Preliminary support for the upcoming Cython 3.0."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:33
+msgid "New functions"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:36
+msgid "The random.Generator class has a new ``permuted`` function."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:37
+msgid ""
+"The new function differs from ``shuffle`` and ``permutation`` in that the "
+"subarrays indexed by an axis are permuted rather than the axis being treated "
+"as a separate 1-D array for every combination of the other indexes. For "
+"example, it is now possible to permute the rows or columns of a 2-D array."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:42
+msgid "(`gh-15121 <https://github.com/numpy/numpy/pull/15121>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:45
+msgid "``sliding_window_view`` provides a sliding window view for numpy arrays"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:46
+msgid ""
+"`numpy.lib.stride_tricks.sliding_window_view` constructs views on numpy "
+"arrays that offer a sliding or moving window access to the array. This "
+"allows for the simple implementation of certain algorithms, such as running "
+"means."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:50
+msgid "(`gh-17394 <https://github.com/numpy/numpy/pull/17394>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:53
+msgid "`numpy.broadcast_shapes` is a new user-facing function"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:54
+msgid ""
+"`~numpy.broadcast_shapes` gets the resulting shape from broadcasting the "
+"given shape tuples against each other."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:57
+msgid ""
+">>> np.broadcast_shapes((1, 2), (3, 1))\n"
+"(3, 2)\n"
+"\n"
+">>> np.broadcast_shapes(2, (3, 1))\n"
+"(3, 2)\n"
+"\n"
+">>> np.broadcast_shapes((6, 7), (5, 6, 1), (7,), (5, 1, 7))\n"
+"(5, 6, 7)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:68
+msgid "(`gh-17535 <https://github.com/numpy/numpy/pull/17535>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:72
+msgid "Deprecations"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:75
+msgid "Using the aliases of builtin types like ``np.int`` is deprecated"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:77
+msgid ""
+"For a long time, ``np.int`` has been an alias of the builtin ``int``. This "
+"is repeatedly a cause of confusion for newcomers, and existed mainly for "
+"historic reasons."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:81
+msgid ""
+"These aliases have been deprecated. The table below shows the full list of "
+"deprecated aliases, along with their exact meaning. Replacing uses of items "
+"in the first column with the contents of the second column will work "
+"identically and silence the deprecation warning."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:86
+msgid ""
+"The third column lists alternative NumPy names which may occasionally be "
+"preferential. See also :ref:`basics.types` for additional details."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:90
+msgid "Deprecated name"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:90
+msgid "Identical to"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:90
+msgid "NumPy scalar type names"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:92
+msgid "``numpy.bool``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:92
+msgid "``bool``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:92
+msgid "`numpy.bool_`"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:93
+msgid "``numpy.int``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:93 ../../../release/1.20.0-notes.rst:98
+msgid "``int``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:93
+msgid "`numpy.int_` (default), ``numpy.int64``, or ``numpy.int32``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:94
+msgid "``numpy.float``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:94
+msgid "``float``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:94
+msgid "`numpy.float64`, `numpy.float_`, `numpy.double` (equivalent)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:95
+msgid "``numpy.complex``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:95
+msgid "``complex``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:95
+msgid "`numpy.complex128`, `numpy.complex_`, `numpy.cdouble` (equivalent)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:96
+msgid "``numpy.object``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:96
+msgid "``object``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:96
+msgid "`numpy.object_`"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:97
+msgid "``numpy.str``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:97 ../../../release/1.20.0-notes.rst:99
+msgid "``str``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:97
+msgid "`numpy.str_`"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:98
+msgid "``numpy.long``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:98
+msgid "`numpy.int_` (C ``long``), `numpy.longlong` (largest integer type)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:99
+msgid "``numpy.unicode``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:99
+msgid "`numpy.unicode_`"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:102
+msgid ""
+"To give a clear guideline for the vast majority of cases, for the types "
+"``bool``, ``object``, ``str`` (and ``unicode``) using the plain version is "
+"shorter and clear, and generally a good replacement. For ``float`` and "
+"``complex`` you can use ``float64`` and ``complex128`` if you wish to be "
+"more explicit about the precision."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:108
+msgid ""
+"For ``np.int`` a direct replacement with ``np.int_`` or ``int`` is also good "
+"and will not change behavior, but the precision will continue to depend on "
+"the computer and operating system. If you want to be more explicit and "
+"review the current use, you have the following alternatives:"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:114
+msgid ""
+"``np.int64`` or ``np.int32`` to specify the precision exactly. This ensures "
+"that results cannot depend on the computer or operating system."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:116
+msgid ""
+"``np.int_`` or ``int`` (the default), but be aware that it depends on the "
+"computer and operating system."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:118
+msgid "The C types: ``np.cint`` (int), ``np.int_`` (long), ``np.longlong``."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:119
+msgid ""
+"``np.intp`` which is 32bit on 32bit machines 64bit on 64bit machines. This "
+"can be the best type to use for indexing."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:122
+msgid ""
+"When used with ``np.dtype(...)`` or ``dtype=...`` changing it to the NumPy "
+"name as mentioned above will have no effect on the output. If used as a "
+"scalar with::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:126
+msgid "np.float(123)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:128
+msgid ""
+"changing it can subtly change the result.  In this case, the Python version "
+"``float(123)`` or ``int(12.)`` is normally preferable, although the NumPy "
+"version may be useful for consistency with NumPy arrays (for example, NumPy "
+"behaves differently for things like division by zero)."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:133
+msgid "(`gh-14882 <https://github.com/numpy/numpy/pull/14882>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:136
+msgid ""
+"Passing ``shape=None`` to functions with a non-optional shape argument is "
+"deprecated"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:137
+msgid ""
+"Previously, this was an alias for passing ``shape=()``. This deprecation is "
+"emitted by `PyArray_IntpConverter` in the C API. If your API is intended to "
+"support passing ``None``, then you should check for ``None`` prior to "
+"invoking the converter, so as to be able to distinguish ``None`` and ``()``."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:143
+msgid "(`gh-15886 <https://github.com/numpy/numpy/pull/15886>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:146
+msgid "Indexing errors will be reported even when index result is empty"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:147
+msgid ""
+"In the future, NumPy will raise an IndexError when an integer array index "
+"contains out of bound values even if a non-indexed dimension is of length 0. "
+"This will now emit a DeprecationWarning. This can happen when the array is "
+"previously empty, or an empty slice is involved::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:153
+msgid ""
+"arr1 = np.zeros((5, 0))\n"
+"arr1[[20]]\n"
+"arr2 = np.zeros((5, 5))\n"
+"arr2[[20], :0]"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:158
+msgid ""
+"Previously the non-empty index ``[20]`` was not checked for correctness. It "
+"will now be checked causing a deprecation warning which will be turned into "
+"an error. This also applies to assignments."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:162
+msgid "(`gh-15900 <https://github.com/numpy/numpy/pull/15900>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:165
+msgid "Inexact matches for ``mode`` and ``searchside`` are deprecated"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:166
+msgid ""
+"Inexact and case insensitive matches for ``mode`` and ``searchside`` were "
+"valid inputs earlier and will give a DeprecationWarning now.  For example, "
+"below are some example usages which are now deprecated and will give a "
+"DeprecationWarning::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:171
+msgid ""
+"import numpy as np\n"
+"arr = np.array([[3, 6, 6], [4, 5, 1]])\n"
+"# mode: inexact match\n"
+"np.ravel_multi_index(arr, (7, 6), mode=\"clap\")  # should be \"clip\"\n"
+"# searchside: inexact match\n"
+"np.searchsorted(arr[0], 4, side='random')  # should be \"right\""
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:178
+msgid "(`gh-16056 <https://github.com/numpy/numpy/pull/16056>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:181
+msgid "Deprecation of `numpy.dual`"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:182
+msgid ""
+"The module `numpy.dual` is deprecated.  Instead of importing functions from "
+"`numpy.dual`, the functions should be imported directly from NumPy or SciPy."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:186
+msgid "(`gh-16156 <https://github.com/numpy/numpy/pull/16156>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:189
+msgid "``outer`` and ``ufunc.outer`` deprecated for matrix"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:190
+msgid ""
+"``np.matrix`` use with `~numpy.outer` or generic ufunc outer calls such as "
+"``numpy.add.outer``. Previously, matrix was converted to an array here. This "
+"will not be done in the future requiring a manual conversion to arrays."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:195
+msgid "(`gh-16232 <https://github.com/numpy/numpy/pull/16232>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:198
+msgid "Further Numeric Style types Deprecated"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:200
+msgid ""
+"The remaining numeric-style type codes ``Bytes0``, ``Str0``, ``Uint32``, "
+"``Uint64``, and ``Datetime64`` have been deprecated.  The lower-case "
+"variants should be used instead.  For bytes and string ``\"S\"`` and "
+"``\"U\"`` are further alternatives."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:206 ../../../release/1.20.0-notes.rst:299
+#: ../../../release/1.20.0-notes.rst:451
+msgid "(`gh-16554 <https://github.com/numpy/numpy/pull/16554>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:209
+msgid "The ``ndincr`` method of ``ndindex`` is deprecated"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:210
+msgid ""
+"The documentation has warned against using this function since NumPy 1.8. "
+"Use ``next(it)`` instead of ``it.ndincr()``."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:213
+msgid "(`gh-17233 <https://github.com/numpy/numpy/pull/17233>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:216
+msgid "ArrayLike objects which do not define ``__len__`` and ``__getitem__``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:217
+msgid ""
+"Objects which define one of the protocols ``__array__``, "
+"``__array_interface__``, or ``__array_struct__`` but are not sequences "
+"(usually defined by having a ``__len__`` and ``__getitem__``) will behave "
+"differently during array-coercion in the future."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:222
+msgid ""
+"When nested inside sequences, such as ``np.array([array_like])``, these were "
+"handled as a single Python object rather than an array. In the future they "
+"will behave identically to::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:226
+msgid "np.array([np.array(array_like)])"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:228
+msgid ""
+"This change should only have an effect if ``np.array(array_like)`` is not 0-"
+"D. The solution to this warning may depend on the object:"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:231
+msgid ""
+"Some array-likes may expect the new behaviour, and users can ignore the "
+"warning.  The object can choose to expose the sequence protocol to opt-in to "
+"the new behaviour."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:234
+msgid ""
+"For example, ``shapely`` will allow conversion to an array-like using ``line."
+"coords`` rather than ``np.asarray(line)``. Users may work around the "
+"warning, or use the new convention when it becomes available."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:238
+msgid ""
+"Unfortunately, using the new behaviour can only be achieved by calling ``np."
+"array(array_like)``."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:241
+msgid ""
+"If you wish to ensure that the old behaviour remains unchanged, please "
+"create an object array and then fill it explicitly, for example::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:244
+msgid ""
+"arr = np.empty(3, dtype=object)\n"
+"arr[:] = [array_like1, array_like2, array_like3]"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:247
+msgid ""
+"This will ensure NumPy knows to not enter the array-like and use it as a "
+"object instead."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:250
+msgid "(`gh-17973 <https://github.com/numpy/numpy/pull/17973>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:254
+msgid "Future Changes"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:257
+msgid "Arrays cannot be using subarray dtypes"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:258
+msgid ""
+"Array creation and casting using ``np.array(arr, dtype)`` and ``arr."
+"astype(dtype)`` will use different logic when ``dtype`` is a subarray dtype "
+"such as ``np.dtype(\"(2)i,\")``."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:262
+msgid "For such a ``dtype`` the following behaviour is true::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:264
+msgid ""
+"res = np.array(arr, dtype)\n"
+"\n"
+"res.dtype is not dtype\n"
+"res.dtype is dtype.base\n"
+"res.shape == arr.shape + dtype.shape"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:270
+msgid "But ``res`` is filled using the logic::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:272
+msgid ""
+"res = np.empty(arr.shape + dtype.shape, dtype=dtype.base)\n"
+"res[...] = arr"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:275
+msgid ""
+"which uses incorrect broadcasting (and often leads to an error). In the "
+"future, this will instead cast each element individually, leading to the "
+"same result as::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:279
+msgid "res = np.array(arr, dtype=np.dtype([\"f\", dtype]))[\"f\"]"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:281
+msgid "Which can normally be used to opt-in to the new behaviour."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:283
+msgid ""
+"This change does not affect ``np.array(list, dtype=\"(2)i,\")`` unless the "
+"``list`` itself includes at least one array.  In particular, the behaviour "
+"is unchanged for a list of tuples."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:287
+msgid "(`gh-17596 <https://github.com/numpy/numpy/pull/17596>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:291
+msgid "Expired deprecations"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:293
+msgid ""
+"The deprecation of numeric style type-codes ``np.dtype(\"Complex64\")`` "
+"(with upper case spelling), is expired.  ``\"Complex64\"`` corresponded to "
+"``\"complex128\"`` and ``\"Complex32\"`` corresponded to ``\"complex64\"``."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:296
+msgid ""
+"The deprecation of ``np.sctypeNA`` and ``np.typeNA`` is expired. Both have "
+"been removed from the public API. Use ``np.typeDict`` instead."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:301
+msgid ""
+"The 14-year deprecation of ``np.ctypeslib.ctypes_load_library`` is expired. "
+"Use :func:`~numpy.ctypeslib.load_library` instead, which is identical."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:304
+msgid "(`gh-17116 <https://github.com/numpy/numpy/pull/17116>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:307
+msgid "Financial functions removed"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:308
+msgid ""
+"In accordance with NEP 32, the financial functions are removed from NumPy "
+"1.20. The functions that have been removed are ``fv``, ``ipmt``, ``irr``, "
+"``mirr``, ``nper``, ``npv``, ``pmt``, ``ppmt``, ``pv``, and ``rate``.  These "
+"functions are available in the `numpy_financial <https://pypi.org/project/"
+"numpy-financial>`_ library."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:315
+msgid "(`gh-17067 <https://github.com/numpy/numpy/pull/17067>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:319
+msgid "Compatibility notes"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:322
+msgid "``isinstance(dtype, np.dtype)`` and not ``type(dtype) is not np.dtype``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:323
+msgid ""
+"NumPy dtypes are not direct instances of ``np.dtype`` anymore.  Code that "
+"may have used ``type(dtype) is np.dtype`` will always return ``False`` and "
+"must be updated to use the correct version ``isinstance(dtype, np.dtype)``."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:327
+msgid ""
+"This change also affects the C-side macro ``PyArray_DescrCheck`` if compiled "
+"against a NumPy older than 1.16.6. If code uses this macro and wishes to "
+"compile against an older version of NumPy, it must replace the macro (see "
+"also `C API changes`_ section)."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:334
+msgid "Same kind casting in concatenate with ``axis=None``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:335
+msgid ""
+"When `~numpy.concatenate` is called with ``axis=None``, the flattened arrays "
+"were cast with ``unsafe``. Any other axis choice uses \"same kind\". That "
+"different default has been deprecated and \"same kind\" casting will be used "
+"instead. The new ``casting`` keyword argument can be used to retain the old "
+"behaviour."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:342 ../../../release/1.20.0-notes.rst:816
+msgid "(`gh-16134 <https://github.com/numpy/numpy/pull/16134>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:345
+msgid "NumPy Scalars are cast when assigned to arrays"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:347
+msgid ""
+"When creating or assigning to arrays, in all relevant cases NumPy scalars "
+"will now be cast identically to NumPy arrays.  In particular this changes "
+"the behaviour in some cases which previously raised an error::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:352
+msgid "np.array([np.float64(np.nan)], dtype=np.int64)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:354
+msgid ""
+"will succeed and return an undefined result (usually the smallest possible "
+"integer).  This also affects assignments::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:357
+msgid "arr[0] = np.float64(np.nan)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:359
+msgid "At this time, NumPy retains the behaviour for::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:361
+msgid "np.array(np.float64(np.nan), dtype=np.int64)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:363
+msgid "The above changes do not affect Python scalars::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:365
+msgid "np.array([float(\"NaN\")], dtype=np.int64)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:367
+msgid ""
+"remains unaffected (``np.nan`` is a Python ``float``, not a NumPy one). "
+"Unlike signed integers, unsigned integers do not retain this special case, "
+"since they always behaved more like casting. The following code stops "
+"raising an error::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:372
+msgid "np.array([np.float64(np.nan)], dtype=np.uint64)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:374
+msgid ""
+"To avoid backward compatibility issues, at this time assignment from "
+"``datetime64`` scalar to strings of too short length remains supported. This "
+"means that ``np.asarray(np.datetime64(\"2020-10-10\"), dtype=\"S5\")`` "
+"succeeds now, when it failed before.  In the long term this may be "
+"deprecated or the unsafe cast may be allowed generally to make assignment of "
+"arrays and scalars behave consistently."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:383
+msgid "Array coercion changes when Strings and other types are mixed"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:385
+msgid "When strings and other types are mixed, such as::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:387
+msgid "np.array([\"string\", np.float64(3.)], dtype=\"S\")"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:389
+msgid ""
+"The results will change, which may lead to string dtypes with longer strings "
+"in some cases.  In particularly, if ``dtype=\"S\"`` is not provided any "
+"numerical value will lead to a string results long enough to hold all "
+"possible numerical values. (e.g. \"S32\" for floats).  Note that you should "
+"always provide ``dtype=\"S\"`` when converting non-strings to strings."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:395
+msgid ""
+"If ``dtype=\"S\"`` is provided the results will be largely identical to "
+"before, but NumPy scalars (not a Python float like ``1.0``), will still "
+"enforce a uniform string length::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:399
+msgid ""
+"np.array([np.float64(3.)], dtype=\"S\")  # gives \"S32\"\n"
+"np.array([3.0], dtype=\"S\")  # gives \"S3\""
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:402
+msgid "Previously the first version gave the same result as the second."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:406
+msgid "Array coercion restructure"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:408
+msgid ""
+"Array coercion has been restructured.  In general, this should not affect "
+"users.  In extremely rare corner cases where array-likes are nested::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:411
+msgid "np.array([array_like1])"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:413
+msgid "Things will now be more consistent with::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:415
+msgid "np.array([np.array(array_like1)])"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:417
+msgid ""
+"This can subtly change output for some badly defined array-likes. One "
+"example for this are array-like objects which are not also sequences of "
+"matching shape. In NumPy 1.20, a warning will be given when an array-like is "
+"not also a sequence (but behaviour remains identical, see deprecations). If "
+"an array like is also a sequence (defines ``__getitem__`` and ``__len__``) "
+"NumPy will now only use the result given by ``__array__``, "
+"``__array_interface__``, or ``__array_struct__``. This will result in "
+"differences when the (nested) sequence describes a different shape."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:427
+msgid "(`gh-16200 <https://github.com/numpy/numpy/pull/16200>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:430
+msgid ""
+"Writing to the result of `numpy.broadcast_arrays` will export readonly "
+"buffers"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:432
+msgid ""
+"In NumPy 1.17 `numpy.broadcast_arrays` started warning when the resulting "
+"array was written to. This warning was skipped when the array was used "
+"through the buffer interface (e.g. ``memoryview(arr)``). The same thing will "
+"now occur for the two protocols ``__array_interface__``, and "
+"``__array_struct__`` returning read-only buffers instead of giving a warning."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:438
+msgid "(`gh-16350 <https://github.com/numpy/numpy/pull/16350>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:441
+msgid "Numeric-style type names have been removed from type dictionaries"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:443
+msgid ""
+"To stay in sync with the deprecation for ``np.dtype(\"Complex64\")`` and "
+"other numeric-style (capital case) types.  These were removed from ``np."
+"sctypeDict`` and ``np.typeDict``.  You should use the lower case versions "
+"instead.  Note that ``\"Complex64\"`` corresponds to ``\"complex128\"`` and "
+"``\"Complex32\"`` corresponds to ``\"complex64\"``.  The numpy style (new) "
+"versions, denote the full size and not the size of the real/imaginary part."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:454
+msgid ""
+"The ``operator.concat`` function now raises TypeError for array arguments"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:455
+msgid ""
+"The previous behavior was to fall back to addition and add the two arrays, "
+"which was thought to be unexpected behavior for a concatenation function."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:458
+msgid "(`gh-16570 <https://github.com/numpy/numpy/pull/16570>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:461
+msgid "``nickname`` attribute removed from ABCPolyBase"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:463
+msgid ""
+"An abstract property ``nickname`` has been removed from  ``ABCPolyBase`` as "
+"it was no longer used in the derived convenience classes. This may affect "
+"users who have derived classes from ``ABCPolyBase`` and overridden the "
+"methods for representation and display, e.g. ``__str__``, ``__repr__``, "
+"``_repr_latex``, etc."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:469
+msgid "(`gh-16589 <https://github.com/numpy/numpy/pull/16589>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:472
+msgid ""
+"``float->timedelta`` and ``uint64->timedelta`` promotion will raise a "
+"TypeError"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:473
+msgid ""
+"Float and timedelta promotion consistently raises a TypeError. ``np."
+"promote_types(\"float32\", \"m8\")`` aligns with ``np.promote_types(\"m8\", "
+"\"float32\")`` now and both raise a TypeError. Previously, ``np."
+"promote_types(\"float32\", \"m8\")`` returned ``\"m8\"`` which was "
+"considered a bug."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:479
+msgid ""
+"Uint64 and timedelta promotion consistently raises a TypeError. ``np."
+"promote_types(\"uint64\", \"m8\")`` aligns with ``np.promote_types(\"m8\", "
+"\"uint64\")`` now and both raise a TypeError. Previously, ``np."
+"promote_types(\"uint64\", \"m8\")`` returned ``\"m8\"`` which was considered "
+"a bug."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:485
+msgid "(`gh-16592 <https://github.com/numpy/numpy/pull/16592>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:488
+msgid "``numpy.genfromtxt`` now correctly unpacks structured arrays"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:489
+msgid ""
+"Previously, `numpy.genfromtxt` failed to unpack if it was called with "
+"``unpack=True`` and a structured datatype was passed to the ``dtype`` "
+"argument (or ``dtype=None`` was passed and a structured datatype was "
+"inferred). For example::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:494
+msgid ""
+">>> data = StringIO(\"21 58.0\\n35 72.0\")\n"
+">>> np.genfromtxt(data, dtype=None, unpack=True)\n"
+"array([(21, 58.), (35, 72.)], dtype=[('f0', '<i8'), ('f1', '<f8')])"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:498
+msgid ""
+"Structured arrays will now correctly unpack into a list of arrays, one for "
+"each column::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:501
+msgid ""
+">>> np.genfromtxt(data, dtype=None, unpack=True)\n"
+"[array([21, 35]), array([58., 72.])]"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:504
+msgid "(`gh-16650 <https://github.com/numpy/numpy/pull/16650>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:507
+msgid ""
+"``mgrid``, ``r_``, etc. consistently return correct outputs for non-default "
+"precision input"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:508
+msgid ""
+"Previously, ``np.mgrid[np.float32(0.1):np.float32(0.35):np.float32(0.1),]`` "
+"and ``np.r_[0:10:np.complex64(3j)]`` failed to return meaningful output. "
+"This bug potentially affects `~numpy.mgrid`, `~numpy.ogrid`, `~numpy.r_`, "
+"and `~numpy.c_` when an input with dtype other than the default ``float64`` "
+"and ``complex128`` and equivalent Python types were used. The methods have "
+"been fixed to handle varying precision correctly."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:515
+msgid "(`gh-16815 <https://github.com/numpy/numpy/pull/16815>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:518
+msgid ""
+"Boolean array indices with mismatching shapes now properly give "
+"``IndexError``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:520
+msgid ""
+"Previously, if a boolean array index matched the size of the indexed array "
+"but not the shape, it was incorrectly allowed in some cases. In other cases, "
+"it gave an error, but the error was incorrectly a ``ValueError`` with a "
+"message about broadcasting instead of the correct ``IndexError``."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:525
+msgid ""
+"For example, the following used to incorrectly give ``ValueError: operands "
+"could not be broadcast together with shapes (2,2) (1,4)``:"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:528
+msgid "np.empty((2, 2))[np.array([[True, False, False, False]])]"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:532
+msgid ""
+"And the following used to incorrectly return ``array([], dtype=float64)``:"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:534
+msgid "np.empty((2, 2))[np.array([[False, False, False, False]])]"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:538
+msgid ""
+"Both now correctly give ``IndexError: boolean index did not match indexed "
+"array along dimension 0; dimension is 2 but corresponding boolean dimension "
+"is 1``."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:542
+msgid "(`gh-17010 <https://github.com/numpy/numpy/pull/17010>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:545
+msgid "Casting errors interrupt Iteration"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:546
+msgid ""
+"When iterating while casting values, an error may stop the iteration earlier "
+"than before. In any case, a failed casting operation always returned "
+"undefined, partial results. Those may now be even more undefined and "
+"partial. For users of the ``NpyIter`` C-API such cast errors will now cause "
+"the `iternext()` function to return 0 and thus abort iteration. Currently, "
+"there is no API to detect such an error directly. It is necessary to check "
+"``PyErr_Occurred()``, which may be problematic in combination with "
+"``NpyIter_Reset``. These issues always existed, but new API could be added "
+"if required by users."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:559
+msgid "(`gh-17029 <https://github.com/numpy/numpy/pull/17029>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:562
+msgid "f2py generated code may return unicode instead of byte strings"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:563
+msgid ""
+"Some byte strings previously returned by f2py generated code may now be "
+"unicode strings. This results from the ongoing Python2 -> Python3 cleanup."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:566
+msgid "(`gh-17068 <https://github.com/numpy/numpy/pull/17068>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:569
+msgid ""
+"The first element of the ``__array_interface__[\"data\"]`` tuple  must be an "
+"integer"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:570
+msgid ""
+"This has been the documented interface for many years, but there was still "
+"code that would accept a byte string representation of the pointer address. "
+"That code has been removed, passing the address as a byte string will now "
+"raise an error."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:575
+msgid "(`gh-17241 <https://github.com/numpy/numpy/pull/17241>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:578
+msgid "poly1d respects the dtype of all-zero argument"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:579
+msgid ""
+"Previously, constructing an instance of ``poly1d`` with all-zero "
+"coefficients would cast the coefficients to ``np.float64``. This affected "
+"the output dtype of methods which construct ``poly1d`` instances internally, "
+"such as ``np.polymul``."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:584
+msgid "(`gh-17577 <https://github.com/numpy/numpy/pull/17577>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:587
+msgid "The numpy.i file for swig is Python 3 only."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:588
+msgid ""
+"Uses of Python 2.7 C-API functions have been updated to Python 3 only. Users "
+"who need the old version should take it from an older version of NumPy."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:591
+msgid "(`gh-17580 <https://github.com/numpy/numpy/pull/17580>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:594
+msgid "Void dtype discovery in ``np.array``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:595
+msgid ""
+"In calls using ``np.array(..., dtype=\"V\")``, ``arr.astype(\"V\")``, and "
+"similar a TypeError will now be correctly raised unless all elements have "
+"the identical void length. An example for this is::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:599
+msgid "np.array([b\"1\", b\"12\"], dtype=\"V\")"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:601
+msgid ""
+"Which previously returned an array with dtype ``\"V2\"`` which cannot "
+"represent ``b\"1\"`` faithfully."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:604
+msgid "(`gh-17706 <https://github.com/numpy/numpy/pull/17706>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:608
+msgid "C API changes"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:611
+msgid "The ``PyArray_DescrCheck`` macro is modified"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:612
+msgid ""
+"The ``PyArray_DescrCheck`` macro has been updated since NumPy 1.16.6 to be::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:614
+msgid ""
+"#define PyArray_DescrCheck(op) PyObject_TypeCheck(op, &PyArrayDescr_Type)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:616
+msgid ""
+"Starting with NumPy 1.20 code that is compiled against an earlier version "
+"will be API incompatible with NumPy 1.20. The fix is to either compile "
+"against 1.16.6 (if the NumPy 1.16 release is the oldest release you wish to "
+"support), or manually inline the macro by replacing it with the new "
+"definition::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:622
+msgid "PyObject_TypeCheck(op, &PyArrayDescr_Type)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:624
+msgid "which is compatible with all NumPy versions."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:628
+msgid "Size of ``np.ndarray`` and ``np.void_`` changed"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:629
+msgid ""
+"The size of the ``PyArrayObject`` and ``PyVoidScalarObject`` structures have "
+"changed.  The following header definition has been removed::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:633
+msgid "#define NPY_SIZEOF_PYARRAYOBJECT (sizeof(PyArrayObject_fields))"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:635
+msgid ""
+"since the size must not be considered a compile time constant: it will "
+"change for different runtime versions of NumPy."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:638
+msgid ""
+"The most likely relevant use are potential subclasses written in C which "
+"will have to be recompiled and should be updated.  Please see the "
+"documentation for :c:type:`PyArrayObject` for more details and contact the "
+"NumPy developers if you are affected by this change."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:643
+msgid ""
+"NumPy will attempt to give a graceful error but a program expecting a fixed "
+"structure size may have undefined behaviour and likely crash."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:646
+msgid "(`gh-16938 <https://github.com/numpy/numpy/pull/16938>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:650
+msgid "New Features"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:653
+msgid ""
+"``where`` keyword argument for ``numpy.all`` and ``numpy.any`` functions"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:654
+msgid ""
+"The keyword argument ``where`` is added and allows to only consider "
+"specified elements or subaxes from an array in the Boolean evaluation of "
+"``all`` and ``any``. This new keyword is available to the functions ``all`` "
+"and ``any`` both via ``numpy`` directly or in the methods of ``numpy."
+"ndarray``."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:659 ../../../release/1.20.0-notes.rst:672
+msgid ""
+"Any broadcastable Boolean array or a scalar can be set as ``where``. It "
+"defaults to ``True`` to evaluate the functions for all elements in an array "
+"if ``where`` is not set by the user. Examples are given in the documentation "
+"of the functions."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:666
+msgid ""
+"``where`` keyword argument for ``numpy`` functions ``mean``, ``std``, ``var``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:667
+msgid ""
+"The keyword argument ``where`` is added and allows to limit the scope in the "
+"calculation of ``mean``, ``std`` and ``var`` to only a subset of elements. "
+"It is available both via ``numpy`` directly or in the methods of ``numpy."
+"ndarray``."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:677
+msgid "(`gh-15852 <https://github.com/numpy/numpy/pull/15852>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:680
+msgid ""
+"``norm=backward``, ``forward`` keyword options for ``numpy.fft`` functions"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:681
+msgid ""
+"The keyword argument option ``norm=backward`` is added as an alias for "
+"``None`` and acts as the default option; using it has the direct transforms "
+"unscaled and the inverse transforms scaled by ``1/n``."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:685
+msgid ""
+"Using the new keyword argument option ``norm=forward`` has the direct "
+"transforms scaled by ``1/n`` and the inverse transforms unscaled (i.e. "
+"exactly opposite to the default option ``norm=backward``)."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:689
+msgid "(`gh-16476 <https://github.com/numpy/numpy/pull/16476>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:692
+msgid "NumPy is now typed"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:693
+msgid ""
+"Type annotations have been added for large parts of NumPy. There is also a "
+"new `numpy.typing` module that contains useful types for end-users. The "
+"currently available types are"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:697
+msgid "``ArrayLike``: for objects that can be coerced to an array"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:698
+msgid "``DtypeLike``: for objects that can be coerced to a dtype"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:700
+msgid "(`gh-16515 <https://github.com/numpy/numpy/pull/16515>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:703
+msgid "``numpy.typing`` is accessible at runtime"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:704
+msgid ""
+"The types in ``numpy.typing`` can now be imported at runtime. Code like the "
+"following will now work:"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:707
+msgid ""
+"from numpy.typing import ArrayLike\n"
+"x: ArrayLike = [1, 2, 3, 4]"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:712
+msgid "(`gh-16558 <https://github.com/numpy/numpy/pull/16558>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:715
+msgid "New ``__f2py_numpy_version__`` attribute for f2py generated modules."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:716
+msgid ""
+"Because f2py is released together with NumPy, ``__f2py_numpy_version__`` "
+"provides a way to track the version f2py used to generate the module."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:719
+msgid "(`gh-16594 <https://github.com/numpy/numpy/pull/16594>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:722
+msgid "``mypy`` tests can be run via runtests.py"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:723
+msgid "Currently running mypy with the NumPy stubs configured requires either:"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:726
+msgid "Installing NumPy"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:727
+msgid "Adding the source directory to MYPYPATH and linking to the ``mypy.ini``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:729
+msgid ""
+"Both options are somewhat inconvenient, so add a ``--mypy`` option to "
+"runtests that handles setting things up for you. This will also be useful in "
+"the future for any typing codegen since it will ensure the project is built "
+"before type checking."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:734
+msgid "(`gh-17123 <https://github.com/numpy/numpy/pull/17123>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:737
+msgid "Negation of user defined BLAS/LAPACK detection order"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:738
+msgid ""
+"`~numpy.distutils` allows negation of libraries when determining BLAS/LAPACK "
+"libraries. This may be used to remove an item from the library resolution "
+"phase, i.e. to disallow NetLIB libraries one could do:"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:743
+msgid "NPY_BLAS_ORDER='^blas' NPY_LAPACK_ORDER='^lapack' python setup.py build"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:747
+msgid "That will use any of the accelerated libraries instead."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:749
+msgid "(`gh-17219 <https://github.com/numpy/numpy/pull/17219>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:752
+msgid "Allow passing optimizations arguments to asv build"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:753
+msgid ""
+"It is now possible to pass  ``-j``, ``--cpu-baseline``, ``--cpu-dispatch`` "
+"and ``--disable-optimization`` flags to ASV build when the ``--bench-"
+"compare`` argument is used."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:757
+msgid "(`gh-17284 <https://github.com/numpy/numpy/pull/17284>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:760
+msgid "The NVIDIA HPC SDK nvfortran compiler is now supported"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:761
+msgid ""
+"Support for the nvfortran compiler, a version of pgfortran, has been added."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:763
+msgid "(`gh-17344 <https://github.com/numpy/numpy/pull/17344>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:766
+msgid "``dtype`` option for ``cov`` and ``corrcoef``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:767
+msgid ""
+"The ``dtype`` option is now available for `numpy.cov` and `numpy.corrcoef`. "
+"It specifies which data-type the returned result should have. By default the "
+"functions still return a `numpy.float64` result."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:771
+msgid "(`gh-17456 <https://github.com/numpy/numpy/pull/17456>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:775
+msgid "Improvements"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:778
+msgid "Improved string representation for polynomials (``__str__``)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:780
+msgid ""
+"The string representation (``__str__``) of all six polynomial types in "
+"`numpy.polynomial` has been updated to give the polynomial as a mathematical "
+"expression instead of an array of coefficients. Two package-wide formats for "
+"the polynomial expressions are available - one using Unicode characters for "
+"superscripts and subscripts, and another using only ASCII characters."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:786
+msgid "(`gh-15666 <https://github.com/numpy/numpy/pull/15666>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:789
+msgid "Remove the Accelerate library as a candidate LAPACK library"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:790
+msgid "Apple no longer supports Accelerate. Remove it."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:792
+msgid "(`gh-15759 <https://github.com/numpy/numpy/pull/15759>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:795
+msgid ""
+"Object arrays containing multi-line objects have a more readable ``repr``"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:796
+msgid ""
+"If elements of an object array have a ``repr`` containing new lines, then "
+"the wrapped lines will be aligned by column. Notably, this improves the "
+"``repr`` of nested arrays::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:800
+msgid ""
+">>> np.array([np.eye(2), np.eye(3)], dtype=object)\n"
+"array([array([[1., 0.],\n"
+"              [0., 1.]]),\n"
+"       array([[1., 0., 0.],\n"
+"              [0., 1., 0.],\n"
+"              [0., 0., 1.]])], dtype=object)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:807
+msgid "(`gh-15997 <https://github.com/numpy/numpy/pull/15997>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:810
+msgid "Concatenate supports providing an output dtype"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:811
+msgid ""
+"Support was added to `~numpy.concatenate` to provide an output ``dtype`` and "
+"``casting`` using keyword arguments. The ``dtype`` argument cannot be "
+"provided in conjunction with the ``out`` one."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:819
+msgid "Thread safe f2py callback functions"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:821
+msgid "Callback functions in f2py are now thread safe."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:823
+msgid "(`gh-16519 <https://github.com/numpy/numpy/pull/16519>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:826
+msgid "``numpy.core.records.fromfile`` now supports file-like objects"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:827
+msgid ""
+"``numpy.core.records.fromfile`` can now use file-like objects, for instance :"
+"py:class:`io.BytesIO`"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:830
+msgid "(`gh-16675 <https://github.com/numpy/numpy/pull/16675>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:833
+msgid "RPATH support on AIX added to distutils"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:834
+msgid "This allows SciPy to be built on AIX."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:836
+msgid "(`gh-16710 <https://github.com/numpy/numpy/pull/16710>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:839
+msgid "Use f90 compiler specified by the command line args"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:841
+msgid ""
+"The compiler command selection for Fortran Portland Group Compiler is "
+"changed in ``numpy.distutils.fcompiler``.  This only affects the linking "
+"command.  This forces the use of the executable provided by the command line "
+"option (if provided) instead of the pgfortran executable.  If no executable "
+"is provided to the command line option it defaults to the pgf90 executable, "
+"which is an alias for pgfortran according to the PGI documentation."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:848
+msgid "(`gh-16730 <https://github.com/numpy/numpy/pull/16730>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:851
+msgid "Add NumPy declarations for Cython 3.0 and later"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:853
+msgid ""
+"The pxd declarations for Cython 3.0 were improved to avoid using deprecated "
+"NumPy C-API features.  Extension modules built with Cython 3.0+ that use "
+"NumPy can now set the C macro ``NPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION`` "
+"to avoid C compiler warnings about deprecated API usage."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:858
+msgid "(`gh-16986 <https://github.com/numpy/numpy/pull/16986>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:861
+msgid "Make the window functions exactly symmetric"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:862
+msgid ""
+"Make sure the window functions provided by NumPy are symmetric. There were "
+"previously small deviations from symmetry due to numerical precision that "
+"are now avoided by better arrangement of the computation."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:866
+msgid "(`gh-17195 <https://github.com/numpy/numpy/pull/17195>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:870
+msgid "Performance improvements and changes"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:873
+msgid "Enable multi-platform SIMD compiler optimizations"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:875
+msgid ""
+"A series of improvements for NumPy infrastructure to pave the way to "
+"**NEP-38**, that can be summarized as follow:"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:878
+msgid "**New Build Arguments**"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:880
+msgid ""
+"``--cpu-baseline`` to specify the minimal set of required optimizations, "
+"default value is ``min`` which provides the minimum CPU features that can "
+"safely run on a wide range of users platforms."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:885
+msgid ""
+"``--cpu-dispatch`` to specify the dispatched set of additional "
+"optimizations, default value is ``max -xop -fma4`` which enables all CPU "
+"features, except for AMD legacy features."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:889
+msgid ""
+"``--disable-optimization`` to explicitly disable the whole new improvements, "
+"It also adds a new **C** compiler #definition called "
+"``NPY_DISABLE_OPTIMIZATION`` which it can be used as guard for any SIMD code."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:894
+msgid "**Advanced CPU dispatcher**"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:896
+msgid ""
+"A flexible cross-architecture CPU dispatcher built on the top of Python/"
+"Numpy distutils, support all common compilers with a wide range of CPU "
+"features."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:900
+msgid ""
+"The new dispatcher requires a special file extension ``*.dispatch.c`` to "
+"mark the dispatch-able **C** sources. These sources have the ability to be "
+"compiled multiple times so that each compilation process represents certain "
+"CPU features and provides different #definitions and flags that affect the "
+"code paths."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:906
+msgid "**New auto-generated C header ``core/src/common/_cpu_dispatch.h``**"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:908
+msgid ""
+"This header is generated by the distutils module ``ccompiler_opt``, and "
+"contains all the #definitions and headers of instruction sets, that had been "
+"configured through command arguments '--cpu-baseline' and '--cpu-dispatch'."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:912
+msgid "**New C header ``core/src/common/npy_cpu_dispatch.h``**"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:914
+msgid ""
+"This header contains all utilities that required for the whole CPU "
+"dispatching process, it also can be considered as a bridge linking the new "
+"infrastructure work with NumPy CPU runtime detection."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:918
+msgid "**Add new attributes to NumPy umath module(Python level)**"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:920
+msgid ""
+"``__cpu_baseline__`` a list contains the minimal set of required "
+"optimizations that supported by the compiler and platform according to the "
+"specified values to command argument '--cpu-baseline'."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:924
+msgid ""
+"``__cpu_dispatch__`` a list contains the dispatched set of additional "
+"optimizations that supported by the compiler and platform according to the "
+"specified values to command argument '--cpu-dispatch'."
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:928
+msgid "**Print the supported CPU features during the run of PytestTester**"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:930
+msgid "(`gh-13516 <https://github.com/numpy/numpy/pull/13516>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:934
+msgid "Changes"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:937
+msgid "Changed behavior of ``divmod(1., 0.)`` and related functions"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:938
+msgid ""
+"The changes also assure that different compiler versions have the same "
+"behavior for nan or inf usages in these operations. This was previously "
+"compiler dependent, we now force the invalid and divide by zero flags, "
+"making the results the same across compilers. For example, gcc-5, gcc-8, or "
+"gcc-9 now result in the same behavior. The changes are tabulated below:"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:944
+msgid "Summary of New Behavior"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:948
+msgid "Operator"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:949
+msgid "Old Warning"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:950
+msgid "New Warning"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:951
+msgid "Old Result"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:952
+msgid "New Result"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:953
+msgid "Works on MacOS"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:954
+msgid "np.divmod(1.0, 0.0)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:955 ../../../release/1.20.0-notes.rst:961
+#: ../../../release/1.20.0-notes.rst:962 ../../../release/1.20.0-notes.rst:967
+#: ../../../release/1.20.0-notes.rst:973 ../../../release/1.20.0-notes.rst:974
+msgid "Invalid"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:956
+msgid "Invalid and Dividebyzero"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:957
+msgid "nan, nan"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:958
+msgid "inf, nan"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:959 ../../../release/1.20.0-notes.rst:971
+#: ../../../release/1.20.0-notes.rst:977
+msgid "Yes"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:960
+msgid "np.fmod(1.0, 0.0)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:963 ../../../release/1.20.0-notes.rst:964
+#: ../../../release/1.20.0-notes.rst:969 ../../../release/1.20.0-notes.rst:975
+#: ../../../release/1.20.0-notes.rst:976
+msgid "nan"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:965
+msgid "No? Yes"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:966
+msgid "np.floor_divide(1.0, 0.0)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:968
+msgid "Dividebyzero"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:970
+msgid "inf"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:972
+msgid "np.remainder(1.0, 0.0)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:979
+msgid "(`gh-16161 <https://github.com/numpy/numpy/pull/16161>`__)"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:982
+msgid "``np.linspace`` on integers now uses floor"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:983
+msgid ""
+"When using a ``int`` dtype in `numpy.linspace`, previously float values "
+"would be rounded towards zero. Now `numpy.floor` is used instead, which "
+"rounds toward ``-inf``. This changes the results for negative values. For "
+"example, the following would previously give::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:988
+msgid ""
+">>> np.linspace(-3, 1, 8, dtype=int)\n"
+"array([-3, -2, -1, -1,  0,  0,  0,  1])"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:991
+msgid "and now results in::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:993
+msgid ""
+">>> np.linspace(-3, 1, 8, dtype=int)\n"
+"array([-3, -3, -2, -2, -1, -1,  0,  1])"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:996
+msgid "The former result can still be obtained with::"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:998
+msgid ""
+">>> np.linspace(-3, 1, 8).astype(int)\n"
+"array([-3, -2, -1, -1,  0,  0,  0,  1])"
+msgstr ""
+
+#: ../../../release/1.20.0-notes.rst:1001
+msgid "(`gh-16841 <https://github.com/numpy/numpy/pull/16841>`__)"
+msgstr ""

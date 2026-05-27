@@ -1,0 +1,206 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.linalg.solve.rst:4
+msgid "numpy.linalg.solve"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:2
+msgid "Solve a linear matrix equation, or system of linear scalar equations."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:4
+msgid ""
+"Computes the \"exact\" solution, `x`, of the well-determined, i.e., full "
+"rank, linear matrix equation `ax = b`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:10
+msgid "**a**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:-1
+msgid "(..., M, M) array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:10
+msgid "Coefficient matrix."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:13
+msgid "**b**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:-1
+msgid "{(M,), (..., M, K)}, array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:13
+msgid "Ordinate or \"dependent variable\" values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:23
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:-1
+msgid "{(..., M,), (..., M, K)} ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:18
+msgid ""
+"Solution to the system a x = b.  Returned shape is (..., M) if b is shape "
+"(M,) and (..., M, K) if b is (..., M, K), where the \"...\" part is "
+"broadcasted between a and b."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:30
+msgid "LinAlgError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:28
+msgid "If `a` is singular or not square."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:35
+msgid ":obj:`scipy.linalg.solve`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:36
+msgid "Similar function in SciPy."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:40
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:41
+msgid ""
+"Broadcasting rules apply, see the `numpy.linalg` documentation for details."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:44
+msgid "The solutions are computed using LAPACK routine ``_gesv``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:46
+msgid ""
+"`a` must be square and of full-rank, i.e., all rows (or, equivalently, "
+"columns) must be linearly independent; if either is not true, use `lstsq` "
+"for the least-squares best \"solution\" of the system/equation."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:53
+msgid ""
+"The b array is only treated as a shape (M,) column vector if it is exactly 1-"
+"dimensional. In all other instances it is treated as a stack of (M, K) "
+"matrices. Previously b would be treated as a stack of (M,) vectors if b.ndim "
+"was equal to a.ndim - 1."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:59
+msgid "References"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:60
+msgid ""
+"G. Strang, *Linear Algebra and Its Applications*, 2nd Ed., Orlando, FL, "
+"Academic Press, Inc., 1980, pg. 22."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:65
+msgid "[Rba3609d25bf2-1]_"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:68
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:73
+msgid ""
+"Solve the system of equations: ``x0 + 2 * x1 = 1`` and ``3 * x0 + 5 * x1 = "
+"2``:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:84
+msgid "Check that the solution is correct:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:-1
+msgid ""
+"<div id=\"bca535f9-2ab2-4120-a7c4-eb3c1e086fb0\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('6ad0d7a7-"
+"c9af-4b55-8f70-8426c70f0324','bca535f9-2ab2-4120-a7c4-eb3c1e086fb0')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('6ad0d7a7-c9af-4b55-8f70-8426c70f0324','bca535f9-2ab2-4120-a7c4-"
+"eb3c1e086fb0')\">Open In Tab</button></div><div id=\"3ca1e673-cf53-4dcd-8e35-"
+"df7828e3bad9\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.solve:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""
