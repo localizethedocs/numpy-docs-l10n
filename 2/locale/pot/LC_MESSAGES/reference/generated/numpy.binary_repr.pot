@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,7 +39,7 @@ msgstr ""
 msgid ""
 "In a two's-complement system negative numbers are represented by the two's "
 "complement of the absolute value. This is the most common method of "
-"representing signed integers on computers [R962252997619-1]_. A N-bit two's-"
+"representing signed integers on computers [R962252997619-1]_. An N-bit two's-"
 "complement system can represent every integer in the range :math:`-2^{N-1}` "
 "to :math:`+2^{N-1}-1`."
 msgstr ""
@@ -65,7 +65,7 @@ msgid "Only an integer decimal number can be used."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.binary_repr:24
+#: of numpy.binary_repr:26
 msgid "**width**"
 msgstr ""
 
@@ -89,7 +89,7 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.binary_repr:35
+#: of numpy.binary_repr:37
 msgid "**bin**"
 msgstr ""
 
@@ -99,66 +99,66 @@ msgid "str"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.binary_repr:29
+#: of numpy.binary_repr:31
 msgid "Binary representation of `num` or two's complement of `num`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.binary_repr:40
+#: of numpy.binary_repr:42
 msgid ":obj:`base_repr`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.binary_repr:41
+#: of numpy.binary_repr:43
 msgid "Return a string representation of a number in the given base system."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.binary_repr:42
+#: of numpy.binary_repr:44
 msgid ":obj:`bin`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.binary_repr:43
+#: of numpy.binary_repr:45
 msgid "Python's built-in binary representation generator of an integer."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.binary_repr:47
+#: of numpy.binary_repr:49
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.binary_repr:48
+#: of numpy.binary_repr:50
 msgid ""
 "`binary_repr` is equivalent to using `base_repr` with base 2, but about 25x "
 "faster."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.binary_repr:52
+#: of numpy.binary_repr:54
 msgid "References"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.binary_repr:53
+#: of numpy.binary_repr:55
 msgid ""
 "Wikipedia, \"Two's complement\", https://en.wikipedia.org/wiki/"
 "Two's_complement"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.binary_repr:58
+#: of numpy.binary_repr:60
 msgid "[R962252997619-1]_"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.binary_repr:61
+#: of numpy.binary_repr:63
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.binary_repr:74
+#: of numpy.binary_repr:76
 msgid ""
 "The two's complement is returned when the input number is negative and width "
 "is specified:"
@@ -167,16 +167,15 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.binary_repr:-1
 msgid ""
-"<div id=\"9ad2d7f0-21dd-4527-83c6-399de14c98ad\" "
+"<div id=\"afa12a26-f54e-4b6f-90c4-368a1691fca1\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('5518acad-027a-4e0b-9596-"
-"c387ed015889','9ad2d7f0-21dd-4527-83c6-399de14c98ad')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('5518acad-027a-4e0b-9596-"
-"c387ed015889','9ad2d7f0-21dd-4527-83c6-399de14c98ad')\">Open In Tab</"
-"button></div><div id=\"8debb2c8-7979-4a82-9887-52bd8779aac3\" "
+"tryExamplesHideIframe('160c4420-ea81-403d-9fdb-e5e51dfdfbe5','afa12a26-"
+"f54e-4b6f-90c4-368a1691fca1')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('160c4420-"
+"ea81-403d-9fdb-e5e51dfdfbe5','afa12a26-f54e-4b6f-90c4-368a1691fca1')\">Open "
+"In Tab</button></div><div id=\"88106ffc-5792-4eab-943e-7f935d9c9724\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 

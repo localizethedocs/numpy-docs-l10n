@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -78,7 +78,7 @@ msgid "First, fetch new commits from the ``upstream`` repository:"
 msgstr ""
 
 #: ../../../dev/development_workflow.rst:42
-#: ../../../dev/development_workflow.rst:296
+#: ../../../dev/development_workflow.rst:300
 msgid "git fetch upstream"
 msgstr ""
 
@@ -415,28 +415,35 @@ msgid ""
 "upcoming_changes/README.rst`` file."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:276
+#: ../../../dev/development_workflow.rst:272
+msgid ""
+"Use the same prefix convention for your pull request title as for commit "
+"messages (e.g., ``BUG:``, ``ENH:``, ``DOC:``). This enables automated "
+"labeling of your PR."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:280
 msgid "Getting your PR reviewed"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:278
+#: ../../../dev/development_workflow.rst:282
 msgid ""
 "We review pull requests as soon as we can, typically within a week. If you "
 "get no review comments within two weeks, feel free to ask for feedback by "
 "adding a comment on your PR (this will notify maintainers)."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:282
+#: ../../../dev/development_workflow.rst:286
 msgid ""
 "If your PR is large or complicated, asking for input on the numpy-discussion "
 "mailing list may also be useful."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:289
+#: ../../../dev/development_workflow.rst:293
 msgid "Rebasing on main"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:291
+#: ../../../dev/development_workflow.rst:295
 msgid ""
 "This updates your feature branch with changes from the upstream NumPy GitHub "
 "repo. If you do not absolutely need to do this, try to avoid doing it, "
@@ -444,11 +451,11 @@ msgid ""
 "remote repository with new commits from upstream::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:298
+#: ../../../dev/development_workflow.rst:302
 msgid "Next, you need to update the feature branch::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:300
+#: ../../../dev/development_workflow.rst:304
 msgid ""
 "# go to the feature branch\n"
 "git checkout my-new-feature\n"
@@ -458,61 +465,61 @@ msgid ""
 "git rebase upstream/main"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:307
+#: ../../../dev/development_workflow.rst:311
 msgid ""
 "If you have made changes to files that have changed also upstream, this may "
 "generate merge conflicts that you need to resolve. See :ref:"
 "`below<recovering-from-mess-up>` for help in this case."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:311
+#: ../../../dev/development_workflow.rst:315
 msgid "Finally, remove the backup branch upon a successful rebase::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:313
+#: ../../../dev/development_workflow.rst:317
 msgid "git branch -D tmp"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:318
+#: ../../../dev/development_workflow.rst:322
 msgid ""
 "Rebasing on main is preferred over merging upstream back to your branch. "
 "Using ``git merge`` and ``git pull`` is discouraged when working on feature "
 "branches."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:325
+#: ../../../dev/development_workflow.rst:329
 msgid "Recovering from mess-ups"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:327
+#: ../../../dev/development_workflow.rst:331
 msgid ""
 "Sometimes, you mess up merges or rebases. Luckily, in Git it is relatively "
 "straightforward to recover from such mistakes."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:330
+#: ../../../dev/development_workflow.rst:334
 msgid "If you mess up during a rebase::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:332
+#: ../../../dev/development_workflow.rst:336
 msgid "git rebase --abort"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:334
+#: ../../../dev/development_workflow.rst:338
 msgid "If you notice you messed up after the rebase::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:336
+#: ../../../dev/development_workflow.rst:340
 msgid ""
 "# reset branch back to the saved point\n"
 "git reset --hard tmp"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:339
+#: ../../../dev/development_workflow.rst:343
 msgid "If you forgot to make a backup branch::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:341
+#: ../../../dev/development_workflow.rst:345
 msgid ""
 "# look at the reflog of the branch\n"
 "git reflog show my-feature-branch\n"
@@ -529,39 +536,39 @@ msgid ""
 "git reset --hard my-feature-branch@{2}"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:352
+#: ../../../dev/development_workflow.rst:356
 msgid ""
 "If you didn't actually mess up but there are merge conflicts, you need to "
 "resolve those."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:357
+#: ../../../dev/development_workflow.rst:361
 msgid "Additional things you might want to do"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:362
+#: ../../../dev/development_workflow.rst:366
 msgid "Rewriting commit history"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:366
+#: ../../../dev/development_workflow.rst:370
 msgid "Do this only for your own feature branches."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:368
+#: ../../../dev/development_workflow.rst:372
 msgid ""
 "There's an embarrassing typo in a commit you made? Or perhaps you made "
 "several false starts you would like the posterity not to see."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:371
+#: ../../../dev/development_workflow.rst:375
 msgid "This can be done via *interactive rebasing*."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:373
+#: ../../../dev/development_workflow.rst:377
 msgid "Suppose that the commit history looks like this::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:375
+#: ../../../dev/development_workflow.rst:379
 msgid ""
 "git log --oneline\n"
 "eadc391 Fix some remaining bugs\n"
@@ -573,26 +580,26 @@ msgid ""
 "..."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:384
+#: ../../../dev/development_workflow.rst:388
 msgid ""
 "and ``6ad92e5`` is the last commit in the ``main`` branch. Suppose we want "
 "to make the following changes:"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:387
+#: ../../../dev/development_workflow.rst:391
 msgid "Rewrite the commit message for ``13d7934`` to something more sensible."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:388
+#: ../../../dev/development_workflow.rst:392
 msgid ""
 "Combine the commits ``2dec1ac``, ``a815645``, ``eadc391`` into a single one."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:390
+#: ../../../dev/development_workflow.rst:394
 msgid "We do as follows::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:392
+#: ../../../dev/development_workflow.rst:396
 msgid ""
 "# make a backup of the current state\n"
 "git branch tmp HEAD\n"
@@ -600,11 +607,11 @@ msgid ""
 "git rebase -i 6ad92e5"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:397
+#: ../../../dev/development_workflow.rst:401
 msgid "This will open an editor with the following text in it::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:399
+#: ../../../dev/development_workflow.rst:403
 msgid ""
 "pick 13d7934 First implementation\n"
 "pick 2dec1ac Fix a few bugs + disable\n"
@@ -625,11 +632,11 @@ msgid ""
 "#"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:417
+#: ../../../dev/development_workflow.rst:421
 msgid "To achieve what we want, we will make the following changes to it::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:419
+#: ../../../dev/development_workflow.rst:423
 msgid ""
 "r 13d7934 First implementation\n"
 "pick 2dec1ac Fix a few bugs + disable\n"
@@ -637,20 +644,20 @@ msgid ""
 "f eadc391 Fix some remaining bugs"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:424
+#: ../../../dev/development_workflow.rst:428
 msgid ""
 "This means that (i) we want to edit the commit message for ``13d7934``, and "
 "(ii) collapse the last three commits into one. Now we save and quit the "
 "editor."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:428
+#: ../../../dev/development_workflow.rst:432
 msgid ""
 "Git will then immediately bring up an editor for editing the commit message. "
 "After revising it, we get the output::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:431
+#: ../../../dev/development_workflow.rst:435
 msgid ""
 "[detached HEAD 721fc64] FOO: First implementation\n"
 " 2 files changed, 199 insertions(+), 66 deletions(-)\n"
@@ -659,28 +666,28 @@ msgid ""
 "Successfully rebased and updated refs/heads/my-feature-branch."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:437
+#: ../../../dev/development_workflow.rst:441
 msgid "and the history looks now like this::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:439
+#: ../../../dev/development_workflow.rst:443
 msgid ""
 "0f22701 Fix a few bugs + disable\n"
 "721fc64 ENH: Sophisticated feature\n"
 "6ad92e5 * masked is now an instance of a new object, MaskedConstant"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:443
+#: ../../../dev/development_workflow.rst:447
 msgid ""
 "If it went wrong, recovery is again possible as explained :ref:`above "
 "<recovering-from-mess-up>`."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:447
+#: ../../../dev/development_workflow.rst:451
 msgid "Deleting a branch on GitHub"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:451
+#: ../../../dev/development_workflow.rst:455
 msgid ""
 "git checkout main\n"
 "# delete branch locally\n"
@@ -689,130 +696,130 @@ msgid ""
 "git push origin --delete my-unwanted-branch"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:457
+#: ../../../dev/development_workflow.rst:461
 msgid ""
 "See also: https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-"
 "branch-locally-and-remotely"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:462
+#: ../../../dev/development_workflow.rst:466
 msgid "Several people sharing a single repository"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:464
+#: ../../../dev/development_workflow.rst:468
 msgid ""
 "If you want to work on some stuff with other people, where you are all "
 "committing into the same repository, or even the same branch, then just "
 "share it via GitHub."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:468
+#: ../../../dev/development_workflow.rst:472
 msgid "First fork NumPy into your account, as from :ref:`forking`."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:470
+#: ../../../dev/development_workflow.rst:474
 msgid ""
 "Then, go to your forked repository github page, say ``https://github.com/"
 "your-user-name/numpy``"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:473
+#: ../../../dev/development_workflow.rst:477
 msgid ""
 "Click on the 'Admin' button, and add anyone else to the repo as a "
 "collaborator:"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:478
+#: ../../../dev/development_workflow.rst:482
 msgid "Now all those people can do::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:480
+#: ../../../dev/development_workflow.rst:484
 msgid "git clone git@github.com:your-user-name/numpy.git"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:482
+#: ../../../dev/development_workflow.rst:486
 msgid ""
 "Remember that links starting with ``git@`` use the ssh protocol and are read-"
 "write; links starting with ``git://`` are read-only."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:485
+#: ../../../dev/development_workflow.rst:489
 msgid ""
 "Your collaborators can then commit directly into that repo with the usual::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:488
+#: ../../../dev/development_workflow.rst:492
 msgid ""
 "git commit -am 'ENH - much better code'\n"
 "git push origin my-feature-branch # pushes directly into your repo"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:493
+#: ../../../dev/development_workflow.rst:497
 msgid "Checkout changes from an existing pull request"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:495
+#: ../../../dev/development_workflow.rst:499
 msgid ""
 "If you want to test the changes in a pull request or continue the work in a "
 "new pull request, the commits are to be cloned into a local branch in your "
 "forked repository"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:499
+#: ../../../dev/development_workflow.rst:503
 msgid ""
 "First ensure your upstream points to the main repo, as from :ref:`linking-to-"
 "upstream`"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:501
+#: ../../../dev/development_workflow.rst:505
 msgid ""
 "Then, fetch the changes and create a local branch. Assuming ``$ID`` is the "
 "pull request number and ``$BRANCHNAME`` is the name of the *new local* "
 "branch you wish to create::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:504
+#: ../../../dev/development_workflow.rst:508
 msgid "git fetch upstream pull/$ID/head:$BRANCHNAME"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:506
+#: ../../../dev/development_workflow.rst:510
 msgid "Checkout the newly created branch::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:508
+#: ../../../dev/development_workflow.rst:512
 msgid "git checkout $BRANCHNAME"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:510
+#: ../../../dev/development_workflow.rst:514
 msgid "You now have the changes in the pull request."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:514
+#: ../../../dev/development_workflow.rst:518
 msgid "Exploring your repository"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:516
+#: ../../../dev/development_workflow.rst:520
 msgid ""
 "To see a graphical representation of the repository branches and commits::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:519
+#: ../../../dev/development_workflow.rst:523
 msgid "gitk --all"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:521
+#: ../../../dev/development_workflow.rst:525
 msgid "To see a linear list of commits for this branch::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:523
+#: ../../../dev/development_workflow.rst:527
 msgid "git log"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:527
+#: ../../../dev/development_workflow.rst:531
 msgid "Backporting"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:529
+#: ../../../dev/development_workflow.rst:533
 msgid ""
 "Backporting is the process of copying new feature/fixes committed in NumPy's "
 "``main`` branch back to stable release branches. To do this you make a "
@@ -821,26 +828,26 @@ msgid ""
 "containing the backport."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:535
+#: ../../../dev/development_workflow.rst:539
 msgid ""
 "First, you need to make the branch you will work on. This needs to be based "
 "on the older version of NumPy (not main)::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:538
+#: ../../../dev/development_workflow.rst:542
 msgid ""
 "# Make a new branch based on numpy/maintenance/1.8.x,\n"
 "# backport-3324 is our new name for the branch.\n"
 "git checkout -b backport-3324 upstream/maintenance/1.8.x"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:542
+#: ../../../dev/development_workflow.rst:546
 msgid ""
 "Now you need to apply the changes from main to this branch using ``git "
 "cherry-pick``::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:545
+#: ../../../dev/development_workflow.rst:549
 msgid ""
 "# Update remote\n"
 "git fetch upstream\n"
@@ -855,7 +862,7 @@ msgid ""
 "git cherry-pick --continue"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:557
+#: ../../../dev/development_workflow.rst:561
 msgid ""
 "You might run into some conflicts cherry picking here. These are resolved "
 "the same way as merge/rebase conflicts. Except here you can use ``git "
@@ -863,83 +870,83 @@ msgid ""
 "sure nothing gets screwed up."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:562
+#: ../../../dev/development_workflow.rst:566
 msgid "Push the new branch to your Github repository::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:564
+#: ../../../dev/development_workflow.rst:568
 msgid "git push -u origin backport-3324"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:566
+#: ../../../dev/development_workflow.rst:570
 msgid ""
 "Finally make a pull request using Github. Make sure it is against the "
 "maintenance branch and not main, Github will usually suggest you make the "
 "pull request against main."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:573
+#: ../../../dev/development_workflow.rst:577
 msgid "Pushing changes to the main repo"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:575
+#: ../../../dev/development_workflow.rst:579
 msgid "*Requires commit rights to the main NumPy repo.*"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:577
+#: ../../../dev/development_workflow.rst:581
 msgid ""
 "When you have a set of \"ready\" changes in a feature branch ready for "
 "NumPy's ``main`` or ``maintenance`` branches, you can push them to "
 "``upstream`` as follows:"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:581
+#: ../../../dev/development_workflow.rst:585
 msgid "First, merge or rebase on the target branch."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:583
+#: ../../../dev/development_workflow.rst:587
 msgid "Only a few, unrelated commits then prefer rebasing::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:585
+#: ../../../dev/development_workflow.rst:589
 msgid ""
 "git fetch upstream\n"
 "git rebase upstream/main"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:588
+#: ../../../dev/development_workflow.rst:592
 msgid "See :ref:`rebasing-on-main`."
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:590
+#: ../../../dev/development_workflow.rst:594
 msgid "If all of the commits are related, create a merge commit::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:592
+#: ../../../dev/development_workflow.rst:596
 msgid ""
 "git fetch upstream\n"
 "git merge --no-ff upstream/main"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:595
+#: ../../../dev/development_workflow.rst:599
 msgid "Check that what you are going to push looks sensible::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:597
+#: ../../../dev/development_workflow.rst:601
 msgid ""
 "git log -p upstream/main..\n"
 "git log --oneline --graph"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:600
+#: ../../../dev/development_workflow.rst:604
 msgid "Push to upstream::"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:602
+#: ../../../dev/development_workflow.rst:606
 msgid "git push upstream my-feature-branch:main"
 msgstr ""
 
-#: ../../../dev/development_workflow.rst:606
+#: ../../../dev/development_workflow.rst:610
 msgid ""
 "It's usually a good idea to use the ``-n`` flag to ``git push`` to check "
 "first that you're about to push the changes you want to the place you want."

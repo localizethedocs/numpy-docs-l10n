@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,7 +29,7 @@ msgstr ""
 msgid "Parameters"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:20
+#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:22
 msgid "**seed**"
 msgstr ""
 
@@ -45,11 +45,11 @@ msgid ""
 "`BitGenerator` state. One may also pass in a `SeedSequence` instance."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:23
+#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:25
 msgid "Notes"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:24
+#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:26
 msgid ""
 "PCG-64 DXSM is a 128-bit implementation of O'Neill's permutation "
 "congruential generator ([Rad26d0f7d970-1]_, [Rad26d0f7d970-2]_). PCG-64 DXSM "
@@ -61,7 +61,7 @@ msgid ""
 "output."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:32
+#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:34
 msgid ""
 "`PCG64DXSM` provides a capsule containing function pointers that produce "
 "doubles, and unsigned 32 and 64- bit integers. These are not directly "
@@ -69,18 +69,18 @@ msgid ""
 "that supports low-level access."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:37
+#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:39
 msgid ""
 "Supports the method :meth:`advance` to advance the RNG an arbitrary number "
 "of steps. The state of the PCG-64 DXSM RNG is represented by 2 128-bit "
 "unsigned integers."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:41
+#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:43
 msgid "**State and Seeding**"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:43
+#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:45
 msgid ""
 "The `PCG64DXSM` state vector consists of 2 unsigned 128-bit values, which "
 "are represented externally as Python ints. One is the state of the PRNG, "
@@ -88,51 +88,51 @@ msgid ""
 "fixed odd increment used in the LCG."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:48
+#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:50
 msgid ""
 "The input seed is processed by `SeedSequence` to generate both values. The "
 "increment is not independently settable."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:51
+#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:53
 msgid "**Parallel Features**"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:53
+#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:55
 msgid ""
 "The preferred way to use a BitGenerator in parallel applications is to use "
 "the `SeedSequence.spawn` method to obtain entropy values, and to use these "
 "to generate new BitGenerators:"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:61
+#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:63
 msgid "**Compatibility Guarantee**"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:63
+#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:65
 msgid ""
 "`PCG64DXSM` makes a guarantee that a fixed seed will always produce the same "
 "random integer stream."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:67
+#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:69
 msgid "References"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:68
+#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:70
 msgid ""
 "`\"PCG, A Family of Better Random Number Generators\" <http://www.pcg-random."
 "org/>`_"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:70
+#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:72
 msgid ""
 "O'Neill, Melissa E. `\"PCG: A Family of Simple Fast Space-Efficient "
 "Statistically Good Algorithms for Random Number Generation\" <https://www.cs."
 "hmc.edu/tr/hmc-cs-2014-0905.pdf>`_"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:76
+#: ../../../../docstring of numpy.random._pcg64.PCG64DXSM:78
 msgid "[Rad26d0f7d970-1]_, [Rad26d0f7d970-2]_"
 msgstr ""
 

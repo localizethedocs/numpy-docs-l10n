@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -148,7 +148,7 @@ msgid "Starting value for the sum. See `~numpy.ufunc.reduce` for details."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sum:46
+#: of numpy.sum:48
 msgid "**where**"
 msgstr ""
 
@@ -168,7 +168,7 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sum:60
+#: of numpy.sum:62
 msgid "**sum_along_axis**"
 msgstr ""
 
@@ -178,7 +178,7 @@ msgid "ndarray"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sum:51
+#: of numpy.sum:53
 msgid ""
 "An array with the same shape as `a`, with the specified axis removed.   If "
 "`a` is a 0-d array, or if `axis` is None, a scalar is returned.  If an "
@@ -186,69 +186,69 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sum:65
+#: of numpy.sum:67
 msgid ":obj:`ndarray.sum`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sum:66
+#: of numpy.sum:68
 msgid "Equivalent method."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sum:67
+#: of numpy.sum:69
 msgid ":obj:`add`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sum:68
+#: of numpy.sum:70
 msgid "``numpy.add.reduce`` equivalent function."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sum:69
+#: of numpy.sum:71
 msgid ":obj:`cumsum`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sum:70
+#: of numpy.sum:72
 msgid "Cumulative sum of array elements."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sum:71
+#: of numpy.sum:73
 msgid ":obj:`trapezoid`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sum:72
+#: of numpy.sum:74
 msgid "Integration of array values using composite trapezoidal rule."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sum:73
+#: of numpy.sum:75
 msgid ":obj:`mean`, :obj:`average`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sum:77
+#: of numpy.sum:79
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sum:78
+#: of numpy.sum:80
 msgid ""
 "Arithmetic is modular when using integer types, and no error is raised on "
 "overflow."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sum:81
+#: of numpy.sum:83
 msgid "The sum of an empty array is the neutral element 0:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sum:86
+#: of numpy.sum:88
 msgid ""
 "For floating point numbers the numerical precision of sum (and ``np.add."
 "reduce``) is in general limited by directly adding each number individually "
@@ -263,38 +263,37 @@ msgid ""
 "slower but more precise approach to summation. Especially when summing a "
 "large number of lower precision floating point numbers, such as ``float32``, "
 "numerical errors can become significant. In such cases it can be advisable "
-"to use `dtype=\"float64\"` to use a higher precision for the output."
+"to use `dtype=np.float64` to use a higher precision for the output."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sum:105
+#: of numpy.sum:107
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sum:124
+#: of numpy.sum:126
 msgid "If the accumulator is too small, overflow occurs:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sum:129
+#: of numpy.sum:131
 msgid "You can also start the sum with a value other than zero:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.sum:-1
 msgid ""
-"<div id=\"8d90a683-5ad7-4edb-8fd7-5d9fadceba28\" "
+"<div id=\"8d2f51ed-b744-4121-a26a-e63887aff5fa\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('efe09960-"
-"c38b-4b8e-9e6a-8c19edaa2d56','8d90a683-5ad7-4edb-8fd7-5d9fadceba28')\">Go "
-"Back</button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('efe09960-"
-"c38b-4b8e-9e6a-8c19edaa2d56','8d90a683-5ad7-4edb-8fd7-5d9fadceba28')\">Open "
-"In Tab</button></div><div id=\"31765484-212d-4083-8097-5843e23af4b3\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('be71cc9f-71b9-4352-94dd-0873f7484aef','8d2f51ed-"
+"b744-4121-a26a-e63887aff5fa')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('be71cc9f-71b9-4352-94dd-0873f7484aef','8d2f51ed-b744-4121-a26a-"
+"e63887aff5fa')\">Open In Tab</button></div><div id=\"f31f6173-ac54-4620-a2b3-"
+"e956d67148d6\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring

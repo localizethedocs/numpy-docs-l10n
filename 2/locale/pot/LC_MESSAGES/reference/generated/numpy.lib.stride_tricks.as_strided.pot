@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -105,54 +105,86 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.as_strided:29
+msgid "**check_bounds**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.as_strided:-1
+msgid "bool or None"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.as_strided:26
+msgid "Check new stride and shape for potential out of bound memory access."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
 #: of numpy.lib.stride_tricks.as_strided:0
 msgid "Returns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
-#: of numpy.lib.stride_tricks.as_strided:34
+#: of numpy.lib.stride_tricks.as_strided:37
 msgid "**view**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
-#: of numpy.lib.stride_tricks.as_strided:39
-msgid ":obj:`broadcast_to`"
+#: of numpy.lib.stride_tricks.as_strided:0
+msgid "Raises"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
-#: of numpy.lib.stride_tricks.as_strided:40
-msgid "broadcast an array to a given shape."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
-#: of numpy.lib.stride_tricks.as_strided:41
-msgid ":obj:`reshape`"
+#: of numpy.lib.stride_tricks.as_strided:45
+msgid "ValueError"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
 #: of numpy.lib.stride_tricks.as_strided:42
+msgid ""
+"If `check_bounds` is True the given shape and strides could result in out-of-"
+"bounds memory access."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.as_strided:50
+msgid ":obj:`broadcast_to`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.as_strided:51
+msgid "broadcast an array to a given shape."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.as_strided:52
+msgid ":obj:`reshape`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.as_strided:53
 msgid "reshape an array."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
-#: of numpy.lib.stride_tricks.as_strided:43
+#: of numpy.lib.stride_tricks.as_strided:54
 msgid ":obj:`lib.stride_tricks.sliding_window_view`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
-#: of numpy.lib.stride_tricks.as_strided:44
+#: of numpy.lib.stride_tricks.as_strided:55
 msgid "userfriendly and safe function for a creation of sliding window views."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
-#: of numpy.lib.stride_tricks.as_strided:48
+#: of numpy.lib.stride_tricks.as_strided:59
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
-#: of numpy.lib.stride_tricks.as_strided:49
+#: of numpy.lib.stride_tricks.as_strided:60
 msgid ""
-"``as_strided`` creates a view into the array given the exact strides and "
+"`as_strided` creates a view into the array given the exact strides and "
 "shape. This means it manipulates the internal data structure of ndarray and, "
 "if done incorrectly, the array elements can point to invalid memory and can "
 "corrupt results or crash your program. It is advisable to always use the "
@@ -161,7 +193,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
-#: of numpy.lib.stride_tricks.as_strided:57
+#: of numpy.lib.stride_tricks.as_strided:68
 msgid ""
 "Furthermore, arrays created with this function often contain self "
 "overlapping memory, so that two elements are identical. Vectorized write "
@@ -170,14 +202,53 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
-#: of numpy.lib.stride_tricks.as_strided:63
+#: of numpy.lib.stride_tricks.as_strided:74
 msgid ""
 "Since writing to these arrays has to be tested and done with great care, you "
 "may want to use ``writeable=False`` to avoid accidental write operations."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
-#: of numpy.lib.stride_tricks.as_strided:67
+#: of numpy.lib.stride_tricks.as_strided:78
+msgid "For these reasons it is advisable to avoid `as_strided` when possible."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.as_strided:83
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.as_strided:95
 msgid ""
-"For these reasons it is advisable to avoid ``as_strided`` when possible."
+"Attempting to create an out-of-bounds view and use ``check_bounds=True`` "
+"as_strided will raises an error:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.as_strided:103
+msgid "When working with views, bounds are checked against the base array:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.as_strided:-1
+msgid ""
+"<div id=\"144662c1-9ee5-4a07-a73c-2d8edbadbd87\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('1825d4a0-0ed2-4ade-91fa-"
+"d373a75f5f15','144662c1-9ee5-4a07-a73c-2d8edbadbd87')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('1825d4a0-0ed2-4ade-91fa-d373a75f5f15','144662c1-9ee5-4a07-"
+"a73c-2d8edbadbd87')\">Open In Tab</button></div><div id=\"58aca941-61d2-49e5-"
+"a970-e9063bf8f367\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/stride_tricks.py:docstring
+#: of numpy.lib.stride_tricks.as_strided:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
 msgstr ""
