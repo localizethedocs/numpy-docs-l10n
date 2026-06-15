@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:58+0000\n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2295,13 +2295,13 @@ msgstr ""
 
 #: ../../../reference/c-api/array.rst:2053
 msgid ""
-"The output of of this function will be used to construct views of the "
-"arguments as if they were the translated dtypes and does not use a cast. "
-"This means this mechanism is mostly useful for DTypes that \"wrap\" another "
-"DType implementation. For example, a unit DType could use this to wrap an "
-"existing floating point DType without needing to re-implement low-level "
-"ufunc logic. In the unit example, ``resolve_descriptors`` would handle "
-"computing the output unit from the input unit."
+"The output of this function will be used to construct views of the arguments "
+"as if they were the translated dtypes and does not use a cast. This means "
+"this mechanism is mostly useful for DTypes that \"wrap\" another DType "
+"implementation. For example, a unit DType could use this to wrap an existing "
+"floating point DType without needing to re-implement low-level ufunc logic. "
+"In the unit example, ``resolve_descriptors`` would handle computing the "
+"output unit from the input unit."
 msgstr ""
 
 #: ../../../reference/c-api/array.rst:2068
@@ -5206,26 +5206,23 @@ msgid "(Requirement) Specifies that the sort must be stable."
 msgstr ""
 
 #: ../../../reference/c-api/array.rst:4679
-msgid ""
-"(Requirement) Specifies that the sort must be in descending order. This "
-"functionality is not yet implemented for any of the NumPy types and cannot "
-"yet be set from the Python interface."
+msgid "(Requirement) Specifies that the sort must be in descending order."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4685
+#: ../../../reference/c-api/array.rst:4683
 msgid ""
 "A special variable type indicating the number of \"kinds\" of scalars "
 "distinguished in determining scalar-coercion rules. This variable can take "
 "on the values:"
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4705
+#: ../../../reference/c-api/array.rst:4703
 msgid ""
 "Defined to be the number of scalar kinds (not including :c:data:"
 "`NPY_NOSCALAR`)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4710
+#: ../../../reference/c-api/array.rst:4708
 msgid ""
 "An enumeration type indicating the element order that an array should be "
 "interpreted in. When a brand new array is created, generally only "
@@ -5233,99 +5230,115 @@ msgid ""
 "inputs are provided, the order can be based on them."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4717
+#: ../../../reference/c-api/array.rst:4715
 msgid "Fortran order if all the inputs are Fortran, C otherwise."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4721
+#: ../../../reference/c-api/array.rst:4719
 msgid "C order."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4725
+#: ../../../reference/c-api/array.rst:4723
 msgid "Fortran order."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4729
+#: ../../../reference/c-api/array.rst:4727
 msgid ""
 "An order as close to the order of the inputs as possible, even if the input "
 "is in neither C nor Fortran order."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4734
+#: ../../../reference/c-api/array.rst:4732
 msgid ""
 "A variable type indicating the kind of clipping that should be applied in "
 "certain functions."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4739
+#: ../../../reference/c-api/array.rst:4737
 msgid ""
 "The default for most operations, raises an exception if an index is out of "
 "bounds."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4744
+#: ../../../reference/c-api/array.rst:4742
 msgid "Clips an index to the valid range if it is out of bounds."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4748
+#: ../../../reference/c-api/array.rst:4746
 msgid "Wraps an index to the valid range if it is out of bounds."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4752
+#: ../../../reference/c-api/array.rst:4750
 msgid ""
 "A variable type indicating whether the index returned should be that of the "
 "first suitable location (if :c:data:`NPY_SEARCHLEFT`) or of the last (if :c:"
 "data:`NPY_SEARCHRIGHT`)."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4762
-msgid "A variable type indicating the selection algorithm being used."
+#: ../../../reference/c-api/array.rst:4760
+msgid ""
+"A variable type indicating the selection algorithm options for the "
+"partitioning functions, see also :c:type:`NPY_SORTKIND`."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4768
+#: ../../../reference/c-api/array.rst:4765
+msgid "The default selection algorithm."
+msgstr ""
+
+#: ../../../reference/c-api/array.rst:4769
+msgid "(Requirement) Flag that changes the partition/sort order to descending."
+msgstr ""
+
+#: ../../../reference/c-api/array.rst:4773
+msgid ""
+"Identical to ``NPY_SELECT_DEFAULT`` but defined prior to NumPy 2.5. Prefer "
+"``NPY_SELECT_DEFAULT`` if compiling with NumPy 2.5 or later."
+msgstr ""
+
+#: ../../../reference/c-api/array.rst:4778
 msgid ""
 "An enumeration type indicating how permissive data conversions should be. "
 "This is used by the iterator added in NumPy 1.6, and is intended to be used "
 "more broadly in a future version."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4774
+#: ../../../reference/c-api/array.rst:4784
 msgid "Only allow identical types."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4778
+#: ../../../reference/c-api/array.rst:4788
 msgid "Allow identical and casts involving byte swapping."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4782
+#: ../../../reference/c-api/array.rst:4792
 msgid ""
 "Only allow casts which will not cause values to be rounded, truncated, or "
 "otherwise changed."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4787
+#: ../../../reference/c-api/array.rst:4797
 msgid ""
 "Allow any safe casts, and casts between types of the same kind. For example, "
 "float64 -> float32 is permitted with this rule."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4792
+#: ../../../reference/c-api/array.rst:4802
 msgid "Allow any cast, no matter what kind of data loss may occur."
 msgstr ""
 
-#: ../../../reference/c-api/array.rst:4796
+#: ../../../reference/c-api/array.rst:4806
 msgid ""
 "Error if any values change during a cast. Currently supported only in "
 "``ndarray.astype(... casting='same_value')``"
 msgstr ""
 
 #: ../../../reference/c-api/array.rst:15
-#: ../../../reference/c-api/array.rst:4801
+#: ../../../reference/c-api/array.rst:4811
 msgid "ndarray"
 msgstr ""
 
 #: ../../../reference/c-api/array.rst:15
-#: ../../../reference/c-api/array.rst:4801
+#: ../../../reference/c-api/array.rst:4811
 msgid "C-API"
 msgstr ""
 

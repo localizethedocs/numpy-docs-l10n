@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:58+0000\n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -76,10 +76,10 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.sort:15
 msgid ""
-"Sorting algorithm. The default is 'quicksort'. Note that both 'stable' and "
-"'mergesort' use timsort or radix sort under the covers and, in general, the "
-"actual implementation will vary with data type. The 'mergesort' option is "
-"retained for backwards compatibility."
+"Please use the `stable` parameter instead. This argument is retained for "
+"backwards compatibility and provides no additional control. 'quicksort' and "
+"'heapsort' are equivalent to ``stable=False``, while 'mergesort' and "
+"'stable' are equivalent to ``stable=True``."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
@@ -213,20 +213,21 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.sort:73
 msgid ""
-"The various sorting algorithms are characterized by their average speed, "
+"NumPy uses different sorting algorithms depending on whether the sort is "
+"stable and which data types are used.  These are characterized by their "
 "worst case performance, work space size, and whether they are stable. A "
-"stable sort keeps items with the same key in the same relative order. The "
-"four algorithms implemented in NumPy have the following properties:"
+"stable sort keeps items with the same key in the same relative order.  NumPy "
+"chooses between three algorithms:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.sort:80
-msgid "kind"
+msgid "stable"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.sort:80
-msgid "speed"
+msgid "algorithm"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
@@ -241,84 +242,66 @@ msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.sort:80
-msgid "stable"
+msgid "note"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.sort:82
-msgid "'quicksort'"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:82
-msgid "1"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:82
-msgid "O(n^2)"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:82 numpy.sort:83
-msgid "0"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:82 numpy.sort:83
 msgid "no"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:83
-msgid "'heapsort'"
+#: of numpy.sort:82
+msgid "Introsort"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:83
-msgid "3"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:83 numpy.sort:84 numpy.sort:85
+#: of numpy.sort:82 numpy.sort:83
 msgid "O(n*log(n))"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:84
-msgid "'mergesort'"
+#: of numpy.sort:82
+msgid "0"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:84 numpy.sort:85
-msgid "2"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:84 numpy.sort:85
-msgid "~n/2"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:84 numpy.sort:85
+#: of numpy.sort:83 numpy.sort:84
 msgid "yes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:85
-msgid "'timsort'"
+#: of numpy.sort:83
+msgid "Timsort"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:88
-msgid ""
-"The datatype determines which of 'mergesort' or 'timsort' is actually used, "
-"even if 'mergesort' is specified. User selection at a finer scale is not "
-"currently available."
+#: of numpy.sort:83
+msgid "~n/2"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:92
+#: of numpy.sort:84
+msgid "Radix sort"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.sort:84
+msgid "O(n)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.sort:84
+msgid "n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.sort:84
+msgid "bools and narrow integers [Rf1092b0d3703-1]_"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.sort:87
 msgid ""
 "For performance, ``sort`` makes a temporary copy if needed to make the data "
 "`contiguous <https://numpy.org/doc/stable/glossary.html#term-contiguous>`_ "
@@ -328,7 +311,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:98
+#: of numpy.sort:93
 msgid ""
 "The sort order for complex numbers is lexicographic. If both the real and "
 "imaginary parts are non-nan then the order is determined by the real parts "
@@ -337,7 +320,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:103
+#: of numpy.sort:98
 msgid ""
 "Previous to numpy 1.4.0 sorting real and complex arrays containing nan "
 "values led to undefined behaviour. In numpy versions >= 1.4.0 nan values are "
@@ -345,17 +328,17 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:107
+#: of numpy.sort:102
 msgid "Real: [R, nan]"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:108
+#: of numpy.sort:103
 msgid "Complex: [R + Rj, R + nanj, nan + Rj, nan + nanj]"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:110
+#: of numpy.sort:105
 msgid ""
 "where R is a non-nan real value. Complex values with the same nan placements "
 "are sorted according to the non-nan part if it exists. Non-nan values are "
@@ -363,72 +346,66 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:114
+#: of numpy.sort:109
 msgid ""
-"quicksort has been changed to: `introsort <https://en.wikipedia.org/wiki/"
-"Introsort>`_. When sorting does not make enough progress it switches to "
-"`heapsort <https://en.wikipedia.org/wiki/Heapsort>`_. This implementation "
-"makes quicksort O(n*log(n)) in the worst case."
+"NumPy uses `introsort <https://en.wikipedia.org/wiki/Introsort>`_ by default "
+"for unstable sorting."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:120
+#: of numpy.sort:112
 msgid ""
-"'stable' automatically chooses the best stable sorting algorithm for the "
-"data type being sorted. It, along with 'mergesort' is currently mapped to "
-"`timsort <https://en.wikipedia.org/wiki/Timsort>`_ or `radix sort <https://"
-"en.wikipedia.org/wiki/Radix_sort>`_ depending on the data type. API forward "
-"compatibility currently limits the ability to select the implementation and "
-"it is hardwired for the different data types."
+"For stable sorting, NumPy automatically chooses the best stable sorting "
+"algorithm for the data type being sorted. It is currently mapped to `timsort "
+"<https://en.wikipedia.org/wiki/Timsort>`_ or `radix sort <https://en."
+"wikipedia.org/wiki/Radix_sort>`_ for bools and integer types with a width of "
+"16 bits or less."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:130
+#: of numpy.sort:118
 msgid ""
-"Timsort is added for better performance on already or nearly sorted data. On "
-"random data timsort is almost identical to mergesort. It is now used for "
-"stable sort while quicksort is still the default sort if none is chosen. For "
-"timsort details, refer to `CPython listsort.txt <https://github.com/python/"
-"cpython/blob/3.7/Objects/listsort.txt>`_ 'mergesort' and 'stable' are mapped "
-"to radix sort for integer data types. Radix sort is an O(n) sort instead of "
-"O(n log n)."
+"For numerical sorts, NaT and NaN always sort to the end of the array for "
+"both ascending and descending sort order."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:139
-msgid "NaT now sorts to the end of arrays for consistency with NaN."
+#: of numpy.sort:121
+msgid ""
+"Radix sort is used for stable sorting of bools and narrow integer types (up "
+"to 16 bits). For these it performs better than Timsort."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:143
+#: of numpy.sort:126
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:159
+#: of numpy.sort:142
 msgid ""
 "Use the `order` keyword to specify a field to use when sorting a structured "
 "array:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.sort:171
+#: of numpy.sort:154
 msgid "Sort by age, then height if ages are equal:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.sort:-1
 msgid ""
-"<div id=\"ae35efa8-03c4-49bb-9f6e-22ca9f27f0a7\" "
+"<div id=\"2d39e4c7-de80-4916-8797-13a5e3a01f7a\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('a357364a-48a2-4a3d-9fae-"
-"e9d68dbe88b2','ae35efa8-03c4-49bb-9f6e-22ca9f27f0a7')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('a357364a-48a2-4a3d-9fae-"
-"e9d68dbe88b2','ae35efa8-03c4-49bb-9f6e-22ca9f27f0a7')\">Open In Tab</"
-"button></div><div id=\"b5f0a323-c05d-462c-9a22-e3e80962bfb6\" "
+"tryExamplesHideIframe('22f8c451-36ad-47e6-959a-e427866f9d77','2d39e4c7-"
+"de80-4916-8797-13a5e3a01f7a')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('22f8c451-36ad-47e6-959a-e427866f9d77','2d39e4c7-"
+"de80-4916-8797-13a5e3a01f7a')\">Open In Tab</button></div><div "
+"id=\"3d72d5fc-2d9b-4f18-8623-b7a06c2bd28e\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
