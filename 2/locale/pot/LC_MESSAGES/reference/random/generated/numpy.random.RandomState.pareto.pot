@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,7 +81,7 @@ msgid "Shape of the distribution. Must be positive."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
-#: of numpy.random.RandomState.pareto:36
+#: of numpy.random.RandomState.pareto:38
 msgid "**size**"
 msgstr ""
 
@@ -105,7 +105,7 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
-#: of numpy.random.RandomState.pareto:47
+#: of numpy.random.RandomState.pareto:49
 msgid "**out**"
 msgstr ""
 
@@ -115,61 +115,68 @@ msgid "ndarray or scalar"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
-#: of numpy.random.RandomState.pareto:41
+#: of numpy.random.RandomState.pareto:43
 msgid "Drawn samples from the parameterized Pareto distribution."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
-#: of numpy.random.RandomState.pareto:52
+#: of numpy.random.RandomState.pareto:54
 msgid ":obj:`scipy.stats.lomax`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
-#: of numpy.random.RandomState.pareto:53 numpy.random.RandomState.pareto:55
+#: of numpy.random.RandomState.pareto:55 numpy.random.RandomState.pareto:57
 msgid ""
 "probability density function, distribution or cumulative density function, "
 "etc."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
-#: of numpy.random.RandomState.pareto:54
+#: of numpy.random.RandomState.pareto:56
 msgid ":obj:`scipy.stats.genpareto`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
-#: of numpy.random.RandomState.pareto:56
+#: of numpy.random.RandomState.pareto:58
 msgid ":obj:`random.Generator.pareto`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
-#: of numpy.random.RandomState.pareto:57
+#: of numpy.random.RandomState.pareto:59
 msgid "which should be used for new code."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
-#: of numpy.random.RandomState.pareto:61
+#: of numpy.random.RandomState.pareto:63
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
-#: of numpy.random.RandomState.pareto:62
-msgid "The probability density for the Pareto distribution is"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
 #: of numpy.random.RandomState.pareto:64
-msgid ""
-"p(x) = \\frac{am^a}{x^{a+1}}\n"
-"\n"
+msgid "The probability density for the Pareto II distribution is"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
 #: of numpy.random.RandomState.pareto:66
-msgid "where :math:`a` is the shape and :math:`m` the scale."
+msgid ""
+"p(x) = \\frac{a}{(x+1)^{a+1}} , x \\ge 0\n"
+"\n"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
 #: of numpy.random.RandomState.pareto:68
+msgid "where :math:`a > 0` is the shape."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.pareto:70
+msgid ""
+"The Pareto II distribution is a shifted and scaled version of the Pareto I "
+"distribution, which can be found in `scipy.stats.pareto`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.pareto:73
 msgid ""
 "The Pareto distribution, named after the Italian economist Vilfredo Pareto, "
 "is a power law probability distribution useful in many real world problems.  "
@@ -182,45 +189,45 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
-#: of numpy.random.RandomState.pareto:80
+#: of numpy.random.RandomState.pareto:85
 msgid "References"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
-#: of numpy.random.RandomState.pareto:81
+#: of numpy.random.RandomState.pareto:86
 msgid ""
 "Francis Hunt and Paul Johnson, On the Pareto Distribution of Sourceforge "
 "projects."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
-#: of numpy.random.RandomState.pareto:83
+#: of numpy.random.RandomState.pareto:88
 msgid "Pareto, V. (1896). Course of Political Economy. Lausanne."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
-#: of numpy.random.RandomState.pareto:84
+#: of numpy.random.RandomState.pareto:89
 msgid ""
 "Reiss, R.D., Thomas, M.(2001), Statistical Analysis of Extreme Values, "
 "Birkhauser Verlag, Basel, pp 23-30."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
-#: of numpy.random.RandomState.pareto:86
+#: of numpy.random.RandomState.pareto:91
 msgid ""
 "Wikipedia, \"Pareto distribution\", https://en.wikipedia.org/wiki/"
 "Pareto_distribution"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
-#: of numpy.random.RandomState.pareto:91
+#: of numpy.random.RandomState.pareto:96
 msgid ""
 "[R4338a4b3d731-1]_, [R4338a4b3d731-2]_, [R4338a4b3d731-3]_, "
 "[R4338a4b3d731-4]_"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
-#: of numpy.random.RandomState.pareto:94
+#: of numpy.random.RandomState.pareto:99
 msgid "Examples"
 msgstr ""
 
@@ -235,22 +242,21 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
-#: of numpy.random.RandomState.pareto:117
+#: of numpy.random.RandomState.pareto:120
 msgid ""
-"<div id=\"9d561109-fed2-4415-98b9-5c178359c43b\" "
+"<div id=\"ed1f1000-213d-41fd-9d4b-051ba60a6ffb\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('127741ef-f730-4943-b100-fe18c9aa3a00','9d561109-"
-"fed2-4415-98b9-5c178359c43b')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window.openInNewTab('127741ef-"
-"f730-4943-b100-fe18c9aa3a00','9d561109-fed2-4415-98b9-5c178359c43b')\">Open "
-"In Tab</button></div><div id=\"0de45610-c7be-4ba1-93f3-cb9af970ff62\" "
+"tryExamplesHideIframe('5aa479e3-6e60-4c00-9fe1-0a6c9751be38','ed1f1000-213d-41fd-9d4b-051ba60a6ffb')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('5aa479e3-6e60-4c00-9fe1-0a6c9751be38','ed1f1000-213d-41fd-9d4b-051ba60a6ffb')\">Open "
+"In Tab</button></div><div id=\"69dcd198-fa49-4711-a26d-d50257b9240d\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
-#: of numpy.random.RandomState.pareto:117
+#: of numpy.random.RandomState.pareto:120
 msgid ""
 "<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
 "loadTryExamplesConfig(\"../../../try_examples.json\");});</script>"

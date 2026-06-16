@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,92 +29,39 @@ msgstr ""
 msgid "Information about the memory layout of the array."
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:15
-msgid "Notes"
-msgstr ""
-
-#: ../../../../docstring of numpy.char.chararray.flags:16
-msgid ""
-"The `flags` object can be accessed dictionary-like (as in ``a."
-"flags['WRITEABLE']``), or by using lowercased attribute names (as in ``a."
-"flags.writeable``). Short flag names are only supported in dictionary access."
-msgstr ""
-
-#: ../../../../docstring of numpy.char.chararray.flags:20
-msgid ""
-"Only the WRITEBACKIFCOPY, WRITEABLE, and ALIGNED flags can be changed by the "
-"user, via direct assignment to the attribute or dictionary entry, or by "
-"calling `ndarray.setflags`."
-msgstr ""
-
-#: ../../../../docstring of numpy.char.chararray.flags:24
-msgid "The array flags cannot be set arbitrarily:"
-msgstr ""
-
-#: ../../../../docstring of numpy.char.chararray.flags:26
-msgid "WRITEBACKIFCOPY can only be set ``False``."
-msgstr ""
-
-#: ../../../../docstring of numpy.char.chararray.flags:27
-msgid "ALIGNED can only be set ``True`` if the data is truly aligned."
-msgstr ""
-
-#: ../../../../docstring of numpy.char.chararray.flags:28
-msgid ""
-"WRITEABLE can only be set ``True`` if the array owns its own memory or the "
-"ultimate owner of the memory exposes a writeable buffer interface or is a "
-"string."
-msgstr ""
-
-#: ../../../../docstring of numpy.char.chararray.flags:32
-msgid ""
-"Arrays can be both C-style and Fortran-style contiguous simultaneously. This "
-"is clear for 1-dimensional arrays, but can also be true for higher "
-"dimensional arrays."
-msgstr ""
-
-#: ../../../../docstring of numpy.char.chararray.flags:36
-msgid ""
-"Even for contiguous arrays a stride for a given dimension ``arr."
-"strides[dim]`` may be *arbitrary* if ``arr.shape[dim] == 1`` or the array "
-"has no elements. It does *not* generally hold that ``self.strides[-1] == "
-"self.itemsize`` for C-style contiguous arrays or ``self.strides[0] == self."
-"itemsize`` for Fortran-style contiguous arrays is true."
-msgstr ""
-
 #: ../../../../docstring of numpy.char.chararray.flags:0
 msgid "Attributes"
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:48
+#: ../../../../docstring of numpy.char.chararray.flags:9
 msgid "**C_CONTIGUOUS (C)**"
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:48
+#: ../../../../docstring of numpy.char.chararray.flags:9
 msgid "The data is in a single, C-style contiguous segment."
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:51
+#: ../../../../docstring of numpy.char.chararray.flags:12
 msgid "**F_CONTIGUOUS (F)**"
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:51
+#: ../../../../docstring of numpy.char.chararray.flags:12
 msgid "The data is in a single, Fortran-style contiguous segment."
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:54
+#: ../../../../docstring of numpy.char.chararray.flags:15
 msgid "**OWNDATA (O)**"
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:54
+#: ../../../../docstring of numpy.char.chararray.flags:15
 msgid "The array owns the memory it uses or borrows it from another object."
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:66
+#: ../../../../docstring of numpy.char.chararray.flags:27
 msgid "**WRITEABLE (W)**"
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:57
+#: ../../../../docstring of numpy.char.chararray.flags:18
 msgid ""
 "The data area can be written to.  Setting this to False locks the data, "
 "making it read-only.  A view (slice, etc.) inherits WRITEABLE from its base "
@@ -128,61 +75,114 @@ msgid ""
 "exception."
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:69
+#: ../../../../docstring of numpy.char.chararray.flags:30
 msgid "**ALIGNED (A)**"
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:69
+#: ../../../../docstring of numpy.char.chararray.flags:30
 msgid "The data and all elements are aligned appropriately for the hardware."
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:74
+#: ../../../../docstring of numpy.char.chararray.flags:35
 msgid "**WRITEBACKIFCOPY (X)**"
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:72
+#: ../../../../docstring of numpy.char.chararray.flags:33
 msgid ""
 "This array is a copy of some other array. The C-API function "
 "PyArray_ResolveWritebackIfCopy must be called before deallocating to the "
 "base array will be updated with the contents of this array."
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:77
+#: ../../../../docstring of numpy.char.chararray.flags:38
 msgid "**FNC**"
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:77
+#: ../../../../docstring of numpy.char.chararray.flags:38
 msgid "F_CONTIGUOUS and not C_CONTIGUOUS."
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:80
+#: ../../../../docstring of numpy.char.chararray.flags:41
 msgid "**FORC**"
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:80
+#: ../../../../docstring of numpy.char.chararray.flags:41
 msgid "F_CONTIGUOUS or C_CONTIGUOUS (one-segment test)."
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:83
+#: ../../../../docstring of numpy.char.chararray.flags:44
 msgid "**BEHAVED (B)**"
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:83
+#: ../../../../docstring of numpy.char.chararray.flags:44
 msgid "ALIGNED and WRITEABLE."
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:86
+#: ../../../../docstring of numpy.char.chararray.flags:47
 msgid "**CARRAY (CA)**"
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:86
+#: ../../../../docstring of numpy.char.chararray.flags:47
 msgid "BEHAVED and C_CONTIGUOUS."
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:90
+#: ../../../../docstring of numpy.char.chararray.flags:59
 msgid "**FARRAY (FA)**"
 msgstr ""
 
-#: ../../../../docstring of numpy.char.chararray.flags:89
+#: ../../../../docstring of numpy.char.chararray.flags:50
 msgid "BEHAVED and F_CONTIGUOUS and not C_CONTIGUOUS."
+msgstr ""
+
+#: ../../../../docstring of numpy.char.chararray.flags:62
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.char.chararray.flags:63
+msgid ""
+"The `flags` object can be accessed dictionary-like (as in ``a."
+"flags['WRITEABLE']``), or by using lowercased attribute names (as in ``a."
+"flags.writeable``). Short flag names are only supported in dictionary access."
+msgstr ""
+
+#: ../../../../docstring of numpy.char.chararray.flags:67
+msgid ""
+"Only the WRITEBACKIFCOPY, WRITEABLE, and ALIGNED flags can be changed by the "
+"user, via direct assignment to the attribute or dictionary entry, or by "
+"calling `ndarray.setflags`."
+msgstr ""
+
+#: ../../../../docstring of numpy.char.chararray.flags:71
+msgid "The array flags cannot be set arbitrarily:"
+msgstr ""
+
+#: ../../../../docstring of numpy.char.chararray.flags:73
+msgid "WRITEBACKIFCOPY can only be set ``False``."
+msgstr ""
+
+#: ../../../../docstring of numpy.char.chararray.flags:74
+msgid "ALIGNED can only be set ``True`` if the data is truly aligned."
+msgstr ""
+
+#: ../../../../docstring of numpy.char.chararray.flags:75
+msgid ""
+"WRITEABLE can only be set ``True`` if the array owns its own memory or the "
+"ultimate owner of the memory exposes a writeable buffer interface or is a "
+"string."
+msgstr ""
+
+#: ../../../../docstring of numpy.char.chararray.flags:79
+msgid ""
+"Arrays can be both C-style and Fortran-style contiguous simultaneously. This "
+"is clear for 1-dimensional arrays, but can also be true for higher "
+"dimensional arrays."
+msgstr ""
+
+#: ../../../../docstring of numpy.char.chararray.flags:83
+msgid ""
+"Even for contiguous arrays a stride for a given dimension ``arr."
+"strides[dim]`` may be *arbitrary* if ``arr.shape[dim] == 1`` or the array "
+"has no elements. It does *not* generally hold that ``self.strides[-1] == "
+"self.itemsize`` for C-style contiguous arrays or ``self.strides[0] == self."
+"itemsize`` for Fortran-style contiguous arrays is true."
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -94,7 +94,7 @@ msgid "**-------**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:40
+#: of numpy.linalg.tensordot:42
 msgid "**output**"
 msgstr ""
 
@@ -109,37 +109,37 @@ msgid "The tensor dot product of the input."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:45
+#: of numpy.linalg.tensordot:47
 msgid ":obj:`dot`, :obj:`einsum`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:49
+#: of numpy.linalg.tensordot:51
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:53
+#: of numpy.linalg.tensordot:55
 msgid "Three common use cases are:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:51
+#: of numpy.linalg.tensordot:53
 msgid "``axes = 0`` : tensor product :math:`a\\otimes b`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:52
+#: of numpy.linalg.tensordot:54
 msgid "``axes = 1`` : tensor dot product :math:`a\\cdot b`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:53
+#: of numpy.linalg.tensordot:55
 msgid "``axes = 2`` : (default) tensor double contraction :math:`a:b`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:55
+#: of numpy.linalg.tensordot:57
 msgid ""
 "When `axes` is integer_like, the sequence of axes for evaluation will be: "
 "from the -Nth axis to the -1th axis in `a`, and from the 0th axis to (N-1)th "
@@ -149,7 +149,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:63
+#: of numpy.linalg.tensordot:65
 msgid ""
 "When there is more than one axis to sum over - and they are not the last "
 "(first) axes of `a` (`b`) - the argument `axes` should consist of two "
@@ -159,7 +159,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:69
+#: of numpy.linalg.tensordot:71
 msgid ""
 "For example, if ``a.shape == (2, 3, 4)`` and ``b.shape == (3, 4, 5)``, then "
 "``axes=([1, 2], [0, 1])`` sums over the ``(3, 4)`` dimensions of both arrays "
@@ -167,57 +167,58 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:73
+#: of numpy.linalg.tensordot:75
 msgid ""
 "Each summation axis corresponds to a distinct contraction index; repeating "
 "an axis (for example ``axes=([1, 1], [0, 0])``) is invalid."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:76
+#: of numpy.linalg.tensordot:78
 msgid ""
 "The shape of the result consists of the non-contracted axes of the first "
 "tensor, followed by the non-contracted axes of the second."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:81
+#: of numpy.linalg.tensordot:83
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:86
+#: of numpy.linalg.tensordot:88
 msgid "An example on integer_like:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:103
+#: of numpy.linalg.tensordot:105
 msgid "An example on array_like:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:117
+#: of numpy.linalg.tensordot:119
 msgid "A slower but equivalent way of computing the same..."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:132
+#: of numpy.linalg.tensordot:134
 msgid "An extended example taking advantage of the overloading of + and \\*:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
 #: of numpy.linalg.tensordot:-1
 msgid ""
-"<div id=\"b1db0f17-a139-4499-b0ee-357042fd5860\" "
+"<div id=\"4cadc303-6707-481f-afd6-8b3053c77079\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('fe07a101-b7d2-4036-854d-b4a2bf78cfb9','b1db0f17-"
-"a139-4499-b0ee-357042fd5860')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window.openInNewTab('fe07a101-"
-"b7d2-4036-854d-b4a2bf78cfb9','b1db0f17-a139-4499-b0ee-357042fd5860')\">Open "
-"In Tab</button></div><div id=\"4bab1944-0a47-4887-af52-36283601e77b\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('0eb1f6d7-5c51-4b76-aa72-"
+"c4c8860cf886','4cadc303-6707-481f-afd6-8b3053c77079')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('0eb1f6d7-5c51-4b76-aa72-c4c8860cf886','4cadc303-6707-481f-"
+"afd6-8b3053c77079')\">Open In Tab</button></div><div id=\"a79baebb-8d00-4cd1-"
+"aa6d-52fac6dda3b0\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring

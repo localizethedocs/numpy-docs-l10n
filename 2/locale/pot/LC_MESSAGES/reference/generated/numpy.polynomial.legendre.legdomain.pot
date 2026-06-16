@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,7 +29,8 @@ msgstr ""
 
 #: ../../../../docstring of numpy.polynomial.legendre.legdomain:5
 msgid ""
-"ndarray(shape, dtype=float, buffer=None, offset=0, strides=None, order=None)"
+"ndarray(shape, dtype=np.float64, buffer=None, offset=0, strides=None, "
+"order=None)"
 msgstr ""
 
 #: ../../../../docstring of numpy.polynomial.legendre.legdomain:7
@@ -62,7 +63,7 @@ msgid "**(for the __new__ method; see Notes below)**"
 msgstr ""
 
 #: ../../../../docstring of numpy.polynomial.legendre.legdomain:26
-#: numpy.polynomial.legendre.legdomain:144
+#: numpy.polynomial.legendre.legdomain:84
 msgid "**shape**"
 msgstr ""
 
@@ -75,7 +76,7 @@ msgid "Shape of created array."
 msgstr ""
 
 #: ../../../../docstring of numpy.polynomial.legendre.legdomain:30
-#: numpy.polynomial.legendre.legdomain:113
+#: numpy.polynomial.legendre.legdomain:53
 msgid "**dtype**"
 msgstr ""
 
@@ -114,7 +115,7 @@ msgid "Offset of array data in buffer."
 msgstr ""
 
 #: ../../../../docstring of numpy.polynomial.legendre.legdomain:39
-#: numpy.polynomial.legendre.legdomain:152
+#: numpy.polynomial.legendre.legdomain:92
 msgid "**strides**"
 msgstr ""
 
@@ -126,7 +127,7 @@ msgstr ""
 msgid "Strides of data in memory."
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:49
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:42
 msgid "**order**"
 msgstr ""
 
@@ -138,118 +139,11 @@ msgstr ""
 msgid "Row-major (C-style) or column-major (Fortran-style) order."
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:54
-msgid ":obj:`array`"
-msgstr ""
-
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:55
-msgid "Construct an array."
-msgstr ""
-
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:56
-msgid ":obj:`zeros`"
-msgstr ""
-
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:57
-msgid "Create an array, each element of which is zero."
-msgstr ""
-
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:58
-msgid ":obj:`empty`"
-msgstr ""
-
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:59
-msgid ""
-"Create an array, but leave its allocated memory unchanged (i.e., it contains "
-"\"garbage\")."
-msgstr ""
-
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:60
-msgid ":obj:`dtype`"
-msgstr ""
-
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:61
-msgid "Create a data-type."
-msgstr ""
-
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:62
-msgid ":obj:`numpy.typing.NDArray`"
-msgstr ""
-
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:63
-msgid ""
-"An ndarray alias :term:`generic <generic type>` w.r.t. its `dtype.type "
-"<numpy.dtype.type>`."
-msgstr ""
-
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:67
-msgid "Notes"
-msgstr ""
-
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:68
-msgid "There are two modes of creating an array using ``__new__``:"
-msgstr ""
-
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:70
-msgid "If `buffer` is None, then only `shape`, `dtype`, and `order` are used."
-msgstr ""
-
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:72
-msgid ""
-"If `buffer` is an object exposing the buffer interface, then all keywords "
-"are interpreted."
-msgstr ""
-
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:75
-msgid ""
-"No ``__init__`` method is needed because the array is fully initialized "
-"after the ``__new__`` method."
-msgstr ""
-
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:80
-msgid "Examples"
-msgstr ""
-
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:85
-msgid ""
-"These examples illustrate the low-level `ndarray` constructor.  Refer to the "
-"`See Also` section above for easier ways of constructing an ndarray."
-msgstr ""
-
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:89
-msgid "First mode, `buffer` is None:"
-msgstr ""
-
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:96
-msgid "Second mode:"
-msgstr ""
-
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:-1
-msgid ""
-"<div id=\"c8a820d5-fc78-4d5e-80f6-0b451f2247dd\" "
-"class=\"try_examples_outer_iframe  hidden\"><div "
-"class=\"try_examples_button_container\"><button "
-"class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('40c3fd1a-2d45-464a-9d47-fff88d2ef568','c8a820d5-"
-"fc78-4d5e-80f6-0b451f2247dd')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('40c3fd1a-2d45-464a-9d47-fff88d2ef568','c8a820d5-"
-"fc78-4d5e-80f6-0b451f2247dd')\">Open In Tab</button></div><div id=\"e968461d-"
-"fefd-47c9-a2d9-e1d519968909\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
-msgstr ""
-
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:-1
-msgid ""
-"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
-"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
-msgstr ""
-
 #: ../../../../docstring of numpy.polynomial.legendre.legdomain:0
 msgid "Attributes"
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:107
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:47
 msgid "**T**"
 msgstr ""
 
@@ -257,11 +151,11 @@ msgstr ""
 msgid "ndarray"
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:107
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:47
 msgid "Transpose of the array."
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:110
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:50
 msgid "**data**"
 msgstr ""
 
@@ -269,7 +163,7 @@ msgstr ""
 msgid "buffer"
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:110
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:50
 msgid "The array's elements, in memory."
 msgstr ""
 
@@ -277,11 +171,11 @@ msgstr ""
 msgid "dtype object"
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:113
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:53
 msgid "Describes the format of the elements in the array."
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:117
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:57
 msgid "**flags**"
 msgstr ""
 
@@ -289,13 +183,13 @@ msgstr ""
 msgid "dict"
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:116
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:56
 msgid ""
 "Dictionary containing information related to memory use, e.g., "
 "'C_CONTIGUOUS', 'OWNDATA', 'WRITEABLE', etc."
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:122
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:62
 msgid "**flat**"
 msgstr ""
 
@@ -303,30 +197,30 @@ msgstr ""
 msgid "numpy.flatiter object"
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:120
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:60
 msgid ""
 "Flattened version of the array as an iterator.  The iterator allows "
 "assignments, e.g., ``x.flat = 3`` (See `ndarray.flat` for assignment "
 "examples; TODO)."
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:125
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:65
 msgid "**imag**"
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:125
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:65
 msgid "Imaginary part of the array."
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:128
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:68
 msgid "**real**"
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:128
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:68
 msgid "Real part of the array."
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:131
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:71
 msgid "**size**"
 msgstr ""
 
@@ -334,41 +228,41 @@ msgstr ""
 msgid "int"
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:131
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:71
 msgid "Number of elements in the array."
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:134
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:74
 msgid "**itemsize**"
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:134
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:74
 msgid "The memory use of each array element in bytes."
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:138
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:78
 msgid "**nbytes**"
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:137
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:77
 msgid ""
 "The total number of bytes required to store the array data, i.e., ``itemsize "
 "* size``."
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:141
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:81
 msgid "**ndim**"
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:141
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:81
 msgid "The array's number of dimensions."
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:144
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:84
 msgid "Shape of the array."
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:147
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:87
 msgid ""
 "The step-size required to move from one element to the next in memory. For "
 "example, a contiguous ``(3, 4)`` array of type ``int16`` in C-order has "
@@ -377,7 +271,7 @@ msgid ""
 "8 bytes at a time (``2 * 4``)."
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:156
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:96
 msgid "**ctypes**"
 msgstr ""
 
@@ -385,18 +279,124 @@ msgstr ""
 msgid "ctypes object"
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:155
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:95
 msgid ""
 "Class containing properties of the array needed for interaction with ctypes."
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:162
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:109
 msgid "**base**"
 msgstr ""
 
-#: ../../../../docstring of numpy.polynomial.legendre.legdomain:159
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:99
 msgid ""
 "If the array is a view into another array, that array is its `base` (unless "
 "that array is also a view).  The `base` array is where the array data is "
 "actually stored."
+msgstr ""
+
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:114
+msgid ":obj:`array`"
+msgstr ""
+
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:115
+msgid "Construct an array."
+msgstr ""
+
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:116
+msgid ":obj:`zeros`"
+msgstr ""
+
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:117
+msgid "Create an array, each element of which is zero."
+msgstr ""
+
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:118
+msgid ":obj:`empty`"
+msgstr ""
+
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:119
+msgid ""
+"Create an array, but leave its allocated memory unchanged (i.e., it contains "
+"\"garbage\")."
+msgstr ""
+
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:120
+msgid ":obj:`dtype`"
+msgstr ""
+
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:121
+msgid "Create a data-type."
+msgstr ""
+
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:122
+msgid ":obj:`numpy.typing.NDArray`"
+msgstr ""
+
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:123
+msgid ""
+"An ndarray alias :term:`generic <generic type>` w.r.t. its `dtype.type "
+"<numpy.dtype.type>`."
+msgstr ""
+
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:127
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:128
+msgid "There are two modes of creating an array using ``__new__``:"
+msgstr ""
+
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:130
+msgid "If `buffer` is None, then only `shape`, `dtype`, and `order` are used."
+msgstr ""
+
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:132
+msgid ""
+"If `buffer` is an object exposing the buffer interface, then all keywords "
+"are interpreted."
+msgstr ""
+
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:135
+msgid ""
+"No ``__init__`` method is needed because the array is fully initialized "
+"after the ``__new__`` method."
+msgstr ""
+
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:140
+msgid "Examples"
+msgstr ""
+
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:145
+msgid ""
+"These examples illustrate the low-level `ndarray` constructor.  Refer to the "
+"`See Also` section above for easier ways of constructing an ndarray."
+msgstr ""
+
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:149
+msgid "First mode, `buffer` is None:"
+msgstr ""
+
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:156
+msgid "Second mode:"
+msgstr ""
+
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:-1
+msgid ""
+"<div id=\"0f74e0c7-208e-4b33-8c3e-de46eb9e1434\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('a809682c-daa2-4a30-"
+"b56c-4655315f3a01','0f74e0c7-208e-4b33-8c3e-de46eb9e1434')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('a809682c-daa2-4a30-b56c-4655315f3a01','0f74e0c7-208e-4b33-8c3e-"
+"de46eb9e1434')\">Open In Tab</button></div><div id=\"fde3fc6a-e96a-4bdd-9e31-"
+"b3d405d2f428\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../docstring of numpy.polynomial.legendre.legdomain:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
 msgstr ""

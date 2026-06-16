@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -131,7 +131,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:50
+#: of numpy.load:52
 msgid "**max_header_size**"
 msgstr ""
 
@@ -156,7 +156,7 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:59
+#: of numpy.load:61
 msgid "**result**"
 msgstr ""
 
@@ -166,7 +166,7 @@ msgid "array, tuple, dict, etc."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:55
+#: of numpy.load:57
 msgid ""
 "Data stored in the file. For ``.npz`` files, the returned instance of "
 "NpzFile class must be closed to avoid leaking file descriptors."
@@ -178,91 +178,91 @@ msgid "Raises"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:64
+#: of numpy.load:66
 msgid "OSError"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:64
+#: of numpy.load:66
 msgid "If the input file does not exist or cannot be read."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:67
+#: of numpy.load:69
 msgid "UnpicklingError"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:67
+#: of numpy.load:69
 msgid "If ``allow_pickle=True``, but the file cannot be loaded as a pickle."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:70
+#: of numpy.load:72
 msgid "ValueError"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:70
+#: of numpy.load:72
 msgid "The file contains an object array, but ``allow_pickle=False`` given."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:76
+#: of numpy.load:78
 msgid "EOFError"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:73
+#: of numpy.load:75
 msgid ""
 "When calling ``np.load`` multiple times on the same file handle, if all data "
 "has already been read"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:81
+#: of numpy.load:83
 msgid ":obj:`save`, :obj:`savez`, :obj:`savez_compressed`, :obj:`loadtxt`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:83
+#: of numpy.load:85
 msgid ":obj:`memmap`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:84
+#: of numpy.load:86
 msgid "Create a memory-map to an array stored in a file on disk."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:85
+#: of numpy.load:87
 msgid ":obj:`lib.format.open_memmap`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:86
+#: of numpy.load:88
 msgid "Create or load a memory-mapped ``.npy`` file."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:90
+#: of numpy.load:92
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:91
+#: of numpy.load:93
 msgid ""
 "If the file contains pickle data, then whatever object is stored in the "
 "pickle is returned."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:93
+#: of numpy.load:95
 msgid "If the file is a ``.npy`` file, then a single array is returned."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:94
+#: of numpy.load:96
 msgid ""
 "If the file is a ``.npz`` file, then a dictionary-like object is returned, "
 "containing ``{filename: array}`` key-value pairs, one for each file in the "
@@ -270,41 +270,41 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:97
+#: of numpy.load:99
 msgid ""
 "If the file is a ``.npz`` file, the returned value supports the context "
 "manager protocol in a similar fashion to the open function::"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:100
+#: of numpy.load:102
 msgid ""
 "with load('foo.npz') as data:\n"
 "    a = data['a']"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:103
+#: of numpy.load:105
 msgid "The underlying file descriptor is closed when exiting the 'with' block."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:108
+#: of numpy.load:110
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:115
+#: of numpy.load:117
 msgid "Store data to disk, and load it again:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:122
+#: of numpy.load:124
 msgid "Store compressed data to disk, and load it again:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.load:135
+#: of numpy.load:137
 msgid ""
 "Mem-map the stored array, and then access the second row directly from disk:"
 msgstr ""
@@ -312,17 +312,16 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.load:-1
 msgid ""
-"<div id=\"75359a28-2295-4904-a571-f6e0a165ffd6\" "
+"<div id=\"6ece7c47-d6fe-46f0-bb48-f365d3a27e37\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('8c781e85-2718-4a94-"
-"b9ca-6f72428e7e1a','75359a28-2295-4904-a571-f6e0a165ffd6')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('8c781e85-2718-4a94-b9ca-6f72428e7e1a','75359a28-2295-4904-a571-"
-"f6e0a165ffd6')\">Open In Tab</button></div><div id=\"8e570d42-1828-487d-"
-"a9eb-1638ee201525\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
-"div>"
+"tryExamplesHideIframe('ba0cb4ec-e9a6-437f-a4cd-3adb7be84f28','6ece7c47-"
+"d6fe-46f0-bb48-f365d3a27e37')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('ba0cb4ec-"
+"e9a6-437f-a4cd-3adb7be84f28','6ece7c47-d6fe-46f0-bb48-f365d3a27e37')\">Open "
+"In Tab</button></div><div id=\"be92bdb4-c817-4a4a-b6ea-7a1244fdac19\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring

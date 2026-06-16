@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -139,8 +139,8 @@ msgid ""
 msgstr ""
 
 #: ../../../f2py/python-usage.rst:63 ../../../f2py/python-usage.rst:95
-#: ../../../f2py/python-usage.rst:139 ../../../f2py/python-usage.rst:158
-#: ../../../f2py/python-usage.rst:313
+#: ../../../f2py/python-usage.rst:140 ../../../f2py/python-usage.rst:159
+#: ../../../f2py/python-usage.rst:314
 msgid "Consider the following Fortran 77 code:"
 msgstr ""
 
@@ -164,10 +164,10 @@ msgstr ""
 msgid "and wrap it using ``f2py -c -m scalar scalar.f``."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:70 ../../../f2py/python-usage.rst:146
-#: ../../../f2py/python-usage.rst:165 ../../../f2py/python-usage.rst:218
-#: ../../../f2py/python-usage.rst:241 ../../../f2py/python-usage.rst:320
-#: ../../../f2py/python-usage.rst:339 ../../../f2py/python-usage.rst:357
+#: ../../../f2py/python-usage.rst:70 ../../../f2py/python-usage.rst:147
+#: ../../../f2py/python-usage.rst:166 ../../../f2py/python-usage.rst:219
+#: ../../../f2py/python-usage.rst:242 ../../../f2py/python-usage.rst:321
+#: ../../../f2py/python-usage.rst:340 ../../../f2py/python-usage.rst:358
 msgid "In Python:"
 msgstr ""
 
@@ -313,12 +313,13 @@ msgstr ""
 
 #: ../../../f2py/python-usage.rst:118
 msgid ""
-"``intent(inplace)`` array arguments  will be changed *in situ* if the "
-"argument has a different type than expected (see the ``intent(inplace)`` :"
-"ref:`attribute <f2py-attributes>` for more information)."
+"``intent(inplace)`` array arguments must be arrays. If these have "
+"incompatible order or size, a converted copy is passed in, which is copied "
+"back into the original array on exit (see the ``intent(inplace)`` :ref:"
+"`attribute <f2py-attributes>` for more information)."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:122
+#: ../../../f2py/python-usage.rst:123
 msgid ""
 "In general, if a NumPy array is :term:`proper-contiguous <contiguous>` and "
 "has a proper type then it is directly passed to the wrapped Fortran/C "
@@ -327,7 +328,7 @@ msgid ""
 "argument."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:127
+#: ../../../f2py/python-usage.rst:128
 msgid ""
 "Usually there is no need to worry about how the arrays are stored in memory "
 "and whether the wrapped functions, being either Fortran or C functions, "
@@ -340,13 +341,13 @@ msgid ""
 "type arguments."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:136
+#: ../../../f2py/python-usage.rst:137
 msgid ""
 "To transform input arrays to column major storage order before passing them "
 "to Fortran routines, use the function `numpy.asfortranarray`."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:141
+#: ../../../f2py/python-usage.rst:142
 msgid ""
 "C FILE: ARRAY.F\n"
 "      SUBROUTINE FOO(A,N,M)\n"
@@ -367,12 +368,12 @@ msgid ""
 "C END OF FILE ARRAY.F\n"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:144
+#: ../../../f2py/python-usage.rst:145
 msgid ""
 "and wrap it using ``f2py -c -m arr array.f -DF2PY_REPORT_ON_ARRAY_COPY=1``."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:148
+#: ../../../f2py/python-usage.rst:149
 msgid ""
 ">>> import arr\n"
 ">>> from numpy import asfortranarray\n"
@@ -463,15 +464,15 @@ msgid ""
 "False\n"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:154
+#: ../../../f2py/python-usage.rst:155
 msgid "Call-back arguments"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:156
+#: ../../../f2py/python-usage.rst:157
 msgid "F2PY supports calling Python functions from Fortran or C codes."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:160
+#: ../../../f2py/python-usage.rst:161
 msgid ""
 "C FILE: CALLBACK.F\n"
 "      SUBROUTINE FOO(FUN,R)\n"
@@ -487,11 +488,11 @@ msgid ""
 "C END OF FILE CALLBACK.F\n"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:163
+#: ../../../f2py/python-usage.rst:164
 msgid "and wrap it using ``f2py -c -m callback callback.f``."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:167
+#: ../../../f2py/python-usage.rst:168
 msgid ""
 ">>> import callback\n"
 ">>> print(callback.foo.__doc__)\n"
@@ -530,7 +531,7 @@ msgid ""
 "11.0\n"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:170
+#: ../../../f2py/python-usage.rst:171
 msgid ""
 "In the above example F2PY was able to guess accurately the signature of the "
 "call-back function. However, sometimes F2PY cannot establish the appropriate "
@@ -538,7 +539,7 @@ msgid ""
 "explicitly defined in the signature file."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:175
+#: ../../../f2py/python-usage.rst:176
 msgid ""
 "To facilitate this, signature files may contain special modules (the names "
 "of these modules contain the special ``__user__`` sub-string) that define "
@@ -550,7 +551,7 @@ msgid ""
 "for a callback argument can be referred to in different routine signatures."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:184
+#: ../../../f2py/python-usage.rst:185
 msgid ""
 "We use the same Fortran 77 code as in the previous example but now we will "
 "pretend that F2PY was not able to guess the signatures of call-back "
@@ -558,11 +559,11 @@ msgid ""
 "pyf`` using F2PY::"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:189
+#: ../../../f2py/python-usage.rst:190
 msgid "f2py -m callback2 -h callback2.pyf callback.f"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:191
+#: ../../../f2py/python-usage.rst:192
 msgid "Then modify it as follows"
 msgstr ""
 
@@ -589,32 +590,32 @@ msgid ""
 "end python module callback2\n"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:196
+#: ../../../f2py/python-usage.rst:197
 msgid ""
 "Finally, we build the extension module using ``f2py -c callback2.pyf "
 "callback.f``."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:199
+#: ../../../f2py/python-usage.rst:200
 msgid ""
 "An example Python session for this snippet would be identical to the "
 "previous example except that the argument names would differ."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:202
+#: ../../../f2py/python-usage.rst:203
 msgid ""
 "Sometimes a Fortran package may require that users provide routines that the "
 "package will use. F2PY can construct an interface to such routines so that "
 "Python functions can be called from Fortran."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:206
+#: ../../../f2py/python-usage.rst:207
 msgid ""
 "Consider the following Fortran 77 subroutine that takes an array as its "
 "input and applies a function ``func`` to its elements."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:209
+#: ../../../f2py/python-usage.rst:210
 msgid ""
 "      subroutine calculate(x,n)\n"
 "cf2py intent(callback) func\n"
@@ -632,7 +633,7 @@ msgid ""
 "      end\n"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:212
+#: ../../../f2py/python-usage.rst:213
 msgid ""
 "The Fortran code expects that the function ``func`` has been defined "
 "externally. In order to use a Python function for ``func``, it must have an "
@@ -640,11 +641,11 @@ msgid ""
 "``external`` statement."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:216
+#: ../../../f2py/python-usage.rst:217
 msgid "Finally, build an extension module using ``f2py -c -m foo calculate.f``"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:220
+#: ../../../f2py/python-usage.rst:221
 msgid ""
 ">>> import foo\n"
 ">>> foo.calculate(range(5), lambda x: x*x)\n"
@@ -655,7 +656,7 @@ msgid ""
 "54.59815003])\n"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:223
+#: ../../../f2py/python-usage.rst:224
 msgid ""
 "The function is included as an argument to the python function call to the "
 "Fortran subroutine even though it was *not* in the Fortran subroutine "
@@ -664,7 +665,7 @@ msgid ""
 "being supplied to the C function."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:229
+#: ../../../f2py/python-usage.rst:230
 msgid ""
 "The callback function may also be explicitly set in the module. Then it is "
 "not necessary to pass the function in the argument list to the Fortran "
@@ -672,11 +673,11 @@ msgid ""
 "callback function is itself called by another Fortran function."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:234
+#: ../../../f2py/python-usage.rst:235
 msgid "Consider the following Fortran 77 subroutine:"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:236
+#: ../../../f2py/python-usage.rst:237
 msgid ""
 "      subroutine f1()\n"
 "         print *, \"in f1, calling f2 twice..\"\n"
@@ -694,11 +695,11 @@ msgid ""
 "      end\n"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:239
+#: ../../../f2py/python-usage.rst:240
 msgid "and wrap it using ``f2py -c -m pfromf extcallback.f``."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:243
+#: ../../../f2py/python-usage.rst:244
 msgid ""
 ">>> import pfromf\n"
 ">>> pfromf.f2()\n"
@@ -722,7 +723,7 @@ msgid ""
 ">>> "
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:248
+#: ../../../f2py/python-usage.rst:249
 msgid ""
 "When using modified Fortran code via ``callstatement`` or other directives, "
 "the wrapped Python function must be called as a callback, otherwise only the "
@@ -730,11 +731,11 @@ msgid ""
 "numpy/numpy/issues/26681#issuecomment-2466460943"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:254
+#: ../../../f2py/python-usage.rst:255
 msgid "Resolving arguments to call-back functions"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:256
+#: ../../../f2py/python-usage.rst:257
 msgid ""
 "F2PY generated interfaces are very flexible with respect to call-back "
 "arguments.  For each call-back argument an additional optional argument "
@@ -742,88 +743,88 @@ msgid ""
 "pass extra arguments to user provided call-back functions."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:260
+#: ../../../f2py/python-usage.rst:261
 msgid ""
 "If a F2PY generated wrapper function expects the following call-back "
 "argument::"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:262
+#: ../../../f2py/python-usage.rst:263
 msgid ""
 "def fun(a_1,...,a_n):\n"
 "   ...\n"
 "   return x_1,...,x_k"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:266
+#: ../../../f2py/python-usage.rst:267
 msgid "but the following Python function"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:270
+#: ../../../f2py/python-usage.rst:271
 msgid ""
 "def gun(b_1,...,b_m):\n"
 "   ...\n"
 "   return y_1,...,y_l"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:274
+#: ../../../f2py/python-usage.rst:275
 msgid "is provided by a user, and in addition,"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:278
+#: ../../../f2py/python-usage.rst:279
 msgid "fun_extra_args = (e_1,...,e_p)"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:280
+#: ../../../f2py/python-usage.rst:281
 msgid ""
 "is used, then the following rules are applied when a Fortran or C function "
 "evaluates the call-back argument ``gun``:"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:283
+#: ../../../f2py/python-usage.rst:284
 msgid ""
 "If ``p == 0`` then ``gun(a_1, ..., a_q)`` is called, here ``q = min(m, n)``."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:285
+#: ../../../f2py/python-usage.rst:286
 msgid "If ``n + p <= m`` then ``gun(a_1, ..., a_n, e_1, ..., e_p)`` is called."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:286
+#: ../../../f2py/python-usage.rst:287
 msgid ""
 "If ``p <= m < n + p`` then ``gun(a_1, ..., a_q, e_1, ..., e_p)`` is called, "
 "and here ``q=m-p``."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:288
+#: ../../../f2py/python-usage.rst:289
 msgid "If ``p > m`` then ``gun(e_1, ..., e_m)`` is called."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:289
+#: ../../../f2py/python-usage.rst:290
 msgid ""
 "If ``n + p`` is less than the number of required arguments to ``gun`` then "
 "an exception is raised."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:292
+#: ../../../f2py/python-usage.rst:293
 msgid ""
 "If the function ``gun`` may return any number of objects as a tuple; then "
 "the following rules are applied:"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:295
+#: ../../../f2py/python-usage.rst:296
 msgid "If ``k < l``, then ``y_{k + 1}, ..., y_l`` are ignored."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:296
+#: ../../../f2py/python-usage.rst:297
 msgid "If ``k > l``, then only ``x_1, ..., x_l`` are set."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:300
+#: ../../../f2py/python-usage.rst:301
 msgid "Common blocks"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:302
+#: ../../../f2py/python-usage.rst:303
 msgid ""
 "F2PY generates wrappers to ``common`` blocks defined in a routine signature "
 "block. Common blocks are visible to all Fortran codes linked to the current "
@@ -837,7 +838,7 @@ msgid ""
 "changes to the corresponding array objects."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:315
+#: ../../../f2py/python-usage.rst:316
 msgid ""
 "C FILE: COMMON.F\n"
 "      SUBROUTINE FOO\n"
@@ -854,11 +855,11 @@ msgid ""
 "C END OF COMMON.F\n"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:318
+#: ../../../f2py/python-usage.rst:319
 msgid "and wrap it using ``f2py -c -m common common.f``."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:322
+#: ../../../f2py/python-usage.rst:323
 msgid ""
 ">>> import common\n"
 ">>> print(common.data.__doc__)\n"
@@ -892,21 +893,21 @@ msgid ""
 "True"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:327
+#: ../../../f2py/python-usage.rst:328
 msgid "Fortran 90 module data"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:329
+#: ../../../f2py/python-usage.rst:330
 msgid ""
 "The F2PY interface to Fortran 90 module data is similar to the handling of "
 "Fortran 77 common blocks."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:332 ../../../f2py/python-usage.rst:350
+#: ../../../f2py/python-usage.rst:333 ../../../f2py/python-usage.rst:351
 msgid "Consider the following Fortran 90 code:"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:334
+#: ../../../f2py/python-usage.rst:335
 msgid ""
 "module mod\n"
 "  integer i\n"
@@ -928,11 +929,11 @@ msgid ""
 "end module mod\n"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:337
+#: ../../../f2py/python-usage.rst:338
 msgid "and wrap it using ``f2py -c -m moddata moddata.f90``."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:341
+#: ../../../f2py/python-usage.rst:342
 msgid ""
 ">>> import moddata\n"
 ">>> print(moddata.mod.__doc__)\n"
@@ -964,15 +965,15 @@ msgid ""
 "True\n"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:346
+#: ../../../f2py/python-usage.rst:347
 msgid "Allocatable arrays"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:348
+#: ../../../f2py/python-usage.rst:349
 msgid "F2PY has basic support for Fortran 90 module allocatable arrays."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:352
+#: ../../../f2py/python-usage.rst:353
 msgid ""
 "module mod\n"
 "  real, allocatable, dimension(:,:) :: b \n"
@@ -992,11 +993,11 @@ msgid ""
 "end module mod\n"
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:355
+#: ../../../f2py/python-usage.rst:356
 msgid "and wrap it using ``f2py -c -m allocarr allocarr.f90``."
 msgstr ""
 
-#: ../../../f2py/python-usage.rst:359
+#: ../../../f2py/python-usage.rst:360
 msgid ""
 ">>> import allocarr\n"
 ">>> print(allocarr.mod.__doc__)\n"

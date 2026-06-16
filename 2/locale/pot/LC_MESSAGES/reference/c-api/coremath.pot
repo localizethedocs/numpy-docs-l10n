@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -434,22 +434,10 @@ msgid ""
 msgstr ""
 
 #: ../../../reference/c-api/coremath.rst:320
-msgid ""
-"When you build with ``numpy.distutils`` (deprecated), then use this in your "
-"``setup.py``:"
-msgstr ""
-
-#: ../../../reference/c-api/coremath.rst:331
-msgid ""
-"In other words, the usage of ``info`` is exactly the same as when using "
-"``blas_info`` and co."
-msgstr ""
-
-#: ../../../reference/c-api/coremath.rst:334
 msgid "When you are building with `Meson <https://mesonbuild.com>`__, use::"
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:336
+#: ../../../reference/c-api/coremath.rst:322
 msgid ""
 "# Note that this will get easier in the future, when Meson has\n"
 "# support for numpy built in; most of this can then be replaced\n"
@@ -474,11 +462,11 @@ msgid ""
 "  dependencies: [npymath_lib],"
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:359
+#: ../../../reference/c-api/coremath.rst:345
 msgid "Half-precision functions"
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:361
+#: ../../../reference/c-api/coremath.rst:347
 msgid ""
 "The header file ``<numpy/halffloat.h>`` provides functions to work with IEEE "
 "754-2008 16-bit floating point values. While this format is not typically "
@@ -488,7 +476,7 @@ msgid ""
 "error."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:368
+#: ../../../reference/c-api/coremath.rst:354
 msgid ""
 "Like for other types, NumPy includes a typedef npy_half for the 16 bit "
 "float.  Unlike for most of the other types, you cannot use this as a normal "
@@ -498,7 +486,7 @@ msgid ""
 "incorrect."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:375
+#: ../../../reference/c-api/coremath.rst:361
 msgid ""
 "For these reasons, NumPy provides an API to work with npy_half values "
 "accessible by including ``<numpy/halffloat.h>`` and linking to ``npymath``. "
@@ -507,7 +495,7 @@ msgid ""
 "again, as in the following example."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:381
+#: ../../../reference/c-api/coremath.rst:367
 msgid ""
 "npy_half sum(int n, npy_half *array) {\n"
 "    float ret = 0;\n"
@@ -518,65 +506,65 @@ msgid ""
 "}"
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:391
+#: ../../../reference/c-api/coremath.rst:377
 msgid "External Links:"
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:393
+#: ../../../reference/c-api/coremath.rst:379
 msgid "`754-2008 IEEE Standard for Floating-Point Arithmetic`__"
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:394
+#: ../../../reference/c-api/coremath.rst:380
 msgid "`Half-precision Float Wikipedia Article`__."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:395
+#: ../../../reference/c-api/coremath.rst:381
 msgid "`OpenGL Half Float Pixel Support`__"
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:396
+#: ../../../reference/c-api/coremath.rst:382
 msgid "`The OpenEXR image format`__."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:405
-#: ../../../reference/c-api/coremath.rst:409
+#: ../../../reference/c-api/coremath.rst:391
+#: ../../../reference/c-api/coremath.rst:395
 msgid "This macro is defined to positive zero."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:413
+#: ../../../reference/c-api/coremath.rst:399
 msgid "This macro is defined to negative zero."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:417
+#: ../../../reference/c-api/coremath.rst:403
 msgid "This macro is defined to 1.0."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:421
+#: ../../../reference/c-api/coremath.rst:407
 msgid "This macro is defined to -1.0."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:425
+#: ../../../reference/c-api/coremath.rst:411
 msgid "This macro is defined to +inf."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:429
+#: ../../../reference/c-api/coremath.rst:415
 msgid "This macro is defined to -inf."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:433
+#: ../../../reference/c-api/coremath.rst:419
 msgid ""
 "This macro is defined to a NaN value, guaranteed to have its sign bit unset."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:437
+#: ../../../reference/c-api/coremath.rst:423
 msgid "Converts a half-precision float to a single-precision float."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:441
+#: ../../../reference/c-api/coremath.rst:427
 msgid "Converts a half-precision float to a double-precision float."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:445
+#: ../../../reference/c-api/coremath.rst:431
 msgid ""
 "Converts a single-precision float to a half-precision float.  The value is "
 "rounded to the nearest representable half, with ties going to the nearest "
@@ -584,7 +572,7 @@ msgid ""
 "underflow or overflow bit will be set."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:452
+#: ../../../reference/c-api/coremath.rst:438
 msgid ""
 "Converts a double-precision float to a half-precision float.  The value is "
 "rounded to the nearest representable half, with ties going to the nearest "
@@ -592,107 +580,107 @@ msgid ""
 "underflow or overflow bit will be set."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:459
+#: ../../../reference/c-api/coremath.rst:445
 msgid "Compares two half-precision floats (h1 == h2)."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:463
+#: ../../../reference/c-api/coremath.rst:449
 msgid "Compares two half-precision floats (h1 != h2)."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:467
+#: ../../../reference/c-api/coremath.rst:453
 msgid "Compares two half-precision floats (h1 <= h2)."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:471
+#: ../../../reference/c-api/coremath.rst:457
 msgid "Compares two half-precision floats (h1 < h2)."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:475
+#: ../../../reference/c-api/coremath.rst:461
 msgid "Compares two half-precision floats (h1 >= h2)."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:479
+#: ../../../reference/c-api/coremath.rst:465
 msgid "Compares two half-precision floats (h1 > h2)."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:483
+#: ../../../reference/c-api/coremath.rst:469
 msgid ""
 "Compares two half-precision floats that are known to not be NaN (h1 == h2).  "
 "If a value is NaN, the result is undefined."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:488
+#: ../../../reference/c-api/coremath.rst:474
 msgid ""
 "Compares two half-precision floats that are known to not be NaN (h1 < h2).  "
 "If a value is NaN, the result is undefined."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:493
+#: ../../../reference/c-api/coremath.rst:479
 msgid ""
 "Compares two half-precision floats that are known to not be NaN (h1 <= h2).  "
 "If a value is NaN, the result is undefined."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:498
+#: ../../../reference/c-api/coremath.rst:484
 msgid ""
 "Tests whether the half-precision float has a value equal to zero.  This may "
 "be slightly faster than calling npy_half_eq(h, NPY_ZERO)."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:503
+#: ../../../reference/c-api/coremath.rst:489
 msgid "Tests whether the half-precision float is a NaN."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:507
+#: ../../../reference/c-api/coremath.rst:493
 msgid "Tests whether the half-precision float is plus or minus Inf."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:511
+#: ../../../reference/c-api/coremath.rst:497
 msgid "Tests whether the half-precision float is finite (not NaN or Inf)."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:515
+#: ../../../reference/c-api/coremath.rst:501
 msgid "Returns 1 is h is negative, 0 otherwise."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:519
+#: ../../../reference/c-api/coremath.rst:505
 msgid ""
 "Returns the value of x with the sign bit copied from y.  Works for any "
 "value, including Inf and NaN."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:524
+#: ../../../reference/c-api/coremath.rst:510
 msgid ""
 "This is the same for half-precision float as npy_spacing and npy_spacingf "
 "described in the low-level floating point section."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:529
+#: ../../../reference/c-api/coremath.rst:515
 msgid ""
 "This is the same for half-precision float as npy_nextafter and "
 "npy_nextafterf described in the low-level floating point section."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:534
+#: ../../../reference/c-api/coremath.rst:520
 msgid ""
 "Low-level function which converts a 32-bit single-precision float, stored as "
 "a uint32, into a 16-bit half-precision float."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:539
+#: ../../../reference/c-api/coremath.rst:525
 msgid ""
 "Low-level function which converts a 64-bit double-precision float, stored as "
 "a uint64, into a 16-bit half-precision float."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:544
+#: ../../../reference/c-api/coremath.rst:530
 msgid ""
 "Low-level function which converts a 16-bit half-precision float into a 32-"
 "bit single-precision float, stored as a uint32."
 msgstr ""
 
-#: ../../../reference/c-api/coremath.rst:549
+#: ../../../reference/c-api/coremath.rst:535
 msgid ""
 "Low-level function which converts a 16-bit half-precision float into a 64-"
 "bit double-precision float, stored as a uint64."

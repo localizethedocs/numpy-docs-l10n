@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,8 +34,8 @@ msgstr ""
 #: of numpy.ndarray.view:5
 msgid ""
 "Passing None for ``dtype`` is different from omitting the parameter, since "
-"the former invokes ``dtype(None)`` which is an alias for "
-"``dtype('float64')``."
+"the former invokes ``dtype(None)`` which is an alias for ``dtype(np."
+"float64)``."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
@@ -63,7 +63,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.view:28
+#: of numpy.ndarray.view:30
 msgid "**type**"
 msgstr ""
 
@@ -80,17 +80,17 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.view:31
+#: of numpy.ndarray.view:33
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.view:32
+#: of numpy.ndarray.view:34
 msgid "``a.view()`` is used two different ways:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.view:34
+#: of numpy.ndarray.view:36
 msgid ""
 "``a.view(some_dtype)`` or ``a.view(dtype=some_dtype)`` constructs a view of "
 "the array's memory with a different data-type.  This can cause a "
@@ -98,7 +98,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.view:38
+#: of numpy.ndarray.view:40
 msgid ""
 "``a.view(ndarray_subclass)`` or ``a.view(type=ndarray_subclass)`` just "
 "returns an instance of `ndarray_subclass` that looks at the same array (same "
@@ -106,7 +106,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.view:43
+#: of numpy.ndarray.view:45
 msgid ""
 "For ``a.view(some_dtype)``, if ``some_dtype`` has a different number of "
 "bytes per entry than the previous dtype (for example, converting a regular "
@@ -115,51 +115,51 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.view:48
+#: of numpy.ndarray.view:50
 msgid ""
 "Only the last axis needs to be contiguous. Previously, the entire array had "
 "to be C-contiguous."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.view:54
+#: of numpy.ndarray.view:56
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.view:62
+#: of numpy.ndarray.view:64
 msgid "Viewing array data using a different type and dtype:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.view:71
+#: of numpy.ndarray.view:73
 msgid "Creating a view on a structured array so it can be used in calculations"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.view:81
+#: of numpy.ndarray.view:83
 msgid "Making changes to the view changes the underlying array"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.view:87
+#: of numpy.ndarray.view:89
 msgid "Using a view to convert an array to a recarray:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.view:93
+#: of numpy.ndarray.view:95
 msgid "Views share data:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.view:99
+#: of numpy.ndarray.view:101
 msgid ""
 "Views that change the dtype size (bytes per entry) should normally be "
 "avoided on arrays defined by slices, transposes, fortran-ordering, etc.:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.view:116
+#: of numpy.ndarray.view:118
 msgid ""
 "However, views that change dtype are totally fine for arrays with a "
 "contiguous last axis, even if the rest of the axes are not C-contiguous:"
@@ -168,16 +168,16 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ndarray.view:-1
 msgid ""
-"<div id=\"4fe4ceb6-4c9d-48eb-b304-4ff2856de0a5\" "
+"<div id=\"e5402e1a-f7cd-4ad4-95eb-d71ed440dfb2\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('218c8c32-e524-4f26-813d-"
-"d3b48fd6ec18','4fe4ceb6-4c9d-48eb-b304-4ff2856de0a5')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('218c8c32-e524-4f26-813d-d3b48fd6ec18','4fe4ceb6-4c9d-48eb-"
-"b304-4ff2856de0a5')\">Open In Tab</button></div><div "
-"id=\"649eeda3-9b6c-46ef-936e-dc3784db6b59\" "
+"tryExamplesHideIframe('773ddc85-7f99-489f-af42-27ea2aa68ed2','e5402e1a-"
+"f7cd-4ad4-95eb-d71ed440dfb2')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('773ddc85-7f99-489f-af42-27ea2aa68ed2','e5402e1a-f7cd-4ad4-95eb-"
+"d71ed440dfb2')\">Open In Tab</button></div><div id=\"3839ce94-"
+"ba9c-4bb2-9b64-4a9bc630ff01\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
