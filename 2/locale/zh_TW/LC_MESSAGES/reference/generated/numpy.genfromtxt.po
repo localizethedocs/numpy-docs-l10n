@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,7 +58,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:18
+#: of numpy.genfromtxt:21
 msgid "**dtype**"
 msgstr "**dtype**"
 
@@ -70,12 +70,15 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.genfromtxt:16
 msgid ""
-"Data type of the resulting array. If None, the dtypes will be determined by "
-"the contents of each column, individually."
+"Data type of the resulting array. If a structured dtype, the output array "
+"will be 1D and structured where each field corresponds to one column. If "
+"None, the dtype of each column will be inferred automatically, and the "
+"output array will be structured only if either the dtypes are not all the "
+"same or if `names` is not None."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:22
+#: of numpy.genfromtxt:25
 msgid "**comments**"
 msgstr ""
 
@@ -85,14 +88,14 @@ msgid "str, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:21
+#: of numpy.genfromtxt:24
 msgid ""
 "The character used to indicate the start of a comment. All the characters "
 "occurring on a line after a comment are discarded."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:27
+#: of numpy.genfromtxt:30
 msgid "**delimiter**"
 msgstr ""
 
@@ -102,7 +105,7 @@ msgid "str, int, or sequence, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:25
+#: of numpy.genfromtxt:28
 msgid ""
 "The string used to separate values.  By default, any consecutive whitespaces "
 "act as delimiter.  An integer or sequence of integers can also be provided "
@@ -110,7 +113,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:30
+#: of numpy.genfromtxt:33
 msgid "**skiprows**"
 msgstr ""
 
@@ -120,32 +123,32 @@ msgid "int, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:30
+#: of numpy.genfromtxt:33
 msgid "`skiprows` was removed in numpy 1.10. Please use `skip_header` instead."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:33
+#: of numpy.genfromtxt:36
 msgid "**skip_header**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:33
+#: of numpy.genfromtxt:36
 msgid "The number of lines to skip at the beginning of the file."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:36
+#: of numpy.genfromtxt:39
 msgid "**skip_footer**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:36
+#: of numpy.genfromtxt:39
 msgid "The number of lines to skip at the end of the file."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:41
+#: of numpy.genfromtxt:44
 msgid "**converters**"
 msgstr ""
 
@@ -155,7 +158,7 @@ msgid "variable, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:39
+#: of numpy.genfromtxt:42
 msgid ""
 "The set of functions that convert the data of a column to a value. The "
 "converters can also be used to provide a default value for missing data: "
@@ -163,38 +166,38 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:45
+#: of numpy.genfromtxt:48
 msgid "**missing**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:44
+#: of numpy.genfromtxt:47
 msgid ""
 "`missing` was removed in numpy 1.10. Please use `missing_values` instead."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:48
+#: of numpy.genfromtxt:51
 msgid "**missing_values**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:48
+#: of numpy.genfromtxt:51
 msgid "The set of strings corresponding to missing data."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:51
+#: of numpy.genfromtxt:54
 msgid "**filling_values**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:51
+#: of numpy.genfromtxt:54
 msgid "The set of values to be used as default when the data are missing."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:55
+#: of numpy.genfromtxt:58
 msgid "**usecols**"
 msgstr ""
 
@@ -204,14 +207,14 @@ msgid "sequence, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:54
+#: of numpy.genfromtxt:57
 msgid ""
 "Which columns to read, with 0 being the first.  For example, ``usecols = (1, "
 "4, 5)`` will extract the 2nd, 5th and 6th columns."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:64
+#: of numpy.genfromtxt:69
 msgid "**names**"
 msgstr ""
 
@@ -221,23 +224,24 @@ msgid "{None, True, str, sequence}, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:58
+#: of numpy.genfromtxt:61
 msgid ""
-"If `names` is True, the field names are read from the first line after the "
-"first `skip_header` lines. This line can optionally be preceded by a comment "
-"delimiter. Any content before the comment delimiter is discarded. If `names` "
-"is a sequence or a single-string of comma-separated names, the names will be "
-"used to define the field names in a structured dtype. If `names` is None, "
-"the names of the dtype fields will be used, if any."
+"If `names` is True, the output will be a structured array whose field names "
+"are read from the first line after the first `skip_header` lines. This line "
+"can optionally be preceded by a comment delimiter. Any content before the "
+"comment delimiter is discarded. If `names` is a sequence or a single string "
+"of comma-separated names, the output is a structured array whose field names "
+"are taken from `names`. If `names` is None, the output is structured only if "
+"`dtype` is structured, in which case the field names are taken from `dtype`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:69
+#: of numpy.genfromtxt:74
 msgid "**excludelist**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:67
+#: of numpy.genfromtxt:72
 msgid ""
 "A list of names to exclude. This list is appended to the default list "
 "['return','file','print']. Excluded names are appended with an underscore: "
@@ -245,29 +249,29 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:73
+#: of numpy.genfromtxt:78
 msgid "**deletechars**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:72
+#: of numpy.genfromtxt:77
 msgid ""
 "A string combining invalid characters that must be deleted from the names."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:76
+#: of numpy.genfromtxt:81
 msgid "**defaultfmt**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:76
+#: of numpy.genfromtxt:81
 msgid ""
 "A format used to define default field names, such as \"f%i\" or \"f_%02i\"."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:79
+#: of numpy.genfromtxt:84
 msgid "**autostrip**"
 msgstr ""
 
@@ -277,12 +281,12 @@ msgid "bool, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:79
+#: of numpy.genfromtxt:84
 msgid "Whether to automatically strip white spaces from the variables."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:83
+#: of numpy.genfromtxt:88
 msgid "**replace_space**"
 msgstr ""
 
@@ -292,14 +296,14 @@ msgid "char, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:82
+#: of numpy.genfromtxt:87
 msgid ""
 "Character(s) used in replacement of white spaces in the variable names. By "
 "default, use a '_'."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:88
+#: of numpy.genfromtxt:93
 msgid "**case_sensitive**"
 msgstr ""
 
@@ -309,7 +313,7 @@ msgid "{True, False, 'upper', 'lower'}, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:86
+#: of numpy.genfromtxt:91
 msgid ""
 "If True, field names are case sensitive. If False or 'upper', field names "
 "are converted to upper case. If 'lower', field names are converted to lower "
@@ -317,12 +321,12 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:94
+#: of numpy.genfromtxt:99
 msgid "**unpack**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:91
+#: of numpy.genfromtxt:96
 msgid ""
 "If True, the returned array is transposed, so that arguments may be unpacked "
 "using ``x, y, z = genfromtxt(...)``.  When used with a structured data-type, "
@@ -330,32 +334,32 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:98
+#: of numpy.genfromtxt:103
 msgid "**usemask**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:97
+#: of numpy.genfromtxt:102
 msgid "If True, return a masked array. If False, return a regular array."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:101
+#: of numpy.genfromtxt:106
 msgid "**loose**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:101
+#: of numpy.genfromtxt:106
 msgid "If True, do not raise errors for invalid values."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:106
+#: of numpy.genfromtxt:111
 msgid "**invalid_raise**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:104
+#: of numpy.genfromtxt:109
 msgid ""
 "If True, an exception is raised if an inconsistency is detected in the "
 "number of columns. If False, a warning is emitted and the offending lines "
@@ -363,7 +367,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:111
+#: of numpy.genfromtxt:116
 msgid "**max_rows**"
 msgstr ""
 
@@ -373,7 +377,7 @@ msgid "int,  optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:109
+#: of numpy.genfromtxt:114
 msgid ""
 "The maximum number of rows to read. Must not be used with skip_footer at the "
 "same time.  If given, the value must be at least 1. Default is to read the "
@@ -381,12 +385,12 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:124
+#: of numpy.genfromtxt:129
 msgid "**encoding**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:114
+#: of numpy.genfromtxt:119
 msgid ""
 "Encoding used to decode the inputfile. Does not apply when `fname` is a file "
 "object. The special value 'bytes' enables backward compatibility workarounds "
@@ -397,24 +401,24 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:122
+#: of numpy.genfromtxt:127
 msgid ""
 "Before NumPy 2, the default was ``'bytes'`` for Python 2 compatibility. The "
 "default is now ``None``."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:129
+#: of numpy.genfromtxt:134
 msgid "**ndmin**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:127
+#: of numpy.genfromtxt:132
 msgid "Same parameter as `loadtxt`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:138
+#: of numpy.genfromtxt:145
 msgid "**like**"
 msgstr ""
 
@@ -424,7 +428,7 @@ msgid "array_like, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:132
+#: of numpy.genfromtxt:137
 msgid ""
 "Reference object to allow the creation of arrays which are not NumPy arrays. "
 "If an array-like passed in as ``like`` supports the ``__array_function__`` "
@@ -438,7 +442,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:150
+#: of numpy.genfromtxt:157
 msgid "**out**"
 msgstr "**out**"
 
@@ -448,35 +452,35 @@ msgid "ndarray"
 msgstr "ndarray"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:143
+#: of numpy.genfromtxt:150
 msgid ""
 "Data read from the text file. If `usemask` is True, this is a masked array."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:155
+#: of numpy.genfromtxt:162
 msgid ":obj:`numpy.loadtxt`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:156
+#: of numpy.genfromtxt:163
 msgid "equivalent function when no data is missing."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:160
+#: of numpy.genfromtxt:167
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:161
+#: of numpy.genfromtxt:168
 msgid ""
 "When spaces are used as delimiters, or when no delimiter has been given as "
 "input, there should not be any missing data between two fields."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:163
+#: of numpy.genfromtxt:170
 msgid ""
 "When variables are named (either by a flexible dtype or with a `names` "
 "sequence), there must not be any header in the file (else a ValueError "
@@ -484,76 +488,76 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:166
+#: of numpy.genfromtxt:173
 msgid ""
 "Individual values are not stripped of spaces by default. When using a custom "
 "converter, make sure the function does remove spaces."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:168
+#: of numpy.genfromtxt:175
 msgid "Custom converters may receive unexpected values due to dtype discovery."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:172
+#: of numpy.genfromtxt:179
 msgid "References"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:173
+#: of numpy.genfromtxt:180
 msgid ""
 "NumPy User Guide, section `I/O with NumPy <https://docs.scipy.org/doc/numpy/"
 "user/basics.io.genfromtxt.html>`_."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:178
+#: of numpy.genfromtxt:185
 msgid "[R4687f22d1dc9-1]_"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:181
+#: of numpy.genfromtxt:188
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:189
+#: of numpy.genfromtxt:196
 msgid "Comma delimited file with mixed dtype"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:198
+#: of numpy.genfromtxt:205
 msgid "Using dtype = None"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:207
+#: of numpy.genfromtxt:214
 msgid "Specifying dtype and names"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:216
+#: of numpy.genfromtxt:223
 msgid "An example with fixed-width columns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.genfromtxt:225
+#: of numpy.genfromtxt:232
 msgid "An example to show comments"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.genfromtxt:-1
 msgid ""
-"<div id=\"ff874396-c3c0-45ca-ab1d-fde732440c28\" "
+"<div id=\"87d3d30f-ab8d-49ef-be59-8a8937dd4b37\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('6163e45f-adf4-4371-8235-2e2263865575','ff874396-"
-"c3c0-45ca-ab1d-fde732440c28')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window.openInNewTab('6163e45f-"
-"adf4-4371-8235-2e2263865575','ff874396-c3c0-45ca-ab1d-fde732440c28')\">Open "
-"In Tab</button></div><div id=\"f1e0a0d9-7ef0-4f7c-9966-685e0524fbf9\" "
+"tryExamplesHideIframe('ce16ca74-b403-4175-ba44-9ea6f91cbe3b','87d3d30f-"
+"ab8d-49ef-be59-8a8937dd4b37')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('ce16ca74-"
+"b403-4175-ba44-9ea6f91cbe3b','87d3d30f-ab8d-49ef-be59-8a8937dd4b37')\">Open "
+"In Tab</button></div><div id=\"bc7892ba-2501-40a6-b57f-3dc49c75986a\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 

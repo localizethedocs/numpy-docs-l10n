@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,7 +69,7 @@ msgid "Data type of the result."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.indices:17
+#: of numpy.indices:19
 msgid "**sparse**"
 msgstr ""
 
@@ -91,7 +91,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.indices:34
+#: of numpy.indices:36
 msgid "**grid**"
 msgstr ""
 
@@ -101,41 +101,41 @@ msgid "one ndarray or tuple of ndarrays"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.indices:23
+#: of numpy.indices:25
 msgid "If sparse is False:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.indices:23
+#: of numpy.indices:25
 msgid ""
 "Returns one array of grid indices, ``grid.shape = (len(dimensions),) + "
 "tuple(dimensions)``."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.indices:34
+#: of numpy.indices:36
 msgid "If sparse is True:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.indices:26
+#: of numpy.indices:28
 msgid ""
 "Returns a tuple of arrays, with ``grid[i].shape = (1, ..., 1, dimensions[i], "
 "1, ..., 1)`` with dimensions[i] in the ith place"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.indices:39
+#: of numpy.indices:41
 msgid ":obj:`mgrid`, :obj:`ogrid`, :obj:`meshgrid`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.indices:43
+#: of numpy.indices:45
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.indices:44
+#: of numpy.indices:46
 msgid ""
 "The output shape in the dense case is obtained by prepending the number of "
 "dimensions in front of the tuple of dimensions, i.e. if `dimensions` is a "
@@ -144,36 +144,36 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.indices:49
+#: of numpy.indices:51
 msgid ""
 "The subarrays ``grid[k]`` contains the N-D array of indices along the ``k-"
 "th`` axis. Explicitly::"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.indices:52
+#: of numpy.indices:54
 msgid "grid[k, i0, i1, ..., iN-1] = ik"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.indices:56
+#: of numpy.indices:58
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.indices:72
+#: of numpy.indices:74
 msgid "The indices can be used as an index into an array."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.indices:80
+#: of numpy.indices:82
 msgid ""
 "Note that it would be more straightforward in the above example to extract "
 "the required elements directly with ``x[:2, :3]``."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.indices:83
+#: of numpy.indices:85
 msgid ""
 "If sparse is set to true, the grid will be returned in a sparse "
 "representation."
@@ -182,16 +182,17 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.indices:-1
 msgid ""
-"<div id=\"98588ca2-1184-4163-a5da-f338c69d194e\" "
+"<div id=\"87a318f2-a250-472a-b496-e11d823503d0\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('63abc03d-08ee-4c6b-"
-"a65b-4918901f0308','98588ca2-1184-4163-a5da-f338c69d194e')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('63abc03d-08ee-4c6b-a65b-4918901f0308','98588ca2-1184-4163-a5da-"
-"f338c69d194e')\">Open In Tab</button></div><div id=\"0171b06f-0204-4485-ab00-"
-"e7ec17a14ebb\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('8d8aa8a3-696d-4f1f-a528-feac5fcfbac2','87a318f2-"
+"a250-472a-b496-e11d823503d0')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('8d8aa8a3-696d-4f1f-a528-feac5fcfbac2','87a318f2-a250-472a-b496-"
+"e11d823503d0')\">Open In Tab</button></div><div id=\"7d3fd1a1-"
+"cb2f-471f-9410-82cf56865068\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring

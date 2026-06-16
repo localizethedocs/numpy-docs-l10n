@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,7 +40,7 @@ msgid "Parameters"
 msgstr "參數"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.blackman:13
+#: of numpy.blackman:15
 msgid "**M**"
 msgstr ""
 
@@ -62,7 +62,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.blackman:25
+#: of numpy.blackman:27
 msgid "**out**"
 msgstr "**out**"
 
@@ -72,72 +72,77 @@ msgid "ndarray"
 msgstr "ndarray"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.blackman:18
+#: of numpy.blackman:20
 msgid ""
 "The window, with the maximum value normalized to one (the value one appears "
 "only if the number of samples is odd)."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.blackman:30
+#: of numpy.blackman:32
 msgid ":obj:`bartlett`, :obj:`hamming`, :obj:`hanning`, :obj:`kaiser`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.blackman:34
+#: of numpy.blackman:36
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.blackman:35
+#: of numpy.blackman:37
 msgid "The Blackman window is defined as"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.blackman:37
+#: of numpy.blackman:39
 msgid ""
 "w(n) = 0.42 - 0.5 \\cos(2\\pi n/M) + 0.08 \\cos(4\\pi n/M)\n"
 "\n"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.blackman:39
+#: of numpy.blackman:41
 msgid ""
 "Most references to the Blackman window come from the signal processing "
 "literature, where it is used as one of many windowing functions for "
 "smoothing values.  It is also known as an apodization (which means "
 "\"removing the foot\", i.e. smoothing discontinuities at the beginning and "
 "end of the sampled signal) or tapering function. It is known as a \"near "
-"optimal\" tapering function, almost as good (by some measures) as the kaiser "
+"optimal\" tapering function, almost as good (by some measures) as the Kaiser "
 "window."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.blackman:48
+#: of numpy.blackman:50
 msgid "References"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.blackman:49
+#: of numpy.blackman:51
 msgid ""
 "Blackman, R.B. and Tukey, J.W., (1958) The measurement of power spectra, "
 "Dover Publications, New York."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.blackman:52
+#: of numpy.blackman:53
 msgid ""
 "Oppenheim, A.V., and R.W. Schafer. Discrete-Time Signal Processing. Upper "
 "Saddle River, NJ: Prentice-Hall, 1999, pp. 468-471."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.blackman:60
+#: of numpy.blackman:58
+msgid "[Rc1fd98720f4c-1]_, [Rc1fd98720f4c-2]_"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.blackman:61
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.blackman:73
+#: of numpy.blackman:74
 msgid "Plot the window and the frequency response."
 msgstr ""
 
@@ -171,23 +176,23 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.blackman:103
+#: of numpy.blackman:102
 msgid ""
-"<div id=\"7b303f67-0eec-4991-8de4-e8e7c56e4ec2\" "
+"<div id=\"1655b7bb-0e4f-4d6a-9de5-0550eac17adf\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('887c2971-adf8-4549-b2b2-"
-"db71c7e7db44','7b303f67-0eec-4991-8de4-e8e7c56e4ec2')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('887c2971-adf8-4549-b2b2-db71c7e7db44','7b303f67-0eec-4991-8de4-"
-"e8e7c56e4ec2')\">Open In Tab</button></div><div id=\"be2504e5-523c-4488-"
-"a69d-0893f999d81a\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
-"div>"
+"tryExamplesHideIframe('09e335e5-"
+"d192-4ba3-878b-86699fe7636f','1655b7bb-0e4f-4d6a-9de5-0550eac17adf')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('09e335e5-"
+"d192-4ba3-878b-86699fe7636f','1655b7bb-0e4f-4d6a-9de5-0550eac17adf')\">Open "
+"In Tab</button></div><div id=\"c1e0bac1-aec8-4139-a5f4-6a3cc14d4720\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.blackman:103
+#: of numpy.blackman:102
 msgid ""
 "<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
 "loadTryExamplesConfig(\"../../try_examples.json\");});</script>"

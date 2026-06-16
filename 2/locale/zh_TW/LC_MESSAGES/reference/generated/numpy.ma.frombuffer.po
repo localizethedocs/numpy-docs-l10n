@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,7 +87,7 @@ msgid "Start reading the buffer from this offset (in bytes); default: 0."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.frombuffer:26
+#: of numpy.ma.core.frombuffer:28
 msgid "**like**"
 msgstr ""
 
@@ -111,51 +111,51 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.frombuffer:37
+#: of numpy.ma.core.frombuffer:39
 msgid "out: MaskedArray"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.frombuffer:42
+#: of numpy.ma.core.frombuffer:44
 msgid ":obj:`ndarray.tobytes`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.frombuffer:43
+#: of numpy.ma.core.frombuffer:45
 msgid ""
 "Inverse of this operation, construct Python bytes from the raw data bytes in "
 "the array."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.frombuffer:47
+#: of numpy.ma.core.frombuffer:49
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.frombuffer:48
+#: of numpy.ma.core.frombuffer:50
 msgid ""
 "If the buffer has data that is not in machine byte-order, this should be "
 "specified as part of the data-type, e.g.::"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.frombuffer:51
+#: of numpy.ma.core.frombuffer:53
 msgid ""
-">>> dt = np.dtype(int)\n"
+">>> dt = np.dtype(np.int_)\n"
 ">>> dt = dt.newbyteorder('>')\n"
 ">>> np.frombuffer(buf, dtype=dt) "
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.frombuffer:55
+#: of numpy.ma.core.frombuffer:57
 msgid ""
 "The data of the resulting array will not be byteswapped, but will be "
 "interpreted correctly."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.frombuffer:58
+#: of numpy.ma.core.frombuffer:60
 msgid ""
 "This function creates a view into the original object.  This should be safe "
 "in general, but it may make sense to copy the result when the original "
@@ -163,23 +163,23 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.frombuffer:64
+#: of numpy.ma.core.frombuffer:66
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
 #: of numpy.ma.core.frombuffer:-1
 msgid ""
-"<div id=\"dab168a6-828d-40dd-860d-913d3fb04f91\" "
+"<div id=\"d877aa91-4e43-40e3-aa8b-1c5a9933169b\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('3544d748-a517-43b8-"
-"a8fa-166d513533e8','dab168a6-828d-40dd-860d-913d3fb04f91')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('3544d748-a517-43b8-"
-"a8fa-166d513533e8','dab168a6-828d-40dd-860d-913d3fb04f91')\">Open In Tab</"
-"button></div><div id=\"9333c9bb-ac38-4c86-b2eb-adcf2d61cdc4\" "
+"tryExamplesHideIframe('4a7ded1a-"
+"dd2e-4979-8bf3-9765a9cb1085','d877aa91-4e43-40e3-aa8b-1c5a9933169b')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('4a7ded1a-dd2e-4979-8bf3-9765a9cb1085','d877aa91-4e43-40e3-"
+"aa8b-1c5a9933169b')\">Open In Tab</button></div><div "
+"id=\"0078192d-33ff-41d4-9841-a29e09323b4e\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 

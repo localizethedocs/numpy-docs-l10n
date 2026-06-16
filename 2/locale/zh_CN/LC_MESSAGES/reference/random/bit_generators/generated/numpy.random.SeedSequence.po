@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,7 +41,7 @@ msgid "Parameters"
 msgstr ""
 
 #: ../../../../docstring of numpy.random.bit_generator.SeedSequence:15
-#: numpy.random.bit_generator.SeedSequence:59
+#: numpy.random.bit_generator.SeedSequence:36
 msgid "**entropy**"
 msgstr ""
 
@@ -56,7 +56,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../docstring of numpy.random.bit_generator.SeedSequence:21
-#: numpy.random.bit_generator.SeedSequence:71
+#: numpy.random.bit_generator.SeedSequence:48
 msgid "**spawn_key**"
 msgstr ""
 
@@ -72,7 +72,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../docstring of numpy.random.bit_generator.SeedSequence:27
-#: numpy.random.bit_generator.SeedSequence:68
+#: numpy.random.bit_generator.SeedSequence:45
 msgid "**pool_size**"
 msgstr ""
 
@@ -87,8 +87,8 @@ msgid ""
 "PRNGs, but there is very little to be gained by selecting another value."
 msgstr ""
 
-#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:39
-#: numpy.random.bit_generator.SeedSequence:62
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:31
+#: numpy.random.bit_generator.SeedSequence:39
 msgid "**n_children_spawned**"
 msgstr ""
 
@@ -98,51 +98,51 @@ msgid ""
 "`SeedSequence` from a serialized form."
 msgstr ""
 
-#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:42
-msgid "Notes"
-msgstr ""
-
-#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:43
-msgid ""
-"Best practice for achieving reproducible bit streams is to use the default "
-"``None`` for the initial entropy, and then use `SeedSequence.entropy` to log/"
-"pickle the `entropy` for reproducibility:"
-msgstr ""
-
 #: ../../../../docstring of numpy.random.bit_generator.SeedSequence:0
 msgid "Attributes"
 msgstr ""
 
-#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:65
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:42
 msgid "**pool**"
 msgstr ""
 
-#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:74
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:51
 msgid "**state**"
 msgstr ""
 
-#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:77
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:54
 msgid "Methods"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random.bit_generator.SeedSequence:83:<autosummary>:1
+#: numpy.random.bit_generator.SeedSequence:68:<autosummary>:1
 msgid ""
 ":py:obj:`generate_state <numpy.random.SeedSequence.generate_state>`\\ "
 "\\(n\\_words\\[\\, dtype\\]\\)"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random.bit_generator.SeedSequence:83:<autosummary>:1
+#: numpy.random.bit_generator.SeedSequence:68:<autosummary>:1
 msgid "Return the requested number of words for PRNG seeding."
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random.bit_generator.SeedSequence:83:<autosummary>:1
+#: numpy.random.bit_generator.SeedSequence:68:<autosummary>:1
 msgid ":py:obj:`spawn <numpy.random.SeedSequence.spawn>`\\ \\(n\\_children\\)"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random.bit_generator.SeedSequence:83:<autosummary>:1
+#: numpy.random.bit_generator.SeedSequence:68:<autosummary>:1
 msgid "Spawn a number of child `SeedSequence` s by extending the `spawn_key`."
+msgstr ""
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:70
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:71
+msgid ""
+"Best practice for achieving reproducible bit streams is to use the default "
+"``None`` for the initial entropy, and then use `SeedSequence.entropy` to log/"
+"pickle the `entropy` for reproducibility:"
 msgstr ""

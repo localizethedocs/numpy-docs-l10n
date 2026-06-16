@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,11 +31,8 @@ msgstr ""
 msgid ""
 "The cross product of `a` and `b` in :math:`R^3` is a vector perpendicular to "
 "both `a` and `b`.  If `a` and `b` are arrays of vectors, the vectors are "
-"defined by the last axis of `a` and `b` by default, and these axes can have "
-"dimensions 2 or 3.  Where the dimension of either `a` or `b` is 2, the third "
-"component of the input vector is assumed to be zero and the cross product "
-"calculated accordingly.  In cases where both input vectors have dimension 2, "
-"the z-component of the cross product is returned."
+"defined by the last axis of `a` and `b` by default, and these axes must have "
+"3 dimensions."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
@@ -44,7 +41,7 @@ msgid "Parameters"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:15
+#: of numpy.cross:12
 msgid "**a**"
 msgstr ""
 
@@ -54,22 +51,22 @@ msgid "array_like"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:15
+#: of numpy.cross:12
 msgid "Components of the first vector(s)."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:18
+#: of numpy.cross:15
 msgid "**b**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:18
+#: of numpy.cross:15
 msgid "Components of the second vector(s)."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:21
+#: of numpy.cross:18
 msgid "**axisa**"
 msgstr ""
 
@@ -79,39 +76,39 @@ msgid "int, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:21
+#: of numpy.cross:18
 msgid "Axis of `a` that defines the vector(s).  By default, the last axis."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:24
+#: of numpy.cross:21
 msgid "**axisb**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:24
+#: of numpy.cross:21
 msgid "Axis of `b` that defines the vector(s).  By default, the last axis."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:29
+#: of numpy.cross:24
 msgid "**axisc**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:27
+#: of numpy.cross:24
 msgid ""
-"Axis of `c` containing the cross product vector(s).  Ignored if both input "
-"vectors have dimension 2, as the return is scalar. By default, the last axis."
+"Axis of `c` containing the cross product vector(s).  By default, the last "
+"axis."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:33
+#: of numpy.cross:30
 msgid "**axis**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:32
+#: of numpy.cross:27
 msgid ""
 "If defined, the axis of `a`, `b` and `c` that defines the vector(s) and "
 "cross product(s).  Overrides `axisa`, `axisb` and `axisc`."
@@ -123,7 +120,7 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:41
+#: of numpy.cross:38
 msgid "**c**"
 msgstr ""
 
@@ -133,7 +130,7 @@ msgid "ndarray"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:38
+#: of numpy.cross:35
 msgid "Vector cross product(s)."
 msgstr ""
 
@@ -143,137 +140,116 @@ msgid "Raises"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:49
+#: of numpy.cross:45
 msgid "ValueError"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:46
-msgid ""
-"When the dimension of the vector(s) in `a` and/or `b` does not equal 2 or 3."
+#: of numpy.cross:43
+msgid "When the dimension of the vector(s) in `a` or `b` does not equal 3."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:54
+#: of numpy.cross:50
 msgid ":obj:`inner`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:55
+#: of numpy.cross:51
 msgid "Inner product"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:56
+#: of numpy.cross:52
 msgid ":obj:`outer`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:57
+#: of numpy.cross:53
 msgid "Outer product."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:58
+#: of numpy.cross:54
 msgid ":obj:`linalg.cross`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:59
-msgid ""
-"An Array API compatible variation of ``np.cross``, which accepts (arrays of) "
-"3-element vectors only."
+#: of numpy.cross:55
+msgid "An Array API compatible variation of ``np.cross``."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:60
+#: of numpy.cross:56
 msgid ":obj:`ix_`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:61
+#: of numpy.cross:57
 msgid "Construct index arrays."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:65
+#: of numpy.cross:61
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:66
+#: of numpy.cross:62
 msgid "Supports full broadcasting of the inputs."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:68
-msgid ""
-"Dimension-2 input arrays were deprecated in 2.0.0. If you do need this "
-"functionality, you can use::"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:71
-msgid ""
-"def cross2d(x, y):\n"
-"    return x[..., 0] * y[..., 1] - x[..., 1] * y[..., 0]"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:76
+#: of numpy.cross:66
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:81
+#: of numpy.cross:71
 msgid "Vector cross-product."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:89
+#: of numpy.cross:79
 msgid "One vector with dimension 2."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:96
-msgid "Equivalently:"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:103
+#: of numpy.cross:86
 msgid "Both vectors with dimension 2."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:110
+#: of numpy.cross:93
 msgid ""
 "Multiple vector cross-products. Note that the direction of the cross product "
 "vector is defined by the *right-hand rule*."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:119
+#: of numpy.cross:102
 msgid "The orientation of `c` can be changed using the `axisc` keyword."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cross:126
+#: of numpy.cross:109
 msgid "Change the vector definition of `x` and `y` using `axisa` and `axisb`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.cross:-1
 msgid ""
-"<div id=\"2c3a664e-f717-419d-a133-2ece6a94c97b\" "
+"<div id=\"dacbba82-391d-4e33-b4cb-0293d7b1c68f\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('13a18630-c4a5-475b-ba79-928dddbfef6b','2c3a664e-"
-"f717-419d-a133-2ece6a94c97b')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window.openInNewTab('13a18630-"
-"c4a5-475b-ba79-928dddbfef6b','2c3a664e-f717-419d-a133-2ece6a94c97b')\">Open "
-"In Tab</button></div><div id=\"c8d30743-ee57-48e9-aa8f-f0cc4d79255e\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('14794339-984d-427a-80a8-"
+"e5ddea2a31bf','dacbba82-391d-4e33-b4cb-0293d7b1c68f')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('14794339-984d-427a-80a8-e5ddea2a31bf','dacbba82-391d-4e33-"
+"b4cb-0293d7b1c68f')\">Open In Tab</button></div><div id=\"b0f1876a-836c-469c-"
+"a5ce-d2054a9db537\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring

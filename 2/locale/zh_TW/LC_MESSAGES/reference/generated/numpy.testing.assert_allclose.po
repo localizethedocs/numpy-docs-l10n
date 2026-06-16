@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -98,6 +98,11 @@ msgid "**atol**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_allclose:-1
+msgid "float | np.timedelta64, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
 #: of numpy.testing._private.utils.assert_allclose:28
 msgid "Absolute tolerance."
 msgstr ""
@@ -148,7 +153,7 @@ msgid "If True, the conflicting values are appended to the error message."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.assert_allclose:48
+#: of numpy.testing._private.utils.assert_allclose:50
 msgid "**strict**"
 msgstr "**strict**"
 
@@ -166,27 +171,27 @@ msgid "Raises"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.assert_allclose:55
+#: of numpy.testing._private.utils.assert_allclose:57
 msgid "AssertionError"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.assert_allclose:53
+#: of numpy.testing._private.utils.assert_allclose:55
 msgid "If actual and desired are not equal up to specified precision."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.assert_allclose:60
+#: of numpy.testing._private.utils.assert_allclose:62
 msgid ":obj:`assert_array_almost_equal_nulp`, :obj:`assert_array_max_ulp`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.assert_allclose:64
+#: of numpy.testing._private.utils.assert_allclose:66
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.assert_allclose:65
+#: of numpy.testing._private.utils.assert_allclose:67
 msgid ""
 "When one of `actual` and `desired` is a scalar and the other is array_like, "
 "the function performs the comparison as if the scalar were broadcasted to "
@@ -195,12 +200,12 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.assert_allclose:72
+#: of numpy.testing._private.utils.assert_allclose:74
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.assert_allclose:81
+#: of numpy.testing._private.utils.assert_allclose:83
 msgid ""
 "As mentioned in the Notes section, `assert_allclose` has special handling "
 "for scalars. Here, the test checks that the value of `numpy.sin` is nearly "
@@ -208,31 +213,31 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.assert_allclose:88
+#: of numpy.testing._private.utils.assert_allclose:90
 msgid ""
 "Use `strict` to raise an ``AssertionError`` when comparing an array with one "
 "or more dimensions against a scalar."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.assert_allclose:101
+#: of numpy.testing._private.utils.assert_allclose:103
 msgid "The `strict` parameter also ensures that the array data types match:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
 #: of numpy.testing._private.utils.assert_allclose:-1
 msgid ""
-"<div id=\"543d3659-dcc0-4230-aff2-523788ded9e0\" "
+"<div id=\"69eb7b92-095a-4587-970a-5cdd163e18b6\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('a8b01796-1ef0-4b24-a7e0-b4466f494c3d','543d3659-"
-"dcc0-4230-aff2-523788ded9e0')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('a8b01796-1ef0-4b24-a7e0-b4466f494c3d','543d3659-dcc0-4230-"
-"aff2-523788ded9e0')\">Open In Tab</button></div><div id=\"445a08e5-c39f-4fbf-"
-"a2b1-b7929f190ca1\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
-"div>"
+"tryExamplesHideIframe('2cc42d4d-cb1d-43f2-"
+"b4d1-44ec93a7b135','69eb7b92-095a-4587-970a-5cdd163e18b6')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('2cc42d4d-cb1d-43f2-"
+"b4d1-44ec93a7b135','69eb7b92-095a-4587-970a-5cdd163e18b6')\">Open In Tab</"
+"button></div><div id=\"84cb269f-017b-416e-86f4-10a9386a0ea8\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring

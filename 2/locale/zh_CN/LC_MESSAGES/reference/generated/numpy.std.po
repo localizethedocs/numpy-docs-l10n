@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -190,7 +190,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.std:64
+#: of numpy.std:66
 msgid "**correction**"
 msgstr ""
 
@@ -207,7 +207,7 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.std:76
+#: of numpy.std:78
 msgid "**standard_deviation**"
 msgstr ""
 
@@ -217,29 +217,29 @@ msgid "ndarray, see dtype parameter above."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.std:69
+#: of numpy.std:71
 msgid ""
 "If `out` is None, return a new array containing the standard deviation, "
 "otherwise return a reference to the output array."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.std:81
+#: of numpy.std:83
 msgid ":obj:`var`, :obj:`mean`, :obj:`nanmean`, :obj:`nanstd`, :obj:`nanvar`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.std:83
+#: of numpy.std:85
 msgid ":ref:`ufuncs-output-type`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.std:87
+#: of numpy.std:89
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.std:88
+#: of numpy.std:90
 msgid ""
 "There are several common variants of the array standard deviation "
 "calculation. Assuming the input `a` is a one-dimensional NumPy array and "
@@ -248,7 +248,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.std:93
+#: of numpy.std:95
 msgid ""
 "N = len(a)\n"
 "d2 = abs(a - mean)**2  # abs is for complex `a`\n"
@@ -257,19 +257,19 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.std:98
+#: of numpy.std:100
 msgid ""
 "Different values of the argument `ddof` are useful in different contexts. "
 "NumPy's default ``ddof=0`` corresponds with the expression:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.std:101
+#: of numpy.std:103
 msgid "\\sqrt{\\frac{\\sum_i{|a_i - \\bar{a}|^2 }}{N}}"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.std:105
+#: of numpy.std:107
 msgid ""
 "which is sometimes called the \"population standard deviation\" in the field "
 "of statistics because it applies the definition of standard deviation to `a` "
@@ -277,19 +277,19 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.std:109
+#: of numpy.std:111
 msgid ""
 "Many other libraries define the standard deviation of an array differently, "
 "e.g.:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.std:112
+#: of numpy.std:114
 msgid "\\sqrt{\\frac{\\sum_i{|a_i - \\bar{a}|^2 }}{N - 1}}"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.std:116
+#: of numpy.std:118
 msgid ""
 "In statistics, the resulting quantity is sometimes called the \"sample "
 "standard deviation\" because if `a` is a random sample from a larger "
@@ -303,14 +303,14 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.std:127
+#: of numpy.std:129
 msgid ""
 "Note that, for complex numbers, `std` takes the absolute value before "
 "squaring, so that the result is always real and nonnegative."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.std:130
+#: of numpy.std:132
 msgid ""
 "For floating-point input, the standard deviation is computed using the same "
 "precision the input has. Depending on the input data, this can cause the "
@@ -320,43 +320,44 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.std:138
+#: of numpy.std:140
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.std:152
+#: of numpy.std:154
 msgid "In single precision, std() can be inaccurate:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.std:160
+#: of numpy.std:162
 msgid "Computing the standard deviation in float64 is more accurate:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.std:165
+#: of numpy.std:167
 msgid "Specifying a where argument:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.std:173
+#: of numpy.std:175
 msgid "Using the mean keyword to save computation time:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.std:-1
 msgid ""
-"<div id=\"35e2d494-0071-445d-9b46-e9984e808443\" "
+"<div id=\"c2b7d056-c5a2-469c-80f9-8b833bd167d0\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('045a1459-f016-46e2-b9e0-"
-"c3be49674395','35e2d494-0071-445d-9b46-e9984e808443')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('045a1459-f016-46e2-b9e0-c3be49674395','35e2d494-0071-445d-9b46-"
-"e9984e808443')\">Open In Tab</button></div><div id=\"4a4b7dd3-3051-4d1b-be26-"
-"db34bdd9b4bd\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('40777887-1534-4318-8e22-bfc79b7ed1a4','c2b7d056-"
+"c5a2-469c-80f9-8b833bd167d0')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('40777887-1534-4318-8e22-bfc79b7ed1a4','c2b7d056-"
+"c5a2-469c-80f9-8b833bd167d0')\">Open In Tab</button></div><div "
+"id=\"1fedccb5-6e96-469c-8146-65d9fe392daf\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -60,7 +60,7 @@ msgid ""
 "initialized at 0."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._philox.Philox:30
+#: ../../../../docstring of numpy.random._philox.Philox:22
 msgid "**key**"
 msgstr ""
 
@@ -71,11 +71,26 @@ msgid ""
 "uint64 array. `key` and ``seed`` cannot both be used."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._philox.Philox:33
+#: ../../../../docstring of numpy.random._philox.Philox:0
+msgid "Attributes"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:39
+msgid "**lock: threading.Lock**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:27
+msgid ""
+"Lock instance that is shared so that the same bit git generator can be used "
+"in multiple Generators without corrupting the state. Code that generates "
+"values from a bit generator should hold the bit generator's lock."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:42
 msgid "Notes"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._philox.Philox:34
+#: ../../../../docstring of numpy.random._philox.Philox:43
 msgid ""
 "Philox is a 64-bit PRNG that uses a counter-based design based on weaker "
 "(and faster) versions of cryptographic functions [R40f8e2ad755a-1]_. "
@@ -85,7 +100,7 @@ msgid ""
 "allow multiple non-overlapping sequences to be generated."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._philox.Philox:41
+#: ../../../../docstring of numpy.random._philox.Philox:50
 msgid ""
 "`Philox` provides a capsule containing function pointers that produce "
 "doubles, and unsigned 32 and 64- bit integers. These are not directly "
@@ -93,11 +108,11 @@ msgid ""
 "that supports low-level access."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._philox.Philox:46
+#: ../../../../docstring of numpy.random._philox.Philox:55
 msgid "**State and Seeding**"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._philox.Philox:48
+#: ../../../../docstring of numpy.random._philox.Philox:57
 msgid ""
 "The `Philox` state vector consists of a 256-bit value encoded as a 4-element "
 "uint64 array and a 128-bit value encoded as a 2-element uint64 array. The "
@@ -106,30 +121,30 @@ msgid ""
 "different keys produces independent sequences."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._philox.Philox:54
+#: ../../../../docstring of numpy.random._philox.Philox:63
 msgid ""
 "The input ``seed`` is processed by `SeedSequence` to generate the key. The "
 "counter is set to 0."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._philox.Philox:57
+#: ../../../../docstring of numpy.random._philox.Philox:66
 msgid ""
 "Alternately, one can omit the ``seed`` parameter and set the ``key`` and "
 "``counter`` directly."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._philox.Philox:60
+#: ../../../../docstring of numpy.random._philox.Philox:69
 msgid "**Parallel Features**"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._philox.Philox:62
+#: ../../../../docstring of numpy.random._philox.Philox:71
 msgid ""
 "The preferred way to use a BitGenerator in parallel applications is to use "
 "the `SeedSequence.spawn` method to obtain entropy values, and to use these "
 "to generate new BitGenerators:"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._philox.Philox:70
+#: ../../../../docstring of numpy.random._philox.Philox:79
 msgid ""
 "`Philox` can be used in parallel applications by calling the :meth:`jumped` "
 "method to advance the state as-if :math:`2^{128}` random numbers have been "
@@ -139,27 +154,27 @@ msgid ""
 "sequence."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._philox.Philox:84
+#: ../../../../docstring of numpy.random._philox.Philox:93
 msgid ""
 "Alternatively, `Philox` can be used in parallel applications by using a "
 "sequence of distinct keys where each instance uses different key."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._philox.Philox:90
+#: ../../../../docstring of numpy.random._philox.Philox:99
 msgid "**Compatibility Guarantee**"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._philox.Philox:92
+#: ../../../../docstring of numpy.random._philox.Philox:101
 msgid ""
 "`Philox` makes a guarantee that a fixed ``seed`` will always produce the "
 "same random integer stream."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._philox.Philox:96
+#: ../../../../docstring of numpy.random._philox.Philox:105
 msgid "References"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._philox.Philox:97
+#: ../../../../docstring of numpy.random._philox.Philox:106
 msgid ""
 "John K. Salmon, Mark A. Moraes, Ron O. Dror, and David E. Shaw, \"Parallel "
 "Random Numbers: As Easy as 1, 2, 3,\" Proceedings of the International "
@@ -167,48 +182,33 @@ msgid ""
 "(SC11), New York, NY: ACM, 2011."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._philox.Philox:104
+#: ../../../../docstring of numpy.random._philox.Philox:113
 msgid "[R40f8e2ad755a-1]_"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._philox.Philox:107
+#: ../../../../docstring of numpy.random._philox.Philox:116
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../docstring of numpy.random._philox.Philox:-1
 msgid ""
-"<div id=\"c4df8d75-6482-4c84-90ba-c93b4e7e8d9f\" "
+"<div id=\"de93a8cb-79b1-4cc1-b552-02b183f2a2ad\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('9719ad19-2e73-4ee8-bf78-"
-"c11bd1613ce8','c4df8d75-6482-4c84-90ba-c93b4e7e8d9f')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('9719ad19-2e73-4ee8-bf78-c11bd1613ce8','c4df8d75-6482-4c84-90ba-"
-"c93b4e7e8d9f')\">Open In Tab</button></div><div "
-"id=\"66caa191-6aa8-4ac1-8a1f-5acd267e4815\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('20bd5abb-63ae-4bf5-89f9-381ed382c855','de93a8cb-79b1-4cc1-"
+"b552-02b183f2a2ad')\">Go Back</button><button class=\"try_examples_button\" "
+"onclick=\"window."
+"openInNewTab('20bd5abb-63ae-4bf5-89f9-381ed382c855','de93a8cb-79b1-4cc1-"
+"b552-02b183f2a2ad')\">Open In Tab</button></div><div id=\"1c5729aa-7fae-4506-"
+"bb84-8cf9013d8845\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
 msgstr ""
 
 #: ../../../../docstring of numpy.random._philox.Philox:-1
 msgid ""
 "<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
 "loadTryExamplesConfig(\"../../../try_examples.json\");});</script>"
-msgstr ""
-
-#: ../../../../docstring of numpy.random._philox.Philox:0
-msgid "Attributes"
-msgstr ""
-
-#: ../../../../docstring of numpy.random._philox.Philox:125
-msgid "**lock: threading.Lock**"
-msgstr ""
-
-#: ../../../../docstring of numpy.random._philox.Philox:121
-msgid ""
-"Lock instance that is shared so that the same bit git generator can be used "
-"in multiple Generators without corrupting the state. Code that generates "
-"values from a bit generator should hold the bit generator's lock."
 msgstr ""
 
 #: ../../../reference/random/bit_generators/philox.rst:11

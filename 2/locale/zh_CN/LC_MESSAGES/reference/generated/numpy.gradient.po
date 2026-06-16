@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -74,7 +74,7 @@ msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.gradient:18
-msgid "single scalar to specify a sample distance for all dimensions."
+msgid "Single scalar to specify a sample distance for all dimensions."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
@@ -121,7 +121,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:38
+#: of numpy.gradient:40
 msgid "**axis**"
 msgstr ""
 
@@ -133,9 +133,10 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.gradient:35
 msgid ""
-"Gradient is calculated only along the given axis or axes The default (axis = "
-"None) is to calculate the gradient for all the axes of the input array. axis "
-"may be negative, in which case it counts from the last to the first axis."
+"Gradient is calculated only along the given axis or axes. The default (axis "
+"= None) is to calculate the gradient for all the axes of the input array. "
+"axis may be negative, in which case it counts from the last to the first "
+"axis."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
@@ -144,7 +145,7 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:52
+#: of numpy.gradient:54
 msgid "**gradient**"
 msgstr ""
 
@@ -154,7 +155,7 @@ msgid "ndarray or tuple of ndarray"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:43
+#: of numpy.gradient:45
 msgid ""
 "A tuple of ndarrays (or a single ndarray if there is only one dimension) "
 "corresponding to the derivatives of f with respect to each dimension. Each "
@@ -162,12 +163,12 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:55
+#: of numpy.gradient:57
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:56
+#: of numpy.gradient:58
 msgid ""
 "Assuming that :math:`f\\in C^{3}` (i.e., :math:`f` has at least 3 continuous "
 "derivatives) and let :math:`h_{*}` be a non-homogeneous stepsize, we "
@@ -177,7 +178,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:61
+#: of numpy.gradient:63
 msgid ""
 "\\eta_{i} = f_{i}^{\\left(1\\right)} -\n"
 "            \\left[ \\alpha f\\left(x_{i}\\right) +\n"
@@ -187,7 +188,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:69
+#: of numpy.gradient:71
 msgid ""
 "By substituting :math:`f(x_{i} + h_{d})` and :math:`f(x_{i} - h_{s})` with "
 "their Taylor series expansion, this translates into solving the following "
@@ -195,7 +196,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:73
+#: of numpy.gradient:75
 msgid ""
 "\\left\\{\n"
 "    \\begin{array}{r}\n"
@@ -207,12 +208,12 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:83
+#: of numpy.gradient:85
 msgid "The resulting approximation of :math:`f_{i}^{(1)}` is the following:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:85
+#: of numpy.gradient:87
 msgid ""
 "\\hat f_{i}^{(1)} =\n"
 "    \\frac{\n"
@@ -226,14 +227,14 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:97
+#: of numpy.gradient:99
 msgid ""
 "It is worth noting that if :math:`h_{s}=h_{d}` (i.e., data are evenly "
 "spaced) we find the standard second order approximation:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:101
+#: of numpy.gradient:103
 msgid ""
 "\\hat f_{i}^{(1)}=\n"
 "    \\frac{f\\left(x_{i+1}\\right) - f\\left(x_{i-1}\\right)}{2h}\n"
@@ -241,33 +242,33 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:107
+#: of numpy.gradient:109
 msgid ""
 "With a similar procedure the forward/backward approximations used for "
 "boundaries can be derived."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:111
+#: of numpy.gradient:113
 msgid "References"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:112
+#: of numpy.gradient:114
 msgid ""
 "Quarteroni A., Sacco R., Saleri F. (2007) Numerical Mathematics (Texts in "
 "Applied Mathematics). New York: Springer."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:114
+#: of numpy.gradient:116
 msgid ""
 "Durran D. R. (1999) Numerical Methods for Wave Equations in Geophysical "
 "Fluid Dynamics. New York: Springer."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:116
+#: of numpy.gradient:118
 msgid ""
 "Fornberg B. (1988) Generation of Finite Difference Formulas on Arbitrarily "
 "Spaced Grids, Mathematics of Computation 51, no. 184 : 699-706. `PDF "
@@ -276,29 +277,29 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:124
+#: of numpy.gradient:126
 msgid "[Ra2d2bdda2b24-1]_, [Ra2d2bdda2b24-2]_, [Ra2d2bdda2b24-3]_"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:127
+#: of numpy.gradient:129
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:139
+#: of numpy.gradient:141
 msgid ""
 "Spacing can be also specified with an array that represents the coordinates "
 "of the values F along the dimensions. For instance a uniform spacing:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:147
+#: of numpy.gradient:149
 msgid "Or a non uniform one:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:153
+#: of numpy.gradient:155
 msgid ""
 "For two dimensional arrays, the return will be two arrays ordered by axis. "
 "In this example the first array stands for the gradient in rows and the "
@@ -306,43 +307,43 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:163
+#: of numpy.gradient:165
 msgid ""
 "In this example the spacing is also specified: uniform for axis=0 and non "
 "uniform for axis=1"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:174
+#: of numpy.gradient:176
 msgid "It is possible to specify how boundaries are treated using `edge_order`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:183
+#: of numpy.gradient:185
 msgid ""
 "The `axis` keyword can be used to specify a subset of axes of which the "
 "gradient is calculated"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:190
+#: of numpy.gradient:192
 msgid ""
 "The `varargs` argument defines the spacing between sample points in the "
 "input array. It can take two forms:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:193
+#: of numpy.gradient:195
 msgid "An array, specifying coordinates, which may be unevenly spaced:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:200
+#: of numpy.gradient:202
 msgid "A scalar, representing the fixed sample distance:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:208
+#: of numpy.gradient:210
 msgid ""
 "It's possible to provide different data for spacing along each dimension. "
 "The number of arguments must match the number of dimensions in the input "
@@ -350,24 +351,24 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.gradient:226
+#: of numpy.gradient:228
 msgid "Mixing scalars and arrays is also allowed:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.gradient:-1
 msgid ""
-"<div id=\"812d3b3f-3f02-4409-8831-812a996a139e\" "
+"<div id=\"e8d45ad8-e858-4ed1-a17f-0696d7866eb4\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('643b970f-271b-4405-"
-"bccf-69d9f8718163','812d3b3f-3f02-4409-8831-812a996a139e')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('643b970f-271b-4405-"
-"bccf-69d9f8718163','812d3b3f-3f02-4409-8831-812a996a139e')\">Open In Tab</"
-"button></div><div id=\"0e5b8bb7-5dc9-455e-b6f9-5d4f03b60cd4\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('ce839fd5-896e-436a-83c9-cc9a47893d50','e8d45ad8-"
+"e858-4ed1-a17f-0696d7866eb4')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('ce839fd5-896e-436a-83c9-cc9a47893d50','e8d45ad8-e858-4ed1-"
+"a17f-0696d7866eb4')\">Open In Tab</button></div><div id=\"26593859-2a5f-4e3e-"
+"b7f0-3710caa76e1a\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring

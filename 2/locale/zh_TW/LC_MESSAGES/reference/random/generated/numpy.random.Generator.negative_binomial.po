@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,7 +69,7 @@ msgid "Parameter of the distribution. Must satisfy 0 < p <= 1."
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.negative_binomial:20
+#: numpy.random._generator.Generator.negative_binomial:22
 msgid "**size**"
 msgstr "**size**"
 
@@ -93,7 +93,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.negative_binomial:34
+#: numpy.random._generator.Generator.negative_binomial:36
 msgid "**out**"
 msgstr "**out**"
 
@@ -103,7 +103,7 @@ msgid "ndarray or scalar"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.negative_binomial:25
+#: numpy.random._generator.Generator.negative_binomial:27
 msgid ""
 "Drawn samples from the parameterized negative binomial distribution, where "
 "each sample is equal to N, the number of failures that occurred before a "
@@ -111,24 +111,24 @@ msgid ""
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.negative_binomial:37
+#: numpy.random._generator.Generator.negative_binomial:39
 msgid "Notes"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.negative_binomial:38
+#: numpy.random._generator.Generator.negative_binomial:40
 msgid "The probability mass function of the negative binomial distribution is"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.negative_binomial:40
+#: numpy.random._generator.Generator.negative_binomial:42
 msgid ""
 "P(N;n,p) = \\frac{\\Gamma(N+n)}{N!\\Gamma(n)}p^{n}(1-p)^{N},\n"
 "\n"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.negative_binomial:42
+#: numpy.random._generator.Generator.negative_binomial:44
 msgid ""
 "where :math:`n` is the number of successes, :math:`p` is the probability of "
 "success, :math:`N+n` is the number of trials, and :math:`\\Gamma` is the "
@@ -139,7 +139,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.negative_binomial:50
+#: numpy.random._generator.Generator.negative_binomial:52
 msgid ""
 "If one throws a die repeatedly until the third time a \"1\" appears, then "
 "the probability distribution of the number of non-\"1\"s that appear before "
@@ -147,7 +147,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.negative_binomial:54
+#: numpy.random._generator.Generator.negative_binomial:56
 msgid ""
 "Because this method internally calls ``Generator.poisson`` with an "
 "intermediate random value, a ValueError is raised when the choice of :math:"
@@ -160,14 +160,14 @@ msgid ""
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.negative_binomial:63
+#: numpy.random._generator.Generator.negative_binomial:65
 msgid ""
 "n\\frac{1-p}{p}+10n\\sqrt{n}\\frac{1-p}{p}<2^{63}-1-10\\sqrt{2^{63}-1},\n"
 "\n"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.negative_binomial:65
+#: numpy.random._generator.Generator.negative_binomial:67
 msgid ""
 "Where the left side of the equation is the derived mean + 10 sigma of a "
 "sample from the gamma distribution internally used as the :math:`lam` "
@@ -176,12 +176,12 @@ msgid ""
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.negative_binomial:71
+#: numpy.random._generator.Generator.negative_binomial:73
 msgid "References"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.negative_binomial:72
+#: numpy.random._generator.Generator.negative_binomial:74
 msgid ""
 "Weisstein, Eric W. \"Negative Binomial Distribution.\" From MathWorld--A "
 "Wolfram Web Resource. https://mathworld.wolfram.com/"
@@ -189,29 +189,29 @@ msgid ""
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.negative_binomial:75
+#: numpy.random._generator.Generator.negative_binomial:77
 msgid ""
 "Wikipedia, \"Negative binomial distribution\", https://en.wikipedia.org/wiki/"
 "Negative_binomial_distribution"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.negative_binomial:80
+#: numpy.random._generator.Generator.negative_binomial:82
 msgid "[R30b32598df4a-1]_, [R30b32598df4a-2]_"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.negative_binomial:83
+#: numpy.random._generator.Generator.negative_binomial:85
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.negative_binomial:88
+#: numpy.random._generator.Generator.negative_binomial:90
 msgid "Draw samples from the distribution:"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.negative_binomial:90
+#: numpy.random._generator.Generator.negative_binomial:92
 msgid ""
 "A real world example. A company drills wild-cat oil exploration wells, each "
 "with an estimated probability of success of 0.1.  What is the probability of "
@@ -222,17 +222,17 @@ msgstr ""
 #: ../../../../docstring of
 #: numpy.random._generator.Generator.negative_binomial:-1
 msgid ""
-"<div id=\"1208b20b-3dc5-43c8-971b-5230b4165114\" "
+"<div id=\"15becd96-95bf-4638-a78e-8d2cc3386769\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('c03638bf-4e96-44c2-9d2d-"
-"f7c73b1179bd','1208b20b-3dc5-43c8-971b-5230b4165114')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('c03638bf-4e96-44c2-9d2d-"
-"f7c73b1179bd','1208b20b-3dc5-43c8-971b-5230b4165114')\">Open In Tab</"
-"button></div><div id=\"4bdc6271-d01d-4149-beb4-0a7c376bb00d\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('fdcac7a5-0fb2-43a3-8716-9035a072f19a','15becd96-95bf-4638-"
+"a78e-8d2cc3386769')\">Go Back</button><button class=\"try_examples_button\" "
+"onclick=\"window."
+"openInNewTab('fdcac7a5-0fb2-43a3-8716-9035a072f19a','15becd96-95bf-4638-"
+"a78e-8d2cc3386769')\">Open In Tab</button></div><div id=\"81050d6e-e89f-4502-"
+"b18d-2cffeb52b141\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
 msgstr ""
 
 #: ../../../../docstring of

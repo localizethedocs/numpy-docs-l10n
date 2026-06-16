@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,24 +31,31 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
 #: of numpy.char.asarray:5
 msgid ""
+"``chararray`` is deprecated. Use an ``ndarray`` with a string or bytes dtype "
+"instead."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:9
+msgid ""
 "Versus a NumPy array of dtype `bytes_` or `str_`, this class adds the "
 "following functionality:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.asarray:8
+#: of numpy.char.asarray:12
 msgid "values automatically have whitespace removed from the end when indexed"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.asarray:11
+#: of numpy.char.asarray:15
 msgid ""
 "comparison operators automatically remove whitespace from the end when "
 "comparing values"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.asarray:14
+#: of numpy.char.asarray:18
 msgid ""
 "vectorized string operations are provided as methods (e.g. `chararray."
 "endswith <numpy.char.chararray.endswith>`) and infix operators (e.g. ``+``, "
@@ -61,7 +68,7 @@ msgid "Parameters"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.asarray:21
+#: of numpy.char.asarray:25
 msgid "**obj**"
 msgstr ""
 
@@ -71,7 +78,7 @@ msgid "array of str or unicode-like"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.asarray:29
+#: of numpy.char.asarray:33
 msgid "**itemsize**"
 msgstr ""
 
@@ -81,7 +88,7 @@ msgid "int, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.asarray:24
+#: of numpy.char.asarray:28
 msgid ""
 "`itemsize` is the number of characters per scalar in the resulting array.  "
 "If `itemsize` is None, and `obj` is an object array or a Python list, the "
@@ -91,7 +98,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.asarray:41
+#: of numpy.char.asarray:45
 msgid "**unicode**"
 msgstr ""
 
@@ -101,7 +108,7 @@ msgid "bool, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.asarray:32
+#: of numpy.char.asarray:36
 msgid ""
 "When true, the resulting `~numpy.char.chararray` can contain Unicode "
 "characters, when false only 8-bit characters.  If unicode is None and `obj` "
@@ -109,29 +116,29 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.asarray:36
+#: of numpy.char.asarray:40
 msgid "a `~numpy.char.chararray`,"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.asarray:37
+#: of numpy.char.asarray:41
 msgid "an ndarray of type `str_` or `unicode_`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.asarray:38
+#: of numpy.char.asarray:42
 msgid "a Python str or unicode object,"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.asarray:40
+#: of numpy.char.asarray:44
 msgid ""
 "then the unicode setting of the output array will be automatically "
 "determined."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.asarray:58
+#: of numpy.char.asarray:64
 msgid "**order**"
 msgstr ""
 
@@ -141,7 +148,7 @@ msgid "{'C', 'F'}, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.asarray:44
+#: of numpy.char.asarray:48
 msgid ""
 "Specify the order of the array.  If order is 'C' (default), then the array "
 "will be in C-contiguous order (last-index varies the fastest).  If order is "
@@ -150,24 +157,24 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.asarray:61
+#: of numpy.char.asarray:67
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
 #: of numpy.char.asarray:-1
 msgid ""
-"<div id=\"ff089d57-3d4e-40aa-bbae-4d37fa71f665\" "
+"<div id=\"6d898da9-e611-4e46-8ec0-352c1d0115cf\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('0f7cfa24-35b8-4357-8ffe-495716a3585d','ff089d57-3d4e-40aa-"
-"bbae-4d37fa71f665')\">Go Back</button><button class=\"try_examples_button\" "
-"onclick=\"window."
-"openInNewTab('0f7cfa24-35b8-4357-8ffe-495716a3585d','ff089d57-3d4e-40aa-"
-"bbae-4d37fa71f665')\">Open In Tab</button></div><div id=\"56143f11-5983-43da-"
-"a78f-b89acc5d4811\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
-"div>"
+"tryExamplesHideIframe('9703c36f-57f8-4c4d-8884-0062f7a5faa7','6d898da9-"
+"e611-4e46-8ec0-352c1d0115cf')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('9703c36f-57f8-4c4d-8884-0062f7a5faa7','6d898da9-"
+"e611-4e46-8ec0-352c1d0115cf')\">Open In Tab</button></div><div "
+"id=\"05aab2a3-4d13-4499-8175-287941955a57\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring

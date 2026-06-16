@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../../dev/index.rst:252
+#: ../../../dev/index.rst:254
 msgid "NumPy C style guide"
 msgstr "NumPy C 風格指南"
 
@@ -357,47 +357,55 @@ msgid ""
 "no response to your pull request within a week."
 msgstr ""
 
-#: ../../../dev/index.rst:190
-msgid "Stylistic guidelines"
+#: ../../../dev/index.rst:186
+msgid ""
+"Do not include copyright notices in source code without explicitly "
+"discussing the need first. In general, any code you contribute to the "
+"project is under the project `license <https://numpy.org/devdocs/license."
+"html>`_."
 msgstr ""
 
 #: ../../../dev/index.rst:192
+msgid "Stylistic guidelines"
+msgstr ""
+
+#: ../../../dev/index.rst:194
 msgid ""
 "Set up your editor to follow `PEP 8 <https://www.python.org/dev/peps/ "
 "pep-0008/>`_ (remove trailing white space, no tabs, etc.).  Check code with "
 "ruff."
 msgstr ""
 
-#: ../../../dev/index.rst:196
+#: ../../../dev/index.rst:198
 msgid ""
 "Use NumPy data types instead of strings (``np.uint8`` instead of "
 "``\"uint8\"``)."
 msgstr ""
 
-#: ../../../dev/index.rst:199
+#: ../../../dev/index.rst:201
 msgid "Use the following import conventions::"
 msgstr ""
 
-#: ../../../dev/index.rst:201
+#: ../../../dev/index.rst:203
 msgid "import numpy as np"
 msgstr ""
 
-#: ../../../dev/index.rst:203
+#: ../../../dev/index.rst:205
 msgid "For C code, see :ref:`NEP 45 <NEP45>`."
 msgstr ""
 
-#: ../../../dev/index.rst:207
+#: ../../../dev/index.rst:209
 msgid "Test coverage"
 msgstr ""
 
-#: ../../../dev/index.rst:209
+#: ../../../dev/index.rst:211
 msgid ""
 "Pull requests (PRs) that modify code should either have new tests, or modify "
 "existing tests to fail before the PR and pass afterwards. You should :ref:"
 "`run the tests <development-environment>` before pushing a PR."
 msgstr ""
 
-#: ../../../dev/index.rst:213
+#: ../../../dev/index.rst:215
 msgid ""
 "Running NumPy's test suite locally requires some additional packages, such "
 "as ``pytest`` and ``hypothesis``. The additional testing dependencies are "
@@ -405,67 +413,67 @@ msgid ""
 "and can conveniently be installed with::"
 msgstr ""
 
-#: ../../../dev/index.rst:218
+#: ../../../dev/index.rst:220
 msgid "$ python -m pip install -r requirements/test_requirements.txt"
 msgstr ""
 
-#: ../../../dev/index.rst:220
+#: ../../../dev/index.rst:222
 msgid ""
 "Tests for a module should ideally cover all code in that module, i.e., "
 "statement coverage should be at 100%."
 msgstr ""
 
-#: ../../../dev/index.rst:223
+#: ../../../dev/index.rst:225
 msgid "To measure the test coverage, run::"
 msgstr ""
 
-#: ../../../dev/index.rst:225
+#: ../../../dev/index.rst:227
 msgid "$ spin test --coverage"
 msgstr ""
 
-#: ../../../dev/index.rst:227
+#: ../../../dev/index.rst:229
 msgid ""
 "This will create a report in ``html`` format at ``build/coverage``, which "
 "can be viewed with your browser, e.g.::"
 msgstr ""
 
-#: ../../../dev/index.rst:230
+#: ../../../dev/index.rst:232
 msgid "$ firefox build/coverage/index.html"
 msgstr ""
 
-#: ../../../dev/index.rst:235
+#: ../../../dev/index.rst:237
 msgid "Building docs"
 msgstr "建置文件"
 
-#: ../../../dev/index.rst:237
+#: ../../../dev/index.rst:239
 msgid "To build the HTML documentation, use::"
 msgstr ""
 
-#: ../../../dev/index.rst:239
+#: ../../../dev/index.rst:241
 msgid "spin docs"
 msgstr ""
 
-#: ../../../dev/index.rst:241
+#: ../../../dev/index.rst:243
 msgid ""
 "You can also run ``make`` from the ``doc`` directory. ``make help`` lists "
 "all targets."
 msgstr ""
 
-#: ../../../dev/index.rst:244
+#: ../../../dev/index.rst:246
 msgid ""
 "To get the appropriate dependencies and other requirements, see :ref:`howto-"
 "build-docs`."
 msgstr ""
 
-#: ../../../dev/index.rst:248
+#: ../../../dev/index.rst:250
 msgid "Development process - details"
 msgstr ""
 
-#: ../../../dev/index.rst:250
+#: ../../../dev/index.rst:252
 msgid "The rest of the story"
 msgstr ""
 
-#: ../../../dev/index.rst:268
+#: ../../../dev/index.rst:272
 msgid ""
 "NumPy-specific workflow is in :ref:`numpy-development-workflow <development-"
 "workflow>`."

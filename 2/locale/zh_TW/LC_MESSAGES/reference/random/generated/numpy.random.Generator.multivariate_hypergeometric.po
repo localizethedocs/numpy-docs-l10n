@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -122,7 +122,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_hypergeometric:46
+#: numpy.random._generator.Generator.multivariate_hypergeometric:48
 msgid "**method**"
 msgstr ""
 
@@ -145,7 +145,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_hypergeometric:58
+#: numpy.random._generator.Generator.multivariate_hypergeometric:60
 msgid "**variates**"
 msgstr ""
 
@@ -155,39 +155,39 @@ msgid "ndarray"
 msgstr "ndarray"
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_hypergeometric:51
+#: numpy.random._generator.Generator.multivariate_hypergeometric:53
 msgid ""
 "Array of variates drawn from the multivariate hypergeometric distribution."
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_hypergeometric:63
+#: numpy.random._generator.Generator.multivariate_hypergeometric:65
 msgid ":obj:`hypergeometric`"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_hypergeometric:64
+#: numpy.random._generator.Generator.multivariate_hypergeometric:66
 msgid "Draw samples from the (univariate) hypergeometric distribution."
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_hypergeometric:68
+#: numpy.random._generator.Generator.multivariate_hypergeometric:70
 msgid "Notes"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_hypergeometric:69
+#: numpy.random._generator.Generator.multivariate_hypergeometric:71
 msgid "The two methods do not return the same sequence of variates."
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_hypergeometric:71
+#: numpy.random._generator.Generator.multivariate_hypergeometric:73
 msgid ""
 "The \"count\" algorithm is roughly equivalent to the following numpy code::"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_hypergeometric:74
+#: numpy.random._generator.Generator.multivariate_hypergeometric:76
 msgid ""
 "choices = np.repeat(np.arange(len(colors)), colors)\n"
 "selection = np.random.choice(choices, nsample, replace=False)\n"
@@ -195,21 +195,21 @@ msgid ""
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_hypergeometric:78
+#: numpy.random._generator.Generator.multivariate_hypergeometric:80
 msgid ""
 "The \"count\" algorithm uses a temporary array of integers with length "
 "``sum(colors)``."
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_hypergeometric:81
+#: numpy.random._generator.Generator.multivariate_hypergeometric:83
 msgid ""
 "The \"marginals\" algorithm generates a variate by using repeated calls to "
 "the univariate hypergeometric sampler.  It is roughly equivalent to::"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_hypergeometric:85
+#: numpy.random._generator.Generator.multivariate_hypergeometric:87
 msgid ""
 "variate = np.zeros(len(colors), dtype=np.int64)\n"
 "# `remaining` is the cumulative sum of `colors` from the last\n"
@@ -226,7 +226,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_hypergeometric:98
+#: numpy.random._generator.Generator.multivariate_hypergeometric:100
 msgid ""
 "The default method is \"marginals\".  For some cases (e.g. when `colors` "
 "contains relatively small integers), the \"count\" method can be "
@@ -236,24 +236,24 @@ msgid ""
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_hypergeometric:106
+#: numpy.random._generator.Generator.multivariate_hypergeometric:108
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../docstring of
 #: numpy.random._generator.Generator.multivariate_hypergeometric:-1
 msgid ""
-"<div id=\"8c8a87fe-6238-4d48-9966-a6469f229fde\" "
+"<div id=\"fada90e3-c216-4354-befe-9f876580fdfa\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('6cf836fb-eea8-4446-97c9-"
-"d89bb5d5df4e','8c8a87fe-6238-4d48-9966-a6469f229fde')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('6cf836fb-eea8-4446-97c9-d89bb5d5df4e','8c8a87fe-6238-4d48-9966-"
-"a6469f229fde')\">Open In Tab</button></div><div id=\"e7088da6-"
-"e659-4da1-89ac-9a41a3753d55\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('80a5f490-09bd-42f7-bbb3-a5749b305e9a','fada90e3-"
+"c216-4354-befe-9f876580fdfa')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('80a5f490-09bd-42f7-bbb3-a5749b305e9a','fada90e3-c216-4354-"
+"befe-9f876580fdfa')\">Open In Tab</button></div><div id=\"d603c375-7f7f-4325-"
+"b77e-051bfa62b725\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
 msgstr ""
 
 #: ../../../../docstring of

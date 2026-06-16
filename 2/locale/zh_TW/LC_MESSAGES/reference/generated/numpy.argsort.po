@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -130,12 +130,26 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.argsort:46
+msgid "**descending**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.argsort:39
+msgid ""
+"Sort order. If ``True``, the returned array will be sorted in descending "
+"order. If ``False`` or ``None``, the returned array will be sorted in "
+"ascending order. Values that are NaN are sorted to the end for both orders. "
+"Default: ``None``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.argsort:0
 msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argsort:50
+#: of numpy.argsort:60
 msgid "**index_array**"
 msgstr ""
 
@@ -145,7 +159,7 @@ msgid "ndarray, int"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argsort:41
+#: of numpy.argsort:51
 msgid ""
 "Array of indices that sort `a` along the specified `axis`. If `a` is one-"
 "dimensional, ``a[index_array]`` yields a sorted `a`. More generally, ``np."
@@ -154,111 +168,111 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argsort:55
+#: of numpy.argsort:65
 msgid ":obj:`sort`"
 msgstr ":obj:`sort`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argsort:56
+#: of numpy.argsort:66
 msgid "Describes sorting algorithms used."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argsort:57
+#: of numpy.argsort:67
 msgid ":obj:`lexsort`"
 msgstr ":obj:`lexsort`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argsort:58
+#: of numpy.argsort:68
 msgid "Indirect stable sort with multiple keys."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argsort:59
+#: of numpy.argsort:69
 msgid ":obj:`ndarray.sort`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argsort:60
+#: of numpy.argsort:70
 msgid "Inplace sort."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argsort:61
+#: of numpy.argsort:71
 msgid ":obj:`argpartition`"
 msgstr ":obj:`argpartition`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argsort:62
+#: of numpy.argsort:72
 msgid "Indirect partial sort."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argsort:63
+#: of numpy.argsort:73
 msgid ":obj:`take_along_axis`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argsort:64
+#: of numpy.argsort:74
 msgid "Apply ``index_array`` from argsort to an array as if by calling sort."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argsort:68
+#: of numpy.argsort:78
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argsort:69
+#: of numpy.argsort:79
 msgid "See `sort` for notes on the different sorting algorithms."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argsort:71
+#: of numpy.argsort:81
 msgid ""
 "As of NumPy 1.4.0 `argsort` works with real/complex arrays containing nan "
 "values. The enhanced sort order is documented in `sort`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argsort:76
+#: of numpy.argsort:86
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argsort:81
+#: of numpy.argsort:91
 msgid "One dimensional array:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argsort:88
+#: of numpy.argsort:98
 msgid "Two-dimensional array:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argsort:111
-msgid "Indices of the sorted elements of a N-dimensional array:"
+#: of numpy.argsort:121
+msgid "Indices of the sorted elements of an N-dimensional array:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argsort:119
+#: of numpy.argsort:129
 msgid "Sorting with keys:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.argsort:-1
 msgid ""
-"<div id=\"2406384a-e2e7-489c-b19d-201a7f74eca7\" "
+"<div id=\"2ca9cffe-b500-4946-96a5-8d8a458df03b\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('cabca588-0f2e-4a8f-b81d-979ef71c1802','2406384a-"
-"e2e7-489c-b19d-201a7f74eca7')\">Go Back</button><button "
+"tryExamplesHideIframe('bc2e68a5-8ab9-4829-8851-df2b924d8421','2ca9cffe-"
+"b500-4946-96a5-8d8a458df03b')\">Go Back</button><button "
 "class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('cabca588-0f2e-4a8f-b81d-979ef71c1802','2406384a-e2e7-489c-"
-"b19d-201a7f74eca7')\">Open In Tab</button></div><div id=\"9a3df8e3-3298-4aae-"
-"b0ae-85155d407f89\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
-"div>"
+"openInNewTab('bc2e68a5-8ab9-4829-8851-df2b924d8421','2ca9cffe-"
+"b500-4946-96a5-8d8a458df03b')\">Open In Tab</button></div><div id=\"9f7eaf32-"
+"db48-46d3-a562-8120f1371a68\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring

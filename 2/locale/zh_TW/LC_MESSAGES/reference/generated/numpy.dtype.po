@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,7 +91,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:35
+#: of numpy.dtype:28
 msgid "**metadata**"
 msgstr ""
 
@@ -106,84 +106,340 @@ msgid "An optional dictionary with dtype metadata."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:40
-msgid ":obj:`result_type`"
+#: of numpy.dtype:0
+msgid "Attributes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:46
-msgid "Examples"
-msgstr "範例"
+#: of numpy.dtype:33
+msgid ":obj:`alignment <alignment>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:33
+msgid ""
+"The required alignment (bytes) of this data-type according to the compiler."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:36
+msgid ":obj:`base <base>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:36
+msgid ""
+"Returns dtype for the base element of the subarrays, regardless of their "
+"dimension or shape."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:39
+msgid ":obj:`byteorder <byteorder>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:39
+msgid "A character indicating the byte-order of this data-type object."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:42
+msgid ":obj:`char <char>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:42
+msgid "A unique character code for each of the 21 different built-in types."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:45
+msgid ":obj:`descr <descr>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:45
+msgid "`__array_interface__` description of the data-type."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:48
+msgid ":obj:`fields <fields>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:48
+msgid "Dictionary of named fields defined for this data type, or ``None``."
+msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.dtype:51
-msgid "Using array-scalar type:"
+msgid ":obj:`flags <flags>`"
+msgstr ":obj:`flags <flags>`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:51
+msgid "Bit-flags describing how this data type is to be interpreted."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:54
+msgid ":obj:`hasobject <hasobject>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:54
+msgid ""
+"Boolean indicating whether this dtype contains any reference-counted objects "
+"in any fields or sub-dtypes."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.dtype:57
+msgid ":obj:`isalignedstruct <isalignedstruct>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:57
+msgid ""
+"Boolean indicating whether the dtype is a struct which maintains field "
+"alignment."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:60
+msgid ":obj:`isbuiltin <isbuiltin>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:60
+msgid "Integer indicating how this dtype relates to the built-in dtypes."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:63
+msgid ":obj:`isnative <isnative>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:63
+msgid ""
+"Boolean indicating whether the byte order of this dtype is native to the "
+"platform."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:66
+msgid ":obj:`itemsize <itemsize>`"
+msgstr ":obj:`itemsize <itemsize>`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:66
+msgid "The element size of this data-type object."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:69
+msgid ":obj:`kind <kind>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:69
+msgid ""
+"A character code (one of 'biufcmMOSTUV') identifying the general kind of "
+"data."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:72
+msgid ":obj:`metadata <metadata>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:72
+msgid "Either ``None`` or a readonly dictionary of metadata (mappingproxy)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:75
+msgid ":obj:`name <name>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:75
+msgid "A bit-width name for this data-type."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:78
+msgid ":obj:`names <names>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:78
+msgid "Ordered list of field names, or ``None`` if there are no fields."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:81
+msgid ":obj:`ndim <ndim>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:81
+msgid ""
+"Number of dimensions of the sub-array if this data type describes a sub-"
+"array, and ``0`` otherwise."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:84
+msgid ":obj:`num <num>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:84
+msgid "A unique number for each of the 21 different built-in types."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:87
+msgid ":obj:`shape <shape>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:87
+msgid ""
+"Shape tuple of the sub-array if this data type describes a sub-array, and "
+"``()`` otherwise."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:90
+msgid ":obj:`str <str>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:90
+msgid "The array-protocol typestring of this data-type object."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:93
+msgid ":obj:`subdtype <subdtype>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:93
+msgid ""
+"Tuple ``(item_dtype, shape)`` if this `dtype` describes a sub-array, and "
+"None otherwise."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:96
+msgid "**type**"
+msgstr "**type**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:99
+msgid "Methods"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:111:<autosummary>:1
+msgid ""
+":py:obj:`newbyteorder <numpy.dtype.newbyteorder>`\\ \\(\\[new\\_order\\]\\)"
+msgstr ""
+":py:obj:`newbyteorder <numpy.dtype.newbyteorder>`\\ \\(\\[new\\_order\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:111:<autosummary>:1
+msgid "Return a new dtype with a different byte order."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:115
+msgid ":obj:`result_type`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:121
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:126
+msgid "Using array-scalar type:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dtype:132
 msgid "Structured type, one field name 'f1', containing int16:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:62
+#: of numpy.dtype:137
 msgid ""
 "Structured type, one field named 'f1', in itself containing a structured "
 "type with one field:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:68
+#: of numpy.dtype:143
 msgid ""
 "Structured type, two fields: the first field contains an unsigned int, the "
 "second an int32:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:74
+#: of numpy.dtype:149
 msgid "Using array-protocol type strings:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:79
+#: of numpy.dtype:154
 msgid "Using comma-separated field formats.  The shape is (2,3):"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:84
+#: of numpy.dtype:159
 msgid ""
 "Using tuples.  ``int`` is a fixed type, 3 the field's shape.  ``void`` is a "
 "flexible type, here of size 10:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:90
+#: of numpy.dtype:165
 msgid ""
 "Subdivide ``int16`` into 2 ``int8``'s, called x and y.  0 and 1 are the "
 "offsets in bytes:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:96
+#: of numpy.dtype:171
 msgid "Using dictionaries.  Two fields named 'gender' and 'age':"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:101
+#: of numpy.dtype:176
 msgid "Offsets in bytes, here 0 and 25:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.dtype:-1
 msgid ""
-"<div id=\"7037771d-1f0a-42a2-9857-61e9b38a50c8\" "
+"<div id=\"6e506c02-7c28-4672-86f2-62bf35adbcfb\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('8d3dcb16-0b7c-435f-8caf-2e600033290f','7037771d-1f0a-42a2-9857-61e9b38a50c8')\">Go "
+"tryExamplesHideIframe('298152a1-"
+"d6e8-471d-9c85-29b25c93343e','6e506c02-7c28-4672-86f2-62bf35adbcfb')\">Go "
 "Back</button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('8d3dcb16-0b7c-435f-8caf-2e600033290f','7037771d-1f0a-42a2-9857-61e9b38a50c8')\">Open "
-"In Tab</button></div><div id=\"6554de45-f568-4233-aac2-c635489ccaaf\" "
+"openInNewTab('298152a1-"
+"d6e8-471d-9c85-29b25c93343e','6e506c02-7c28-4672-86f2-62bf35adbcfb')\">Open "
+"In Tab</button></div><div id=\"10b3dd4e-6c2a-42ca-bc28-cb7c7d593eae\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
@@ -192,258 +448,4 @@ msgstr ""
 msgid ""
 "<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
 "loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:0
-msgid "Attributes"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:110
-msgid ":obj:`alignment <alignment>`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:110
-msgid ""
-"The required alignment (bytes) of this data-type according to the compiler."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:113
-msgid ":obj:`base <base>`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:113
-msgid ""
-"Returns dtype for the base element of the subarrays, regardless of their "
-"dimension or shape."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:116
-msgid ":obj:`byteorder <byteorder>`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:116
-msgid "A character indicating the byte-order of this data-type object."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:119
-msgid ":obj:`char <char>`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:119
-msgid "A unique character code for each of the 21 different built-in types."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:122
-msgid ":obj:`descr <descr>`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:122
-msgid "`__array_interface__` description of the data-type."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:125
-msgid ":obj:`fields <fields>`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:125
-msgid "Dictionary of named fields defined for this data type, or ``None``."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:128
-msgid ":obj:`flags <flags>`"
-msgstr ":obj:`flags <flags>`"
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:128
-msgid "Bit-flags describing how this data type is to be interpreted."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:131
-msgid ":obj:`hasobject <hasobject>`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:131
-msgid ""
-"Boolean indicating whether this dtype contains any reference-counted objects "
-"in any fields or sub-dtypes."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:134
-msgid ":obj:`isalignedstruct <isalignedstruct>`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:134
-msgid ""
-"Boolean indicating whether the dtype is a struct which maintains field "
-"alignment."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:137
-msgid ":obj:`isbuiltin <isbuiltin>`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:137
-msgid "Integer indicating how this dtype relates to the built-in dtypes."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:140
-msgid ":obj:`isnative <isnative>`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:140
-msgid ""
-"Boolean indicating whether the byte order of this dtype is native to the "
-"platform."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:143
-msgid ":obj:`itemsize <itemsize>`"
-msgstr ":obj:`itemsize <itemsize>`"
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:143
-msgid "The element size of this data-type object."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:146
-msgid ":obj:`kind <kind>`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:146
-msgid ""
-"A character code (one of 'biufcmMOSTUV') identifying the general kind of "
-"data."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:149
-msgid ":obj:`metadata <metadata>`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:149
-msgid "Either ``None`` or a readonly dictionary of metadata (mappingproxy)."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:152
-msgid ":obj:`name <name>`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:152
-msgid "A bit-width name for this data-type."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:155
-msgid ":obj:`names <names>`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:155
-msgid "Ordered list of field names, or ``None`` if there are no fields."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:158
-msgid ":obj:`ndim <ndim>`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:158
-msgid ""
-"Number of dimensions of the sub-array if this data type describes a sub-"
-"array, and ``0`` otherwise."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:161
-msgid ":obj:`num <num>`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:161
-msgid "A unique number for each of the 21 different built-in types."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:164
-msgid ":obj:`shape <shape>`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:164
-msgid ""
-"Shape tuple of the sub-array if this data type describes a sub-array, and "
-"``()`` otherwise."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:167
-msgid ":obj:`str <str>`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:167
-msgid "The array-protocol typestring of this data-type object."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:170
-msgid ":obj:`subdtype <subdtype>`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:170
-msgid ""
-"Tuple ``(item_dtype, shape)`` if this `dtype` describes a sub-array, and "
-"None otherwise."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:173
-msgid "**type**"
-msgstr "**type**"
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:176
-msgid "Methods"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:181:<autosummary>:1
-msgid ""
-":py:obj:`newbyteorder <numpy.dtype.newbyteorder>`\\ \\(\\[new\\_order\\]\\)"
-msgstr ""
-":py:obj:`newbyteorder <numpy.dtype.newbyteorder>`\\ \\(\\[new\\_order\\]\\)"
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.dtype:181:<autosummary>:1
-msgid "Return a new dtype with a different byte order."
 msgstr ""

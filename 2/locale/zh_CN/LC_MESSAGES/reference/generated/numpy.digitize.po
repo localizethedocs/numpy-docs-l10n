@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -122,7 +122,7 @@ msgid "Array of bins. It has to be 1-dimensional and monotonic."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.digitize:30
+#: of numpy.digitize:32
 msgid "**right**"
 msgstr ""
 
@@ -147,7 +147,7 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.digitize:38
+#: of numpy.digitize:40
 msgid "**indices**"
 msgstr ""
 
@@ -157,7 +157,7 @@ msgid "ndarray of ints"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.digitize:35
+#: of numpy.digitize:37
 msgid "Output array of indices, of same shape as `x`."
 msgstr ""
 
@@ -167,37 +167,37 @@ msgid "Raises"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.digitize:43
+#: of numpy.digitize:45
 msgid "ValueError"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.digitize:43
+#: of numpy.digitize:45
 msgid "If `bins` is not monotonic."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.digitize:48
+#: of numpy.digitize:50
 msgid "TypeError"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.digitize:46
+#: of numpy.digitize:48
 msgid "If the type of the input is complex."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.digitize:53
+#: of numpy.digitize:55
 msgid ":obj:`bincount`, :obj:`histogram`, :obj:`unique`, :obj:`searchsorted`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.digitize:57
+#: of numpy.digitize:59
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.digitize:58
+#: of numpy.digitize:60
 msgid ""
 "If values in `x` are such that they fall outside the bin range, attempting "
 "to index `bins` with the indices that `digitize` returns will result in an "
@@ -205,7 +205,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.digitize:64
+#: of numpy.digitize:66
 msgid ""
 "`numpy.digitize` is  implemented in terms of `numpy.searchsorted`. This "
 "means that a binary search is used to bin the values, which scales much "
@@ -214,19 +214,19 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.digitize:69
+#: of numpy.digitize:71
 msgid "For monotonically *increasing* `bins`, the following are equivalent::"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.digitize:71
+#: of numpy.digitize:73
 msgid ""
 "np.digitize(x, bins, right=True)\n"
 "np.searchsorted(bins, x, side='left')"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.digitize:74
+#: of numpy.digitize:76
 msgid ""
 "Note that as the order of the arguments are reversed, the side must be too. "
 "The `searchsorted` call is marginally faster, as it does not do any "
@@ -234,23 +234,22 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.digitize:80
+#: of numpy.digitize:82
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.digitize:-1
 msgid ""
-"<div id=\"8622f2b7-a24f-4f2b-98d9-4d69c6d363c6\" "
+"<div id=\"edef7048-bcf3-4077-b606-0c4fffefe5b4\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('2163a01a-1318-4320-bc01-574bc680de6a','8622f2b7-"
-"a24f-4f2b-98d9-4d69c6d363c6')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('2163a01a-1318-4320-bc01-574bc680de6a','8622f2b7-"
-"a24f-4f2b-98d9-4d69c6d363c6')\">Open In Tab</button></div><div id=\"36163514-"
-"f323-463e-86d5-e357fdc10f59\" "
+"tryExamplesHideIframe('579d604d-dd19-4fbf-a0f3-bb8f7cd17218','edef7048-"
+"bcf3-4077-b606-0c4fffefe5b4')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('579d604d-"
+"dd19-4fbf-a0f3-bb8f7cd17218','edef7048-bcf3-4077-b606-0c4fffefe5b4')\">Open "
+"In Tab</button></div><div id=\"1f88f70e-db00-4ed8-9acf-ef669dc29541\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 

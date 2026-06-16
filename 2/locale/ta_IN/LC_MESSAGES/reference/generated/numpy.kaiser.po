@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,7 +54,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:13
+#: of numpy.kaiser:15
 msgid "**beta**"
 msgstr ""
 
@@ -74,7 +74,7 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:25
+#: of numpy.kaiser:27
 msgid "**out**"
 msgstr ""
 
@@ -84,29 +84,29 @@ msgid "array"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:18
+#: of numpy.kaiser:20
 msgid ""
 "The window, with the maximum value normalized to one (the value one appears "
 "only if the number of samples is odd)."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:30
+#: of numpy.kaiser:32
 msgid ":obj:`bartlett`, :obj:`blackman`, :obj:`hamming`, :obj:`hanning`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:34
+#: of numpy.kaiser:36
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:35
+#: of numpy.kaiser:37
 msgid "The Kaiser window is defined as"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:37
+#: of numpy.kaiser:39
 msgid ""
 "w(n) = I_0\\left( \\beta \\sqrt{1-\\frac{4n^2}{(M-1)^2}}\n"
 "\\right)/I_0(\\beta)\n"
@@ -114,24 +114,24 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:40
+#: of numpy.kaiser:42
 msgid "with"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:42
+#: of numpy.kaiser:44
 msgid ""
 "\\quad -\\frac{M-1}{2} \\leq n \\leq \\frac{M-1}{2},\n"
 "\n"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:44
+#: of numpy.kaiser:46
 msgid "where :math:`I_0` is the modified zeroth-order Bessel function."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:46
+#: of numpy.kaiser:48
 msgid ""
 "The Kaiser was named for Jim Kaiser, who discovered a simple approximation "
 "to the DPSS window based on Bessel functions.  The Kaiser window is a very "
@@ -141,63 +141,63 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:52
+#: of numpy.kaiser:54
 msgid ""
 "The Kaiser can approximate many other windows by varying the beta parameter."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:56
+#: of numpy.kaiser:58
 msgid "beta"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:56
+#: of numpy.kaiser:58
 msgid "Window shape"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:58
+#: of numpy.kaiser:60
 msgid "0"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:58
+#: of numpy.kaiser:60
 msgid "Rectangular"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:59
+#: of numpy.kaiser:61
 msgid "5"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:59
+#: of numpy.kaiser:61
 msgid "Similar to a Hamming"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:60
+#: of numpy.kaiser:62
 msgid "6"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:60
+#: of numpy.kaiser:62
 msgid "Similar to a Hanning"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:61
+#: of numpy.kaiser:63
 msgid "8.6"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:61
+#: of numpy.kaiser:63
 msgid "Similar to a Blackman"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:64
+#: of numpy.kaiser:66
 msgid ""
 "A beta value of 14 is probably a good starting point. Note that as beta gets "
 "large, the window narrows, and so the number of samples needs to be large "
@@ -206,7 +206,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:69
+#: of numpy.kaiser:71
 msgid ""
 "Most references to the Kaiser window come from the signal processing "
 "literature, where it is used as one of many windowing functions for "
@@ -216,12 +216,12 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:76
+#: of numpy.kaiser:78
 msgid "References"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:77
+#: of numpy.kaiser:79
 msgid ""
 "J. F. Kaiser, \"Digital Filters\" - Ch 7 in \"Systems analysis by digital "
 "computer\", Editors: F.F. Kuo and J.F. Kaiser, p 218-285. John Wiley and "
@@ -229,30 +229,30 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:80
+#: of numpy.kaiser:82
 msgid ""
 "E.R. Kanasewich, \"Time Sequence Analysis in Geophysics\", The University of "
 "Alberta Press, 1975, pp. 177-178."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:82
+#: of numpy.kaiser:84
 msgid ""
 "Wikipedia, \"Window function\", https://en.wikipedia.org/wiki/Window_function"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:87
+#: of numpy.kaiser:89
 msgid "[Rabc5c9a1e873-1]_, [Rabc5c9a1e873-2]_, [Rabc5c9a1e873-3]_"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:90
+#: of numpy.kaiser:92
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.kaiser:103
+#: of numpy.kaiser:105
 msgid "Plot the window and the frequency response."
 msgstr ""
 
@@ -287,16 +287,17 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.kaiser:132
 msgid ""
-"<div id=\"9938b7f8-8760-4701-beba-dbe7050492eb\" "
+"<div id=\"955baad0-50ab-47fc-8d06-7a8b93b36ff5\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('4be90d4b-"
-"eb6e-402c-9b76-8c98ef5358af','9938b7f8-8760-4701-beba-dbe7050492eb')\">Go "
-"Back</button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('4be90d4b-eb6e-402c-9b76-8c98ef5358af','9938b7f8-8760-4701-beba-"
-"dbe7050492eb')\">Open In Tab</button></div><div id=\"82524c62-997e-44ce-8d2b-"
-"ad14c00fd203\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('0ab0e76c-8bd1-4d77-"
+"a684-53067fbf9ae8','955baad0-50ab-47fc-8d06-7a8b93b36ff5')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('0ab0e76c-8bd1-4d77-"
+"a684-53067fbf9ae8','955baad0-50ab-47fc-8d06-7a8b93b36ff5')\">Open In Tab</"
+"button></div><div id=\"246a3aff-64b1-42e6-b14a-4253a852a09f\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring

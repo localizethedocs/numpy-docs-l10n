@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,7 +29,7 @@ msgstr ""
 msgid "Parameters"
 msgstr "參數"
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64:20
+#: ../../../../docstring of numpy.random._pcg64.PCG64:22
 msgid "**seed**"
 msgstr ""
 
@@ -45,11 +45,11 @@ msgid ""
 "`BitGenerator` state. One may also pass in a `SeedSequence` instance."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64:23
+#: ../../../../docstring of numpy.random._pcg64.PCG64:25
 msgid "Notes"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64:24
+#: ../../../../docstring of numpy.random._pcg64.PCG64:26
 msgid ""
 "PCG-64 is a 128-bit implementation of O'Neill's permutation congruential "
 "generator ([R4523891264fe-1]_, [R4523891264fe-2]_). PCG-64 has a period of :"
@@ -58,7 +58,7 @@ msgid ""
 "use is PCG XSL RR 128/64 as described in the paper ([R4523891264fe-2]_)."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64:30
+#: ../../../../docstring of numpy.random._pcg64.PCG64:32
 msgid ""
 "`PCG64` provides a capsule containing function pointers that produce "
 "doubles, and unsigned 32 and 64- bit integers. These are not directly "
@@ -66,18 +66,18 @@ msgid ""
 "that supports low-level access."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64:35
+#: ../../../../docstring of numpy.random._pcg64.PCG64:37
 msgid ""
 "Supports the method :meth:`advance` to advance the RNG an arbitrary number "
 "of steps. The state of the PCG-64 RNG is represented by 2 128-bit unsigned "
 "integers."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64:39
+#: ../../../../docstring of numpy.random._pcg64.PCG64:41
 msgid "**State and Seeding**"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64:41
+#: ../../../../docstring of numpy.random._pcg64.PCG64:43
 msgid ""
 "The `PCG64` state vector consists of 2 unsigned 128-bit values, which are "
 "represented externally as Python ints. One is the state of the PRNG, which "
@@ -85,51 +85,51 @@ msgid ""
 "odd increment used in the LCG."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64:46
+#: ../../../../docstring of numpy.random._pcg64.PCG64:48
 msgid ""
 "The input seed is processed by `SeedSequence` to generate both values. The "
 "increment is not independently settable."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64:49
+#: ../../../../docstring of numpy.random._pcg64.PCG64:51
 msgid "**Parallel Features**"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64:51
+#: ../../../../docstring of numpy.random._pcg64.PCG64:53
 msgid ""
 "The preferred way to use a BitGenerator in parallel applications is to use "
 "the `SeedSequence.spawn` method to obtain entropy values, and to use these "
 "to generate new BitGenerators:"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64:59
+#: ../../../../docstring of numpy.random._pcg64.PCG64:61
 msgid "**Compatibility Guarantee**"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64:61
+#: ../../../../docstring of numpy.random._pcg64.PCG64:63
 msgid ""
 "`PCG64` makes a guarantee that a fixed seed will always produce the same "
 "random integer stream."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64:65
+#: ../../../../docstring of numpy.random._pcg64.PCG64:67
 msgid "References"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64:66
+#: ../../../../docstring of numpy.random._pcg64.PCG64:68
 msgid ""
 "`\"PCG, A Family of Better Random Number Generators\" <https://www.pcg-"
 "random.org/>`_"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64:68
+#: ../../../../docstring of numpy.random._pcg64.PCG64:70
 msgid ""
 "O'Neill, Melissa E. `\"PCG: A Family of Simple Fast Space-Efficient "
 "Statistically Good Algorithms for Random Number Generation\" <https://www.cs."
 "hmc.edu/tr/hmc-cs-2014-0905.pdf>`_"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._pcg64.PCG64:74
+#: ../../../../docstring of numpy.random._pcg64.PCG64:76
 msgid "[R4523891264fe-1]_, [R4523891264fe-2]_"
 msgstr ""
 

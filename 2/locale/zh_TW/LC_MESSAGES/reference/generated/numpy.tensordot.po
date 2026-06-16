@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -94,7 +94,7 @@ msgid "**-------**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.tensordot:40
+#: of numpy.tensordot:42
 msgid "**output**"
 msgstr ""
 
@@ -109,37 +109,37 @@ msgid "The tensor dot product of the input."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.tensordot:45
+#: of numpy.tensordot:47
 msgid ":obj:`dot`, :obj:`einsum`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.tensordot:49
+#: of numpy.tensordot:51
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.tensordot:53
+#: of numpy.tensordot:55
 msgid "Three common use cases are:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.tensordot:51
+#: of numpy.tensordot:53
 msgid "``axes = 0`` : tensor product :math:`a\\otimes b`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.tensordot:52
+#: of numpy.tensordot:54
 msgid "``axes = 1`` : tensor dot product :math:`a\\cdot b`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.tensordot:53
+#: of numpy.tensordot:55
 msgid "``axes = 2`` : (default) tensor double contraction :math:`a:b`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.tensordot:55
+#: of numpy.tensordot:57
 msgid ""
 "When `axes` is integer_like, the sequence of axes for evaluation will be: "
 "from the -Nth axis to the -1th axis in `a`, and from the 0th axis to (N-1)th "
@@ -149,7 +149,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.tensordot:63
+#: of numpy.tensordot:65
 msgid ""
 "When there is more than one axis to sum over - and they are not the last "
 "(first) axes of `a` (`b`) - the argument `axes` should consist of two "
@@ -159,7 +159,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.tensordot:69
+#: of numpy.tensordot:71
 msgid ""
 "For example, if ``a.shape == (2, 3, 4)`` and ``b.shape == (3, 4, 5)``, then "
 "``axes=([1, 2], [0, 1])`` sums over the ``(3, 4)`` dimensions of both arrays "
@@ -167,58 +167,58 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.tensordot:73
+#: of numpy.tensordot:75
 msgid ""
 "Each summation axis corresponds to a distinct contraction index; repeating "
 "an axis (for example ``axes=([1, 1], [0, 0])``) is invalid."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.tensordot:76
+#: of numpy.tensordot:78
 msgid ""
 "The shape of the result consists of the non-contracted axes of the first "
 "tensor, followed by the non-contracted axes of the second."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.tensordot:81
+#: of numpy.tensordot:83
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.tensordot:86
+#: of numpy.tensordot:88
 msgid "An example on integer_like:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.tensordot:103
+#: of numpy.tensordot:105
 msgid "An example on array_like:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.tensordot:117
+#: of numpy.tensordot:119
 msgid "A slower but equivalent way of computing the same..."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.tensordot:132
+#: of numpy.tensordot:134
 msgid "An extended example taking advantage of the overloading of + and \\*:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.tensordot:-1
 msgid ""
-"<div id=\"65aaffa9-0b88-4f25-be3a-5291dd198874\" "
+"<div id=\"6c543f3f-6174-40c8-a2c1-15aa5f519274\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('91bd6a66-22c4-4322-ab34-"
-"be1d4385abee','65aaffa9-0b88-4f25-be3a-5291dd198874')\">Go Back</"
+"tryExamplesHideIframe('617ab1c7-8d65-4f26-a186-"
+"d9e247018c83','6c543f3f-6174-40c8-a2c1-15aa5f519274')\">Go Back</"
 "button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('91bd6a66-22c4-4322-ab34-be1d4385abee','65aaffa9-0b88-4f25-"
-"be3a-5291dd198874')\">Open In Tab</button></div><div id=\"e308f800-502b-4f57-"
-"a3a2-9f70a84dde64\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
-"div>"
+"openInNewTab('617ab1c7-8d65-4f26-a186-d9e247018c83','6c543f3f-6174-40c8-"
+"a2c1-15aa5f519274')\">Open In Tab</button></div><div "
+"id=\"03e176ec-5ebe-4c0f-943c-1a02768e1b69\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring

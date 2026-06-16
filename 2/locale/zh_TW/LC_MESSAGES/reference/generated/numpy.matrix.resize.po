@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,7 +51,7 @@ msgid "Shape of resized array."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.matrix.resize:12
+#: of numpy.matrix.resize:14
 msgid "**refcheck**"
 msgstr ""
 
@@ -73,7 +73,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.matrix.resize:20
+#: of numpy.matrix.resize:22
 msgid "None"
 msgstr ""
 
@@ -83,43 +83,43 @@ msgid "Raises"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.matrix.resize:27
+#: of numpy.matrix.resize:29
 msgid "ValueError"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.matrix.resize:25
+#: of numpy.matrix.resize:27
 msgid "If `a` does not own its own data or references or views to may exist."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.matrix.resize:32
+#: of numpy.matrix.resize:34
 msgid ":obj:`resize`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.matrix.resize:33
+#: of numpy.matrix.resize:35
 msgid "Return a new array with the specified shape."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.matrix.resize:37
+#: of numpy.matrix.resize:39
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.matrix.resize:38
+#: of numpy.matrix.resize:40
 msgid "This reallocates space for the data area if necessary."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.matrix.resize:40
+#: of numpy.matrix.resize:42
 msgid ""
 "Only contiguous arrays (data elements consecutive in memory) can be resized."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.matrix.resize:43
+#: of numpy.matrix.resize:45
 msgid ""
 "Reallocating arrays in-place can often lead to memory fragmentation and "
 "should be avoided. If the goal is to reclaim over-allocated memory, "
@@ -131,14 +131,14 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.matrix.resize:51
+#: of numpy.matrix.resize:53
 msgid ""
 "The purpose of the reference count check is to make sure you do not use this "
 "array as a buffer for another Python object and then reallocate the memory."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.matrix.resize:55
+#: of numpy.matrix.resize:57
 msgid ""
 "On Python 3.13 and older, the check allows objects with exactly one "
 "reference to be reallocated in-place. On Python 3.14 and newer, the array "
@@ -146,69 +146,70 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.matrix.resize:59
+#: of numpy.matrix.resize:61
 msgid ""
 "If you are sure that you have not shared the memory for this array with "
 "another Python object, then you may safely set `refcheck` to False."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.matrix.resize:63
+#: of numpy.matrix.resize:65
 msgid "References"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.matrix.resize:64
+#: of numpy.matrix.resize:66
 msgid ""
 "Python 3.14 What's New, https://docs.python.org/3/whatsnew/3.14."
 "html#whatsnew314-refcount"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.matrix.resize:68
+#: of numpy.matrix.resize:70
 msgid "[R69043327a92d-1]_"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.matrix.resize:71
+#: of numpy.matrix.resize:73
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.matrix.resize:76
+#: of numpy.matrix.resize:78
 msgid ""
 "Shrinking an array: array is flattened (in the order that the data are "
 "stored in memory), resized, and reshaped:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.matrix.resize:93
+#: of numpy.matrix.resize:95
 msgid ""
 "Enlarging an array: as above, but missing entries are filled with zeros:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.matrix.resize:101
+#: of numpy.matrix.resize:103
 msgid "Referencing an array prevents resizing..."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.matrix.resize:109
+#: of numpy.matrix.resize:111
 msgid "Unless `refcheck` is False:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.matrix.resize:-1
 msgid ""
-"<div id=\"6c0c3e10-f19b-4759-b496-dd5aca0e5fd2\" "
+"<div id=\"a4cbcb4c-f07a-4268-a967-62d8bbc38801\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('2fd08b5f-f86a-42a6-b047-677dea3e9226','6c0c3e10-"
-"f19b-4759-b496-dd5aca0e5fd2')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window.openInNewTab('2fd08b5f-"
-"f86a-42a6-b047-677dea3e9226','6c0c3e10-f19b-4759-b496-dd5aca0e5fd2')\">Open "
-"In Tab</button></div><div id=\"dec2752d-9047-42f2-8a73-7b7fbf20823f\" "
+"tryExamplesHideIframe('9430c473-1eae-4c25-85d8-2f48b12dbc90','a4cbcb4c-"
+"f07a-4268-a967-62d8bbc38801')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('9430c473-1eae-4c25-85d8-2f48b12dbc90','a4cbcb4c-f07a-4268-"
+"a967-62d8bbc38801')\">Open In Tab</button></div><div id=\"a7af697c-"
+"b590-4270-88dd-59447adb80e6\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 

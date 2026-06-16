@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -486,11 +486,45 @@ msgid ""
 "practice will return ``TypeError``."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:344
+#: ../../../reference/arrays.classes.rst:341
+msgid "**Example**"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:343
+msgid "Use ``__array__`` to create a diagonal array of fixed size and value:"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:359
+msgid "Our custom array can be instantiated like:"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:365
+msgid ""
+"We can convert to a numpy array using :func:`numpy.array` or :func:`numpy."
+"asarray`, which will call its ``__array__`` method to obtain a standard "
+"``numpy.ndarray``."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:376
+msgid "Using ``dtype`` should return an appropriate ndarray or raise an error:"
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:385
+msgid ""
+"If we operate on ``arr`` with a numpy function, numpy will again use the "
+"``__array__`` interface to convert it to an array and then apply the "
+"function in the usual way."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:396
+msgid "Notice that the return type is a standard ``numpy.ndarray``."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:404
 msgid "Matrix objects"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:350
+#: ../../../reference/arrays.classes.rst:410
 msgid ""
 "It is strongly advised *not* to use the matrix subclass.  As described "
 "below, it makes writing functions that deal consistently with matrices and "
@@ -499,7 +533,7 @@ msgid ""
 "this use, however, and eventually remove the ``matrix`` subclass."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:356
+#: ../../../reference/arrays.classes.rst:416
 msgid ""
 ":class:`matrix` objects inherit from the ndarray and therefore, they have "
 "the same attributes and methods of ndarrays. There are six important "
@@ -507,13 +541,13 @@ msgid ""
 "when you use matrices but expect them to act like arrays:"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:362
+#: ../../../reference/arrays.classes.rst:422
 msgid ""
 "Matrix objects can be created using a string notation to allow Matlab-style "
 "syntax where spaces separate columns and semicolons (';') separate rows."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:366
+#: ../../../reference/arrays.classes.rst:426
 msgid ""
 "Matrix objects are always two-dimensional. This has far-reaching "
 "implications, in that m.ravel() is still two-dimensional (with a 1 in the "
@@ -521,7 +555,7 @@ msgid ""
 "sequence behavior is fundamentally different than arrays."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:372
+#: ../../../reference/arrays.classes.rst:432
 msgid ""
 "Matrix objects over-ride multiplication to be matrix-multiplication. **Make "
 "sure you understand this for functions that you may want to receive "
@@ -529,57 +563,57 @@ msgid ""
 "matrix when m is a matrix.**"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:378
+#: ../../../reference/arrays.classes.rst:438
 msgid ""
 "Matrix objects over-ride power to be matrix raised to a power. The same "
 "warning about using power inside a function that uses asanyarray(...) to get "
 "an array object holds for this fact."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:382
+#: ../../../reference/arrays.classes.rst:442
 msgid ""
 "The default __array_priority\\__ of matrix objects is 10.0, and therefore "
 "mixed operations with ndarrays always produce matrices."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:385
+#: ../../../reference/arrays.classes.rst:445
 msgid ""
 "Matrices have special attributes which make calculations easier. These are"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:395:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:455:<autosummary>:1
 msgid ":py:obj:`matrix.T <numpy.matrix.T>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:395:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:455:<autosummary>:1
 msgid "Returns the transpose of the matrix."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:395:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:455:<autosummary>:1
 msgid ":py:obj:`matrix.H <numpy.matrix.H>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:395:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:455:<autosummary>:1
 msgid "Returns the (complex) conjugate transpose of `self`."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:395:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:455:<autosummary>:1
 msgid ":py:obj:`matrix.I <numpy.matrix.I>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:395:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:455:<autosummary>:1
 msgid "Returns the (multiplicative) inverse of invertible `self`."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:395:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:455:<autosummary>:1
 msgid ":py:obj:`matrix.A <numpy.matrix.A>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:395:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:455:<autosummary>:1
 msgid "Return `self` as an `ndarray` object."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:398
+#: ../../../reference/arrays.classes.rst:458
 msgid ""
 "Matrix objects over-ride multiplication, '*', and power, '**', to be matrix-"
 "multiplication and matrix power, respectively. If your subroutine can accept "
@@ -588,7 +622,7 @@ msgid ""
 "operation for all inputs."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:405
+#: ../../../reference/arrays.classes.rst:465
 msgid ""
 "The matrix class is a Python subclass of the ndarray and can be used as a "
 "reference for how to construct your own subclass of the ndarray. Matrices "
@@ -597,46 +631,46 @@ msgid ""
 "NumPy."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:417:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:477:<autosummary>:1
 msgid ":py:obj:`matrix <numpy.matrix>`\\ \\(data\\[\\, dtype\\, copy\\]\\)"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:417:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:477:<autosummary>:1
 msgid "Returns a matrix from an array-like object, or from a string of data."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:417:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:477:<autosummary>:1
 msgid ":py:obj:`asmatrix <numpy.asmatrix>`\\ \\(data\\[\\, dtype\\]\\)"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:417:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:477:<autosummary>:1
 msgid "Interpret the input as a matrix."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:417:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:477:<autosummary>:1
 msgid ":py:obj:`bmat <numpy.bmat>`\\ \\(obj\\[\\, ldict\\, gdict\\]\\)"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:417:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:477:<autosummary>:1
 msgid "Build a matrix object from a string, nested sequence, or array."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:418
+#: ../../../reference/arrays.classes.rst:478
 msgid "Example 1: Matrix creation from a string"
 msgstr ""
 
 #: ../../../reference/arrays.classes.rst:-1
 msgid ""
-"<div id=\"a8daaa30-52c6-45b0-8f70-7b2b679506d9\" "
+"<div id=\"226922da-b648-4ee5-b41f-6887ceee2fa3\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('971eef1f-"
-"c347-4df6-84a3-80a724215dd2','a8daaa30-52c6-45b0-8f70-7b2b679506d9')\">Go "
-"Back</button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('971eef1f-"
-"c347-4df6-84a3-80a724215dd2','a8daaa30-52c6-45b0-8f70-7b2b679506d9')\">Open "
-"In Tab</button></div><div id=\"548bea75-b001-4395-a318-7d0fb71dcc6c\" "
+"tryExamplesHideIframe('f5f68b81-1ffe-4c05-83b0-b0ef63ade786','226922da-"
+"b648-4ee5-b41f-6887ceee2fa3')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('f5f68b81-1ffe-4c05-83b0-b0ef63ade786','226922da-b648-4ee5-"
+"b41f-6887ceee2fa3')\">Open In Tab</button></div><div "
+"id=\"5405129e-45e3-41fd-8b4c-a0cfd8d44c0f\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
@@ -646,47 +680,49 @@ msgid ""
 "loadTryExamplesConfig(\"../try_examples.json\");});</script>"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:429
+#: ../../../reference/arrays.classes.rst:489
 msgid "Example 2: Matrix creation from a nested sequence"
 msgstr ""
 
 #: ../../../reference/arrays.classes.rst:-1
 msgid ""
-"<div id=\"66bca0b0-ca19-4346-a8ea-65fdc2cc48e2\" "
+"<div id=\"3791712a-e809-449d-a38e-70456542da47\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('0cc8af2d-a593-4446-8b0d-b95eb8e9c0ae','66bca0b0-"
-"ca19-4346-a8ea-65fdc2cc48e2')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window.openInNewTab('0cc8af2d-"
-"a593-4446-8b0d-b95eb8e9c0ae','66bca0b0-ca19-4346-a8ea-65fdc2cc48e2')\">Open "
-"In Tab</button></div><div id=\"aab72f68-2210-44ee-a51d-8e5a387bedeb\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('04516898-2669-4b88-a7d2-0e829daf3760','3791712a-"
+"e809-449d-a38e-70456542da47')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('04516898-2669-4b88-a7d2-0e829daf3760','3791712a-e809-449d-"
+"a38e-70456542da47')\">Open In Tab</button></div><div id=\"3284b9bb-d8d1-4c58-"
+"a19d-aeada2aedef9\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:438
+#: ../../../reference/arrays.classes.rst:498
 msgid "Example 3: Matrix creation from an array"
 msgstr ""
 
 #: ../../../reference/arrays.classes.rst:-1
 msgid ""
-"<div id=\"fe8eeb43-faf9-43f5-9c1f-453069575a10\" "
+"<div id=\"74af9bf1-bf21-4d3d-8c38-0f21be398df1\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('0c33e9b6-ae1d-4e29-9d76-489b10105d18','fe8eeb43-"
-"faf9-43f5-9c1f-453069575a10')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window.openInNewTab('0c33e9b6-"
-"ae1d-4e29-9d76-489b10105d18','fe8eeb43-faf9-43f5-9c1f-453069575a10')\">Open "
-"In Tab</button></div><div id=\"34452143-1398-4795-b0ca-db5bb6033095\" "
+"tryExamplesHideIframe('df5a9d2b-0a5f-4ecf-a2fe-2b4d61826383','74af9bf1-"
+"bf21-4d3d-8c38-0f21be398df1')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('df5a9d2b-0a5f-4ecf-a2fe-2b4d61826383','74af9bf1-"
+"bf21-4d3d-8c38-0f21be398df1')\">Open In Tab</button></div><div id=\"9f766c8d-"
+"eb14-44f1-b189-3cab68938ccb\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:450
+#: ../../../reference/arrays.classes.rst:510
 msgid "Memory-mapped file arrays"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:457
+#: ../../../reference/arrays.classes.rst:517
 msgid ""
 "Memory-mapped files are useful for reading and/or modifying small segments "
 "of a large file with regular layout, without reading the entire file into "
@@ -696,7 +732,7 @@ msgid ""
 "files using memory mapping can save considerable resources."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:465
+#: ../../../reference/arrays.classes.rst:525
 msgid ""
 "Memory-mapped-file arrays have one additional method (besides those they "
 "inherit from the ndarray): :meth:`.flush() <memmap.flush>` which must be "
@@ -704,52 +740,52 @@ msgid ""
 "get written to disk."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:475:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:535:<autosummary>:1
 msgid ""
 ":py:obj:`memmap <numpy.memmap>`\\ \\(filename\\[\\, dtype\\, mode\\, "
 "offset\\, ...\\]\\)"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:475:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:535:<autosummary>:1
 msgid "Create a memory-map to an array stored in a *binary* file on disk."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:475:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:535:<autosummary>:1
 msgid ":py:obj:`memmap.flush <numpy.memmap.flush>`\\ \\(\\)"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:475:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:535:<autosummary>:1
 msgid "Write any changes in the array to the file on disk."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:476
+#: ../../../reference/arrays.classes.rst:536
 msgid "Example:"
 msgstr ""
 
 #: ../../../reference/arrays.classes.rst:-1
 msgid ""
-"<div id=\"30b3490e-4814-41b6-8c09-13576ec68826\" "
+"<div id=\"a5948528-f592-406a-a0c6-532430d10dd3\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('66b277ba-aa1a-4b4c-"
-"aa33-29df3f3a2cf4','30b3490e-4814-41b6-8c09-13576ec68826')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('66b277ba-aa1a-4b4c-"
-"aa33-29df3f3a2cf4','30b3490e-4814-41b6-8c09-13576ec68826')\">Open In Tab</"
-"button></div><div id=\"928a74a5-69f2-42e5-b1f0-794b1c868c8c\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('e61842a9-01e8-46d7-a1a4-f999b535def2','a5948528-"
+"f592-406a-a0c6-532430d10dd3')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('e61842a9-01e8-46d7-a1a4-f999b535def2','a5948528-f592-406a-"
+"a0c6-532430d10dd3')\">Open In Tab</button></div><div id=\"93c56069-ad0a-4e44-"
+"aaa4-c0ee8917770f\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:497
+#: ../../../reference/arrays.classes.rst:557
 msgid "Character arrays (:mod:`numpy.char`)"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:499
+#: ../../../reference/arrays.classes.rst:559
 msgid ":ref:`routines.array-creation.char`"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:505
+#: ../../../reference/arrays.classes.rst:565
 msgid ""
 "The `~numpy.char.chararray` class exists for backwards compatibility with "
 "Numarray, it is not recommended for new development. Starting from numpy "
@@ -758,7 +794,13 @@ msgid ""
 "`numpy.char` module for fast vectorized string operations."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:511
+#: ../../../reference/arrays.classes.rst:571
+msgid ""
+"``numpy.char.chararray`` is deprecated. Use an ``ndarray`` with a string or "
+"bytes dtype instead."
+msgstr ""
+
+#: ../../../reference/arrays.classes.rst:575
 msgid ""
 "These are enhanced arrays of either :class:`str_` type or :class:`bytes_` "
 "type.  These arrays inherit from the :class:`ndarray`, but specially-define "
@@ -773,27 +815,27 @@ msgid ""
 "func:`numpy.char.array` function:"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:530:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:594:<autosummary>:1
 msgid ""
 ":py:obj:`char.chararray <numpy.char.chararray>`\\ \\(shape\\[\\, itemsize\\, "
 "unicode\\, ...\\]\\)"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:530:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:594:<autosummary>:1
 msgid "Provides a convenient view on arrays of string and unicode values."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:530:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:594:<autosummary>:1
 msgid ""
 ":py:obj:`char.array <numpy.char.array>`\\ \\(obj\\[\\, itemsize\\, copy\\, "
 "unicode\\, order\\]\\)"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:530:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:594:<autosummary>:1
 msgid "Create a `~numpy.char.chararray`."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:531
+#: ../../../reference/arrays.classes.rst:595
 msgid ""
 "Another difference with the standard ndarray of str data-type is that the "
 "chararray inherits the feature introduced by Numarray that white-space at "
@@ -801,62 +843,62 @@ msgid ""
 "comparison operations."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:540
+#: ../../../reference/arrays.classes.rst:604
 msgid "Record arrays"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:542
+#: ../../../reference/arrays.classes.rst:606
 msgid ""
 ":ref:`routines.array-creation.rec`, :ref:`routines.dtype`, :ref:`arrays."
 "dtypes`."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:545
+#: ../../../reference/arrays.classes.rst:609
 msgid ""
 "NumPy provides the :class:`recarray` class which allows accessing the fields "
 "of a structured array as attributes, and a corresponding scalar data type "
 "object :class:`record`."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:556:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:620:<autosummary>:1
 msgid ""
 ":py:obj:`recarray <numpy.recarray>`\\ \\(shape\\[\\, dtype\\, buf\\, "
 "offset\\, ...\\]\\)"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:556:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:620:<autosummary>:1
 msgid "Construct an ndarray that allows field access using attributes."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:556:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:620:<autosummary>:1
 msgid ""
 ":py:obj:`record <numpy.record>`\\ \\(length\\_or\\_data\\, \\/\\[\\, "
 "dtype\\]\\)"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:556:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:620:<autosummary>:1
 msgid "A data-type scalar that allows field access as attribute lookup."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:559
+#: ../../../reference/arrays.classes.rst:623
 msgid ""
 "The pandas DataFrame is more powerful than record array. If possible, please "
 "use pandas DataFrame instead."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:563
+#: ../../../reference/arrays.classes.rst:627
 msgid "Masked arrays (:mod:`numpy.ma`)"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:565
+#: ../../../reference/arrays.classes.rst:629
 msgid ":ref:`maskedarray`"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:568
+#: ../../../reference/arrays.classes.rst:632
 msgid "Standard container class"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:572
+#: ../../../reference/arrays.classes.rst:636
 msgid ""
 "For backward compatibility and as a standard \"container \"class, the "
 "UserArray from Numeric has been brought over to NumPy and named :class:"
@@ -868,28 +910,28 @@ msgid ""
 "you can."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:585:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:649:<autosummary>:1
 msgid ""
 ":py:obj:`numpy.lib.user_array.container <numpy.lib.user_array.container>`\\ "
 "\\(data\\[\\, ...\\]\\)"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:585:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:649:<autosummary>:1
 msgid "Standard container-class for easy multiple-inheritance."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:592
+#: ../../../reference/arrays.classes.rst:656
 msgid "Array iterators"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:599
+#: ../../../reference/arrays.classes.rst:663
 msgid ""
 "Iterators are a powerful concept for array processing. Essentially, "
 "iterators implement a generalized for-loop. If *myiter* is an iterator "
 "object, then the Python code::"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:603
+#: ../../../reference/arrays.classes.rst:667
 msgid ""
 "for val in myiter:\n"
 "    ...\n"
@@ -897,7 +939,7 @@ msgid ""
 "    ..."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:608
+#: ../../../reference/arrays.classes.rst:672
 msgid ""
 "calls ``val = next(myiter)`` repeatedly until :exc:`StopIteration` is raised "
 "by the iterator. There are several ways to iterate over an array that may be "
@@ -905,24 +947,24 @@ msgid ""
 "enumeration."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:615
+#: ../../../reference/arrays.classes.rst:679
 msgid "Default iteration"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:617
+#: ../../../reference/arrays.classes.rst:681
 msgid ""
 "The default iterator of an ndarray object is the default Python iterator of "
 "a sequence type. Thus, when the array object itself is used as an iterator. "
 "The default behavior is equivalent to::"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:621
+#: ../../../reference/arrays.classes.rst:685
 msgid ""
 "for i in range(arr.shape[0]):\n"
 "    val = arr[i]"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:624
+#: ../../../reference/arrays.classes.rst:688
 msgid ""
 "This default iterator selects a sub-array of dimension :math:`N-1` from the "
 "array. This can be a useful construct for defining recursive algorithms. To "
@@ -931,32 +973,32 @@ msgstr ""
 
 #: ../../../reference/arrays.classes.rst:-1
 msgid ""
-"<div id=\"397542db-79e4-4f8a-ba73-707cb947012d\" "
+"<div id=\"6d57b0eb-767e-47cf-b681-9d155706f381\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('aa3d1d7a-"
-"f433-4b44-97f0-557a0efbd2d8','397542db-79e4-4f8a-ba73-707cb947012d')\">Go "
-"Back</button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('aa3d1d7a-f433-4b44-97f0-557a0efbd2d8','397542db-79e4-4f8a-"
-"ba73-707cb947012d')\">Open In Tab</button></div><div id=\"b67d6c70-"
-"b565-4707-8c7d-7be7a2b24274\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('1483006f-54be-445f-ad26-"
+"f2f535a125b0','6d57b0eb-767e-47cf-b681-9d155706f381')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('1483006f-54be-445f-ad26-f2f535a125b0','6d57b0eb-767e-47cf-"
+"b681-9d155706f381')\">Open In Tab</button></div><div id=\"cc5ff962-db02-4330-"
+"aa64-7af87703bbf7\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:643
+#: ../../../reference/arrays.classes.rst:707
 msgid "Flat iteration"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:649:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:713:<autosummary>:1
 msgid ":py:obj:`ndarray.flat <numpy.ndarray.flat>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:649:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:713:<autosummary>:1
 msgid "A 1-D iterator over the array."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:650
+#: ../../../reference/arrays.classes.rst:714
 msgid ""
 "As mentioned previously, the flat attribute of ndarray objects returns an "
 "iterator that will cycle over the entire array in C-style contiguous order."
@@ -964,38 +1006,36 @@ msgstr ""
 
 #: ../../../reference/arrays.classes.rst:-1
 msgid ""
-"<div id=\"f231b1d1-3782-4f17-b478-d2e4e1a01cc8\" "
+"<div id=\"db18baed-6131-4f57-810b-9901b23266ce\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('3215bac8-60e3-4a6e-9001-22c5533cf17e','f231b1d1-3782-4f17-"
-"b478-d2e4e1a01cc8')\">Go Back</button><button class=\"try_examples_button\" "
-"onclick=\"window."
-"openInNewTab('3215bac8-60e3-4a6e-9001-22c5533cf17e','f231b1d1-3782-4f17-b478-"
-"d2e4e1a01cc8')\">Open In Tab</button></div><div "
-"id=\"eab56136-8a10-4951-9068-3d6f607a54b1\" "
+"tryExamplesHideIframe('dce25cc7-204e-42e7-8d8c-11245f3e0b9c','db18baed-6131-4f57-810b-9901b23266ce')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('dce25cc7-204e-42e7-8d8c-11245f3e0b9c','db18baed-6131-4f57-810b-9901b23266ce')\">Open "
+"In Tab</button></div><div id=\"2a44f249-c3ec-4903-9b38-2907392886fd\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:665
+#: ../../../reference/arrays.classes.rst:729
 msgid ""
 "Here, I've used the built-in enumerate iterator to return the iterator index "
 "as well as the value."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:670
+#: ../../../reference/arrays.classes.rst:734
 msgid "N-dimensional enumeration"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:676:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:740:<autosummary>:1
 msgid ":py:obj:`ndenumerate <numpy.ndenumerate>`\\ \\(arr\\)"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:676:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:740:<autosummary>:1
 msgid "Multidimensional index iterator."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:677
+#: ../../../reference/arrays.classes.rst:741
 msgid ""
 "Sometimes it may be useful to get the N-dimensional index while iterating. "
 "The ndenumerate iterator can achieve this."
@@ -1003,32 +1043,32 @@ msgstr ""
 
 #: ../../../reference/arrays.classes.rst:-1
 msgid ""
-"<div id=\"d2740c4b-f2c9-401d-bc79-126bfd8dbe4b\" "
+"<div id=\"fb4e4c5c-3744-4db4-98c0-80f400f5e374\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('eb2585f2-707f-41f9-8606-c62a6eacf212','d2740c4b-"
-"f2c9-401d-bc79-126bfd8dbe4b')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('eb2585f2-707f-41f9-8606-c62a6eacf212','d2740c4b-f2c9-401d-"
-"bc79-126bfd8dbe4b')\">Open In Tab</button></div><div "
-"id=\"67eb8ecc-6d81-4bac-90a4-94db69def50f\" "
+"tryExamplesHideIframe('e7518d34-5fb2-4841-b0d1-"
+"b30f11178bc2','fb4e4c5c-3744-4db4-98c0-80f400f5e374')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('e7518d34-5fb2-4841-b0d1-"
+"b30f11178bc2','fb4e4c5c-3744-4db4-98c0-80f400f5e374')\">Open In Tab</"
+"button></div><div id=\"3392ab41-80d2-4d6c-8223-cc34ddfd9281\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:693
+#: ../../../reference/arrays.classes.rst:757
 msgid "Iterator for broadcasting"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:699:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:763:<autosummary>:1
 msgid ":py:obj:`broadcast <numpy.broadcast>`\\ \\(\\*arrays\\)"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:699:<autosummary>:1
+#: ../../../reference/arrays.classes.rst:763:<autosummary>:1
 msgid "Produce an object that mimics broadcasting."
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:700
+#: ../../../reference/arrays.classes.rst:764
 msgid ""
 "The general concept of broadcasting is also available from Python using the :"
 "class:`broadcast` iterator. This object takes :math:`N` objects as inputs "
@@ -1038,39 +1078,38 @@ msgstr ""
 
 #: ../../../reference/arrays.classes.rst:-1
 msgid ""
-"<div id=\"7ad97c3f-3f83-4a8e-baaa-5bf618082813\" "
+"<div id=\"fa31d90e-fa7f-4a4d-8789-715482fedb45\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('6c2fedba-6afb-43ac-"
-"a7ac-82046239e1ca','7ad97c3f-3f83-4a8e-baaa-5bf618082813')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('6c2fedba-6afb-43ac-a7ac-82046239e1ca','7ad97c3f-3f83-4a8e-"
-"baaa-5bf618082813')\">Open In Tab</button></div><div "
-"id=\"46060cfb-14ba-45ce-9ee3-a26254ca640a\" "
+"tryExamplesHideIframe('5ae633dc-db43-49c9-84f0-00263eddd881','fa31d90e-"
+"fa7f-4a4d-8789-715482fedb45')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('5ae633dc-"
+"db43-49c9-84f0-00263eddd881','fa31d90e-fa7f-4a4d-8789-715482fedb45')\">Open "
+"In Tab</button></div><div id=\"dc705e30-c44a-4da6-bc7b-e94ade9ee9c8\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:346
+#: ../../../reference/arrays.classes.rst:406
 msgid "matrix"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:452
+#: ../../../reference/arrays.classes.rst:512
 msgid "memory maps"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:501
+#: ../../../reference/arrays.classes.rst:561
 msgid "character arrays"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:586
+#: ../../../reference/arrays.classes.rst:650
 msgid "user_array"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:586
+#: ../../../reference/arrays.classes.rst:650
 msgid "container class"
 msgstr ""
 
-#: ../../../reference/arrays.classes.rst:596
+#: ../../../reference/arrays.classes.rst:660
 msgid "array iterator"
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -127,7 +127,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.max:37
+#: of numpy.max:39
 msgid "**where**"
 msgstr "**where**"
 
@@ -148,7 +148,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.max:51
+#: of numpy.max:53
 msgid "**max**"
 msgstr ""
 
@@ -158,7 +158,7 @@ msgid "ndarray or scalar"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.max:42
+#: of numpy.max:44
 msgid ""
 "Maximum of `a`. If `axis` is None, the result is a scalar value. If `axis` "
 "is an int, the result is an array of dimension ``a.ndim - 1``. If `axis` is "
@@ -166,67 +166,67 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.max:56
-msgid ":obj:`amin`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.max:57
-msgid "The minimum value of an array along a given axis, propagating any NaNs."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.max:58
-msgid ":obj:`nanmax`"
+msgid ":obj:`min`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.max:59
-msgid "The maximum value of an array along a given axis, ignoring any NaNs."
+msgid "The minimum value of an array along a given axis, propagating any NaNs."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.max:60
-msgid ":obj:`maximum`"
+msgid ":obj:`nanmax`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.max:61
-msgid "Element-wise maximum of two arrays, propagating any NaNs."
+msgid "The maximum value of an array along a given axis, ignoring any NaNs."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.max:62
-msgid ":obj:`fmax`"
+msgid ":obj:`maximum`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.max:63
-msgid "Element-wise maximum of two arrays, ignoring any NaNs."
+msgid "Element-wise maximum of two arrays, propagating any NaNs."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.max:64
-msgid ":obj:`argmax`"
+msgid ":obj:`fmax`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.max:65
-msgid "Return the indices of the maximum values."
+msgid "Element-wise maximum of two arrays, ignoring any NaNs."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.max:66
+msgid ":obj:`argmax`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.max:67
+msgid "Return the indices of the maximum values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.max:68
 msgid ":obj:`nanmin`, :obj:`minimum`, :obj:`fmin`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.max:70
+#: of numpy.max:72
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.max:71
+#: of numpy.max:73
 msgid ""
 "NaN values are propagated, that is if at least one item is NaN, the "
 "corresponding max value will be NaN as well. To ignore NaN values (MATLAB "
@@ -234,26 +234,26 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.max:75
+#: of numpy.max:77
 msgid ""
 "Don't use `~numpy.max` for element-wise comparison of 2 arrays; when ``a."
 "shape[0]`` is 2, ``maximum(a[0], a[1])`` is faster than ``max(a, axis=0)``."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.max:81
+#: of numpy.max:83
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.max:108
+#: of numpy.max:110
 msgid ""
 "You can use an initial value to compute the maximum of an empty slice, or to "
 "initialize it to a different value:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.max:114
+#: of numpy.max:116
 msgid ""
 "Notice that the initial value is used as one of the elements for which the "
 "maximum is determined, unlike for the default argument Python's max "
@@ -263,16 +263,17 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.max:-1
 msgid ""
-"<div id=\"5e7614d0-369f-44e0-8057-a7964f0eadc8\" "
+"<div id=\"d87a2be4-856a-428d-b1f1-657ca7715f84\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('f3a67a20-7c7a-40ee-9640-4102780b3f3f','5e7614d0-369f-44e0-8057-"
-"a7964f0eadc8')\">Go Back</button><button class=\"try_examples_button\" "
-"onclick=\"window."
-"openInNewTab('f3a67a20-7c7a-40ee-9640-4102780b3f3f','5e7614d0-369f-44e0-8057-"
-"a7964f0eadc8')\">Open In Tab</button></div><div id=\"b9b1556a-ff72-4e21-ada9-"
-"f8958e9bbc6d\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('470ca948-"
+"be5c-4c5d-85e8-87356a2f7495','d87a2be4-856a-428d-b1f1-657ca7715f84')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('470ca948-be5c-4c5d-85e8-87356a2f7495','d87a2be4-856a-428d-"
+"b1f1-657ca7715f84')\">Open In Tab</button></div><div id=\"31c60eda-"
+"ccda-4ede-8941-56f91be4e693\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring

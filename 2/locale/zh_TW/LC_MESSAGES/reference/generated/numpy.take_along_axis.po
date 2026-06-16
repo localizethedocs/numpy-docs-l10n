@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -80,7 +80,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take_along_axis:27
+#: of numpy.take_along_axis:29
 msgid "**axis**"
 msgstr "**axis**"
 
@@ -108,50 +108,50 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take_along_axis:38
+#: of numpy.take_along_axis:40
 msgid "out: ndarray (Ni..., J, Nk...)"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take_along_axis:32
+#: of numpy.take_along_axis:34
 msgid "The indexed result."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take_along_axis:43
+#: of numpy.take_along_axis:45
 msgid ":obj:`take`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take_along_axis:44
+#: of numpy.take_along_axis:46
 msgid "Take along an axis, using the same indices for every 1d slice"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take_along_axis:45
+#: of numpy.take_along_axis:47
 msgid ":obj:`put_along_axis`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take_along_axis:46
+#: of numpy.take_along_axis:48
 msgid ""
 "Put values into the destination array by matching 1d index and data slices"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take_along_axis:50
+#: of numpy.take_along_axis:52
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take_along_axis:51
+#: of numpy.take_along_axis:53
 msgid ""
 "This is equivalent to (but faster than) the following use of `ndindex` and "
 "`s_`, which sets each of ``ii`` and ``kk`` to a tuple of indices::"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take_along_axis:54
+#: of numpy.take_along_axis:56
 msgid ""
 "Ni, M, Nk = a.shape[:axis], a.shape[axis], a.shape[axis+1:]\n"
 "J = indices.shape[axis]  # Need not equal M\n"
@@ -167,39 +167,39 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take_along_axis:66
+#: of numpy.take_along_axis:68
 msgid "Equivalently, eliminating the inner loop, the last two lines would be::"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take_along_axis:68
+#: of numpy.take_along_axis:70
 msgid "out_1d[:] = a_1d[indices_1d]"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take_along_axis:72
+#: of numpy.take_along_axis:74
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take_along_axis:79
+#: of numpy.take_along_axis:81
 msgid "For this sample array"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take_along_axis:83
+#: of numpy.take_along_axis:85
 msgid "We can sort either by using sort directly, or argsort and this function"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take_along_axis:96
+#: of numpy.take_along_axis:98
 msgid ""
 "The same works for max and min, if you maintain the trivial dimension with "
 "``keepdims``:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take_along_axis:110
+#: of numpy.take_along_axis:112
 msgid ""
 "If we want to get the max and min at the same time, we can stack the indices "
 "first"
@@ -208,14 +208,16 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.take_along_axis:-1
 msgid ""
-"<div id=\"a3c64531-8f65-45f2-9daa-9a6d2582b296\" "
+"<div id=\"b613d27a-8300-4861-835c-49383e668a3b\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('d59acddf-51c3-4197-853a-10c06f10a17a','a3c64531-8f65-45f2-9daa-9a6d2582b296')\">Go "
-"Back</button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('d59acddf-51c3-4197-853a-10c06f10a17a','a3c64531-8f65-45f2-9daa-9a6d2582b296')\">Open "
-"In Tab</button></div><div id=\"fb78e7ca-15a0-4874-971b-66cdf4ba3651\" "
+"tryExamplesHideIframe('551c7c00-d8cb-4f4c-"
+"b7d0-488f185b59c6','b613d27a-8300-4861-835c-49383e668a3b')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('551c7c00-d8cb-4f4c-"
+"b7d0-488f185b59c6','b613d27a-8300-4861-835c-49383e668a3b')\">Open In Tab</"
+"button></div><div id=\"98c86173-9a35-425b-b01c-8b6b4a8d6a09\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 

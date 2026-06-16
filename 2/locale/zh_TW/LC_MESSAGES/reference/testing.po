@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,45 +109,49 @@ msgstr ""
 
 #: ../../../../TESTS.rst:60
 msgid ""
-"If you want to build NumPy in order to work on NumPy itself, use the "
-"``spin`` utility. To run NumPy's full test suite::"
+"If you want to build NumPy in order to work on NumPy itself, use the :ref:"
+"`spin utility <spin_tool>`."
 msgstr ""
 
 #: ../../../../TESTS.rst:63
-msgid "$ spin test -m full"
+msgid "To run NumPy's full test suite::"
 msgstr ""
 
 #: ../../../../TESTS.rst:65
-msgid "Testing a subset of NumPy::"
+msgid "$ spin test -m full"
 msgstr ""
 
 #: ../../../../TESTS.rst:67
-msgid "$ spin test -t numpy/_core/tests"
+msgid "Testing a subset of NumPy::"
 msgstr ""
 
 #: ../../../../TESTS.rst:69
+msgid "$ spin test -t numpy/_core/tests"
+msgstr ""
+
+#: ../../../../TESTS.rst:71
 msgid "For detailed info on testing, see :ref:`testing-builds`"
 msgstr ""
 
-#: ../../../../TESTS.rst:72
+#: ../../../../TESTS.rst:74
 msgid "Running tests in multiple threads"
 msgstr ""
 
-#: ../../../../TESTS.rst:74
+#: ../../../../TESTS.rst:76
 msgid ""
 "To help with stress testing NumPy for thread safety, the test suite can be "
 "run under `pytest-run-parallel`_. To install ``pytest-run-parallel``::"
 msgstr ""
 
-#: ../../../../TESTS.rst:77
+#: ../../../../TESTS.rst:79
 msgid "$ pip install pytest-run-parallel"
 msgstr ""
 
-#: ../../../../TESTS.rst:79
+#: ../../../../TESTS.rst:81
 msgid "To run the test suite in multiple threads::"
 msgstr ""
 
-#: ../../../../TESTS.rst:81
+#: ../../../../TESTS.rst:83
 msgid ""
 "$ spin test -p auto # have pytest-run-parallel detect the number of "
 "available cores\n"
@@ -156,7 +160,7 @@ msgid ""
 "thread-safe"
 msgstr ""
 
-#: ../../../../TESTS.rst:85
+#: ../../../../TESTS.rst:87
 msgid ""
 "When you write new tests, it is worth testing to make sure they do not fail "
 "under ``pytest-run-parallel``, since the CI jobs make use of it. Some tips "
@@ -164,7 +168,7 @@ msgid ""
 "tests>`_."
 msgstr ""
 
-#: ../../../../TESTS.rst:91
+#: ../../../../TESTS.rst:93
 msgid ""
 "Ideally you should run ``pytest-run-parallel`` using a `free-threaded build "
 "of Python <https://docs.python.org/3/howto/free-threading-python.html>`_ "
@@ -173,48 +177,48 @@ msgid ""
 "``PYTHON_CONTEXT_AWARE_WARNINGS`` and ``PYTHON_THREAD_INHERIT_CONTEXT`` to 1."
 msgstr ""
 
-#: ../../../../TESTS.rst:98
+#: ../../../../TESTS.rst:100
 msgid "Running doctests"
 msgstr ""
 
-#: ../../../../TESTS.rst:100
+#: ../../../../TESTS.rst:102
 msgid ""
 "NumPy documentation contains code examples, \"doctests\". To check that the "
 "examples are correct, install the ``scipy-doctest`` package::"
 msgstr ""
 
-#: ../../../../TESTS.rst:103
+#: ../../../../TESTS.rst:105
 msgid "$ pip install scipy-doctest"
 msgstr ""
 
-#: ../../../../TESTS.rst:105
+#: ../../../../TESTS.rst:107
 msgid "and run one of::"
 msgstr ""
 
-#: ../../../../TESTS.rst:107
+#: ../../../../TESTS.rst:109
 msgid ""
 "$ spin check-docs -v\n"
 "$ spin check-docs numpy/linalg\n"
 "$ spin check-docs -- -k 'det and not slogdet'"
 msgstr ""
 
-#: ../../../../TESTS.rst:111
+#: ../../../../TESTS.rst:113
 msgid "Note that the doctests are not run when you use ``spin test``."
 msgstr ""
 
-#: ../../../../TESTS.rst:115
+#: ../../../../TESTS.rst:117
 msgid "Other methods of running tests"
 msgstr ""
 
-#: ../../../../TESTS.rst:117
+#: ../../../../TESTS.rst:119
 msgid "Run tests using your favourite IDE such as `vscode`_ or `pycharm`_"
 msgstr ""
 
-#: ../../../../TESTS.rst:120
+#: ../../../../TESTS.rst:122
 msgid "Writing your own tests"
 msgstr ""
 
-#: ../../../../TESTS.rst:122
+#: ../../../../TESTS.rst:124
 msgid ""
 "If you are writing code that you'd like to become part of NumPy, please "
 "write the tests as you develop your code. Every Python module, extension "
@@ -223,7 +227,7 @@ msgid ""
 "methods (named ``test*``) and test classes (named ``Test*``)."
 msgstr ""
 
-#: ../../../../TESTS.rst:129
+#: ../../../../TESTS.rst:131
 msgid ""
 "Suppose you have a NumPy module ``numpy/xxx/yyy.py`` containing a function "
 "``zzz()``.  To test this function you would create a test module called "
@@ -231,19 +235,19 @@ msgid ""
 "simply add a test function::"
 msgstr ""
 
-#: ../../../../TESTS.rst:134
+#: ../../../../TESTS.rst:136
 msgid ""
 "def test_zzz():\n"
 "    assert zzz() == 'Hello from zzz'"
 msgstr ""
 
-#: ../../../../TESTS.rst:137
+#: ../../../../TESTS.rst:139
 msgid ""
 "More often, we need to group a number of tests together, so we create a test "
 "class::"
 msgstr ""
 
-#: ../../../../TESTS.rst:140
+#: ../../../../TESTS.rst:142
 msgid ""
 "# import xxx symbols\n"
 "from numpy.xxx.yyy import zzz\n"
@@ -258,40 +262,40 @@ msgid ""
 "            ..."
 msgstr ""
 
-#: ../../../../TESTS.rst:152
+#: ../../../../TESTS.rst:154
 msgid ""
 "Within these test methods, the ``assert`` statement or a specialized "
 "assertion function is used to test whether a certain assumption is valid. If "
 "the assertion fails, the test fails. Common assertion functions include:"
 msgstr ""
 
-#: ../../../../TESTS.rst:156
+#: ../../../../TESTS.rst:158
 msgid ""
 ":func:`numpy.testing.assert_equal` for testing exact elementwise equality "
 "between a result array and a reference,"
 msgstr ""
 
-#: ../../../../TESTS.rst:158
+#: ../../../../TESTS.rst:160
 msgid ""
 ":func:`numpy.testing.assert_allclose` for testing near elementwise equality "
 "between a result array and a reference (i.e. with specified relative and "
 "absolute tolerances), and"
 msgstr ""
 
-#: ../../../../TESTS.rst:161
+#: ../../../../TESTS.rst:163
 msgid ""
 ":func:`numpy.testing.assert_array_less` for testing (strict) elementwise "
 "ordering between a result array and a reference."
 msgstr ""
 
-#: ../../../../TESTS.rst:164
+#: ../../../../TESTS.rst:166
 msgid ""
 "By default, these assertion functions only compare the numerical values in "
 "the arrays. Consider using the ``strict=True`` option to check the array "
 "dtype and shape, too."
 msgstr ""
 
-#: ../../../../TESTS.rst:168
+#: ../../../../TESTS.rst:170
 msgid ""
 "When you need custom assertions, use the Python ``assert`` statement. Note "
 "that ``pytest`` internally rewrites ``assert`` statements to give "
@@ -301,7 +305,7 @@ msgid ""
 "issue when running tests with pytest."
 msgstr ""
 
-#: ../../../../TESTS.rst:175
+#: ../../../../TESTS.rst:177
 msgid ""
 "Similarly, the pytest functions :func:`pytest.raises` and :func:`pytest."
 "warns` should be preferred over their legacy counterparts :func:`numpy."
@@ -310,7 +314,7 @@ msgid ""
 "should always be used to precisely target the intended warning or error."
 msgstr ""
 
-#: ../../../../TESTS.rst:182
+#: ../../../../TESTS.rst:184
 msgid ""
 "Note that ``test_`` functions or methods should not have a docstring, "
 "because that makes it hard to identify the test from the output of running "
@@ -319,18 +323,18 @@ msgid ""
 "reader to interpret the code."
 msgstr ""
 
-#: ../../../../TESTS.rst:188
+#: ../../../../TESTS.rst:190
 msgid ""
 "Also, since much of NumPy is legacy code that was originally written without "
 "unit tests, there are still several modules that don't have tests yet. "
 "Please feel free to choose one of these modules and develop tests for it."
 msgstr ""
 
-#: ../../../../TESTS.rst:194
+#: ../../../../TESTS.rst:196
 msgid "Using C code in tests"
 msgstr ""
 
-#: ../../../../TESTS.rst:196
+#: ../../../../TESTS.rst:198
 msgid ""
 "NumPy exposes a rich :ref:`C-API<c-api>` . These are tested using c-"
 "extension modules written \"as-if\" they know nothing about the internals of "
@@ -418,7 +422,7 @@ msgid "Extra directories to find include files when compiling"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/extbuild.py:docstring
-#: of numpy.testing._private.extbuild.build_and_import_extension:22
+#: of numpy.testing._private.extbuild.build_and_import_extension:24
 msgid "**more_init**"
 msgstr ""
 
@@ -433,33 +437,32 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/extbuild.py:docstring
-#: of numpy.testing._private.extbuild.build_and_import_extension:36
+#: of numpy.testing._private.extbuild.build_and_import_extension:38
 msgid "out: module"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/extbuild.py:docstring
-#: of numpy.testing._private.extbuild.build_and_import_extension:27
+#: of numpy.testing._private.extbuild.build_and_import_extension:29
 msgid "The module will have been loaded and is ready for use"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/extbuild.py:docstring
-#: of numpy.testing._private.extbuild.build_and_import_extension:39
+#: of numpy.testing._private.extbuild.build_and_import_extension:41
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/extbuild.py:docstring
 #: of numpy.testing._private.extbuild.build_and_import_extension:-1
 msgid ""
-"<div id=\"50fae14c-1986-4ddc-b362-b6e090968fa6\" "
+"<div id=\"8a99a4e2-e1cf-4df6-8b10-8800c0d61738\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('3eb81683-5ad1-428a-92b3-5f5356cd5632','50fae14c-1986-4ddc-"
-"b362-b6e090968fa6')\">Go Back</button><button class=\"try_examples_button\" "
-"onclick=\"window."
-"openInNewTab('3eb81683-5ad1-428a-92b3-5f5356cd5632','50fae14c-1986-4ddc-b362-"
-"b6e090968fa6')\">Open In Tab</button></div><div id=\"366940ae-"
-"d5ec-4e74-8d3e-0e23956aeae9\" "
+"tryExamplesHideIframe('8fb9e323-c970-44c9-a493-7eb2ea7a369d','8a99a4e2-"
+"e1cf-4df6-8b10-8800c0d61738')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('8fb9e323-"
+"c970-44c9-a493-7eb2ea7a369d','8a99a4e2-e1cf-4df6-8b10-8800c0d61738')\">Open "
+"In Tab</button></div><div id=\"f1039443-2839-49d2-bac6-f7beb84164b1\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
@@ -470,11 +473,11 @@ msgid ""
 "loadTryExamplesConfig(\"../try_examples.json\");});</script>"
 msgstr ""
 
-#: ../../../../TESTS.rst:209
+#: ../../../../TESTS.rst:211
 msgid "Labeling tests"
 msgstr ""
 
-#: ../../../../TESTS.rst:211
+#: ../../../../TESTS.rst:213
 msgid ""
 "Unlabeled tests like the ones above are run in the default ``numpy.test()`` "
 "run.  If you want to label your test as slow - and therefore reserved for a "
@@ -482,7 +485,7 @@ msgid ""
 "slow``::"
 msgstr ""
 
-#: ../../../../TESTS.rst:216
+#: ../../../../TESTS.rst:218
 msgid ""
 "import pytest\n"
 "\n"
@@ -491,11 +494,11 @@ msgid ""
 "    print('Big, slow test')"
 msgstr ""
 
-#: ../../../../TESTS.rst:222
+#: ../../../../TESTS.rst:224
 msgid "Similarly for methods::"
 msgstr ""
 
-#: ../../../../TESTS.rst:224
+#: ../../../../TESTS.rst:226
 msgid ""
 "class test_zzz:\n"
 "    @pytest.mark.slow\n"
@@ -503,18 +506,18 @@ msgid ""
 "        assert_(zzz() == 'Hello from zzz')"
 msgstr ""
 
-#: ../../../../TESTS.rst:230
+#: ../../../../TESTS.rst:232
 msgid "Setup and teardown methods"
 msgstr ""
 
-#: ../../../../TESTS.rst:232
+#: ../../../../TESTS.rst:234
 msgid ""
 "NumPy originally used xunit setup and teardown, a feature of `pytest`. We "
 "now encourage the usage of setup and teardown methods that are called "
 "explicitly by the tests that need them::"
 msgstr ""
 
-#: ../../../../TESTS.rst:236
+#: ../../../../TESTS.rst:238
 msgid ""
 "class TestMe:\n"
 "    def setup(self):\n"
@@ -530,14 +533,14 @@ msgid ""
 "        self.teardown()"
 msgstr ""
 
-#: ../../../../TESTS.rst:249
+#: ../../../../TESTS.rst:251
 msgid ""
 "This approach is thread-safe, ensuring tests can run under ``pytest-run-"
 "parallel``. Using pytest setup fixtures (such as xunit setup methods) is "
 "generally not thread-safe and will likely cause thread-safety test failures."
 msgstr ""
 
-#: ../../../../TESTS.rst:253
+#: ../../../../TESTS.rst:255
 msgid ""
 "``pytest`` supports more general fixture at various scopes which may be used "
 "automatically via special arguments. For example, the special argument name "
@@ -545,11 +548,11 @@ msgid ""
 "fixtures should be used sparingly."
 msgstr ""
 
-#: ../../../../TESTS.rst:259
+#: ../../../../TESTS.rst:261
 msgid "Parametric tests"
 msgstr ""
 
-#: ../../../../TESTS.rst:261
+#: ../../../../TESTS.rst:263
 msgid ""
 "One very nice feature of ``pytest`` is the ease of testing across a range of "
 "parameter values using the ``pytest.mark.parametrize`` decorator. For "
@@ -557,7 +560,7 @@ msgid ""
 "three array sizes and two data types::"
 msgstr ""
 
-#: ../../../../TESTS.rst:266
+#: ../../../../TESTS.rst:268
 msgid ""
 "@pytest.mark.parametrize('dimensionality', [3, 10, 25])\n"
 "@pytest.mark.parametrize('dtype', [np.float32, np.float64])\n"
@@ -572,11 +575,11 @@ msgid ""
 "    assert x.dtype == np.dtype(dtype)"
 msgstr ""
 
-#: ../../../../TESTS.rst:278
+#: ../../../../TESTS.rst:280
 msgid "Doctests"
 msgstr ""
 
-#: ../../../../TESTS.rst:280
+#: ../../../../TESTS.rst:282
 msgid ""
 "Doctests are a convenient way of documenting the behavior of a function and "
 "allowing that behavior to be tested at the same time.  The output of an "
@@ -585,20 +588,20 @@ msgid ""
 "the expected output."
 msgstr ""
 
-#: ../../../../TESTS.rst:286
+#: ../../../../TESTS.rst:288
 msgid ""
 "The doctests can be run by adding the ``doctests`` argument to the "
 "``test()`` call; for example, to run all tests (including doctests) for "
 "numpy.lib::"
 msgstr ""
 
-#: ../../../../TESTS.rst:290
+#: ../../../../TESTS.rst:292
 msgid ""
 ">>> import numpy as np\n"
 ">>> np.lib.test(doctests=True)"
 msgstr ""
 
-#: ../../../../TESTS.rst:293
+#: ../../../../TESTS.rst:295
 msgid ""
 "The doctests are run as if they are in a fresh Python instance which has "
 "executed ``import numpy as np``. Tests that are part of a NumPy subpackage "
@@ -607,11 +610,11 @@ msgid ""
 "linalg`` has already executed."
 msgstr ""
 
-#: ../../../../TESTS.rst:301
+#: ../../../../TESTS.rst:303
 msgid "``tests/``"
 msgstr ""
 
-#: ../../../../TESTS.rst:303
+#: ../../../../TESTS.rst:305
 msgid ""
 "Rather than keeping the code and the tests in the same directory, we put all "
 "the tests for a given subpackage in a ``tests/`` subdirectory. For our "
@@ -620,33 +623,33 @@ msgid ""
 "tests/test_yyy.py``."
 msgstr ""
 
-#: ../../../../TESTS.rst:309
+#: ../../../../TESTS.rst:311
 msgid ""
 "Once the ``numpy/xxx/tests/test_yyy.py`` is written, its possible to run the "
 "tests by going to the ``tests/`` directory and typing::"
 msgstr ""
 
-#: ../../../../TESTS.rst:312
+#: ../../../../TESTS.rst:314
 msgid "python test_yyy.py"
 msgstr ""
 
-#: ../../../../TESTS.rst:314
+#: ../../../../TESTS.rst:316
 msgid ""
 "Or if you add ``numpy/xxx/tests/`` to the Python path, you could run the "
 "tests interactively in the interpreter like this::"
 msgstr ""
 
-#: ../../../../TESTS.rst:317
+#: ../../../../TESTS.rst:319
 msgid ""
 ">>> import test_yyy\n"
 ">>> test_yyy.test()"
 msgstr ""
 
-#: ../../../../TESTS.rst:321
+#: ../../../../TESTS.rst:323
 msgid "``__init__.py`` and ``setup.py``"
 msgstr ""
 
-#: ../../../../TESTS.rst:323
+#: ../../../../TESTS.rst:325
 msgid ""
 "Usually, however, adding the ``tests/`` directory to the python path isn't "
 "desirable. Instead it would better to invoke the test straight from the "
@@ -654,7 +657,7 @@ msgid ""
 "your package's ``__init__.py`` file::"
 msgstr ""
 
-#: ../../../../TESTS.rst:328
+#: ../../../../TESTS.rst:330
 msgid ""
 "...\n"
 "def test(level=1, verbosity=1):\n"
@@ -662,13 +665,13 @@ msgid ""
 "    return Tester().test(level, verbosity)"
 msgstr ""
 
-#: ../../../../TESTS.rst:333
+#: ../../../../TESTS.rst:335
 msgid ""
 "You will also need to add the tests directory in the configuration section "
 "of your setup.py::"
 msgstr ""
 
-#: ../../../../TESTS.rst:336
+#: ../../../../TESTS.rst:338
 msgid ""
 "...\n"
 "def configuration(parent_package='', top_path=None):\n"
@@ -678,49 +681,49 @@ msgid ""
 "..."
 msgstr ""
 
-#: ../../../../TESTS.rst:343
+#: ../../../../TESTS.rst:345
 msgid "Now you can do the following to test your module::"
 msgstr ""
 
-#: ../../../../TESTS.rst:345
+#: ../../../../TESTS.rst:347
 msgid ""
 ">>> import numpy\n"
 ">>> numpy.xxx.test()"
 msgstr ""
 
-#: ../../../../TESTS.rst:348
+#: ../../../../TESTS.rst:350
 msgid ""
 "Also, when invoking the entire NumPy test suite, your tests will be found "
 "and run::"
 msgstr ""
 
-#: ../../../../TESTS.rst:351
+#: ../../../../TESTS.rst:353
 msgid ""
 ">>> import numpy\n"
 ">>> numpy.test()\n"
 "# your tests are included and run automatically!"
 msgstr ""
 
-#: ../../../../TESTS.rst:356
+#: ../../../../TESTS.rst:358
 msgid "Tips & Tricks"
 msgstr ""
 
-#: ../../../../TESTS.rst:359
+#: ../../../../TESTS.rst:361
 msgid "Known failures & skipping tests"
 msgstr ""
 
-#: ../../../../TESTS.rst:361
+#: ../../../../TESTS.rst:363
 msgid ""
 "Sometimes you might want to skip a test or mark it as a known failure, such "
 "as when the test suite is being written before the code it's meant to test, "
 "or if a test only fails on a particular architecture."
 msgstr ""
 
-#: ../../../../TESTS.rst:365
+#: ../../../../TESTS.rst:367
 msgid "To skip a test, simply use ``skipif``::"
 msgstr ""
 
-#: ../../../../TESTS.rst:367
+#: ../../../../TESTS.rst:369
 msgid ""
 "import pytest\n"
 "\n"
@@ -729,7 +732,7 @@ msgid ""
 "    ..."
 msgstr ""
 
-#: ../../../../TESTS.rst:373
+#: ../../../../TESTS.rst:375
 msgid ""
 "The test is marked as skipped if ``SkipMyTest`` evaluates to nonzero, and "
 "the message in verbose test output is the second argument given to "
@@ -737,7 +740,7 @@ msgid ""
 "``xfail``::"
 msgstr ""
 
-#: ../../../../TESTS.rst:378
+#: ../../../../TESTS.rst:380
 msgid ""
 "import pytest\n"
 "\n"
@@ -747,13 +750,13 @@ msgid ""
 "    ..."
 msgstr ""
 
-#: ../../../../TESTS.rst:384
+#: ../../../../TESTS.rst:386
 msgid ""
 "Of course, a test can be unconditionally skipped or marked as a known "
 "failure by using ``skip`` or ``xfail`` without argument, respectively."
 msgstr ""
 
-#: ../../../../TESTS.rst:387
+#: ../../../../TESTS.rst:389
 msgid ""
 "A total of the number of skipped and known failing tests is displayed at the "
 "end of the test run.  Skipped tests are marked as ``'S'`` in the test "
@@ -761,11 +764,11 @@ msgid ""
 "marked as ``'x'`` (or ``'XFAIL'`` if ``verbose > 1``)."
 msgstr ""
 
-#: ../../../../TESTS.rst:394
+#: ../../../../TESTS.rst:396
 msgid "Tests on random data"
 msgstr ""
 
-#: ../../../../TESTS.rst:396
+#: ../../../../TESTS.rst:398
 msgid ""
 "Tests on random data are good, but since test failures are meant to expose "
 "new bugs or regressions, a test that passes most of the time but fails "
@@ -775,7 +778,7 @@ msgid ""
 "instance of `numpy.random.RandomState`."
 msgstr ""
 
-#: ../../../../TESTS.rst:403
+#: ../../../../TESTS.rst:405
 msgid ""
 "Alternatively, you can use `Hypothesis`_ to generate arbitrary data. "
 "Hypothesis manages both Python's and Numpy's random seeds for you, and "
@@ -783,18 +786,18 @@ msgid ""
 "``hypothesis.extra.numpy``, e.g. for a set of mutually-broadcastable shapes)."
 msgstr ""
 
-#: ../../../../TESTS.rst:408
+#: ../../../../TESTS.rst:410
 msgid ""
 "The advantages over random generation include tools to replay and share "
 "failures without requiring a fixed seed, reporting *minimal* examples for "
 "each failure, and better-than-naive-random techniques for triggering bugs."
 msgstr ""
 
-#: ../../../../TESTS.rst:413
+#: ../../../../TESTS.rst:415
 msgid "Writing thread-safe tests"
 msgstr ""
 
-#: ../../../../TESTS.rst:415
+#: ../../../../TESTS.rst:417
 msgid ""
 "Writing thread-safe tests may require some trial-and-error. Generally you "
 "should follow the guidelines stated so far, especially when it comes to "
@@ -804,13 +807,13 @@ msgid ""
 "run into."
 msgstr ""
 
-#: ../../../../TESTS.rst:421
+#: ../../../../TESTS.rst:423
 msgid ""
 "Using ``pytest.mark.parametrize`` may occasionally cause thread-safety "
 "issues. To fix this, you can use ``copy()``::"
 msgstr ""
 
-#: ../../../../TESTS.rst:424
+#: ../../../../TESTS.rst:426
 msgid ""
 "@pytest.mark.parametrize('dimensionality', [3, 10, 25])\n"
 "@pytest.mark.parametrize('dtype', [np.float32, np.float64])\n"
@@ -821,38 +824,38 @@ msgid ""
 "    ..."
 msgstr ""
 
-#: ../../../../TESTS.rst:432
+#: ../../../../TESTS.rst:434
 msgid ""
 "If you are testing something that is inherently thread-unsafe, you can label "
 "your test with ``pytest.mark.thread_unsafe`` so that it will run under a "
 "single thread and not cause test failures::"
 msgstr ""
 
-#: ../../../../TESTS.rst:436
+#: ../../../../TESTS.rst:438
 msgid ""
 "@pytest.mark.thread_unsafe(reason=\"reason this test is thread-unsafe\")\n"
 "def test_thread_unsafe():\n"
 "  ..."
 msgstr ""
 
-#: ../../../../TESTS.rst:440
+#: ../../../../TESTS.rst:442
 msgid "Some examples of what should be labeled as thread-unsafe:"
 msgstr ""
 
-#: ../../../../TESTS.rst:442
+#: ../../../../TESTS.rst:444
 msgid "Usage of ``sys.stdout`` and ``sys.stderr``"
 msgstr ""
 
-#: ../../../../TESTS.rst:443
+#: ../../../../TESTS.rst:445
 msgid ""
 "Mutation of global data, like docstrings, modules, garbage collectors, etc."
 msgstr ""
 
-#: ../../../../TESTS.rst:444
+#: ../../../../TESTS.rst:446
 msgid "Tests that require a lot of memory, since they could cause crashes."
 msgstr ""
 
-#: ../../../../TESTS.rst:446
+#: ../../../../TESTS.rst:448
 msgid ""
 "Additionally, some ``pytest`` fixtures are thread-unsafe, such as "
 "``monkeypatch`` and ``capsys``. However, ``pytest-run-parallel`` will "
@@ -860,7 +863,7 @@ msgid ""
 "fixtures have been patched to be thread-safe, like ``tmp_path``."
 msgstr ""
 
-#: ../../../../TESTS.rst:452
+#: ../../../../TESTS.rst:454
 msgid "Documentation for ``numpy.test``"
 msgstr ""
 
@@ -890,7 +893,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.test:24 numpy.test:38
+#: of numpy.test:16 numpy.test:30
 msgid "**module_name**"
 msgstr ""
 
@@ -905,18 +908,6 @@ msgid "The name of the module to test."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.test:27
-msgid "Notes"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.test:28
-msgid ""
-"Unlike the previous ``nose``-based implementation, this class is not "
-"publicly exposed as it performs some ``numpy``-specific warning suppression."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.test:0
 msgid "Attributes"
 msgstr ""
@@ -927,6 +918,18 @@ msgid "str"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.test:37
+#: of numpy.test:21
 msgid "Full path to the package to test."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.test:33
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.test:34
+msgid ""
+"Unlike the previous ``nose``-based implementation, this class is not "
+"publicly exposed as it performs some ``numpy``-specific warning suppression."
 msgstr ""

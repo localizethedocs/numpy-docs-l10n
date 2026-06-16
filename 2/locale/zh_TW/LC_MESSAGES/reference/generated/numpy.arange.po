@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -161,7 +161,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.arange:58
+#: of numpy.arange:60
 msgid "**like**"
 msgstr ""
 
@@ -185,7 +185,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.arange:73
+#: of numpy.arange:75
 msgid "**arange**"
 msgstr ""
 
@@ -195,12 +195,12 @@ msgid "ndarray"
 msgstr "ndarray"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.arange:63
+#: of numpy.arange:65
 msgid "Array of evenly spaced values."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.arange:65
+#: of numpy.arange:67
 msgid ""
 "For floating point arguments, the length of the result is ``ceil((stop - "
 "start)/step)``.  Because of floating point overflow, this rule may result in "
@@ -208,12 +208,12 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.arange:77
+#: of numpy.arange:79
 msgid "The length of the output might not be numerically stable."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.arange:79
+#: of numpy.arange:81
 msgid ""
 "Another stability issue is due to the internal implementation of `numpy."
 "arange`. The actual step value used to populate the array is ``dtype(start + "
@@ -223,21 +223,21 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.arange:87
+#: of numpy.arange:89
 msgid ""
-">>> np.arange(0, 5, 0.5, dtype=int)\n"
+">>> np.arange(0, 5, 0.5, dtype=np.int_)\n"
 "array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])\n"
-">>> np.arange(-3, 3, 0.5, dtype=int)\n"
+">>> np.arange(-3, 3, 0.5, dtype=np.int_)\n"
 "array([-3, -2, -1,  0,  1,  2,  3,  4,  5,  6,  7,  8])"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.arange:92
+#: of numpy.arange:94
 msgid "In such cases, the use of `numpy.linspace` should be preferred."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.arange:94
+#: of numpy.arange:96
 msgid ""
 "The built-in :py:class:`range` generates :std:doc:`Python built-in integers "
 "that have arbitrary size <python:c-api/long>`, while `numpy.arange` produces "
@@ -246,7 +246,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.arange:99
+#: of numpy.arange:101
 msgid ""
 ">>> power = 40\n"
 ">>> modulo = 10000\n"
@@ -259,59 +259,58 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.arange:111
+#: of numpy.arange:113
 msgid ":obj:`numpy.linspace`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.arange:112
+#: of numpy.arange:114
 msgid "Evenly spaced numbers with careful handling of endpoints."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.arange:113
+#: of numpy.arange:115
 msgid ":obj:`numpy.ogrid`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.arange:114
+#: of numpy.arange:116
 msgid "Arrays of evenly spaced numbers in N-dimensions."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.arange:115
+#: of numpy.arange:117
 msgid ":obj:`numpy.mgrid`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.arange:116
+#: of numpy.arange:118
 msgid "Grid-shaped arrays of evenly spaced numbers in N-dimensions."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.arange:117
+#: of numpy.arange:119
 msgid ":ref:`how-to-partition`"
 msgstr ":ref:`how-to-partition`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.arange:123
+#: of numpy.arange:125
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.arange:-1
 msgid ""
-"<div id=\"6e7cd631-add4-4507-9535-f30af5578f40\" "
+"<div id=\"cd655ab3-d584-4823-bbaa-b3b51d8c54d9\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('cfc0f74d-6fee-41f9-bcd4-cdf006db0ff5','6e7cd631-"
-"add4-4507-9535-f30af5578f40')\">Go Back</button><button "
+"tryExamplesHideIframe('0b223f04-4613-4647-9f7c-e30c676ea9ca','cd655ab3-"
+"d584-4823-bbaa-b3b51d8c54d9')\">Go Back</button><button "
 "class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('cfc0f74d-6fee-41f9-bcd4-cdf006db0ff5','6e7cd631-add4-4507-9535-"
-"f30af5578f40')\">Open In Tab</button></div><div id=\"40742fc2-947b-4539-"
-"ac37-0c9c3df3a45f\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
-"div>"
+"openInNewTab('0b223f04-4613-4647-9f7c-e30c676ea9ca','cd655ab3-d584-4823-bbaa-"
+"b3b51d8c54d9')\">Open In Tab</button></div><div id=\"b9a8500c-4415-42b2-b779-"
+"ef009b59f606\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring

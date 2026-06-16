@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -367,7 +367,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:118
+#: of numpy.nditer:110
 msgid "**buffersize**"
 msgstr ""
 
@@ -384,19 +384,326 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:121
+#: of numpy.nditer:0
+msgid "Attributes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:117
+msgid "**dtypes**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:-1
+msgid "tuple of dtype(s)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:115
+msgid ""
+"The data types of the values provided in `value`. This may be different from "
+"the operand data types if buffering is enabled. Valid only before the "
+"iterator is closed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:120
+msgid "**finished**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:-1
+msgid "bool"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:120
+msgid "Whether the iteration over the operands is finished or not."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:124
+msgid "**has_delayed_bufalloc**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:123
+msgid ""
+"If True, the iterator was created with the ``delay_bufalloc`` flag, and no "
+"reset() function was called on it yet."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:129
+msgid "**has_index**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:127
+msgid ""
+"If True, the iterator was created with either the ``c_index`` or the "
+"``f_index`` flag, and the property `index` can be used to retrieve it."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:133
+msgid "**has_multi_index**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:132
+msgid ""
+"If True, the iterator was created with the ``multi_index`` flag, and the "
+"property `multi_index` can be used to retrieve it."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:138
+msgid "**index**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:136
+msgid ""
+"When the ``c_index`` or ``f_index`` flag was used, this property provides "
+"access to the index. Raises a ValueError if accessed and ``has_index`` is "
+"False."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:142
+msgid "**iterationneedsapi**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:141
+msgid ""
+"Whether iteration requires access to the Python API, for example if one of "
+"the operands is an object array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:145
+msgid "**iterindex**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:-1
+msgid "int"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:145
+msgid "An index which matches the order of iteration."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:148
+msgid "**itersize**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:148
+msgid "Size of the iterator."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:153
+msgid "**itviews**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:151
+msgid ""
+"Structured view(s) of `operands` in memory, matching the reordered and "
+"optimized iterator access pattern. Valid only before the iterator is closed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:158
+msgid "**multi_index**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:156
+msgid ""
+"When the ``multi_index`` flag was used, this property provides access to the "
+"index. Raises a ValueError if accessed accessed and ``has_multi_index`` is "
+"False."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:161
+msgid "**ndim**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:161
+msgid "The dimensions of the iterator."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:164
+msgid "**nop**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:164
+msgid "The number of iterator operands."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:167
+msgid ":obj:`operands <operands>`"
+msgstr ":obj:`operands <operands>`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:-1
+msgid "tuple of operand(s)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:167
+msgid "operands[`Slice`]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:170
+msgid "**shape**"
+msgstr "**shape**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:-1
+msgid "tuple of ints"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:170
+msgid "Shape tuple, the shape of the iterator."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:175
+msgid "**value**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:173
+msgid ""
+"Value of ``operands`` at current iteration. Normally, this is a tuple of "
+"array scalars, but if the flag ``external_loop`` is used, it is a tuple of "
+"one dimensional arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:178
+msgid "Methods"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:198:<autosummary>:1
+msgid ":py:obj:`close <numpy.nditer.close>`\\ \\(\\)"
+msgstr ":py:obj:`close <numpy.nditer.close>`\\ \\(\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:198:<autosummary>:1
+msgid "Resolve all writeback semantics in writeable operands."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:198:<autosummary>:1
+msgid ":py:obj:`copy <numpy.nditer.copy>`\\ \\(\\)"
+msgstr ":py:obj:`copy <numpy.nditer.copy>`\\ \\(\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:198:<autosummary>:1
+msgid "Get a copy of the iterator in its current state."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:198:<autosummary>:1
+msgid ":py:obj:`debug_print <numpy.nditer.debug_print>`\\ \\(\\)"
+msgstr ":py:obj:`debug_print <numpy.nditer.debug_print>`\\ \\(\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:198:<autosummary>:1
+msgid ""
+"Print the current state of the `nditer` instance and debug info to stdout."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:198:<autosummary>:1
+msgid ""
+":py:obj:`enable_external_loop <numpy.nditer.enable_external_loop>`\\ \\(\\)"
+msgstr ""
+":py:obj:`enable_external_loop <numpy.nditer.enable_external_loop>`\\ \\(\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:198:<autosummary>:1
+msgid ""
+"When the \"external_loop\" was not used during construction, but is desired, "
+"this modifies the iterator to behave as if the flag was specified."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:198:<autosummary>:1
+msgid ":py:obj:`iternext <numpy.nditer.iternext>`\\ \\(\\)"
+msgstr ":py:obj:`iternext <numpy.nditer.iternext>`\\ \\(\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:198:<autosummary>:1
+msgid ""
+"Check whether iterations are left, and perform a single internal iteration "
+"without returning the result."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:198:<autosummary>:1
+msgid ":py:obj:`remove_axis <numpy.nditer.remove_axis>`\\ \\(i\\, \\/\\)"
+msgstr ":py:obj:`remove_axis <numpy.nditer.remove_axis>`\\ \\(i\\, \\/\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:198:<autosummary>:1
+msgid "Removes axis `i` from the iterator."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:198:<autosummary>:1
+msgid ":py:obj:`remove_multi_index <numpy.nditer.remove_multi_index>`\\ \\(\\)"
+msgstr ""
+":py:obj:`remove_multi_index <numpy.nditer.remove_multi_index>`\\ \\(\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:198:<autosummary>:1
+msgid ""
+"When the \"multi_index\" flag was specified, this removes it, allowing the "
+"internal iteration structure to be optimized further."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:198:<autosummary>:1
+msgid ":py:obj:`reset <numpy.nditer.reset>`\\ \\(\\)"
+msgstr ":py:obj:`reset <numpy.nditer.reset>`\\ \\(\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:198:<autosummary>:1
+msgid "Reset the iterator to its initial state."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nditer:200
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:122
+#: of numpy.nditer:201
 msgid ""
 "`nditer` supersedes `flatiter`.  The iterator implementation behind `nditer` "
 "is also exposed by the NumPy C API."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:125
+#: of numpy.nditer:204
 msgid ""
 "The Python exposure supplies two iteration interfaces, one which follows the "
 "Python iterator protocol, and another which mirrors the C-style do-while "
@@ -405,34 +712,34 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:132
+#: of numpy.nditer:211
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:137
+#: of numpy.nditer:216
 msgid ""
 "Here is how we might write an ``iter_add`` function, using the Python "
 "iterator protocol:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:151
+#: of numpy.nditer:230
 msgid "Here is the same function, but following the C-style pattern:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:163
+#: of numpy.nditer:242
 msgid "Here is an example outer product function:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:183
+#: of numpy.nditer:262
 msgid "Here is an example function which operates like a \"lambda\" ufunc:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:205
+#: of numpy.nditer:284
 msgid ""
 "If operand flags ``\"writeonly\"`` or ``\"readwrite\"`` are used the "
 "operands may be views into the original data with the `WRITEBACKIFCOPY` "
@@ -443,7 +750,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:224
+#: of numpy.nditer:303
 msgid ""
 "It is important to note that once the iterator is exited, dangling "
 "references (like `x` in the example) may or may not share data with the "
@@ -455,24 +762,24 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:233
+#: of numpy.nditer:312
 msgid "Context management and the `close` method appeared in version 1.15.0."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.nditer:-1
 msgid ""
-"<div id=\"82b34e1b-0f5c-4757-a939-86656a25ae61\" "
+"<div id=\"f5dbccdd-4276-4c6e-8043-69fce8b8de52\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('997666d1-50e8-4edc-"
-"b184-6f4bf396c1dc','82b34e1b-0f5c-4757-a939-86656a25ae61')\">Go Back</"
+"tryExamplesHideIframe('1578512c-c819-4ea5-"
+"ac36-141d71dae22f','f5dbccdd-4276-4c6e-8043-69fce8b8de52')\">Go Back</"
 "button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('997666d1-50e8-4edc-b184-6f4bf396c1dc','82b34e1b-0f5c-4757-"
-"a939-86656a25ae61')\">Open In Tab</button></div><div id=\"0b6e6beb-568e-4209-"
-"ae48-9cc715025e04\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
-"div>"
+"openInNewTab('1578512c-c819-4ea5-"
+"ac36-141d71dae22f','f5dbccdd-4276-4c6e-8043-69fce8b8de52')\">Open In Tab</"
+"button></div><div id=\"8dddf971-7dff-4def-a5f3-73d39cdb3761\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
@@ -480,311 +787,4 @@ msgstr ""
 msgid ""
 "<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
 "loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:0
-msgid "Attributes"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:241
-msgid "**dtypes**"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:-1
-msgid "tuple of dtype(s)"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:239
-msgid ""
-"The data types of the values provided in `value`. This may be different from "
-"the operand data types if buffering is enabled. Valid only before the "
-"iterator is closed."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:244
-msgid "**finished**"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:-1
-msgid "bool"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:244
-msgid "Whether the iteration over the operands is finished or not."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:248
-msgid "**has_delayed_bufalloc**"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:247
-msgid ""
-"If True, the iterator was created with the ``delay_bufalloc`` flag, and no "
-"reset() function was called on it yet."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:253
-msgid "**has_index**"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:251
-msgid ""
-"If True, the iterator was created with either the ``c_index`` or the "
-"``f_index`` flag, and the property `index` can be used to retrieve it."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:257
-msgid "**has_multi_index**"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:256
-msgid ""
-"If True, the iterator was created with the ``multi_index`` flag, and the "
-"property `multi_index` can be used to retrieve it."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:262
-msgid "**index**"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:260
-msgid ""
-"When the ``c_index`` or ``f_index`` flag was used, this property provides "
-"access to the index. Raises a ValueError if accessed and ``has_index`` is "
-"False."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:266
-msgid "**iterationneedsapi**"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:265
-msgid ""
-"Whether iteration requires access to the Python API, for example if one of "
-"the operands is an object array."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:269
-msgid "**iterindex**"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:-1
-msgid "int"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:269
-msgid "An index which matches the order of iteration."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:272
-msgid "**itersize**"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:272
-msgid "Size of the iterator."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:277
-msgid "**itviews**"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:275
-msgid ""
-"Structured view(s) of `operands` in memory, matching the reordered and "
-"optimized iterator access pattern. Valid only before the iterator is closed."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:282
-msgid "**multi_index**"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:280
-msgid ""
-"When the ``multi_index`` flag was used, this property provides access to the "
-"index. Raises a ValueError if accessed accessed and ``has_multi_index`` is "
-"False."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:285
-msgid "**ndim**"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:285
-msgid "The dimensions of the iterator."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:288
-msgid "**nop**"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:288
-msgid "The number of iterator operands."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:291
-msgid ":obj:`operands <operands>`"
-msgstr ":obj:`operands <operands>`"
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:-1
-msgid "tuple of operand(s)"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:291
-msgid "operands[`Slice`]"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:294
-msgid "**shape**"
-msgstr "**shape**"
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:-1
-msgid "tuple of ints"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:294
-msgid "Shape tuple, the shape of the iterator."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:299
-msgid "**value**"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:297
-msgid ""
-"Value of ``operands`` at current iteration. Normally, this is a tuple of "
-"array scalars, but if the flag ``external_loop`` is used, it is a tuple of "
-"one dimensional arrays."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:302
-msgid "Methods"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:314:<autosummary>:1
-msgid ":py:obj:`close <numpy.nditer.close>`\\ \\(\\)"
-msgstr ":py:obj:`close <numpy.nditer.close>`\\ \\(\\)"
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:314:<autosummary>:1
-msgid "Resolve all writeback semantics in writeable operands."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:314:<autosummary>:1
-msgid ":py:obj:`copy <numpy.nditer.copy>`\\ \\(\\)"
-msgstr ":py:obj:`copy <numpy.nditer.copy>`\\ \\(\\)"
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:314:<autosummary>:1
-msgid "Get a copy of the iterator in its current state."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:314:<autosummary>:1
-msgid ":py:obj:`debug_print <numpy.nditer.debug_print>`\\ \\(\\)"
-msgstr ":py:obj:`debug_print <numpy.nditer.debug_print>`\\ \\(\\)"
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:314:<autosummary>:1
-msgid ""
-"Print the current state of the `nditer` instance and debug info to stdout."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:314:<autosummary>:1
-msgid ""
-":py:obj:`enable_external_loop <numpy.nditer.enable_external_loop>`\\ \\(\\)"
-msgstr ""
-":py:obj:`enable_external_loop <numpy.nditer.enable_external_loop>`\\ \\(\\)"
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:314:<autosummary>:1
-msgid ""
-"When the \"external_loop\" was not used during construction, but is desired, "
-"this modifies the iterator to behave as if the flag was specified."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:314:<autosummary>:1
-msgid ":py:obj:`iternext <numpy.nditer.iternext>`\\ \\(\\)"
-msgstr ":py:obj:`iternext <numpy.nditer.iternext>`\\ \\(\\)"
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:314:<autosummary>:1
-msgid ""
-"Check whether iterations are left, and perform a single internal iteration "
-"without returning the result."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:314:<autosummary>:1
-msgid ":py:obj:`remove_axis <numpy.nditer.remove_axis>`\\ \\(i\\, \\/\\)"
-msgstr ":py:obj:`remove_axis <numpy.nditer.remove_axis>`\\ \\(i\\, \\/\\)"
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:314:<autosummary>:1
-msgid "Removes axis `i` from the iterator."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:314:<autosummary>:1
-msgid ":py:obj:`remove_multi_index <numpy.nditer.remove_multi_index>`\\ \\(\\)"
-msgstr ""
-":py:obj:`remove_multi_index <numpy.nditer.remove_multi_index>`\\ \\(\\)"
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:314:<autosummary>:1
-msgid ""
-"When the \"multi_index\" flag was specified, this removes it, allowing the "
-"internal iteration structure to be optimized further."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:314:<autosummary>:1
-msgid ":py:obj:`reset <numpy.nditer.reset>`\\ \\(\\)"
-msgstr ":py:obj:`reset <numpy.nditer.reset>`\\ \\(\\)"
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nditer:314:<autosummary>:1
-msgid "Reset the iterator to its initial state."
 msgstr ""

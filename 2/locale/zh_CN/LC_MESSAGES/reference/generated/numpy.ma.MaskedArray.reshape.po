@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
 #: of numpy.ma.core.MaskedArray.reshape:2
-msgid "Give a new shape to the array without changing its data."
+msgid "Returns a reshaped masked array without changing its data."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
@@ -61,7 +61,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.MaskedArray.reshape:17
+#: of numpy.ma.core.MaskedArray.reshape:19
 msgid "**order**"
 msgstr ""
 
@@ -83,7 +83,7 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.MaskedArray.reshape:28
+#: of numpy.ma.core.MaskedArray.reshape:30
 msgid "**reshaped_array**"
 msgstr ""
 
@@ -93,71 +93,71 @@ msgid "array"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.MaskedArray.reshape:22
+#: of numpy.ma.core.MaskedArray.reshape:24
 msgid "A new view on the array."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.MaskedArray.reshape:33
+#: of numpy.ma.core.MaskedArray.reshape:35
 msgid ":obj:`reshape`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.MaskedArray.reshape:34
+#: of numpy.ma.core.MaskedArray.reshape:36
 msgid "Equivalent function in the masked array module."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.MaskedArray.reshape:35
+#: of numpy.ma.core.MaskedArray.reshape:37
 msgid ":obj:`numpy.ndarray.reshape`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.MaskedArray.reshape:36
+#: of numpy.ma.core.MaskedArray.reshape:38
 msgid "Equivalent method on ndarray object."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.MaskedArray.reshape:37
+#: of numpy.ma.core.MaskedArray.reshape:39
 msgid ":obj:`numpy.reshape`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.MaskedArray.reshape:38
+#: of numpy.ma.core.MaskedArray.reshape:40
 msgid "Equivalent function in the NumPy module."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.MaskedArray.reshape:42
+#: of numpy.ma.core.MaskedArray.reshape:44
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.MaskedArray.reshape:43
+#: of numpy.ma.core.MaskedArray.reshape:45
 msgid ""
-"The reshaping operation cannot guarantee that a copy will not be made, to "
-"modify the shape in place, use ``a.shape = s``"
+"By default, the reshaping operation will make a copy if a view with "
+"different strides is not possible. To ensure a view, pass ``copy=False``."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.MaskedArray.reshape:48
+#: of numpy.ma.core.MaskedArray.reshape:51
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
 #: of numpy.ma.core.MaskedArray.reshape:-1
 msgid ""
-"<div id=\"decd1941-d33d-437a-b835-4219d75ad713\" "
+"<div id=\"6deace78-765b-475d-a086-89085fa80940\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('1474da67-45e2-4158-8bc6-36c83741bfe8','decd1941-"
-"d33d-437a-b835-4219d75ad713')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('1474da67-45e2-4158-8bc6-36c83741bfe8','decd1941-d33d-437a-"
-"b835-4219d75ad713')\">Open In Tab</button></div><div "
-"id=\"aecffc33-0c7f-4c38-967b-abfd6ec20a06\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('a7b74668-c204-4fa9-"
+"b3ce-750b6030a01c','6deace78-765b-475d-a086-89085fa80940')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('a7b74668-c204-4fa9-b3ce-750b6030a01c','6deace78-765b-475d-"
+"a086-89085fa80940')\">Open In Tab</button></div><div id=\"6b7cbf96-14a0-4cdf-"
+"a94c-549fec2c7ebd\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring

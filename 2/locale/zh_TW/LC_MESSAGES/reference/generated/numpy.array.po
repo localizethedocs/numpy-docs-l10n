@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -219,11 +219,11 @@ msgid ""
 "nesting levels (up to the compile-time constant ``NPY_MAXDIMS``). Setting "
 "``ndmax`` stops recursion at the specified depth, preserving deeper nested "
 "structures as objects instead of promoting them to higher-dimensional "
-"arrays. In this case, ``dtype=object`` is required."
+"arrays. In this case, ``dtype=np.object_`` is required."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:74
+#: of numpy.array:76
 msgid "**like**"
 msgstr ""
 
@@ -247,7 +247,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:85
+#: of numpy.array:87
 msgid "**out**"
 msgstr "**out**"
 
@@ -257,107 +257,107 @@ msgid "ndarray"
 msgstr "ndarray"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:79
+#: of numpy.array:81
 msgid "An array object satisfying the specified requirements."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:90
+#: of numpy.array:92
 msgid ":obj:`empty_like`"
 msgstr ":obj:`empty_like`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:91
+#: of numpy.array:93
 msgid "Return an empty array with shape and type of input."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:92
+#: of numpy.array:94
 msgid ":obj:`ones_like`"
 msgstr ":obj:`ones_like`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:93
+#: of numpy.array:95
 msgid "Return an array of ones with shape and type of input."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:94
+#: of numpy.array:96
 msgid ":obj:`zeros_like`"
 msgstr ":obj:`zeros_like`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:95
+#: of numpy.array:97
 msgid "Return an array of zeros with shape and type of input."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:96
+#: of numpy.array:98
 msgid ":obj:`full_like`"
 msgstr ":obj:`full_like`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:97
+#: of numpy.array:99
 msgid "Return a new array with shape of input filled with value."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:98
+#: of numpy.array:100
 msgid ":obj:`empty`"
 msgstr ":obj:`empty`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:99
+#: of numpy.array:101
 msgid "Return a new uninitialized array."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:100
+#: of numpy.array:102
 msgid ":obj:`ones`"
 msgstr ":obj:`ones`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:101
+#: of numpy.array:103
 msgid "Return a new array setting values to one."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:102
+#: of numpy.array:104
 msgid ":obj:`zeros`"
 msgstr ":obj:`zeros`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:103
+#: of numpy.array:105
 msgid "Return a new array setting values to zero."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:104
+#: of numpy.array:106
 msgid ":obj:`full`"
 msgstr ":obj:`full`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:105
+#: of numpy.array:107
 msgid "Return a new array of given shape filled with value."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:106
+#: of numpy.array:108
 msgid ":obj:`copy`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:107
+#: of numpy.array:109
 msgid "Return an array copy of the given object."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:111
+#: of numpy.array:113
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:112
+#: of numpy.array:114
 msgid ""
 "When order is 'A' and ``object`` is an array in neither 'C' nor 'F' order, "
 "and a copy is forced by a change in dtype, then the order of the result is "
@@ -365,57 +365,56 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:118
+#: of numpy.array:120
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:127
+#: of numpy.array:129
 msgid "Upcasting:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:132
+#: of numpy.array:134
 msgid "More than one dimension:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:138
+#: of numpy.array:140
 msgid "Minimum dimensions 2:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:143
+#: of numpy.array:145
 msgid "Type provided:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:148
+#: of numpy.array:150
 msgid "Data-type consisting of more than one element:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:154
+#: of numpy.array:156
 msgid "Creating an array from sub-classes:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.array:164
+#: of numpy.array:166
 msgid "Limiting the maximum dimensions with ``ndmax``:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.array:-1
 msgid ""
-"<div id=\"c6e489e8-e299-4097-8b15-eda36cf3f9f2\" "
+"<div id=\"f14d11b9-5639-4579-94a4-66258bf41628\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('c420a1b1-e8da-4910-a5f7-59284b521257','c6e489e8-"
-"e299-4097-8b15-eda36cf3f9f2')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window.openInNewTab('c420a1b1-"
-"e8da-4910-a5f7-59284b521257','c6e489e8-e299-4097-8b15-eda36cf3f9f2')\">Open "
-"In Tab</button></div><div id=\"03bb879c-3001-47cc-8dfd-8faa30e0f643\" "
+"tryExamplesHideIframe('161401df-4756-47d4-83e6-8559b9740756','f14d11b9-5639-4579-94a4-66258bf41628')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('161401df-4756-47d4-83e6-8559b9740756','f14d11b9-5639-4579-94a4-66258bf41628')\">Open "
+"In Tab</button></div><div id=\"66a0a497-5927-447c-b3c4-bfc9cefaed44\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 

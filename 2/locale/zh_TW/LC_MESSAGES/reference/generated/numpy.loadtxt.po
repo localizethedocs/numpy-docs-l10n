@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -269,7 +269,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:104
+#: of numpy.loadtxt:106
 msgid "**like**"
 msgstr ""
 
@@ -293,7 +293,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:115
+#: of numpy.loadtxt:117
 msgid "**out**"
 msgstr "**out**"
 
@@ -303,42 +303,42 @@ msgid "ndarray"
 msgstr "ndarray"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:109
+#: of numpy.loadtxt:111
 msgid "Data read from the text file."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:120
+#: of numpy.loadtxt:122
 msgid ":obj:`load`, :obj:`fromstring`, :obj:`fromregex`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:122
+#: of numpy.loadtxt:124
 msgid ":obj:`genfromtxt`"
 msgstr ":obj:`genfromtxt`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:123
+#: of numpy.loadtxt:125
 msgid "Load data with missing values handled as specified."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:124
+#: of numpy.loadtxt:126
 msgid ":obj:`scipy.io.loadmat`"
 msgstr ":obj:`scipy.io.loadmat`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:125
+#: of numpy.loadtxt:127
 msgid "reads MATLAB data files"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:129
+#: of numpy.loadtxt:131
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:130
+#: of numpy.loadtxt:132
 msgid ""
 "This function aims to be a fast reader for simply formatted files.  The "
 "`genfromtxt` function provides more sophisticated handling of, e.g., lines "
@@ -346,7 +346,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:134
+#: of numpy.loadtxt:136
 msgid ""
 "Each row in the input text file must have the same number of values to be "
 "able to read all values. If all rows do not have same number of values, a "
@@ -355,19 +355,19 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:139
+#: of numpy.loadtxt:141
 msgid ""
 "The strings produced by the Python float.hex method can be used as input for "
 "floats."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:144
+#: of numpy.loadtxt:146
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:169
+#: of numpy.loadtxt:171
 msgid ""
 "The `converters` argument is used to specify functions to preprocess the "
 "text prior to parsing. `converters` can be a dictionary that maps "
@@ -375,40 +375,40 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:182
+#: of numpy.loadtxt:184
 msgid ""
 "`converters` can be a callable instead of a dictionary, in which case it is "
 "applied to all columns:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:192
+#: of numpy.loadtxt:194
 msgid ""
 "This example shows how `converters` can be used to convert a field with a "
 "trailing minus sign into a negative number."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:204
+#: of numpy.loadtxt:206
 msgid ""
 "Using a callable as the converter can be particularly useful for handling "
 "values with different formatting, e.g. floats with underscores:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:211
+#: of numpy.loadtxt:213
 msgid ""
 "This idea can be extended to automatically handle values specified in many "
 "different formats, such as hex values:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:223
+#: of numpy.loadtxt:225
 msgid "Or a format where the ``-`` sign comes after the number:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:232
+#: of numpy.loadtxt:234
 msgid ""
 "Support for quoted fields is enabled with the `quotechar` parameter. Comment "
 "and delimiter characters are ignored when they appear within a quoted item "
@@ -416,19 +416,19 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:242
+#: of numpy.loadtxt:244
 msgid "Quoted fields can be separated by multiple whitespace characters:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:250
+#: of numpy.loadtxt:252
 msgid ""
 "Two consecutive quote characters within a quoted field are treated as a "
 "single escaped character:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.loadtxt:257
+#: of numpy.loadtxt:259
 msgid ""
 "Read subset of columns when all rows do not contain equal number of values:"
 msgstr ""
@@ -436,17 +436,17 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.loadtxt:-1
 msgid ""
-"<div id=\"09ef457e-b833-41c2-a587-6e8293e25fcd\" "
+"<div id=\"73254c68-c602-4885-8094-74e480d6d6ed\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('a6403144-182a-4c93-83ff-f02830796554','09ef457e-"
-"b833-41c2-a587-6e8293e25fcd')\">Go Back</button><button "
+"tryExamplesHideIframe('2d236006-529f-4551-975c-06b858e7d0eb','73254c68-"
+"c602-4885-8094-74e480d6d6ed')\">Go Back</button><button "
 "class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('a6403144-182a-4c93-83ff-f02830796554','09ef457e-b833-41c2-"
-"a587-6e8293e25fcd')\">Open In Tab</button></div><div id=\"03e16c22-6d4b-40e0-"
-"b77c-e1d56d3390dd\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
-"div>"
+"openInNewTab('2d236006-529f-4551-975c-06b858e7d0eb','73254c68-"
+"c602-4885-8094-74e480d6d6ed')\">Open In Tab</button></div><div "
+"id=\"2e47f638-0c55-4216-969c-45b830142a81\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring

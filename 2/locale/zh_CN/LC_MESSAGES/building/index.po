@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -215,48 +215,15 @@ msgstr ""
 
 #: ../../../building/index.rst:143
 msgid ""
-"On Windows, the use of a Fortran compiler is more tricky than on other "
-"platforms, because MSVC does not support Fortran, and gfortran and MSVC "
-"can't be used together. If you don't need to run the ``f2py`` tests, simply "
-"using MSVC is easiest. Otherwise, you will need one of these sets of "
-"compilers:"
-msgstr ""
-
-#: ../../../building/index.rst:149
-msgid "MSVC + Intel Fortran (``ifort``)"
-msgstr ""
-
-#: ../../../building/index.rst:150
-msgid "Intel compilers (``icc``, ``ifort``)"
+"Compared to macOS and Linux, building NumPy on Windows is a little more "
+"difficult, due to the need to set up compilers. First, install Microsoft "
+"Visual Studio - the 2019 Community Edition or any newer version will work "
+"(see the `Visual Studio download site <https://visualstudio.microsoft.com/"
+"downloads/>`__). This is needed to ensure you have the Windows Universal C "
+"Runtime. The recommended version of the UCRT is >= 10.0.22621.0."
 msgstr ""
 
 #: ../../../building/index.rst:151
-msgid "Mingw-w64 compilers (``gcc``, ``g++``, ``gfortran``)"
-msgstr ""
-
-#: ../../../building/index.rst:153
-msgid ""
-"Compared to macOS and Linux, building NumPy on Windows is a little more "
-"difficult, due to the need to set up these compilers. It is not possible to "
-"just call a one-liner on the command prompt as you would on other platforms."
-msgstr ""
-
-#: ../../../building/index.rst:158
-msgid ""
-"First, install Microsoft Visual Studio - the 2019 Community Edition or any "
-"newer version will work (see the `Visual Studio download site <https://"
-"visualstudio.microsoft.com/downloads/>`__). This is needed even if you use "
-"the MinGW-w64 or Intel compilers, in order to ensure you have the Windows "
-"Universal C Runtime (the other components of Visual Studio are not needed "
-"when using Mingw-w64, and can be deselected if desired, to save disk space). "
-"The recommended version of the UCRT is >= 10.0.22621.0."
-msgstr ""
-
-#: ../../../building/index.rst:0
-msgid "MSVC"
-msgstr ""
-
-#: ../../../building/index.rst:171
 msgid ""
 "The MSVC installer does not put the compilers on the system path, and the "
 "install location may change. To query the install location, MSVC comes with "
@@ -266,95 +233,50 @@ msgid ""
 "``vcvars64.bat``)."
 msgstr ""
 
-#: ../../../building/index.rst:178
-msgid ""
-"If using a Conda environment while a version of Visual Studio 2019+ is "
-"installed that includes the MSVC v142 package (VS 2019 C++ x86/x64 build "
-"tools), activating the conda environment should cause Visual Studio to be "
-"found and the appropriate .bat file executed to set these variables."
-msgstr ""
-
-#: ../../../building/index.rst:184 ../../../building/index.rst:257
+#: ../../../building/index.rst:158 ../../../building/index.rst:200
 msgid ""
 "For detailed guidance, see `Use the Microsoft C++ toolset from the command "
 "line <https://learn.microsoft.com/en-us/cpp/build/building-on-the-command-"
 "line?view=msvc-170>`__."
 msgstr ""
 
-#: ../../../building/index.rst:0
-msgid "Intel"
-msgstr ""
-
-#: ../../../building/index.rst:189
+#: ../../../building/index.rst:161 ../../../building/index.rst:203
 msgid ""
-"Similar to MSVC, the Intel compilers are designed to be used with an "
-"activation script (``Intel\\oneAPI\\setvars.bat``) that you run in the shell "
-"you are using. This makes the compilers available on the path. For detailed "
-"guidance, see `Get Started with the Intel® oneAPI HPC Toolkit for Windows "
-"<https://www.intel.com/content/www/us/en/docs/oneapi-hpc-toolkit/get-started-"
-"guide-windows/2023-1/overview.html>`__."
+"If you don't need ``f2py``, MSVC alone is sufficient. For Fortran compiler "
+"setup (needed for ``f2py``), see :ref:`F2PY and Windows <f2py-windows>`."
 msgstr ""
 
-#: ../../../building/index.rst:0
-msgid "MinGW-w64"
-msgstr ""
-
-#: ../../../building/index.rst:198
-msgid ""
-"There are several sources of binaries for MinGW-w64. We recommend the RTools "
-"versions, which can be installed with Chocolatey (see Chocolatey install "
-"instructions `here <https://chocolatey.org/install>`_)::"
-msgstr ""
-
-#: ../../../building/index.rst:202
-msgid "choco install rtools -y --no-progress --force --version=4.0.0.20220206"
-msgstr ""
-
-#: ../../../building/index.rst:206
+#: ../../../building/index.rst:166 ../../../building/index.rst:208
 msgid ""
 "Compilers should be on the system path (i.e., the ``PATH`` environment "
 "variable should contain the directory in which the compiler executables can "
 "be found) in order to be found, with the exception of MSVC which will be "
 "found automatically if and only if there are no other compilers on the "
 "``PATH``. You can use any shell (e.g., Powershell, ``cmd`` or Git Bash) to "
-"invoke a build. To check that this is the case, try invoking a Fortran "
-"compiler in the shell you use (e.g., ``gfortran --version`` or ``ifort --"
-"version``)."
+"invoke a build."
 msgstr ""
 
-#: ../../../building/index.rst:217
+#: ../../../building/index.rst:175
 msgid ""
 "When using a conda environment it is possible that the environment creation "
 "will not work due to an outdated Fortran compiler. If that happens, remove "
 "the ``compilers`` entry from ``environment.yml`` and try again. The Fortran "
-"compiler should be installed as described in this section."
+"compiler should be installed as described in the :ref:`F2PY Windows "
+"documentation <f2py-windows>`."
 msgstr ""
 
 #: ../../../building/index.rst:0
 msgid "Windows on ARM64"
 msgstr ""
 
-#: ../../../building/index.rst:226
+#: ../../../building/index.rst:184
 msgid ""
-"In Windows on ARM64, the set of a compiler options that are available for "
-"building NumPy are limited. Compilers such as GCC and GFortran are not yet "
-"supported for Windows on ARM64. Currently, the NumPy build for Windows on "
-"ARM64 is supported with MSVC and LLVM toolchains. The use of a Fortran "
-"compiler is more tricky than on other platforms, because MSVC does not "
-"support Fortran, and gfortran and MSVC can't be used together. If you don't "
-"need to run the ``f2py`` tests, simply using MSVC is easiest. Otherwise, you "
-"will need the following set of compilers:"
+"In Windows on ARM64, the compiler options available for building NumPy are "
+"limited. GCC and gfortran are not yet supported. Currently, the NumPy build "
+"for Windows on ARM64 is supported with MSVC and LLVM toolchains."
 msgstr ""
 
-#: ../../../building/index.rst:235
-msgid "MSVC + flang (``cl``, ``flang``)"
-msgstr ""
-
-#: ../../../building/index.rst:236
-msgid "LLVM + flang (``clang-cl``, ``flang``)"
-msgstr ""
-
-#: ../../../building/index.rst:238
+#: ../../../building/index.rst:188
 msgid ""
 "First, install Microsoft Visual Studio - the 2022 Community Edition will "
 "work (see the `Visual Studio download site <https://visualstudio.microsoft."
@@ -363,14 +285,7 @@ msgid ""
 "Mugundanmcw/c3bb93018d5da9311fb2b222f205ba19>`__."
 msgstr ""
 
-#: ../../../building/index.rst:243
-msgid ""
-"To use the flang compiler for Windows on ARM64, install Latest LLVM "
-"toolchain for WoA from `here <https://github.com/llvm/llvm-project/"
-"releases>`__."
-msgstr ""
-
-#: ../../../building/index.rst:250
+#: ../../../building/index.rst:193
 msgid ""
 "The MSVC installer does not put the compilers on the system path, and the "
 "install location may change. To query the install location, MSVC comes with "
@@ -380,31 +295,7 @@ msgid ""
 "``vcvarsarm64.bat``)."
 msgstr ""
 
-#: ../../../building/index.rst:0
-msgid "LLVM"
-msgstr ""
-
-#: ../../../building/index.rst:262
-msgid ""
-"Similar to MSVC, LLVM does not put the compilers on the system path. To set "
-"system path for LLVM compilers, users may need to use ``set`` command to put "
-"compilers on the system path. To check compiler's path for LLVM's clang-cl, "
-"try invoking LLVM's clang-cl compiler in the shell you use (``clang-cl --"
-"version``)."
-msgstr ""
-
-#: ../../../building/index.rst:270
-msgid ""
-"Compilers should be on the system path (i.e., the ``PATH`` environment "
-"variable should contain the directory in which the compiler executables can "
-"be found) in order to be found, with the exception of MSVC which will be "
-"found automatically if and only if there are no other compilers on the "
-"``PATH``. You can use any shell (e.g., Powershell, ``cmd`` or Git Bash) to "
-"invoke a build. To check that this is the case, try invoking a Fortran "
-"compiler in the shell you use (e.g., ``flang --version``)."
-msgstr ""
-
-#: ../../../building/index.rst:281
+#: ../../../building/index.rst:217
 msgid ""
 "Currently, Conda environment is not yet supported officially on `Windows on "
 "ARM64 <https://github.com/conda-forge/conda-forge.github.io/issues/1940>`__. "
@@ -412,24 +303,24 @@ msgid ""
 "Windows on ARM64."
 msgstr ""
 
-#: ../../../building/index.rst:287
+#: ../../../building/index.rst:223
 msgid "Building NumPy from source"
 msgstr ""
 
-#: ../../../building/index.rst:289
+#: ../../../building/index.rst:225
 msgid ""
 "If you want to only install NumPy from source once and not do any "
 "development work, then the recommended way to build and install is to use "
 "``pip``. Otherwise, conda is recommended."
 msgstr ""
 
-#: ../../../building/index.rst:295
+#: ../../../building/index.rst:231
 msgid ""
 "If you don't have a conda installation yet, we recommend using Miniforge_; "
 "any conda flavor will work though."
 msgstr ""
 
-#: ../../../building/index.rst:299
+#: ../../../building/index.rst:235
 msgid "Building from source to use NumPy"
 msgstr ""
 
@@ -437,7 +328,7 @@ msgstr ""
 msgid "Conda env"
 msgstr ""
 
-#: ../../../building/index.rst:306
+#: ../../../building/index.rst:242
 msgid ""
 "If you are using a conda environment, ``pip`` is still the tool you use to "
 "invoke a from-source build of NumPy. It is important to always use the ``--"
@@ -446,7 +337,7 @@ msgid ""
 "first install the remaining build dependencies into the conda environment::"
 msgstr ""
 
-#: ../../../building/index.rst:313
+#: ../../../building/index.rst:249
 msgid ""
 "# Either install all NumPy dev dependencies into a fresh conda environment\n"
 "mamba env create -f environment.yml\n"
@@ -466,7 +357,7 @@ msgid ""
 "pip install . --no-build-isolation"
 msgstr ""
 
-#: ../../../building/index.rst:330
+#: ../../../building/index.rst:266
 msgid ""
 "On Windows, the AR, LD, and LDFLAGS environment variables may be set, which "
 "will cause the pip install command to fail. These variables are only needed "
@@ -477,7 +368,7 @@ msgstr ""
 msgid "Virtual env or system Python"
 msgstr ""
 
-#: ../../../building/index.rst:339
+#: ../../../building/index.rst:275
 msgid ""
 "# To build the latest stable release:\n"
 "pip install numpy --no-binary numpy\n"
@@ -490,62 +381,62 @@ msgid ""
 "pip install ."
 msgstr ""
 
-#: ../../../building/index.rst:353
+#: ../../../building/index.rst:289
 msgid "Building from source for NumPy development"
 msgstr ""
 
-#: ../../../building/index.rst:355
+#: ../../../building/index.rst:291
 msgid ""
 "If you want to build from source in order to work on NumPy itself, first "
 "clone the NumPy repository::"
 msgstr ""
 
-#: ../../../building/index.rst:358
+#: ../../../building/index.rst:294
 msgid ""
 "git clone https://github.com/numpy/numpy.git\n"
 "cd numpy\n"
 "git submodule update --init"
 msgstr ""
 
-#: ../../../building/index.rst:362
+#: ../../../building/index.rst:298
 msgid "Then you want to do the following:"
 msgstr ""
 
-#: ../../../building/index.rst:364
+#: ../../../building/index.rst:300
 msgid ""
 "Create a dedicated development environment (virtual environment or conda "
 "environment),"
 msgstr ""
 
-#: ../../../building/index.rst:366
+#: ../../../building/index.rst:302
 msgid ""
 "Install all needed dependencies (*build*, and also *test*, *doc* and "
 "*optional* dependencies),"
 msgstr ""
 
-#: ../../../building/index.rst:368
+#: ../../../building/index.rst:304
 msgid "Build NumPy with the ``spin`` developer interface."
 msgstr ""
 
-#: ../../../building/index.rst:370
+#: ../../../building/index.rst:306
 msgid ""
 "Step (3) is always the same, steps (1) and (2) are different between conda "
 "and virtual environments:"
 msgstr ""
 
-#: ../../../building/index.rst:378
+#: ../../../building/index.rst:314
 msgid ""
 "To create a ``numpy-dev`` development environment with every required and "
 "optional dependency installed, run::"
 msgstr ""
 
-#: ../../../building/index.rst:381
+#: ../../../building/index.rst:317
 msgid ""
 "mamba env create -f environment.yml\n"
 "mamba activate numpy-dev"
 msgstr ""
 
-#: ../../../building/index.rst:389
+#: ../../../building/index.rst:325
 msgid ""
 "There are many tools to manage virtual environments, like ``venv``, "
 "``virtualenv``/``virtualenvwrapper``, ``pyenv``/``pyenv-virtualenv``, "
@@ -554,7 +445,7 @@ msgid ""
 "activated Python environment."
 msgstr ""
 
-#: ../../../building/index.rst:395
+#: ../../../building/index.rst:331
 msgid ""
 "Create and activate a virtual environment in a new directory named ``venv`` "
 "( note that the exact activation command may be different based on your OS "
@@ -562,19 +453,19 @@ msgid ""
 "html#how-venvs-work>`__ in the ``venv`` docs)."
 msgstr ""
 
-#: ../../../building/index.rst:407 ../../../building/index.rst:415
+#: ../../../building/index.rst:343 ../../../building/index.rst:351
 msgid ""
 "python -m venv venv\n"
 "source venv/bin/activate"
 msgstr ""
 
-#: ../../../building/index.rst:423 ../../../building/index.rst:431
+#: ../../../building/index.rst:359 ../../../building/index.rst:367
 msgid ""
 "python -m venv venv\n"
 ".\\venv\\Scripts\\activate"
 msgstr ""
 
-#: ../../../building/index.rst:436
+#: ../../../building/index.rst:372
 msgid ""
 "Building NumPy with BLAS and LAPACK functions requires OpenBLAS library at "
 "Runtime. In Windows on ARM64, this can be done by setting up pkg-config for "
@@ -583,23 +474,23 @@ msgid ""
 "arm>`__."
 msgstr ""
 
-#: ../../../building/index.rst:442
+#: ../../../building/index.rst:378
 msgid "Then install the Python-level dependencies from PyPI with::"
 msgstr ""
 
-#: ../../../building/index.rst:444
+#: ../../../building/index.rst:380
 msgid "python -m pip install -r requirements/build_requirements.txt"
 msgstr ""
 
-#: ../../../building/index.rst:446
+#: ../../../building/index.rst:382
 msgid "To build NumPy in an activated development environment, run::"
 msgstr ""
 
-#: ../../../building/index.rst:448
+#: ../../../building/index.rst:384
 msgid "spin build"
 msgstr ""
 
-#: ../../../building/index.rst:450
+#: ../../../building/index.rst:386
 msgid ""
 "This will install NumPy inside the repository (by default in a ``build-"
 "install`` directory). You can then run tests (``spin test``), drop into "
@@ -609,18 +500,18 @@ msgid ""
 "for detailed guidance."
 msgstr ""
 
-#: ../../../building/index.rst:459
+#: ../../../building/index.rst:395
 msgid ""
 "In an activated conda environment on Windows, the AR, LD, and LDFLAGS "
 "environment variables may be set, which will cause the build to fail. These "
 "variables are only needed for flang and can be safely unset for build."
 msgstr ""
 
-#: ../../../building/index.rst:466
+#: ../../../building/index.rst:402
 msgid "IDE support & editable installs"
 msgstr ""
 
-#: ../../../building/index.rst:468
+#: ../../../building/index.rst:404
 msgid ""
 "While the ``spin`` interface is our recommended way of working on NumPy, it "
 "has one limitation: because of the custom install location, NumPy installed "
@@ -629,7 +520,7 @@ msgid ""
 "This will work better with an *in-place build* (or \"editable install\")."
 msgstr ""
 
-#: ../../../building/index.rst:475
+#: ../../../building/index.rst:411
 msgid ""
 "Editable installs are supported. It is important to understand that **you "
 "may use either an editable install or** ``spin`` **in a given repository "
@@ -637,14 +528,14 @@ msgid ""
 "``pytest`` and other development tools directly instead of using ``spin``."
 msgstr ""
 
-#: ../../../building/index.rst:480
+#: ../../../building/index.rst:416
 msgid ""
 "To use an editable install, ensure you start from a clean repository (run "
 "``git clean -xdf`` if you've built with ``spin`` before) and have all "
 "dependencies set up correctly as described higher up on this page. Then do::"
 msgstr ""
 
-#: ../../../building/index.rst:485
+#: ../../../building/index.rst:421
 msgid ""
 "# Note: the --no-build-isolation is important!\n"
 "pip install -e . --no-build-isolation\n"
@@ -653,7 +544,7 @@ msgid ""
 "pytest numpy/linalg"
 msgstr ""
 
-#: ../../../building/index.rst:491
+#: ../../../building/index.rst:427
 msgid ""
 "When making changes to NumPy code, including to compiled code, there is no "
 "need to manually rebuild or reinstall. NumPy is automatically rebuilt each "
@@ -662,13 +553,13 @@ msgid ""
 "the hood."
 msgstr ""
 
-#: ../../../building/index.rst:497
+#: ../../../building/index.rst:433
 msgid ""
 "When you run ``git clean -xdf``, which removes the built extension modules, "
 "remember to also uninstall NumPy with ``pip uninstall numpy``."
 msgstr ""
 
-#: ../../../building/index.rst:503
+#: ../../../building/index.rst:439
 msgid ""
 "Note that editable installs are fundamentally incomplete installs. Their "
 "only guarantee is that ``import numpy`` works - so they are suitable for "
@@ -677,10 +568,10 @@ msgid ""
 "from an editable install."
 msgstr ""
 
-#: ../../../building/index.rst:511
+#: ../../../building/index.rst:447
 msgid "Customizing builds"
 msgstr ""
 
-#: ../../../building/index.rst:523
+#: ../../../building/index.rst:460
 msgid "Background information"
 msgstr ""

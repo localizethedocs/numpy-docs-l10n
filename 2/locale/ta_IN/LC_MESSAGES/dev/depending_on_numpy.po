@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -221,18 +221,16 @@ msgstr ""
 
 #: ../../../dev/depending_on_numpy.rst:144
 msgid ""
-"For *run-time dependencies*, specify version bounds using "
-"``install_requires`` in ``setup.py`` (assuming you use ``numpy.distutils`` "
-"or ``setuptools`` to build)."
+"For *run-time dependencies*, specify version bounds in `pyproject.toml`."
 msgstr ""
 
-#: ../../../dev/depending_on_numpy.rst:148
+#: ../../../dev/depending_on_numpy.rst:146
 msgid ""
 "Most libraries that rely on NumPy will not need to set an upper version "
 "bound: NumPy is careful to preserve backward-compatibility."
 msgstr ""
 
-#: ../../../dev/depending_on_numpy.rst:151
+#: ../../../dev/depending_on_numpy.rst:149
 msgid ""
 "That said, if you are (a) a project that is guaranteed to release "
 "frequently, (b) use a large part of NumPy's API surface, and (c) is worried "
@@ -245,7 +243,7 @@ msgid ""
 "dev/post/bound-version-constraints/>`__."
 msgstr ""
 
-#: ../../../dev/depending_on_numpy.rst:162
+#: ../../../dev/depending_on_numpy.rst:160
 msgid ""
 "The reason for setting ``N=3`` is that NumPy will, on the rare occasion "
 "where it makes breaking changes, raise warnings for at least two releases. "
@@ -254,56 +252,56 @@ msgid ""
 "releases at least on that cadence.)"
 msgstr ""
 
-#: ../../../dev/depending_on_numpy.rst:172
+#: ../../../dev/depending_on_numpy.rst:170
 msgid ""
 "SciPy has more documentation on how it builds wheels and deals with its "
 "build-time and runtime dependencies `here <https://scipy.github.io/devdocs/"
 "dev/core-dev/index.html#distributing>`__."
 msgstr ""
 
-#: ../../../dev/depending_on_numpy.rst:176
+#: ../../../dev/depending_on_numpy.rst:174
 msgid ""
 "NumPy and SciPy wheel build CI may also be useful as a reference, it can be "
 "found `here for NumPy <https://github.com/MacPython/numpy-wheels>`__ and "
 "`here for SciPy <https://github.com/MacPython/scipy-wheels>`__."
 msgstr ""
 
-#: ../../../dev/depending_on_numpy.rst:184
+#: ../../../dev/depending_on_numpy.rst:182
 msgid "NumPy 2.0-specific advice"
 msgstr ""
 
-#: ../../../dev/depending_on_numpy.rst:186
+#: ../../../dev/depending_on_numpy.rst:184
 msgid ""
 "NumPy 2.0 is an ABI-breaking release, however it does contain support for "
 "building wheels that work on both 2.0 and 1.xx releases. It's important to "
 "understand that:"
 msgstr ""
 
-#: ../../../dev/depending_on_numpy.rst:189
+#: ../../../dev/depending_on_numpy.rst:187
 msgid ""
 "When you build wheels for your package using a NumPy 1.xx version at build "
 "time, those **will not work** with NumPy 2.0."
 msgstr ""
 
-#: ../../../dev/depending_on_numpy.rst:191
+#: ../../../dev/depending_on_numpy.rst:189
 msgid ""
 "When you build wheels for your package using a NumPy 2.x version at build "
 "time, those **will work** with NumPy 1.xx."
 msgstr ""
 
-#: ../../../dev/depending_on_numpy.rst:194
+#: ../../../dev/depending_on_numpy.rst:192
 msgid ""
 "The first time the NumPy ABI for 2.0 is guaranteed to be stable will be the "
 "release of the first release candidate for 2.0 (i.e., 2.0.0rc1). Our advice "
 "for handling your dependency on NumPy is as follows:"
 msgstr ""
 
-#: ../../../dev/depending_on_numpy.rst:198
+#: ../../../dev/depending_on_numpy.rst:196
 msgid ""
 "In the main (development) branch of your package, do not add any constraints."
 msgstr ""
 
-#: ../../../dev/depending_on_numpy.rst:199
+#: ../../../dev/depending_on_numpy.rst:197
 msgid ""
 "If you rely on the NumPy C-API (e.g. via direct use in C/C++, or via Cython "
 "code that uses NumPy), add a ``numpy<2.0`` requirement in your package's "
@@ -313,7 +311,7 @@ msgid ""
 "will break; they need to be recompiled.*"
 msgstr ""
 
-#: ../../../dev/depending_on_numpy.rst:205
+#: ../../../dev/depending_on_numpy.rst:203
 msgid ""
 "If you rely on a large API surface from NumPy's Python API, also consider "
 "adding the same ``numpy<2.0`` requirement to your metadata until you are "
@@ -325,7 +323,7 @@ msgid ""
 "likely to require at least some adjustments.*"
 msgstr ""
 
-#: ../../../dev/depending_on_numpy.rst:214
+#: ../../../dev/depending_on_numpy.rst:212
 msgid ""
 "Plan to do a release of your own packages which depend on ``numpy`` shortly "
 "after the first NumPy 2.0 release candidate is released (probably around 1 "
@@ -335,13 +333,13 @@ msgid ""
 "working on the day NumPy 2.0 is released).*"
 msgstr ""
 
-#: ../../../dev/depending_on_numpy.rst:221
+#: ../../../dev/depending_on_numpy.rst:219
 msgid ""
 "Once ``2.0.0rc1`` is available, you can adjust your metadata in ``pyproject."
 "toml`` in the way outlined below."
 msgstr ""
 
-#: ../../../dev/depending_on_numpy.rst:224
+#: ../../../dev/depending_on_numpy.rst:222
 msgid ""
 "There are two cases: you need to keep compatibility with numpy 1.xx while "
 "also supporting 2.0, or you are able to drop numpy 1.xx support for new "
@@ -352,13 +350,13 @@ msgid ""
 "with 1.xx and 2.x\" now, which is a little more involved."
 msgstr ""
 
-#: ../../../dev/depending_on_numpy.rst:232
+#: ../../../dev/depending_on_numpy.rst:230
 msgid ""
 "*Example for a package using the NumPy C-API (via C/Cython/etc.) which wants "
 "to support NumPy 1.23.5 and up*:"
 msgstr ""
 
-#: ../../../dev/depending_on_numpy.rst:235
+#: ../../../dev/depending_on_numpy.rst:233
 msgid ""
 "[build-system]\n"
 "build-backend = ...\n"
@@ -377,14 +375,14 @@ msgid ""
 "]"
 msgstr ""
 
-#: ../../../dev/depending_on_numpy.rst:253
+#: ../../../dev/depending_on_numpy.rst:251
 msgid ""
 "We recommend that you have at least one CI job which builds/installs via a "
 "wheel, and then runs tests against the oldest numpy version that the package "
 "supports. For example:"
 msgstr ""
 
-#: ../../../dev/depending_on_numpy.rst:257
+#: ../../../dev/depending_on_numpy.rst:255
 msgid ""
 "- name: Build wheel via wheel, then install it\n"
 "  run: |\n"
@@ -397,7 +395,7 @@ msgid ""
 "    # now run test suite"
 msgstr ""
 
-#: ../../../dev/depending_on_numpy.rst:269
+#: ../../../dev/depending_on_numpy.rst:267
 msgid ""
 "The above only works once NumPy 2.0 is available on PyPI. If you want to "
 "test against a NumPy 2.0-dev wheel, you have to use a numpy nightly build "

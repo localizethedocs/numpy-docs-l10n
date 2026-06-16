@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -157,29 +157,10 @@ msgid ""
 "otherwise. In most cases, the strides can be modified to reshape the array "
 "with a view. However, in some cases where the array becomes non-contiguous "
 "(perhaps after a :meth:`.ndarray.transpose` operation), the reshaping cannot "
-"be done by modifying strides and requires a copy. In these cases, we can "
-"raise an error by assigning the new shape to the shape attribute of the "
-"array. For example::"
+"be done by modifying strides and requires a copy."
 msgstr ""
 
-#: ../../../user/basics.copies.rst:112
-msgid ""
-">>> import numpy as np\n"
-">>> x = np.ones((2, 3))\n"
-">>> y = x.T  # makes the array non-contiguous\n"
-">>> y\n"
-"array([[1., 1.],\n"
-"       [1., 1.],\n"
-"       [1., 1.]])\n"
-">>> z = y.view()\n"
-">>> z.shape = 6\n"
-"Traceback (most recent call last):\n"
-"   ...\n"
-"AttributeError: Incompatible shape for in-place modification. Use\n"
-"`.reshape()` to make a copy with the desired shape."
-msgstr ""
-
-#: ../../../user/basics.copies.rst:126
+#: ../../../user/basics.copies.rst:110
 msgid ""
 "Taking the example of another operation, :func:`numpy.ravel` returns a "
 "contiguous flattened view of the array wherever possible. On the other "
@@ -188,18 +169,18 @@ msgid ""
 "preferable."
 msgstr ""
 
-#: ../../../user/basics.copies.rst:132
+#: ../../../user/basics.copies.rst:116
 msgid "How to tell if the array is a view or a copy"
 msgstr ""
 
-#: ../../../user/basics.copies.rst:134
+#: ../../../user/basics.copies.rst:118
 msgid ""
 "The :attr:`base <.ndarray.base>` attribute of the ndarray makes it easy to "
 "tell if an array is a view or a copy. The base attribute of a view returns "
 "the original array while it returns ``None`` for a copy."
 msgstr ""
 
-#: ../../../user/basics.copies.rst:156
+#: ../../../user/basics.copies.rst:140
 msgid ""
 "Note that the ``base`` attribute should not be used to determine if an "
 "ndarray object is *new*; only if it is a view or a copy of another ndarray."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -161,7 +161,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.arange:58
+#: of numpy.ma.core.arange:60
 msgid "**like**"
 msgstr ""
 
@@ -185,7 +185,7 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.arange:73
+#: of numpy.ma.core.arange:75
 msgid "**arange**"
 msgstr ""
 
@@ -195,12 +195,12 @@ msgid "MaskedArray"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.arange:63
+#: of numpy.ma.core.arange:65
 msgid "Array of evenly spaced values."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.arange:65
+#: of numpy.ma.core.arange:67
 msgid ""
 "For floating point arguments, the length of the result is ``ceil((stop - "
 "start)/step)``.  Because of floating point overflow, this rule may result in "
@@ -208,12 +208,12 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.arange:77
+#: of numpy.ma.core.arange:79
 msgid "The length of the output might not be numerically stable."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.arange:79
+#: of numpy.ma.core.arange:81
 msgid ""
 "Another stability issue is due to the internal implementation of `numpy."
 "arange`. The actual step value used to populate the array is ``dtype(start + "
@@ -223,21 +223,21 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.arange:87
+#: of numpy.ma.core.arange:89
 msgid ""
-">>> np.arange(0, 5, 0.5, dtype=int)\n"
+">>> np.arange(0, 5, 0.5, dtype=np.int_)\n"
 "array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])\n"
-">>> np.arange(-3, 3, 0.5, dtype=int)\n"
+">>> np.arange(-3, 3, 0.5, dtype=np.int_)\n"
 "array([-3, -2, -1,  0,  1,  2,  3,  4,  5,  6,  7,  8])"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.arange:92
+#: of numpy.ma.core.arange:94
 msgid "In such cases, the use of `numpy.linspace` should be preferred."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.arange:94
+#: of numpy.ma.core.arange:96
 msgid ""
 "The built-in :py:class:`range` generates :std:doc:`Python built-in integers "
 "that have arbitrary size <python:c-api/long>`, while `numpy.arange` produces "
@@ -246,7 +246,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.arange:99
+#: of numpy.ma.core.arange:101
 msgid ""
 ">>> power = 40\n"
 ">>> modulo = 10000\n"
@@ -259,58 +259,59 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.arange:111
+#: of numpy.ma.core.arange:113
 msgid ":obj:`numpy.linspace`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.arange:112
+#: of numpy.ma.core.arange:114
 msgid "Evenly spaced numbers with careful handling of endpoints."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.arange:113
+#: of numpy.ma.core.arange:115
 msgid ":obj:`numpy.ogrid`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.arange:114
+#: of numpy.ma.core.arange:116
 msgid "Arrays of evenly spaced numbers in N-dimensions."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.arange:115
+#: of numpy.ma.core.arange:117
 msgid ":obj:`numpy.mgrid`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.arange:116
+#: of numpy.ma.core.arange:118
 msgid "Grid-shaped arrays of evenly spaced numbers in N-dimensions."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.arange:117
+#: of numpy.ma.core.arange:119
 msgid ":ref:`how-to-partition`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.arange:123
+#: of numpy.ma.core.arange:125
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
 #: of numpy.ma.core.arange:-1
 msgid ""
-"<div id=\"f0090757-db07-445c-9170-1f198f8ce873\" "
+"<div id=\"01fbd4a0-66f9-4e26-bb22-979cccff68a9\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('7edb01fb-e7de-4cd6-8fa4-dd119b3ed0fc','f0090757-"
-"db07-445c-9170-1f198f8ce873')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window.openInNewTab('7edb01fb-"
-"e7de-4cd6-8fa4-dd119b3ed0fc','f0090757-db07-445c-9170-1f198f8ce873')\">Open "
-"In Tab</button></div><div id=\"97785cc8-a38e-476c-ac1b-209a24f51eac\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('d9d4e7bb-9056-4760-9a51-44ac6cfb14ab','01fbd4a0-66f9-4e26-"
+"bb22-979cccff68a9')\">Go Back</button><button class=\"try_examples_button\" "
+"onclick=\"window."
+"openInNewTab('d9d4e7bb-9056-4760-9a51-44ac6cfb14ab','01fbd4a0-66f9-4e26-"
+"bb22-979cccff68a9')\">Open In Tab</button></div><div id=\"2879a80a-e560-4630-"
+"be8e-cd04ad4e981f\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring

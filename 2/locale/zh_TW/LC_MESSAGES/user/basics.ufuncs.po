@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,6 +38,31 @@ msgstr ""
 
 #: ../../../user/basics.ufuncs.rst:21
 msgid ""
+"There are also :ref:`generalized ufuncs <c-api.generalized-ufuncs>` which "
+"are functions over vectors (or arrays) instead of single-element scalars. "
+"For example, :func:`numpy.add` is a ufunc that operates element-by-element, "
+"while :func:`numpy.matmul` is a gufunc that operates on vectors/matrices::"
+msgstr ""
+
+#: ../../../user/basics.ufuncs.rst:26
+msgid ""
+">>> a = np.arange(6).reshape(3, 2)\n"
+">>> a\n"
+"array([[0, 1],\n"
+"       [2, 3],\n"
+"       [4, 5]])\n"
+">>> np.add(a, a)  # element-wise addition\n"
+"array([[ 0,  2],\n"
+"       [ 4,  6],\n"
+"       [ 8, 10]])\n"
+">>> np.matmul(a, a.T)  # matrix multiplication (3x2) @ (2x3) -> (3x3)\n"
+"array([[ 1,  3,  5],\n"
+"       [ 3, 13, 23],\n"
+"       [ 5, 23, 41]])"
+msgstr ""
+
+#: ../../../user/basics.ufuncs.rst:40
+msgid ""
 "In NumPy, universal functions are instances of the :class:`numpy.ufunc` "
 "class. Many of the built-in functions are implemented in compiled C code. "
 "The basic ufuncs operate on scalars, but there is also a generalized kind "
@@ -46,31 +71,61 @@ msgid ""
 "addition operator::"
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:28
+#: ../../../user/basics.ufuncs.rst:47
 msgid ""
 ">>> np.array([0,2,3,4]) + np.array([1,1,-1,2])\n"
 "array([1, 3, 2, 6])"
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:31
+#: ../../../user/basics.ufuncs.rst:50
 msgid ""
 "One can also produce custom :class:`numpy.ufunc` instances using the :func:"
 "`numpy.frompyfunc` factory function."
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:36
+#: ../../../user/basics.ufuncs.rst:55
 msgid "Ufunc methods"
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:38
+#: ../../../user/basics.ufuncs.rst:57
 msgid ""
-"All ufuncs have four methods. They can be found at :ref:`ufuncs.methods`. "
-"However, these methods only make sense on scalar ufuncs that take two input "
-"arguments and return one output argument. Attempting to call these methods "
-"on other ufuncs will cause a :exc:`ValueError`."
+"All ufuncs have 5 methods. 4 reduce-like methods (:meth:`~numpy.ufunc."
+"reduce`, :meth:`~numpy.ufunc.accumulate`, :meth:`~numpy.ufunc.reduceat`, :"
+"meth:`~numpy.ufunc.outer`) and one for inplace operations (:meth:`~numpy."
+"ufunc.at`). See :ref:`ufuncs.methods` for more. However, these methods only "
+"make sense on ufuncs that take two input arguments and return one output "
+"argument (so-called \"scalar\" ufuncs since the inner loop operates on a "
+"single scalar value). Attempting to call these methods on other ufuncs will "
+"cause a :exc:`ValueError`."
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:44
+#: ../../../user/basics.ufuncs.rst:67
+msgid ""
+"For example, :func:`numpy.add` takes two inputs and returns one output, so "
+"its methods work::"
+msgstr ""
+
+#: ../../../user/basics.ufuncs.rst:70
+msgid ""
+">>> np.add.reduce([1, 2, 3])\n"
+"6"
+msgstr ""
+
+#: ../../../user/basics.ufuncs.rst:73
+msgid ""
+"But :func:`numpy.divmod` returns two outputs (quotient and remainder), so "
+"calling its methods raises an error::"
+msgstr ""
+
+#: ../../../user/basics.ufuncs.rst:76
+msgid ""
+">>> np.divmod.reduce([1, 2, 3])\n"
+"Traceback (most recent call last):\n"
+"    ...\n"
+"ValueError: reduce only supported for functions returning a single value"
+msgstr ""
+
+#: ../../../user/basics.ufuncs.rst:81
 msgid ""
 "The reduce-like methods all take an *axis* keyword, a *dtype* keyword, and "
 "an *out* keyword, and the arrays must all have dimension >= 1. The *axis* "
@@ -81,7 +136,7 @@ msgid ""
 "axes. For example::"
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:52
+#: ../../../user/basics.ufuncs.rst:89
 msgid ""
 ">>> x = np.arange(9).reshape(3,3)\n"
 ">>> x\n"
@@ -94,7 +149,7 @@ msgid ""
 "36"
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:62
+#: ../../../user/basics.ufuncs.rst:99
 msgid ""
 "The *dtype* keyword allows you to manage a very common problem that arises "
 "when naively using :meth:`.ufunc.reduce`. Sometimes you may have an array of "
@@ -112,15 +167,15 @@ msgid ""
 "example::"
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:77
+#: ../../../user/basics.ufuncs.rst:114
 msgid ""
 ">>> x.dtype\n"
 "dtype('int64')\n"
-">>> np.multiply.reduce(x, dtype=float)\n"
+">>> np.multiply.reduce(x, dtype=np.float64)\n"
 "array([ 0., 28., 80.])"
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:82
+#: ../../../user/basics.ufuncs.rst:119
 msgid ""
 "Finally, the *out* keyword allows you to provide an output array (or a tuple "
 "of output arrays for multi-output ufuncs). If *out* is given, the *dtype* "
@@ -128,16 +183,16 @@ msgid ""
 "the previous example::"
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:87
+#: ../../../user/basics.ufuncs.rst:124
 msgid ""
-">>> y = np.zeros(3, dtype=int)\n"
+">>> y = np.zeros(3, dtype=np.int_)\n"
 ">>> y\n"
 "array([0, 0, 0])\n"
-">>> np.multiply.reduce(x, dtype=float, out=y)\n"
+">>> np.multiply.reduce(x, dtype=np.float64, out=y)\n"
 "array([ 0, 28, 80])"
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:93
+#: ../../../user/basics.ufuncs.rst:130
 msgid ""
 "Ufuncs also have a fifth method, :func:`numpy.ufunc.at`, that allows in "
 "place operations to be performed using advanced indexing. No :ref:`buffering "
@@ -147,11 +202,11 @@ msgid ""
 "item."
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:104
+#: ../../../user/basics.ufuncs.rst:141
 msgid "Output type determination"
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:106
+#: ../../../user/basics.ufuncs.rst:143
 msgid ""
 "If the input arguments of the ufunc (or its methods) are :class:`ndarrays "
 "<numpy.ndarray>`, then the output will be as well. The exception is when the "
@@ -160,7 +215,7 @@ msgid ""
 "`` or ``out=Ellipsis``."
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:112
+#: ../../../user/basics.ufuncs.rst:149
 msgid ""
 "If some or all of the input arguments are not :class:`ndarrays <numpy."
 "ndarray>`, then the output may not be an :class:`ndarray <numpy.ndarray>` "
@@ -169,7 +224,7 @@ msgid ""
 "is :ref:`overridden <ufuncs.overrides>`."
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:119
+#: ../../../user/basics.ufuncs.rst:156
 msgid ""
 "If none of the inputs overrides the ufunc, then all output arrays will be "
 "passed to the :obj:`~.class.__array_wrap__` method of the input (besides :"
@@ -181,7 +236,7 @@ msgid ""
 "10.0."
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:128
+#: ../../../user/basics.ufuncs.rst:165
 msgid ""
 "All ufuncs can also take output arguments which must be arrays or "
 "subclasses. If necessary, the result will be cast to the data-type(s) of the "
@@ -189,15 +244,15 @@ msgid ""
 "method it is called instead of the one found on the inputs."
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:137
+#: ../../../user/basics.ufuncs.rst:174
 msgid "Broadcasting"
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:139
+#: ../../../user/basics.ufuncs.rst:176
 msgid ":doc:`Broadcasting basics <basics.broadcasting>`"
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:143
+#: ../../../user/basics.ufuncs.rst:180
 msgid ""
 "Each universal function takes array inputs and produces array outputs by "
 "performing the core function element-wise on the inputs (where an element is "
@@ -207,7 +262,7 @@ msgid ""
 "still be usefully operated on."
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:151
+#: ../../../user/basics.ufuncs.rst:188
 msgid ""
 "By these rules, if an input has a dimension size of 1 in its shape, the "
 "first data entry in that dimension will be used for all calculations along "
@@ -216,11 +271,11 @@ msgid ""
 "will be 0 for that dimension)."
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:161
+#: ../../../user/basics.ufuncs.rst:198
 msgid "Type casting rules"
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:168
+#: ../../../user/basics.ufuncs.rst:205
 msgid ""
 "In NumPy 1.6.0, a type promotion API was created to encapsulate the "
 "mechanism for determining output types. See the functions :func:`numpy."
@@ -228,7 +283,7 @@ msgid ""
 "for more details."
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:173
+#: ../../../user/basics.ufuncs.rst:210
 msgid ""
 "At the core of every ufunc is a one-dimensional strided loop that implements "
 "the actual function for a specific type combination. When a ufunc is "
@@ -241,7 +296,7 @@ msgid ""
 "codes>` are used in said output for brevity)."
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:184
+#: ../../../user/basics.ufuncs.rst:221
 msgid ""
 "Casting must be done on one or more of the inputs whenever the ufunc does "
 "not have a core loop implementation for the input types provided. If an "
@@ -253,7 +308,7 @@ msgid ""
 "size of an internal buffer (which is user settable)."
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:196
+#: ../../../user/basics.ufuncs.rst:233
 msgid ""
 "Universal functions in NumPy are flexible enough to have mixed type "
 "signatures. Thus, for example, a universal function could be defined that "
@@ -261,7 +316,7 @@ msgid ""
 "example."
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:201
+#: ../../../user/basics.ufuncs.rst:238
 msgid ""
 "By the above description, the casting rules are essentially implemented by "
 "the question of when a data type can be cast \"safely\" to another data "
@@ -272,18 +327,18 @@ msgid ""
 "system with the code given in the example."
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:210
+#: ../../../user/basics.ufuncs.rst:247
 msgid "Example"
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:211
+#: ../../../user/basics.ufuncs.rst:248
 msgid ""
 "Code segment showing the \"can cast safely\" table for a 64-bit system. "
 "Generally the output depends on the system; your system might result in a "
 "different table."
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:255
+#: ../../../user/basics.ufuncs.rst:292
 msgid ""
 "You should note that, while included in the table for completeness, the 'S', "
 "'U', and 'V' types cannot be operated on by ufuncs. Also, note that on a 32-"
@@ -291,7 +346,7 @@ msgid ""
 "slightly altered table."
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:260
+#: ../../../user/basics.ufuncs.rst:297
 msgid ""
 "Mixed scalar-array operations use a different set of casting rules that "
 "ensure that a scalar cannot \"upcast\" an array unless the scalar is of a "
@@ -302,11 +357,11 @@ msgid ""
 "scalar constant will cause upcasting on your large (small precision) array."
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:272
+#: ../../../user/basics.ufuncs.rst:309
 msgid "Use of internal buffers"
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:276
+#: ../../../user/basics.ufuncs.rst:313
 msgid ""
 "Internally, buffers are used for misaligned data, swapped data, and data "
 "that has to be converted from one data type to another. The size of internal "
@@ -322,11 +377,11 @@ msgid ""
 "the function :func:`numpy.setbufsize`."
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:292
+#: ../../../user/basics.ufuncs.rst:329
 msgid "Error handling"
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:296
+#: ../../../user/basics.ufuncs.rst:333
 msgid ""
 "Universal functions can trip special floating-point status registers in your "
 "hardware (such as divide-by-zero). If available on your platform, these "
@@ -335,32 +390,32 @@ msgid ""
 "func:`numpy.seterr` and :func:`numpy.seterrcall`."
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:307
+#: ../../../user/basics.ufuncs.rst:344
 msgid "Overriding ufunc behavior"
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:309
+#: ../../../user/basics.ufuncs.rst:346
 msgid ""
 "Classes (including ndarray subclasses) can override how ufuncs act on them "
 "by defining certain special methods.  For details, see :ref:`arrays.classes`."
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:141
+#: ../../../user/basics.ufuncs.rst:178
 msgid "broadcasting"
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:163
+#: ../../../user/basics.ufuncs.rst:200
 msgid "ufunc"
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:163
+#: ../../../user/basics.ufuncs.rst:200
 msgid "casting rules"
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:274
+#: ../../../user/basics.ufuncs.rst:311
 msgid "buffers"
 msgstr ""
 
-#: ../../../user/basics.ufuncs.rst:294
+#: ../../../user/basics.ufuncs.rst:331
 msgid "error handling"
 msgstr ""

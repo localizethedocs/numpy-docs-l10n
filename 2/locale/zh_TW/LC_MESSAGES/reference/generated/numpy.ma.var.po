@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -190,7 +190,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.var:64
+#: of numpy.ma.core.var:66
 msgid "**correction**"
 msgstr ""
 
@@ -207,7 +207,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.var:76
+#: of numpy.ma.core.var:78
 msgid "**variance**"
 msgstr ""
 
@@ -217,29 +217,29 @@ msgid "ndarray, see dtype parameter above"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.var:69
+#: of numpy.ma.core.var:71
 msgid ""
 "If ``out=None``, returns a new array containing the variance; otherwise, a "
 "reference to the output array is returned."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.var:81
+#: of numpy.ma.core.var:83
 msgid ":obj:`std`, :obj:`mean`, :obj:`nanmean`, :obj:`nanstd`, :obj:`nanvar`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.var:83
+#: of numpy.ma.core.var:85
 msgid ":ref:`ufuncs-output-type`"
 msgstr ":ref:`ufuncs-output-type`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.var:87
+#: of numpy.ma.core.var:89
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.var:88
+#: of numpy.ma.core.var:90
 msgid ""
 "There are several common variants of the array variance calculation. "
 "Assuming the input `a` is a one-dimensional NumPy array and ``mean`` is "
@@ -248,7 +248,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.var:93
+#: of numpy.ma.core.var:95
 msgid ""
 "N = len(a)\n"
 "d2 = abs(a - mean)**2  # abs is for complex `a`\n"
@@ -256,19 +256,19 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.var:97
+#: of numpy.ma.core.var:99
 msgid ""
 "Different values of the argument `ddof` are useful in different contexts. "
 "NumPy's default ``ddof=0`` corresponds with the expression:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.var:100
+#: of numpy.ma.core.var:102
 msgid "\\frac{\\sum_i{|a_i - \\bar{a}|^2 }}{N}"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.var:104
+#: of numpy.ma.core.var:106
 msgid ""
 "which is sometimes called the \"population variance\" in the field of "
 "statistics because it applies the definition of variance to `a` as if `a` "
@@ -276,17 +276,17 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.var:108
+#: of numpy.ma.core.var:110
 msgid "Many other libraries define the variance of an array differently, e.g.:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.var:110
+#: of numpy.ma.core.var:112
 msgid "\\frac{\\sum_i{|a_i - \\bar{a}|^2}}{N - 1}"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.var:114
+#: of numpy.ma.core.var:116
 msgid ""
 "In statistics, the resulting quantity is sometimes called the \"sample "
 "variance\" because if `a` is a random sample from a larger population, this "
@@ -298,14 +298,14 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.var:123
+#: of numpy.ma.core.var:125
 msgid ""
 "Note that for complex numbers, the absolute value is taken before squaring, "
 "so that the result is always real and nonnegative."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.var:126
+#: of numpy.ma.core.var:128
 msgid ""
 "For floating-point input, the variance is computed using the same precision "
 "the input has.  Depending on the input data, this can cause the results to "
@@ -315,44 +315,44 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.var:134
+#: of numpy.ma.core.var:136
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.var:148
+#: of numpy.ma.core.var:150
 msgid "In single precision, var() can be inaccurate:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.var:156
+#: of numpy.ma.core.var:158
 msgid "Computing the variance in float64 is more accurate:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.var:163
+#: of numpy.ma.core.var:165
 msgid "Specifying a where argument:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
-#: of numpy.ma.core.var:171
+#: of numpy.ma.core.var:173
 msgid "Using the mean keyword to save computation time:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
 #: of numpy.ma.core.var:-1
 msgid ""
-"<div id=\"fe807655-88b3-49fd-ad03-256e17b95bae\" "
+"<div id=\"88efa3e6-186b-4165-8658-371ba6b05b53\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('982d8e58-b4b9-46b2-8a9a-"
-"eef1bf6d79d7','fe807655-88b3-49fd-ad03-256e17b95bae')\">Go Back</"
+"tryExamplesHideIframe('5fd9f313-ad7d-4efe-"
+"ae85-4f63ee635438','88efa3e6-186b-4165-8658-371ba6b05b53')\">Go Back</"
 "button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('982d8e58-b4b9-46b2-8a9a-eef1bf6d79d7','fe807655-88b3-49fd-"
-"ad03-256e17b95bae')\">Open In Tab</button></div><div id=\"cefee19a-dab0-4e5e-"
-"b61f-3c350659c70e\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
-"div>"
+"openInNewTab('5fd9f313-ad7d-4efe-"
+"ae85-4f63ee635438','88efa3e6-186b-4165-8658-371ba6b05b53')\">Open In Tab</"
+"button></div><div id=\"0e2773db-e548-4e83-9a2b-a4e22b54f260\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring

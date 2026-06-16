@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,7 +41,7 @@ msgid "Parameters"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
-#: of numpy.lib.npyio.DataSource:22
+#: of numpy.lib.npyio.DataSource:15
 msgid "**destpath**"
 msgstr ""
 
@@ -59,19 +59,56 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
-#: of numpy.lib.npyio.DataSource:25
+#: of numpy.lib.npyio.DataSource:18
+msgid "Methods"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:33:<autosummary>:1
+msgid ":py:obj:`abspath <numpy.lib.npyio.DataSource.abspath>`\\ \\(path\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:33:<autosummary>:1
+msgid "Return absolute path of file in the DataSource directory."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:33:<autosummary>:1
+msgid ":py:obj:`exists <numpy.lib.npyio.DataSource.exists>`\\ \\(path\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:33:<autosummary>:1
+msgid "Test if path exists."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:33:<autosummary>:1
+msgid ""
+":py:obj:`open <numpy.lib.npyio.DataSource.open>`\\ \\(path\\[\\, mode\\, "
+"encoding\\, newline\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:33:<autosummary>:1
+msgid "Open and return file-like object."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
+#: of numpy.lib.npyio.DataSource:35
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
-#: of numpy.lib.npyio.DataSource:26
+#: of numpy.lib.npyio.DataSource:36
 msgid ""
 "URLs require a scheme string (``http://``) to be used, without it they will "
 "fail::"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
-#: of numpy.lib.npyio.DataSource:29
+#: of numpy.lib.npyio.DataSource:39
 msgid ""
 ">>> repos = np.lib.npyio.DataSource()\n"
 ">>> repos.exists('www.google.com/index.html')\n"
@@ -81,17 +118,17 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
-#: of numpy.lib.npyio.DataSource:35
+#: of numpy.lib.npyio.DataSource:45
 msgid "Temporary directories are deleted when the DataSource is deleted."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
-#: of numpy.lib.npyio.DataSource:39
+#: of numpy.lib.npyio.DataSource:49
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
-#: of numpy.lib.npyio.DataSource:46
+#: of numpy.lib.npyio.DataSource:56
 msgid ""
 ">>> ds = np.lib.npyio.DataSource('/home/guido')\n"
 ">>> urlname = 'http://www.google.com/'\n"
@@ -109,16 +146,17 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
 #: of numpy.lib.npyio.DataSource:-1
 msgid ""
-"<div id=\"9032e74a-e939-40a3-a207-060e96d26631\" "
+"<div id=\"649dc8c1-5ee5-46ec-b99a-08c98907d8fa\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('b6f2d7ec-d538-4f28-8b9c-39fc105a7833','9032e74a-"
-"e939-40a3-a207-060e96d26631')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window.openInNewTab('b6f2d7ec-"
-"d538-4f28-8b9c-39fc105a7833','9032e74a-e939-40a3-a207-060e96d26631')\">Open "
-"In Tab</button></div><div id=\"1a45e485-c9ac-4390-80bb-3409e2fa8888\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('bf00cd05-0804-4ab4-97b6-"
+"b2ca65921244','649dc8c1-5ee5-46ec-b99a-08c98907d8fa')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('bf00cd05-0804-4ab4-97b6-b2ca65921244','649dc8c1-5ee5-46ec-"
+"b99a-08c98907d8fa')\">Open In Tab</button></div><div id=\"dc7be750-98af-4f3e-"
+"bdf7-59c0f09bfaf1\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
@@ -126,41 +164,4 @@ msgstr ""
 msgid ""
 "<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
 "loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
-#: of numpy.lib.npyio.DataSource:61
-msgid "Methods"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
-#: of numpy.lib.npyio.DataSource:68:<autosummary>:1
-msgid ":py:obj:`abspath <numpy.lib.npyio.DataSource.abspath>`\\ \\(path\\)"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
-#: of numpy.lib.npyio.DataSource:68:<autosummary>:1
-msgid "Return absolute path of file in the DataSource directory."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
-#: of numpy.lib.npyio.DataSource:68:<autosummary>:1
-msgid ":py:obj:`exists <numpy.lib.npyio.DataSource.exists>`\\ \\(path\\)"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
-#: of numpy.lib.npyio.DataSource:68:<autosummary>:1
-msgid "Test if path exists."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
-#: of numpy.lib.npyio.DataSource:68:<autosummary>:1
-msgid ""
-":py:obj:`open <numpy.lib.npyio.DataSource.open>`\\ \\(path\\[\\, mode\\, "
-"encoding\\, newline\\]\\)"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/npyio.py:docstring
-#: of numpy.lib.npyio.DataSource:68:<autosummary>:1
-msgid "Open and return file-like object."
 msgstr ""

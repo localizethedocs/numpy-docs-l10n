@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -233,7 +233,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:74
+#: of numpy.quantile:76
 msgid "**weights**"
 msgstr ""
 
@@ -259,7 +259,7 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:92
+#: of numpy.quantile:94
 msgid "**quantile**"
 msgstr ""
 
@@ -269,7 +269,7 @@ msgid "scalar or ndarray"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:79
+#: of numpy.quantile:81
 msgid ""
 "If `q` is a single probability and `axis=None`, then the result is a scalar. "
 "If multiple probability levels are given, first axis of the result "
@@ -281,61 +281,61 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:97
+#: of numpy.quantile:99
 msgid ":obj:`mean`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:99
+#: of numpy.quantile:101
 msgid ":obj:`percentile`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:100
+#: of numpy.quantile:102
 msgid "equivalent to quantile, but with q in the range [0, 100]."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:101
+#: of numpy.quantile:103
 msgid ":obj:`median`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:102
+#: of numpy.quantile:104
 msgid "equivalent to ``quantile(..., 0.5)``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:103
+#: of numpy.quantile:105
 msgid ":obj:`nanquantile`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:107
+#: of numpy.quantile:109
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:108
+#: of numpy.quantile:110
 msgid ""
 "Given a sample `a` from an underlying distribution, `quantile` provides a "
 "nonparametric estimate of the inverse cumulative distribution function."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:111
+#: of numpy.quantile:113
 msgid ""
 "By default, this is done by interpolating between adjacent elements in "
 "``y``, a sorted copy of `a`::"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:114
+#: of numpy.quantile:116
 msgid "(1-g)*y[j] + g*y[j+1]"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:116
+#: of numpy.quantile:118
 msgid ""
 "where the index ``j`` and coefficient ``g`` are the integral and fractional "
 "components of ``q * (n-1)``, and ``n`` is the number of elements in the "
@@ -343,136 +343,136 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:120
+#: of numpy.quantile:122
 msgid ""
 "This is a special case of Equation 1 of H&F [Re01cd3f3acfe-1]_. More "
 "generally,"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:122
+#: of numpy.quantile:124
 msgid "``j = (q*n + m - 1) // 1``, and"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:123
+#: of numpy.quantile:125
 msgid "``g = (q*n + m - 1) % 1``,"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:125
+#: of numpy.quantile:127
 msgid ""
 "where ``m`` may be defined according to several different conventions. The "
 "preferred convention may be selected using the ``method`` parameter:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:129
+#: of numpy.quantile:131
 msgid "``method``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:129
+#: of numpy.quantile:131
 msgid "number in H&F"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:129
+#: of numpy.quantile:131
 msgid "``m``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:131
+#: of numpy.quantile:133
 msgid "``interpolated_inverted_cdf``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:131
+#: of numpy.quantile:133
 msgid "4"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:131
+#: of numpy.quantile:133
 msgid "``0``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:132
+#: of numpy.quantile:134
 msgid "``hazen``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:132
+#: of numpy.quantile:134
 msgid "5"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:132
+#: of numpy.quantile:134
 msgid "``1/2``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:133
+#: of numpy.quantile:135
 msgid "``weibull``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:133
+#: of numpy.quantile:135
 msgid "6"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:133
+#: of numpy.quantile:135
 msgid "``q``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:134
+#: of numpy.quantile:136
 msgid "``linear`` (default)"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:134
+#: of numpy.quantile:136
 msgid "7"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:134
+#: of numpy.quantile:136
 msgid "``1 - q``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:135
+#: of numpy.quantile:137
 msgid "``median_unbiased``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:135
+#: of numpy.quantile:137
 msgid "8"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:135
+#: of numpy.quantile:137
 msgid "``q/3 + 1/3``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:136
+#: of numpy.quantile:138
 msgid "``normal_unbiased``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:136
+#: of numpy.quantile:138
 msgid "9"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:136
+#: of numpy.quantile:138
 msgid "``q/4 + 3/8``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:139
+#: of numpy.quantile:141
 msgid ""
 "Note that indices ``j`` and ``j + 1`` are clipped to the range ``0`` to ``n "
 "- 1`` when the results of the formula would be outside the allowed range of "
@@ -481,7 +481,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:144
+#: of numpy.quantile:146
 msgid ""
 "The table above includes only the estimators from H&F that are continuous "
 "functions of probability `q` (estimators 4-9). NumPy also provides the three "
@@ -491,25 +491,25 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:150
+#: of numpy.quantile:152
 msgid "``inverted_cdf``: ``m = 0`` and ``g = int(index - j > 0)``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:151
+#: of numpy.quantile:153
 msgid ""
 "``averaged_inverted_cdf``: ``m = 0`` and ``g = (1 + int(index - j > 0)) / 2``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:153
+#: of numpy.quantile:155
 msgid ""
 "``closest_observation``: ``m = -1/2`` and ``g = 1 - int((index == j) & (j%2 "
 "== 1))``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:156
+#: of numpy.quantile:158
 msgid ""
 "For backward compatibility with previous versions of NumPy, `quantile` "
 "provides four additional discontinuous estimators. Like ``method='linear'``, "
@@ -518,27 +518,27 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:161
+#: of numpy.quantile:163
 msgid "``lower``: ``g = 0``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:162
+#: of numpy.quantile:164
 msgid "``midpoint``: ``g = 0.5``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:163
+#: of numpy.quantile:165
 msgid "``higher``: ``g = 1``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:164
+#: of numpy.quantile:166
 msgid "``nearest``: ``g = (q*(n-1) % 1) > 0.5``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:166
+#: of numpy.quantile:168
 msgid ""
 "**Weighted quantiles:** More formally, the quantile at probability level :"
 "math:`q` of a cumulative distribution function :math:`F(y)=P(Y \\leq y)` "
@@ -547,14 +547,14 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:172
+#: of numpy.quantile:174
 msgid ""
 "P(Y < x) \\leq q \\quad\\text{and}\\quad P(Y \\leq x) \\geq q\n"
 "\n"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:174
+#: of numpy.quantile:176
 msgid ""
 "with random variable :math:`Y\\sim P`. Sample quantiles, the result of "
 "`quantile`, provide nonparametric estimation of the underlying population "
@@ -563,7 +563,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:179
+#: of numpy.quantile:181
 msgid ""
 "Some of the estimators above arise when one considers :math:`F` as the "
 "empirical distribution function of the data, i.e. :math:`F(y) = \\frac{1}{n} "
@@ -573,7 +573,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:186
+#: of numpy.quantile:188
 msgid ""
 "For weighted quantiles, the coverage conditions still hold. The empirical "
 "cumulative distribution is simply replaced by its weighted version, i.e. :"
@@ -582,46 +582,46 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:193
+#: of numpy.quantile:195
 msgid "References"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:194
+#: of numpy.quantile:196
 msgid ""
 "R. J. Hyndman and Y. Fan, \"Sample quantiles in statistical packages,\" The "
 "American Statistician, 50(4), pp. 361-365, 1996"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:200
+#: of numpy.quantile:202
 msgid "[Re01cd3f3acfe-1]_"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:203
+#: of numpy.quantile:205
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.quantile:233
+#: of numpy.quantile:235
 msgid "See also `numpy.percentile` for a visualization of most methods."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.quantile:-1
 msgid ""
-"<div id=\"7a9c9af1-a111-425f-989e-270639a2ab23\" "
+"<div id=\"a5eb1bb3-a49d-4785-80f5-ee39ec0f26bc\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('5a97ba04-35a9-41cd-8a1a-9de95918cbe2','7a9c9af1-"
-"a111-425f-989e-270639a2ab23')\">Go Back</button><button "
+"tryExamplesHideIframe('2f741429-8ce6-4b22-9ce9-7177b62ea26b','a5eb1bb3-"
+"a49d-4785-80f5-ee39ec0f26bc')\">Go Back</button><button "
 "class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('5a97ba04-35a9-41cd-8a1a-9de95918cbe2','7a9c9af1-"
-"a111-425f-989e-270639a2ab23')\">Open In Tab</button></div><div id=\"b3366ee3-"
-"fee3-4f8d-8dd8-b2ef636d3860\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"openInNewTab('2f741429-8ce6-4b22-9ce9-7177b62ea26b','a5eb1bb3-a49d-4785-80f5-"
+"ee39ec0f26bc')\">Open In Tab</button></div><div id=\"11972ff5-e9f4-46d2-"
+"ae96-3bb2fc5f5541\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring

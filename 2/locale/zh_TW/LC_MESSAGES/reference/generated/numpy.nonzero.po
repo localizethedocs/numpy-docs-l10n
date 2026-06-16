@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,7 +47,7 @@ msgid "Parameters"
 msgstr "參數"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nonzero:15
+#: of numpy.nonzero:17
 msgid "**a**"
 msgstr "**a**"
 
@@ -67,7 +67,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nonzero:26
+#: of numpy.nonzero:28
 msgid "**tuple_of_arrays**"
 msgstr ""
 
@@ -77,61 +77,61 @@ msgid "tuple"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nonzero:20
+#: of numpy.nonzero:22
 msgid "Indices of elements that are non-zero."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nonzero:31
+#: of numpy.nonzero:33
 msgid ":obj:`flatnonzero`"
 msgstr ":obj:`flatnonzero`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nonzero:32
+#: of numpy.nonzero:34
 msgid ""
 "Return indices that are non-zero in the flattened version of the input array."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nonzero:33
+#: of numpy.nonzero:35
 msgid ":obj:`ndarray.nonzero`"
 msgstr ":obj:`ndarray.nonzero`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nonzero:34
+#: of numpy.nonzero:36
 msgid "Equivalent ndarray method."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nonzero:35
+#: of numpy.nonzero:37
 msgid ":obj:`count_nonzero`"
 msgstr ":obj:`count_nonzero`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nonzero:36
+#: of numpy.nonzero:38
 msgid "Counts the number of non-zero elements in the input array."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nonzero:40
+#: of numpy.nonzero:42
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nonzero:41
+#: of numpy.nonzero:43
 msgid ""
 "While the nonzero values can be obtained with ``a[nonzero(a)]``, it is "
-"recommended to use ``x[x.astype(bool)]`` or ``x[x != 0]`` instead, which "
+"recommended to use ``x[x.astype(np.bool)]`` or ``x[x != 0]`` instead, which "
 "will correctly handle 0-d arrays."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nonzero:47
+#: of numpy.nonzero:49
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nonzero:69
+#: of numpy.nonzero:71
 msgid ""
 "A common use for ``nonzero`` is to find the indices of an array, where a "
 "condition is True.  Given an array `a`, the condition `a` > 3 is a boolean "
@@ -140,29 +140,29 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nonzero:82
+#: of numpy.nonzero:84
 msgid ""
 "Using this result to index `a` is equivalent to using the mask directly:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nonzero:89
+#: of numpy.nonzero:91
 msgid "``nonzero`` can also be called as a method of the array."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.nonzero:-1
 msgid ""
-"<div id=\"4d43d06f-ca6b-4ce5-87fd-65f808bd07ff\" "
+"<div id=\"ecf8c3bd-db4c-451a-9c09-4492a3984332\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('e33356ef-7060-453f-b76a-5504f8e21740','4d43d06f-"
-"ca6b-4ce5-87fd-65f808bd07ff')\">Go Back</button><button "
+"tryExamplesHideIframe('437b44e3-95c7-45ed-aa41-e2a00b71205f','ecf8c3bd-"
+"db4c-451a-9c09-4492a3984332')\">Go Back</button><button "
 "class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('e33356ef-7060-453f-b76a-5504f8e21740','4d43d06f-"
-"ca6b-4ce5-87fd-65f808bd07ff')\">Open In Tab</button></div><div "
-"id=\"22a87de7-78ba-42af-930a-9d9313898f92\" "
+"openInNewTab('437b44e3-95c7-45ed-aa41-e2a00b71205f','ecf8c3bd-"
+"db4c-451a-9c09-4492a3984332')\">Open In Tab</button></div><div id=\"b628b303-"
+"bbfb-42b4-a140-55f91e105a5d\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -107,7 +107,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take:37 numpy.take:59
+#: of numpy.take:37 numpy.take:61
 msgid "**out**"
 msgstr ""
 
@@ -125,7 +125,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take:48
+#: of numpy.take:50
 msgid "**mode**"
 msgstr ""
 
@@ -173,47 +173,47 @@ msgid "ndarray (Ni..., Nj..., Nk...)"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take:53
+#: of numpy.take:55
 msgid "The returned array has the same type as `a`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take:64
+#: of numpy.take:66
 msgid ":obj:`compress`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take:65
+#: of numpy.take:67
 msgid "Take elements using a boolean mask"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take:66
+#: of numpy.take:68
 msgid ":obj:`ndarray.take`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take:67
+#: of numpy.take:69
 msgid "equivalent method"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take:68
+#: of numpy.take:70
 msgid ":obj:`take_along_axis`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take:69
+#: of numpy.take:71
 msgid "Take elements by matching the array and the index arrays"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take:73
+#: of numpy.take:75
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take:74
+#: of numpy.take:76
 msgid ""
 "By eliminating the inner loop in the description above, and using `s_` to "
 "build simple slice objects, `take` can be expressed  in terms of applying "
@@ -221,7 +221,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take:78
+#: of numpy.take:80
 msgid ""
 "Ni, Nk = a.shape[:axis], a.shape[axis+1:]\n"
 "for ii in ndindex(Ni):\n"
@@ -230,29 +230,29 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take:83
+#: of numpy.take:85
 msgid ""
 "For this reason, it is equivalent to (but faster than) the following use of "
 "`apply_along_axis`::"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take:86
+#: of numpy.take:88
 msgid "out = np.apply_along_axis(lambda a_1d: a_1d[indices], axis, a)"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take:90
+#: of numpy.take:92
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take:101
+#: of numpy.take:103
 msgid "In this example if `a` is an ndarray, \"fancy\" indexing can be used."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.take:107
+#: of numpy.take:109
 msgid ""
 "If `indices` is not one dimensional, the output also has these dimensions."
 msgstr ""
@@ -260,17 +260,16 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.take:-1
 msgid ""
-"<div id=\"01e24d7d-d560-4e4e-ad78-0437343ef171\" "
+"<div id=\"93315f41-a88c-4539-b1e5-d86c3434d4f5\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('727ca083-11e8-4307-8280-ba6a90a36c7c','01e24d7d-"
-"d560-4e4e-ad78-0437343ef171')\">Go Back</button><button "
+"tryExamplesHideIframe('d0f1c726-0430-4669-946c-09c9c9e6c35b','93315f41-"
+"a88c-4539-b1e5-d86c3434d4f5')\">Go Back</button><button "
 "class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('727ca083-11e8-4307-8280-ba6a90a36c7c','01e24d7d-d560-4e4e-"
-"ad78-0437343ef171')\">Open In Tab</button></div><div id=\"3b0a7387-8193-4164-"
-"a8f2-5ffb4ac34987\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
-"div>"
+"openInNewTab('d0f1c726-0430-4669-946c-09c9c9e6c35b','93315f41-a88c-4539-b1e5-"
+"d86c3434d4f5')\">Open In Tab</button></div><div id=\"e48bbffe-cd49-4447-b3da-"
+"bdd965b66bd4\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring

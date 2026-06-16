@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -707,7 +707,7 @@ msgstr ""
 #: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
 msgid ""
 ":py:obj:`ndarray.sort <numpy.ndarray.sort>`\\ \\(\\[axis\\, kind\\, order\\, "
-"stable\\]\\)"
+"stable\\, ...\\]\\)"
 msgstr ""
 
 #: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
@@ -717,7 +717,7 @@ msgstr ""
 #: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
 msgid ""
 ":py:obj:`ndarray.argsort <numpy.ndarray.argsort>`\\ \\(\\[axis\\, kind\\, "
-"order\\, stable\\]\\)"
+"order\\, stable\\, ...\\]\\)"
 msgstr ""
 
 #: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
@@ -1649,7 +1649,7 @@ msgstr ""
 msgid "Utility method for typing:"
 msgstr ""
 
-#: ../../../reference/arrays.ndarray.rst:620:<autosummary>:1
+#: ../../../reference/arrays.ndarray.rst:621:<autosummary>:1
 msgid ""
 ":py:obj:`ndarray.__class_getitem__ <numpy.ndarray.__class_getitem__>`\\ \\(\\"
 "$cls\\, item\\, \\/\\)"
@@ -1657,8 +1657,44 @@ msgstr ""
 ":py:obj:`ndarray.__class_getitem__ <numpy.ndarray.__class_getitem__>`\\ \\(\\"
 "$cls\\, item\\, \\/\\)"
 
-#: ../../../reference/arrays.ndarray.rst:620:<autosummary>:1
+#: ../../../reference/arrays.ndarray.rst:621:<autosummary>:1
 msgid "ndarray[shape, dtype]"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:625
+msgid "Structural pattern matching"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:627
+msgid ""
+"Arrays support :pep:`structural pattern matching <634>`. The array is "
+"matched as a sequence, so you can unpack arrays along the first dimension in "
+"``match``/``case`` statements::"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:631
+msgid ""
+">>> arr = np.array([[1, 2], [3, 4]])\n"
+">>> match arr:\n"
+"...     case [row1, row2]:\n"
+"...         print(f\"row1={row1}, row2={row2}\")\n"
+"row1=[1 2], row2=[3 4]"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:637
+msgid "Nested patterns work too, matching inner dimensions::"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:639
+msgid ""
+">>> match arr:\n"
+"...     case [[a, b], [c, d]]:\n"
+"...         print(f\"a={a}, b={b}, c={c}, d={d}\")\n"
+"a=1, b=2, c=3, d=4"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:644
+msgid "All ndarray subclasses inherit this behavior."
 msgstr ""
 
 #: ../../../reference/arrays.ndarray.rst:22

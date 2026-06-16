@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,13 +29,10 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.count_nonzero:4
 msgid ""
-"The word \"non-zero\" is in reference to the Python 2.x built-in method "
-"``__nonzero__()`` (renamed ``__bool__()`` in Python 3.x) of Python objects "
-"that tests an object's \"truthfulness\". For example, any number is "
-"considered truthful if it is nonzero, whereas any string is considered "
-"truthful if it is not the empty string. Thus, this function (recursively) "
-"counts how many elements in ``a`` (and in sub-arrays thereof) have their "
-"``__nonzero__()`` or ``__bool__()`` method evaluated to ``True``."
+"A non-zero value is one that evaluates to truthful in a boolean context, "
+"including any non-zero number and any string that is not empty. This "
+"function recursively counts how many elements in ``a`` (and its sub-arrays) "
+"are non-zero values."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
@@ -44,7 +41,7 @@ msgid "Parameters"
 msgstr "參數"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.count_nonzero:17
+#: of numpy.count_nonzero:12
 msgid "**a**"
 msgstr "**a**"
 
@@ -54,12 +51,12 @@ msgid "array_like"
 msgstr "array_like"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.count_nonzero:17
+#: of numpy.count_nonzero:12
 msgid "The array for which to count non-zeros."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.count_nonzero:22
+#: of numpy.count_nonzero:17
 msgid "**axis**"
 msgstr "**axis**"
 
@@ -69,14 +66,14 @@ msgid "int or tuple, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.count_nonzero:20
+#: of numpy.count_nonzero:15
 msgid ""
 "Axis or tuple of axes along which to count non-zeros. Default is None, "
 "meaning that non-zeros will be counted along a flattened version of ``a``."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.count_nonzero:27
+#: of numpy.count_nonzero:24
 msgid "**keepdims**"
 msgstr ""
 
@@ -86,7 +83,7 @@ msgid "bool, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.count_nonzero:25
+#: of numpy.count_nonzero:20
 msgid ""
 "If this is set to True, the axes that are counted are left in the result as "
 "dimensions with size one. With this option, the result will broadcast "
@@ -99,7 +96,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.count_nonzero:40
+#: of numpy.count_nonzero:37
 msgid "**count**"
 msgstr ""
 
@@ -109,40 +106,41 @@ msgid "int or array of int"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.count_nonzero:32
+#: of numpy.count_nonzero:29
 msgid ""
 "Number of non-zero values in the array along a given axis. Otherwise, the "
 "total number of non-zero values in the array is returned."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.count_nonzero:45
+#: of numpy.count_nonzero:42
 msgid ":obj:`nonzero`"
 msgstr ":obj:`nonzero`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.count_nonzero:46
+#: of numpy.count_nonzero:43
 msgid "Return the coordinates of all the non-zero values."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.count_nonzero:52
+#: of numpy.count_nonzero:49
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.count_nonzero:-1
 msgid ""
-"<div id=\"1d5298c2-d8f9-4247-818f-5b8f0bb54501\" "
+"<div id=\"59fdcd41-6840-40aa-ae6f-516744fa97a9\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('88d0ecfd-f1f4-4cfd-bddc-5b1a24f4bc44','1d5298c2-"
-"d8f9-4247-818f-5b8f0bb54501')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window.openInNewTab('88d0ecfd-"
-"f1f4-4cfd-bddc-5b1a24f4bc44','1d5298c2-d8f9-4247-818f-5b8f0bb54501')\">Open "
-"In Tab</button></div><div id=\"7408eb82-976f-4dd4-9469-5af896cf51d5\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('7aea4f25-fcca-4ce2-"
+"b5c4-61b2e8a519e9','59fdcd41-6840-40aa-ae6f-516744fa97a9')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('7aea4f25-fcca-4ce2-b5c4-61b2e8a519e9','59fdcd41-6840-40aa-"
+"ae6f-516744fa97a9')\">Open In Tab</button></div><div id=\"8b27b50c-2382-47fc-"
+"b0ae-4e875393c9a0\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring

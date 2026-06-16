@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,7 +51,7 @@ msgid "Shape of resized array."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.resize:12
+#: of numpy.ndarray.resize:14
 msgid "**refcheck**"
 msgstr ""
 
@@ -73,7 +73,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.resize:20
+#: of numpy.ndarray.resize:22
 msgid "None"
 msgstr ""
 
@@ -83,43 +83,43 @@ msgid "Raises"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.resize:27
+#: of numpy.ndarray.resize:29
 msgid "ValueError"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.resize:25
+#: of numpy.ndarray.resize:27
 msgid "If `a` does not own its own data or references or views to may exist."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.resize:32
+#: of numpy.ndarray.resize:34
 msgid ":obj:`resize`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.resize:33
+#: of numpy.ndarray.resize:35
 msgid "Return a new array with the specified shape."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.resize:37
+#: of numpy.ndarray.resize:39
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.resize:38
+#: of numpy.ndarray.resize:40
 msgid "This reallocates space for the data area if necessary."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.resize:40
+#: of numpy.ndarray.resize:42
 msgid ""
 "Only contiguous arrays (data elements consecutive in memory) can be resized."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.resize:43
+#: of numpy.ndarray.resize:45
 msgid ""
 "Reallocating arrays in-place can often lead to memory fragmentation and "
 "should be avoided. If the goal is to reclaim over-allocated memory, "
@@ -131,14 +131,14 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.resize:51
+#: of numpy.ndarray.resize:53
 msgid ""
 "The purpose of the reference count check is to make sure you do not use this "
 "array as a buffer for another Python object and then reallocate the memory."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.resize:55
+#: of numpy.ndarray.resize:57
 msgid ""
 "On Python 3.13 and older, the check allows objects with exactly one "
 "reference to be reallocated in-place. On Python 3.14 and newer, the array "
@@ -146,71 +146,71 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.resize:59
+#: of numpy.ndarray.resize:61
 msgid ""
 "If you are sure that you have not shared the memory for this array with "
 "another Python object, then you may safely set `refcheck` to False."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.resize:63
+#: of numpy.ndarray.resize:65
 msgid "References"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.resize:64
+#: of numpy.ndarray.resize:66
 msgid ""
 "Python 3.14 What's New, https://docs.python.org/3/whatsnew/3.14."
 "html#whatsnew314-refcount"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.resize:68
+#: of numpy.ndarray.resize:70
 msgid "[R03c07ecaa40f-1]_"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.resize:71
+#: of numpy.ndarray.resize:73
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.resize:76
+#: of numpy.ndarray.resize:78
 msgid ""
 "Shrinking an array: array is flattened (in the order that the data are "
 "stored in memory), resized, and reshaped:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.resize:93
+#: of numpy.ndarray.resize:95
 msgid ""
 "Enlarging an array: as above, but missing entries are filled with zeros:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.resize:101
+#: of numpy.ndarray.resize:103
 msgid "Referencing an array prevents resizing..."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ndarray.resize:109
+#: of numpy.ndarray.resize:111
 msgid "Unless `refcheck` is False:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ndarray.resize:-1
 msgid ""
-"<div id=\"8e289bb6-1c17-427a-8a27-6fe1bde99eb8\" "
+"<div id=\"4ea56296-b67e-4349-82ea-a240469702b8\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('aac03db8-"
-"a1ea-433f-9cd7-9d58e53ad4c5','8e289bb6-1c17-427a-8a27-6fe1bde99eb8')\">Go "
-"Back</button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('aac03db8-"
-"a1ea-433f-9cd7-9d58e53ad4c5','8e289bb6-1c17-427a-8a27-6fe1bde99eb8')\">Open "
-"In Tab</button></div><div id=\"aa9a7009-645a-4e1b-a694-37ab1323c77b\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('721b3904-2293-49c5-b428-52b05dad6b3d','4ea56296-"
+"b67e-4349-82ea-a240469702b8')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('721b3904-2293-49c5-b428-52b05dad6b3d','4ea56296-b67e-4349-82ea-"
+"a240469702b8')\">Open In Tab</button></div><div id=\"19b4384c-bd5f-49f7-"
+"ab9c-43d2d7f92616\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring

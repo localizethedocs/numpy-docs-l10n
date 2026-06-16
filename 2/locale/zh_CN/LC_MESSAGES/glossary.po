@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -695,81 +695,82 @@ msgstr ""
 #: ../../../glossary.rst:473
 msgid ""
 "Strides are computed automatically from an array's dtype and shape, but can "
-"be directly specified using :doc:`as_strided. <reference/generated/numpy.lib."
-"stride_tricks.as_strided>`"
+"be directly specified using :doc:`as_strided <reference/generated/numpy.lib."
+"stride_tricks.as_strided>`. Bounds validation can be enabled with the "
+"``check_bounds`` parameter."
 msgstr ""
 
-#: ../../../glossary.rst:477
+#: ../../../glossary.rst:478
 msgid ""
 "For details, see :doc:`numpy.ndarray.strides <reference/generated/numpy."
 "ndarray.strides>`."
 msgstr ""
 
-#: ../../../glossary.rst:480
+#: ../../../glossary.rst:481
 msgid ""
 "To see how striding underlies the power of NumPy views, see `The NumPy "
 "array: a structure for efficient numerical computation. \\ <https://arxiv."
 "org/pdf/1102.1523.pdf>`_"
 msgstr ""
 
-#: ../../../glossary.rst:484
+#: ../../../glossary.rst:485
 msgid "structured array"
 msgstr ""
 
-#: ../../../glossary.rst:486
+#: ../../../glossary.rst:487
 msgid "Array whose :term:`dtype` is a :term:`structured data type`."
 msgstr ""
 
-#: ../../../glossary.rst:488
+#: ../../../glossary.rst:489
 msgid "structured data type"
 msgstr ""
 
-#: ../../../glossary.rst:490
+#: ../../../glossary.rst:491
 msgid ""
 "Users can create arbitrarily complex :term:`dtypes <dtype>` that can include "
 "other arrays and dtypes. These composite dtypes are called :doc:`structured "
 "data types. <user/basics.rec>`"
 msgstr ""
 
-#: ../../../glossary.rst:494
+#: ../../../glossary.rst:495
 msgid "subarray"
 msgstr ""
 
-#: ../../../glossary.rst:496
+#: ../../../glossary.rst:497
 msgid "An array nested in a :term:`structured data type`, as ``b`` is here:"
 msgstr ""
 
-#: ../../../glossary.rst:503
+#: ../../../glossary.rst:504
 msgid "subarray data type"
 msgstr ""
 
-#: ../../../glossary.rst:505
+#: ../../../glossary.rst:506
 msgid "An element of a structured datatype that behaves like an ndarray."
 msgstr ""
 
-#: ../../../glossary.rst:507
+#: ../../../glossary.rst:508
 msgid "title"
 msgstr ""
 
-#: ../../../glossary.rst:509
+#: ../../../glossary.rst:510
 msgid "An alias for a field name in a structured datatype."
 msgstr ""
 
-#: ../../../glossary.rst:511
+#: ../../../glossary.rst:512
 msgid "type"
 msgstr ""
 
-#: ../../../glossary.rst:513
+#: ../../../glossary.rst:514
 msgid ""
 "In NumPy, usually a synonym for :term:`dtype`. For the more general Python "
 "meaning, :term:`see here. <python:type>`"
 msgstr ""
 
-#: ../../../glossary.rst:516
+#: ../../../glossary.rst:517
 msgid "ufunc"
 msgstr ""
 
-#: ../../../glossary.rst:518
+#: ../../../glossary.rst:519
 msgid ""
 "NumPy's fast element-by-element computation (:term:`vectorization`) gives a "
 "choice which function gets applied. The general term for the function is "
@@ -777,11 +778,11 @@ msgid ""
 "ufuncs, but users can also :doc:`write their own. <reference/ufuncs>`"
 msgstr ""
 
-#: ../../../glossary.rst:524
+#: ../../../glossary.rst:525
 msgid "vectorization"
 msgstr ""
 
-#: ../../../glossary.rst:526
+#: ../../../glossary.rst:527
 msgid ""
 "NumPy hands off array processing to C, where looping and computation are "
 "much faster than in Python. To exploit this, programmers using NumPy "
@@ -790,30 +791,30 @@ msgid ""
 "code to leverage it."
 msgstr ""
 
-#: ../../../glossary.rst:531
+#: ../../../glossary.rst:532
 msgid "view"
 msgstr ""
 
-#: ../../../glossary.rst:533
+#: ../../../glossary.rst:534
 msgid ""
 "Without touching underlying data, NumPy can make one array appear to change "
 "its datatype and shape."
 msgstr ""
 
-#: ../../../glossary.rst:536
+#: ../../../glossary.rst:537
 msgid ""
 "An array created this way is a `view`, and NumPy often exploits the "
 "performance gain of using a view versus making a new array."
 msgstr ""
 
-#: ../../../glossary.rst:539
+#: ../../../glossary.rst:540
 msgid ""
 "A potential drawback is that writing to a view can alter the original as "
 "well. If this is a problem, NumPy instead needs to create a physically "
 "distinct array -- a `copy`."
 msgstr ""
 
-#: ../../../glossary.rst:543
+#: ../../../glossary.rst:544
 msgid ""
 "Some NumPy routines always return views, some always return copies, some may "
 "return one or the other, and for some the choice can be specified. "

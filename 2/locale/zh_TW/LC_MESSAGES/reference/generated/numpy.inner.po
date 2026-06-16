@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,7 +39,7 @@ msgid "Parameters"
 msgstr "參數"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:10
+#: of numpy.inner:12
 msgid "**a, b**"
 msgstr ""
 
@@ -59,7 +59,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:21
+#: of numpy.inner:23
 msgid "**out**"
 msgstr "**out**"
 
@@ -69,7 +69,7 @@ msgid "ndarray"
 msgstr "ndarray"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:15
+#: of numpy.inner:17
 msgid ""
 "If `a` and `b` are both scalars or both 1-D arrays then a scalar is "
 "returned; otherwise an array is returned. ``out.shape = (*a.shape[:-1], *b."
@@ -82,137 +82,135 @@ msgid "Raises"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:29
+#: of numpy.inner:31
 msgid "ValueError"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:26
+#: of numpy.inner:28
 msgid ""
 "If both `a` and `b` are nonscalar and their last dimensions have different "
 "sizes."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:34
+#: of numpy.inner:36
 msgid ":obj:`tensordot`"
 msgstr ":obj:`tensordot`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:35
+#: of numpy.inner:37
 msgid "Sum products over arbitrary axes."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:36
+#: of numpy.inner:38
 msgid ":obj:`dot`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:37
+#: of numpy.inner:39
 msgid "Generalised matrix product, using second last dimension of `b`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:38
+#: of numpy.inner:40
 msgid ":obj:`vecdot`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:39
+#: of numpy.inner:41
 msgid "Vector dot product of two arrays."
 msgstr "兩個數組的向量點積。"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:40
+#: of numpy.inner:42
 msgid ":obj:`einsum`"
 msgstr ":obj:`einsum`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:41
+#: of numpy.inner:43
 msgid "Einstein summation convention."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:45
+#: of numpy.inner:47
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:46
+#: of numpy.inner:48
 msgid "For vectors (1-D arrays) it computes the ordinary inner-product::"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:48
+#: of numpy.inner:50
 msgid "np.inner(a, b) = sum(a[:]*b[:])"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:50
+#: of numpy.inner:52
 msgid "More generally, if ``ndim(a) = r > 0`` and ``ndim(b) = s > 0``::"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:52
+#: of numpy.inner:54
 msgid "np.inner(a, b) = np.tensordot(a, b, axes=(-1,-1))"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:54
+#: of numpy.inner:56
 msgid "or explicitly::"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:56
+#: of numpy.inner:58
 msgid ""
 "np.inner(a, b)[i0,...,ir-2,j0,...,js-2]\n"
 "     = sum(a[i0,...,ir-2,:]*b[j0,...,js-2,:])"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:59
+#: of numpy.inner:61
 msgid "In addition `a` or `b` may be scalars, in which case::"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:61
+#: of numpy.inner:63
 msgid "np.inner(a,b) = a*b"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:65
+#: of numpy.inner:67
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:70
+#: of numpy.inner:72
 msgid "Ordinary inner product for vectors:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:78
+#: of numpy.inner:80
 msgid "Some multidimensional examples:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.inner:97
+#: of numpy.inner:99
 msgid "An example where `b` is a scalar:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.inner:-1
 msgid ""
-"<div id=\"272d00b9-5a57-4503-bd02-53c578c82049\" "
+"<div id=\"9ffd4c48-3741-4d81-901c-7dbe3c1d2906\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('a0bcc92d-c543-4fcf-"
-"af23-35373d1cf039','272d00b9-5a57-4503-bd02-53c578c82049')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('a0bcc92d-c543-4fcf-af23-35373d1cf039','272d00b9-5a57-4503-"
-"bd02-53c578c82049')\">Open In Tab</button></div><div "
-"id=\"ff0d4f21-0cfb-459f-801d-a788fefd972d\" "
+"tryExamplesHideIframe('0c0d843e-9f87-48a5-8bdc-6efaa2940bdc','9ffd4c48-3741-4d81-901c-7dbe3c1d2906')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('0c0d843e-9f87-48a5-8bdc-6efaa2940bdc','9ffd4c48-3741-4d81-901c-7dbe3c1d2906')\">Open "
+"In Tab</button></div><div id=\"78fa8779-3d82-424e-9999-b5463f476093\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 

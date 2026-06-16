@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,7 +27,14 @@ msgid "Create a `~numpy.char.chararray`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.array:5
+#: of numpy.char.array:4
+msgid ""
+"``chararray`` is deprecated. Use an ``ndarray`` with a string or bytes dtype "
+"instead."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.array:9
 msgid ""
 "This class is provided for numarray backward-compatibility. New code (not "
 "concerned with numarray compatibility) should use arrays of type `bytes_` or "
@@ -36,26 +43,26 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.array:10
+#: of numpy.char.array:14
 msgid ""
 "Versus a NumPy array of dtype `bytes_` or `str_`, this class adds the "
 "following functionality:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.array:13
+#: of numpy.char.array:17
 msgid "values automatically have whitespace removed from the end when indexed"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.array:16
+#: of numpy.char.array:20
 msgid ""
 "comparison operators automatically remove whitespace from the end when "
 "comparing values"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.array:19
+#: of numpy.char.array:23
 msgid ""
 "vectorized string operations are provided as methods (e.g. `chararray."
 "endswith <numpy.char.chararray.endswith>`) and infix operators (e.g. ``+, *, "
@@ -68,7 +75,7 @@ msgid "Parameters"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.array:26
+#: of numpy.char.array:30
 msgid "**obj**"
 msgstr ""
 
@@ -78,7 +85,7 @@ msgid "array of str or unicode-like"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.array:34
+#: of numpy.char.array:38
 msgid "**itemsize**"
 msgstr ""
 
@@ -88,7 +95,7 @@ msgid "int, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.array:29
+#: of numpy.char.array:33
 msgid ""
 "`itemsize` is the number of characters per scalar in the resulting array.  "
 "If `itemsize` is None, and `obj` is an object array or a Python list, the "
@@ -98,7 +105,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.array:40
+#: of numpy.char.array:44
 msgid "**copy**"
 msgstr ""
 
@@ -108,7 +115,7 @@ msgid "bool, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.array:37
+#: of numpy.char.array:41
 msgid ""
 "If true (default), then the object is copied.  Otherwise, a copy will only "
 "be made if ``__array__`` returns a copy, if obj is a nested sequence, or if "
@@ -117,12 +124,12 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.array:52
+#: of numpy.char.array:56
 msgid "**unicode**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.array:43
+#: of numpy.char.array:47
 msgid ""
 "When true, the resulting `~numpy.char.chararray` can contain Unicode "
 "characters, when false only 8-bit characters.  If unicode is None and `obj` "
@@ -130,29 +137,29 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.array:47
+#: of numpy.char.array:51
 msgid "a `~numpy.char.chararray`,"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.array:48
+#: of numpy.char.array:52
 msgid "an ndarray of type :class:`str_` or :class:`bytes_`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.array:49
+#: of numpy.char.array:53
 msgid "a Python :class:`str` or :class:`bytes` object,"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.array:51
+#: of numpy.char.array:55
 msgid ""
 "then the unicode setting of the output array will be automatically "
 "determined."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.array:71
+#: of numpy.char.array:77
 msgid "**order**"
 msgstr ""
 
@@ -162,7 +169,7 @@ msgid "{'C', 'F', 'A'}, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.array:55
+#: of numpy.char.array:59
 msgid ""
 "Specify the order of the array.  If order is 'C' (default), then the array "
 "will be in C-contiguous order (last-index varies the fastest).  If order is "
@@ -172,23 +179,23 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
-#: of numpy.char.array:74
+#: of numpy.char.array:80
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
 #: of numpy.char.array:-1
 msgid ""
-"<div id=\"12be12f7-876a-470d-8d5a-2cdd3bc82fcc\" "
+"<div id=\"e98623bb-634e-412a-a77d-4ded8c14a1b4\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('724c637f-56bd-4df7-"
-"a116-19d4944b33ff','12be12f7-876a-470d-8d5a-2cdd3bc82fcc')\">Go Back</"
+"tryExamplesHideIframe('02eab8b1-2098-4367-"
+"aac2-9f5d8af8ed7a','e98623bb-634e-412a-a77d-4ded8c14a1b4')\">Go Back</"
 "button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('724c637f-56bd-4df7-"
-"a116-19d4944b33ff','12be12f7-876a-470d-8d5a-2cdd3bc82fcc')\">Open In Tab</"
-"button></div><div id=\"9f8d0cf3-89eb-4c2f-930b-9b94b90f77e6\" "
+"openInNewTab('02eab8b1-2098-4367-aac2-9f5d8af8ed7a','e98623bb-634e-412a-"
+"a77d-4ded8c14a1b4')\">Open In Tab</button></div><div "
+"id=\"d4cfccac-56f3-4ceb-81c3-192868412934\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 

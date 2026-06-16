@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,7 +58,7 @@ msgid "Parameters"
 msgstr "參數"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.suppress_warnings:35
+#: of numpy.testing._private.utils.suppress_warnings:28
 msgid "**forwarding_rule**"
 msgstr ""
 
@@ -79,12 +79,57 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.suppress_warnings:38
+#: of numpy.testing._private.utils.suppress_warnings:31
+msgid "Methods"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.suppress_warnings:46:<autosummary>:1
+msgid ""
+":py:obj:`__call__ <numpy.testing.suppress_warnings.__call__>`\\ \\(func\\)"
+msgstr ""
+":py:obj:`__call__ <numpy.testing.suppress_warnings.__call__>`\\ \\(func\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.suppress_warnings:46:<autosummary>:1
+msgid "Function decorator to apply certain suppressions to a whole function."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.suppress_warnings:46:<autosummary>:1
+msgid ""
+":py:obj:`filter <numpy.testing.suppress_warnings.filter>`\\ "
+"\\(\\[category\\, message\\, module\\]\\)"
+msgstr ""
+":py:obj:`filter <numpy.testing.suppress_warnings.filter>`\\ "
+"\\(\\[category\\, message\\, module\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.suppress_warnings:46:<autosummary>:1
+msgid "Add a new suppressing filter or apply it if the state is entered."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.suppress_warnings:46:<autosummary>:1
+msgid ""
+":py:obj:`record <numpy.testing.suppress_warnings.record>`\\ "
+"\\(\\[category\\, message\\, module\\]\\)"
+msgstr ""
+":py:obj:`record <numpy.testing.suppress_warnings.record>`\\ "
+"\\(\\[category\\, message\\, module\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.suppress_warnings:46:<autosummary>:1
+msgid "Append a new recording filter or apply it if the state is entered."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.suppress_warnings:48
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.suppress_warnings:39
+#: of numpy.testing._private.utils.suppress_warnings:49
 msgid ""
 "Filters added inside the context manager will be discarded again when "
 "leaving it. Upon entering all filters defined outside a context will be "
@@ -92,14 +137,14 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.suppress_warnings:43
+#: of numpy.testing._private.utils.suppress_warnings:53
 msgid ""
 "When a recording filter is added, matching warnings are stored in the "
 "``log`` attribute as well as in the list returned by ``record``."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.suppress_warnings:46
+#: of numpy.testing._private.utils.suppress_warnings:56
 msgid ""
 "If filters are added and the ``module`` keyword is given, the warning "
 "registry of this module will additionally be cleared when applying it, "
@@ -109,7 +154,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.suppress_warnings:53
+#: of numpy.testing._private.utils.suppress_warnings:63
 msgid ""
 "Nesting this context manager will work as expected when the forwarding rule "
 "is \"always\" (default). Unfiltered and unrecorded warnings will be passed "
@@ -119,22 +164,22 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.suppress_warnings:60
+#: of numpy.testing._private.utils.suppress_warnings:70
 msgid "Like ``catch_warnings`` this context manager is not threadsafe."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.suppress_warnings:64
+#: of numpy.testing._private.utils.suppress_warnings:74
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.suppress_warnings:69
+#: of numpy.testing._private.utils.suppress_warnings:79
 msgid "With a context manager::"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.suppress_warnings:71
+#: of numpy.testing._private.utils.suppress_warnings:81
 msgid ""
 "with np.testing.suppress_warnings() as sup:\n"
 "    sup.filter(DeprecationWarning, \"Some text\")\n"
@@ -149,12 +194,12 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.suppress_warnings:82
+#: of numpy.testing._private.utils.suppress_warnings:92
 msgid "Or as a decorator::"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.suppress_warnings:84
+#: of numpy.testing._private.utils.suppress_warnings:94
 msgid ""
 "sup = np.testing.suppress_warnings()\n"
 "sup.filter(module=np.ma.core)  # module must match exactly\n"
@@ -167,16 +212,14 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
 #: of numpy.testing._private.utils.suppress_warnings:-1
 msgid ""
-"<div id=\"8fc74d50-3533-4646-bb16-4eec0602a15e\" "
+"<div id=\"0ac43aa3-0136-4e5e-9ea4-6a7d1cb12322\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('eaa57fdd-ecb3-404a-bcad-"
-"da46010596ec','8fc74d50-3533-4646-bb16-4eec0602a15e')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('eaa57fdd-ecb3-404a-bcad-da46010596ec','8fc74d50-3533-4646-"
-"bb16-4eec0602a15e')\">Open In Tab</button></div><div "
-"id=\"44a6942c-49a9-4f4d-8012-042d9a91cc76\" "
+"tryExamplesHideIframe('63bad847-6757-46cc-999a-0216f3f137ea','0ac43aa3-0136-4e5e-9ea4-6a7d1cb12322')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('63bad847-6757-46cc-999a-0216f3f137ea','0ac43aa3-0136-4e5e-9ea4-6a7d1cb12322')\">Open "
+"In Tab</button></div><div id=\"920c8eff-b168-499d-bea8-b47aca2ffeb9\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
@@ -185,49 +228,4 @@ msgstr ""
 msgid ""
 "<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
 "loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.suppress_warnings:94
-msgid "Methods"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.suppress_warnings:101:<autosummary>:1
-msgid ""
-":py:obj:`__call__ <numpy.testing.suppress_warnings.__call__>`\\ \\(func\\)"
-msgstr ""
-":py:obj:`__call__ <numpy.testing.suppress_warnings.__call__>`\\ \\(func\\)"
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.suppress_warnings:101:<autosummary>:1
-msgid "Function decorator to apply certain suppressions to a whole function."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.suppress_warnings:101:<autosummary>:1
-msgid ""
-":py:obj:`filter <numpy.testing.suppress_warnings.filter>`\\ "
-"\\(\\[category\\, message\\, module\\]\\)"
-msgstr ""
-":py:obj:`filter <numpy.testing.suppress_warnings.filter>`\\ "
-"\\(\\[category\\, message\\, module\\]\\)"
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.suppress_warnings:101:<autosummary>:1
-msgid "Add a new suppressing filter or apply it if the state is entered."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.suppress_warnings:101:<autosummary>:1
-msgid ""
-":py:obj:`record <numpy.testing.suppress_warnings.record>`\\ "
-"\\(\\[category\\, message\\, module\\]\\)"
-msgstr ""
-":py:obj:`record <numpy.testing.suppress_warnings.record>`\\ "
-"\\(\\[category\\, message\\, module\\]\\)"
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
-#: of numpy.testing._private.utils.suppress_warnings:101:<autosummary>:1
-msgid "Append a new recording filter or apply it if the state is entered."
 msgstr ""

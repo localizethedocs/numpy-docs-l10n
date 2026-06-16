@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,7 +49,7 @@ msgid "Parameters"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
-#: of numpy.lib.Arrayterator:16 numpy.lib.Arrayterator:79
+#: of numpy.lib.Arrayterator:16 numpy.lib.Arrayterator:27
 msgid "**var**"
 msgstr ""
 
@@ -64,7 +64,7 @@ msgid "The object to iterate over."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
-#: of numpy.lib.Arrayterator:29 numpy.lib.Arrayterator:82
+#: of numpy.lib.Arrayterator:22 numpy.lib.Arrayterator:30
 msgid "**buf_size**"
 msgstr ""
 
@@ -82,42 +82,82 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
-#: of numpy.lib.Arrayterator:34
-msgid ":obj:`numpy.ndenumerate`"
+#: of numpy.lib.Arrayterator:0
+msgid "Attributes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
-#: of numpy.lib.Arrayterator:35
-msgid "Multidimensional array iterator."
+#: of numpy.lib.Arrayterator:33
+msgid "**start**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
 #: of numpy.lib.Arrayterator:36
-msgid ":obj:`numpy.flatiter`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
-#: of numpy.lib.Arrayterator:37
-msgid "Flat array iterator."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
-#: of numpy.lib.Arrayterator:38
-msgid ":obj:`numpy.memmap`"
+msgid "**stop**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
 #: of numpy.lib.Arrayterator:39
+msgid "**step**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.Arrayterator:42
+msgid ":obj:`shape <shape>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.Arrayterator:42
+msgid "The shape of the array to be iterated over."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.Arrayterator:53
+msgid ":obj:`flat <flat>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.Arrayterator:45
+msgid "A 1-D flat iterator for Arrayterator objects."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.Arrayterator:58
+msgid ":obj:`numpy.ndenumerate`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.Arrayterator:59
+msgid "Multidimensional array iterator."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.Arrayterator:60
+msgid ":obj:`numpy.flatiter`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.Arrayterator:61
+msgid "Flat array iterator."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.Arrayterator:62
+msgid ":obj:`numpy.memmap`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
+#: of numpy.lib.Arrayterator:63
 msgid "Create a memory-map to an array stored in a binary file on disk."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
-#: of numpy.lib.Arrayterator:43
+#: of numpy.lib.Arrayterator:67
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
-#: of numpy.lib.Arrayterator:44
+#: of numpy.lib.Arrayterator:68
 msgid ""
 "The algorithm works by first finding a \"running dimension\", along which "
 "the blocks will be extracted. Given an array of dimensions ``(d1, d2, ..., "
@@ -129,12 +169,12 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
-#: of numpy.lib.Arrayterator:55
+#: of numpy.lib.Arrayterator:79
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
-#: of numpy.lib.Arrayterator:66
+#: of numpy.lib.Arrayterator:90
 msgid ""
 "Now we can iterate over ``a_itor``, and it will return arrays of size two. "
 "Since `buf_size` was smaller than any dimension, the first dimension will be "
@@ -144,16 +184,16 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
 #: of numpy.lib.Arrayterator:-1
 msgid ""
-"<div id=\"706c4a8f-9b16-4ea7-936e-9c62ee8a3018\" "
+"<div id=\"0e9bc6c9-898c-43ed-9736-6161a5d1d45d\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('4ff8a956-aeff-41a9-8c82-"
-"c41f04ace387','706c4a8f-9b16-4ea7-936e-9c62ee8a3018')\">Go Back</"
+"tryExamplesHideIframe('a1977e41-c7ed-4ac2-8319-"
+"b83ec3ff9949','0e9bc6c9-898c-43ed-9736-6161a5d1d45d')\">Go Back</"
 "button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('4ff8a956-aeff-41a9-8c82-"
-"c41f04ace387','706c4a8f-9b16-4ea7-936e-9c62ee8a3018')\">Open In Tab</"
-"button></div><div id=\"bc93c3f7-0fc1-4566-b07e-5035ccc7699e\" "
+"openInNewTab('a1977e41-c7ed-4ac2-8319-"
+"b83ec3ff9949','0e9bc6c9-898c-43ed-9736-6161a5d1d45d')\">Open In Tab</"
+"button></div><div id=\"3fa406c7-2e94-43f8-87b3-7c779ac940fb\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
@@ -162,44 +202,4 @@ msgstr ""
 msgid ""
 "<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
 "loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
-#: of numpy.lib.Arrayterator:0
-msgid "Attributes"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
-#: of numpy.lib.Arrayterator:85
-msgid "**start**"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
-#: of numpy.lib.Arrayterator:88
-msgid "**stop**"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
-#: of numpy.lib.Arrayterator:91
-msgid "**step**"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
-#: of numpy.lib.Arrayterator:94
-msgid ":obj:`shape <shape>`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
-#: of numpy.lib.Arrayterator:94
-msgid "The shape of the array to be iterated over."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
-#: of numpy.lib.Arrayterator:98
-msgid ":obj:`flat <flat>`"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/__init__.py:docstring
-#: of numpy.lib.Arrayterator:97
-msgid "A 1-D flat iterator for Arrayterator objects."
 msgstr ""

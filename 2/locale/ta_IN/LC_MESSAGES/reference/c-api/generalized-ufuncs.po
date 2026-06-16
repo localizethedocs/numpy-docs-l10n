@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,6 +22,10 @@ msgid "Generalized universal function API"
 msgstr ""
 
 #: ../../../reference/c-api/generalized-ufuncs.rst:7
+msgid ":ref:`ufuncs`"
+msgstr ""
+
+#: ../../../reference/c-api/generalized-ufuncs.rst:9
 msgid ""
 "There is a general need for looping over not only functions on scalars but "
 "also over functions on vectors (or arrays). This concept is realized in "
@@ -32,7 +36,7 @@ msgid ""
 "and its terms are re-used in the following."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:15
+#: ../../../reference/c-api/generalized-ufuncs.rst:17
 msgid ""
 "Each generalized ufunc has information associated with it that states what "
 "the \"core\" dimensionality of the inputs is, as well as the corresponding "
@@ -42,7 +46,7 @@ msgid ""
 "signature ``(),()->()`` defining two scalar inputs and one scalar output."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:23
+#: ../../../reference/c-api/generalized-ufuncs.rst:25
 msgid ""
 "Another example is the function ``inner1d(a, b)`` with a signature of ``(i),"
 "(i)->()``.  This applies the inner product along the last axis of each "
@@ -55,19 +59,19 @@ msgid ""
 "specify that the two corresponding dimensions should be of the same size."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:34
+#: ../../../reference/c-api/generalized-ufuncs.rst:36
 msgid ""
 "The dimensions beyond the core dimensions are called \"loop\" dimensions.  "
 "In the above example, this corresponds to ``(3, 5)``."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:37
+#: ../../../reference/c-api/generalized-ufuncs.rst:39
 msgid ""
 "The signature determines how the dimensions of each input/output array are "
 "split into core and loop dimensions:"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:40
+#: ../../../reference/c-api/generalized-ufuncs.rst:42
 msgid ""
 "Each dimension in the signature is matched to a dimension of the "
 "corresponding passed-in array, starting from the end of the shape tuple. "
@@ -75,26 +79,26 @@ msgid ""
 "error will be raised."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:44
+#: ../../../reference/c-api/generalized-ufuncs.rst:46
 msgid ""
 "Core dimensions assigned to the same label in the signature (e.g. the ``i`` "
 "in ``inner1d``'s ``(i),(i)->()``) must have exactly matching sizes, no "
 "broadcasting is performed."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:47
+#: ../../../reference/c-api/generalized-ufuncs.rst:49
 msgid ""
 "The core dimensions are removed from all inputs and the remaining dimensions "
 "are broadcast together, defining the loop dimensions."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:49
+#: ../../../reference/c-api/generalized-ufuncs.rst:51
 msgid ""
 "The shape of each output is determined from the loop dimensions plus the "
 "output's core dimensions"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:52
+#: ../../../reference/c-api/generalized-ufuncs.rst:54
 msgid ""
 "Typically, the size of all core dimensions in an output will be determined "
 "by the size of a core dimension with the same label in an input array. This "
@@ -109,11 +113,11 @@ msgid ""
 "of an output cannot be determined from a passed in input or output array, an "
 "error will be raised.  This can be changed by defining a "
 "``PyUFunc_ProcessCoreDimsFunc`` function and assigning it to the "
-"``proces_core_dims_func`` field of the ``PyUFuncObject`` structure.  See "
+"``process_core_dims_func`` field of the ``PyUFuncObject`` structure.  See "
 "below for more details."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:67
+#: ../../../reference/c-api/generalized-ufuncs.rst:69
 msgid ""
 "Note: Prior to NumPy 1.10.0, less strict checks were in place: missing core "
 "dimensions were created by prepending 1's to the shape as necessary, core "
@@ -121,15 +125,15 @@ msgid ""
 "dimensions were created with size 1."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:74
+#: ../../../reference/c-api/generalized-ufuncs.rst:76
 msgid "Definitions"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:83
+#: ../../../reference/c-api/generalized-ufuncs.rst:85
 msgid "Elementary Function"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:77
+#: ../../../reference/c-api/generalized-ufuncs.rst:79
 msgid ""
 "Each ufunc consists of an elementary function that performs the most basic "
 "operation on the smallest portion of array arguments (e.g. adding two "
@@ -139,21 +143,21 @@ msgid ""
 "elementary function of ``inner1d`` takes two vectors as input."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:88
+#: ../../../reference/c-api/generalized-ufuncs.rst:90
 msgid "Signature"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:86
+#: ../../../reference/c-api/generalized-ufuncs.rst:88
 msgid ""
 "A signature is a string describing the input/output dimensions of the "
 "elementary function of a ufunc.  See section below for more details."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:94
+#: ../../../reference/c-api/generalized-ufuncs.rst:96
 msgid "Core Dimension"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:91
+#: ../../../reference/c-api/generalized-ufuncs.rst:93
 msgid ""
 "The dimensionality of each input/output of an elementary function is defined "
 "by its core dimensions (zero core dimensions correspond to a scalar input/"
@@ -161,39 +165,39 @@ msgid ""
 "output arrays."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:99
+#: ../../../reference/c-api/generalized-ufuncs.rst:101
 msgid "Dimension Name"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:97
+#: ../../../reference/c-api/generalized-ufuncs.rst:99
 msgid ""
 "A dimension name represents a core dimension in the signature. Different "
 "dimensions may share a name, indicating that they are of the same size."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:104
+#: ../../../reference/c-api/generalized-ufuncs.rst:106
 msgid "Dimension Index"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:102
+#: ../../../reference/c-api/generalized-ufuncs.rst:104
 msgid ""
 "A dimension index is an integer representing a dimension name. It enumerates "
 "the dimension names according to the order of the first occurrence of each "
 "name in the signature."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:109
+#: ../../../reference/c-api/generalized-ufuncs.rst:111
 msgid "Details of signature"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:111
+#: ../../../reference/c-api/generalized-ufuncs.rst:113
 msgid ""
 "The signature defines \"core\" dimensionality of input and output variables, "
 "and thereby also defines the contraction of the dimensions.  The signature "
 "is represented by a string of the following format:"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:116
+#: ../../../reference/c-api/generalized-ufuncs.rst:118
 msgid ""
 "Core dimensions of each input or output array are represented by a list of "
 "dimension names in parentheses, ``(i_1,...,i_N)``; a scalar input/output is "
@@ -201,23 +205,23 @@ msgid ""
 "Python variable name."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:120
+#: ../../../reference/c-api/generalized-ufuncs.rst:122
 msgid ""
 "Dimension lists for different arguments are separated by ``\",\"``. Input/"
 "output arguments are separated by ``\"->\"``."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:122
+#: ../../../reference/c-api/generalized-ufuncs.rst:124
 msgid ""
 "If one uses the same dimension name in multiple locations, this enforces the "
 "same size of the corresponding dimensions."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:125
+#: ../../../reference/c-api/generalized-ufuncs.rst:127
 msgid "The formal syntax of signatures is as follows::"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:127
+#: ../../../reference/c-api/generalized-ufuncs.rst:129
 msgid ""
 "<Signature>            ::= <Input arguments> \"->\" <Output arguments>\n"
 "<Input arguments>      ::= <Argument list>\n"
@@ -232,30 +236,30 @@ msgid ""
 "<Dimension modifier>   ::= nil | \"?\""
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:138
+#: ../../../reference/c-api/generalized-ufuncs.rst:140
 msgid "Notes:"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:140
+#: ../../../reference/c-api/generalized-ufuncs.rst:142
 msgid "All quotes are for clarity."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:141
+#: ../../../reference/c-api/generalized-ufuncs.rst:143
 msgid ""
 "Unmodified core dimensions that share the same name must have the same size. "
 "Each dimension name typically corresponds to one level of looping in the "
 "elementary function's implementation."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:144
+#: ../../../reference/c-api/generalized-ufuncs.rst:146
 msgid "White spaces are ignored."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:145
+#: ../../../reference/c-api/generalized-ufuncs.rst:147
 msgid "An integer as a dimension name freezes that dimension to the value."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:146
+#: ../../../reference/c-api/generalized-ufuncs.rst:148
 msgid ""
 "If the name is suffixed with the \"?\" modifier, the dimension is a core "
 "dimension only if it exists on all inputs and outputs that share it; "
@@ -263,150 +267,150 @@ msgid ""
 "elementary function)."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:151
+#: ../../../reference/c-api/generalized-ufuncs.rst:153
 msgid "Here are some examples of signatures:"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:154
+#: ../../../reference/c-api/generalized-ufuncs.rst:156
 msgid "name"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:154
+#: ../../../reference/c-api/generalized-ufuncs.rst:156
 msgid "signature"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:154
+#: ../../../reference/c-api/generalized-ufuncs.rst:156
 msgid "common usage"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:156
+#: ../../../reference/c-api/generalized-ufuncs.rst:158
 msgid "add"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:156
+#: ../../../reference/c-api/generalized-ufuncs.rst:158
 msgid "``(),()->()``"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:156
+#: ../../../reference/c-api/generalized-ufuncs.rst:158
 msgid "binary ufunc"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:158
+#: ../../../reference/c-api/generalized-ufuncs.rst:160
 msgid "sum1d"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:158
+#: ../../../reference/c-api/generalized-ufuncs.rst:160
 msgid "``(i)->()``"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:158
+#: ../../../reference/c-api/generalized-ufuncs.rst:160
 msgid "reduction"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:160
+#: ../../../reference/c-api/generalized-ufuncs.rst:162
 msgid "inner1d"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:160
+#: ../../../reference/c-api/generalized-ufuncs.rst:162
 msgid "``(i),(i)->()``"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:160
+#: ../../../reference/c-api/generalized-ufuncs.rst:162
 msgid "vector-vector multiplication"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:162
+#: ../../../reference/c-api/generalized-ufuncs.rst:164
 msgid "matmat"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:162
+#: ../../../reference/c-api/generalized-ufuncs.rst:164
 msgid "``(m,n),(n,p)->(m,p)``"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:162
+#: ../../../reference/c-api/generalized-ufuncs.rst:164
 msgid "matrix multiplication"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:164
+#: ../../../reference/c-api/generalized-ufuncs.rst:166
 msgid "vecmat"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:164
+#: ../../../reference/c-api/generalized-ufuncs.rst:166
 msgid "``(n),(n,p)->(p)``"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:164
+#: ../../../reference/c-api/generalized-ufuncs.rst:166
 msgid "vector-matrix multiplication"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:166
+#: ../../../reference/c-api/generalized-ufuncs.rst:168
 msgid "matvec"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:166
+#: ../../../reference/c-api/generalized-ufuncs.rst:168
 msgid "``(m,n),(n)->(m)``"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:166
+#: ../../../reference/c-api/generalized-ufuncs.rst:168
 msgid "matrix-vector multiplication"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:168
+#: ../../../reference/c-api/generalized-ufuncs.rst:170
 msgid "matmul"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:168
+#: ../../../reference/c-api/generalized-ufuncs.rst:170
 msgid "``(m?,n),(n,p?)->(m?,p?)``"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:168
+#: ../../../reference/c-api/generalized-ufuncs.rst:170
 msgid "combination of the four above"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:170
+#: ../../../reference/c-api/generalized-ufuncs.rst:172
 msgid "outer_inner"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:170
+#: ../../../reference/c-api/generalized-ufuncs.rst:172
 msgid "``(i,t),(j,t)->(i,j)``"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:170
+#: ../../../reference/c-api/generalized-ufuncs.rst:172
 msgid ""
 "inner over the last dimension, outer over the second to last, and loop/"
 "broadcast over the rest."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:174
+#: ../../../reference/c-api/generalized-ufuncs.rst:176
 msgid "cross1d"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:174
+#: ../../../reference/c-api/generalized-ufuncs.rst:176
 msgid "``(3),(3)->(3)``"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:174
+#: ../../../reference/c-api/generalized-ufuncs.rst:176
 msgid "cross product where the last dimension is frozen and must be 3"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:180
+#: ../../../reference/c-api/generalized-ufuncs.rst:182
 msgid ""
 "The last is an instance of freezing a core dimension and can be used to "
 "improve ufunc performance"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:184
+#: ../../../reference/c-api/generalized-ufuncs.rst:186
 msgid "C-API for implementing elementary functions"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:186
+#: ../../../reference/c-api/generalized-ufuncs.rst:188
 msgid ""
 "The current interface remains unchanged, and ``PyUFunc_FromFuncAndData`` can "
 "still be used to implement (specialized) ufuncs, consisting of scalar "
 "elementary functions."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:190
+#: ../../../reference/c-api/generalized-ufuncs.rst:192
 msgid ""
 "One can use ``PyUFunc_FromFuncAndDataAndSignature`` to declare a more "
 "general ufunc.  The argument list is the same as "
@@ -414,7 +418,7 @@ msgid ""
 "signature as C string."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:195
+#: ../../../reference/c-api/generalized-ufuncs.rst:197
 msgid ""
 "Furthermore, the callback function is of the same type as before, ``void "
 "(*foo)(char **args, intp *dimensions, intp *steps, void *func)``. When "
@@ -425,7 +429,7 @@ msgid ""
 "axis to be looped over."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:203
+#: ../../../reference/c-api/generalized-ufuncs.rst:205
 msgid ""
 "For a non-trivial signature, ``dimensions`` will also contain the sizes of "
 "the core dimensions as well, starting at the second entry.  Only one size is "
@@ -433,14 +437,14 @@ msgid ""
 "the first occurrence of a dimension name in the signature."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:209
+#: ../../../reference/c-api/generalized-ufuncs.rst:211
 msgid ""
 "The first ``nargs`` elements of ``steps`` remain the same as for scalar "
 "ufuncs.  The following elements contain the strides of all core dimensions "
 "for all arguments in order."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:213
+#: ../../../reference/c-api/generalized-ufuncs.rst:215
 msgid ""
 "For example, consider a ufunc with signature ``(i,j),(i)->()``.  In this "
 "case, ``args`` will contain three pointers to the data of the input/output "
@@ -450,11 +454,11 @@ msgid ""
 "b_N, c_N, a_i, a_j, b_i]``, containing all necessary strides."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:221
+#: ../../../reference/c-api/generalized-ufuncs.rst:223
 msgid "Customizing core dimension size processing"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:223
+#: ../../../reference/c-api/generalized-ufuncs.rst:225
 msgid ""
 "The optional function of type ``PyUFunc_ProcessCoreDimsFunc``, stored on the "
 "``process_core_dims_func`` attribute of the ufunc, provides the author of "
@@ -463,19 +467,19 @@ msgid ""
 "are:"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:229
+#: ../../../reference/c-api/generalized-ufuncs.rst:231
 msgid ""
 "Check that constraints on the core dimensions required by the ufunc are "
 "satisfied (and set an exception if they are not)."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:231
+#: ../../../reference/c-api/generalized-ufuncs.rst:233
 msgid ""
 "Compute output shapes for any output core dimensions that were not "
 "determined by the input arrays."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:234
+#: ../../../reference/c-api/generalized-ufuncs.rst:236
 msgid ""
 "As an example of the first use, consider the generalized ufunc ``minmax`` "
 "with signature ``(n)->(2)`` that simultaneously computes the minimum and "
@@ -484,7 +488,7 @@ msgid ""
 "case, the ufunc author might define the function like this:"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:240
+#: ../../../reference/c-api/generalized-ufuncs.rst:242
 msgid ""
 "int minmax_process_core_dims(PyUFuncObject *ufunc,\n"
 "                             npy_intp *core_dim_sizes)\n"
@@ -500,7 +504,7 @@ msgid ""
 "}"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:255
+#: ../../../reference/c-api/generalized-ufuncs.rst:257
 msgid ""
 "In this case, the length of the array ``core_dim_sizes`` will be 2. The "
 "second value in the array will always be 2, so there is no need for the "
@@ -509,7 +513,7 @@ msgid ""
 "``n`` is 0."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:261
+#: ../../../reference/c-api/generalized-ufuncs.rst:263
 msgid ""
 "The second use for the \"hook\" is to compute the size of output arrays when "
 "the output arrays are not provided by the caller and one or more core "
@@ -521,7 +525,7 @@ msgid ""
 "to whatever is appropriate for the ufunc."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:270
+#: ../../../reference/c-api/generalized-ufuncs.rst:272
 msgid ""
 "In the array passed to the \"hook\" function, core dimensions that were not "
 "determined by the input are indicated by having the value -1 in the "
@@ -530,7 +534,7 @@ msgid ""
 "occurred in the input arrays."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:277
+#: ../../../reference/c-api/generalized-ufuncs.rst:279
 msgid ""
 "The function must never change a value in ``core_dim_sizes`` that is not -1 "
 "on input.  Changing a value that was not -1 will generally result in "
@@ -538,7 +542,7 @@ msgid ""
 "crashing."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:282
+#: ../../../reference/c-api/generalized-ufuncs.rst:284
 msgid ""
 "For example, consider the generalized ufunc ``conv1d`` for which the "
 "elementary function computes the \"full\" convolution of two one-dimensional "
@@ -552,11 +556,11 @@ msgid ""
 "requires that ``m + n`` is at least 1, i.e. both inputs can't have length 0."
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:294
+#: ../../../reference/c-api/generalized-ufuncs.rst:296
 msgid "Here's how that might look in code:"
 msgstr ""
 
-#: ../../../reference/c-api/generalized-ufuncs.rst:296
+#: ../../../reference/c-api/generalized-ufuncs.rst:298
 msgid ""
 "int conv1d_process_core_dims(PyUFuncObject *ufunc,\n"
 "                             npy_intp *core_dim_sizes)\n"

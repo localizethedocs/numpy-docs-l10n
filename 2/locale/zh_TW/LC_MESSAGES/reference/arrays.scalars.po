@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -935,7 +935,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.void:28
+#: of numpy.void:30
 msgid "**dtype**"
 msgstr "**dtype**"
 
@@ -953,12 +953,12 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.void:31
+#: of numpy.void:33
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.void:32
+#: of numpy.void:34
 msgid ""
 "For historical reasons and because void scalars can represent both arbitrary "
 "byte data and structured dtypes, the void constructor has three calling "
@@ -966,56 +966,52 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.void:36
+#: of numpy.void:38
 msgid "``np.void(5)`` creates a ``dtype=\"V5\"`` scalar filled with five"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.void:37
+#: of numpy.void:39
 msgid "``\\0`` bytes.  The 5 can be a Python or NumPy integer."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.void:38
+#: of numpy.void:40
 msgid ""
 "``np.void(b\"bytes-like\")`` creates a void scalar from the byte string."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.void:39
+#: of numpy.void:41
 msgid "The dtype itemsize will match the byte string length, here ``\"V10\"``."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.void:41
+#: of numpy.void:43
 msgid "When a ``dtype=`` is passed the call is roughly the same as an"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.void:41
+#: of numpy.void:43
 msgid "array creation.  However, a void scalar rather than array is returned."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.void:43
+#: of numpy.void:45
 msgid "Please see the examples which show all three different conventions."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.void:47
+#: of numpy.void:49
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.void:61
+#: of numpy.void:63
 msgid "``'V'``"
 msgstr ""
 
 #: ../../../reference/arrays.scalars.rst:330
-msgid "See :ref:`Note on string types<string-dtype-note>`."
-msgstr ""
-
-#: ../../../reference/arrays.scalars.rst:332
 msgid ""
 "Numeric Compatibility: If you used old typecode characters in your Numeric "
 "code (which was never recommended), you will need to change some of them to "
@@ -1025,11 +1021,11 @@ msgid ""
 "such as the :mod:`struct` module."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:343
+#: ../../../reference/arrays.scalars.rst:341
 msgid "Sized aliases"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:345
+#: ../../../reference/arrays.scalars.rst:343
 msgid ""
 "Along with their (mostly) C-derived names, the integer, float, and complex "
 "data-types are also available using a bit-width convention so that an array "
@@ -1038,90 +1034,90 @@ msgid ""
 "large to hold a C pointer are also provided."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:360
+#: ../../../reference/arrays.scalars.rst:358
 msgid ""
 "Aliases for the signed integer types (one of `numpy.byte`, `numpy.short`, "
 "`numpy.intc`, `numpy.int_`, `numpy.long` and `numpy.longlong`) with the "
 "specified number of bits."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:364
+#: ../../../reference/arrays.scalars.rst:362
 msgid ""
 "Compatible with the C99 ``int8_t``, ``int16_t``, ``int32_t``, and "
 "``int64_t``, respectively."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:372
+#: ../../../reference/arrays.scalars.rst:370
 msgid ""
 "Alias for the unsigned integer types (one of `numpy.ubyte`, `numpy.ushort`, "
 "`numpy.uintc`, `numpy.uint`, `numpy.ulong` and `numpy.ulonglong`) with the "
 "specified number of bits."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:376
+#: ../../../reference/arrays.scalars.rst:374
 msgid ""
 "Compatible with the C99 ``uint8_t``, ``uint16_t``, ``uint32_t``, and "
 "``uint64_t``, respectively."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:381
+#: ../../../reference/arrays.scalars.rst:379
 msgid ""
 "Alias for the signed integer type (one of `numpy.byte`, `numpy.short`, "
 "`numpy.intc`, `numpy.int_`, `numpy.long` and `numpy.longlong`) that is used "
 "as a default integer and for indexing."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:385
+#: ../../../reference/arrays.scalars.rst:383
 msgid "Compatible with the C ``Py_ssize_t``."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:387
+#: ../../../reference/arrays.scalars.rst:385
 msgid "``'n'``"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:389
+#: ../../../reference/arrays.scalars.rst:387
 msgid ""
 "Before NumPy 2, this had the same size as a pointer.  In practice this is "
 "almost always identical, but the character code ``'p'`` maps to the C "
 "``intptr_t``.  The character code ``'n'`` was added in NumPy 2.0."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:396
+#: ../../../reference/arrays.scalars.rst:394
 msgid "Alias for the unsigned integer type that is the same size as ``intp``."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:398
+#: ../../../reference/arrays.scalars.rst:396
 msgid "Compatible with the C ``size_t``."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:400
+#: ../../../reference/arrays.scalars.rst:398
 msgid "``'N'``"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:402
+#: ../../../reference/arrays.scalars.rst:400
 msgid ""
 "Before NumPy 2, this had the same size as a pointer.  In practice this is "
 "almost always identical, but the character code ``'P'`` maps to the C "
 "``uintptr_t``.  The character code ``'N'`` was added in NumPy 2.0."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:416
+#: ../../../reference/arrays.scalars.rst:414
 msgid ""
 "Alias for `numpy.longdouble`, named after its size in bits. The existence of "
 "these aliases depends on the platform."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:426
+#: ../../../reference/arrays.scalars.rst:424
 msgid ""
 "Alias for `numpy.clongdouble`, named after its size in bits. The existence "
 "of these aliases depends on the platform."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:430
+#: ../../../reference/arrays.scalars.rst:428
 msgid "Attributes"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:432
+#: ../../../reference/arrays.scalars.rst:430
 msgid ""
 "The array scalar objects have an :obj:`array priority <class."
 "__array_priority__>` of :c:data:`NPY_SCALAR_PRIORITY` (-1,000,000.0). They "
@@ -1129,179 +1125,179 @@ msgid ""
 "Otherwise, they share the same attributes as arrays:"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid ":py:obj:`generic.flags <numpy.generic.flags>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid "The integer value of flags."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid ":py:obj:`generic.shape <numpy.generic.shape>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid "Tuple of array dimensions."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid ":py:obj:`generic.strides <numpy.generic.strides>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid "Tuple of bytes steps in each dimension."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid ":py:obj:`generic.ndim <numpy.generic.ndim>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid "The number of array dimensions."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid ":py:obj:`generic.data <numpy.generic.data>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid "Pointer to start of data."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid ":py:obj:`generic.size <numpy.generic.size>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid "The number of elements in the gentype."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid ":py:obj:`generic.itemsize <numpy.generic.itemsize>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid "The length of one element in bytes."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid ":py:obj:`generic.base <numpy.generic.base>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid "Scalar attribute identical to `ndarray.base`."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid ":py:obj:`generic.dtype <numpy.generic.dtype>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid "Get array data-descriptor."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid ":py:obj:`generic.real <numpy.generic.real>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid "The real part of the scalar."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid ":py:obj:`generic.imag <numpy.generic.imag>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid "The imaginary part of the scalar."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid ":py:obj:`generic.flat <numpy.generic.flat>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid "A 1-D view of the scalar."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid ":py:obj:`generic.T <numpy.generic.T>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid "Scalar attribute identical to `ndarray.T`."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid ""
 ":py:obj:`generic.__array_interface__ <numpy.generic.__array_interface__>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid "Array protocol: Python side"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid ":py:obj:`generic.__array_struct__ <numpy.generic.__array_struct__>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid "Array protocol: struct"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid ""
 ":py:obj:`generic.__array_priority__ <numpy.generic.__array_priority__>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
 msgid "Array priority."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
-#: ../../../reference/arrays.scalars.rst:494:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
 msgid ":py:obj:`generic.__array_wrap__ <numpy.generic.__array_wrap__>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:458:<autosummary>:1
-#: ../../../reference/arrays.scalars.rst:494:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:456:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
 msgid "__array_wrap__ implementation for scalar types"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:460
+#: ../../../reference/arrays.scalars.rst:458
 msgid "Indexing"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:461
+#: ../../../reference/arrays.scalars.rst:459
 msgid ":ref:`arrays.indexing`, :ref:`arrays.dtypes`"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:463
+#: ../../../reference/arrays.scalars.rst:461
 msgid ""
 "Array scalars can be indexed like 0-dimensional arrays: if *x* is an array "
 "scalar,"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:466
+#: ../../../reference/arrays.scalars.rst:464
 msgid "``x[()]`` returns a copy of array scalar"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:467
+#: ../../../reference/arrays.scalars.rst:465
 msgid "``x[...]`` returns a 0-dimensional :class:`ndarray`"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:468
+#: ../../../reference/arrays.scalars.rst:466
 msgid ""
 "``x['field-name']`` returns the array scalar in the field *field-name*. (*x* "
 "can have fields, for example, when it corresponds to a structured data type.)"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:472
+#: ../../../reference/arrays.scalars.rst:470
 msgid "Methods"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:474
+#: ../../../reference/arrays.scalars.rst:472
 msgid ""
 "Array scalars have exactly the same methods as arrays. The default behavior "
 "of these methods is to internally convert the scalar to an equivalent 0-"
@@ -1312,78 +1308,78 @@ msgid ""
 "scalars."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:482
+#: ../../../reference/arrays.scalars.rst:480
 msgid "The exceptions to the above rules are given below:"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:494:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
 msgid ":py:obj:`generic.__array__ <numpy.generic.__array__>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:494:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
 msgid "sc.__array__(dtype) return 0-dim array from scalar with specified dtype"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:494:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
 msgid ""
 ":py:obj:`generic.squeeze <numpy.generic.squeeze>`\\ \\(\\/\\[\\, axis\\]\\)"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:494:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
 msgid "Scalar method identical to `ndarray.squeeze`."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:494:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
 msgid ""
 ":py:obj:`generic.byteswap <numpy.generic.byteswap>`\\ \\(\\/\\[\\, "
 "inplace\\]\\)"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:494:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
 msgid "Scalar method identical to `ndarray.byteswap`."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:494:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
 msgid ":py:obj:`generic.__reduce__ <numpy.generic.__reduce__>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:494:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
 msgid "Helper for pickle."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:494:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
 msgid ":py:obj:`generic.__setstate__ <numpy.generic.__setstate__>`\\"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:494:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
 msgid ""
 ":py:obj:`generic.setflags <numpy.generic.setflags>`\\ \\(\\*\\[\\, write\\, "
 "align\\, uic\\]\\)"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:494:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:492:<autosummary>:1
 msgid "Scalar method identical to `ndarray.setflags`."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:495
+#: ../../../reference/arrays.scalars.rst:493
 msgid "Utility method for typing:"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:502:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:500:<autosummary>:1
 msgid ""
 ":py:obj:`number.__class_getitem__ <numpy.number.__class_getitem__>`\\ "
 "\\(item\\, \\/\\)"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:502:<autosummary>:1
+#: ../../../reference/arrays.scalars.rst:500:<autosummary>:1
 msgid "Return a parametrized wrapper around the `~numpy.number` type."
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:504
+#: ../../../reference/arrays.scalars.rst:502
 msgid "Defining new types"
 msgstr ""
 
-#: ../../../reference/arrays.scalars.rst:506
+#: ../../../reference/arrays.scalars.rst:504
 msgid ""
 "There are two ways to effectively define a new array scalar type (apart from "
 "composing structured types :ref:`dtypes <arrays.dtypes>` from the built-in "

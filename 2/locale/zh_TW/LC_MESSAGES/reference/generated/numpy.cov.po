@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -163,7 +163,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cov:56
+#: of numpy.cov:58
 msgid "**dtype**"
 msgstr "**dtype**"
 
@@ -185,7 +185,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cov:67
+#: of numpy.cov:69
 msgid "**out**"
 msgstr "**out**"
 
@@ -195,27 +195,27 @@ msgid "ndarray"
 msgstr "ndarray"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cov:61
+#: of numpy.cov:63
 msgid "The covariance matrix of the variables."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cov:72
+#: of numpy.cov:74
 msgid ":obj:`corrcoef`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cov:73
+#: of numpy.cov:75
 msgid "Normalized covariance matrix"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cov:77
+#: of numpy.cov:79
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cov:78
+#: of numpy.cov:80
 msgid ""
 "Assume that the observations are in the columns of the observation array `m` "
 "and let ``f = fweights`` and ``a = aweights`` for brevity. The steps to "
@@ -223,7 +223,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cov:82
+#: of numpy.cov:84
 msgid ""
 ">>> m = np.arange(10, dtype=np.float64)\n"
 ">>> f = np.arange(10) * 2\n"
@@ -237,56 +237,56 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cov:92
+#: of numpy.cov:94
 msgid ""
 "Note that when ``a == 1``, the normalization factor ``v1 / (v1**2 - ddof * "
 "v2)`` goes over to ``1 / (np.sum(f) - ddof)`` as it should."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cov:98
+#: of numpy.cov:100
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cov:105
+#: of numpy.cov:107
 msgid ""
 "Consider two variables, :math:`x_0` and :math:`x_1`, which correlate "
 "perfectly, but in opposite directions:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cov:113
+#: of numpy.cov:115
 msgid ""
 "Note how :math:`x_0` increases while :math:`x_1` decreases. The covariance "
 "matrix shows this clearly:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cov:120
+#: of numpy.cov:122
 msgid ""
 "Note that element :math:`C_{0,1}`, which shows the correlation between :math:"
 "`x_0` and :math:`x_1`, is negative."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.cov:123
+#: of numpy.cov:125
 msgid "Further, note how `x` and `y` are combined:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.cov:-1
 msgid ""
-"<div id=\"25118a35-509c-4f6d-83db-3a60b2858c36\" "
+"<div id=\"da286dd1-6026-4603-8fd2-2717ecf82c6c\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('8f34ab4d-a9e3-4cfe-"
-"a2be-87b17822fcc1','25118a35-509c-4f6d-83db-3a60b2858c36')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('8f34ab4d-a9e3-4cfe-"
-"a2be-87b17822fcc1','25118a35-509c-4f6d-83db-3a60b2858c36')\">Open In Tab</"
-"button></div><div id=\"eb3c5ead-7243-443f-8ce5-95977ebbfbca\" "
+"tryExamplesHideIframe('53091c5b-"
+"b441-4478-8792-19f4e06ed685','da286dd1-6026-4603-8fd2-2717ecf82c6c')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('53091c5b-"
+"b441-4478-8792-19f4e06ed685','da286dd1-6026-4603-8fd2-2717ecf82c6c')\">Open "
+"In Tab</button></div><div id=\"6e2406ed-4630-4c6c-a3f7-3d613b386a80\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 

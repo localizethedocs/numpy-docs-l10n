@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,7 +54,7 @@ msgid ""
 "Parameter of the distribution (length ``k`` for sample of length ``k``)."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:19
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:21
 msgid "**size**"
 msgstr ""
 
@@ -73,7 +73,7 @@ msgstr ""
 msgid "Returns"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:27
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:29
 msgid "**samples**"
 msgstr ""
 
@@ -81,7 +81,7 @@ msgstr ""
 msgid "ndarray,"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:24
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:26
 msgid "The drawn samples, of shape ``(size, k)``."
 msgstr ""
 
@@ -89,43 +89,43 @@ msgstr ""
 msgid "Raises"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:35
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:37
 msgid "ValueError"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:32
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:34
 msgid "If any value in ``alpha`` is less than zero"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:38
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:40
 msgid "Notes"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:39
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:41
 msgid ""
 "The Dirichlet distribution is a distribution over vectors :math:`x` that "
 "fulfil the conditions :math:`x_i>0` and :math:`\\sum_{i=1}^k x_i = 1`."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:43
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:45
 msgid ""
 "The probability density function :math:`p` of a Dirichlet-distributed random "
 "vector :math:`X` is proportional to"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:47
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:49
 msgid ""
 "p(x) \\propto \\prod_{i=1}^{k}{x^{\\alpha_i-1}_i},\n"
 "\n"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:49
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:51
 msgid ""
 "where :math:`\\alpha` is a vector containing the positive concentration "
 "parameters."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:52
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:54
 msgid ""
 "The method uses the following property for computation: let :math:`Y` be a "
 "random vector which has components that follow a standard gamma "
@@ -133,27 +133,27 @@ msgid ""
 "distributed"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:58
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:60
 msgid "References"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:59
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:61
 msgid ""
 "David McKay, \"Information Theory, Inference and Learning Algorithms,\" "
 "chapter 23, https://www.inference.org.uk/mackay/itila/"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:62
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:64
 msgid ""
 "Wikipedia, \"Dirichlet distribution\", https://en.wikipedia.org/wiki/"
 "Dirichlet_distribution"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:67
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:69
 msgid "[R0fe533894e26-1]_, [R0fe533894e26-2]_"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:70
+#: ../../../../docstring of numpy.random._generator.Generator.dirichlet:72
 msgid "Examples"
 msgstr ""
 
@@ -167,16 +167,16 @@ msgstr ""
 
 #: ../../../../docstring of numpy.random._generator.Generator.dirichlet:94
 msgid ""
-"<div id=\"c86cda62-1e9b-4297-8336-b63b2e29a038\" "
+"<div id=\"e02fc3d4-f211-4235-8e00-712207eaf344\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('b2ed7f3e-"
-"ed6d-47db-9fa8-1c046c87189a','c86cda62-1e9b-4297-8336-b63b2e29a038')\">Go "
-"Back</button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('b2ed7f3e-ed6d-47db-9fa8-1c046c87189a','c86cda62-1e9b-4297-8336-"
-"b63b2e29a038')\">Open In Tab</button></div><div id=\"db7404ee-"
-"ca84-4589-99d7-5d875bbccf82\" "
+"tryExamplesHideIframe('5e8cc074-3a52-42f7-85be-50423bee12c3','e02fc3d4-"
+"f211-4235-8e00-712207eaf344')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('5e8cc074-3a52-42f7-85be-50423bee12c3','e02fc3d4-"
+"f211-4235-8e00-712207eaf344')\">Open In Tab</button></div><div id=\"912aa87a-"
+"f571-4d1d-b349-d423271cf873\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 

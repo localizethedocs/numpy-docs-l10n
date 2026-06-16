@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -130,7 +130,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_normal:39
+#: numpy.random._generator.Generator.multivariate_normal:41
 msgid "**method**"
 msgstr ""
 
@@ -156,7 +156,7 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_normal:55
+#: numpy.random._generator.Generator.multivariate_normal:57
 msgid "**out**"
 msgstr ""
 
@@ -166,26 +166,26 @@ msgid "ndarray"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_normal:44
+#: numpy.random._generator.Generator.multivariate_normal:46
 msgid ""
 "The drawn samples, of shape *size*, if that was provided.  If not, the shape "
 "is ``(N,)``."
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_normal:47
+#: numpy.random._generator.Generator.multivariate_normal:49
 msgid ""
 "In other words, each entry ``out[i,j,...,:]`` is an N-dimensional value "
 "drawn from the distribution."
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_normal:58
+#: numpy.random._generator.Generator.multivariate_normal:60
 msgid "Notes"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_normal:59
+#: numpy.random._generator.Generator.multivariate_normal:61
 msgid ""
 "The mean is a coordinate in N-dimensional space, which represents the "
 "location where samples are most likely to be generated.  This is analogous "
@@ -194,7 +194,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_normal:64
+#: numpy.random._generator.Generator.multivariate_normal:66
 msgid ""
 "Covariance indicates the level to which two variables vary together. From "
 "the multivariate normal distribution, we draw N-dimensional samples, :math:"
@@ -204,33 +204,33 @@ msgid ""
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_normal:71
+#: numpy.random._generator.Generator.multivariate_normal:73
 msgid ""
 "Instead of specifying the full covariance matrix, popular approximations "
 "include:"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_normal:74
+#: numpy.random._generator.Generator.multivariate_normal:76
 msgid "Spherical covariance (`cov` is a multiple of the identity matrix)"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_normal:75
+#: numpy.random._generator.Generator.multivariate_normal:77
 msgid ""
 "Diagonal covariance (`cov` has non-negative elements, and only on the "
 "diagonal)"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_normal:78
+#: numpy.random._generator.Generator.multivariate_normal:80
 msgid ""
 "This geometrical property can be seen in two dimensions by plotting "
 "generated data-points:"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_normal:84
+#: numpy.random._generator.Generator.multivariate_normal:86
 msgid ""
 "Diagonal covariance means that the variables are independent, and the "
 "probability density contours have their axes aligned with the coordinate "
@@ -238,7 +238,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_normal:94
+#: numpy.random._generator.Generator.multivariate_normal:96
 msgid ""
 "Note that the covariance matrix must be positive semidefinite (a.k.a. "
 "nonnegative-definite). Otherwise, the behavior of this method is undefined "
@@ -246,7 +246,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_normal:98
+#: numpy.random._generator.Generator.multivariate_normal:100
 msgid ""
 "This function internally uses linear algebra routines, and thus results may "
 "not be identical (even up to precision) across architectures, OSes, or even "
@@ -256,31 +256,31 @@ msgid ""
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_normal:105
+#: numpy.random._generator.Generator.multivariate_normal:107
 msgid "References"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_normal:106
+#: numpy.random._generator.Generator.multivariate_normal:108
 msgid ""
 "Papoulis, A., \"Probability, Random Variables, and Stochastic Processes,\" "
 "3rd ed., New York: McGraw-Hill, 1991."
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_normal:108
+#: numpy.random._generator.Generator.multivariate_normal:110
 msgid ""
 "Duda, R. O., Hart, P. E., and Stork, D. G., \"Pattern Classification,\" 2nd "
 "ed., New York: Wiley, 2001."
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_normal:113
+#: numpy.random._generator.Generator.multivariate_normal:115
 msgid "[R73135c1078a9-1]_, [R73135c1078a9-2]_"
 msgstr ""
 
 #: ../../../../docstring of
-#: numpy.random._generator.Generator.multivariate_normal:116
+#: numpy.random._generator.Generator.multivariate_normal:118
 msgid "Examples"
 msgstr ""
 
@@ -313,17 +313,16 @@ msgstr ""
 #: ../../../../docstring of
 #: numpy.random._generator.Generator.multivariate_normal:168
 msgid ""
-"<div id=\"c12601d6-e19e-4275-9515-e6537a0ef12f\" "
+"<div id=\"ca6be0a6-a926-445b-84c3-b4d10a7554f4\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('3c383d23-214a-4785-bc1a-a5888fb4567e','c12601d6-"
-"e19e-4275-9515-e6537a0ef12f')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('3c383d23-214a-4785-bc1a-a5888fb4567e','c12601d6-e19e-4275-9515-"
-"e6537a0ef12f')\">Open In Tab</button></div><div id=\"854a45b0-dff2-4ca3-"
-"a9d5-32b0425c4ba4\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
-"div>"
+"tryExamplesHideIframe('9fffca5d-cad6-4e9e-84fb-95b5a0db7697','ca6be0a6-"
+"a926-445b-84c3-b4d10a7554f4')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('9fffca5d-"
+"cad6-4e9e-84fb-95b5a0db7697','ca6be0a6-a926-445b-84c3-b4d10a7554f4')\">Open "
+"In Tab</button></div><div id=\"6f66b03b-a27b-465d-bc09-23e3ab759ec9\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../docstring of

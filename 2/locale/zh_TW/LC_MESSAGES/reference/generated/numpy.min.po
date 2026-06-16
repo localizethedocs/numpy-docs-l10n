@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -132,7 +132,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.min:39
+#: of numpy.min:41
 msgid "**where**"
 msgstr "**where**"
 
@@ -153,7 +153,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.min:53
+#: of numpy.min:55
 msgid "**min**"
 msgstr ""
 
@@ -163,7 +163,7 @@ msgid "ndarray or scalar"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.min:44
+#: of numpy.min:46
 msgid ""
 "Minimum of `a`. If `axis` is None, the result is a scalar value. If `axis` "
 "is an int, the result is an array of dimension ``a.ndim - 1``.  If `axis` is "
@@ -171,67 +171,67 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.min:58
-msgid ":obj:`amax`"
+#: of numpy.min:60
+msgid ":obj:`max`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.min:59
+#: of numpy.min:61
 msgid "The maximum value of an array along a given axis, propagating any NaNs."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.min:60
+#: of numpy.min:62
 msgid ":obj:`nanmin`"
 msgstr ":obj:`nanmin`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.min:61
+#: of numpy.min:63
 msgid "The minimum value of an array along a given axis, ignoring any NaNs."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.min:62
+#: of numpy.min:64
 msgid ":obj:`minimum`"
 msgstr ":obj:`minimum`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.min:63
+#: of numpy.min:65
 msgid "Element-wise minimum of two arrays, propagating any NaNs."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.min:64
+#: of numpy.min:66
 msgid ":obj:`fmin`"
 msgstr ":obj:`fmin`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.min:65
+#: of numpy.min:67
 msgid "Element-wise minimum of two arrays, ignoring any NaNs."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.min:66
+#: of numpy.min:68
 msgid ":obj:`argmin`"
 msgstr ":obj:`argmin`"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.min:67
+#: of numpy.min:69
 msgid "Return the indices of the minimum values."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.min:68
+#: of numpy.min:70
 msgid ":obj:`nanmax`, :obj:`maximum`, :obj:`fmax`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.min:72
+#: of numpy.min:74
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.min:73
+#: of numpy.min:75
 msgid ""
 "NaN values are propagated, that is if at least one item is NaN, the "
 "corresponding min value will be NaN as well. To ignore NaN values (MATLAB "
@@ -239,19 +239,19 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.min:77
+#: of numpy.min:79
 msgid ""
 "Don't use `~numpy.min` for element-wise comparison of 2 arrays; when ``a."
 "shape[0]`` is 2, ``minimum(a[0], a[1])`` is faster than ``min(a, axis=0)``."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.min:83
+#: of numpy.min:85
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.min:114
+#: of numpy.min:116
 msgid ""
 "Notice that the initial value is used as one of the elements for which the "
 "minimum is determined, unlike for the default argument Python's max "
@@ -259,23 +259,22 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.min:118
+#: of numpy.min:120
 msgid "Notice that this isn't the same as Python's ``default`` argument."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.min:-1
 msgid ""
-"<div id=\"3d9e797d-fc49-4fde-8121-994a5ae1fb12\" "
+"<div id=\"f5da233b-eef5-48a5-a439-4f19b581b2aa\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('3d40c4d3-60aa-4af8-9631-e46deb3a75cb','3d9e797d-"
-"fc49-4fde-8121-994a5ae1fb12')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('3d40c4d3-60aa-4af8-9631-e46deb3a75cb','3d9e797d-"
-"fc49-4fde-8121-994a5ae1fb12')\">Open In Tab</button></div><div id=\"b053ad45-"
-"b3ff-4be3-a0a2-ef4a1ac8db61\" "
+"tryExamplesHideIframe('ebcb6d1d-a6a6-47af-938a-213d9f0345e1','f5da233b-"
+"eef5-48a5-a439-4f19b581b2aa')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('ebcb6d1d-"
+"a6a6-47af-938a-213d9f0345e1','f5da233b-eef5-48a5-a439-4f19b581b2aa')\">Open "
+"In Tab</button></div><div id=\"1d60d7fd-ada6-4c54-aa80-ef21d700b9de\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 

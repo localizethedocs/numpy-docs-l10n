@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:52+0000\n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -106,7 +106,7 @@ msgid ""
 "row."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.choice:34
+#: ../../../../docstring of numpy.random._generator.Generator.choice:36
 msgid "**shuffle**"
 msgstr ""
 
@@ -120,7 +120,7 @@ msgstr ""
 msgid "Returns"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.choice:42
+#: ../../../../docstring of numpy.random._generator.Generator.choice:44
 msgid "**samples**"
 msgstr ""
 
@@ -128,7 +128,7 @@ msgstr ""
 msgid "single item or ndarray"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.choice:39
+#: ../../../../docstring of numpy.random._generator.Generator.choice:41
 msgid "The generated random samples"
 msgstr ""
 
@@ -136,11 +136,11 @@ msgstr ""
 msgid "Raises"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.choice:53
+#: ../../../../docstring of numpy.random._generator.Generator.choice:55
 msgid "ValueError"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.choice:47
+#: ../../../../docstring of numpy.random._generator.Generator.choice:49
 msgid ""
 "If a is an int and less than zero, if p is not 1-dimensional, if a is array-"
 "like with a size 0, if p is not a vector of probabilities, if a and p have "
@@ -148,15 +148,15 @@ msgid ""
 "the population size."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.choice:58
+#: ../../../../docstring of numpy.random._generator.Generator.choice:60
 msgid ":obj:`integers`, :obj:`shuffle`, :obj:`permutation`"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.choice:62
+#: ../../../../docstring of numpy.random._generator.Generator.choice:64
 msgid "Notes"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.choice:63
+#: ../../../../docstring of numpy.random._generator.Generator.choice:65
 msgid ""
 "Setting user-specified probabilities through ``p`` uses a more general but "
 "less efficient sampler than the default. The general sampler produces a "
@@ -164,49 +164,49 @@ msgid ""
 "1 / len(a)."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.choice:67
+#: ../../../../docstring of numpy.random._generator.Generator.choice:69
 msgid ""
 "``p`` must sum to 1 when cast to ``float64``. To ensure this, you may wish "
-"to normalize using ``p = p / np.sum(p, dtype=float)``."
+"to normalize using ``p = p / np.sum(p, dtype=np.float64)``."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.choice:70
+#: ../../../../docstring of numpy.random._generator.Generator.choice:72
 msgid ""
 "When passing ``a`` as an integer type and ``size`` is not specified, the "
 "return type is a native Python ``int``."
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.choice:75
+#: ../../../../docstring of numpy.random._generator.Generator.choice:77
 msgid "Examples"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.choice:80
+#: ../../../../docstring of numpy.random._generator.Generator.choice:82
 msgid "Generate a uniform random sample from np.arange(5) of size 3:"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.choice:87
+#: ../../../../docstring of numpy.random._generator.Generator.choice:89
 msgid "Generate a non-uniform random sample from np.arange(5) of size 3:"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.choice:92
+#: ../../../../docstring of numpy.random._generator.Generator.choice:94
 msgid ""
 "Generate a uniform random sample from np.arange(5) of size 3 without "
 "replacement:"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.choice:99
+#: ../../../../docstring of numpy.random._generator.Generator.choice:101
 msgid ""
 "Generate a uniform random sample from a 2-D array along the first axis (the "
 "default), without replacement:"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.choice:106
+#: ../../../../docstring of numpy.random._generator.Generator.choice:108
 msgid ""
 "Generate a non-uniform random sample from np.arange(5) of size 3 without "
 "replacement:"
 msgstr ""
 
-#: ../../../../docstring of numpy.random._generator.Generator.choice:112
+#: ../../../../docstring of numpy.random._generator.Generator.choice:114
 msgid ""
 "Any of the above can be repeated with an arbitrary array-like instead of "
 "just integers. For instance:"
@@ -214,16 +214,15 @@ msgstr ""
 
 #: ../../../../docstring of numpy.random._generator.Generator.choice:-1
 msgid ""
-"<div id=\"7f471cca-2dc3-4d48-91a6-0f1426753a99\" "
+"<div id=\"d1caaebe-f3d5-4f48-82b5-fdc3859b0ed8\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('b52b9363-e350-4ab2-"
-"bb68-299fdcf790af','7f471cca-2dc3-4d48-91a6-0f1426753a99')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('b52b9363-e350-4ab2-"
-"bb68-299fdcf790af','7f471cca-2dc3-4d48-91a6-0f1426753a99')\">Open In Tab</"
-"button></div><div id=\"451d09ce-9fc1-40fc-a71e-5948053b19cf\" "
+"tryExamplesHideIframe('cb713b88-b26a-4426-b370-fa26ccda9941','d1caaebe-"
+"f3d5-4f48-82b5-fdc3859b0ed8')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('cb713b88-"
+"b26a-4426-b370-fa26ccda9941','d1caaebe-f3d5-4f48-82b5-fdc3859b0ed8')\">Open "
+"In Tab</button></div><div id=\"930f5bd4-056d-406f-b5b0-33be7ed11ded\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
