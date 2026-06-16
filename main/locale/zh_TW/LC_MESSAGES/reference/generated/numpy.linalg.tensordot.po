@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:58+0000\n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,7 +58,7 @@ msgid "Tensors to \"dot\"."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:24
+#: of numpy.linalg.tensordot:26
 msgid "**axes**"
 msgstr ""
 
@@ -84,17 +84,12 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:27
-msgid "**Returns**"
+#: of numpy.linalg.tensordot:0
+msgid "Returns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:30
-msgid "**-------**"
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:42
+#: of numpy.linalg.tensordot:37
 msgid "**output**"
 msgstr ""
 
@@ -104,42 +99,42 @@ msgid "ndarray"
 msgstr "ndarray"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:33
+#: of numpy.linalg.tensordot:31
 msgid "The tensor dot product of the input."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:47
+#: of numpy.linalg.tensordot:42
 msgid ":obj:`dot`, :obj:`einsum`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:51
+#: of numpy.linalg.tensordot:46
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:55
+#: of numpy.linalg.tensordot:50
 msgid "Three common use cases are:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:53
+#: of numpy.linalg.tensordot:48
 msgid "``axes = 0`` : tensor product :math:`a\\otimes b`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:54
+#: of numpy.linalg.tensordot:49
 msgid "``axes = 1`` : tensor dot product :math:`a\\cdot b`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:55
+#: of numpy.linalg.tensordot:50
 msgid "``axes = 2`` : (default) tensor double contraction :math:`a:b`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:57
+#: of numpy.linalg.tensordot:52
 msgid ""
 "When `axes` is integer_like, the sequence of axes for evaluation will be: "
 "from the -Nth axis to the -1th axis in `a`, and from the 0th axis to (N-1)th "
@@ -149,7 +144,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:65
+#: of numpy.linalg.tensordot:60
 msgid ""
 "When there is more than one axis to sum over - and they are not the last "
 "(first) axes of `a` (`b`) - the argument `axes` should consist of two "
@@ -159,7 +154,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:71
+#: of numpy.linalg.tensordot:66
 msgid ""
 "For example, if ``a.shape == (2, 3, 4)`` and ``b.shape == (3, 4, 5)``, then "
 "``axes=([1, 2], [0, 1])`` sums over the ``(3, 4)`` dimensions of both arrays "
@@ -167,57 +162,57 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:75
+#: of numpy.linalg.tensordot:70
 msgid ""
 "Each summation axis corresponds to a distinct contraction index; repeating "
 "an axis (for example ``axes=([1, 1], [0, 0])``) is invalid."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:78
+#: of numpy.linalg.tensordot:73
 msgid ""
 "The shape of the result consists of the non-contracted axes of the first "
 "tensor, followed by the non-contracted axes of the second."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:83
+#: of numpy.linalg.tensordot:78
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:88
+#: of numpy.linalg.tensordot:83
 msgid "An example on integer_like:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:105
+#: of numpy.linalg.tensordot:100
 msgid "An example on array_like:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:119
+#: of numpy.linalg.tensordot:114
 msgid "A slower but equivalent way of computing the same..."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.tensordot:134
+#: of numpy.linalg.tensordot:129
 msgid "An extended example taking advantage of the overloading of + and \\*:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
 #: of numpy.linalg.tensordot:-1
 msgid ""
-"<div id=\"6966e27a-4a59-4702-85a9-d1c8fd7aa664\" "
+"<div id=\"86e3aa04-c31d-4e59-a99d-46945ee14e34\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('f609526a-85dd-4453-ad72-"
-"dde3d10c9a25','6966e27a-4a59-4702-85a9-d1c8fd7aa664')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('f609526a-85dd-4453-ad72-dde3d10c9a25','6966e27a-4a59-4702-85a9-"
-"d1c8fd7aa664')\">Open In Tab</button></div><div id=\"4ef9ac6c-b5f1-424b-"
-"b8c6-5d4106b8a9e7\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"tryExamplesHideIframe('fc913c28-2514-4dbd-a11c-489a528f737e','86e3aa04-"
+"c31d-4e59-a99d-46945ee14e34')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('fc913c28-2514-4dbd-a11c-489a528f737e','86e3aa04-c31d-4e59-"
+"a99d-46945ee14e34')\">Open In Tab</button></div><div id=\"ce337ff7-b384-4fee-"
+"aac2-74365427ee21\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
 "div>"
 msgstr ""
 

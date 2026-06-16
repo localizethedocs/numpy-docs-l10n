@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:58+0000\n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,12 +28,13 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.recarray.partition:2
 msgid ""
-"Partially sorts the elements in the array in such a way that the value of "
-"the element in k-th position is in the position it would be in a sorted "
-"array. In the output array, all elements smaller than the k-th element are "
-"located to the left of this element and all equal or greater are located to "
-"its right. The ordering of the elements in the two partitions on the either "
-"side of the k-th element in the output array is undefined."
+"Partially sorts the array in such a way that the value of the element in the "
+"k-th position is in the position it would be in a sorted array. In the "
+"output array, all elements that would be to the left of the k-th element in "
+"a sorted array are located to the left of this element and all that would be "
+"to the right are located to its right. The ordering of the elements in the "
+"two partitions on the either side of the k-th element in the output array is "
+"undefined."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
@@ -42,7 +43,7 @@ msgid "Parameters"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.recarray.partition:21
+#: of numpy.recarray.partition:23
 msgid "**kth**"
 msgstr ""
 
@@ -54,21 +55,23 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.recarray.partition:13
 msgid ""
-"Element index to partition by. The kth element value will be in its final "
-"sorted position and all smaller elements will be moved before it and all "
-"equal or greater elements behind it. The order of all elements in the "
-"partitions is undefined. If provided with a sequence of kth it will "
-"partition all elements indexed by kth of them into their sorted position at "
-"once."
+"Element index to partition by. The k-th value of the array will be in the "
+"position it would be in a sorted array, all elements that are less than this "
+"element (or greater if `descending` is True) will be moved before it, and "
+"all elements that are greater than or equal to this element (or less than or "
+"equal if `descending` is True) will be moved after it. The order of all "
+"elements within each partition is undefined. If provided with a sequence of "
+"k-th it will partition all elements indexed by k-th of them into their "
+"sorted position at once."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.recarray.partition:20
+#: of numpy.recarray.partition:22
 msgid "Passing booleans as index is deprecated."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.recarray.partition:25
+#: of numpy.recarray.partition:27
 msgid "**axis**"
 msgstr ""
 
@@ -78,14 +81,14 @@ msgid "int, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.recarray.partition:24
+#: of numpy.recarray.partition:26
 msgid ""
 "Axis along which to sort. Default is -1, which means sort along the last "
 "axis."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.recarray.partition:28
+#: of numpy.recarray.partition:32
 msgid "**kind**"
 msgstr ""
 
@@ -95,12 +98,14 @@ msgid "{'introselect'}, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.recarray.partition:28
-msgid "Selection algorithm. Default is 'introselect'."
+#: of numpy.recarray.partition:30
+msgid ""
+"NumPy currently offers only one selection algorithm, 'introselect', and this "
+"parameter provides no additional functionality. Default is ``None``."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.recarray.partition:44
+#: of numpy.recarray.partition:39
 msgid "**order**"
 msgstr ""
 
@@ -110,7 +115,7 @@ msgid "str or list of str, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.recarray.partition:31
+#: of numpy.recarray.partition:35
 msgid ""
 "When `a` is an array with fields defined, this argument specifies which "
 "fields to compare first, second, etc. A single field can be specified as a "
@@ -120,64 +125,83 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.recarray.partition:49
+#: of numpy.recarray.partition:56
+msgid "**descending**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.partition:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.partition:42
+msgid ""
+"Sort order. If ``True``, the array will be partitioned in descending order. "
+"If ``False`` or ``None``, the array will be partitioned in ascending order. "
+"Values that are NaN are partitioned towards the end of the array regardless "
+"of order. Default: ``None``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.recarray.partition:61
 msgid ":obj:`numpy.partition`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.recarray.partition:50
+#: of numpy.recarray.partition:62
 msgid "Return a partitioned copy of an array."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.recarray.partition:51
+#: of numpy.recarray.partition:63
 msgid ":obj:`argpartition`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.recarray.partition:52
+#: of numpy.recarray.partition:64
 msgid "Indirect partition."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.recarray.partition:53
+#: of numpy.recarray.partition:65
 msgid ":obj:`sort`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.recarray.partition:54
+#: of numpy.recarray.partition:66
 msgid "Full sort."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.recarray.partition:58
+#: of numpy.recarray.partition:70
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.recarray.partition:59
+#: of numpy.recarray.partition:71
 msgid "See ``np.partition`` for notes on the different algorithms."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.recarray.partition:63
+#: of numpy.recarray.partition:75
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.recarray.partition:-1
 msgid ""
-"<div id=\"3de06ef7-c7a9-4488-964c-3b68e9e4f807\" "
+"<div id=\"d29ea245-85a0-4773-a04d-4a3744c6720f\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('e807f3b8-4f82-4ef4-ba41-40c615ff3843','3de06ef7-"
-"c7a9-4488-964c-3b68e9e4f807')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('e807f3b8-4f82-4ef4-ba41-40c615ff3843','3de06ef7-"
-"c7a9-4488-964c-3b68e9e4f807')\">Open In Tab</button></div><div "
-"id=\"8de6b0dc-3680-48f2-bf27-0114086a198b\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('1e974d67-994e-4ac4-9847-64c9a2dd7849','d29ea245-85a0-4773-"
+"a04d-4a3744c6720f')\">Go Back</button><button class=\"try_examples_button\" "
+"onclick=\"window."
+"openInNewTab('1e974d67-994e-4ac4-9847-64c9a2dd7849','d29ea245-85a0-4773-"
+"a04d-4a3744c6720f')\">Open In Tab</button></div><div id=\"b6acd40d-8c18-4c79-"
+"ae11-0a969e241ce5\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring

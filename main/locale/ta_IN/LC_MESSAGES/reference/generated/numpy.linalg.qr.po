@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:58+0000\n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,7 +54,7 @@ msgid "An array-like object with the dimensionality of at least 2."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:30
+#: of numpy.linalg.qr:23
 msgid "**mode**"
 msgstr ""
 
@@ -91,14 +91,8 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
 #: of numpy.linalg.qr:20
 msgid ""
-"The options 'reduced', 'complete, and 'raw' are new in numpy 1.8, see the "
-"notes for more information. The default is 'reduced', and to maintain "
-"backward compatibility with earlier versions of numpy both it and the old "
-"default 'full' can be omitted. Note that array h returned in 'raw' mode is "
-"transposed for calling Fortran. The 'economic' mode is deprecated.  The "
-"modes 'full' and 'economic' may be passed using only the first letter for "
-"backwards compatibility, but all others must be spelled out. See the Notes "
-"for more explanation."
+"The default is 'reduced'. Note that array h returned in 'raw' mode is "
+"transposed for calling Fortran. See the Notes for more explanation."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
@@ -107,7 +101,7 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:40
+#: of numpy.linalg.qr:33
 msgid "**Q**"
 msgstr ""
 
@@ -117,7 +111,7 @@ msgid "ndarray of float or complex, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:35
+#: of numpy.linalg.qr:28
 msgid ""
 "A matrix with orthonormal columns. When mode = 'complete' the result is an "
 "orthogonal/unitary matrix depending on whether or not a is real/complex. The "
@@ -127,19 +121,19 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:45
+#: of numpy.linalg.qr:38
 msgid "**R**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:43
+#: of numpy.linalg.qr:36
 msgid ""
 "The upper-triangular matrix or a stack of upper-triangular matrices if the "
 "number of dimensions in the input array is greater than 2."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:53
+#: of numpy.linalg.qr:46
 msgid "**(h, tau)**"
 msgstr ""
 
@@ -149,11 +143,10 @@ msgid "ndarrays of np.double or np.cdouble, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:48
+#: of numpy.linalg.qr:41
 msgid ""
 "The array h contains the Householder reflectors that generate q along with "
-"r. The tau array contains scaling factors for the reflectors. In the "
-"deprecated  'economic' mode only h is returned."
+"r. The tau array contains scaling factors for the reflectors."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
@@ -162,97 +155,87 @@ msgid "Raises"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:60
+#: of numpy.linalg.qr:53
 msgid "LinAlgError"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:58
+#: of numpy.linalg.qr:51
 msgid "If factoring fails."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:65
+#: of numpy.linalg.qr:58
 msgid ":obj:`scipy.linalg.qr`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:66
+#: of numpy.linalg.qr:59
 msgid "Similar function in SciPy."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:67
+#: of numpy.linalg.qr:60
 msgid ":obj:`scipy.linalg.rq`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:68
+#: of numpy.linalg.qr:61
 msgid "Compute RQ decomposition of a matrix."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:72
+#: of numpy.linalg.qr:65
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:73
+#: of numpy.linalg.qr:66
 msgid ""
 "When mode is 'reduced' or 'complete', the result will be a namedtuple with "
 "the attributes ``Q`` and ``R``."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:76
+#: of numpy.linalg.qr:69
 msgid ""
 "This is an interface to the LAPACK routines ``dgeqrf``, ``zgeqrf``, "
 "``dorgqr``, and ``zungqr``."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:79
+#: of numpy.linalg.qr:72
 msgid ""
 "For more information on the qr factorization, see for example: https://en."
 "wikipedia.org/wiki/QR_factorization"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:82
+#: of numpy.linalg.qr:75
 msgid ""
 "Subclasses of `ndarray` are preserved except for the 'raw' mode. So if `a` "
-"is of type `matrix`, all the return values will be matrices too."
+"is of type `matrix`, all the return values will be matrices too. The 'raw' "
+"option was added so that LAPACK routines that can multiply arrays by q using "
+"the Householder reflectors can be used. Note that in this case the returned "
+"arrays are of type np.double or np.cdouble and the h array is transposed to "
+"be FORTRAN compatible.  No routines using the 'raw' return are currently "
+"exposed by numpy, but some are available in lapack_lite and just await the "
+"necessary work."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:85
-msgid ""
-"New 'reduced', 'complete', and 'raw' options for mode were added in NumPy "
-"1.8.0 and the old option 'full' was made an alias of 'reduced'.  In addition "
-"the options 'full' and 'economic' were deprecated.  Because 'full' was the "
-"previous default and 'reduced' is the new default, backward compatibility "
-"can be maintained by letting `mode` default. The 'raw' option was added so "
-"that LAPACK routines that can multiply arrays by q using the Householder "
-"reflectors can be used. Note that in this case the returned arrays are of "
-"type np.double or np.cdouble and the h array is transposed to be FORTRAN "
-"compatible.  No routines using the 'raw' return are currently exposed by "
-"numpy, but some are available in lapack_lite and just await the necessary "
-"work."
-msgstr ""
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:99
+#: of numpy.linalg.qr:86
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:122
+#: of numpy.linalg.qr:109
 msgid ""
 "Example illustrating a common use of `qr`: solving of least squares problems"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:125
+#: of numpy.linalg.qr:112
 msgid ""
 "What are the least-squares-best `m` and `y0` in ``y = y0 + mx`` for the "
 "following data: {(0,1), (1,0), (1,2), (2,1)}. (Graph the points and you'll "
@@ -261,7 +244,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:130
+#: of numpy.linalg.qr:117
 msgid ""
 "A = array([[0, 1], [1, 1], [1, 1], [2, 1]])\n"
 "x = array([[y0], [m]])\n"
@@ -269,7 +252,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
-#: of numpy.linalg.qr:134
+#: of numpy.linalg.qr:121
 msgid ""
 "If A = QR such that Q is orthonormal (which is always possible via Gram-"
 "Schmidt), then ``x = inv(R) * (Q.T) * b``.  (In numpy practice, however, we "
@@ -279,17 +262,16 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
 #: of numpy.linalg.qr:-1
 msgid ""
-"<div id=\"fbec61ca-8fa1-4b99-8499-d2733f37c2b6\" "
+"<div id=\"6138a7e9-4d49-4dfd-808c-b6f1a2a24bbc\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('311dd77f-b325-4c06-"
-"b0ff-8dc1e5b21c79','fbec61ca-8fa1-4b99-8499-d2733f37c2b6')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('311dd77f-b325-4c06-b0ff-8dc1e5b21c79','fbec61ca-8fa1-4b99-8499-"
-"d2733f37c2b6')\">Open In Tab</button></div><div id=\"a6c63fe9-"
-"cca5-435f-8417-453e46ec2b4d\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('8438330e-255d-45f5-9444-95bf8e1da256','6138a7e9-4d49-4dfd-808c-"
+"b6f1a2a24bbc')\">Go Back</button><button class=\"try_examples_button\" "
+"onclick=\"window."
+"openInNewTab('8438330e-255d-45f5-9444-95bf8e1da256','6138a7e9-4d49-4dfd-808c-"
+"b6f1a2a24bbc')\">Open In Tab</button></div><div id=\"58da34b3-4da9-4cc0-ab0c-"
+"b49fde0741b9\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:58+0000\n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,7 +50,7 @@ msgid "Array to sort."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:19
+#: of numpy.argpartition:22
 msgid "**kth**"
 msgstr ""
 
@@ -62,15 +62,18 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.argpartition:14
 msgid ""
-"Element index to partition by. The k-th element will be in its final sorted "
-"position and all smaller elements will be moved before it and all larger "
-"elements behind it. The order of all elements in the partitions is "
-"undefined. If provided with a sequence of k-th it will partition all of them "
-"into their sorted position at once."
+"Element index to partition by. In the returned array, the k-th value of the "
+"array will be in the position it would be in a sorted array, all elements "
+"that are less than this element (or greater if `descending` is True) will be "
+"moved before it, and all elements that are greater than or equal to this "
+"element (or less than or equal if `descending` is True) will be moved after "
+"it. The order of all elements within each partition is undefined. If "
+"provided with a sequence of k-th it will partition all elements indexed by k-"
+"th of them into their sorted position at once."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:23
+#: of numpy.argpartition:26
 msgid "**axis**"
 msgstr ""
 
@@ -80,14 +83,14 @@ msgid "int or None, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:22
+#: of numpy.argpartition:25
 msgid ""
 "Axis along which to sort. The default is -1 (the last axis). If None, the "
 "flattened array is used."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:26
+#: of numpy.argpartition:31
 msgid "**kind**"
 msgstr ""
 
@@ -97,12 +100,14 @@ msgid "{'introselect'}, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:26
-msgid "Selection algorithm. Default is 'introselect'"
+#: of numpy.argpartition:29
+msgid ""
+"NumPy currently offers only one selection algorithm, 'introselect', and this "
+"parameter provides no additional functionality. Default is ``None``."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:35
+#: of numpy.argpartition:38
 msgid "**order**"
 msgstr ""
 
@@ -112,7 +117,7 @@ msgid "str or list of str, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:29
+#: of numpy.argpartition:34
 msgid ""
 "When `a` is an array with fields defined, this argument specifies which "
 "fields to compare first, second, etc. A single field can be specified as a "
@@ -122,12 +127,31 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.argpartition:48
+msgid "**descending**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.argpartition:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.argpartition:41
+msgid ""
+"Sort order. If ``True``, the array will be partitioned in descending order. "
+"If ``False`` or ``None``, the array will be partitioned in ascending order. "
+"Values that are NaN are partitioned towards the end of the array regardless "
+"of order. Default: ``None``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.argpartition:0
 msgid "Returns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:49
+#: of numpy.argpartition:62
 msgid "**index_array**"
 msgstr ""
 
@@ -137,7 +161,7 @@ msgid "ndarray, int"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:40
+#: of numpy.argpartition:53
 msgid ""
 "Array of indices that partition `a` along the specified axis. If `a` is one-"
 "dimensional, ``a[index_array]`` yields a partitioned `a`. More generally, "
@@ -146,54 +170,54 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:54
+#: of numpy.argpartition:67
 msgid ":obj:`partition`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:55
+#: of numpy.argpartition:68
 msgid "Describes partition algorithms used."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:56
+#: of numpy.argpartition:69
 msgid ":obj:`ndarray.partition`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:57
+#: of numpy.argpartition:70
 msgid "Inplace partition."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:58
+#: of numpy.argpartition:71
 msgid ":obj:`argsort`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:59
+#: of numpy.argpartition:72
 msgid "Full indirect sort."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:60
+#: of numpy.argpartition:73
 msgid ":obj:`take_along_axis`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:61
+#: of numpy.argpartition:74
 msgid ""
 "Apply ``index_array`` from argpartition to an array as if by calling "
 "partition."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:65
+#: of numpy.argpartition:78
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:66
+#: of numpy.argpartition:79
 msgid ""
 "The returned indices are not guaranteed to be sorted according to the "
 "values. Furthermore, the default selection algorithm ``introselect`` is "
@@ -202,7 +226,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:71
+#: of numpy.argpartition:84
 msgid ""
 "`argpartition` works for real/complex inputs with nan values, see "
 "`partition` for notes on the enhanced sort order and different selection "
@@ -210,34 +234,33 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:77
+#: of numpy.argpartition:90
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:82
+#: of numpy.argpartition:95
 msgid "One dimensional array:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.argpartition:95
+#: of numpy.argpartition:108
 msgid "Multi-dimensional array:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.argpartition:-1
 msgid ""
-"<div id=\"33101780-6460-4ae6-b04a-39703ad60431\" "
+"<div id=\"49b33087-9839-4670-a713-b41903d273c1\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('ae3cbe18-78a0-4169-9789-0542ecb84cc7','33101780-6460-4ae6-"
-"b04a-39703ad60431')\">Go Back</button><button class=\"try_examples_button\" "
+"tryExamplesHideIframe('64e28687-3e75-42fb-98b7-8b2396ddaf4e','49b33087-9839-4670-"
+"a713-b41903d273c1')\">Go Back</button><button class=\"try_examples_button\" "
 "onclick=\"window."
-"openInNewTab('ae3cbe18-78a0-4169-9789-0542ecb84cc7','33101780-6460-4ae6-"
-"b04a-39703ad60431')\">Open In Tab</button></div><div "
-"id=\"a0d8f661-7c54-4b11-8396-463d3bf073d8\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"openInNewTab('64e28687-3e75-42fb-98b7-8b2396ddaf4e','49b33087-9839-4670-a713-"
+"b41903d273c1')\">Open In Tab</button></div><div id=\"f3d2e2e2-774c-48c5-9db5-"
+"be30b5a3d42d\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
