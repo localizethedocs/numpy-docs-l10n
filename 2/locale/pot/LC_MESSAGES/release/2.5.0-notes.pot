@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"POT-Creation-Date: 2026-06-29 12:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,64 +23,65 @@ msgstr ""
 
 #: ../../../release/2.5.0-notes.rst:7
 msgid ""
-"Numpy 3.5.0 is a transitional release. It drops support for Python 3.11, "
+"Numpy 2.5.0 is a transitional release. It drops support for Python 3.11, "
 "marking the end of distutils, and expires a large number of deprecations "
 "made in the 2.0.x release. It also improves free threading and brings "
 "sorting into compliance with the array-api standard with the addition of "
-"descending sorts. Python 3.15 will be supported when it is released."
+"descending sorts. There is also a fair amount of preparation for Python "
+"3.15, which will be supported starting with the first rc."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:13
+#: ../../../release/2.5.0-notes.rst:14
 msgid "This release supports Python versions 3.12-3.14."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:17
+#: ../../../release/2.5.0-notes.rst:18
 msgid "Highlights"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:19
+#: ../../../release/2.5.0-notes.rst:20
 msgid "Distutils has been removed,"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:20
+#: ../../../release/2.5.0-notes.rst:21
 msgid "Many expired deprecations, see below,"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:21
+#: ../../../release/2.5.0-notes.rst:22
 msgid "Many new deprecations, see below,"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:22
-msgid "Many static typing improvements."
-msgstr ""
-
 #: ../../../release/2.5.0-notes.rst:23
-msgid "Improved support for free threading,"
+msgid "Many static typing improvements,"
 msgstr ""
 
 #: ../../../release/2.5.0-notes.rst:24
-msgid "Support for descending sorts,"
+msgid "Improved support for free threading,"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:26
+#: ../../../release/2.5.0-notes.rst:25
+msgid "Support for descending sorts."
+msgstr ""
+
+#: ../../../release/2.5.0-notes.rst:27
 msgid "See New Features below for other additions."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:30
+#: ../../../release/2.5.0-notes.rst:31
 msgid "Deprecations"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:32
+#: ../../../release/2.5.0-notes.rst:33
 msgid ""
 "``numpy.char.chararray`` is deprecated. Use an ``ndarray`` with a string or "
 "bytes dtype instead."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:34
+#: ../../../release/2.5.0-notes.rst:36
 msgid "(`gh-30605 <https://github.com/numpy/numpy/pull/30605>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:36
+#: ../../../release/2.5.0-notes.rst:38
 msgid ""
 "``numpy.take`` now correctly checks if the result can be cast to the "
 "provided ``out=out`` under the same-kind rule.  A ``DeprecationWarning`` is "
@@ -89,21 +91,21 @@ msgid ""
 "versions of NumPy may tighten the casting check further.)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:43
+#: ../../../release/2.5.0-notes.rst:45
 msgid "(`gh-30615 <https://github.com/numpy/numpy/pull/30615>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:45
+#: ../../../release/2.5.0-notes.rst:47
 msgid ""
 "The ``numpy.char.[as]array`` functions are deprecated. Use an ``numpy."
 "[as]array`` with a string or bytes dtype instead."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:48
+#: ../../../release/2.5.0-notes.rst:50
 msgid "(`gh-30802 <https://github.com/numpy/numpy/pull/30802>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:50
+#: ../../../release/2.5.0-notes.rst:52
 msgid ""
 "Setting the dtype attribute is deprecated because mutating an array is "
 "unsafe if an array is shared, especially by multiple threads.  As an "
@@ -111,32 +113,32 @@ msgid ""
 "view(dtype=new_dtype)``."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:54
+#: ../../../release/2.5.0-notes.rst:56
 msgid "(`gh-29244 <https://github.com/numpy/numpy/pull/29244>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:56
+#: ../../../release/2.5.0-notes.rst:58
 msgid ""
 "Setting the ``shape`` attribute is deprecated because mutating an array is "
 "unsafe if an array is shared, especially by multiple threads.  As an "
 "alternative, you can create a new view via ``np.reshape`` or ``np.ndarray."
-"reshape``. For example: ``x = np.arange(15); x = np.reshape(x, (3, 5))``.  "
-"To ensure no copy is made from the data, one can use ``np.reshape(..., "
+"reshape``. For example: ``x = np.arange(15); x = np.reshape(x, (3, 5))``. To "
+"ensure that no copy is made from the data, one can use ``np.reshape(..., "
 "copy=False)``."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:63
+#: ../../../release/2.5.0-notes.rst:64
 msgid ""
 "While setting the shape on an array is discouraged, for cases where it is "
 "difficult to work around, e.g., in ``__array_finalize__``, it is possible "
 "with the private method ``np.ndarray._set_shape``."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:67
+#: ../../../release/2.5.0-notes.rst:68
 msgid "(`gh-29536 <https://github.com/numpy/numpy/pull/29536>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:69
+#: ../../../release/2.5.0-notes.rst:70
 msgid ""
 "Using the ``generic`` unit in ``numpy.timedelta64`` is deprecated since this "
 "can lead to unexpected behavior such as non-transitive comparison, see "
@@ -147,7 +149,7 @@ msgid ""
 "deprecated.  For example::"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:77
+#: ../../../release/2.5.0-notes.rst:78
 msgid ""
 "arr = np.array([1, 2, 3], dtype=\"m8[s]\")\n"
 "\n"
@@ -155,54 +157,54 @@ msgid ""
 "arr + 1"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:82
+#: ../../../release/2.5.0-notes.rst:83
 msgid "(`gh-29619 <https://github.com/numpy/numpy/pull/29619>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:84
+#: ../../../release/2.5.0-notes.rst:85
 msgid ""
 "Resizing a Numpy array in place is deprecated since mutating an array is "
 "unsafe if an array is shared, especially by multiple threads.  As an "
 "alternative, you can create a resized array via ``np.resize``."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:88
+#: ../../../release/2.5.0-notes.rst:89
 msgid "(`gh-30181 <https://github.com/numpy/numpy/pull/30181>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:90
+#: ../../../release/2.5.0-notes.rst:91
 msgid ""
 "``numpy.fix`` is deprecated, use ``numpy.trunc`` instead. It is faster and "
 "follows the Array API standard. Both functions provide identical "
 "functionality: rounding array elements towards zero."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:94
+#: ../../../release/2.5.0-notes.rst:95
 msgid "(`gh-30644 <https://github.com/numpy/numpy/pull/30644>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:96
+#: ../../../release/2.5.0-notes.rst:97
 msgid ""
 "``numpy.ma.round_`` is deprecated.  ``numpy.ma.round`` can be used as a "
 "replacement."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:99
+#: ../../../release/2.5.0-notes.rst:100
 msgid "(`gh-30738 <https://github.com/numpy/numpy/pull/30738>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:101
+#: ../../../release/2.5.0-notes.rst:102
 msgid ""
 "``numpy.typename`` is deprecated because the names returned by it were "
 "outdated and inconsistent.  ``numpy.dtype.name`` can be used as a "
 "replacement."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:105
+#: ../../../release/2.5.0-notes.rst:106
 msgid "(`gh-30774 <https://github.com/numpy/numpy/pull/30774>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:107
+#: ../../../release/2.5.0-notes.rst:108
 msgid ""
 "Inputs other than integers are deprecated for ``numpy.triu_indices`` and "
 "``numpy.tril_indices``.  Non-integer values for the ``M``, ``k`` and ``N`` "
@@ -211,15 +213,15 @@ msgid ""
 "triu_indices_from`` are deprecated."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:113 ../../../release/2.5.0-notes.rst:603
+#: ../../../release/2.5.0-notes.rst:114 ../../../release/2.5.0-notes.rst:605
 msgid "(`gh-30869 <https://github.com/numpy/numpy/pull/30869>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:115
+#: ../../../release/2.5.0-notes.rst:116
 msgid "Deprecations in custom ``dtype`` property and ``__array_finalize__``."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:117
+#: ../../../release/2.5.0-notes.rst:118
 msgid ""
 "Previously ``arr.view(dtype=new_dtype)`` called ``arr.dtype = new_dtype`` "
 "also for subclasses, i.e., the attribute setting.  That path is now "
@@ -227,182 +229,182 @@ msgid ""
 "``DeprecationWarning`` may wish to update their code."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:122
+#: ../../../release/2.5.0-notes.rst:123
 msgid ""
 "A subclass that does any ``dtype`` specific logic (i.e. verifying the dtype "
 "in ``__array_finalize__`` or has a ``dtype`` property) should now:"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:125
+#: ../../../release/2.5.0-notes.rst:126
 msgid ""
 "Set ``_set_dtype = None`` in which case ``arr.view(dtype=new_dtype)`` will "
 "call ``__array_finalize__`` with the new dtype, ensuring that any validation "
 "``__array_finalize__`` will run is done."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:128
+#: ../../../release/2.5.0-notes.rst:129
 msgid ""
 "Or, for a quick fix, define ``_set_dtype`` as a function (calling ``ndarray."
 "_set_dtype()`` to avoid ``DeprecationWarnings``. (Future versions might "
 "migrate towards the ``_set_dtype = None`` path.)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:132
+#: ../../../release/2.5.0-notes.rst:133
 msgid ""
 "Ideally, follow NumPy's deprecation to prevent ``dtype`` mutation by users. "
 "The use of ``ndarray._set_dtype()`` may be necessary for some subclass "
 "finalization patterns, but should otherwise be avoided."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:136
+#: ../../../release/2.5.0-notes.rst:137
 msgid "(`gh-31293 <https://github.com/numpy/numpy/pull/31293>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:140
+#: ../../../release/2.5.0-notes.rst:141
 msgid "Expired deprecations"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:142
+#: ../../../release/2.5.0-notes.rst:143
 msgid "``numpy.distutils`` has been removed"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:144
+#: ../../../release/2.5.0-notes.rst:145
 msgid "(`gh-30340 <https://github.com/numpy/numpy/pull/30340>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:146
+#: ../../../release/2.5.0-notes.rst:147
 msgid ""
 "Passing ``None`` as dtype to ``np.finfo`` will now raise a ``TypeError`` "
 "(deprecated since 1.25)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:149
+#: ../../../release/2.5.0-notes.rst:150
 msgid "(`gh-30460 <https://github.com/numpy/numpy/pull/30460>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:151
+#: ../../../release/2.5.0-notes.rst:152
 msgid ""
 "``numpy.cross`` no longer supports 2-dimensional vectors. (Deprecated since "
 "2.0)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:154
+#: ../../../release/2.5.0-notes.rst:155
 msgid "(`gh-30461 <https://github.com/numpy/numpy/pull/30461>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:156
+#: ../../../release/2.5.0-notes.rst:157
 msgid ""
 "``numpy._core.numerictypes.maximum_sctype`` has been removed. (deprecated "
 "since 2.0)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:159
+#: ../../../release/2.5.0-notes.rst:160
 msgid "(`gh-30462 <https://github.com/numpy/numpy/pull/30462>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:161
+#: ../../../release/2.5.0-notes.rst:162
 msgid ""
 "``numpy.row_stack`` has been removed in favor of ``numpy.vstack``. "
 "(deprecated since 2.0)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:164 ../../../release/2.5.0-notes.rst:169
+#: ../../../release/2.5.0-notes.rst:165 ../../../release/2.5.0-notes.rst:170
 msgid "(`gh-30463 <https://github.com/numpy/numpy/pull/30463>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:166
+#: ../../../release/2.5.0-notes.rst:167
 msgid "``get_array_wrap`` has been removed. (deprecated since 2.0)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:171
+#: ../../../release/2.5.0-notes.rst:172
 msgid ""
 "``recfromtxt`` and ``recfromcsv`` have been removed from ``numpy.lib."
 "_npyio`` in favor of ``numpy.genfromtxt``. (deprecated since 2.0)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:175
+#: ../../../release/2.5.0-notes.rst:176
 msgid "(`gh-30467 <https://github.com/numpy/numpy/pull/30467>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:177
+#: ../../../release/2.5.0-notes.rst:178
 msgid ""
 "The ``numpy.chararray`` re-export of ``numpy.char.chararray`` has been "
 "removed. (deprecated since 2.0)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:180
+#: ../../../release/2.5.0-notes.rst:181
 msgid "(`gh-30604 <https://github.com/numpy/numpy/pull/30604>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:182
+#: ../../../release/2.5.0-notes.rst:183
 msgid ""
 "``bincount`` now raises a ``TypeError`` for non-integer inputs. (deprecated "
 "since 2.1)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:185
+#: ../../../release/2.5.0-notes.rst:186
 msgid "(`gh-30610 <https://github.com/numpy/numpy/pull/30610>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:187
+#: ../../../release/2.5.0-notes.rst:188
 msgid ""
 "The ``numpy.lib.math`` alias for the standard library ``math`` module has "
 "been removed. (deprecated since 1.25)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:191
+#: ../../../release/2.5.0-notes.rst:192
 msgid "(`gh-30612 <https://github.com/numpy/numpy/pull/30612>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:193
+#: ../../../release/2.5.0-notes.rst:194
 msgid ""
 "Data type alias ``'a'`` was removed in favor of ``'S'``. (deprecated since "
 "2.0)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:196
+#: ../../../release/2.5.0-notes.rst:197
 msgid "(`gh-30613 <https://github.com/numpy/numpy/pull/30613>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:198
+#: ../../../release/2.5.0-notes.rst:199
 msgid ""
 "``_add_newdoc_ufunc(ufunc, newdoc)`` has been removed in favor of ``ufunc."
 "__doc__ = newdoc``. (deprecated since 2.2)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:202
+#: ../../../release/2.5.0-notes.rst:203
 msgid "(`gh-30614 <https://github.com/numpy/numpy/pull/30614>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:206
+#: ../../../release/2.5.0-notes.rst:207
 msgid "Compatibility notes"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:209
+#: ../../../release/2.5.0-notes.rst:210
 msgid "``linalg.eig`` and ``linalg.eigvals`` now always return complex arrays"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:210
+#: ../../../release/2.5.0-notes.rst:211
 msgid ""
 "Previously, the return values depended on whether the eigenvalues happen to "
 "lie on the real line (which, for a general, non-symmetric matrix, is not "
 "guaranteed)."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:214
+#: ../../../release/2.5.0-notes.rst:215
 msgid ""
 "This change makes consistent what was a value-dependent result. To retain "
 "the previous behavior, do::"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:217
+#: ../../../release/2.5.0-notes.rst:218
 msgid ""
 "w = eigvals(a)\n"
 "if np.any(w.imag == 0):  # this is what NumPy used to do\n"
 "    w = w.real"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:221
+#: ../../../release/2.5.0-notes.rst:222
 msgid ""
 "If your matrix is symmetrix/hermitian, use ``eigh`` and ``eigvalsh`` instead "
 "of ``eig`` and ``eigvals``. These are guaranteed to return real values. A "
@@ -410,30 +412,30 @@ msgid ""
 "definite by construction."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:226
+#: ../../../release/2.5.0-notes.rst:227
 msgid "(`gh-30411 <https://github.com/numpy/numpy/pull/30411>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:229
+#: ../../../release/2.5.0-notes.rst:230
 msgid "MSVC support"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:230
+#: ../../../release/2.5.0-notes.rst:231
 msgid ""
 "NumPy now requires minimum MSVC 19.35 toolchain version on Windows "
 "platforms. This corresponds to Visual Studio 2022 version 17.5 Preview 2 or "
 "newer."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:233
+#: ../../../release/2.5.0-notes.rst:234
 msgid "(`gh-30489 <https://github.com/numpy/numpy/pull/30489>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:236
+#: ../../../release/2.5.0-notes.rst:237
 msgid "Cython support"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:237
+#: ../../../release/2.5.0-notes.rst:238
 msgid ""
 "NumPy's Cython headers (accessed via ``cimport numpy``) now require Cython "
 "3.0 or newer to build. If you try to compile a project that depends on "
@@ -441,7 +443,7 @@ msgid ""
 "like this::"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:241
+#: ../../../release/2.5.0-notes.rst:242
 msgid ""
 "Error compiling Cython file:\n"
 "------------------------------------------------------------\n"
@@ -461,7 +463,7 @@ msgid ""
 "  'Build aborted: the NumPy Cython headers require Cython 3.0.0 or newer.'"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:257
+#: ../../../release/2.5.0-notes.rst:258
 msgid ""
 "Note that the invalid integer is not a bug in NumPy - we are intentionally "
 "generating this error to avoid triggering a more obscure error later in the "
@@ -469,49 +471,49 @@ msgid ""
 "not available in the old Cython version."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:262
+#: ../../../release/2.5.0-notes.rst:263
 msgid "(`gh-30770 <https://github.com/numpy/numpy/pull/30770>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:265
+#: ../../../release/2.5.0-notes.rst:266
 msgid "``numpy.where`` no longer truncates Python integers"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:267
+#: ../../../release/2.5.0-notes.rst:268
 msgid ""
 "Previously, if the ``x`` or ``y`` argument of ``numpy.where`` was a Python "
 "integer that was out of range of the output type, it would be silently "
 "truncated.  Now, an ``OverflowError`` will be raised instead."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:271
+#: ../../../release/2.5.0-notes.rst:272
 msgid ""
 "This change also applies to the underlying C API function ``PyArray_Where``."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:273
+#: ../../../release/2.5.0-notes.rst:274
 msgid "(`gh-30803 <https://github.com/numpy/numpy/pull/30803>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:276
+#: ../../../release/2.5.0-notes.rst:277
 msgid "Default memory allocator change"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:277
+#: ../../../release/2.5.0-notes.rst:278
 msgid ""
 "NumPy now uses ``PyMem_RawMalloc`` and ``PyMem_RawFree`` as the default "
 "memory allocator, instead of system's ``malloc`` and ``free`` directly."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:280 ../../../release/2.5.0-notes.rst:474
+#: ../../../release/2.5.0-notes.rst:281 ../../../release/2.5.0-notes.rst:475
 msgid "(`gh-30846 <https://github.com/numpy/numpy/pull/30846>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:283
+#: ../../../release/2.5.0-notes.rst:284
 msgid "``from_dlpack`` raises ``BufferError`` instead of ``RuntimeError``"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:284
+#: ../../../release/2.5.0-notes.rst:285
 msgid ""
 "``np.from_dlpack`` now raises ``BufferError`` instead of ``RuntimeError`` "
 "when the incoming DLPack tensor has an unsupported device, dtype, or exceeds "
@@ -520,56 +522,56 @@ msgid ""
 "imported."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:290
+#: ../../../release/2.5.0-notes.rst:291
 msgid "(`gh-30937 <https://github.com/numpy/numpy/pull/30937>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:293
+#: ../../../release/2.5.0-notes.rst:294
 msgid "Corrections to the BTPE binomial sampler"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:294
+#: ../../../release/2.5.0-notes.rst:295
 msgid ""
 "Two independent errors in the Stirling series of the acceptance/rejection "
 "step of the BTPE algorithm used by ``numpy.random.Generator.binomial`` have "
 "been corrected:"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:298
+#: ../../../release/2.5.0-notes.rst:299
 msgid ""
 "The third and fourth error terms were added rather than subtracted. This "
 "sign error was inherited from section 5.3 of the original 1988 paper by "
 "Kachitvichyanukul & Schmeiser, which incorrectly adds all four terms."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:302
+#: ../../../release/2.5.0-notes.rst:303
 msgid ""
 "The leading coefficient had a digit-swap typo (``13680`` instead of "
 "``13860``) that was introduced in the initial implementation."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:305
+#: ../../../release/2.5.0-notes.rst:306
 msgid ""
 "As a result, ``Generator.binomial`` and ``Generator.multinomial``, which "
 "uses binomial internally, may now return different samples for the same seed."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:308
+#: ../../../release/2.5.0-notes.rst:309
 msgid ""
 "The legacy ``numpy.random.RandomState.binomial`` and ``numpy.random."
 "RandomState.multinomial`` are not affected: they preserve the original "
 "(incorrect) behavior, so existing streams remain reproducible."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:312
+#: ../../../release/2.5.0-notes.rst:313
 msgid "(`gh-31238 <https://github.com/numpy/numpy/pull/31238>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:315
+#: ../../../release/2.5.0-notes.rst:316
 msgid "``datetime64``/``timedelta64`` arithmetic raises on overflow"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:316
+#: ../../../release/2.5.0-notes.rst:317
 msgid ""
 "Addition, subtraction, and integer multiplication of ``datetime64`` and "
 "``timedelta64`` values now raise ``OverflowError`` when the result would "
@@ -579,15 +581,15 @@ msgid ""
 "performed by unit-conversion casts."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:323
+#: ../../../release/2.5.0-notes.rst:324
 msgid "(`gh-31378 <https://github.com/numpy/numpy/pull/31378>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:327
+#: ../../../release/2.5.0-notes.rst:328
 msgid "C API changes"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:329
+#: ../../../release/2.5.0-notes.rst:330
 msgid ""
 "It is now possible to register ``\"real\"`` and ``\"imag\"`` ArrayMethods "
 "via ``PyUFunc_AddLoopsFromSpecs``.  These will be used for ``imag`` and "
@@ -596,11 +598,11 @@ msgid ""
 "views."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:334 ../../../release/2.5.0-notes.rst:619
+#: ../../../release/2.5.0-notes.rst:335 ../../../release/2.5.0-notes.rst:621
 msgid "(`gh-30984 <https://github.com/numpy/numpy/pull/30984>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:336
+#: ../../../release/2.5.0-notes.rst:337
 msgid ""
 "New ``PyDataType_TYPE``, ``PyDataType_KIND``, ``PyDataType_BYTEORDER`` and "
 "``PyDataType_TYPEOBJ`` accessor macros to the C API. Together with the other "
@@ -608,21 +610,21 @@ msgid ""
 "the fields of ``PyArray_Descr`` structs without any direct field accesses."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:341
+#: ../../../release/2.5.0-notes.rst:342
 msgid "(`gh-30994 <https://github.com/numpy/numpy/pull/30994>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:343
+#: ../../../release/2.5.0-notes.rst:344
 msgid ""
 "NumPy now supports the stable ABI for free-threaded Python as described in :"
 "pep:`803`."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:346
+#: ../../../release/2.5.0-notes.rst:347
 msgid "(`gh-31091 <https://github.com/numpy/numpy/pull/31091>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:348
+#: ../../../release/2.5.0-notes.rst:349
 msgid ""
 "``PyArray_DescrFromScalar`` now returns the full dtype descriptor for "
 "scalars of user-defined parametric data types, including any dtype "
@@ -632,56 +634,56 @@ msgid ""
 "which handles parametric dtypes correctly."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:355
+#: ../../../release/2.5.0-notes.rst:356
 msgid "(`gh-31067 <https://github.com/numpy/numpy/pull/31067>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:359
+#: ../../../release/2.5.0-notes.rst:360
 msgid "New Features"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:361
+#: ../../../release/2.5.0-notes.rst:362
 msgid ""
 "It is now possible to register user-dtypes for dlpack export and import via "
 "``numpy.dtypes.register_dlpack_dtype``. This functionality is meant to be "
 "used with care by user-dtype authors."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:365
+#: ../../../release/2.5.0-notes.rst:366
 msgid "(`gh-31256 <https://github.com/numpy/numpy/pull/31256>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:368
+#: ../../../release/2.5.0-notes.rst:369
 msgid "Pixi package definitions"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:369
+#: ../../../release/2.5.0-notes.rst:370
 msgid ""
 "Pixi package definitions have been added for different kinds of from-source "
 "builds of NumPy. These can be used in downstream Pixi workspaces via the "
 "``pixi-build`` feature."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:373
+#: ../../../release/2.5.0-notes.rst:374
 msgid ""
 "Definitions for both ``default`` and AddressSanitizer-instrumented "
 "(``asan``) builds are available in the source code under the ``pixi-packages/"
 "`` directory."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:377
+#: ../../../release/2.5.0-notes.rst:378
 msgid "``linux-64`` and ``osx-arm64`` platforms are supported."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:379
+#: ../../../release/2.5.0-notes.rst:380
 msgid "(`gh-30381 <https://github.com/numpy/numpy/pull/30381>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:382
+#: ../../../release/2.5.0-notes.rst:383
 msgid "``numpy.ndarray`` now supports structural pattern matching"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:383
+#: ../../../release/2.5.0-notes.rst:384
 msgid ""
 "``numpy.ndarray`` and its subclasses now have the ``Py_TPFLAGS_SEQUENCE`` "
 "flag set, enabling structural pattern matching (PEP 634) with ``match``/"
@@ -689,31 +691,31 @@ msgid ""
 "operations. See :ref:``arrays.ndarray.pattern-matching`` for details."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:388
+#: ../../../release/2.5.0-notes.rst:389
 msgid "(`gh-30653 <https://github.com/numpy/numpy/pull/30653>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:391
+#: ../../../release/2.5.0-notes.rst:392
 msgid "Added N-D evaluation functions to the polynomial package"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:392
+#: ../../../release/2.5.0-notes.rst:393
 msgid ""
 "New functions ``polyvalnd``, ``chebvalnd``, ``legvalnd``, ``hermvalnd``, "
 "``hermevalnd``, and ``lagvalnd`` have been added to evaluate polynomials in "
 "arbitrary dimensions, analogous to the existing 2D and 3D evaluators."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:396
+#: ../../../release/2.5.0-notes.rst:397
 msgid "(`gh-30857 <https://github.com/numpy/numpy/pull/30857>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:399
+#: ../../../release/2.5.0-notes.rst:400
 msgid ""
 "New \"descending\" keyword argument for ``numpy.sort`` and ``numpy.argsort``"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:400
+#: ../../../release/2.5.0-notes.rst:401
 msgid ""
 "Users can now pass the ``descending=True`` keyword argument to ``numpy."
 "sort`` and ``numpy.argsort`` to sort and argsort arrays in descending order. "
@@ -724,15 +726,15 @@ msgid ""
 "may be slower."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:407
+#: ../../../release/2.5.0-notes.rst:408
 msgid "(`gh-31345 <https://github.com/numpy/numpy/pull/31345>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:411
+#: ../../../release/2.5.0-notes.rst:412
 msgid "Improvements"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:413
+#: ../../../release/2.5.0-notes.rst:414
 msgid ""
 "For ``f2py``, the behaviour of ``intent(inplace)`` has improved.  "
 "Previously, if an input array did not have the right dtype or order, the "
@@ -745,7 +747,7 @@ msgid ""
 "write-back copy at the end of the call)."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:423
+#: ../../../release/2.5.0-notes.rst:424
 msgid ""
 "A potential problem would be that one might get very different results if "
 "one, e.g., previously passed in an integer array where a double array was "
@@ -756,33 +758,33 @@ msgid ""
 "to receive float, but would raise on integer input."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:431
+#: ../../../release/2.5.0-notes.rst:432
 msgid "(`gh-29929 <https://github.com/numpy/numpy/pull/29929>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:434
+#: ../../../release/2.5.0-notes.rst:435
 msgid "``f2py`` modules now show allocatable arrays in ``dir()``"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:435
+#: ../../../release/2.5.0-notes.rst:436
 msgid ""
 "Allocatable module variables wrapped by ``f2py`` now appear in ``dir()`` "
 "output, matching their accessibility by name."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:438
+#: ../../../release/2.5.0-notes.rst:439
 msgid "(`gh-30965 <https://github.com/numpy/numpy/pull/30965>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:442
+#: ../../../release/2.5.0-notes.rst:443
 msgid "Performance improvements and changes"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:445
+#: ../../../release/2.5.0-notes.rst:446
 msgid "Improved performance of ``numpy.searchsorted``"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:446
+#: ../../../release/2.5.0-notes.rst:447
 msgid ""
 "The C++ binary search implementation used by ``numpy.searchsorted`` now has "
 "a much better performance when searching for multiple keys. The new "
@@ -792,35 +794,35 @@ msgid ""
 "performance remains comparable to previous versions."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:453
+#: ../../../release/2.5.0-notes.rst:454
 msgid "(`gh-30517 <https://github.com/numpy/numpy/pull/30517>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:456
+#: ../../../release/2.5.0-notes.rst:457
 msgid "Improved scaling of ufuncs on free-threading"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:458
+#: ../../../release/2.5.0-notes.rst:459
 msgid ""
 "NumPy's ufuncs now scale significantly better on free-threading builds of "
 "CPython due to the following optimizations:"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:461
+#: ../../../release/2.5.0-notes.rst:462
 msgid ""
 "**Lock-free dispatch table:** The ufuncs dispatch table is now implemented "
 "as a lock-free concurrent hash map, allowing multiple threads to call ufuncs "
 "without contention."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:465
+#: ../../../release/2.5.0-notes.rst:466
 msgid ""
 "**Immortal shared objects:** Certain shared objects, such as global memory "
 "handlers, have been made immortal. This effectively reduces reference "
 "counting contention across threads."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:469
+#: ../../../release/2.5.0-notes.rst:470
 msgid ""
 "**Optimized memory allocation:** NumPy now utilizes ``PyMem_RawMalloc`` and "
 "``PyMem_RawFree`` for memory allocation. On Python 3.15 and newer, this "
@@ -828,11 +830,11 @@ msgid ""
 "in multi-threaded workloads."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:477
+#: ../../../release/2.5.0-notes.rst:478
 msgid "Faster reductions on small/medium contiguous arrays"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:478
+#: ../../../release/2.5.0-notes.rst:479
 msgid ""
 "``numpy.sum``, ``numpy.prod``, ``numpy.any``, ``numpy.all``, and other "
 "reductions with an identity value now use a fast path when the input is a "
@@ -842,20 +844,20 @@ msgid ""
 "speedup up to 1.9x."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:485
+#: ../../../release/2.5.0-notes.rst:486
 msgid "(`gh-31274 <https://github.com/numpy/numpy/pull/31274>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:489
+#: ../../../release/2.5.0-notes.rst:490
 msgid "Typing improvements and changes"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:492
+#: ../../../release/2.5.0-notes.rst:493
 msgid ""
 "``numpy.linalg`` typing improvements and preliminary shape-typing support"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:493
+#: ../../../release/2.5.0-notes.rst:494
 msgid ""
 "Input and output dtypes for ``numpy.linalg`` functions are now more precise. "
 "Several of these functions also gain preliminary shape-typing support while "
@@ -867,15 +869,15 @@ msgid ""
 "implemented for the most common lower-rank cases."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:502
+#: ../../../release/2.5.0-notes.rst:503
 msgid "(`gh-30480 <https://github.com/numpy/numpy/pull/30480>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:505
+#: ../../../release/2.5.0-notes.rst:506
 msgid "``numpy.ma`` typing annotations"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:506
+#: ../../../release/2.5.0-notes.rst:507
 msgid ""
 "The ``numpy.ma`` module is now fully covered by typing annotations.  This "
 "includes annotations for masked arrays, masks, and various functions and "
@@ -883,15 +885,15 @@ msgid ""
 "submodules."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:511
+#: ../../../release/2.5.0-notes.rst:512
 msgid "(`gh-30566 <https://github.com/numpy/numpy/pull/30566>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:514
+#: ../../../release/2.5.0-notes.rst:515
 msgid "Shape-typing support for many functions and methods"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:515
+#: ../../../release/2.5.0-notes.rst:516
 msgid ""
 "Many functions and methods now have shape-aware return type annotations. "
 "Type-checkers can now infer the number of dimensions of the returned array "
@@ -900,7 +902,7 @@ msgid ""
 "number of dimensions as ``x``."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:521
+#: ../../../release/2.5.0-notes.rst:522
 msgid ""
 "This covers ``numpy.linalg`` functions, array creation functions (like "
 "``asarray``, ``from{buffer,string,file,iter,regex}``), range functions "
@@ -915,22 +917,22 @@ msgid ""
 "annotations as part of this work."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:532
+#: ../../../release/2.5.0-notes.rst:533
 msgid ""
 "Shape-typing is still a work-in-progress, so coverage is not yet complete. "
 "Because of limitations in Python's type system and current type-checkers, "
 "shape-typing is often only implemented for the most common lower-rank cases."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:536
+#: ../../../release/2.5.0-notes.rst:537
 msgid "(`gh-31172 <https://github.com/numpy/numpy/pull/31172>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:539
+#: ../../../release/2.5.0-notes.rst:540
 msgid "``numpy.fft`` typing improvements and preliminary shape-typing support"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:540
+#: ../../../release/2.5.0-notes.rst:541
 msgid ""
 "The ``numpy.fft`` functions now support non-``float64``/``complex128`` "
 "dtypes and gain preliminary shape-typing support. For example, the return "
@@ -939,19 +941,19 @@ msgid ""
 "unknown at type-checking time."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:546
+#: ../../../release/2.5.0-notes.rst:547
 msgid "(`gh-31226 <https://github.com/numpy/numpy/pull/31226>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:550
+#: ../../../release/2.5.0-notes.rst:551
 msgid "Changes"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:553
+#: ../../../release/2.5.0-notes.rst:554
 msgid "Structured array copies now use ``memcpy`` for contiguous dtypes"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:554
+#: ../../../release/2.5.0-notes.rst:555
 msgid ""
 "Copying structured arrays with identical dtypes now uses ``memcpy`` instead "
 "of field-by-field transfer when the dtype has a contiguous layout (no gaps "
@@ -961,7 +963,7 @@ msgid ""
 "dtypes continue to use the slower field-by-field copy."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:561
+#: ../../../release/2.5.0-notes.rst:562
 msgid ""
 "This means that padding bytes in contiguous structured dtypes (e.g. those "
 "created without explicit ``offsets``) may now be copied as part of the "
@@ -969,15 +971,15 @@ msgid ""
 "padding bytes being preserved during structured array copies may be affected."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:566
+#: ../../../release/2.5.0-notes.rst:567
 msgid "(`gh-29270 <https://github.com/numpy/numpy/pull/29270>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:569
+#: ../../../release/2.5.0-notes.rst:570
 msgid "``numpy.ctypeslib.as_ctypes`` now does not support scalar types"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:570
+#: ../../../release/2.5.0-notes.rst:571
 msgid ""
 "The function ``numpy.ctypeslib.as_ctypes`` has been updated to only accept "
 "``numpy.ndarray``.  Passing a scalar type (e.g., ``numpy.int32(5)``) will "
@@ -990,15 +992,15 @@ msgid ""
 "as_ctypes``."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:579 ../../../release/2.5.0-notes.rst:588
+#: ../../../release/2.5.0-notes.rst:580 ../../../release/2.5.0-notes.rst:589
 msgid "(`gh-30538 <https://github.com/numpy/numpy/pull/30538>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:582
+#: ../../../release/2.5.0-notes.rst:583
 msgid "``__array_interface__`` changes on scalars"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:583
+#: ../../../release/2.5.0-notes.rst:584
 msgid ""
 "Scalars now export the ``__array_interface__`` directly rather than "
 "including an array copy as a ``__ref`` entry. This means that scalars are "
@@ -1007,37 +1009,37 @@ msgid ""
 "NumPy itself."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:591
+#: ../../../release/2.5.0-notes.rst:592
 msgid "``meshgrid`` now always returns a tuple"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:592
+#: ../../../release/2.5.0-notes.rst:593
 msgid ""
 "``np.meshgrid`` previously used to return a list when ``sparse`` was true "
 "and ``copy`` was false.  Now, it always returns a tuple regardless of the "
 "arguments."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:596
+#: ../../../release/2.5.0-notes.rst:597
 msgid "(`gh-30707 <https://github.com/numpy/numpy/pull/30707>`__)"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:599
+#: ../../../release/2.5.0-notes.rst:600
 msgid "``numpy.triu_indices`` now accepts ``unsigned integers``"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:600
+#: ../../../release/2.5.0-notes.rst:601
 msgid ""
 "``numpy.triu_indices`` previously used to error in some cases when "
 "``unsigned integers`` were given as arguments. Now, it accepts them in all "
 "cases."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:606
+#: ../../../release/2.5.0-notes.rst:608
 msgid "``object`` dtype in ``.real`` and ``.imag`` and related functions"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:607
+#: ../../../release/2.5.0-notes.rst:609
 msgid ""
 "The array attributes ``.real`` and ``.imag`` now behave differently for "
 "object arrays and return ``getattr(element, \"real\", element)`` or "
@@ -1045,11 +1047,11 @@ msgid ""
 "both is now read-only to avoid possible in-place changes having no effect."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:612
+#: ../../../release/2.5.0-notes.rst:614
 msgid "This change also affects ``np.isreal()`` which uses ``arr.imag``."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:614
+#: ../../../release/2.5.0-notes.rst:616
 msgid ""
 "Previously, ``.imag`` always returned ``0`` while ``.real`` returned the "
 "original array unmodified.  The new behavior now returnes the correct values "
@@ -1057,16 +1059,16 @@ msgid ""
 "``element.real()`` is a method and not a property."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:622
+#: ../../../release/2.5.0-notes.rst:624
 msgid "NumPy's internal memory allocations now use ``PyMem_RawMalloc``"
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:623
+#: ../../../release/2.5.0-notes.rst:625
 msgid ""
 "NumPy's internal memory allocations now use ``PyMem_RawMalloc`` instead of "
 "``malloc`` and can be tracked by ``tracemalloc``."
 msgstr ""
 
-#: ../../../release/2.5.0-notes.rst:626
+#: ../../../release/2.5.0-notes.rst:628
 msgid "(`gh-31503 <https://github.com/numpy/numpy/pull/31503>`__)"
 msgstr ""
