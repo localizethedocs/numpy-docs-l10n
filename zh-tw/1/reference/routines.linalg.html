@@ -1,0 +1,819 @@
+
+<!DOCTYPE html>
+
+
+<html lang="zh-TW" data-content_root="" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Linear algebra (numpy.linalg) &#8212; NumPy v1.26 Manual</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/numpy.css?v=6840086e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=0cb0666d"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/translations.js?v=d9a6981e"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/routines.linalg';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.14.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '1.26';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = 0;
+        </script>
+    <link rel="canonical" href="https://projects.localizethedocs.org/numpy-docs-l10n/reference/routines.linalg.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜尋" href="../search.html" />
+    <link rel="next" title="numpy.dot" href="generated/numpy.dot.html" />
+    <link rel="prev" title="numpy.lib.format.write_array_header_2_0" href="generated/numpy.lib.format.write_array_header_2_0.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-TW"/>
+    <meta name="docbuild:last-update" content="6月 29, 2026"/>
+<script type="text/javascript" src="../ltd-provenance.js"></script>
+<script type="text/javascript" src="../ltd-current.js"></script>
+<script type="text/javascript" src="../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../ltd-flyout.js"></script>
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v1.26 Manual - Home"/>
+    <script>document.write(`<img src="../_static/numpylogo_dark.svg" class="logo__image only-dark" alt="NumPy v1.26 Manual - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../user/index.html">
+                        使用者指南
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        API 參考
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../dev/index.html">
+                        開發
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../release.html">
+                        發行備註
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://numpy.org/numpy-tutorials/">
+                    Learn
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="搜尋" aria-label="搜尋" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">搜尋</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/numpy/numpy" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/numpy_team" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="搜尋" aria-label="搜尋" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">搜尋</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../user/index.html">
+                        使用者指南
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        API 參考
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../dev/index.html">
+                        開發
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../release.html">
+                        發行備註
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://numpy.org/numpy-tutorials/">
+                    Learn
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/numpy/numpy" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/numpy_team" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="arrays.html">陣列物件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="array_api.html">Array API Standard Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constants.html">常數</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ufuncs.html">Universal functions (<code class="xref py py-class docutils literal notranslate"><span class="pre">ufunc</span></code>)</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="routines.html">Routines</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="routines.array-creation.html">Array creation routines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.array-manipulation.html">Array manipulation routines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.bitwise.html">Binary operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.char.html">String operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.ctypeslib.html">C-Types foreign function interface (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.ctypeslib</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.datetime.html">Datetime support functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.dtype.html">Data type routines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.emath.html">Mathematical functions with automatic domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.err.html">Floating point error handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.fft.html">Discrete Fourier Transform (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.fft</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.functional.html">Functional programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.help.html">NumPy-specific help functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.io.html">輸入與輸出</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Linear algebra (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.linalg</span></code>)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.dot.html">numpy.dot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.multi_dot.html">numpy.linalg.multi_dot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.vdot.html">numpy.vdot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.inner.html">numpy.inner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.outer.html">numpy.outer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.matmul.html">numpy.matmul</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.tensordot.html">numpy.tensordot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.einsum.html">numpy.einsum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.einsum_path.html">numpy.einsum_path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.matrix_power.html">numpy.linalg.matrix_power</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.kron.html">numpy.kron</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.cholesky.html">numpy.linalg.cholesky</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.qr.html">numpy.linalg.qr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.svd.html">numpy.linalg.svd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.eig.html">numpy.linalg.eig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.eigh.html">numpy.linalg.eigh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.eigvals.html">numpy.linalg.eigvals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.eigvalsh.html">numpy.linalg.eigvalsh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.norm.html">numpy.linalg.norm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.cond.html">numpy.linalg.cond</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.det.html">numpy.linalg.det</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.matrix_rank.html">numpy.linalg.matrix_rank</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.slogdet.html">numpy.linalg.slogdet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.trace.html">numpy.trace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.solve.html">numpy.linalg.solve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.tensorsolve.html">numpy.linalg.tensorsolve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.lstsq.html">numpy.linalg.lstsq</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.inv.html">numpy.linalg.inv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.pinv.html">numpy.linalg.pinv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.tensorinv.html">numpy.linalg.tensorinv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.LinAlgError.html">numpy.linalg.LinAlgError</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="routines.logic.html">Logic functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.ma.html">Masked array operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.math.html">Mathematical functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.matlib.html">Matrix library (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.matlib</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.other.html">Miscellaneous routines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.padding.html">Padding Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.polynomials.html">多項式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="random/index.html">Random sampling (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.random</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.set.html">Set routines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.sort.html">排序、搜尋與計數</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.statistics.html">Statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.testing.html">Test Support (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.testing</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.testing.overrides.html">Support for testing overrides (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.testing.overrides</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.window.html">Window functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="typing.html">Typing (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.typing</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="global_state.html">Global state</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distutils.html">Packaging (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.distutils</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distutils_guide.html">NumPy distutils - users guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distutils_status_migration.html">Status of <code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> and migration advice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c-api/index.html">NumPy C-API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simd/index.html">CPU/SIMD Optimizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">NumPy security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="swig.html">NumPy 與 SWIG</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">NumPy 參考</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="routines.html" class="nav-link">Routines</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Linear...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <span class="target" id="module-numpy.linalg"><span id="routines-linalg"></span></span><section id="linear-algebra-numpy-linalg">
+<h1>Linear algebra (<a class="reference internal" href="#module-numpy.linalg" title="numpy.linalg"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.linalg</span></code></a>)<a class="headerlink" href="#linear-algebra-numpy-linalg" title="本標頭的永久連結">#</a></h1>
+<p>The NumPy linear algebra functions rely on BLAS and LAPACK to provide efficient
+low level implementations of standard linear algebra algorithms. Those
+libraries may be provided by NumPy itself using C versions of a subset of their
+reference implementations but, when possible, highly optimized libraries that
+take advantage of specialized processor functionality are preferred. Examples
+of such libraries are <a class="reference external" href="https://www.openblas.net/">OpenBLAS</a>, MKL (TM), and ATLAS. Because those libraries
+are multithreaded and processor dependent, environmental variables and external
+packages such as <a class="reference external" href="https://github.com/joblib/threadpoolctl">threadpoolctl</a> may be needed to control the number of threads
+or specify the processor architecture.</p>
+<p>SciPy 函式庫也包含一個 <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/linalg.html#module-scipy.linalg" title="(於 SciPy v1.18.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg</span></code></a> 子模組，SciPy 和 NumPy 子模組提供的功能有重疊。 SciPy 包含一些 <a class="reference internal" href="#module-numpy.linalg" title="numpy.linalg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.linalg</span></code></a> 中沒有的函數，例如與 LU 分解和 Schur 分解相關的函數、多種計算偽逆的方法以及矩陣超越函數（例如矩陣對數）。一些同時存在於兩個函式庫中的函數在 <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/linalg.html#module-scipy.linalg" title="(於 SciPy v1.18.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.linalg</span></code></a> 中得到了增強。例如，<a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.eig.html#scipy.linalg.eig" title="(於 SciPy v1.18.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.linalg.eig</span></code></a> 可以接受第二個矩陣參數來解廣義特徵值問題。然而，NumPy 中的一些函數具有更靈活的廣播選項。例如，<a class="reference internal" href="generated/numpy.linalg.solve.html#numpy.linalg.solve" title="numpy.linalg.solve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.linalg.solve</span></code></a> 可以處理「堆疊」數組，而 <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.solve.html#scipy.linalg.solve" title="(於 SciPy v1.18.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.linalg.solve</span></code></a> 僅接受單一方陣作為其第一個參數。</p>
+<div class="admonition note">
+<p class="admonition-title">備註</p>
+<p>本頁中使用的術語「矩陣」指的是二維 <a class="reference internal" href="generated/numpy.array.html#numpy.array" title="numpy.array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.array</span></code></a> 對象，而非 <a class="reference internal" href="generated/numpy.matrix.html#numpy.matrix" title="numpy.matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.matrix</span></code></a> 對象。後者已不再建議使用，即使在線性代數運算中也不建議使用。更多資訊請參閱矩陣物件文件。</p>
+</div>
+<section id="the-operator">
+<h2><code class="docutils literal notranslate"><span class="pre">&#64;</span></code> 運算子<a class="headerlink" href="#the-operator" title="本標頭的永久連結">#</a></h2>
+<p>Introduced in NumPy 1.10.0, the <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> operator is preferable to
+other methods when computing the matrix product between 2d arrays. The
+<a class="reference internal" href="generated/numpy.matmul.html#numpy.matmul" title="numpy.matmul"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.matmul</span></code></a> function implements the <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> operator.</p>
+</section>
+<section id="matrix-and-vector-products">
+<h2>矩陣與向量乘積<a class="headerlink" href="#matrix-and-vector-products" title="本標頭的永久連結">#</a></h2>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.dot.html#numpy.dot" title="numpy.dot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dot</span></code></a>(a, b[, out])</p></td>
+<td><p>兩個陣列的點積。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.linalg.multi_dot.html#numpy.linalg.multi_dot" title="numpy.linalg.multi_dot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.multi_dot</span></code></a>(arrays, *[, out])</p></td>
+<td><p>在一次函數呼叫中計算兩個或多個陣列的點積，同時自動選擇最快的計算順序。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.vdot.html#numpy.vdot" title="numpy.vdot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vdot</span></code></a>(a, b, /)</p></td>
+<td><p>傳回兩個向量的點積。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.inner.html#numpy.inner" title="numpy.inner"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inner</span></code></a>(a, b, /)</p></td>
+<td><p>兩個陣列的內積。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.outer.html#numpy.outer" title="numpy.outer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">outer</span></code></a>(a, b[, out])</p></td>
+<td><p>計算兩個陣列的外積。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.matmul.html#numpy.matmul" title="numpy.matmul"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matmul</span></code></a>(x1, x2, /[, out, casting, order, ...])</p></td>
+<td><p>兩個陣列的矩陣乘積。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.tensordot.html#numpy.tensordot" title="numpy.tensordot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tensordot</span></code></a>(a, b[, axes])</p></td>
+<td><p>Compute tensor dot product along specified axes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.einsum.html#numpy.einsum" title="numpy.einsum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">einsum</span></code></a>(subscripts, *operands[, out, dtype, ...])</p></td>
+<td><p>Evaluates the Einstein summation convention on the operands.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.einsum_path.html#numpy.einsum_path" title="numpy.einsum_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">einsum_path</span></code></a>(subscripts, *operands[, optimize])</p></td>
+<td><p>Evaluates the lowest cost contraction order for an einsum expression by considering the creation of intermediate arrays.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.linalg.matrix_power.html#numpy.linalg.matrix_power" title="numpy.linalg.matrix_power"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.matrix_power</span></code></a>(a, n)</p></td>
+<td><p>Raise a square matrix to the (integer) power <em class="xref py py-obj">n</em>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.kron.html#numpy.kron" title="numpy.kron"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kron</span></code></a>(a, b)</p></td>
+<td><p>Kronecker product of two arrays.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="decompositions">
+<h2>分解<a class="headerlink" href="#decompositions" title="本標頭的永久連結">#</a></h2>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.linalg.cholesky.html#numpy.linalg.cholesky" title="numpy.linalg.cholesky"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.cholesky</span></code></a>(a)</p></td>
+<td><p>喬列斯基分解。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.linalg.qr.html#numpy.linalg.qr" title="numpy.linalg.qr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.qr</span></code></a>(a[, mode])</p></td>
+<td><p>計算矩陣的QR分解。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.linalg.svd.html#numpy.linalg.svd" title="numpy.linalg.svd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.svd</span></code></a>(a[, full_matrices, compute_uv, ...])</p></td>
+<td><p>奇異值分解。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="matrix-eigenvalues">
+<h2>矩陣特徵值<a class="headerlink" href="#matrix-eigenvalues" title="本標頭的永久連結">#</a></h2>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.linalg.eig.html#numpy.linalg.eig" title="numpy.linalg.eig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.eig</span></code></a>(a)</p></td>
+<td><p>計算方陣的特徵值和右邊特徵向量。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.linalg.eigh.html#numpy.linalg.eigh" title="numpy.linalg.eigh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.eigh</span></code></a>(a[, UPLO])</p></td>
+<td><p>Return the eigenvalues and eigenvectors of a complex Hermitian (conjugate symmetric) or a real symmetric matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.linalg.eigvals.html#numpy.linalg.eigvals" title="numpy.linalg.eigvals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.eigvals</span></code></a>(a)</p></td>
+<td><p>計算一般矩陣的特徵值。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.linalg.eigvalsh.html#numpy.linalg.eigvalsh" title="numpy.linalg.eigvalsh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.eigvalsh</span></code></a>(a[, UPLO])</p></td>
+<td><p>Compute the eigenvalues of a complex Hermitian or real symmetric matrix.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="norms-and-other-numbers">
+<h2>範數與其他數值<a class="headerlink" href="#norms-and-other-numbers" title="本標頭的永久連結">#</a></h2>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.linalg.norm.html#numpy.linalg.norm" title="numpy.linalg.norm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.norm</span></code></a>(x[, ord, axis, keepdims])</p></td>
+<td><p>矩陣或向量範數。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.linalg.cond.html#numpy.linalg.cond" title="numpy.linalg.cond"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.cond</span></code></a>(x[, p])</p></td>
+<td><p>計算矩陣的條件數。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.linalg.det.html#numpy.linalg.det" title="numpy.linalg.det"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.det</span></code></a>(a)</p></td>
+<td><p>計算數組的行列式。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.linalg.matrix_rank.html#numpy.linalg.matrix_rank" title="numpy.linalg.matrix_rank"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.matrix_rank</span></code></a>(A[, tol, hermitian])</p></td>
+<td><p>使用奇異值分解 (SVD) 方法傳回陣列的矩陣秩</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.linalg.slogdet.html#numpy.linalg.slogdet" title="numpy.linalg.slogdet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.slogdet</span></code></a>(a)</p></td>
+<td><p>計算數組行列式的符號和（自然）對數。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.trace.html#numpy.trace" title="numpy.trace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trace</span></code></a>(a[, offset, axis1, axis2, dtype, out])</p></td>
+<td><p>傳回數組對角線上的所有元素總和。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="solving-equations-and-inverting-matrices">
+<h2>解方程式和求矩陣逆<a class="headerlink" href="#solving-equations-and-inverting-matrices" title="本標頭的永久連結">#</a></h2>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.linalg.solve.html#numpy.linalg.solve" title="numpy.linalg.solve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.solve</span></code></a>(a, b)</p></td>
+<td><p>解線性矩陣方程式或線性標量方程組。</p></td>
+</tr>
+<tr class="row-even"><td><p>py:obj:<a class="reference internal" href="generated/numpy.linalg.tensorsolve.html#numpy.linalg.tensorsolve" title="numpy.linalg.tensorsolve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.tensorsolve</span></code></a>(a, b[, axes])</p></td>
+<td><p>解張量方程式「<em class="xref py py-obj">a x = b`</em>，求出 x。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.linalg.lstsq.html#numpy.linalg.lstsq" title="numpy.linalg.lstsq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.lstsq</span></code></a>(a, b[, rcond])</p></td>
+<td><p>傳回線性矩陣方程式的最小平方法解。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.linalg.inv.html#numpy.linalg.inv" title="numpy.linalg.inv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.inv</span></code></a>(a)</p></td>
+<td><p>Compute the (multiplicative) inverse of a matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.linalg.pinv.html#numpy.linalg.pinv" title="numpy.linalg.pinv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.pinv</span></code></a>(a[, rcond, hermitian])</p></td>
+<td><p>計算矩陣的（摩爾-彭羅斯）偽反向。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.linalg.tensorinv.html#numpy.linalg.tensorinv" title="numpy.linalg.tensorinv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.tensorinv</span></code></a>(a[, ind])</p></td>
+<td><p>計算 N 維數組的「反向」。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="exceptions">
+<h2>例外情況<a class="headerlink" href="#exceptions" title="本標頭的永久連結">#</a></h2>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.linalg.LinAlgError.html#numpy.linalg.LinAlgError" title="numpy.linalg.LinAlgError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.LinAlgError</span></code></a></p></td>
+<td><p>由 linalg 函數引發的通用 Python 異常派生物件。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="linear-algebra-on-several-matrices-at-once">
+<span id="routines-linalg-broadcasting"></span><h2>同時處理多個矩陣的線性代數問題<a class="headerlink" href="#linear-algebra-on-several-matrices-at-once" title="本標頭的永久連結">#</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified added">在 1.8.0 版新加入.</span></p>
+</div>
+<p>上面列出的幾個線性代數例程能夠一次計算多個矩陣的結果，前提是這些矩陣被堆疊到同一個陣列中。</p>
+<p>文件中透過輸入參數規格（例如 <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">:</span> <span class="pre">(...,</span> <span class="pre">M,</span> <span class="pre">M)</span> <span class="pre">array_like</span></code>）對此進行了說明。這意味著，例如，如果給定一個輸入數組 <code class="docutils literal notranslate"><span class="pre">a.shape</span> <span class="pre">==</span> <span class="pre">(N,</span> <span class="pre">M,</span> <span class="pre">M)</span></code>，它將被解釋為 N 個大小為 M×M 的矩陣的「堆疊」。類似的規範也適用於傳回值，例如，行列式的 <code class="docutils literal notranslate"><span class="pre">det</span> <span class="pre">:</span> <span class="pre">(...)</span></code> 在這種情況下將傳回形狀為 <code class="docutils literal notranslate"><span class="pre">det(a).shape</span> <span class="pre">==</span> <span class="pre">(N,)</span></code> 的陣列。這可以推廣到對高維數組進行線性代數運算：多維數組的最後 1 或 2 個維度將根據每個運算的需要解釋為向量或矩陣。</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="generated/numpy.lib.format.write_array_header_2_0.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一頁</p>
+        <p class="prev-next-title">numpy.lib.format.write_array_header_2_0</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="generated/numpy.dot.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一頁</p>
+        <p class="prev-next-title">numpy.dot</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-operator"><code class="docutils literal notranslate"><span class="pre">@</span></code> 運算子</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-and-vector-products">矩陣與向量乘積</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decompositions">分解</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-eigenvalues">矩陣特徵值</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norms-and-other-numbers">範數與其他數值</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-equations-and-inverting-matrices">解方程式和求矩陣逆</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exceptions">例外情況</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra-on-several-matrices-at-once">同時處理多個矩陣的線性代數問題</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2008-2022, NumPy Developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2 建立。
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
