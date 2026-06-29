@@ -1,0 +1,194 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.ma.clip.rst:4
+msgid "numpy.ma.clip"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:2
+msgid "Clip (limit) the values in an array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:4
+msgid ""
+"Given an interval, values outside the interval are clipped to the interval "
+"edges.  For example, if an interval of ``[0, 1]`` is specified, values "
+"smaller than 0 become 0, and values larger than 1 become 1."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:9
+msgid ""
+"Equivalent to but faster than ``np.minimum(a_max, np.maximum(a, a_min))``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:11
+msgid "No check is performed to ensure ``a_min < a_max``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:16
+msgid "**a**"
+msgstr "**a**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:-1
+msgid "array_like"
+msgstr "array_like"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:16
+msgid "Array containing elements to clip."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:22
+msgid "**a_min, a_max**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:-1
+msgid "array_like or None"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:19
+msgid ""
+"Minimum and maximum value. If ``None``, clipping is not performed on the "
+"corresponding edge. If both ``a_min`` and ``a_max`` are ``None``, the "
+"elements of the returned array stay the same. Both are broadcasted against "
+"``a``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:27
+msgid "**out**"
+msgstr "**out**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:-1
+msgid "ndarray, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:25
+msgid ""
+"The results will be placed in this array. It may be the input array for in-"
+"place clipping.  `out` must be of the right shape to hold the output.  Its "
+"type is preserved."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:34
+msgid "**min, max**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:30
+msgid ""
+"Array API compatible alternatives for ``a_min`` and ``a_max`` arguments. "
+"Either ``a_min`` and ``a_max`` or ``min`` and ``max`` can be passed at the "
+"same time. Default: ``None``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:40
+msgid "**\\*\\*kwargs**"
+msgstr "**\\*\\*kwargs**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:37
+msgid ""
+"For other keyword-only arguments, see the :ref:`ufunc docs <ufuncs.kwargs>`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:53
+msgid "**clipped_array**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:-1
+msgid "MaskedArray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:45
+msgid ""
+"An array with the elements of `a`, but where values < `a_min` are replaced "
+"with `a_min`, and those > `a_max` with `a_max`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:58
+msgid ":ref:`ufuncs-output-type`"
+msgstr ":ref:`ufuncs-output-type`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:62
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:63
+msgid ""
+"When `a_min` is greater than `a_max`, `clip` returns an array in which all "
+"values are equal to `a_max`, as shown in the second example."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:69
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:-1
+msgid ""
+"<div id=\"10f0efcc-4af9-4a9e-8ea1-949aefe7389a\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('87077dd7-445e-442f-9fe6-"
+"b3fd9f10057c','10f0efcc-4af9-4a9e-8ea1-949aefe7389a')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('87077dd7-445e-442f-9fe6-"
+"b3fd9f10057c','10f0efcc-4af9-4a9e-8ea1-949aefe7389a')\">Open In Tab</"
+"button></div><div id=\"dd58c533-884e-4e2b-884f-fad1cab0c74e\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/core.py:docstring
+#: of numpy.ma.core.clip:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

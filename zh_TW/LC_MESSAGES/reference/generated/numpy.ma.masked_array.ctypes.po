@@ -1,0 +1,177 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.ma.masked_array.ctypes.rst:4
+msgid "numpy.ma.masked\\_array.ctypes"
+msgstr ""
+
+#: ../../../reference/generated/numpy.ma.masked_array.ctypes.rst:8
+msgid "attribute"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.masked_array.ctypes:2
+msgid ""
+"An object to simplify the interaction of the array with the ctypes module."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.masked_array.ctypes:5
+msgid ""
+"This attribute creates an object that makes it easier to use arrays when "
+"calling shared libraries with the ctypes module. The returned object has, "
+"among others, data, shape, and strides attributes (see Notes below) which "
+"themselves return ctypes objects that can be used as arguments to a shared "
+"library."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.masked_array.ctypes:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../docstring of numpy.ma.masked_array.ctypes:16
+msgid "**None**"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.masked_array.ctypes:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../docstring of numpy.ma.masked_array.ctypes:27
+msgid "**c**"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.masked_array.ctypes:-1
+msgid "Python object"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.masked_array.ctypes:21
+msgid "Possessing attributes data, shape, strides, etc."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.masked_array.ctypes:32
+msgid ":obj:`numpy.ctypeslib`"
+msgstr ":obj:`numpy.ctypeslib`"
+
+#: ../../../../docstring of numpy.ma.masked_array.ctypes:36
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.masked_array.ctypes:37
+msgid ""
+"Below are the public attributes of this object which were documented in "
+"\"Guide to NumPy\" (we have omitted undocumented public attributes, as well "
+"as documented private attributes):"
+msgstr ""
+
+#: ../../../../docstring of numpy._core._internal._ctypes.data:2
+msgid ""
+"A pointer to the memory area of the array as a Python integer. This memory "
+"area may contain data that is not aligned, or not in correct byte-order. The "
+"memory area may not even be writeable. The array flags and data-type of this "
+"array should be respected when passing this attribute to arbitrary C-code to "
+"avoid trouble that can include Python crashing. User Beware! The value of "
+"this attribute is exactly the same as: ``self._array_interface_['data'][0]``."
+msgstr ""
+
+#: ../../../../docstring of numpy._core._internal._ctypes.data:11
+msgid ""
+"Note that unlike ``data_as``, a reference won't be kept to the array: code "
+"like ``ctypes.c_void_p((a + b).ctypes.data)`` will result in a pointer to a "
+"deallocated array, and should be spelt ``(a + b).ctypes.data_as(ctypes."
+"c_void_p)``"
+msgstr ""
+
+#: ../../../../docstring of numpy._core._internal._ctypes.shape:2
+msgid ""
+"(c_intp*self.ndim): A ctypes array of length self.ndim where the basetype is "
+"the C-integer corresponding to ``dtype('p')`` on this platform (see `~numpy."
+"ctypeslib.c_intp`). This base-type could be `ctypes.c_int`, `ctypes.c_long`, "
+"or `ctypes.c_longlong` depending on the platform. The ctypes array contains "
+"the shape of the underlying array."
+msgstr ""
+
+#: ../../../../docstring of numpy._core._internal._ctypes.strides:2
+msgid ""
+"(c_intp*self.ndim): A ctypes array of length self.ndim where the basetype is "
+"the same as for the shape attribute. This ctypes array contains the strides "
+"information from the underlying array. This strides information is important "
+"for showing how many bytes must be jumped to get to the next element in the "
+"array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/_core/_internal.py:docstring
+#: of numpy._core._internal._ctypes.data_as:2
+msgid ""
+"Return the data pointer cast to a particular c-types object. For example, "
+"calling ``self._as_parameter_`` is equivalent to ``self.data_as(ctypes."
+"c_void_p)``. Perhaps you want to use the data as a pointer to a ctypes array "
+"of floating-point data: ``self.data_as(ctypes.POINTER(ctypes.c_double))``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/_core/_internal.py:docstring
+#: of numpy._core._internal._ctypes.data_as:8
+msgid "The returned pointer will keep a reference to the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/_core/_internal.py:docstring
+#: of numpy._core._internal._ctypes.shape_as:2
+msgid ""
+"Return the shape tuple as an array of some other c-types type. For example: "
+"``self.shape_as(ctypes.c_short)``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/_core/_internal.py:docstring
+#: of numpy._core._internal._ctypes.strides_as:2
+msgid ""
+"Return the strides tuple as an array of some other c-types type. For "
+"example: ``self.strides_as(ctypes.c_longlong)``."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.masked_array.ctypes:59
+msgid ""
+"If the ctypes module is not available, then the ctypes attribute of array "
+"objects still returns something useful, but ctypes objects are not returned "
+"and errors may be raised instead. In particular, the object will still have "
+"the ``as_parameter`` attribute which will return an integer equal to the "
+"data attribute."
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.masked_array.ctypes:67
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../docstring of numpy.ma.masked_array.ctypes:-1
+msgid ""
+"<div id=\"1c5e0ea7-a6fb-464d-a9e8-6c3900b8512d\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('c2a2abd2-06e2-42d5-844d-d3e116dd6cda','1c5e0ea7-"
+"a6fb-464d-a9e8-6c3900b8512d')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('c2a2abd2-06e2-42d5-844d-d3e116dd6cda','1c5e0ea7-a6fb-464d-"
+"a9e8-6c3900b8512d')\">Open In Tab</button></div><div id=\"66c861a0-c397-4fa3-"
+"a703-4d4b290c1705\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../docstring of numpy.ma.masked_array.ctypes:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

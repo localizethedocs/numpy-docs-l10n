@@ -1,0 +1,201 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.isclose.rst:4
+msgid "numpy.isclose"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:2
+msgid ""
+"Returns a boolean array where two arrays are element-wise equal within a "
+"tolerance."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:5
+msgid ""
+"The tolerance values are positive, typically very small numbers.  The "
+"relative difference (`rtol` * abs(`b`)) and the absolute difference `atol` "
+"are added together to compare against the absolute difference between `a` "
+"and `b`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:10
+msgid ""
+"The default `atol` is not appropriate for comparing numbers with magnitudes "
+"much smaller than one (see Notes)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:16
+msgid "**a, b**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:-1
+msgid "array_like"
+msgstr "array_like"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:16
+msgid "Input arrays to compare."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:19
+msgid "**rtol**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:19
+msgid "The relative tolerance parameter (see Notes)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:22
+msgid "**atol**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:22
+msgid "The absolute tolerance parameter (see Notes)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:28
+msgid "**equal_nan**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:-1
+msgid "bool"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:25
+msgid ""
+"Whether to compare NaN's as equal.  If True, NaN's in `a` will be considered "
+"equal to NaN's in `b` in the output array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:41
+msgid "**y**"
+msgstr "**y**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:33
+msgid ""
+"Returns a boolean array of where `a` and `b` are equal within the given "
+"tolerance. If both `a` and `b` are scalars, returns a single boolean value."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:46
+msgid ":obj:`allclose`"
+msgstr ":obj:`allclose`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:48
+msgid ":obj:`math.isclose`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:52
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:53
+msgid ""
+"For finite values, isclose uses the following equation to test whether two "
+"floating point values are equivalent.::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:56
+msgid "absolute(a - b) <= (atol + rtol * absolute(b))"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:58
+msgid ""
+"Unlike the built-in `math.isclose`, the above equation is not symmetric in "
+"`a` and `b` -- it assumes `b` is the reference value -- so that `isclose(a, "
+"b)` might be different from `isclose(b, a)`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:62
+msgid ""
+"The default value of `atol` is not appropriate when the reference value `b` "
+"has magnitude smaller than one. For example, it is unlikely that ``a = "
+"1e-9`` and ``b = 2e-9`` should be considered \"close\", yet ``isclose(1e-9, "
+"2e-9)`` is ``True`` with default settings. Be sure to select `atol` for the "
+"use case at hand, especially for defining the threshold below which a non-"
+"zero value in `a` will be considered \"close\" to a very small or zero value "
+"in `b`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:70
+msgid ""
+"`isclose` is not defined for non-numeric data types. :class:`bool` is "
+"considered a numeric data-type for this purpose."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:75
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:-1
+msgid ""
+"<div id=\"dd553bce-0762-4517-980c-d6e7eadd0067\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('be354cec-1f2b-4cf2-908b-"
+"f5614e7b2077','dd553bce-0762-4517-980c-d6e7eadd0067')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('be354cec-1f2b-4cf2-908b-f5614e7b2077','dd553bce-0762-4517-980c-"
+"d6e7eadd0067')\">Open In Tab</button></div><div id=\"b9526c29-"
+"e1be-47da-9664-29d05a529100\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.isclose:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""
