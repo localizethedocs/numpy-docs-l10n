@@ -1,0 +1,824 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../glossary.rst:3
+msgid "Glossary"
+msgstr ""
+
+#: ../../../glossary.rst:7
+msgid "(`n`,)"
+msgstr ""
+
+#: ../../../glossary.rst:9
+msgid ""
+"A parenthesized number followed by a comma denotes a tuple with one element. "
+"The trailing comma distinguishes a one-element tuple from a parenthesized "
+"``n``."
+msgstr ""
+
+#: ../../../glossary.rst:13
+msgid "-1"
+msgstr ""
+
+#: ../../../glossary.rst:15
+msgid ""
+"**In a dimension entry**, instructs NumPy to choose the length that will "
+"keep the total number of array elements the same."
+msgstr ""
+
+#: ../../../glossary.rst:21
+msgid ""
+"**In an index**, any negative value `denotes <https://docs.python.org/dev/"
+"faq/programming.html#what-s-a-negative-index>`_ indexing from the right."
+msgstr ""
+
+#: ../../../glossary.rst:24
+msgid ". . ."
+msgstr ""
+
+#: ../../../glossary.rst:26
+msgid "An :py:data:`Ellipsis`."
+msgstr ""
+
+#: ../../../glossary.rst:28
+msgid ""
+"**When indexing an array**, shorthand that the missing axes, if they exist, "
+"are full slices."
+msgstr ""
+
+#: ../../../glossary.rst:45
+msgid ""
+"It can be used at most once; ``a[...,0,...]`` raises an :exc:`IndexError`."
+msgstr ""
+
+#: ../../../glossary.rst:47
+msgid ""
+"**In printouts**, NumPy substitutes ``...`` for the middle elements of large "
+"arrays. To see the entire array, use `numpy.printoptions`"
+msgstr ""
+
+#: ../../../glossary.rst:50
+msgid ":"
+msgstr ""
+
+#: ../../../glossary.rst:52
+msgid ""
+"The Python :term:`python:slice` operator. In ndarrays, slicing can be "
+"applied to every axis:"
+msgstr ""
+
+#: ../../../glossary.rst:70
+msgid "Trailing slices can be omitted: ::"
+msgstr ""
+
+#: ../../../glossary.rst:72
+msgid ""
+">>> a[1] == a[1,:,:]\n"
+"array([[ True,  True,  True,  True],\n"
+"       [ True,  True,  True,  True],\n"
+"       [ True,  True,  True,  True]])"
+msgstr ""
+
+#: ../../../glossary.rst:77
+msgid ""
+"In contrast to Python, where slicing creates a copy, in NumPy slicing "
+"creates a :term:`view`."
+msgstr ""
+
+#: ../../../glossary.rst:80
+msgid "For details, see :ref:`combining-advanced-and-basic-indexing`."
+msgstr ""
+
+#: ../../../glossary.rst:82
+msgid "<"
+msgstr ""
+
+#: ../../../glossary.rst:84
+msgid ""
+"In a dtype declaration, indicates that the data is :term:`little-endian` "
+"(the bracket is big on the right). ::"
+msgstr ""
+
+#: ../../../glossary.rst:87
+msgid ">>> dt = np.dtype('<f')  # little-endian single-precision float"
+msgstr ""
+
+#: ../../../glossary.rst:89
+msgid ">"
+msgstr ""
+
+#: ../../../glossary.rst:91
+msgid ""
+"In a dtype declaration, indicates that the data is :term:`big-endian` (the "
+"bracket is big on the left). ::"
+msgstr ""
+
+#: ../../../glossary.rst:94
+msgid ">>> dt = np.dtype('>H')  # big-endian unsigned short"
+msgstr ""
+
+#: ../../../glossary.rst:96
+msgid "advanced indexing"
+msgstr ""
+
+#: ../../../glossary.rst:98
+msgid ""
+"Rather than using a :doc:`scalar <reference/arrays.scalars>` or slice as an "
+"index, an axis can be indexed with an array, providing fine-grained "
+"selection. This is known as :ref:`advanced indexing<advanced-indexing>` or "
+"\"fancy indexing\"."
+msgstr ""
+
+#: ../../../glossary.rst:103
+msgid "along an axis"
+msgstr ""
+
+#: ../../../glossary.rst:105
+msgid ""
+"An operation `along axis n` of array ``a`` behaves as if its argument were "
+"an array of slices of ``a`` where each slice has a successive index of axis "
+"`n`."
+msgstr ""
+
+#: ../../../glossary.rst:109
+msgid ""
+"For example, if ``a`` is a 3 x `N` array, an operation along axis 0 behaves "
+"as if its argument were an array containing slices of each row:"
+msgstr ""
+
+#: ../../../glossary.rst:114
+msgid ""
+"To make it concrete, we can pick the operation to be the array-reversal "
+"function :func:`numpy.flip`, which accepts an ``axis`` argument. We "
+"construct a 3 x 4 array ``a``:"
+msgstr ""
+
+#: ../../../glossary.rst:124
+msgid "Reversing along axis 0 (the row axis) yields"
+msgstr ""
+
+#: ../../../glossary.rst:131
+msgid ""
+"Recalling the definition of `along an axis`,  ``flip`` along axis 0 is "
+"treating its argument as if it were"
+msgstr ""
+
+#: ../../../glossary.rst:139
+msgid "and the result of ``np.flip(a,axis=0)`` is to reverse the slices:"
+msgstr ""
+
+#: ../../../glossary.rst:146
+msgid "array"
+msgstr ""
+
+#: ../../../glossary.rst:148
+msgid "Used synonymously in the NumPy docs with :term:`ndarray`."
+msgstr ""
+
+#: ../../../glossary.rst:150
+msgid "array_like"
+msgstr ""
+
+#: ../../../glossary.rst:152
+msgid ""
+"Any :doc:`scalar <reference/arrays.scalars>` or :term:`python:sequence` that "
+"can be interpreted as an ndarray.  In addition to ndarrays and scalars this "
+"category includes lists (possibly nested and with different element types) "
+"and tuples. Any argument accepted by :doc:`numpy.array <reference/generated/"
+"numpy.array>` is array_like. ::"
+msgstr ""
+
+#: ../../../glossary.rst:160
+msgid ""
+">>> a = np.array([[1, 2.0], [0, 0], (1+1j, 3.)])\n"
+"\n"
+">>> a\n"
+"array([[1.+0.j, 2.+0.j],\n"
+"       [0.+0.j, 0.+0.j],\n"
+"       [1.+1.j, 3.+0.j]])"
+msgstr ""
+
+#: ../../../glossary.rst:167
+msgid "array scalar"
+msgstr ""
+
+#: ../../../glossary.rst:169
+msgid ""
+"An :doc:`array scalar <reference/arrays.scalars>` is an instance of the "
+"types/classes float32, float64, etc.. For uniformity in handling operands, "
+"NumPy treats a scalar as an array of zero dimension. In contrast, a 0-"
+"dimensional array is an :doc:`ndarray <reference/arrays.ndarray>` instance "
+"containing precisely one value."
+msgstr ""
+
+#: ../../../glossary.rst:174
+msgid "axis"
+msgstr ""
+
+#: ../../../glossary.rst:176
+msgid ""
+"Another term for an array dimension. Axes are numbered left to right; axis 0 "
+"is the first element in the shape tuple."
+msgstr ""
+
+#: ../../../glossary.rst:179
+msgid ""
+"In a two-dimensional vector, the elements of axis 0 are rows and the "
+"elements of axis 1 are columns."
+msgstr ""
+
+#: ../../../glossary.rst:182
+msgid ""
+"In higher dimensions, the picture changes. NumPy prints higher-dimensional "
+"vectors as replications of row-by-column building blocks, as in this three-"
+"dimensional vector:"
+msgstr ""
+
+#: ../../../glossary.rst:193
+msgid ""
+"``a`` is depicted as a two-element array whose elements are 2x3 vectors. "
+"From this point of view, rows and columns are the final two axes, "
+"respectively, in any shape."
+msgstr ""
+
+#: ../../../glossary.rst:197
+msgid ""
+"This rule helps you anticipate how a vector will be printed, and conversely "
+"how to find the index of any of the printed elements. For instance, in the "
+"example, the last two values of 8's index must be 0 and 2. Since 8 appears "
+"in the second of the two 2x3's, the first index must be 1:"
+msgstr ""
+
+#: ../../../glossary.rst:206
+msgid ""
+"A convenient way to count dimensions in a printed vector is to count ``[`` "
+"symbols after the open-parenthesis. This is useful in distinguishing, say, a "
+"(1,2,3) shape from a (2,3) shape:"
+msgstr ""
+
+#: ../../../glossary.rst:224
+msgid ".base"
+msgstr ""
+
+#: ../../../glossary.rst:227
+msgid ""
+"If an array does not own its memory, then its :doc:`base <reference/"
+"generated/numpy.ndarray.base>` attribute returns the object whose memory the "
+"array is referencing. That object may be referencing the memory from still "
+"another object, so the owning object may be ``a.base.base.base...``. Some "
+"writers erroneously claim that testing ``base`` determines if arrays are :"
+"term:`view`\\ s. For the correct way, see :func:`numpy.shares_memory`."
+msgstr ""
+
+#: ../../../glossary.rst:235
+msgid "big-endian"
+msgstr ""
+
+#: ../../../glossary.rst:237 ../../../glossary.rst:374
+msgid "See `Endianness <https://en.wikipedia.org/wiki/Endianness>`_."
+msgstr ""
+
+#: ../../../glossary.rst:239
+msgid "BLAS"
+msgstr ""
+
+#: ../../../glossary.rst:241
+msgid ""
+"`Basic Linear Algebra Subprograms <https://en.wikipedia.org/wiki/"
+"Basic_Linear_Algebra_Subprograms>`_"
+msgstr ""
+
+#: ../../../glossary.rst:243
+msgid "broadcast"
+msgstr ""
+
+#: ../../../glossary.rst:245
+msgid ""
+"*broadcasting* is NumPy's ability to process ndarrays of different sizes as "
+"if all were the same size."
+msgstr ""
+
+#: ../../../glossary.rst:248
+msgid ""
+"It permits an elegant do-what-I-mean behavior where, for instance, adding a "
+"scalar to a vector adds the scalar value to every element."
+msgstr ""
+
+#: ../../../glossary.rst:261
+msgid ""
+"Ordinarily, vector operands must all be the same size, because NumPy works "
+"element by element -- for instance, ``c = a * b`` is ::"
+msgstr ""
+
+#: ../../../glossary.rst:264
+msgid ""
+" c[0,0,0] = a[0,0,0] * b[0,0,0]\n"
+" c[0,0,1] = a[0,0,1] * b[0,0,1]\n"
+"..."
+msgstr ""
+
+#: ../../../glossary.rst:268
+msgid ""
+"But in certain useful cases, NumPy can duplicate data along \"missing\" axes "
+"or \"too-short\" dimensions so shapes will match. The duplication costs no "
+"memory or time. For details, see :doc:`Broadcasting. <user/basics."
+"broadcasting>`"
+msgstr ""
+
+#: ../../../glossary.rst:273
+msgid "C order"
+msgstr ""
+
+#: ../../../glossary.rst:275
+msgid "Same as :term:`row-major`."
+msgstr ""
+
+#: ../../../glossary.rst:276
+msgid "casting"
+msgstr ""
+
+#: ../../../glossary.rst:278
+msgid ""
+"The process of converting array data from one dtype to another. There exist "
+"several casting modes, defined by the following casting rules:"
+msgstr ""
+
+#: ../../../glossary.rst:281
+msgid ""
+"``no``: The data types should not be cast at all. Any mismatch in data types "
+"between the arrays will raise a `TypeError`."
+msgstr ""
+
+#: ../../../glossary.rst:284
+msgid "``equiv``: Only byte-order changes are allowed."
+msgstr ""
+
+#: ../../../glossary.rst:285
+msgid ""
+"``safe``: Only casts that can preserve values are allowed. Upcasting (e.g., "
+"from int to float) is allowed, but downcasting is not."
+msgstr ""
+
+#: ../../../glossary.rst:287
+msgid ""
+"``same_kind``: The 'same_kind' casting option allows safe casts and casts "
+"within a kind, like float64 to float32."
+msgstr ""
+
+#: ../../../glossary.rst:289
+msgid "``unsafe``: any data conversions may be done."
+msgstr ""
+
+#: ../../../glossary.rst:290
+msgid "column-major"
+msgstr ""
+
+#: ../../../glossary.rst:292
+msgid ""
+"See `Row- and column-major order <https://en.wikipedia.org/wiki/Row-"
+"_and_column-major_order>`_."
+msgstr ""
+
+#: ../../../glossary.rst:294
+msgid "contiguous"
+msgstr ""
+
+#: ../../../glossary.rst:297
+msgid "An array is contiguous if:"
+msgstr ""
+
+#: ../../../glossary.rst:299
+msgid "it occupies an unbroken block of memory, and"
+msgstr ""
+
+#: ../../../glossary.rst:300
+msgid ""
+"array elements with higher indexes occupy higher addresses (that is, no :"
+"term:`stride` is negative)."
+msgstr ""
+
+#: ../../../glossary.rst:303
+msgid "There are two types of proper-contiguous NumPy arrays:"
+msgstr ""
+
+#: ../../../glossary.rst:305
+msgid ""
+"Fortran-contiguous arrays refer to data that is stored column-wise, i.e. the "
+"indexing of data as stored in memory starts from the lowest dimension;"
+msgstr ""
+
+#: ../../../glossary.rst:308
+msgid ""
+"C-contiguous, or simply contiguous arrays, refer to data that is stored row-"
+"wise, i.e. the indexing of data as stored in memory starts from the highest "
+"dimension."
+msgstr ""
+
+#: ../../../glossary.rst:312
+msgid "For one-dimensional arrays these notions coincide."
+msgstr ""
+
+#: ../../../glossary.rst:314
+msgid ""
+"For example, a 2x2 array ``A`` is Fortran-contiguous if its elements are "
+"stored in memory in the following order::"
+msgstr ""
+
+#: ../../../glossary.rst:317
+msgid "A[0,0] A[1,0] A[0,1] A[1,1]"
+msgstr ""
+
+#: ../../../glossary.rst:319
+msgid "and C-contiguous if the order is as follows::"
+msgstr ""
+
+#: ../../../glossary.rst:321
+msgid "A[0,0] A[0,1] A[1,0] A[1,1]"
+msgstr ""
+
+#: ../../../glossary.rst:323
+msgid ""
+"To test whether an array is C-contiguous, use the ``.flags.c_contiguous`` "
+"attribute of NumPy arrays.  To test for Fortran contiguity, use the ``.flags."
+"f_contiguous`` attribute."
+msgstr ""
+
+#: ../../../glossary.rst:327
+msgid "copy"
+msgstr ""
+
+#: ../../../glossary.rst:329
+msgid "See :term:`view`."
+msgstr ""
+
+#: ../../../glossary.rst:331
+msgid "dimension"
+msgstr ""
+
+#: ../../../glossary.rst:333
+msgid "See :term:`axis`."
+msgstr ""
+
+#: ../../../glossary.rst:335
+msgid "dtype"
+msgstr ""
+
+#: ../../../glossary.rst:337
+msgid ""
+"The datatype describing the (identically typed) elements in an ndarray. It "
+"can be changed to reinterpret the array contents. For details, see :doc:"
+"`Data type objects (dtype). <reference/arrays.dtypes>`"
+msgstr ""
+
+#: ../../../glossary.rst:341
+msgid "fancy indexing"
+msgstr ""
+
+#: ../../../glossary.rst:343
+msgid "Another term for :term:`advanced indexing`."
+msgstr ""
+
+#: ../../../glossary.rst:345
+msgid "field"
+msgstr ""
+
+#: ../../../glossary.rst:347
+msgid ""
+"In a :term:`structured data type`, each subtype is called a `field`. The "
+"`field` has a name (a string), a type (any valid dtype), and an optional "
+"`title`. See :ref:`arrays.dtypes`."
+msgstr ""
+
+#: ../../../glossary.rst:351
+msgid "Fortran order"
+msgstr ""
+
+#: ../../../glossary.rst:353
+msgid "Same as :term:`column-major`."
+msgstr ""
+
+#: ../../../glossary.rst:355
+msgid "flattened"
+msgstr ""
+
+#: ../../../glossary.rst:357
+msgid "See :term:`ravel`."
+msgstr ""
+
+#: ../../../glossary.rst:359
+msgid "homogeneous"
+msgstr ""
+
+#: ../../../glossary.rst:361
+msgid ""
+"All elements of a homogeneous array have the same type. ndarrays, in "
+"contrast to Python lists, are homogeneous. The type can be complicated, as "
+"in a :term:`structured array`, but all elements have that type."
+msgstr ""
+
+#: ../../../glossary.rst:365
+msgid ""
+"NumPy `object arrays <#term-object-array>`_, which contain references to "
+"Python objects, fill the role of heterogeneous arrays."
+msgstr ""
+
+#: ../../../glossary.rst:368
+msgid "itemsize"
+msgstr ""
+
+#: ../../../glossary.rst:370
+msgid "The size of the dtype element in bytes."
+msgstr ""
+
+#: ../../../glossary.rst:372
+msgid "little-endian"
+msgstr ""
+
+#: ../../../glossary.rst:376
+msgid "mask"
+msgstr ""
+
+#: ../../../glossary.rst:378
+msgid "A boolean array used to select only certain elements for an operation:"
+msgstr ""
+
+#: ../../../glossary.rst:392
+msgid "masked array"
+msgstr ""
+
+#: ../../../glossary.rst:394
+msgid ""
+"Bad or missing data can be cleanly ignored by putting it in a masked array, "
+"which has an internal boolean array indicating invalid entries. Operations "
+"with masked arrays ignore these entries. ::"
+msgstr ""
+
+#: ../../../glossary.rst:398
+msgid ""
+">>> a = np.ma.masked_array([np.nan, 2, np.nan], [True, False, True])\n"
+">>> a\n"
+"masked_array(data=[--, 2.0, --],\n"
+"             mask=[ True, False,  True],\n"
+"       fill_value=1e+20)\n"
+"\n"
+">>> a + [1, 2, 3]\n"
+"masked_array(data=[--, 4.0, --],\n"
+"             mask=[ True, False,  True],\n"
+"       fill_value=1e+20)"
+msgstr ""
+
+#: ../../../glossary.rst:409
+msgid "For details, see :doc:`Masked arrays. <reference/maskedarray>`"
+msgstr ""
+
+#: ../../../glossary.rst:411
+msgid "matrix"
+msgstr ""
+
+#: ../../../glossary.rst:413
+msgid ""
+"NumPy's two-dimensional :doc:`matrix class <reference/generated/numpy."
+"matrix>` should no longer be used; use regular ndarrays."
+msgstr ""
+
+#: ../../../glossary.rst:417
+msgid "ndarray"
+msgstr ""
+
+#: ../../../glossary.rst:419
+msgid ":doc:`NumPy's basic structure <reference/arrays>`."
+msgstr ""
+
+#: ../../../glossary.rst:421
+msgid "object array"
+msgstr ""
+
+#: ../../../glossary.rst:423
+msgid ""
+"An array whose dtype is ``object``; that is, it contains references to "
+"Python objects. Indexing the array dereferences the Python objects, so "
+"unlike other ndarrays, an object array has the ability to hold heterogeneous "
+"objects."
+msgstr ""
+
+#: ../../../glossary.rst:428
+msgid "ravel"
+msgstr ""
+
+#: ../../../glossary.rst:430
+msgid ""
+":doc:`numpy.ravel \\ <reference/generated/numpy.ravel>` and :doc:`numpy."
+"flatten \\ <reference/generated/numpy.ndarray.flatten>` both flatten an "
+"ndarray. ``ravel`` will return a view if possible; ``flatten`` always "
+"returns a copy."
+msgstr ""
+
+#: ../../../glossary.rst:437
+msgid ""
+"Flattening collapses a multidimensional array to a single dimension; details "
+"of how this is done (for instance, whether ``a[n+1]`` should be the next row "
+"or next column) are parameters."
+msgstr ""
+
+#: ../../../glossary.rst:441
+msgid "record array"
+msgstr ""
+
+#: ../../../glossary.rst:443
+msgid ""
+"A :term:`structured array` with allowing access in an attribute style (``a."
+"field``) in addition to ``a['field']``. For details, see :doc:`numpy."
+"recarray. <reference/generated/numpy.recarray>`"
+msgstr ""
+
+#: ../../../glossary.rst:447
+msgid "row-major"
+msgstr ""
+
+#: ../../../glossary.rst:449
+msgid ""
+"See `Row- and column-major order <https://en.wikipedia.org/wiki/Row-"
+"_and_column-major_order>`_. NumPy creates arrays in row-major order by "
+"default."
+msgstr ""
+
+#: ../../../glossary.rst:452
+msgid "scalar"
+msgstr ""
+
+#: ../../../glossary.rst:454
+msgid "In NumPy, usually a synonym for :term:`array scalar`."
+msgstr ""
+
+#: ../../../glossary.rst:456
+msgid "shape"
+msgstr ""
+
+#: ../../../glossary.rst:458
+msgid ""
+"A tuple showing the length of each dimension of an ndarray. The length of "
+"the tuple itself is the number of dimensions (:doc:`numpy.ndim <reference/"
+"generated/numpy.ndarray.ndim>`). The product of the tuple elements is the "
+"number of elements in the array. For details, see :doc:`numpy.ndarray.shape "
+"<reference/generated/numpy.ndarray.shape>`."
+msgstr ""
+
+#: ../../../glossary.rst:465
+msgid "stride"
+msgstr ""
+
+#: ../../../glossary.rst:467
+msgid ""
+"Physical memory is one-dimensional;  strides provide a mechanism to map a "
+"given index to an address in memory. For an N-dimensional array, its "
+"``strides`` attribute is an N-element tuple; advancing from index ``i`` to "
+"index ``i+1`` on axis ``n`` means adding ``a.strides[n]`` bytes to the "
+"address."
+msgstr ""
+
+#: ../../../glossary.rst:473
+msgid ""
+"Strides are computed automatically from an array's dtype and shape, but can "
+"be directly specified using :doc:`as_strided <reference/generated/numpy.lib."
+"stride_tricks.as_strided>`. Bounds validation can be enabled with the "
+"``check_bounds`` parameter."
+msgstr ""
+
+#: ../../../glossary.rst:478
+msgid ""
+"For details, see :doc:`numpy.ndarray.strides <reference/generated/numpy."
+"ndarray.strides>`."
+msgstr ""
+
+#: ../../../glossary.rst:481
+msgid ""
+"To see how striding underlies the power of NumPy views, see `The NumPy "
+"array: a structure for efficient numerical computation. \\ <https://arxiv."
+"org/pdf/1102.1523.pdf>`_"
+msgstr ""
+
+#: ../../../glossary.rst:485
+msgid "structured array"
+msgstr ""
+
+#: ../../../glossary.rst:487
+msgid "Array whose :term:`dtype` is a :term:`structured data type`."
+msgstr ""
+
+#: ../../../glossary.rst:489
+msgid "structured data type"
+msgstr ""
+
+#: ../../../glossary.rst:491
+msgid ""
+"Users can create arbitrarily complex :term:`dtypes <dtype>` that can include "
+"other arrays and dtypes. These composite dtypes are called :doc:`structured "
+"data types. <user/basics.rec>`"
+msgstr ""
+
+#: ../../../glossary.rst:495
+msgid "subarray"
+msgstr ""
+
+#: ../../../glossary.rst:497
+msgid "An array nested in a :term:`structured data type`, as ``b`` is here:"
+msgstr ""
+
+#: ../../../glossary.rst:504
+msgid "subarray data type"
+msgstr ""
+
+#: ../../../glossary.rst:506
+msgid "An element of a structured datatype that behaves like an ndarray."
+msgstr ""
+
+#: ../../../glossary.rst:508
+msgid "title"
+msgstr ""
+
+#: ../../../glossary.rst:510
+msgid "An alias for a field name in a structured datatype."
+msgstr ""
+
+#: ../../../glossary.rst:512
+msgid "type"
+msgstr ""
+
+#: ../../../glossary.rst:514
+msgid ""
+"In NumPy, usually a synonym for :term:`dtype`. For the more general Python "
+"meaning, :term:`see here. <python:type>`"
+msgstr ""
+
+#: ../../../glossary.rst:517
+msgid "ufunc"
+msgstr ""
+
+#: ../../../glossary.rst:519
+msgid ""
+"NumPy's fast element-by-element computation (:term:`vectorization`) gives a "
+"choice which function gets applied. The general term for the function is "
+"``ufunc``, short for ``universal function``. NumPy routines have built-in "
+"ufuncs, but users can also :doc:`write their own. <reference/ufuncs>`"
+msgstr ""
+
+#: ../../../glossary.rst:525
+msgid "vectorization"
+msgstr ""
+
+#: ../../../glossary.rst:527
+msgid ""
+"NumPy hands off array processing to C, where looping and computation are "
+"much faster than in Python. To exploit this, programmers using NumPy "
+"eliminate Python loops in favor of array-to-array operations. :term:"
+"`vectorization` can refer both to the C offloading and to structuring NumPy "
+"code to leverage it."
+msgstr ""
+
+#: ../../../glossary.rst:532
+msgid "view"
+msgstr ""
+
+#: ../../../glossary.rst:534
+msgid ""
+"Without touching underlying data, NumPy can make one array appear to change "
+"its datatype and shape."
+msgstr ""
+
+#: ../../../glossary.rst:537
+msgid ""
+"An array created this way is a `view`, and NumPy often exploits the "
+"performance gain of using a view versus making a new array."
+msgstr ""
+
+#: ../../../glossary.rst:540
+msgid ""
+"A potential drawback is that writing to a view can alter the original as "
+"well. If this is a problem, NumPy instead needs to create a physically "
+"distinct array -- a `copy`."
+msgstr ""
+
+#: ../../../glossary.rst:544
+msgid ""
+"Some NumPy routines always return views, some always return copies, some may "
+"return one or the other, and for some the choice can be specified. "
+"Responsibility for managing views and copies falls to the programmer. :func:"
+"`numpy.shares_memory` will check whether ``b`` is a view of ``a``, but an "
+"exact answer isn't always feasible, as the documentation page explains."
+msgstr ""

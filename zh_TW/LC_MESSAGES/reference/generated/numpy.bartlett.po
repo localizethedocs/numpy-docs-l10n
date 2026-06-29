@@ -1,0 +1,225 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.bartlett.rst:4
+msgid "numpy.bartlett"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:2
+msgid "Return the Bartlett window."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:4
+msgid ""
+"The Bartlett window is very similar to a triangular window, except that the "
+"end points are at zero.  It is often used in signal processing for tapering "
+"a signal, without generating too much ripple in the frequency domain."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:15
+msgid "**M**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:-1
+msgid "int"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:12
+msgid ""
+"Number of points in the output window. If zero or less, an empty array is "
+"returned."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:28
+msgid "**out**"
+msgstr "**out**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:-1
+msgid "array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:20
+msgid ""
+"The triangular window, with the maximum value normalized to one (the value "
+"one appears only if the number of samples is odd), with the first and last "
+"samples equal to zero."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:33
+msgid ":obj:`blackman`, :obj:`hamming`, :obj:`hanning`, :obj:`kaiser`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:37
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:38
+msgid "The Bartlett window is defined as"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:40
+msgid ""
+"w(n) = \\frac{2}{M-1} \\left(\n"
+"\\frac{M-1}{2} - \\left|n - \\frac{M-1}{2}\\right|\n"
+"\\right)\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:44
+msgid ""
+"Most references to the Bartlett window come from the signal processing "
+"literature, where it is used as one of many windowing functions for "
+"smoothing values.  Note that convolution with this window produces linear "
+"interpolation.  It is also known as an apodization (which means \"removing "
+"the foot\", i.e. smoothing discontinuities at the beginning and end of the "
+"sampled signal) or tapering function. The Fourier transform of the Bartlett "
+"window is the product of two sinc functions. Note the excellent discussion "
+"in Kanasewich [R3a7a5a2c0d2a-2]_."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:54
+msgid "References"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:55
+msgid ""
+"M.S. Bartlett, \"Periodogram Analysis and Continuous Spectra\", Biometrika "
+"37, 1-16, 1950."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:57
+msgid ""
+"E.R. Kanasewich, \"Time Sequence Analysis in Geophysics\", The University of "
+"Alberta Press, 1975, pp. 109-110."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:59
+msgid ""
+"A.V. Oppenheim and R.W. Schafer, \"Discrete-Time Signal Processing\", "
+"Prentice-Hall, 1999, pp. 468-471."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:61
+msgid ""
+"Wikipedia, \"Window function\", https://en.wikipedia.org/wiki/Window_function"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:63
+msgid ""
+"W.H. Press,  B.P. Flannery, S.A. Teukolsky, and W.T. Vetterling, \"Numerical "
+"Recipes\", Cambridge University Press, 1986, page 429."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:68
+msgid ""
+"[R3a7a5a2c0d2a-1]_, [R3a7a5a2c0d2a-2]_, [R3a7a5a2c0d2a-3]_, "
+"[R3a7a5a2c0d2a-4]_, [R3a7a5a2c0d2a-5]_"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:71
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:83
+msgid ""
+"Plot the window and its frequency response (requires SciPy and matplotlib)."
+msgstr ""
+
+#: ../../../reference/generated/numpy.bartlett.rst:2
+msgid ""
+"import matplotlib.pyplot as plt\n"
+"from numpy.fft import fft, fftshift\n"
+"window = np.bartlett(51)\n"
+"plt.plot(window)\n"
+"plt.title(\"Bartlett window\")\n"
+"plt.ylabel(\"Amplitude\")\n"
+"plt.xlabel(\"Sample\")\n"
+"plt.show()"
+msgstr ""
+
+#: ../../../reference/generated/numpy.bartlett.rst:36
+msgid ""
+"plt.figure()\n"
+"A = fft(window, 2048) / 25.5\n"
+"mag = np.abs(fftshift(A))\n"
+"freq = np.linspace(-0.5, 0.5, len(A))\n"
+"with np.errstate(divide='ignore', invalid='ignore'):\n"
+"    response = 20 * np.log10(mag)\n"
+"response = np.clip(response, -100, 100)\n"
+"plt.plot(freq, response)\n"
+"plt.title(\"Frequency response of Bartlett window\")\n"
+"plt.ylabel(\"Magnitude [dB]\")\n"
+"plt.xlabel(\"Normalized frequency [cycles per sample]\")\n"
+"plt.axis('tight')\n"
+"plt.show()"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:110
+msgid ""
+"<div id=\"1cc674a2-e518-4f76-a635-b0fdadc77bb9\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('b923de72-b447-412e-8240-7d308440331f','1cc674a2-"
+"e518-4f76-a635-b0fdadc77bb9')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('b923de72-"
+"b447-412e-8240-7d308440331f','1cc674a2-e518-4f76-a635-b0fdadc77bb9')\">Open "
+"In Tab</button></div><div id=\"e82ba2c6-c62b-44bd-8138-f8d3e2079735\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.bartlett:110
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

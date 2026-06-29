@@ -1,0 +1,244 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.piecewise.rst:4
+msgid "numpy.piecewise"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:2
+msgid "Evaluate a piecewise-defined function."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:4
+msgid ""
+"Given a set of conditions and corresponding functions, evaluate each "
+"function on the input data wherever its condition is true."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:10
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:-1
+msgid "ndarray or scalar"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:10
+msgid "The input domain."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:22
+msgid "**condlist**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:-1
+msgid "list of bool arrays or bool scalars"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:13
+msgid ""
+"Each boolean array corresponds to a function in `funclist`.  Wherever "
+"`condlist[i]` is True, `funclist[i](x)` is used as the output value."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:16
+msgid ""
+"Each boolean array in `condlist` selects a piece of `x`, and should "
+"therefore be of the same shape as `x`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:19
+msgid ""
+"The length of `condlist` must correspond to that of `funclist`. If one extra "
+"function is given, i.e. if ``len(funclist) == len(condlist) + 1``, then that "
+"extra function is the default value, used wherever all conditions are false."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:29
+msgid "**funclist**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:-1
+msgid "list of callables, f(x,*args,**kw), or scalars"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:25
+msgid ""
+"Each function is evaluated over `x` wherever its corresponding condition is "
+"True.  It should take a 1d array as input and give a 1d array or a scalar "
+"value as output.  If, instead of a callable, a scalar is provided then a "
+"constant function (``lambda x: scalar``) is assumed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:34
+msgid "**args**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:-1
+msgid "tuple, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:32
+msgid ""
+"Any further arguments given to `piecewise` are passed to the functions upon "
+"execution, i.e., if called ``piecewise(..., ..., 1, 'a')``, then each "
+"function is called as ``f(x, 1, 'a')``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:42
+msgid "**kw**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:-1
+msgid "dict, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:37
+msgid ""
+"Keyword arguments used in calling `piecewise` are passed to the functions "
+"upon execution, i.e., if called ``piecewise(..., ..., alpha=1)``, then each "
+"function is called as ``f(x, alpha=1)``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:56
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:47
+msgid ""
+"The output is the same shape and type as x and is found by calling the "
+"functions in `funclist` on the appropriate portions of `x`, as defined by "
+"the boolean arrays in `condlist`.  Portions not covered by any condition "
+"have a default value of 0."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:61
+msgid ":obj:`choose`, :obj:`select`, :obj:`where`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:65
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:66
+msgid ""
+"This is similar to choose or select, except that functions are evaluated on "
+"elements of `x` that satisfy the corresponding condition from `condlist`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:70
+msgid "The result is::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:72
+msgid ""
+"      |--\n"
+"      |funclist[0](x[condlist[0]])\n"
+"out = |funclist[1](x[condlist[1]])\n"
+"      |...\n"
+"      |funclist[n2](x[condlist[n2]])\n"
+"      |--"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:81
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:88
+msgid ""
+"Define the signum function, which is -1 for ``x < 0`` and +1 for ``x >= 0``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:94
+msgid ""
+"Define the absolute value, which is ``-x`` for ``x <0`` and ``x`` for ``x >= "
+"0``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:100
+msgid "Apply the same function to a scalar value."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:-1
+msgid ""
+"<div id=\"45c949e7-77a2-4d08-99ef-19c6b5a62ba4\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('06475576-856e-4c7d-"
+"a07f-5028511123d8','45c949e7-77a2-4d08-99ef-19c6b5a62ba4')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('06475576-856e-4c7d-"
+"a07f-5028511123d8','45c949e7-77a2-4d08-99ef-19c6b5a62ba4')\">Open In Tab</"
+"button></div><div id=\"6000ac04-f931-4e07-ab09-0ad785841787\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.piecewise:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

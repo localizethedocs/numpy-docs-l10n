@@ -1,0 +1,279 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/new-or-different.rst:6
+msgid "What's new or different"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:8
+msgid ""
+"NumPy 1.17.0 introduced `Generator` as an improved replacement for the :ref:"
+"`legacy <legacy>` `RandomState`. Here is a quick comparison of the two "
+"implementations."
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:13
+msgid "Feature"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:13
+msgid "Older Equivalent"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:13
+msgid "Notes"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:15
+msgid "`Generator`"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:15
+msgid "`RandomState`"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:15
+msgid ""
+"`Generator` requires a stream source, called a `BitGenerator` A number of "
+"these are provided. `RandomState` uses the Mersenne Twister `MT19937` by "
+"default, but can also be instantiated with any BitGenerator."
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:23
+msgid "`~.Generator.random`"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:23
+msgid "`random_sample`, `rand`"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:23
+msgid ""
+"Access the values in a BitGenerator, convert them to ``float64`` in the "
+"interval ``[0.0., 1.0)``. In addition to the ``size`` kwarg, now supports "
+"``dtype='d'`` or ``dtype='f'``, and an ``out`` kwarg to fill a user-supplied "
+"array."
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:33
+msgid "Many other distributions are also supported."
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:36
+msgid "`~.Generator.integers`"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:36
+msgid "`randint`, `random_integers`"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:36
+msgid ""
+"Use the ``endpoint`` kwarg to adjust the inclusion or exclusion of the "
+"``high`` interval endpoint."
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:41
+msgid ""
+"The normal, exponential and gamma generators use 256-step Ziggurat methods "
+"which are 2-10 times faster than NumPy's default implementation in `~."
+"Generator.standard_normal`, `~.Generator.standard_exponential` or `~."
+"Generator.standard_gamma`. Because of the change in algorithms, it is not "
+"possible to reproduce the exact random values using `Generator` for these "
+"distributions or any distribution method that relies on them."
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:1
+msgid ""
+"In [1]: import numpy.random\n"
+"\n"
+"In [2]: rng = np.random.default_rng()\n"
+"\n"
+"In [3]: %timeit -n 1 rng.standard_normal(100000)\n"
+"   ...: %timeit -n 1 numpy.random.standard_normal(100000)\n"
+"   ...: \n"
+"1.24 ms +- 55 us per loop (mean +- std. dev. of 7 runs, 1 loop each)\n"
+"3 ms +- 309 us per loop (mean +- std. dev. of 7 runs, 1 loop each)"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:1
+msgid ""
+"In [4]: %timeit -n 1 rng.standard_exponential(100000)\n"
+"   ...: %timeit -n 1 numpy.random.standard_exponential(100000)\n"
+"   ...: \n"
+"874 us +- 62 us per loop (mean +- std. dev. of 7 runs, 1 loop each)\n"
+"2.03 ms +- 57.3 us per loop (mean +- std. dev. of 7 runs, 1 loop each)"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:1
+msgid ""
+"In [5]: %timeit -n 1 rng.standard_gamma(3.0, 100000)\n"
+"   ...: %timeit -n 1 numpy.random.standard_gamma(3.0, 100000)\n"
+"   ...: \n"
+"3.24 ms +- 139 us per loop (mean +- std. dev. of 7 runs, 1 loop each)\n"
+"5.34 ms +- 140 us per loop (mean +- std. dev. of 7 runs, 1 loop each)"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:66
+msgid ""
+"`~.Generator.integers` is now the canonical way to generate integer random "
+"numbers from a discrete uniform distribution. This replaces both `randint` "
+"and the deprecated `random_integers`."
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:69
+msgid ""
+"The `rand` and `randn` methods are only available through the legacy `~."
+"RandomState`."
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:71
+msgid ""
+"`Generator.random` is now the canonical way to generate floating-point "
+"random numbers, which replaces `RandomState.random_sample`, `sample`, and "
+"`ranf`, all of which were aliases. This is consistent with Python's `random."
+"random`."
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:75
+msgid ""
+"All bit generators can produce doubles, uint64s and uint32s via CTypes "
+"(`~PCG64.ctypes`) and CFFI (`~PCG64.cffi`). This allows these bit generators "
+"to be used in numba."
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:78
+msgid "The bit generators can be used in downstream projects via Cython."
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:80
+msgid ""
+"All bit generators use `SeedSequence` to :ref:`convert seed integers to "
+"initialized states <seeding_and_entropy>`."
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:82
+msgid ""
+"Optional ``dtype`` argument that accepts ``np.float32`` or ``np.float64`` to "
+"produce either single or double precision uniform random variables for "
+"select distributions. `~.Generator.integers` accepts a ``dtype`` argument "
+"with any signed or unsigned integer dtype."
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:87
+msgid "Uniforms (`~.Generator.random` and `~.Generator.integers`)"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:88
+#: ../../../reference/random/new-or-different.rst:103
+msgid "Normals (`~.Generator.standard_normal`)"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:89
+#: ../../../reference/random/new-or-different.rst:104
+msgid "Standard Gammas (`~.Generator.standard_gamma`)"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:90
+#: ../../../reference/random/new-or-different.rst:105
+msgid "Standard Exponentials (`~.Generator.standard_exponential`)"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:1
+msgid ""
+"In [6]: rng = np.random.default_rng()\n"
+"\n"
+"In [7]: rng.random(3, dtype=np.float64)\n"
+"Out[7]: array([0.67932559, 0.89253137, 0.96136368])\n"
+"\n"
+"In [8]: rng.random(3, dtype=np.float32)\n"
+"Out[8]: array([0.566375  , 0.04007554, 0.67334944], dtype=float32)\n"
+"\n"
+"In [9]: rng.integers(0, 256, size=3, dtype=np.uint8)\n"
+"Out[9]: array([109, 157, 106], dtype=uint8)"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:99
+msgid ""
+"Optional ``out`` argument that allows existing arrays to be filled for "
+"select distributions"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:102
+msgid "Uniforms (`~.Generator.random`)"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:107
+msgid ""
+"This allows multithreading to fill large arrays in chunks using suitable "
+"BitGenerators in parallel."
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:1
+msgid ""
+"In [10]: rng = np.random.default_rng()\n"
+"\n"
+"In [11]: existing = np.zeros(4)\n"
+"\n"
+"In [12]: rng.random(out=existing[:2])\n"
+"Out[12]: array([0.33811423, 0.07724872])\n"
+"\n"
+"In [13]: print(existing)\n"
+"[0.33811423 0.07724872 0.         0.        ]"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:117
+msgid ""
+"Optional ``axis`` argument for methods like `~.Generator.choice`, `~."
+"Generator.permutation` and `~.Generator.shuffle` that controls which axis an "
+"operation is performed over for multi-dimensional arrays."
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:1
+msgid ""
+"In [14]: rng = np.random.default_rng()\n"
+"\n"
+"In [15]: a = np.arange(12).reshape((3, 4))\n"
+"\n"
+"In [16]: a\n"
+"Out[16]: \n"
+"array([[ 0,  1,  2,  3],\n"
+"       [ 4,  5,  6,  7],\n"
+"       [ 8,  9, 10, 11]])\n"
+"\n"
+"In [17]: rng.choice(a, axis=1, size=5)\n"
+"Out[17]: \n"
+"array([[ 2,  3,  2,  1,  3],\n"
+"       [ 6,  7,  6,  5,  7],\n"
+"       [10, 11, 10,  9, 11]])\n"
+"\n"
+"In [18]: rng.shuffle(a, axis=1)        # Shuffle in-place\n"
+"\n"
+"In [19]: a\n"
+"Out[19]: \n"
+"array([[ 1,  3,  2,  0],\n"
+"       [ 5,  7,  6,  4],\n"
+"       [ 9, 11, 10,  8]])"
+msgstr ""
+
+#: ../../../reference/random/new-or-different.rst:130
+msgid ""
+"Added a method to sample from the complex normal distribution (`~.Generator."
+"complex_normal`)"
+msgstr ""

@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.hermite.hermgauss.rst:4
+msgid "numpy.polynomial.hermite.hermgauss"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermgauss:2
+msgid "Gauss-Hermite quadrature."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermgauss:4
+msgid ""
+"Computes the sample points and weights for Gauss-Hermite quadrature. These "
+"sample points and weights will correctly integrate polynomials of degree :"
+"math:`2*deg - 1` or less over the interval :math:`[-\\inf, \\inf]` with the "
+"weight function :math:`f(x) = \\exp(-x^2)`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermgauss:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermgauss:14
+msgid "**deg**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermgauss:-1
+msgid "int"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermgauss:12
+msgid "Number of sample points and weights. It must be >= 1."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermgauss:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermgauss:19
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermgauss:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermgauss:19
+msgid "1-D ndarray containing the sample points."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermgauss:29
+msgid "**y**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermgauss:22
+msgid "1-D ndarray containing the weights."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermgauss:32
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermgauss:33
+msgid ""
+"The results have only been tested up to degree 100, higher degrees may be "
+"problematic. The weights are determined by using the fact that"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermgauss:36
+msgid ""
+"w_k = c / (H'_n(x_k) * H_{n-1}(x_k))\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermgauss:38
+msgid ""
+"where :math:`c` is a constant independent of :math:`k` and :math:`x_k` is "
+"the k'th root of :math:`H_n`, and then scaling the results to get the right "
+"value when integrating 1."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermgauss:44
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermgauss:-1
+msgid ""
+"<div id=\"9c252923-001b-4f34-b258-aedc965e821e\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('4e6bf229-483d-411b-b069-"
+"aa1081c16bf9','9c252923-001b-4f34-b258-aedc965e821e')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('4e6bf229-483d-411b-b069-aa1081c16bf9','9c252923-001b-4f34-b258-"
+"aedc965e821e')\">Open In Tab</button></div><div id=\"7e9a1dda-694d-4cde-"
+"b7a3-61074795bcc0\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite.py:docstring
+#: of numpy.polynomial.hermite.hermgauss:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

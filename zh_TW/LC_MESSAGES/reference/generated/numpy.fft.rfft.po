@@ -1,0 +1,282 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.fft.rfft.rst:4
+msgid "numpy.fft.rfft"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:2
+msgid "Compute the one-dimensional discrete Fourier Transform for real input."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:4
+msgid ""
+"This function computes the one-dimensional *n*-point discrete Fourier "
+"Transform (DFT) of a real-valued array by means of an efficient algorithm "
+"called the Fast Fourier Transform (FFT)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:11
+msgid "**a**"
+msgstr "**a**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:-1
+msgid "array_like"
+msgstr "array_like"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:11
+msgid "Input array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:17
+msgid "**n**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:14
+msgid ""
+"Number of points along transformation axis in the input to use. If `n` is "
+"smaller than the length of the input, the input is cropped. If it is larger, "
+"the input is padded with zeros. If `n` is not given, the length of the input "
+"along the axis specified by `axis` is used."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:21
+msgid "**axis**"
+msgstr "**axis**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:20
+msgid ""
+"Axis over which to compute the FFT. If not given, the last axis is used."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:30
+msgid "**norm**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:-1
+msgid "{\"backward\", \"ortho\", \"forward\"}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:24
+msgid ""
+"Normalization mode (see `numpy.fft`). Default is \"backward\". Indicates "
+"which direction of the forward/backward pair of transforms is scaled and "
+"with what normalization factor."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:30
+msgid "The \"backward\", \"forward\" values were added."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:38 numpy.fft.rfft:49
+msgid "**out**"
+msgstr "**out**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:-1
+msgid "complex ndarray, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:33
+msgid ""
+"If provided, the result will be placed in this array. It should be of the "
+"appropriate shape and dtype."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:-1
+msgid "complex ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:43
+msgid ""
+"The truncated or zero-padded input, transformed along the axis indicated by "
+"`axis`, or the last one if `axis` is not specified. If `n` is even, the "
+"length of the transformed axis is ``(n/2)+1``. If `n` is odd, the length is "
+"``(n+1)/2``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:56
+msgid "IndexError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:54
+msgid "If `axis` is not a valid axis of `a`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:61
+msgid ":obj:`numpy.fft`"
+msgstr ":obj:`numpy.fft`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:62
+msgid "For definition of the DFT and conventions used."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:63
+msgid ":obj:`irfft`"
+msgstr ":obj:`irfft`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:64
+msgid "The inverse of `rfft`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:65
+msgid ":obj:`fft`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:66
+msgid "The one-dimensional FFT of general (complex) input."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:67
+msgid ":obj:`fftn`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:68
+msgid "The *n*-dimensional FFT."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:69
+msgid ":obj:`rfftn`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:70
+msgid "The *n*-dimensional FFT of real input."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:74
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:75
+msgid ""
+"When the DFT is computed for purely real input, the output is Hermitian-"
+"symmetric, i.e. the negative frequency terms are just the complex conjugates "
+"of the corresponding positive-frequency terms, and the negative-frequency "
+"terms are therefore redundant.  This function does not compute the negative "
+"frequency terms, and the length of the transformed axis of the output is "
+"therefore ``n//2 + 1``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:82
+msgid ""
+"When ``A = rfft(a)`` and fs is the sampling frequency, ``A[0]`` contains the "
+"zero-frequency term 0*fs, which is real due to Hermitian symmetry."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:85
+msgid ""
+"If `n` is even, ``A[-1]`` contains the term representing both positive and "
+"negative Nyquist frequency (+fs/2 and -fs/2), and must also be purely real. "
+"If `n` is odd, there is no term at fs/2; ``A[-1]`` contains the largest "
+"positive frequency (fs/2*(n-1)/n), and is complex in the general case."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:91
+msgid "If the input `a` contains an imaginary part, it is silently discarded."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:95
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:106
+msgid ""
+"Notice how the final element of the `fft` output is the complex conjugate of "
+"the second element, for real input. For `rfft`, this symmetry is exploited "
+"to compute only the non-negative frequency terms."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:-1
+msgid ""
+"<div id=\"71679729-89d6-450e-9998-96674d84f595\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('acaf2d30-b0c8-43aa-823c-"
+"a910e56b51a7','71679729-89d6-450e-9998-96674d84f595')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('acaf2d30-b0c8-43aa-823c-"
+"a910e56b51a7','71679729-89d6-450e-9998-96674d84f595')\">Open In Tab</"
+"button></div><div id=\"78651400-2c09-41c8-b0c9-ac16d86cdbf5\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.rfft:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

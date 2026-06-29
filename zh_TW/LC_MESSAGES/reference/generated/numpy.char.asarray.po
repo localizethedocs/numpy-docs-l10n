@@ -1,0 +1,184 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.char.asarray.rst:4
+msgid "numpy.char.asarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:2
+msgid ""
+"Convert the input to a `~numpy.char.chararray`, copying the data only if "
+"necessary."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:5
+msgid ""
+"``chararray`` is deprecated. Use an ``ndarray`` with a string or bytes dtype "
+"instead."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:9
+msgid ""
+"Versus a NumPy array of dtype `bytes_` or `str_`, this class adds the "
+"following functionality:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:12
+msgid "values automatically have whitespace removed from the end when indexed"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:15
+msgid ""
+"comparison operators automatically remove whitespace from the end when "
+"comparing values"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:18
+msgid ""
+"vectorized string operations are provided as methods (e.g. `chararray."
+"endswith <numpy.char.chararray.endswith>`) and infix operators (e.g. ``+``, "
+"``*``, ``%``)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:25
+msgid "**obj**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:-1
+msgid "array of str or unicode-like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:33
+msgid "**itemsize**"
+msgstr "**itemsize**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:28
+msgid ""
+"`itemsize` is the number of characters per scalar in the resulting array.  "
+"If `itemsize` is None, and `obj` is an object array or a Python list, the "
+"`itemsize` will be automatically determined.  If `itemsize` is provided and "
+"`obj` is of type str or unicode, then the `obj` string will be chunked into "
+"`itemsize` pieces."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:45
+msgid "**unicode**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:36
+msgid ""
+"When true, the resulting `~numpy.char.chararray` can contain Unicode "
+"characters, when false only 8-bit characters.  If unicode is None and `obj` "
+"is one of the following:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:40
+msgid "a `~numpy.char.chararray`,"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:41
+msgid "an ndarray of type `str_` or `unicode_`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:42
+msgid "a Python str or unicode object,"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:44
+msgid ""
+"then the unicode setting of the output array will be automatically "
+"determined."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:64
+msgid "**order**"
+msgstr "**命令**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:-1
+msgid "{'C', 'F'}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:48
+msgid ""
+"Specify the order of the array.  If order is 'C' (default), then the array "
+"will be in C-contiguous order (last-index varies the fastest).  If order is "
+"'F', then the returned array will be in Fortran-contiguous order (first-"
+"index varies the fastest)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:67
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:-1
+msgid ""
+"<div id=\"c12fb97f-e0bb-4510-85f4-2ee30cc14e18\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('da11d19d-ba3f-4556-8259-bb84b583c646','c12fb97f-"
+"e0bb-4510-85f4-2ee30cc14e18')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('da11d19d-"
+"ba3f-4556-8259-bb84b583c646','c12fb97f-e0bb-4510-85f4-2ee30cc14e18')\">Open "
+"In Tab</button></div><div id=\"a39b39cb-8dc1-458e-9700-6570f56506ef\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/char/__init__.py:docstring
+#: of numpy.char.asarray:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

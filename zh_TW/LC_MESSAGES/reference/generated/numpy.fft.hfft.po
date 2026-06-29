@@ -1,0 +1,240 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.fft.hfft.rst:4
+msgid "numpy.fft.hfft"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:2
+msgid ""
+"Compute the FFT of a signal that has Hermitian symmetry, i.e., a real "
+"spectrum."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:9
+msgid "**a**"
+msgstr "**a**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:-1
+msgid "array_like"
+msgstr "array_like"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:9
+msgid "The input array."
+msgstr "輸入陣列。"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:17
+msgid "**n**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:12
+msgid ""
+"Length of the transformed axis of the output. For `n` output points, ``n//2 "
+"+ 1`` input points are necessary.  If the input is longer than this, it is "
+"cropped.  If it is shorter than this, it is padded with zeros.  If `n` is "
+"not given, it is taken to be ``2*(m-1)`` where ``m`` is the length of the "
+"input along the axis specified by `axis`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:21
+msgid "**axis**"
+msgstr "**axis**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:20
+msgid ""
+"Axis over which to compute the FFT. If not given, the last axis is used."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:30
+msgid "**norm**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:-1
+msgid "{\"backward\", \"ortho\", \"forward\"}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:24
+msgid ""
+"Normalization mode (see `numpy.fft`). Default is \"backward\". Indicates "
+"which direction of the forward/backward pair of transforms is scaled and "
+"with what normalization factor."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:30
+msgid "The \"backward\", \"forward\" values were added."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:38 numpy.fft.hfft:51
+msgid "**out**"
+msgstr "**out**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:-1
+msgid "ndarray, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:33
+msgid ""
+"If provided, the result will be placed in this array. It should be of the "
+"appropriate shape and dtype."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:-1
+msgid "ndarray"
+msgstr "ndarray"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:43
+msgid ""
+"The truncated or zero-padded input, transformed along the axis indicated by "
+"`axis`, or the last one if `axis` is not specified. The length of the "
+"transformed axis is `n`, or, if `n` is not given, ``2*m - 2`` where ``m`` is "
+"the length of the transformed axis of the input. To get an odd number of "
+"output points, `n` must be specified, for instance as ``2*m - 1`` in the "
+"typical case,"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:58
+msgid "IndexError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:56
+msgid "If `axis` is not a valid axis of `a`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:63
+msgid ":obj:`rfft`"
+msgstr ":obj:`rfft`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:64
+msgid "Compute the one-dimensional FFT for real input."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:65
+msgid ":obj:`ihfft`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:66
+msgid "The inverse of `hfft`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:70
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:71
+msgid ""
+"`hfft`/`ihfft` are a pair analogous to `rfft`/`irfft`, but for the opposite "
+"case: here the signal has Hermitian symmetry in the time domain and is real "
+"in the frequency domain. So here it's `hfft` for which you must supply the "
+"length of the result if it is to be odd."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:76
+msgid "even: ``ihfft(hfft(a, 2*len(a) - 2)) == a``, within roundoff error,"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:77
+msgid "odd: ``ihfft(hfft(a, 2*len(a) - 1)) == a``, within roundoff error."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:79
+msgid ""
+"The correct interpretation of the hermitian input depends on the length of "
+"the original data, as given by `n`. This is because each input shape could "
+"correspond to either an odd or even length signal. By default, `hfft` "
+"assumes an even output length which puts the last entry at the Nyquist "
+"frequency; aliasing with its symmetric counterpart. By Hermitian symmetry, "
+"the value is thus treated as purely real. To avoid losing information, the "
+"shape of the full signal **must** be given."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:89
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:-1
+msgid ""
+"<div id=\"67891110-3e2b-40e1-a46b-361fcb196e5e\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('15146516-"
+"e7f7-4a85-9cbb-43d6015080bb','67891110-3e2b-40e1-a46b-361fcb196e5e')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('15146516-e7f7-4a85-9cbb-43d6015080bb','67891110-3e2b-40e1-"
+"a46b-361fcb196e5e')\">Open In Tab</button></div><div id=\"218a41c2-096e-4c3a-"
+"aebd-3bdf3b2e6b64\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.hfft:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

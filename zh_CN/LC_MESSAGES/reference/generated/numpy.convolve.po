@@ -1,0 +1,270 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.convolve.rst:4
+msgid "numpy.convolve"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:2
+msgid ""
+"Returns the discrete, linear convolution of two one-dimensional sequences."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:4
+msgid ""
+"The convolution operator is often seen in signal processing, where it models "
+"the effect of a linear time-invariant system on a signal "
+"[R95849f33d2b1-1]_.  In probability theory, the sum of two independent "
+"random variables is distributed according to the convolution of their "
+"individual distributions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:10
+msgid "If `v` is longer than `a`, the arrays are swapped before computation."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:15
+msgid "**a**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:-1
+msgid "(N,) array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:15
+msgid "First one-dimensional input array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:18
+msgid "**v**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:-1
+msgid "(M,) array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:18
+msgid "Second one-dimensional input array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:37
+msgid "**mode**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:-1
+msgid "{'full', 'valid', 'same'}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:25
+msgid "'full':"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:22
+msgid ""
+"By default, mode is 'full'.  This returns the convolution at each point of "
+"overlap, with an output shape of (N+M-1,). At the end-points of the "
+"convolution, the signals do not overlap completely, and boundary effects may "
+"be seen."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:29
+msgid "'same':"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:28
+msgid ""
+"Mode 'same' returns output of length ``max(M, N)``.  Boundary effects are "
+"still visible."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:37
+msgid "'valid':"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:32
+msgid ""
+"Mode 'valid' returns output of length ``max(M, N) - min(M, N) + 1``.  The "
+"convolution product is only given for points where the signals overlap "
+"completely.  Values outside the signal boundary have no effect."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:48
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:42
+msgid "Discrete, linear convolution of `a` and `v`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:53
+msgid ":obj:`scipy.signal.fftconvolve`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:54
+msgid "Convolve two arrays using the Fast Fourier Transform."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:55
+msgid ":obj:`scipy.linalg.toeplitz`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:56
+msgid "Used to construct the convolution operator."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:57
+msgid ":obj:`polymul`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:58
+msgid ""
+"Polynomial multiplication. Same output as convolve, but also accepts poly1d "
+"objects as input."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:62
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:63
+msgid "The discrete convolution operation is defined as"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:65
+msgid ""
+"(a * v)_n = \\sum_{m = -\\infty}^{\\infty} a_m v_{n - m}\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:67
+msgid ""
+"It can be shown that a convolution :math:`x(t) * y(t)` in time/space is "
+"equivalent to the multiplication :math:`X(f) Y(f)` in the Fourier domain, "
+"after appropriate padding (padding is necessary to prevent circular "
+"convolution).  Since multiplication is more efficient (faster) than "
+"convolution, the function `scipy.signal.fftconvolve` exploits the FFT to "
+"calculate the convolution of large data-sets."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:75
+msgid "References"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:76
+msgid "Wikipedia, \"Convolution\", https://en.wikipedia.org/wiki/Convolution"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:81
+msgid "[R95849f33d2b1-1]_"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:84
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:89
+msgid ""
+"Note how the convolution operator flips the second array before \"sliding\" "
+"the two across one another:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:96
+msgid ""
+"Only return the middle values of the convolution. Contains boundary effects, "
+"where zeros are taken into account:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:103
+msgid ""
+"The two arrays are of the same length, so there is only one position where "
+"they completely overlap:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:-1
+msgid ""
+"<div id=\"3e39f722-75da-4d5b-912d-f9afbf917b6a\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('15076238-9210-421a-"
+"afcd-2d2d298f41f3','3e39f722-75da-4d5b-912d-f9afbf917b6a')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('15076238-9210-421a-afcd-2d2d298f41f3','3e39f722-75da-4d5b-912d-"
+"f9afbf917b6a')\">Open In Tab</button></div><div id=\"6f4214be-026f-41cb-8796-"
+"a2a0cda14a04\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.convolve:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

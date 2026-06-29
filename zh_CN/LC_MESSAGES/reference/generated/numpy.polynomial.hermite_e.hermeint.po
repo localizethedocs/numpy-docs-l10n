@@ -1,0 +1,229 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.hermite_e.hermeint.rst:4
+msgid "numpy.polynomial.hermite\\_e.hermeint"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:2
+msgid "Integrate a Hermite_e series."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:4
+msgid ""
+"Returns the Hermite_e series coefficients `c` integrated `m` times from "
+"`lbnd` along `axis`. At each iteration the resulting series is "
+"**multiplied** by `scl` and an integration constant, `k`, is added. The "
+"scaling factor is for use in a linear change of variable.  (\"Buyer "
+"beware\": note that, depending on what one is doing, one may want `scl` to "
+"be the reciprocal of what one might expect; for more information, see the "
+"Notes section below.)  The argument `c` is an array of coefficients from low "
+"to high degree along each axis, e.g., [1,2,3] represents the series ``H_0 + "
+"2*H_1 + 3*H_2`` while [[1,2],[1,2]] represents ``1*H_0(x)*H_0(y) + "
+"1*H_1(x)*H_0(y) + 2*H_0(x)*H_1(y) + 2*H_1(x)*H_1(y)`` if axis=0 is ``x`` and "
+"axis=1 is ``y``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:21
+msgid "**c**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:19
+msgid ""
+"Array of Hermite_e series coefficients. If c is multidimensional the "
+"different axis correspond to different variables with the degree in each "
+"axis given by the corresponding index."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:24
+msgid "**m**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:24
+msgid "Order of integration, must be positive. (Default: 1)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:31
+msgid "**k**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:-1
+msgid "{[], list, scalar}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:27
+msgid ""
+"Integration constant(s).  The value of the first integral at ``lbnd`` is the "
+"first value in the list, the value of the second integral at ``lbnd`` is the "
+"second value, etc.  If ``k == []`` (the default), all constants are set to "
+"zero.  If ``m == 1``, a single scalar can be given instead of a list."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:34
+msgid "**lbnd**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:-1
+msgid "scalar, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:34
+msgid "The lower bound of the integral. (Default: 0)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:38
+msgid "**scl**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:37
+msgid ""
+"Following each integration the result is *multiplied* by `scl` before the "
+"integration constant is added. (Default: 1)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:43
+msgid "**axis**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:41
+msgid "Axis over which the integral is taken. (Default: 0)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:51
+msgid "**S**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:48
+msgid "Hermite_e series coefficients of the integral."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:59
+msgid "ValueError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:56
+msgid ""
+"If ``m < 0``, ``len(k) > m``, ``np.ndim(lbnd) != 0``, or ``np.ndim(scl) != "
+"0``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:64
+msgid ":obj:`hermeder`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:68
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:69
+msgid ""
+"Note that the result of each integration is *multiplied* by `scl`. Why is "
+"this important to note?  Say one is making a linear change of variable :math:"
+"`u = ax + b` in an integral relative to `x`.  Then :math:`dx = du/a`, so one "
+"will need to set `scl` equal to :math:`1/a` - perhaps not what one would "
+"have first thought."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:75
+msgid ""
+"Also note that, in general, the result of integrating a C-series needs to be "
+"\"reprojected\" onto the C-series basis set.  Thus, typically, the result of "
+"this function is \"unintuitive,\" albeit correct; see Examples section below."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:82
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:-1
+msgid ""
+"<div id=\"3e484905-fd93-49d5-9c2e-286a9e186ebe\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('81d4df02-a980-4c65-ac1e-9e8563eb2a82','3e484905-"
+"fd93-49d5-9c2e-286a9e186ebe')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('81d4df02-"
+"a980-4c65-ac1e-9e8563eb2a82','3e484905-fd93-49d5-9c2e-286a9e186ebe')\">Open "
+"In Tab</button></div><div id=\"60780900-0867-44dd-a38d-0b88506b646d\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermeint:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""
