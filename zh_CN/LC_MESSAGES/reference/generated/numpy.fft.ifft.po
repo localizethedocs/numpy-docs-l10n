@@ -1,0 +1,241 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.fft.ifft.rst:4
+msgid "numpy.fft.ifft"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:2
+msgid "Compute the one-dimensional inverse discrete Fourier Transform."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:4
+msgid ""
+"This function computes the inverse of the one-dimensional *n*-point discrete "
+"Fourier transform computed by `fft`.  In other words, ``ifft(fft(a)) == a`` "
+"to within numerical accuracy. For a general description of the algorithm and "
+"definitions, see `numpy.fft`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:10
+msgid ""
+"The input should be ordered in the same way as is returned by `fft`, i.e.,"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:13
+msgid "``a[0]`` should contain the zero frequency term,"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:14
+msgid "``a[1:n//2]`` should contain the positive-frequency terms,"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:15
+msgid ""
+"``a[n//2 + 1:]`` should contain the negative-frequency terms, in increasing "
+"order starting from the most negative frequency."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:18
+msgid ""
+"For an even number of input points, ``A[n//2]`` represents the sum of the "
+"values at the positive and negative Nyquist frequencies, as the two are "
+"aliased together. See `numpy.fft` for details."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:25
+msgid "**a**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:25
+msgid "Input array, can be complex."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:32
+msgid "**n**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:28
+msgid ""
+"Length of the transformed axis of the output. If `n` is smaller than the "
+"length of the input, the input is cropped. If it is larger, the input is "
+"padded with zeros.  If `n` is not given, the length of the input along the "
+"axis specified by `axis` is used. See notes about padding issues."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:36
+msgid "**axis**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:35
+msgid ""
+"Axis over which to compute the inverse DFT.  If not given, the last axis is "
+"used."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:47
+msgid "**norm**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:-1
+msgid "{\"backward\", \"ortho\", \"forward\"}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:41
+msgid ""
+"Normalization mode (see `numpy.fft`). Default is \"backward\". Indicates "
+"which direction of the forward/backward pair of transforms is scaled and "
+"with what normalization factor."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:47
+msgid "The \"backward\", \"forward\" values were added."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:56
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:-1
+msgid "complex ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:52
+msgid ""
+"The truncated or zero-padded input, transformed along the axis indicated by "
+"`axis`, or the last one if `axis` is not specified."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:63
+msgid "IndexError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:61
+msgid "If `axis` is not a valid axis of `a`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:68
+msgid ":obj:`numpy.fft`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:69
+msgid "An introduction, with definitions and general explanations."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:70
+msgid ":obj:`fft`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:71
+msgid "The one-dimensional (forward) FFT, of which `ifft` is the inverse"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:72
+msgid ":obj:`ifft2`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:73
+msgid "The two-dimensional inverse FFT."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:74
+msgid ":obj:`ifftn`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:75
+msgid "The n-dimensional inverse FFT."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:79
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:80
+msgid ""
+"If the input parameter `n` is larger than the size of the input, the input "
+"is padded by appending zeros at the end.  Even though this is the common "
+"approach, it might lead to surprising results.  If a different padding is "
+"desired, it must be performed before calling `ifft`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/fft/__init__.py:docstring
+#: of numpy.fft.ifft:87
+msgid "Examples"
+msgstr ""
+
+#: ../../../reference/generated/numpy.fft.ifft.rst:6
+msgid "Create and plot a band-limited signal with random phases:"
+msgstr ""
