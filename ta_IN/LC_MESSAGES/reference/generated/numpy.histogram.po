@@ -1,0 +1,212 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.histogram.rst:4
+msgid "numpy.histogram"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:2
+msgid "Compute the histogram of a dataset."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:8
+msgid "**a**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:8
+msgid "Input data. The histogram is computed over the flattened array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:19
+msgid "**bins**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:-1
+msgid "int or sequence of scalars or str, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:11
+msgid ""
+"If `bins` is an int, it defines the number of equal-width bins in the given "
+"range (10, by default). If `bins` is a sequence, it defines a monotonically "
+"increasing array of bin edges, including the rightmost edge, allowing for "
+"non-uniform bin widths."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:18
+msgid ""
+"If `bins` is a string, it defines the method used to calculate the optimal "
+"bin width, as defined by `histogram_bin_edges`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:28
+msgid "**range**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:-1
+msgid "(float, float), optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:22
+msgid ""
+"The lower and upper range of the bins.  If not provided, range is simply "
+"``(a.min(), a.max())``.  Values outside the range are ignored. The first "
+"element of the range must be less than or equal to the second. `range` "
+"affects the automatic bin computation as well. While bin width is computed "
+"to be optimal based on the actual data within `range`, the bin count will "
+"fill the entire range including portions containing no data."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:35
+msgid "**weights**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:31
+msgid ""
+"An array of weights, of the same shape as `a`.  Each value in `a` only "
+"contributes its associated weight towards the bin count (instead of 1). If "
+"`density` is True, the weights are normalized, so that the integral of the "
+"density over the range remains 1."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:43
+msgid "**density**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:38
+msgid ""
+"If ``False``, the result will contain the number of samples in each bin. If "
+"``True``, the result is the value of the probability *density* function at "
+"the bin, normalized such that the *integral* over the range is 1. Note that "
+"the sum of the histogram values will not be equal to 1 unless bins of unity "
+"width are chosen; it is not a probability *mass* function."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:49
+msgid "**hist**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:-1
+msgid "array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:48
+msgid ""
+"The values of the histogram. See `density` and `weights` for a description "
+"of the possible semantics."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:58
+msgid "**bin_edges**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:-1
+msgid "array of dtype float"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:52
+msgid "Return the bin edges ``(length(hist)+1)``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:63
+msgid ""
+":obj:`histogramdd`, :obj:`bincount`, :obj:`searchsorted`, :obj:`digitize`, :"
+"obj:`histogram_bin_edges`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:67
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:68
+msgid ""
+"All but the last (righthand-most) bin is half-open.  In other words, if "
+"`bins` is::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:71
+msgid "[1, 2, 3, 4]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:73
+msgid ""
+"then the first bin is ``[1, 2)`` (including 1, but excluding 2) and the "
+"second ``[2, 3)``.  The last bin, however, is ``[3, 4]``, which *includes* 4."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.histogram:79
+msgid "Examples"
+msgstr ""
+
+#: ../../../reference/generated/numpy.histogram.rst:21
+msgid ""
+"Automated Bin Selection Methods example, using 2 peak random data with 2000 "
+"points:"
+msgstr ""

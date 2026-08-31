@@ -1,0 +1,537 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.einsum.rst:4
+msgid "numpy.einsum"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:2
+msgid "Evaluates the Einstein summation convention on the operands."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:4
+msgid ""
+"Using the Einstein summation convention, many common multi-dimensional, "
+"linear algebraic array operations can be represented in a simple fashion. In "
+"*implicit* mode `einsum` computes these values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:8
+msgid ""
+"In *explicit* mode, `einsum` provides further flexibility to compute other "
+"array operations that might not be considered classical Einstein summation "
+"operations, by disabling, or forcing summation over specified subscript "
+"labels."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:13
+msgid "See the notes and examples for clarification."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:21
+msgid "**subscripts**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:-1
+msgid "str"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:18
+msgid ""
+"Specifies the subscripts for summation as comma separated list of subscript "
+"labels. An implicit (classical Einstein summation) calculation is performed "
+"unless the explicit indicator '->' is included as well as subscript labels "
+"of the precise output form."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:24
+msgid "**operands**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:-1
+msgid "list of array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:24
+msgid "These are the arrays for the operation."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:27
+msgid "**out**"
+msgstr "**out**"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:-1
+msgid "ndarray, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:27
+msgid "If provided, the calculation is done into this array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:32
+msgid "**dtype**"
+msgstr "**dtype**"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:-1
+msgid "{data-type, None}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:30
+msgid ""
+"If provided, forces the calculation to use the data type specified. Note "
+"that you may have to also give a more liberal `casting` parameter to allow "
+"the conversions. Default is None."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:40
+msgid "**order**"
+msgstr "**命令**"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:-1
+msgid "{'C', 'F', 'A', 'K'}, optional"
+msgstr "{'C', 'F', 'A', 'K'}，可選"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:35
+msgid ""
+"Controls the memory layout of the output. 'C' means it should be C "
+"contiguous. 'F' means it should be Fortran contiguous, 'A' means it should "
+"be 'F' if the inputs are all 'F', 'C' otherwise. 'K' means it should be as "
+"close to the layout as the inputs as is possible, including arbitrarily "
+"permuted axes. Default is 'K'."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:53
+msgid "**casting**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:-1
+msgid "{'no', 'equiv', 'safe', 'same_kind', 'unsafe'}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:43
+msgid ""
+"Controls what kind of data casting may occur.  Setting this to 'unsafe' is "
+"not recommended, as it can adversely affect accumulations."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:46
+msgid "'no' means the data types should not be cast at all."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:47
+msgid "'equiv' means only byte-order changes are allowed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:48
+msgid "'safe' means only casts which can preserve values are allowed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:49
+msgid ""
+"'same_kind' means only safe casts or casts within a kind, like float64 to "
+"float32, are allowed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:51
+msgid "'unsafe' means any data conversions may be done."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:53
+msgid "Default is 'safe'."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:59
+msgid "**optimize**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:-1
+msgid "{False, True, 'greedy', 'optimal'}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:56
+msgid ""
+"Controls if intermediate optimization should occur. No optimization will "
+"occur if False and True will default to the 'greedy' algorithm. Also accepts "
+"an explicit contraction list from the ``np.einsum_path`` function. See ``np."
+"einsum_path`` for more details. Defaults to False."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:70
+msgid "**output**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:-1
+msgid "ndarray"
+msgstr "ndarray"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:64
+msgid "The calculation based on the Einstein summation convention."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:75
+msgid ""
+":obj:`einsum_path`, :obj:`dot`, :obj:`inner`, :obj:`outer`, :obj:"
+"`tensordot`, :obj:`linalg.multi_dot`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:77
+msgid ":obj:`einops`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:78
+msgid ""
+"similar verbose interface is provided by `einops <https://github.com/"
+"arogozhnikov/einops>`_ package to cover additional operations: transpose, "
+"reshape/flatten, repeat/tile, squeeze/unsqueeze and reductions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:79
+msgid ":obj:`opt_einsum`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:80
+msgid ""
+"`opt_einsum <https://optimized-einsum.readthedocs.io/en/stable/>`_ optimizes "
+"contraction order for einsum-like expressions in backend-agnostic manner."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:84
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:87
+msgid ""
+"The Einstein summation convention can be used to compute many multi-"
+"dimensional, linear algebraic array operations. `einsum` provides a succinct "
+"way of representing these."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:91
+msgid ""
+"A non-exhaustive list of these operations, which can be computed by "
+"`einsum`, is shown below along with examples:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:94
+msgid "Trace of an array, :py:func:`numpy.trace`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:95
+msgid "Return a diagonal, :py:func:`numpy.diag`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:96
+msgid "Array axis summations, :py:func:`numpy.sum`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:97
+msgid "Transpositions and permutations, :py:func:`numpy.transpose`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:98
+msgid ""
+"Matrix multiplication and dot product, :py:func:`numpy.matmul` :py:func:"
+"`numpy.dot`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:99
+msgid ""
+"Vector inner and outer products, :py:func:`numpy.inner` :py:func:`numpy."
+"outer`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:100
+msgid ""
+"Broadcasting, element-wise and scalar multiplication, :py:func:`numpy."
+"multiply`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:101
+msgid "Tensor contractions, :py:func:`numpy.tensordot`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:102
+msgid ""
+"Chained array operations, in efficient calculation order, :py:func:`numpy."
+"einsum_path`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:104
+msgid ""
+"The subscripts string is a comma-separated list of subscript labels, where "
+"each label refers to a dimension of the corresponding operand. Whenever a "
+"label is repeated it is summed, so ``np.einsum('i,i', a, b)`` is equivalent "
+"to :py:func:`np.inner(a,b) <numpy.inner>`. If a label appears only once, it "
+"is not summed, so ``np.einsum('i', a)`` produces a view of ``a`` with no "
+"changes. A further example ``np.einsum('ij,jk', a, b)`` describes "
+"traditional matrix multiplication and is equivalent to :py:func:`np.matmul(a,"
+"b) <numpy.matmul>`. Repeated subscript labels in one operand take the "
+"diagonal. For example, ``np.einsum('ii', a)`` is equivalent to :py:func:`np."
+"trace(a) <numpy.trace>`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:115
+msgid ""
+"In *implicit mode*, the chosen subscripts are important since the axes of "
+"the output are reordered alphabetically.  This means that ``np.einsum('ij', "
+"a)`` doesn't affect a 2D array, while ``np.einsum('ji', a)`` takes its "
+"transpose. Additionally, ``np.einsum('ij,jk', a, b)`` returns a matrix "
+"multiplication, while, ``np.einsum('ij,jh', a, b)`` returns the transpose of "
+"the multiplication since subscript 'h' precedes subscript 'i'."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:123
+msgid ""
+"In *explicit mode* the output can be directly controlled by specifying "
+"output subscript labels.  This requires the identifier '->' as well as the "
+"list of output subscript labels. This feature increases the flexibility of "
+"the function since summing can be disabled or forced when required. The call "
+"``np.einsum('i->', a)`` is like :py:func:`np.sum(a, axis=-1) <numpy.sum>`, "
+"and ``np.einsum('ii->i', a)`` is like :py:func:`np.diag(a) <numpy.diag>`. "
+"The difference is that `einsum` does not allow broadcasting by default. "
+"Additionally ``np.einsum('ij,jh->ih', a, b)`` directly specifies the order "
+"of the output subscript labels and therefore returns matrix multiplication, "
+"unlike the example above in implicit mode."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:135
+msgid ""
+"To enable and control broadcasting, use an ellipsis.  Default NumPy-style "
+"broadcasting is done by adding an ellipsis to the left of each term, like "
+"``np.einsum('...ii->...i', a)``. To take the trace along the first and last "
+"axes, you can do ``np.einsum('i...i', a)``, or to do a matrix-matrix product "
+"with the left-most indices instead of rightmost, one can do ``np."
+"einsum('ij...,jk...->ik...', a, b)``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:143
+msgid ""
+"When there is only one operand, no axes are summed, and no output parameter "
+"is provided, a view into the operand is returned instead of a new array.  "
+"Thus, taking the diagonal as ``np.einsum('ii->i', a)`` produces a view "
+"(changed in version 1.10.0)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:148
+msgid ""
+"`einsum` also provides an alternative way to provide the subscripts and "
+"operands as ``einsum(op0, sublist0, op1, sublist1, ..., [sublistout])``. If "
+"the output shape is not provided in this format `einsum` will be calculated "
+"in implicit mode, otherwise it will be performed explicitly. The examples "
+"below have corresponding `einsum` calls with the two parameter methods."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:157
+msgid ""
+"Views returned from einsum are now writeable whenever the input array is "
+"writeable. For example, ``np.einsum('ijk...->kji...', a)`` will now have the "
+"same effect as :py:func:`np.swapaxes(a, 0, 2) <numpy.swapaxes>` and ``np."
+"einsum('ii->i', a)`` will return a writeable view of the diagonal of a 2D "
+"array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:165
+msgid ""
+"Added the ``optimize`` argument which will optimize the contraction order of "
+"an einsum expression. For a contraction with three or more operands this can "
+"greatly increase the computational efficiency at the cost of a larger memory "
+"footprint during computation."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:170
+msgid ""
+"Typically a 'greedy' algorithm is applied which empirical tests have shown "
+"returns the optimal path in the majority of cases. In some cases 'optimal' "
+"will return the superlative path through a more expensive, exhaustive "
+"search. For iterative calculations it may be advisable to calculate the "
+"optimal path once and reuse that path by supplying it as an argument. An "
+"example is given below."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:177
+msgid "See :py:func:`numpy.einsum_path` for more details."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:181
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:186
+msgid "Trace of a matrix:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:195
+msgid "Extract the diagonal (requires explicit form):"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:204
+msgid "Sum over an axis (requires explicit form):"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:213
+msgid ""
+"For higher dimensional arrays summing a single axis can be done with "
+"ellipsis:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:220
+msgid "Compute a matrix transpose, or reorder any number of axes:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:239
+msgid "Vector inner products:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:248
+msgid "Matrix vector multiplication:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:259
+msgid "Broadcasting and scalar multiplication:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:274
+msgid "Vector outer product:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:286
+msgid "Tensor contraction:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:309
+msgid "Writeable returned arrays (since version 1.10.0):"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:318
+msgid "Example of ellipsis use:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:332
+msgid ""
+"Chained array operations. For more complicated contractions, speed ups might "
+"be achieved by repeatedly computing a 'greedy' path or pre-computing the "
+"'optimal' path and repeatedly applying it, using an `einsum_path` insertion "
+"(since version 1.12.0). Performance improvements can be particularly "
+"significant with larger arrays:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:340
+msgid "Basic `einsum`: ~1520ms  (benchmarked on 3.1GHz Intel i5.)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:345
+msgid "Sub-optimal `einsum` (due to repeated path calculation time): ~330ms"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:350
+msgid "Greedy `einsum` (faster optimal path approximation): ~160ms"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:355
+msgid "Optimal `einsum` (best usage pattern in some use cases): ~110ms"
+msgstr ""

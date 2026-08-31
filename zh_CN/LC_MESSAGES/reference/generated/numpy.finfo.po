@@ -1,0 +1,360 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.finfo.rst:2
+msgid "numpy.finfo"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:2
+msgid "Machine limits for floating point types."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:16 numpy.finfo:73
+msgid "**dtype**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:-1
+msgid "float, dtype, or instance"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:8
+msgid ""
+"Kind of floating point or complex floating point data-type about which to "
+"get information."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:21
+msgid ":obj:`iinfo`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:22
+msgid "The equivalent for integer data types."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:23
+msgid ":obj:`spacing`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:24
+msgid "The distance between a value and the nearest adjacent number"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:25
+msgid ":obj:`nextafter`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:26
+msgid "The next floating point value after x1 towards x2"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:30
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:31
+msgid ""
+"For developers of NumPy: do not instantiate this at the module level. The "
+"initial calculation of these parameters is expensive and negatively impacts "
+"import times.  These objects are cached, so calling ``finfo()`` repeatedly "
+"inside your functions is not a problem."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:36
+msgid ""
+"Note that ``smallest_normal`` is not actually the smallest positive "
+"representable value in a NumPy floating point type. As in the IEEE-754 "
+"standard [R2ee89c7f792a-1]_, NumPy floating point types make use of "
+"subnormal numbers to fill the gap between 0 and ``smallest_normal``. "
+"However, subnormal numbers may have significantly reduced precision "
+"[R2ee89c7f792a-2]_."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:42
+msgid ""
+"This function can also be used for complex data types as well. If used, the "
+"output will be the same as the corresponding real float type (e.g. numpy."
+"finfo(numpy.csingle) is the same as numpy.finfo(numpy.single)). However, the "
+"output is true for the real and imaginary components."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:48
+msgid "References"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:49
+msgid ""
+"IEEE Standard for Floating-Point Arithmetic, IEEE Std 754-2008, pp.1-70, "
+"2008, http://www.doi.org/10.1109/IEEESTD.2008.4610935"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:51
+msgid ""
+"Wikipedia, \"Denormal Numbers\", https://en.wikipedia.org/wiki/"
+"Denormal_number"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:56
+msgid "[R2ee89c7f792a-1]_, [R2ee89c7f792a-2]_"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:59
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:0
+msgid "Attributes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:68
+msgid "**bits**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:-1
+msgid "int"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:68
+msgid "The number of bits occupied by the type."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:-1
+msgid "dtype"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:71
+msgid ""
+"Returns the dtype for which `finfo` returns information. For complex input, "
+"the returned dtype is the associated ``float*`` dtype for its real and "
+"complex components."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:78
+msgid "**eps**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:-1
+msgid "float"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:76
+msgid ""
+"The difference between 1.0 and the next smallest representable float larger "
+"than 1.0. For example, for 64-bit binary floats in the IEEE-754 standard, "
+"``eps = 2**-52``, approximately 2.22e-16."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:83
+msgid "**epsneg**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:81
+msgid ""
+"The difference between 1.0 and the next smallest representable float less "
+"than 1.0. For example, for 64-bit binary floats in the IEEE-754 standard, "
+"``epsneg = 2**-53``, approximately 1.11e-16."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:87
+msgid "**iexp**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:86
+msgid ""
+"The number of bits in the exponent portion of the floating point "
+"representation."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:90
+msgid "**machep**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:90
+msgid "The exponent that yields `eps`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:93
+msgid "**max**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:-1
+msgid "floating point number of the appropriate type"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:93
+msgid "The largest representable number."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:96
+msgid "**maxexp**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:96
+msgid "The smallest positive power of the base (2) that causes overflow."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:99
+msgid "**min**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:99
+msgid "The smallest representable number, typically ``-max``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:103
+msgid "**minexp**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:102
+msgid ""
+"The most negative power of the base (2) consistent with there being no "
+"leading 0's in the mantissa."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:106
+msgid "**negep**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:106
+msgid "The exponent that yields `epsneg`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:109
+msgid "**nexp**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:109
+msgid "The number of bits in the exponent including its sign and bias."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:112
+msgid "**nmant**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:112
+msgid "The number of bits in the mantissa."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:116
+msgid "**precision**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:115
+msgid ""
+"The approximate number of decimal digits to which this kind of float is "
+"precise."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:120
+msgid "**resolution**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:119
+msgid ""
+"The approximate decimal resolution of this type, i.e., ``10**-precision``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:123
+msgid ":obj:`tiny <tiny>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:123
+msgid "Return the value for tiny, alias of smallest_normal."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:126
+msgid ":obj:`smallest_normal <smallest_normal>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:126
+msgid "Return the value for the smallest normal."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:131
+msgid "**smallest_subnormal**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.finfo:129
+msgid ""
+"The smallest positive floating point number with 0 as leading bit in the "
+"mantissa following IEEE-754."
+msgstr ""

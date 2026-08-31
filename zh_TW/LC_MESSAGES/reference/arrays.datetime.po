@@ -1,0 +1,652 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/arrays.datetime.rst:7
+msgid "Datetimes and Timedeltas"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:11
+msgid ""
+"Starting in NumPy 1.7, there are core array data types which natively "
+"support datetime functionality. The data type is called :class:`datetime64`, "
+"so named because :class:`~datetime.datetime` is already taken by the Python "
+"standard library."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:16
+msgid "Datetime64 Conventions and Assumptions"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:18
+msgid ""
+"Similar to the Python `~datetime.date` class, dates are expressed in the "
+"current Gregorian Calendar, indefinitely extended both in the future and in "
+"the past. [#]_ Contrary to Python `~datetime.date`, which supports only "
+"years in the 1 AD — 9999 AD range, `datetime64` allows also for dates BC; "
+"years BC follow the `Astronomical year numbering <https://en.wikipedia.org/"
+"wiki/Astronomical_year_numbering>`_ convention, i.e. year 2 BC is numbered "
+"−1, year 1 BC is numbered 0, year 1 AD is numbered 1."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:26
+msgid ""
+"Time instants, say 16:23:32.234, are represented counting hours, minutes, "
+"seconds and fractions from midnight: i.e. 00:00:00.000 is midnight, "
+"12:00:00.000 is noon, etc. Each calendar day has exactly 86400 seconds. This "
+"is a \"naive\" time, with no explicit notion of timezones or specific time "
+"scales (UT1, UTC, TAI, etc.). [#]_"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:32
+msgid ""
+"The calendar obtained by extending the Gregorian calendar before its "
+"official adoption on Oct. 15, 1582 is called `Proleptic Gregorian Calendar "
+"<https://en.wikipedia.org/wiki/Proleptic_Gregorian_calendar>`_"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:36
+msgid ""
+"The assumption of 86400 seconds per calendar day is not valid for UTC, the "
+"present day civil time scale. In fact due to the presence of `leap seconds "
+"<https://en.wikipedia.org/wiki/Leap_second>`_ on rare occasions a day may be "
+"86401 or 86399 seconds long. On the contrary the 86400s day assumption holds "
+"for the TAI timescale. An explicit support for TAI and TAI to UTC "
+"conversion, accounting for leap seconds, is proposed but not yet "
+"implemented. See also the `shortcomings`_ section below."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:46
+msgid "Basic Datetimes"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:48
+msgid ""
+"The most basic way to create datetimes is from strings in ISO 8601 date or "
+"datetime format. It is also possible to create datetimes from an integer by "
+"offset relative to the Unix epoch (00:00:00 UTC on 1 January 1970). The unit "
+"for internal storage is automatically selected from the form of the string, "
+"and can be either a :ref:`date unit <arrays.dtypes.dateunits>` or a :ref:"
+"`time unit <arrays.dtypes.timeunits>`. The date units are years ('Y'), "
+"months ('M'), weeks ('W'), and days ('D'), while the time units are hours "
+"('h'), minutes ('m'), seconds ('s'), milliseconds ('ms'), and some "
+"additional SI-prefix seconds-based units. The `datetime64` data type also "
+"accepts the string \"NAT\", in any combination of lowercase/uppercase "
+"letters, for a \"Not A Time\" value."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:60
+#: ../../../reference/arrays.datetime.rst:96
+#: ../../../reference/arrays.datetime.rst:108
+#: ../../../reference/arrays.datetime.rst:121
+#: ../../../reference/arrays.datetime.rst:141
+#: ../../../reference/arrays.datetime.rst:168
+#: ../../../reference/arrays.datetime.rst:182
+#: ../../../reference/arrays.datetime.rst:211
+#: ../../../reference/arrays.datetime.rst:289
+#: ../../../reference/arrays.datetime.rst:303
+#: ../../../reference/arrays.datetime.rst:325
+#: ../../../reference/arrays.datetime.rst:346
+#: ../../../reference/arrays.datetime.rst:360
+#: ../../../reference/arrays.datetime.rst:377
+#: ../../../reference/arrays.datetime.rst:387
+#: ../../../reference/arrays.datetime.rst:430
+#: ../../../reference/arrays.datetime.rst:444
+#: ../../../reference/arrays.datetime.rst:461
+msgid "Example"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:62
+msgid "A simple ISO date:"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:67
+msgid "From an integer and a date unit, 1 year since the UNIX epoch:"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:72
+msgid "Using months for the unit:"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:77
+msgid "Specifying just the month, but forcing a 'days' unit:"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:82
+msgid "From a date and time:"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:87
+msgid "NAT (not a time):"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:92
+msgid ""
+"When creating an array of datetimes from a string, it is still possible to "
+"automatically select the unit from the inputs, by using the datetime type "
+"with generic units."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:105
+msgid ""
+"An array of datetimes can be constructed from integers representing POSIX "
+"timestamps with the given unit."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:118
+msgid ""
+"The datetime type works with many common NumPy functions, for example :func:"
+"`arange` can be used to generate ranges of dates."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:123
+msgid "All the dates for one month:"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:135
+msgid ""
+"The datetime object represents a single moment in time. If two datetimes "
+"have different units, they may still be representing the same moment of "
+"time, and converting from a bigger unit like months to a smaller unit like "
+"days is considered a 'safe' cast because the moment of time is still being "
+"represented exactly."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:151
+msgid ""
+"NumPy does not store timezone information. For backwards compatibility, "
+"datetime64 still parses timezone offsets, which it handles by converting to "
+"UTC±00:00 (Zulu time). This behaviour is deprecated and will raise an error "
+"in the future."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:158
+msgid "Datetime and Timedelta Arithmetic"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:160
+msgid ""
+"NumPy allows the subtraction of two datetime values, an operation which "
+"produces a number with a time unit. Because NumPy doesn't have a physical "
+"quantities system in its core, the `timedelta64` data type was created to "
+"complement `datetime64`. The arguments for `timedelta64` are a number, to "
+"represent the number of units, and a date/time unit, such as (D)ay, (M)onth, "
+"(Y)ear, (h)ours, (m)inutes, or (s)econds. The `timedelta64` data type also "
+"accepts the string \"NAT\" in place of the number for a \"Not A Time\" value."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:179
+msgid ""
+"Datetimes and Timedeltas work together to provide ways for simple datetime "
+"calculations."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:205
+msgid ""
+"There are two Timedelta units ('Y', years and 'M', months) which are treated "
+"specially, because how much time they represent changes depending on when "
+"they are used. While a timedelta day unit is equivalent to 24 hours, there "
+"is no way to convert a month unit into days, because different months have "
+"different numbers of days."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:224
+msgid "Datetime Units"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:226
+msgid ""
+"The Datetime and Timedelta data types support a large number of time units, "
+"as well as generic units which can be coerced into any of the other units "
+"based on input data."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:230
+msgid ""
+"Datetimes are always stored with an epoch of 1970-01-01T00:00. This means "
+"the supported dates are always a symmetric interval around the epoch, called "
+"\"time span\" in the table below."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:235
+msgid ""
+"The length of the span is the range of a 64-bit integer times the length of "
+"the date or unit.  For example, the time span for 'W' (week) is exactly 7 "
+"times longer than the time span for 'D' (day), and the time span for "
+"'D' (day) is exactly 24 times longer than the time span for 'h' (hour)."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:240
+msgid "Here are the date units:"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:245
+#: ../../../reference/arrays.datetime.rst:258
+msgid "Code"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:245
+#: ../../../reference/arrays.datetime.rst:258
+msgid "Meaning"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:245
+#: ../../../reference/arrays.datetime.rst:258
+msgid "Time span (relative)"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:245
+#: ../../../reference/arrays.datetime.rst:258
+msgid "Time span (absolute)"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:247
+msgid "Y"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:247
+msgid "year"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:247
+msgid "+/- 9.2e18 years"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:247
+msgid "[9.2e18 BC, 9.2e18 AD]"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:248
+msgid "M"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:248
+msgid "month"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:248
+msgid "+/- 7.6e17 years"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:248
+msgid "[7.6e17 BC, 7.6e17 AD]"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:249
+msgid "W"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:249
+msgid "week"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:249
+msgid "+/- 1.7e17 years"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:249
+msgid "[1.7e17 BC, 1.7e17 AD]"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:250
+msgid "D"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:250
+msgid "day"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:250
+msgid "+/- 2.5e16 years"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:250
+msgid "[2.5e16 BC, 2.5e16 AD]"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:253
+msgid "And here are the time units:"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:260
+msgid "h"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:260
+msgid "hour"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:260
+msgid "+/- 1.0e15 years"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:260
+msgid "[1.0e15 BC, 1.0e15 AD]"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:261
+msgid "m"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:261
+msgid "minute"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:261
+msgid "+/- 1.7e13 years"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:261
+msgid "[1.7e13 BC, 1.7e13 AD]"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:262
+msgid "s"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:262
+msgid "second"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:262
+msgid "+/- 2.9e11 years"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:262
+msgid "[2.9e11 BC, 2.9e11 AD]"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:263
+msgid "ms"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:263
+msgid "millisecond"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:263
+msgid "+/- 2.9e8 years"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:263
+msgid "[ 2.9e8 BC,  2.9e8 AD]"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:264
+msgid "us / μs"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:264
+msgid "microsecond"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:264
+msgid "+/- 2.9e5 years"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:264
+msgid "[290301 BC, 294241 AD]"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:265
+msgid "ns"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:265
+msgid "nanosecond"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:265
+msgid "+/- 292 years"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:265
+msgid "[  1678 AD,   2262 AD]"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:266
+msgid "ps"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:266
+msgid "picosecond"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:266
+msgid "+/- 106 days"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:266
+#: ../../../reference/arrays.datetime.rst:267
+#: ../../../reference/arrays.datetime.rst:268
+msgid "[  1969 AD,   1970 AD]"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:267
+msgid "fs"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:267
+msgid "femtosecond"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:267
+msgid "+/- 2.6 hours"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:268
+msgid "as"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:268
+msgid "attosecond"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:268
+msgid "+/- 9.2 seconds"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:272
+msgid "Business Day Functionality"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:274
+msgid ""
+"To allow the datetime to be used in contexts where only certain days of the "
+"week are valid, NumPy includes a set of \"busday\" (business day) functions."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:278
+msgid ""
+"The default for busday functions is that the only valid days are Monday "
+"through Friday (the usual business days).  The implementation is based on a "
+"\"weekmask\" containing 7 Boolean flags to indicate valid days; custom "
+"weekmasks are possible that specify other sets of valid days."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:283
+msgid ""
+"The \"busday\" functions can additionally check a list of \"holiday\" dates, "
+"specific dates that are not valid days."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:286
+msgid ""
+"The function :func:`busday_offset` allows you to apply offsets specified in "
+"business days to datetimes with a unit of 'D' (day)."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:297
+msgid ""
+"When an input date falls on the weekend or a holiday, :func:`busday_offset` "
+"first applies a rule to roll the date to a valid business day, then applies "
+"the offset. The default rule is 'raise', which simply raises an exception. "
+"The rules most typically used are 'forward' and 'backward'."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:322
+msgid ""
+"In some cases, an appropriate use of the roll and the offset is necessary to "
+"get a desired answer."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:327
+msgid "The first business day on or after a date:"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:334
+msgid "The first business day strictly after a date:"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:341
+msgid ""
+"The function is also useful for computing some kinds of days like holidays. "
+"In Canada and the U.S., Mother's day is on the second Sunday in May, which "
+"can be computed with a custom weekmask."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:351
+msgid ""
+"When performance is important for manipulating many business dates with one "
+"particular choice of weekmask and holidays, there is an object :class:"
+"`busdaycalendar` which stores the data necessary in an optimized form."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:357
+msgid "np.is_busday():"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:358
+msgid ""
+"To test a `datetime64` value to see if it is a valid day, use :func:"
+"`is_busday`."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:373
+msgid "np.busday_count():"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:374
+msgid ""
+"To find how many valid days there are in a specified range of datetime64 "
+"dates, use :func:`busday_count`:"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:384
+msgid ""
+"If you have an array of datetime64 day values, and you want a count of how "
+"many of them are valid dates, you can do this:"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:396
+msgid "Custom Weekmasks"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:398
+msgid ""
+"Here are several examples of custom weekmask values.  These examples specify "
+"the \"busday\" default of Monday through Friday being valid days."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:401
+msgid "Some examples::"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:403
+msgid ""
+"# Positional sequences; positions are Monday through Sunday.\n"
+"# Length of the sequence must be exactly 7.\n"
+"weekmask = [1, 1, 1, 1, 1, 0, 0]\n"
+"# list or other sequence; 0 == invalid day, 1 == valid day\n"
+"weekmask = \"1111100\"\n"
+"# string '0' == invalid day, '1' == valid day\n"
+"\n"
+"# string abbreviations from this list: Mon Tue Wed Thu Fri Sat Sun\n"
+"weekmask = \"Mon Tue Wed Thu Fri\"\n"
+"# any amount of whitespace is allowed; abbreviations are case-sensitive.\n"
+"weekmask = \"MonTue Wed  Thu\\tFri\""
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:419
+msgid "Datetime64 shortcomings"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:421
+msgid ""
+"The assumption that all days are exactly 86400 seconds long makes "
+"`datetime64` largely compatible with Python `datetime` and \"POSIX time\" "
+"semantics; therefore they all share the same well known shortcomings with "
+"respect to the UTC timescale and historical time determination. A brief non "
+"exhaustive summary is given below."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:427
+msgid ""
+"It is impossible to parse valid UTC timestamps occurring during a positive "
+"leap second."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:432
+msgid ""
+"\"2016-12-31 23:59:60 UTC\" was a leap second, therefore \"2016-12-31 "
+"23:59:60.450 UTC\" is a valid timestamp which is not parseable by "
+"`datetime64`:"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:441
+msgid ""
+"Timedelta64 computations between two UTC dates can be wrong by an integer "
+"number of SI seconds."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:446
+msgid ""
+"Compute the number of SI seconds between \"2021-01-01 12:56:23.423 UTC\" and "
+"\"2001-01-01 00:00:00.000 UTC\":"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:455
+msgid ""
+"however correct answer is `631198588.423` SI seconds because there were 5 "
+"leap seconds between 2001 and 2021."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:458
+msgid ""
+"Timedelta64 computations for dates in the past do not return SI seconds, as "
+"one would expect."
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:463
+msgid ""
+"Compute the number of seconds between \"000-01-01 UT\" and \"1600-01-01 "
+"UT\", where UT is `universal time <https://en.wikipedia.org/wiki/"
+"Universal_Time>`_:"
+msgstr ""
+
+#: ../../../reference/arrays.datetime.rst:472
+msgid ""
+"The computed results, `50491123200` seconds, is obtained as the elapsed "
+"number of days (`584388`) times `86400` seconds; this is the number of "
+"seconds of a clock in sync with earth rotation. The exact value in SI "
+"seconds can only be estimated, e.g using data published in `Measurement of "
+"the Earth's rotation: 720 BC to AD 2015, 2016, Royal Society's Proceedings A "
+"472, by Stephenson et.al. <https://doi.org/10.1098/rspa.2016.0404>`_. A "
+"sensible estimate is `50491112870 ± 90` seconds, with a difference of 10330 "
+"seconds."
+msgstr ""

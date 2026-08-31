@@ -1,0 +1,159 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polyint.rst:4
+msgid "numpy.polyint"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:2
+msgid "Return an antiderivative (indefinite integral) of a polynomial."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:5
+msgid ""
+"This forms part of the old polynomial API. Since version 1.4, the new "
+"polynomial API defined in `numpy.polynomial` is preferred. A summary of the "
+"differences can be found in the :doc:`transition guide </reference/routines."
+"polynomials>`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:10
+msgid ""
+"The returned order `m` antiderivative `P` of polynomial `p` satisfies :math:"
+"`\\frac{d^m}{dx^m}P(x) = p(x)` and is defined up to `m - 1` integration "
+"constants `k`. The constants determine the low-order polynomial part"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:15
+msgid ""
+"\\frac{k_{m-1}}{0!} x^0 + \\ldots + \\frac{k_0}{(m-1)!}x^{m-1}\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:17
+msgid "of `P` so that :math:`P^{(j)}(0) = k_{m-j-1}`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:23
+msgid "**p**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:-1
+msgid "array_like or poly1d"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:22
+msgid ""
+"Polynomial to integrate. A sequence is interpreted as polynomial "
+"coefficients, see `poly1d`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:26
+msgid "**m**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:26
+msgid "Order of the antiderivative. (Default: 1)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:40
+msgid "**k** : list of `m` scalars or scalar, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:-1
+msgid "list of"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:29
+msgid ""
+"Integration constants. They are given in the order of integration: those "
+"corresponding to highest-order terms come first."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:32
+msgid ""
+"If ``None`` (default), all constants are assumed to be zero. If `m = 1`, a "
+"single scalar can be given instead of a list."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:45
+msgid ":obj:`polyder`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:46
+msgid "derivative of a polynomial"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:47
+msgid ":obj:`poly1d.integ`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:48
+msgid "equivalent method"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:54
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:55
+msgid "The defining property of the antiderivative:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:64
+msgid "The integration constants default to zero, but can be specified:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.polyint:77
+msgid ""
+"Note that 3 = 6 / 2!, and that the constants are given in the order of "
+"integrations. Constant of the highest-order polynomial term comes first:"
+msgstr ""

@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.core.defchararray.array.rst:4
+msgid "numpy.core.defchararray.array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:2
+msgid "Create a `chararray`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:5
+msgid ""
+"This class is provided for numarray backward-compatibility. New code (not "
+"concerned with numarray compatibility) should use arrays of type `bytes_` or "
+"`str_` and use the free functions in :mod:`numpy.char <numpy.core."
+"defchararray>` for fast vectorized string operations instead."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:11
+msgid ""
+"Versus a regular NumPy array of type `str` or `unicode`, this class adds the "
+"following functionality:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:14
+msgid "values automatically have whitespace removed from the end when indexed"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:17
+msgid ""
+"comparison operators automatically remove whitespace from the end when "
+"comparing values"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:20
+msgid ""
+"vectorized string operations are provided as methods (e.g. `str.endswith`) "
+"and infix operators (e.g. ``+, *, %``)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:26
+msgid "**obj**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:-1
+msgid "array of str or unicode-like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:34
+msgid "**itemsize**"
+msgstr "**itemsize**"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:29
+msgid ""
+"`itemsize` is the number of characters per scalar in the resulting array.  "
+"If `itemsize` is None, and `obj` is an object array or a Python list, the "
+"`itemsize` will be automatically determined.  If `itemsize` is provided and "
+"`obj` is of type str or unicode, then the `obj` string will be chunked into "
+"`itemsize` pieces."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:40
+msgid "**copy**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:37
+msgid ""
+"If true (default), then the object is copied.  Otherwise, a copy will only "
+"be made if __array__ returns a copy, if obj is a nested sequence, or if a "
+"copy is needed to satisfy any of the other requirements (`itemsize`, "
+"unicode, `order`, etc.)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:52
+msgid "**unicode**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:43
+msgid ""
+"When true, the resulting `chararray` can contain Unicode characters, when "
+"false only 8-bit characters.  If unicode is None and `obj` is one of the "
+"following:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:47
+msgid "a `chararray`,"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:48
+msgid "an ndarray of type `str` or `unicode`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:49
+msgid "a Python str or unicode object,"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:51
+msgid ""
+"then the unicode setting of the output array will be automatically "
+"determined."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:74
+msgid "**order**"
+msgstr "**命令**"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:-1
+msgid "{'C', 'F', 'A'}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/core/defchararray.py:docstring
+#: of numpy.char.array:55
+msgid ""
+"Specify the order of the array.  If order is 'C' (default), then the array "
+"will be in C-contiguous order (last-index varies the fastest).  If order is "
+"'F', then the returned array will be in Fortran-contiguous order (first-"
+"index varies the fastest).  If order is 'A', then the returned array may be "
+"in any order (either C-, Fortran-contiguous, or even discontiguous)."
+msgstr ""

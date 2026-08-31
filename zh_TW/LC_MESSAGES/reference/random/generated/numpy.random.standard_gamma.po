@@ -1,0 +1,194 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/generated/numpy.random.standard_gamma.rst:4
+msgid "numpy.random.standard\\_gamma"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:2
+msgid "Draw samples from a standard Gamma distribution."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:4
+msgid ""
+"Samples are drawn from a Gamma distribution with specified parameters, shape "
+"(sometimes designated \"k\") and scale=1."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:8
+msgid ""
+"New code should use the `~numpy.random.Generator.standard_gamma` method of a "
+"`~numpy.random.Generator` instance instead; please see the :ref:`random-"
+"quick-start`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:16
+msgid "**shape**"
+msgstr "**shape**"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:-1
+msgid "float or array_like of floats"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:16
+msgid "Parameter, must be non-negative."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:22
+msgid "**size**"
+msgstr "**size**"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:-1
+msgid "int or tuple of ints, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:19
+msgid ""
+"Output shape.  If the given shape is, e.g., ``(m, n, k)``, then ``m * n * "
+"k`` samples are drawn.  If size is ``None`` (default), a single value is "
+"returned if ``shape`` is a scalar.  Otherwise, ``np.array(shape).size`` "
+"samples are drawn."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:33
+msgid "**out**"
+msgstr "**out**"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:-1
+msgid "ndarray or scalar"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:27
+msgid "Drawn samples from the parameterized standard gamma distribution."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:38
+msgid ":obj:`scipy.stats.gamma`"
+msgstr ":obj:`scipy.stats.gamma`"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:39
+msgid ""
+"probability density function, distribution or cumulative density function, "
+"etc."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:40
+msgid ":obj:`random.Generator.standard_gamma`"
+msgstr ":obj:`random.Generator.standard_gamma`"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:41
+msgid "which should be used for new code."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:45
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:46
+msgid "The probability density for the Gamma distribution is"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:48
+msgid ""
+"p(x) = x^{k-1}\\frac{e^{-x/\\theta}}{\\theta^k\\Gamma(k)},\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:50
+msgid ""
+"where :math:`k` is the shape and :math:`\\theta` the scale, and :math:"
+"`\\Gamma` is the Gamma function."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:53
+msgid ""
+"The Gamma distribution is often used to model the times to failure of "
+"electronic components, and arises naturally in processes for which the "
+"waiting times between Poisson distributed events are relevant."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:58
+msgid "References"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:59
+msgid ""
+"Weisstein, Eric W. \"Gamma Distribution.\" From MathWorld--A Wolfram Web "
+"Resource. http://mathworld.wolfram.com/GammaDistribution.html"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:62
+msgid ""
+"Wikipedia, \"Gamma distribution\", https://en.wikipedia.org/wiki/"
+"Gamma_distribution"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:67
+msgid "[Rb74de5df8c5e-1]_, [Rb74de5df8c5e-2]_"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.standard_gamma:70
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../reference/random/generated/numpy.random.standard_gamma.rst:3
+msgid "Draw samples from the distribution:"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.standard_gamma.rst:8
+msgid ""
+"Display the histogram of the samples, along with the probability density "
+"function:"
+msgstr ""

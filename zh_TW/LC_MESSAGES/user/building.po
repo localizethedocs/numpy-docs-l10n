@@ -1,0 +1,243 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../user/building.rst:4
+msgid "Building from source"
+msgstr "從來源碼建置"
+
+#: ../../../user/building.rst:6
+msgid ""
+"Building locally on your machine gives you complete control over build "
+"options. If you are a MacOS or Linux user familiar with using the command "
+"line, you can continue with building NumPy locally by following the "
+"instructions below."
+msgstr ""
+
+#: ../../../user/building.rst:11
+msgid ""
+"If you want to build NumPy for development purposes, please refer to :ref:"
+"`development-environment` for additional information."
+msgstr ""
+
+#: ../../../user/building.rst:19
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../../user/building.rst:21
+msgid "Building NumPy requires the following software installed:"
+msgstr ""
+
+#: ../../../user/building.rst:23
+msgid "Python 3.9.x or newer"
+msgstr ""
+
+#: ../../../user/building.rst:25
+msgid ""
+"Please note that the Python development headers also need to be installed, e."
+"g., on Debian/Ubuntu one needs to install both `python3` and `python3-dev`. "
+"On Windows and macOS this is normally not an issue."
+msgstr ""
+
+#: ../../../user/building.rst:29
+msgid "Compilers"
+msgstr ""
+
+#: ../../../user/building.rst:31
+msgid ""
+"Much of NumPy is written in C and C++.  You will need a C compiler that "
+"complies with the C99 standard, and a C++ compiler that complies with the C+"
+"+17 standard."
+msgstr ""
+
+#: ../../../user/building.rst:35
+msgid ""
+"While a FORTRAN 77 compiler is not necessary for building NumPy, it is "
+"needed to run the ``numpy.f2py`` tests. These tests are skipped if the "
+"compiler is not auto-detected."
+msgstr ""
+
+#: ../../../user/building.rst:39
+msgid ""
+"Note that NumPy is developed mainly using GNU compilers and tested on MSVC "
+"and Clang compilers. Compilers from other vendors such as Intel, Absoft, "
+"Sun, NAG, Compaq, Vast, Portland, Lahey, HP, IBM are only supported in the "
+"form of community feedback, and may not work out of the box.  GCC 6.5 (and "
+"later) compilers are recommended. On ARM64 (aarch64) GCC 8.x (and later) are "
+"recommended."
+msgstr ""
+
+#: ../../../user/building.rst:46
+msgid "Linear Algebra libraries"
+msgstr ""
+
+#: ../../../user/building.rst:48
+msgid ""
+"NumPy does not require any external linear algebra libraries to be "
+"installed. However, if these are available, NumPy's setup script can detect "
+"them and use them for building. A number of different LAPACK library setups "
+"can be used, including optimized LAPACK libraries such as OpenBLAS or MKL. "
+"The choice and location of these libraries as well as include paths and "
+"other such build options can be specified in a ``.pc`` file, as documented "
+"in :ref:`scipy:building-blas-and-lapack`."
+msgstr ""
+
+#: ../../../user/building.rst:56
+msgid "Cython"
+msgstr ""
+
+#: ../../../user/building.rst:58
+msgid "For building NumPy, you'll need a recent version of Cython."
+msgstr ""
+
+#: ../../../user/building.rst:60
+msgid "The NumPy source code"
+msgstr ""
+
+#: ../../../user/building.rst:62
+msgid "Clone the repository following the instructions in :doc:`/dev/index`."
+msgstr ""
+
+#: ../../../user/building.rst:66
+msgid ""
+"Starting on version 1.26, NumPy will adopt Meson as its build system (see :"
+"ref:`distutils-status-migration` and :doc:`scipy:building/"
+"understanding_meson` for more details.)"
+msgstr ""
+
+#: ../../../user/building.rst:71
+msgid "Basic installation"
+msgstr ""
+
+#: ../../../user/building.rst:73
+msgid "To build and install NumPy from a local copy of the source code, run::"
+msgstr ""
+
+#: ../../../user/building.rst:75
+msgid "pip install ."
+msgstr ""
+
+#: ../../../user/building.rst:77
+msgid ""
+"This will install all build dependencies and use Meson to compile and "
+"install the NumPy C-extensions and Python modules. If you need more control "
+"of build options and commands, see the following sections."
+msgstr ""
+
+#: ../../../user/building.rst:81
+msgid ""
+"To perform an in-place build that can be run from the source folder run::"
+msgstr ""
+
+#: ../../../user/building.rst:83
+msgid ""
+"pip install -r build_requirements.txt\n"
+"pip install -e . --no-build-isolation"
+msgstr ""
+
+#: ../../../user/building.rst:86
+msgid ""
+"*Note: for build instructions to do development work on NumPy itself, see* :"
+"ref:`development-environment`."
+msgstr ""
+
+#: ../../../user/building.rst:91
+msgid "Advanced building with Meson"
+msgstr ""
+
+#: ../../../user/building.rst:93
+msgid ""
+"Meson supports the standard environment variables ``CC``, ``CXX`` and ``FC`` "
+"to select specific C, C++ and/or Fortran compilers. These environment "
+"variables are documented in `the reference tables in the Meson docs <https://"
+"mesonbuild.com/Reference-tables.html#compiler-and-linker-flag-environment-"
+"variables>`_."
+msgstr ""
+
+#: ../../../user/building.rst:98
+msgid ""
+"Note that environment variables only get applied from a clean build, because "
+"they affect the configure stage (i.e., meson setup). An incremental rebuild "
+"does not react to changes in environment variables - you have to run ``git "
+"clean -xdf`` and do a full rebuild, or run ``meson setup --reconfigure``."
+msgstr ""
+
+#: ../../../user/building.rst:103
+msgid ""
+"For more options including selecting compilers, setting custom compiler "
+"flags and controlling parallelism, see :doc:`scipy:building/"
+"compilers_and_options` (from the SciPy documentation) and `the Meson FAQ "
+"<https://mesonbuild.com/howtox.html#set-extra-compiler-and-linker-flags-from-"
+"the-outside-when-eg-building-distro-packages>`_."
+msgstr ""
+
+#: ../../../user/building.rst:110
+msgid "Testing"
+msgstr ""
+
+#: ../../../user/building.rst:112
+msgid ""
+"Make sure to test your builds. To ensure everything stays in shape, see if "
+"all tests pass."
+msgstr ""
+
+#: ../../../user/building.rst:115
+msgid ""
+"The test suite requires additional dependencies, which can easily be "
+"installed with::"
+msgstr ""
+
+#: ../../../user/building.rst:118
+msgid "python -m pip install -r test_requirements.txt"
+msgstr ""
+
+#: ../../../user/building.rst:120
+msgid "Run the full test suite with::"
+msgstr ""
+
+#: ../../../user/building.rst:122
+msgid ""
+"cd ..  # avoid picking up the source tree\n"
+"pytest --pyargs numpy"
+msgstr ""
+
+#: ../../../user/building.rst:125
+msgid "For detailed info on testing, see :ref:`testing-builds`."
+msgstr ""
+
+#: ../../../user/building.rst:130
+msgid "Accelerated BLAS/LAPACK libraries"
+msgstr ""
+
+#: ../../../user/building.rst:132
+msgid ""
+"NumPy searches for optimized linear algebra libraries such as BLAS and "
+"LAPACK. There are specific orders for searching these libraries, as "
+"described below and in the `meson_options.txt <https://github.com/numpy/"
+"numpy/blob/main/meson_options.txt>`_ file."
+msgstr ""
+
+#: ../../../user/building.rst:139
+msgid "Cross compilation"
+msgstr "交叉編譯"
+
+#: ../../../user/building.rst:141
+msgid ""
+"For cross compilation instructions, see :doc:`scipy:building/"
+"cross_compilation` and the `Meson documentation <meson>`_."
+msgstr ""
