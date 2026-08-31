@@ -1,0 +1,480 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../dev/index.rst:254
+msgid "NumPy C style guide"
+msgstr "NumPy C 風格指南"
+
+#: ../../../dev/index.rst:5
+msgid "Contributing to NumPy"
+msgstr ""
+
+#: ../../../dev/index.rst:7
+msgid ""
+"Not a coder? Not a problem! NumPy is multi-faceted, and we can use a lot of "
+"help. These are all activities we'd like to get help with (they're all "
+"important, so we list them in alphabetical order):"
+msgstr ""
+
+#: ../../../dev/index.rst:11
+msgid "Code maintenance and development"
+msgstr "程式碼維護與開發"
+
+#: ../../../dev/index.rst:12
+msgid "Community coordination"
+msgstr ""
+
+#: ../../../dev/index.rst:13
+msgid "DevOps"
+msgstr ""
+
+#: ../../../dev/index.rst:14
+msgid "Developing educational content & narrative documentation"
+msgstr ""
+
+#: ../../../dev/index.rst:15
+msgid "Fundraising"
+msgstr ""
+
+#: ../../../dev/index.rst:16
+msgid "Marketing"
+msgstr ""
+
+#: ../../../dev/index.rst:17
+msgid "Project management"
+msgstr "專案管理"
+
+#: ../../../dev/index.rst:18
+msgid "Translating content"
+msgstr "翻譯內容"
+
+#: ../../../dev/index.rst:19
+msgid "Website design and development"
+msgstr "網站設計與開發"
+
+#: ../../../dev/index.rst:20
+msgid "Writing technical documentation"
+msgstr "撰寫技術文件"
+
+#: ../../../dev/index.rst:22
+msgid ""
+"We understand that everyone has a different level of experience, also NumPy "
+"is a pretty well-established project, so it's hard to make assumptions about "
+"an ideal \"first-time-contributor\". So, that's why we don't mark issues "
+"with the \"good-first-issue\" label. Instead, you'll find `issues labeled "
+"\"Sprintable\" <https://github.com/numpy/numpy/labels/sprintable>`__. These "
+"issues can either be:"
+msgstr ""
+"我們理解每個人的經驗水平都不同，而且 NumPy 是一個相當成熟的專案，因此很難對理"
+"想的「新手貢獻者（first-time-contributor）」做出假設。所以，我們不會給議題貼"
+"上「good-first-issue」的標籤。相反，你會看到\\ `貼上「Sprintable」標籤的議題 "
+"<https://github.com/numpy/numpy/labels/sprintable>`__\\ 。這些議題可以是："
+
+#: ../../../dev/index.rst:29
+msgid ""
+"**Easily fixed** when you have guidance from an experienced contributor "
+"(perfect for working in a sprint)."
+msgstr ""
+
+#: ../../../dev/index.rst:31
+msgid ""
+"**A learning opportunity** for those ready to dive deeper, even if you're "
+"not in a sprint."
+msgstr ""
+
+#: ../../../dev/index.rst:34
+msgid ""
+"Additionally, depending on your prior experience, some \"Sprintable\" issues "
+"might be easy, while others could be more challenging for you."
+msgstr ""
+
+#: ../../../dev/index.rst:37
+msgid ""
+"The rest of this document discusses working on the NumPy code base and "
+"documentation. We're in the process of updating our descriptions of other "
+"activities and roles. If you are interested in these other activities, "
+"please contact us! You can do this via the `numpy-discussion mailing list "
+"<https://mail.python.org/mailman/listinfo/numpy-discussion>`__, or on "
+"`GitHub <https://github.com/numpy/numpy>`__ (open an issue or comment on a "
+"relevant issue). These are our preferred communication channels (open source "
+"is open by nature!), however if you prefer to discuss in a more private "
+"space first, you can do so on Slack (see `numpy.org/contribute <https://"
+"numpy.org/contribute/>`__ for details)."
+msgstr ""
+
+#: ../../../dev/index.rst:49
+msgid "Development process - summary"
+msgstr "開發過程 - 摘要"
+
+#: ../../../dev/index.rst:51
+msgid "Here's the short summary, complete TOC links are below:"
+msgstr ""
+
+#: ../../../dev/index.rst:53
+msgid "If you are a first-time contributor:"
+msgstr ""
+
+#: ../../../dev/index.rst:55
+msgid ""
+"Go to `https://github.com/numpy/numpy <https://github.com/numpy/numpy>`_ and "
+"click the \"fork\" button to create your own copy of the project."
+msgstr ""
+
+#: ../../../dev/index.rst:59
+msgid "Clone the project to your local computer::"
+msgstr ""
+
+#: ../../../dev/index.rst:61
+msgid ""
+"git clone --recurse-submodules https://github.com/your-username/numpy.git"
+msgstr ""
+
+#: ../../../dev/index.rst:63
+msgid "Change the directory::"
+msgstr ""
+
+#: ../../../dev/index.rst:65
+msgid "cd numpy"
+msgstr ""
+
+#: ../../../dev/index.rst:67
+msgid "Add the upstream repository::"
+msgstr ""
+
+#: ../../../dev/index.rst:69
+msgid "git remote add upstream https://github.com/numpy/numpy.git"
+msgstr ""
+
+#: ../../../dev/index.rst:71
+msgid "Now, ``git remote -v`` will show two remote repositories named:"
+msgstr ""
+
+#: ../../../dev/index.rst:73
+msgid "``upstream``, which refers to the ``numpy`` repository"
+msgstr ""
+
+#: ../../../dev/index.rst:74
+msgid "``origin``, which refers to your personal fork"
+msgstr ""
+
+#: ../../../dev/index.rst:76
+msgid "Pull the latest changes from upstream, including tags::"
+msgstr ""
+
+#: ../../../dev/index.rst:78
+msgid ""
+"git checkout main\n"
+"git pull upstream main --tags"
+msgstr ""
+
+#: ../../../dev/index.rst:81
+msgid "Initialize numpy's submodules::"
+msgstr "初始化 numpy 的子模組：\\ ::"
+
+#: ../../../dev/index.rst:83
+msgid "git submodule update --init"
+msgstr "git submodule update --init"
+
+#: ../../../dev/index.rst:85
+msgid "Develop your contribution:"
+msgstr "開發您的貢獻："
+
+#: ../../../dev/index.rst:87
+msgid ""
+"Create a branch for the feature you want to work on. Since the branch name "
+"will appear in the merge message, use a sensible name such as 'linspace-"
+"speedups'::"
+msgstr ""
+
+#: ../../../dev/index.rst:91
+msgid "git checkout -b linspace-speedups"
+msgstr ""
+
+#: ../../../dev/index.rst:93
+msgid ""
+"Commit locally as you progress (``git add`` and ``git commit``) Use a :ref:"
+"`properly formatted<writing-the-commit-message>` commit message, write tests "
+"that fail before your change and pass afterward, run all the :ref:`tests "
+"locally<development-environment>`. Be sure to document any changed behavior "
+"in docstrings, keeping to the NumPy docstring :ref:`standard<howto-"
+"document>`."
+msgstr ""
+
+#: ../../../dev/index.rst:100
+msgid "To submit your contribution:"
+msgstr "若要提交您的貢獻："
+
+#: ../../../dev/index.rst:102
+msgid "Push your changes back to your fork on GitHub::"
+msgstr "將您的變更推送回您在 GitHub 上的分叉：\\ ::"
+
+#: ../../../dev/index.rst:104
+msgid "git push origin linspace-speedups"
+msgstr ""
+
+#: ../../../dev/index.rst:106
+msgid ""
+"Go to GitHub. The new branch will show up with a green Pull Request button. "
+"Make sure the title and message are clear, concise, and self- explanatory. "
+"Then click the button to submit it."
+msgstr ""
+
+#: ../../../dev/index.rst:110
+msgid ""
+"If your commit introduces a new feature or changes functionality, post on "
+"the `mailing list`_ to explain your changes. For bug fixes, documentation "
+"updates, etc., this is generally not necessary, though if you do not get any "
+"reaction, do feel free to ask for review."
+msgstr ""
+
+#: ../../../dev/index.rst:115
+msgid "Review process:"
+msgstr ""
+
+#: ../../../dev/index.rst:117
+msgid ""
+"Reviewers (the other developers and interested community members) will write "
+"inline and/or general comments on your Pull Request (PR) to help you improve "
+"its implementation, documentation and style.  Every single developer working "
+"on the project has their code reviewed, and we've come to see it as friendly "
+"conversation from which we all learn and the overall code quality benefits.  "
+"Therefore, please don't let the review discourage you from contributing: its "
+"only aim is to improve the quality of project, not to criticize (we are, "
+"after all, very grateful for the time you're donating!). See our :ref:"
+"`Reviewer Guidelines <reviewer-guidelines>` for more information."
+msgstr ""
+
+#: ../../../dev/index.rst:128
+msgid ""
+"To update your PR, make your changes on your local repository, commit, **run "
+"tests, and only if they succeed** push to your fork. As soon as those "
+"changes are pushed up (to the same branch as before) the PR will update "
+"automatically. If you have no idea how to fix the test failures, you may "
+"push your changes anyway and ask for help in a PR comment."
+msgstr ""
+
+#: ../../../dev/index.rst:134
+msgid ""
+"Various continuous integration (CI) services are triggered after each PR "
+"update to build the code, run unit tests, measure code coverage and check "
+"coding style of your branch. The CI tests must pass before your PR can be "
+"merged. If CI fails, you can find out why by clicking on the \"failed\" icon "
+"(red cross) and inspecting the build and test log. To avoid overuse and "
+"waste of this resource, :ref:`test your work<recommended-development-setup>` "
+"locally before committing."
+msgstr ""
+
+#: ../../../dev/index.rst:143
+msgid ""
+"A PR must be **approved** by at least one core team member before merging. "
+"Approval means the core team member has carefully reviewed the changes, and "
+"the PR is ready for merging."
+msgstr ""
+
+#: ../../../dev/index.rst:147
+msgid "Document changes"
+msgstr ""
+
+#: ../../../dev/index.rst:149
+msgid ""
+"Beyond changes to a functions docstring and possible description in the "
+"general documentation, if your change introduces any user-facing "
+"modifications they may need to be mentioned in the release notes. To add "
+"your change to the release notes, you need to create a short file with a "
+"summary and place it in ``doc/release/upcoming_changes``. The file ``doc/"
+"release/upcoming_changes/README.rst`` details the format and filename "
+"conventions."
+msgstr ""
+
+#: ../../../dev/index.rst:157
+msgid ""
+"If your change introduces a deprecation, make sure to discuss this first on "
+"GitHub or the mailing list first. If agreement on the deprecation is "
+"reached, follow :ref:`NEP 23 deprecation policy <NEP23>`  to add the "
+"deprecation."
+msgstr ""
+
+#: ../../../dev/index.rst:161
+msgid "Cross referencing issues"
+msgstr ""
+
+#: ../../../dev/index.rst:163
+msgid ""
+"If the PR relates to any issues, you can add the text ``xref gh-xxxx`` where "
+"``xxxx`` is the number of the issue to github comments. Likewise, if the PR "
+"solves an issue, replace the ``xref`` with ``closes``, ``fixes`` or any of "
+"the other flavors `github accepts <https://help.github.com/en/articles/ "
+"closing-issues-using-keywords>`_."
+msgstr ""
+
+#: ../../../dev/index.rst:169
+msgid ""
+"In the source code, be sure to preface any issue or PR reference with ``gh-"
+"xxxx``."
+msgstr ""
+
+#: ../../../dev/index.rst:172
+msgid ""
+"For a more detailed discussion, read on and follow the links at the bottom "
+"of this page."
+msgstr ""
+
+#: ../../../dev/index.rst:178
+msgid "Guidelines"
+msgstr ""
+
+#: ../../../dev/index.rst:180
+msgid ""
+"All code should have tests (see `test coverage`_ below for more details)."
+msgstr ""
+
+#: ../../../dev/index.rst:181
+msgid ""
+"All code should be `documented <https://numpydoc.readthedocs.io/ en/latest/"
+"format.html#docstring-standard>`_."
+msgstr ""
+
+#: ../../../dev/index.rst:183
+msgid ""
+"No changes are ever committed without review and approval by a core team "
+"member. Please ask politely on the PR or on the `mailing list`_ if you get "
+"no response to your pull request within a week."
+msgstr ""
+
+#: ../../../dev/index.rst:186
+msgid ""
+"Do not include copyright notices in source code without explicitly "
+"discussing the need first. In general, any code you contribute to the "
+"project is under the project `license <https://numpy.org/devdocs/license."
+"html>`_."
+msgstr ""
+
+#: ../../../dev/index.rst:192
+msgid "Stylistic guidelines"
+msgstr ""
+
+#: ../../../dev/index.rst:194
+msgid ""
+"Set up your editor to follow `PEP 8 <https://www.python.org/dev/peps/ "
+"pep-0008/>`_ (remove trailing white space, no tabs, etc.).  Check code with "
+"ruff."
+msgstr ""
+
+#: ../../../dev/index.rst:198
+msgid ""
+"Use NumPy data types instead of strings (``np.uint8`` instead of "
+"``\"uint8\"``)."
+msgstr ""
+
+#: ../../../dev/index.rst:201
+msgid "Use the following import conventions::"
+msgstr ""
+
+#: ../../../dev/index.rst:203
+msgid "import numpy as np"
+msgstr ""
+
+#: ../../../dev/index.rst:205
+msgid "For C code, see :ref:`NEP 45 <NEP45>`."
+msgstr ""
+
+#: ../../../dev/index.rst:209
+msgid "Test coverage"
+msgstr ""
+
+#: ../../../dev/index.rst:211
+msgid ""
+"Pull requests (PRs) that modify code should either have new tests, or modify "
+"existing tests to fail before the PR and pass afterwards. You should :ref:"
+"`run the tests <development-environment>` before pushing a PR."
+msgstr ""
+
+#: ../../../dev/index.rst:215
+msgid ""
+"Running NumPy's test suite locally requires some additional packages, such "
+"as ``pytest`` and ``hypothesis``. The additional testing dependencies are "
+"listed in ``requirements/test_requirements.txt`` in the top-level directory, "
+"and can conveniently be installed with::"
+msgstr ""
+
+#: ../../../dev/index.rst:220
+msgid "$ python -m pip install -r requirements/test_requirements.txt"
+msgstr ""
+
+#: ../../../dev/index.rst:222
+msgid ""
+"Tests for a module should ideally cover all code in that module, i.e., "
+"statement coverage should be at 100%."
+msgstr ""
+
+#: ../../../dev/index.rst:225
+msgid "To measure the test coverage, run::"
+msgstr ""
+
+#: ../../../dev/index.rst:227
+msgid "$ spin test --coverage"
+msgstr ""
+
+#: ../../../dev/index.rst:229
+msgid ""
+"This will create a report in ``html`` format at ``build/coverage``, which "
+"can be viewed with your browser, e.g.::"
+msgstr ""
+
+#: ../../../dev/index.rst:232
+msgid "$ firefox build/coverage/index.html"
+msgstr ""
+
+#: ../../../dev/index.rst:237
+msgid "Building docs"
+msgstr "建置文件"
+
+#: ../../../dev/index.rst:239
+msgid "To build the HTML documentation, use::"
+msgstr ""
+
+#: ../../../dev/index.rst:241
+msgid "spin docs"
+msgstr ""
+
+#: ../../../dev/index.rst:243
+msgid ""
+"You can also run ``make`` from the ``doc`` directory. ``make help`` lists "
+"all targets."
+msgstr ""
+
+#: ../../../dev/index.rst:246
+msgid ""
+"To get the appropriate dependencies and other requirements, see :ref:`howto-"
+"build-docs`."
+msgstr ""
+
+#: ../../../dev/index.rst:250
+msgid "Development process - details"
+msgstr ""
+
+#: ../../../dev/index.rst:252
+msgid "The rest of the story"
+msgstr ""
+
+#: ../../../dev/index.rst:272
+msgid ""
+"NumPy-specific workflow is in :ref:`numpy-development-workflow <development-"
+"workflow>`."
+msgstr ""

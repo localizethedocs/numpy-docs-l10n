@@ -1,0 +1,542 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/routines.linalg.rst:6
+msgid "Linear algebra"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:8
+msgid ""
+"The NumPy linear algebra functions rely on BLAS and LAPACK to provide "
+"efficient low level implementations of standard linear algebra algorithms. "
+"Those libraries may be provided by NumPy itself using C versions of a subset "
+"of their reference implementations but, when possible, highly optimized "
+"libraries that take advantage of specialized processor functionality are "
+"preferred. Examples of such libraries are OpenBLAS_, MKL (TM), and ATLAS. "
+"Because those libraries are multithreaded and processor dependent, "
+"environmental variables and external packages such as threadpoolctl_ may be "
+"needed to control the number of threads or specify the processor "
+"architecture."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:21
+msgid ""
+"The SciPy library also contains a `~scipy.linalg` submodule, and there is "
+"overlap in the functionality provided by the SciPy and NumPy submodules.  "
+"SciPy contains functions not found in `numpy.linalg`, such as functions "
+"related to LU decomposition and the Schur decomposition, multiple ways of "
+"calculating the pseudoinverse, and matrix transcendentals such as the matrix "
+"logarithm.  Some functions that exist in both have augmented functionality "
+"in `scipy.linalg`. For example, `scipy.linalg.eig` can take a second matrix "
+"argument for solving generalized eigenvalue problems.  Some functions in "
+"NumPy, however, have more flexible broadcasting options.  For example, "
+"`numpy.linalg.solve` can handle \"stacked\" arrays, while `scipy.linalg."
+"solve` accepts only a single square array as its first argument."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:35
+msgid ""
+"The term *matrix* as it is used on this page indicates a 2d `numpy.array` "
+"object, and *not* a `numpy.matrix` object. The latter is no longer "
+"recommended, even for linear algebra. See :ref:`the matrix object "
+"documentation<matrix-objects>` for more information."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:42
+msgid "The ``@`` operator"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:44
+msgid ""
+"Introduced in NumPy 1.10.0, the ``@`` operator is preferable to other "
+"methods when computing the matrix product between 2d arrays. The :func:"
+"`numpy.matmul` function implements the ``@`` operator."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:51
+msgid "Matrix and vector products"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid ":py:obj:`dot <numpy.dot>`\\ \\(a\\, b\\[\\, out\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid "Dot product of two arrays."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid ""
+":py:obj:`linalg.multi_dot <numpy.linalg.multi_dot>`\\ \\(arrays\\, \\*\\[\\, "
+"out\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid ""
+"Compute the dot product of two or more arrays in a single function call, "
+"while automatically selecting the fastest evaluation order."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid ":py:obj:`vdot <numpy.vdot>`\\ \\(a\\, b\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid "Return the dot product of two vectors."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid ""
+":py:obj:`vecdot <numpy.vecdot>`\\ \\(x1\\, x2\\, \\/\\[\\, out\\, casting\\, "
+"order\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid "Vector dot product of two arrays."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid ""
+":py:obj:`linalg.vecdot <numpy.linalg.vecdot>`\\ \\(x1\\, x2\\, \\/\\, "
+"\\*\\[\\, axis\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid "Computes the vector dot product."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid ":py:obj:`inner <numpy.inner>`\\ \\(a\\, b\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid "Inner product of two arrays."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid ":py:obj:`outer <numpy.outer>`\\ \\(a\\, b\\[\\, out\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid "Compute the outer product of two vectors."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid ":py:obj:`linalg.outer <numpy.linalg.outer>`\\ \\(x1\\, x2\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid ""
+":py:obj:`matmul <numpy.matmul>`\\ \\(x1\\, x2\\, \\/\\[\\, out\\, casting\\, "
+"order\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid "Matrix product of two arrays."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid ":py:obj:`linalg.matmul <numpy.linalg.matmul>`\\ \\(x1\\, x2\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid "Computes the matrix product."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid ""
+":py:obj:`matvec <numpy.matvec>`\\ \\(x1\\, x2\\, \\/\\[\\, out\\, casting\\, "
+"order\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid "Matrix-vector dot product of two arrays."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid ""
+":py:obj:`vecmat <numpy.vecmat>`\\ \\(x1\\, x2\\, \\/\\[\\, out\\, casting\\, "
+"order\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid "Vector-matrix dot product of two arrays."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid ":py:obj:`tensordot <numpy.tensordot>`\\ \\(a\\, b\\[\\, axes\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid "Compute tensor dot product along specified axes."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid ""
+":py:obj:`linalg.tensordot <numpy.linalg.tensordot>`\\ \\(a\\, b\\, \\/\\, "
+"\\*\\[\\, axes\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid ""
+":py:obj:`einsum <numpy.einsum>`\\ \\(subscripts\\, \\*operands\\[\\, out\\, "
+"dtype\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid "Evaluates the Einstein summation convention on the operands."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid ""
+":py:obj:`einsum_path <numpy.einsum_path>`\\ \\(subscripts\\, "
+"\\*operands\\[\\, optimize\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid ""
+"Evaluates the lowest cost contraction order for an einsum expression by "
+"considering the creation of intermediate arrays."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid ""
+":py:obj:`linalg.matrix_power <numpy.linalg.matrix_power>`\\ \\(a\\, n\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid "Raise a square matrix to the (integer) power `n`."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid ":py:obj:`kron <numpy.kron>`\\ \\(a\\, b\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid "Kronecker product of two arrays."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid ""
+":py:obj:`linalg.cross <numpy.linalg.cross>`\\ \\(x1\\, x2\\, \\/\\, "
+"\\*\\[\\, axis\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:76:<autosummary>:1
+msgid "Returns the cross product of 3-element vectors."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:78
+msgid "Decompositions"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:86:<autosummary>:1
+msgid ""
+":py:obj:`linalg.cholesky <numpy.linalg.cholesky>`\\ \\(a\\, \\/\\, \\*\\[\\, "
+"upper\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:86:<autosummary>:1
+msgid "Cholesky decomposition."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:86:<autosummary>:1
+msgid ":py:obj:`linalg.qr <numpy.linalg.qr>`\\ \\(a\\[\\, mode\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:86:<autosummary>:1
+msgid "Compute the qr factorization of a matrix."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:86:<autosummary>:1
+msgid ""
+":py:obj:`linalg.svd <numpy.linalg.svd>`\\ \\(a\\[\\, full\\_matrices\\, "
+"compute\\_uv\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:86:<autosummary>:1
+msgid "Singular Value Decomposition."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:86:<autosummary>:1
+msgid ":py:obj:`linalg.svdvals <numpy.linalg.svdvals>`\\ \\(x\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:86:<autosummary>:1
+msgid "Returns the singular values of a matrix (or a stack of matrices) ``x``."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:88
+msgid "Matrix eigenvalues"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:96:<autosummary>:1
+msgid ":py:obj:`linalg.eig <numpy.linalg.eig>`\\ \\(a\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:96:<autosummary>:1
+msgid "Compute the eigenvalues and right eigenvectors of a square array."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:96:<autosummary>:1
+msgid ":py:obj:`linalg.eigh <numpy.linalg.eigh>`\\ \\(a\\[\\, UPLO\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:96:<autosummary>:1
+msgid ""
+"Return the eigenvalues and eigenvectors of a complex Hermitian (conjugate "
+"symmetric) or a real symmetric matrix."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:96:<autosummary>:1
+msgid ":py:obj:`linalg.eigvals <numpy.linalg.eigvals>`\\ \\(a\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:96:<autosummary>:1
+msgid "Compute the eigenvalues of a general matrix."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:96:<autosummary>:1
+msgid ""
+":py:obj:`linalg.eigvalsh <numpy.linalg.eigvalsh>`\\ \\(a\\[\\, UPLO\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:96:<autosummary>:1
+msgid ""
+"Compute the eigenvalues of a complex Hermitian or real symmetric matrix."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:98
+msgid "Norms and other numbers"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:111:<autosummary>:1
+msgid ""
+":py:obj:`linalg.norm <numpy.linalg.norm>`\\ \\(x\\[\\, ord\\, axis\\, "
+"keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:111:<autosummary>:1
+msgid "Matrix or vector norm."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:111:<autosummary>:1
+msgid ""
+":py:obj:`linalg.matrix_norm <numpy.linalg.matrix_norm>`\\ \\(x\\, \\/\\, "
+"\\*\\[\\, keepdims\\, ord\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:111:<autosummary>:1
+msgid "Computes the matrix norm of a matrix (or a stack of matrices) ``x``."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:111:<autosummary>:1
+msgid ""
+":py:obj:`linalg.vector_norm <numpy.linalg.vector_norm>`\\ \\(x\\, \\/\\, "
+"\\*\\[\\, axis\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:111:<autosummary>:1
+msgid "Computes the vector norm of a vector (or batch of vectors) ``x``."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:111:<autosummary>:1
+msgid ":py:obj:`linalg.cond <numpy.linalg.cond>`\\ \\(x\\[\\, p\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:111:<autosummary>:1
+msgid "Compute the condition number of a matrix."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:111:<autosummary>:1
+msgid ":py:obj:`linalg.det <numpy.linalg.det>`\\ \\(a\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:111:<autosummary>:1
+msgid "Compute the determinant of an array."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:111:<autosummary>:1
+msgid ""
+":py:obj:`linalg.matrix_rank <numpy.linalg.matrix_rank>`\\ \\(A\\[\\, tol\\, "
+"hermitian\\, rtol\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:111:<autosummary>:1
+msgid "Return matrix rank of array using SVD method"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:111:<autosummary>:1
+msgid ":py:obj:`linalg.slogdet <numpy.linalg.slogdet>`\\ \\(a\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:111:<autosummary>:1
+msgid ""
+"Compute the sign and (natural) logarithm of the determinant of an array."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:111:<autosummary>:1
+msgid ""
+":py:obj:`trace <numpy.trace>`\\ \\(a\\[\\, offset\\, axis1\\, axis2\\, "
+"dtype\\, out\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:111:<autosummary>:1
+msgid "Return the sum along diagonals of the array."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:111:<autosummary>:1
+msgid ""
+":py:obj:`linalg.trace <numpy.linalg.trace>`\\ \\(x\\, \\/\\, \\*\\[\\, "
+"offset\\, dtype\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:111:<autosummary>:1
+msgid ""
+"Returns the sum along the specified diagonals of a matrix (or a stack of "
+"matrices) ``x``."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:113
+msgid "Solving equations and inverting matrices"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:123:<autosummary>:1
+msgid ":py:obj:`linalg.solve <numpy.linalg.solve>`\\ \\(a\\, b\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:123:<autosummary>:1
+msgid "Solve a linear matrix equation, or system of linear scalar equations."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:123:<autosummary>:1
+msgid ""
+":py:obj:`linalg.tensorsolve <numpy.linalg.tensorsolve>`\\ \\(a\\, b\\[\\, "
+"axes\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:123:<autosummary>:1
+msgid "Solve the tensor equation ``a x = b`` for x."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:123:<autosummary>:1
+msgid ""
+":py:obj:`linalg.lstsq <numpy.linalg.lstsq>`\\ \\(a\\, b\\[\\, rcond\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:123:<autosummary>:1
+msgid "Return the least-squares solution to a linear matrix equation."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:123:<autosummary>:1
+msgid ":py:obj:`linalg.inv <numpy.linalg.inv>`\\ \\(a\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:123:<autosummary>:1
+msgid "Compute the inverse of a matrix."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:123:<autosummary>:1
+msgid ""
+":py:obj:`linalg.pinv <numpy.linalg.pinv>`\\ \\(a\\[\\, rcond\\, hermitian\\, "
+"rtol\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:123:<autosummary>:1
+msgid "Compute the (Moore-Penrose) pseudo-inverse of a matrix."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:123:<autosummary>:1
+msgid ""
+":py:obj:`linalg.tensorinv <numpy.linalg.tensorinv>`\\ \\(a\\[\\, ind\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:123:<autosummary>:1
+msgid "Compute the 'inverse' of an N-dimensional array."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:125
+msgid "Other matrix operations"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:132:<autosummary>:1
+msgid ""
+":py:obj:`diagonal <numpy.diagonal>`\\ \\(a\\[\\, offset\\, axis1\\, "
+"axis2\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:132:<autosummary>:1
+msgid "Return specified diagonals."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:132:<autosummary>:1
+msgid ""
+":py:obj:`linalg.diagonal <numpy.linalg.diagonal>`\\ \\(x\\, \\/\\, \\*\\[\\, "
+"offset\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:132:<autosummary>:1
+msgid "Returns specified diagonals of a matrix (or a stack of matrices) ``x``."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:132:<autosummary>:1
+msgid ""
+":py:obj:`linalg.matrix_transpose <numpy.linalg.matrix_transpose>`\\ \\(x\\, "
+"\\/\\)"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:132:<autosummary>:1
+msgid "Transposes a matrix (or a stack of matrices) ``x``."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:134
+msgid "Exceptions"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:139:<autosummary>:1
+msgid ":py:obj:`linalg.LinAlgError <numpy.linalg.LinAlgError>`\\"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:139:<autosummary>:1
+msgid "Generic Python-exception-derived object raised by linalg functions."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:143
+msgid "Linear algebra on several matrices at once"
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:145
+msgid ""
+"Several of the linear algebra routines listed above are able to compute "
+"results for several matrices at once, if they are stacked into the same "
+"array."
+msgstr ""
+
+#: ../../../reference/routines.linalg.rst:149
+msgid ""
+"This is indicated in the documentation via input parameter specifications "
+"such as ``a : (..., M, M) array_like``. This means that if for instance "
+"given an input array ``a.shape == (N, M, M)``, it is interpreted as a "
+"\"stack\" of N matrices, each of size M-by-M. Similar specification applies "
+"to return values, for instance the determinant has ``det : (...)`` and will "
+"in this case return an array of shape ``det(a).shape == (N,)``. This "
+"generalizes to linear algebra operations on higher-dimensional arrays: the "
+"last 1 or 2 dimensions of a multidimensional array are interpreted as "
+"vectors or matrices, as appropriate for each operation."
+msgstr ""

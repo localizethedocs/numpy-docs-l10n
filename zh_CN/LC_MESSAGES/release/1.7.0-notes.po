@@ -1,0 +1,485 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release/1.7.0-notes.rst:3
+msgid "NumPy 1.7.0 Release Notes"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:5
+msgid ""
+"This release includes several new features as well as numerous bug fixes and "
+"refactorings. It supports Python 2.4 - 2.7 and 3.1 - 3.3 and is the last "
+"release that supports Python 2.4 - 2.5."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:10
+msgid "Highlights"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:12
+msgid ""
+"``where=`` parameter to ufuncs (allows the use of boolean arrays to choose "
+"where a computation should be done)"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:14
+msgid ""
+"``vectorize`` improvements (added 'excluded' and 'cache' keyword, general "
+"cleanup and bug fixes)"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:16
+msgid "``numpy.random.choice`` (random sample generating function)"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:20
+msgid "Compatibility notes"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:22
+msgid ""
+"In a future version of numpy, the functions np.diag, np.diagonal, and the "
+"diagonal method of ndarrays will return a view onto the original array, "
+"instead of producing a copy as they do now. This makes a difference if you "
+"write to the array returned by any of these functions. To facilitate this "
+"transition, numpy 1.7 produces a FutureWarning if it detects that you may be "
+"attempting to write to such an array. See the documentation for np.diagonal "
+"for details."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:30
+msgid ""
+"Similar to np.diagonal above, in a future version of numpy, indexing a "
+"record array by a list of field names will return a view onto the original "
+"array, instead of producing a copy as they do now. As with np.diagonal, "
+"numpy 1.7 produces a FutureWarning if it detects that you may be attempting "
+"to write to such an array. See the documentation for array indexing for "
+"details."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:37
+msgid ""
+"In a future version of numpy, the default casting rule for UFunc out= "
+"parameters will be changed from 'unsafe' to 'same_kind'. (This also applies "
+"to in-place operations like a += b, which is equivalent to np.add(a, b, "
+"out=a).) Most usages which violate the 'same_kind' rule are likely bugs, so "
+"this change may expose previously undetected errors in projects that depend "
+"on NumPy. In this version of numpy, such usages will continue to succeed, "
+"but will raise a DeprecationWarning."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:45
+msgid ""
+"Full-array boolean indexing has been optimized to use a different, optimized "
+"code path.   This code path should produce the same results, but any "
+"feedback about changes to your code would be appreciated."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:49
+msgid ""
+"Attempting to write to a read-only array (one with ``arr.flags.writeable`` "
+"set to ``False``) used to raise either a RuntimeError, ValueError, or "
+"TypeError inconsistently, depending on which code path was taken. It now "
+"consistently raises a ValueError."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:54
+msgid ""
+"The <ufunc>.reduce functions evaluate some reductions in a different order "
+"than in previous versions of NumPy, generally providing higher performance. "
+"Because of the nature of floating-point arithmetic, this may subtly change "
+"some results, just as linking NumPy to a different BLAS implementations such "
+"as MKL can."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:60
+msgid ""
+"If upgrading from 1.5, then generally in 1.6 and 1.7 there have been "
+"substantial code added and some code paths altered, particularly in the "
+"areas of type resolution and buffered iteration over universal functions. "
+"This might have an impact on your code particularly if you relied on "
+"accidental behavior in the past."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:67
+msgid "New features"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:70
+msgid "Reduction UFuncs Generalize axis= Parameter"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:72
+msgid ""
+"Any ufunc.reduce function call, as well as other reductions like sum, prod, "
+"any, all, max and min support the ability to choose a subset of the axes to "
+"reduce over. Previously, one could say axis=None to mean all the axes or "
+"axis=# to pick a single axis.  Now, one can also say axis=(#,#) to pick a "
+"list of axes for reduction."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:79
+msgid "Reduction UFuncs New keepdims= Parameter"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:81
+msgid ""
+"There is a new keepdims= parameter, which if set to True, doesn't throw away "
+"the reduction axes but instead sets them to have size one.  When this option "
+"is set, the reduction result will broadcast correctly to the original "
+"operand which was reduced."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:87
+msgid "Datetime support"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:89
+msgid ""
+"The datetime API is *experimental* in 1.7.0, and may undergo changes in "
+"future versions of NumPy."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:92
+msgid ""
+"There have been a lot of fixes and enhancements to datetime64 compared to "
+"NumPy 1.6:"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:95
+msgid ""
+"the parser is quite strict about only accepting ISO 8601 dates, with a few "
+"convenience extensions"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:97
+msgid "converts between units correctly"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:98
+msgid "datetime arithmetic works correctly"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:99
+msgid ""
+"business day functionality (allows the datetime to be used in contexts where "
+"only certain days of the week are valid)"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:102
+msgid ""
+"The notes in `doc/source/reference/arrays.datetime.rst <https://github.com/"
+"numpy/numpy/blob/maintenance/1.7.x/doc/source/reference/arrays.datetime."
+"rst>`_ (also available in the online docs at `arrays.datetime.html <https://"
+"docs.scipy.org/doc/numpy/reference/arrays.datetime.html>`_) should be "
+"consulted for more details."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:108
+msgid "Custom formatter for printing arrays"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:110
+msgid ""
+"See the new ``formatter`` parameter of the ``numpy.set_printoptions`` "
+"function."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:114
+msgid "New function numpy.random.choice"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:116
+msgid ""
+"A generic sampling function has been added which will generate samples from "
+"a given array-like. The samples can be with or without replacement, and with "
+"uniform or given non-uniform probabilities."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:121
+msgid "New function isclose"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:123
+msgid ""
+"Returns a boolean array where two arrays are element-wise equal within a "
+"tolerance. Both relative and absolute tolerance can be specified."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:127
+msgid "Preliminary multi-dimensional support in the polynomial package"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:129
+msgid ""
+"Axis keywords have been added to the integration and differentiation "
+"functions and a tensor keyword was added to the evaluation functions. These "
+"additions allow multi-dimensional coefficient arrays to be used in those "
+"functions. New functions for evaluating 2-D and 3-D coefficient arrays on "
+"grids or sets of points were added together with 2-D and 3-D pseudo-"
+"Vandermonde matrices that can be used for fitting."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:138
+msgid "Ability to pad rank-n arrays"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:140
+msgid ""
+"A pad module containing functions for padding n-dimensional arrays has been "
+"added. The various private padding functions are exposed as options to a "
+"public 'pad' function.  Example::"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:144
+msgid "pad(a, 5, mode='mean')"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:146
+msgid ""
+"Current modes are ``constant``, ``edge``, ``linear_ramp``, ``maximum``, "
+"``mean``, ``median``, ``minimum``, ``reflect``, ``symmetric``, ``wrap``, and "
+"``<function>``."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:152
+msgid "New argument to searchsorted"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:154
+msgid ""
+"The function searchsorted now accepts a 'sorter' argument that is a "
+"permutation array that sorts the array to search."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:158
+msgid "Build system"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:160
+msgid "Added experimental support for the AArch64 architecture."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:163
+msgid "C API"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:165
+msgid ""
+"New function ``PyArray_FailUnlessWriteable`` provides a consistent interface "
+"for checking array writeability -- any C code which works with arrays whose "
+"WRITEABLE flag is not known to be True a priori, should make sure to call "
+"this function before writing."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:170
+msgid "NumPy C Style Guide added (``doc/C_STYLE_GUIDE.rst``)."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:173
+msgid "Changes"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:176 ../../../release/1.7.0-notes.rst:259
+msgid "General"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:178
+msgid ""
+"The function np.concatenate tries to match the layout of its input arrays. "
+"Previously, the layout did not follow any particular reason, and depended in "
+"an undesirable way on the particular axis chosen for concatenation. A bug "
+"was also fixed which silently allowed out of bounds axis arguments."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:183
+msgid ""
+"The ufuncs logical_or, logical_and, and logical_not now follow Python's "
+"behavior with object arrays, instead of trying to call methods on the "
+"objects. For example the expression (3 and 'test') produces the string "
+"'test', and now np.logical_and(np.array(3, 'O'), np.array('test', 'O')) "
+"produces 'test' as well."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:189
+msgid ""
+"The ``.base`` attribute on ndarrays, which is used on views to ensure that "
+"the underlying array owning the memory is not deallocated prematurely, now "
+"collapses out references when you have a view-of-a-view. For example::"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:193
+msgid ""
+"a = np.arange(10)\n"
+"b = a[1:]\n"
+"c = b[1:]"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:197
+msgid ""
+"In numpy 1.6, ``c.base`` is ``b``, and ``c.base.base`` is ``a``. In numpy "
+"1.7, ``c.base`` is ``a``."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:200
+msgid ""
+"To increase backwards compatibility for software which relies on the old "
+"behaviour of ``.base``, we only 'skip over' objects which have exactly the "
+"same type as the newly created view. This makes a difference if you use "
+"``ndarray`` subclasses. For example, if we have a mix of ``ndarray`` and "
+"``matrix`` objects which are all views on the same original ``ndarray``::"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:206
+msgid ""
+"a = np.arange(10)\n"
+"b = np.asmatrix(a)\n"
+"c = b[0, 1:]\n"
+"d = c[0, 1:]"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:211
+msgid ""
+"then ``d.base`` will be ``b``. This is because ``d`` is a ``matrix`` object, "
+"and so the collapsing process only continues so long as it encounters other "
+"``matrix`` objects. It considers ``c``, ``b``, and ``a`` in that order, and "
+"``b`` is the last entry in that list which is a ``matrix`` object."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:217
+msgid "Casting Rules"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:219
+msgid ""
+"Casting rules have undergone some changes in corner cases, due to the NA-"
+"related work. In particular for combinations of scalar+scalar:"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:222
+msgid ""
+"the `longlong` type (`q`) now stays `longlong` for operations with any other "
+"number (`? b h i l q p B H I`), previously it was cast as `int_` (`l`). The "
+"`ulonglong` type (`Q`) now stays as `ulonglong` instead of `uint` (`L`)."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:226
+msgid ""
+"the `timedelta64` type (`m`) can now be mixed with any integer type (`b h i "
+"l q p B H I L Q P`), previously it raised `TypeError`."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:229
+msgid ""
+"For array + scalar, the above rules just broadcast except the case when the "
+"array and scalars are unsigned/signed integers, then the result gets "
+"converted to the array type (of possibly larger size) as illustrated by the "
+"following examples::"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:234
+msgid ""
+">>> (np.zeros((2,), dtype=np.uint8) + np.int16(257)).dtype\n"
+"dtype('uint16')\n"
+">>> (np.zeros((2,), dtype=np.int8) + np.uint16(257)).dtype\n"
+"dtype('int16')\n"
+">>> (np.zeros((2,), dtype=np.int16) + np.uint32(2**17)).dtype\n"
+"dtype('int32')"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:241
+msgid ""
+"Whether the size gets increased depends on the size of the scalar, for "
+"example::"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:244
+msgid ""
+">>> (np.zeros((2,), dtype=np.uint8) + np.int16(255)).dtype\n"
+"dtype('uint8')\n"
+">>> (np.zeros((2,), dtype=np.uint8) + np.int16(256)).dtype\n"
+"dtype('uint16')"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:249
+msgid ""
+"Also a ``complex128`` scalar + ``float32`` array is cast to ``complex64``."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:251
+msgid ""
+"In NumPy 1.7 the `datetime64` type (`M`) must be constructed by explicitly "
+"specifying the type as the second argument (e.g. ``np.datetime64(2000, "
+"'Y')``)."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:256
+msgid "Deprecations"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:261
+msgid ""
+"Specifying a custom string formatter with a `_format` array attribute is "
+"deprecated. The new ``formatter`` keyword in ``numpy.set_printoptions`` or "
+"``numpy.array2string`` can be used instead."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:265
+msgid "The deprecated imports in the polynomial package have been removed."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:267
+msgid ""
+"``concatenate`` now raises DepractionWarning for 1D arrays if ``axis != 0``. "
+"Versions of numpy < 1.7.0 ignored axis argument value for 1D arrays. We "
+"allow this for now, but in due course we will raise an error."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:272
+msgid "C-API"
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:274
+msgid ""
+"Direct access to the fields of PyArrayObject* has been deprecated. Direct "
+"access has been recommended against for many releases. Expect similar "
+"deprecations for PyArray_Descr* and other core objects in the future as "
+"preparation for NumPy 2.0."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:279
+msgid ""
+"The macros in old_defines.h are deprecated and will be removed in the next "
+"major release (>= 2.0). The sed script tools/replace_old_macros.sed can be "
+"used to replace these macros with the newer versions."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:283
+msgid ""
+"You can test your code against the deprecated C API by adding a line "
+"composed of ``#define NPY_NO_DEPRECATED_API`` and the target version number, "
+"such as ``NPY_1_7_API_VERSION``, before including any NumPy headers."
+msgstr ""
+
+#: ../../../release/1.7.0-notes.rst:287
+msgid ""
+"The ``NPY_CHAR`` member of the ``NPY_TYPES`` enum is deprecated and will be "
+"removed in NumPy 1.8. See the discussion at `gh-2801 <https://github.com/"
+"numpy/numpy/issues/2801>`_ for more details."
+msgstr ""

@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/generated/numpy.random.RandomState.set_state.rst:4
+msgid "numpy.random.RandomState.set\\_state"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.RandomState.set_state.rst:8
+msgid "method"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:2
+msgid "Set the internal state of the generator from a tuple."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:4
+msgid ""
+"For use if one has reason to manually (re-)set the internal state of the bit "
+"generator used by the RandomState instance. By default, RandomState uses the "
+"\"Mersenne Twister\"[Rd62dfb5ffa26-1]_ pseudo-random number generating "
+"algorithm."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:23
+msgid "**state**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:-1
+msgid "{tuple(str, ndarray of 624 uints, int, int, float), dict}"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:12
+msgid "The `state` tuple has the following items:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:14
+msgid "the string 'MT19937', specifying the Mersenne Twister algorithm."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:15
+msgid "a 1-D array of 624 unsigned integers ``keys``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:16
+msgid "an integer ``pos``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:17
+msgid "an integer ``has_gauss``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:18
+msgid "a float ``cached_gaussian``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:20
+msgid ""
+"If state is a dictionary, it is directly set using the BitGenerators `state` "
+"property."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:34
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:-1
+msgid "None"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:28
+msgid "Returns 'None' on success."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:39
+msgid ":obj:`get_state`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:43
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:44
+msgid ""
+"`set_state` and `get_state` are not needed to work with any of the random "
+"distributions in NumPy. If the internal state is manually altered, the user "
+"should know exactly what he/she is doing."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:48
+msgid ""
+"For backwards compatibility, the form (str, array of 624 uints, int) is also "
+"accepted although it is missing some information about the cached Gaussian "
+"value: ``state = ('MT19937', keys, pos)``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:53
+msgid "References"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:54
+msgid ""
+"M. Matsumoto and T. Nishimura, \"Mersenne Twister: A 623-dimensionally "
+"equidistributed uniform pseudorandom number generator,\" *ACM Trans. on "
+"Modeling and Computer Simulation*, Vol. 8, No. 1, pp. 3-30, Jan. 1998."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/random/__init__.py:docstring
+#: of numpy.random.RandomState.set_state:61
+msgid "[Rd62dfb5ffa26-1]_"
+msgstr ""

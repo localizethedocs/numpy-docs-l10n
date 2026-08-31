@@ -1,0 +1,166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.unpackbits.rst:4
+msgid "numpy.unpackbits"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:2
+msgid "Unpacks elements of a uint8 array into a binary-valued output array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:4
+msgid ""
+"Each element of `a` represents a bit-field that should be unpacked into a "
+"binary-valued output array. The shape of the output array is either 1-D (if "
+"`axis` is ``None``) or the same shape as the input array with unpacking done "
+"along the axis specified."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:12
+msgid "**a**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:-1
+msgid "ndarray, uint8 type"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:12
+msgid "Input array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:16
+msgid "**axis**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:15
+msgid ""
+"The dimension over which bit-unpacking is done. ``None`` implies unpacking "
+"the flattened array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:26
+msgid "**count**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:-1
+msgid "int or None, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:19
+msgid ""
+"The number of elements to unpack along `axis`, provided as a way of undoing "
+"the effect of packing a size that is not a multiple of eight. A non-negative "
+"number means to only unpack `count` bits. A negative number means to trim "
+"off that many bits from the end. ``None`` means to unpack the entire array "
+"(the default). Counts larger than the available number of bits will add zero "
+"padding to the output. Negative counts must not exceed the available number "
+"of bits."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:34
+msgid "**bitorder**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:-1
+msgid "{'big', 'little'}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:29
+msgid ""
+"The order of the returned bits. 'big' will mimic bin(val), ``3 = 0b00000011 "
+"=> [0, 0, 0, 0, 0, 0, 1, 1]``, 'little' will reverse the order to ``[1, 1, "
+"0, 0, 0, 0, 0, 0]``. Defaults to 'big'."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:45
+msgid "**unpacked**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:39
+msgid "The elements are binary-valued (0 or 1)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:50
+msgid ":obj:`packbits`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:51
+msgid "Packs the elements of a binary-valued array into bits in a uint8 array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:57
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:-1
+msgid ""
+"<div id=\"12108b73-dd85-4ea8-b231-7671b6c565c9\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('70ebca3b-3d1f-4baa-9964-8359530a160b','12108b73-"
+"dd85-4ea8-b231-7671b6c565c9')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('70ebca3b-3d1f-4baa-9964-8359530a160b','12108b73-dd85-4ea8-"
+"b231-7671b6c565c9')\">Open In Tab</button></div><div id=\"20983acc-91d2-4031-"
+"a85d-13147a304f0c\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unpackbits:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""
