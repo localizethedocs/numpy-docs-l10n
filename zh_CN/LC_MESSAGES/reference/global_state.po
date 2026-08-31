@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/global_state.rst:5
+msgid "Global Configuration Options"
+msgstr ""
+
+#: ../../../reference/global_state.rst:7
+msgid ""
+"NumPy has a few import-time, compile-time, or runtime configuration options "
+"which change the global behaviour.  Most of these are related to performance "
+"or for debugging purposes and will not be interesting to the vast majority "
+"of users."
+msgstr ""
+
+#: ../../../reference/global_state.rst:14
+msgid "Performance-related options"
+msgstr ""
+
+#: ../../../reference/global_state.rst:17
+msgid "Number of threads used for linear algebra"
+msgstr ""
+
+#: ../../../reference/global_state.rst:19
+msgid ""
+"NumPy itself is normally intentionally limited to a single thread during "
+"function calls, however it does support multiple Python threads running at "
+"the same time. Note that for performant linear algebra NumPy uses a BLAS "
+"backend such as OpenBLAS or MKL, which may use multiple threads that may be "
+"controlled by environment variables such as ``OMP_NUM_THREADS`` depending on "
+"what is used. One way to control the number of threads is the package "
+"`threadpoolctl <https://pypi.org/project/threadpoolctl/>`_"
+msgstr ""
+
+#: ../../../reference/global_state.rst:31
+msgid "madvise hugepage on Linux"
+msgstr ""
+
+#: ../../../reference/global_state.rst:33
+msgid ""
+"When working with very large arrays on modern Linux kernels, you can "
+"experience a significant speedup when `transparent hugepage <https://www."
+"kernel.org/doc/html/latest/admin-guide/mm/transhuge.html>`_ is used. The "
+"current system policy for transparent hugepages can be seen by::"
+msgstr ""
+
+#: ../../../reference/global_state.rst:39
+msgid "cat /sys/kernel/mm/transparent_hugepage/enabled"
+msgstr ""
+
+#: ../../../reference/global_state.rst:41
+msgid ""
+"When set to ``madvise`` NumPy will typically use hugepages for a performance "
+"boost. This behaviour can be modified by setting the environment variable::"
+msgstr ""
+
+#: ../../../reference/global_state.rst:44
+msgid "NUMPY_MADVISE_HUGEPAGE=0"
+msgstr ""
+
+#: ../../../reference/global_state.rst:46
+msgid ""
+"or setting it to ``1`` to always enable it. When not set, the default is to "
+"use madvise on Kernels 4.6 and newer. These kernels presumably experience a "
+"large speedup with hugepage support. This flag is checked at import time."
+msgstr ""
+
+#: ../../../reference/global_state.rst:52
+msgid "SIMD feature selection"
+msgstr ""
+
+#: ../../../reference/global_state.rst:54
+msgid ""
+"Setting ``NPY_DISABLE_CPU_FEATURES`` will exclude simd features at runtime. "
+"See :ref:`runtime-simd-dispatch`."
+msgstr ""
+
+#: ../../../reference/global_state.rst:59
+msgid "Debugging-related options"
+msgstr ""
+
+#: ../../../reference/global_state.rst:62
+msgid "Warn if no memory allocation policy when deallocating data"
+msgstr ""
+
+#: ../../../reference/global_state.rst:64
+msgid ""
+"Some users might pass ownership of the data pointer to the ``ndarray`` by "
+"setting the ``OWNDATA`` flag. If they do this without setting (manually) a "
+"memory allocation policy, the default will be to call ``free``. If "
+"``NUMPY_WARN_IF_NO_MEM_POLICY`` is set to ``\"1\"``, a ``RuntimeWarning`` "
+"will be emitted. A better alternative is to use a ``PyCapsule`` with a "
+"deallocator and set the ``ndarray.base``."
+msgstr ""
+
+#: ../../../reference/global_state.rst:71
+msgid "This variable is only checked on the first import."
+msgstr ""

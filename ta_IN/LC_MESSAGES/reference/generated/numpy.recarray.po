@@ -1,0 +1,1119 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.recarray.rst:2
+msgid "numpy.recarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:2
+msgid "Construct an ndarray that allows field access using attributes."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:4
+msgid ""
+"Arrays may have a data-types containing fields, analogous to columns in a "
+"spread sheet.  An example is ``[(x, int), (y, float)]``, where each entry in "
+"the array is a pair of ``(int, float)``.  Normally, these attributes are "
+"accessed using dictionary lookups such as ``arr['x']`` and ``arr['y']``.  "
+"Record arrays allow the fields to be accessed as members of the array, using "
+"``arr.x`` and ``arr.y``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:14
+msgid "**shape**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:-1
+msgid "tuple"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:14
+msgid "Shape of output array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:18
+msgid "**dtype**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:-1
+msgid "data-type, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:17
+msgid ""
+"The desired data-type.  By default, the data-type is determined from "
+"`formats`, `names`, `titles`, `aligned` and `byteorder`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:26
+msgid "**formats**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:-1
+msgid "list of data-types, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:21
+msgid ""
+"A list containing the data-types for the different columns, e.g. ``['i4', "
+"'f8', 'i4']``.  `formats` does *not* support the new convention of using "
+"types directly, i.e. ``(int, float, int)``. Note that `formats` must be a "
+"list, not a tuple. Given that `formats` is somewhat limited, we recommend "
+"specifying `dtype` instead."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:29
+msgid "**names**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:-1
+msgid "tuple of str, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:29
+msgid "The name of each column, e.g. ``('x', 'y', 'z')``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:35
+msgid "**buf**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:-1
+msgid "buffer, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:32
+msgid ""
+"By default, a new array is created of the given shape and data-type. If "
+"`buf` is specified and is an object exposing the buffer interface, the array "
+"will use the memory from the existing buffer.  In this case, the `offset` "
+"and `strides` keywords are available."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:0
+msgid "Attributes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:40
+msgid ":obj:`T <T>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:40
+msgid "View of the transposed array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:43
+msgid ":obj:`base <base>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:43
+msgid "Base object if memory is from some other object."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:46
+msgid ":obj:`ctypes <ctypes>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:46
+msgid ""
+"An object to simplify the interaction of the array with the ctypes module."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:49
+msgid ":obj:`data <data>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:49
+msgid "Python buffer object pointing to the start of the array's data."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:52
+msgid "**device**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:55
+msgid ":obj:`dtype <dtype>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:55
+msgid "Data-type of the array's elements."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:58
+msgid ":obj:`flags <flags>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:58
+msgid "Information about the memory layout of the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:61
+msgid ":obj:`flat <flat>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:61
+msgid "A 1-D iterator over the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:64
+msgid ":obj:`imag <imag>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:64
+msgid "The imaginary part of the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:67
+msgid ":obj:`itemsize <itemsize>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:67
+msgid "Length of one array element in bytes."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:70
+msgid ":obj:`mT <mT>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:70
+msgid "View of the matrix transposed array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:73
+msgid ":obj:`nbytes <nbytes>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:73
+msgid "Total bytes consumed by the elements of the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:76
+msgid ":obj:`ndim <ndim>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:76
+msgid "Number of array dimensions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:79
+msgid ":obj:`real <real>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:79
+msgid "The real part of the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:82
+msgid ":obj:`shape <shape>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:82
+msgid "Tuple of array dimensions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:85
+msgid ":obj:`size <size>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:85
+msgid "Number of elements in the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:88
+msgid ":obj:`strides <strides>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:88
+msgid "Tuple of bytes to step in each dimension when traversing an array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:91
+msgid "Methods"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`all <numpy.recarray.all>`\\ \\(\\[axis\\, out\\, keepdims\\, "
+"where\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Returns True if all elements evaluate to True."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`any <numpy.recarray.any>`\\ \\(\\[axis\\, out\\, keepdims\\, "
+"where\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Returns True if any of the elements of `a` evaluate to True."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`argmax <numpy.recarray.argmax>`\\ \\(\\[axis\\, out\\, "
+"keepdims\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Return indices of the maximum values along the given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`argmin <numpy.recarray.argmin>`\\ \\(\\[axis\\, out\\, "
+"keepdims\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Return indices of the minimum values along the given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`argpartition <numpy.recarray.argpartition>`\\ \\(kth\\[\\, axis\\, "
+"kind\\, order\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Returns the indices that would partition this array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`argsort <numpy.recarray.argsort>`\\ \\(\\[axis\\, kind\\, order\\, "
+"stable\\, descending\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Returns the indices that would sort this array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`astype <numpy.recarray.astype>`\\ \\(dtype\\[\\, order\\, "
+"casting\\, subok\\, copy\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Copy of the array, cast to a specified type."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`byteswap <numpy.recarray.byteswap>`\\ \\(\\[inplace\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Swap the bytes of the array elements"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`choose <numpy.recarray.choose>`\\ \\(choices\\[\\, out\\, mode\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Use an index array to construct a new array from a set of choices."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`clip <numpy.recarray.clip>`\\ \\(\\[min\\, max\\, out\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Return an array whose values are limited to ``[min, max]``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`compress <numpy.recarray.compress>`\\ \\(condition\\[\\, axis\\, "
+"out\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Return selected slices of this array along given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`conj <numpy.recarray.conj>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Complex-conjugate all elements."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`conjugate <numpy.recarray.conjugate>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Return the complex conjugate, element-wise."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`copy <numpy.recarray.copy>`\\ \\(\\[order\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Return a copy of the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`cumprod <numpy.recarray.cumprod>`\\ \\(\\[axis\\, dtype\\, out\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Return the cumulative product of the elements along the given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`cumsum <numpy.recarray.cumsum>`\\ \\(\\[axis\\, dtype\\, out\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Return the cumulative sum of the elements along the given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`diagonal <numpy.recarray.diagonal>`\\ \\(\\[offset\\, axis1\\, "
+"axis2\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Return specified diagonals."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`dot <numpy.recarray.dot>`\\ \\(other\\, \\/\\[\\, out\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Refer to :func:`numpy.dot` for full documentation."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`dump <numpy.recarray.dump>`\\ \\(file\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Dump a pickle of the array to the specified file."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`dumps <numpy.recarray.dumps>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Returns the pickle of the array as a string."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`fill <numpy.recarray.fill>`\\ \\(value\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Fill the array with a scalar value."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`flatten <numpy.recarray.flatten>`\\ \\(\\[order\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Return a copy of the array collapsed into one dimension."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`getfield <numpy.recarray.getfield>`\\ \\(dtype\\[\\, offset\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Returns a field of the given array as a certain type."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`item <numpy.recarray.item>`\\ \\(\\*args\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Copy an element of an array to a standard Python scalar and return it."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`max <numpy.recarray.max>`\\ \\(\\[axis\\, out\\, keepdims\\, "
+"initial\\, where\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Return the maximum along a given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`mean <numpy.recarray.mean>`\\ \\(\\[axis\\, dtype\\, out\\, "
+"keepdims\\, where\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Returns the average of the array elements along given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`min <numpy.recarray.min>`\\ \\(\\[axis\\, out\\, keepdims\\, "
+"initial\\, where\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Return the minimum along a given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`nonzero <numpy.recarray.nonzero>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Return the indices of the elements that are non-zero."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`partition <numpy.recarray.partition>`\\ \\(kth\\[\\, axis\\, "
+"kind\\, order\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+"Partially sorts the elements in the array in such a way that the value of "
+"the element in k-th position is in the position it would be in a sorted "
+"array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`prod <numpy.recarray.prod>`\\ \\(\\[axis\\, dtype\\, out\\, "
+"keepdims\\, initial\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Return the product of the array elements over the given axis"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`put <numpy.recarray.put>`\\ \\(indices\\, values\\[\\, mode\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Set ``a.flat[n] = values[n]`` for all ``n`` in indices."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`ravel <numpy.recarray.ravel>`\\ \\(\\[order\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Return a flattened array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`repeat <numpy.recarray.repeat>`\\ \\(repeats\\[\\, axis\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Repeat elements of an array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`reshape <numpy.recarray.reshape>`\\ \\(a.reshape\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Returns an array containing the same data with a new shape."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`resize <numpy.recarray.resize>`\\ \\(a.resize\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Change shape and size of array in-place."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`round <numpy.recarray.round>`\\ \\(\\[decimals\\, out\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Return `a` with each element rounded to the given number of decimals."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`searchsorted <numpy.recarray.searchsorted>`\\ \\(v\\[\\, side\\, "
+"sorter\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+"Find indices where elements of `v` should be inserted in `a` to maintain "
+"order."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`setfield <numpy.recarray.setfield>`\\ \\(val\\, dtype\\[\\, "
+"offset\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Put a value into a specified place in a field defined by a data-type."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`setflags <numpy.recarray.setflags>`\\ \\(\\[write\\, align\\, "
+"uic\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Set array flags WRITEABLE, ALIGNED, WRITEBACKIFCOPY, respectively."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`sort <numpy.recarray.sort>`\\ \\(\\[axis\\, kind\\, order\\, "
+"stable\\, descending\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Sort an array in-place."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`squeeze <numpy.recarray.squeeze>`\\ \\(\\[axis\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Remove axes of length one from `a`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`std <numpy.recarray.std>`\\ \\(\\[axis\\, dtype\\, out\\, ddof\\, "
+"keepdims\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Returns the standard deviation of the array elements along given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`sum <numpy.recarray.sum>`\\ \\(\\[axis\\, dtype\\, out\\, "
+"keepdims\\, initial\\, where\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Return the sum of the array elements over the given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`swapaxes <numpy.recarray.swapaxes>`\\ \\(axis1\\, axis2\\, \\/\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Return a view of the array with `axis1` and `axis2` interchanged."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`take <numpy.recarray.take>`\\ \\(indices\\[\\, axis\\, out\\, "
+"mode\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Return an array formed from the elements of `a` at the given indices."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`to_device <numpy.recarray.to_device>`\\ \\(device\\, \\/\\, "
+"\\*\\[\\, stream\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "For Array API compatibility."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`tobytes <numpy.recarray.tobytes>`\\ \\(\\[order\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Construct Python bytes containing the raw data bytes in the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`tofile <numpy.recarray.tofile>`\\ \\(fid\\, \\/\\[\\, sep\\, "
+"format\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Write array to a file as text or binary (default)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`tolist <numpy.recarray.tolist>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+"Return the array as an ``a.ndim``-levels deep nested list of Python scalars."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`trace <numpy.recarray.trace>`\\ \\(\\[offset\\, axis1\\, axis2\\, "
+"dtype\\, out\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Return the sum along diagonals of the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`transpose <numpy.recarray.transpose>`\\ \\(\\*axes\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Returns a view of the array with axes transposed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ""
+":py:obj:`var <numpy.recarray.var>`\\ \\(\\[axis\\, dtype\\, out\\, ddof\\, "
+"keepdims\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "Returns the variance of the array elements, along given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid ":py:obj:`view <numpy.recarray.view>`\\ \\(\\[dtype\\]\\[\\, type\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:149:<autosummary>:1
+msgid "New view of array with the same data."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:151
+msgid "**field**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:159
+msgid "**rec**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:-1
+msgid "recarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:157
+msgid "Empty array of the given shape and type."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:0
+msgid "Other Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:167
+msgid "**titles**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:164
+msgid ""
+"Aliases for column names.  For example, if `names` were ``('x', 'y', 'z')`` "
+"and `titles` is ``('x_coordinate', 'y_coordinate', 'z_coordinate')``, then "
+"``arr['x']`` is equivalent to both ``arr.x`` and ``arr.x_coordinate``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:170
+msgid "**byteorder**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:-1
+msgid "{'<', '>', '='}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:170
+msgid "Byte-order for all fields."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:173
+msgid "**aligned**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:173
+msgid "Align the fields in memory as the C-compiler would."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:178
+msgid "**strides**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:-1
+msgid "tuple of ints, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:176
+msgid ""
+"Buffer (`buf`) is interpreted according to these strides (strides define how "
+"many bytes each array element, row, column, etc. occupy in memory)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:181
+msgid "**offset**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:181
+msgid "Start reading buffer (`buf`) from this offset onwards."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:187
+msgid "**order**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:-1
+msgid "{'C', 'F'}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:184
+msgid "Row-major (C-style) or column-major (Fortran-style) order."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:192
+msgid ":obj:`numpy.rec.fromrecords`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:193
+msgid "Construct a record array from data."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:194
+msgid ":obj:`numpy.record`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:195
+msgid "fundamental data-type for `recarray`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:196
+msgid ":obj:`numpy.rec.format_parser`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:197
+msgid "determine data-type from formats, names, titles."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:201
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:202
+msgid ""
+"This constructor can be compared to ``empty``: it creates a new record array "
+"but does not fill it with data.  To create a record array from data, use one "
+"of the following methods:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:206
+msgid ""
+"Create a standard ndarray and convert it to a record array, using ``arr."
+"view(np.recarray)``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:208
+msgid "Use the `buf` keyword."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:209
+msgid "Use `np.rec.fromrecords`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:213
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:218
+msgid "Create an array with two fields, ``x`` and ``y``:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:228
+msgid "View the array as a record array:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:238
+msgid "Create a new, empty record array:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:-1
+msgid ""
+"<div id=\"48785366-3a0b-42c0-a9cc-a6126d8613ef\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('ba446ab5-47d7-480f-ae93-"
+"c82bf1ee7f2e','48785366-3a0b-42c0-a9cc-a6126d8613ef')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('ba446ab5-47d7-480f-ae93-c82bf1ee7f2e','48785366-3a0b-42c0-a9cc-"
+"a6126d8613ef')\">Open In Tab</button></div><div id=\"92547762-e14e-40d6-9045-"
+"b5a513e71254\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/rec/__init__.py:docstring
+#: of numpy.rec.recarray:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

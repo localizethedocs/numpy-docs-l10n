@@ -1,0 +1,275 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.diagonal.rst:4
+msgid "numpy.diagonal"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:2
+msgid "Return specified diagonals."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:4
+msgid ""
+"If `a` is 2-D, returns the diagonal of `a` with the given offset, i.e., the "
+"collection of elements of the form ``a[i, i+offset]``.  If `a` has more than "
+"two dimensions, then the axes specified by `axis1` and `axis2` are used to "
+"determine the 2-D sub-array whose diagonal is returned.  The shape of the "
+"resulting array can be determined by removing `axis1` and `axis2` and "
+"appending an index to the right equal to the size of the resulting diagonals."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:12
+msgid ""
+"In versions of NumPy prior to 1.7, this function always returned a new, "
+"independent array containing a copy of the values in the diagonal."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:15
+msgid ""
+"In NumPy 1.7 and 1.8, it continues to return a copy of the diagonal, but "
+"depending on this fact is deprecated. Writing to the resulting array "
+"continues to work as it used to, but a FutureWarning is issued."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:19
+msgid ""
+"Starting in NumPy 1.9 it returns a read-only view on the original array. "
+"Attempting to write to the resulting array will produce an error."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:22
+msgid ""
+"In some future release, it will return a read/write view and writing to the "
+"returned array will alter your original array.  The returned array will have "
+"the same type as the input array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:26
+msgid ""
+"If you don't write to the array returned by this function, then you can just "
+"ignore all of the above."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:29
+msgid ""
+"If you depend on the current behavior, then we suggest copying the returned "
+"array explicitly, i.e., use ``np.diagonal(a).copy()`` instead of just ``np."
+"diagonal(a)``. This will work with both past and future versions of NumPy."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:37
+msgid "**a**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:37
+msgid "Array from which the diagonals are taken."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:41
+msgid "**offset**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:40
+msgid ""
+"Offset of the diagonal from the main diagonal.  Can be positive or "
+"negative.  Defaults to main diagonal (0)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:45
+msgid "**axis1**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:44
+msgid ""
+"Axis to be used as the first axis of the 2-D sub-arrays from which the "
+"diagonals should be taken.  Defaults to first axis (0)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:51
+msgid "**axis2**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:48
+msgid ""
+"Axis to be used as the second axis of the 2-D sub-arrays from which the "
+"diagonals should be taken. Defaults to second axis (1)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:66
+msgid "**array_of_diagonals**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:56
+msgid ""
+"If `a` is 2-D, then a 1-D array containing the diagonal and of the same type "
+"as `a` is returned unless `a` is a `matrix`, in which case a 1-D array "
+"rather than a (2-D) `matrix` is returned in order to maintain backward "
+"compatibility."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:61
+msgid ""
+"If ``a.ndim > 2``, then the dimensions specified by `axis1` and `axis2` are "
+"removed, and a new axis inserted at the end corresponding to the diagonal."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:73
+msgid "ValueError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:71
+msgid "If the dimension of `a` is less than 2."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:78
+msgid ":obj:`diag`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:79
+msgid "MATLAB work-a-like for 1-D and 2-D arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:80
+msgid ":obj:`diagflat`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:81
+msgid "Create diagonal arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:82
+msgid ":obj:`trace`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:83
+msgid "Sum along diagonals."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:89
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:104
+msgid "A 3-D example:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:117
+msgid ""
+"The sub-arrays whose main diagonals we just obtained; note that each "
+"corresponds to fixing the right-most (column) axis, and that the diagonals "
+"are \"packed\" in rows."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:128
+msgid ""
+"The anti-diagonal can be obtained by reversing the order of elements using "
+"either `numpy.flipud` or `numpy.fliplr`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:141
+msgid ""
+"Note that the order in which the diagonal is retrieved varies depending on "
+"the flip function."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:-1
+msgid ""
+"<div id=\"7ab39caa-e972-4f2c-980b-59190eb98ff9\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('a7100afe-5348-4137-a611-2e3355efecbe','7ab39caa-"
+"e972-4f2c-980b-59190eb98ff9')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('a7100afe-5348-4137-a611-2e3355efecbe','7ab39caa-"
+"e972-4f2c-980b-59190eb98ff9')\">Open In Tab</button></div><div id=\"96930866-"
+"f9a7-4008-9662-0ffc4c7febbb\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.diagonal:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

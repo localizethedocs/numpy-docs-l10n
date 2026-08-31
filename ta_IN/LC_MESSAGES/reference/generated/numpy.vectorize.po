@@ -1,0 +1,326 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.vectorize.rst:2
+msgid "numpy.vectorize"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:2
+msgid "Returns an object that acts like pyfunc, but takes arrays as input."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:4
+msgid ""
+"Define a vectorized function which takes a nested sequence of objects or "
+"numpy arrays as inputs and returns a single numpy array or a tuple of numpy "
+"arrays. The vectorized function evaluates `pyfunc` over successive tuples of "
+"the input arrays like the python map function, except it uses the "
+"broadcasting rules of numpy."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:10
+msgid ""
+"The data type of the output of `vectorized` is determined by calling the "
+"function with the first element of the input.  This can be avoided by "
+"specifying the `otypes` argument."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:18
+msgid "**pyfunc**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:-1
+msgid "callable, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:17
+msgid ""
+"A python function or method. Can be omitted to produce a decorator with "
+"keyword arguments."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:23
+msgid "**otypes**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:-1
+msgid "str or list of dtypes, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:21
+msgid ""
+"The output data type. It must be specified as either a string of typecode "
+"characters or a list of data type specifiers. There should be one data type "
+"specifier for each output."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:27
+msgid "**doc**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:-1
+msgid "str, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:26
+msgid ""
+"The docstring for the function. If None, the docstring will be the ``pyfunc."
+"__doc__``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:32
+msgid "**excluded**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:-1
+msgid "set, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:30
+msgid ""
+"Set of strings or integers representing the positional or keyword arguments "
+"for which the function will not be vectorized. These will be passed directly "
+"to `pyfunc` unmodified."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:36
+msgid "**cache**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:35
+msgid ""
+"If neither `otypes` nor `signature` are provided, and `cache` is ``True``, "
+"then cache the number of outputs."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:44
+msgid "**signature**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:-1
+msgid "string, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:39
+msgid ""
+"Generalized universal function signature, e.g., ``(m,n),(n)->(m)`` for "
+"vectorized matrix-vector multiplication. If provided, ``pyfunc`` will be "
+"called with (and expected to return) arrays with shapes given by the size of "
+"corresponding core dimensions. By default, ``pyfunc`` is assumed to take "
+"scalars as input and output."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:47
+msgid "Methods"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:52:<autosummary>:1
+msgid ""
+":py:obj:`__call__ <numpy.vectorize.__call__>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:52:<autosummary>:1
+msgid "Call self as a function."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:63
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:-1
+msgid "callable"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:56
+msgid ""
+"A vectorized function if ``pyfunc`` was provided, a decorator otherwise."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:68
+msgid ":obj:`frompyfunc`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:69
+msgid "Takes an arbitrary Python function and returns a ufunc"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:73
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:74
+msgid ""
+"The `vectorize` function is provided primarily for convenience, not for "
+"performance. The implementation is essentially a for loop."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:77
+msgid ""
+"If neither `otypes` nor `signature` are specified, then a call to the "
+"function with the first argument will be used to determine the number of "
+"outputs.  The results of this call will be cached if `cache` is `True` to "
+"prevent calling the function twice.  However, to implement the cache, the "
+"original function must be wrapped which will slow down subsequent calls, so "
+"only do this if your function is expensive."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:84
+msgid ""
+"The new keyword argument interface and `excluded` argument support further "
+"degrades performance."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:88
+msgid "References"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:89
+msgid ":doc:`/reference/c-api/generalized-ufuncs`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:93
+msgid "[R5cc1f1f25381-1]_"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:96
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:113
+msgid ""
+"The docstring is taken from the input function to `vectorize` unless it is "
+"specified:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:122
+msgid ""
+"The output type is determined by evaluating the first element of the input, "
+"unless it is specified:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:133
+msgid ""
+"The `excluded` argument can be used to prevent vectorizing over certain "
+"arguments.  This can be useful for array-like arguments of a fixed length "
+"such as the coefficients for a polynomial as in `polyval`:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:144
+msgid ""
+"Here, we exclude the zeroth argument from vectorization whether it is passed "
+"by position or keyword."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:153
+msgid ""
+"The `signature` argument allows for vectorizing functions that act on non-"
+"scalar arrays of fixed length. For example, you can use it for a vectorized "
+"calculation of Pearson correlation coefficient and its p-value:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:163
+msgid "Or for a vectorized convolution:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:172
+msgid ""
+"Decorator syntax is supported.  The decorator can be called as a function to "
+"provide keyword arguments:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:-1
+msgid ""
+"<div id=\"c8fa4715-1c51-47fe-be28-f48f801e8f12\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('cc4e826b-08f0-4290-a422-"
+"f69c3a227d4b','c8fa4715-1c51-47fe-be28-f48f801e8f12')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('cc4e826b-08f0-4290-a422-f69c3a227d4b','c8fa4715-1c51-47fe-be28-"
+"f48f801e8f12')\">Open In Tab</button></div><div "
+"id=\"67e6b163-2010-4221-89df-431c3b1a3216\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.vectorize:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

@@ -1,0 +1,263 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.arctan2.rst:4
+msgid "numpy.arctan2"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:2
+msgid "Element-wise arc tangent of ``x1/x2`` choosing the quadrant correctly."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:4
+msgid ""
+"The quadrant (i.e., branch) is chosen so that ``arctan2(x1, x2)`` is the "
+"signed angle in radians between the ray ending at the origin and passing "
+"through the point (1,0), and the ray ending at the origin and passing "
+"through the point (`x2`, `x1`).  (Note the role reversal: the \"`y`-"
+"coordinate\" is the first function parameter, the \"`x`-coordinate\" is the "
+"second.)  By IEEE convention, this function is defined for `x2` = +/-0 and "
+"for either or both of `x1` and `x2` = +/-inf (see Notes for specific values)."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:13
+msgid ""
+"This function is not defined for complex-valued arguments; for the so-called "
+"argument of complex values, use `angle`."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../docstring of numpy.arctan2:19
+msgid "**x1**"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:-1
+msgid "array_like, real-valued"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:19
+msgid "`y`-coordinates."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:24
+msgid "**x2**"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:22
+msgid ""
+"`x`-coordinates. If ``x1.shape != x2.shape``, they must be broadcastable to "
+"a common shape (which becomes the shape of the output)."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:30
+msgid "**out**"
+msgstr "**out**"
+
+#: ../../../../docstring of numpy.arctan2:-1
+msgid "ndarray, None, or tuple of ndarray and None, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:27
+msgid ""
+"A location into which the result is stored. If provided, it must have a "
+"shape that the inputs broadcast to. If not provided or None, a freshly-"
+"allocated array is returned. A tuple (possible only as a keyword argument) "
+"must have length equal to the number of outputs."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:38
+msgid "**where**"
+msgstr "**where**"
+
+#: ../../../../docstring of numpy.arctan2:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:33
+msgid ""
+"This condition is broadcast over the input. At locations where the condition "
+"is True, the `out` array will be set to the ufunc result. Elsewhere, the "
+"`out` array will retain its original value. Note that if an uninitialized "
+"`out` array is created via the default ``out=None``, locations within it "
+"where the condition is False will remain uninitialized."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:44
+msgid "**\\*\\*kwargs**"
+msgstr "**\\*\\*kwargs**"
+
+#: ../../../../docstring of numpy.arctan2:41
+msgid ""
+"For other keyword-only arguments, see the :ref:`ufunc docs <ufuncs.kwargs>`."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../docstring of numpy.arctan2:56
+msgid "**angle**"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:-1
+msgid "ndarray"
+msgstr "ndarray"
+
+#: ../../../../docstring of numpy.arctan2:49
+msgid ""
+"Array of angles in radians, in the range ``[-pi, pi]``. This is a scalar if "
+"both `x1` and `x2` are scalars."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:61
+msgid ":obj:`arctan`, :obj:`tan`, :obj:`angle`"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:65
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:66
+msgid ""
+"*arctan2* is identical to the `atan2` function of the underlying C library.  "
+"The following special values are defined in the C standard: "
+"[R73eacd397847-1]_"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:71
+msgid "`x1`"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:71
+msgid "`x2`"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:71
+msgid "`arctan2(x1,x2)`"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:73 numpy.arctan2:74
+msgid "+/- 0"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:73
+msgid "+0"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:74
+msgid "-0"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:74
+msgid "+/- pi"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:75
+msgid "> 0"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:75 numpy.arctan2:76 numpy.arctan2:77
+#: numpy.arctan2:78
+msgid "+/-inf"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:75
+msgid "+0 / +pi"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:76
+msgid "< 0"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:76
+msgid "-0 / -pi"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:77
+msgid "+inf"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:77
+msgid "+/- (pi/4)"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:78
+msgid "-inf"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:78
+msgid "+/- (3*pi/4)"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:81
+msgid ""
+"Note that +0 and -0 are distinct floating point numbers, as are +inf and -"
+"inf."
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:85
+msgid "References"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:86
+msgid "ISO/IEC standard 9899:1999, \"Programming language C.\""
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:90
+msgid "[R73eacd397847-1]_"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:93
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../docstring of numpy.arctan2:98
+msgid "Consider four points in different quadrants:"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:106
+msgid ""
+"Note the order of the parameters. `arctan2` is defined also when `x2` = 0 "
+"and at several other special points, obtaining values in the range ``[-pi, "
+"pi]``:"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:-1
+msgid ""
+"<div id=\"c2f86fee-79b9-4254-b3df-b34b9032c83d\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('cfb11976-"
+"a3fc-48de-8883-3c597f7957ac','c2f86fee-79b9-4254-b3df-b34b9032c83d')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('cfb11976-a3fc-48de-8883-3c597f7957ac','c2f86fee-79b9-4254-b3df-"
+"b34b9032c83d')\">Open In Tab</button></div><div id=\"b083ab8a-0a56-4b0e-"
+"b210-900a9a1728ee\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../docstring of numpy.arctan2:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

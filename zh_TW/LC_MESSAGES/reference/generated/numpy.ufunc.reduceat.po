@@ -1,0 +1,266 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.ufunc.reduceat.rst:4
+msgid "numpy.ufunc.reduceat"
+msgstr "numpy.ufunc.reduceat"
+
+#: ../../../reference/generated/numpy.ufunc.reduceat.rst:8
+msgid "method"
+msgstr "方法"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:2
+msgid "Performs a (local) reduce with specified slices over a single axis."
+msgstr "對單一軸上的指定切片執行（局部）歸約。"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:4
+msgid ""
+"For i in ``range(len(indices))``, `reduceat` computes ``ufunc."
+"reduce(array[indices[i]:indices[i+1]])``, which becomes the i-th generalized "
+"\"row\" parallel to `axis` in the final result (i.e., in a 2-D array, for "
+"example, if `axis = 0`, it becomes the i-th row, but if `axis = 1`, it "
+"becomes the i-th column).  There are three exceptions to this:"
+msgstr ""
+"對於 `range(len(indices))` 中的每個 i，`reduceat` 計算 `ufunc."
+"reduce(array[indices[i]:indices[i+1]])`，它成為最終結果中沿 `axis` 方向的第 "
+"i 個廣義“行”（例如，在二維數組中，``axis` 方向的第 i 個廣義“行”（例如，在二維"
+"數組中，`` axis = i1 行列）。但有三個例外："
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:10
+msgid ""
+"when ``i = len(indices) - 1`` (so for the last index), ``indices[i+1] = "
+"array.shape[axis]``."
+msgstr ""
+"當「`i = len(indices) - 1``（即最後一個索引）時，``indices[i+1] = array."
+"shape[axis]``。"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:12
+msgid ""
+"if ``indices[i] >= indices[i + 1]``, the i-th generalized \"row\" is simply "
+"``array[indices[i]]``."
+msgstr ""
+"如果“indices[i] >= indices[i + 1]”，則第 i 個廣義“行”就"
+"是“array[indices[i]]”。"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:14
+msgid ""
+"if ``indices[i] >= len(array)`` or ``indices[i] < 0``, an error is raised."
+msgstr ""
+"如果 ``indices[i] >= len(array)`` 或 ``indices[i] < 0``，則會引發錯誤。"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:16
+msgid ""
+"The shape of the output depends on the size of `indices`, and may be larger "
+"than `array` (this happens if ``len(indices) > array.shape[axis]``)."
+msgstr ""
+"輸出的形狀取決於 `indices` 的大小，可能大於 `array`（如果 ``len(indices) > "
+"array.shape[axis]`` 就會發生這種情況）。"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:22
+msgid "**array**"
+msgstr "**array**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:-1
+msgid "array_like"
+msgstr "array_like"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:22
+msgid "The array to act on."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:26
+msgid "**indices**"
+msgstr "**indices**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:25
+msgid ""
+"Paired indices, comma separated (not colon), specifying slices to reduce."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:29
+msgid "**axis**"
+msgstr "**axis**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:29
+msgid "The axis along which to apply the reduceat."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:35
+msgid "**dtype**"
+msgstr "**dtype**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:-1
+msgid "data-type code, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:32
+msgid ""
+"The data type used to perform the operation. Defaults to that of ``out`` if "
+"given, and the data type of ``array`` otherwise (though upcast to conserve "
+"precision for some cases, such as ``numpy.add.reduce`` for integer or "
+"boolean input)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:44
+msgid "**out**"
+msgstr "**out**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:-1
+msgid "ndarray, None, or tuple of ndarray and None, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:38
+msgid ""
+"Location into which the result is stored. If not provided or None, a freshly-"
+"allocated array is returned. For consistency with ``ufunc.__call__``, if "
+"passed as a keyword argument, can be Ellipses (``out=...``, which has the "
+"same effect as None as an array is always returned), or a 1-element tuple."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:57
+msgid "**r**"
+msgstr "**r**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:-1
+msgid "ndarray"
+msgstr "ndarray"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:49
+msgid "The reduced values. If `out` was supplied, `r` is a reference to `out`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:60
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:61
+msgid "A descriptive example:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:63
+msgid ""
+"If `array` is 1-D, the function `ufunc.accumulate(array)` is the same as "
+"``ufunc.reduceat(array, indices)[::2]`` where `indices` is "
+"``range(len(array) - 1)`` with a zero placed in every other element: "
+"``indices = zeros(2 * len(array) - 1)``, ``indices[1::2] = range(1, "
+"len(array))``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:70
+msgid ""
+"Don't be fooled by this attribute's name: `reduceat(array)` is not "
+"necessarily smaller than `array`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:75
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:80
+msgid "To take the running sum of four successive values:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:86
+msgid "A 2-D example:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:97
+msgid ""
+"# reduce such that the result has the following five rows:\n"
+"# [row1 + row2 + row3]\n"
+"# [row4]\n"
+"# [row2]\n"
+"# [row3]\n"
+"# [row1 + row2 + row3 + row4]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:113
+msgid ""
+"# reduce such that result has the following two columns:\n"
+"# [col1 * col2 * col3, col4]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:-1
+msgid ""
+"<div id=\"c27aebb0-9567-42dd-bfb7-55dd7e142f1d\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('bd044991-dc08-47ab-"
+"aee6-8dbae6f258c8','c27aebb0-9567-42dd-bfb7-55dd7e142f1d')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('bd044991-dc08-47ab-aee6-8dbae6f258c8','c27aebb0-9567-42dd-"
+"bfb7-55dd7e142f1d')\">Open In Tab</button></div><div id=\"7d01284d-421c-4af2-"
+"a2da-d66ebd805452\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduceat:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.laguerre.lagder.rst:4
+msgid "numpy.polynomial.laguerre.lagder"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:2
+msgid "Differentiate a Laguerre series."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:4
+msgid ""
+"Returns the Laguerre series coefficients `c` differentiated `m` times along "
+"`axis`.  At each iteration the result is multiplied by `scl` (the scaling "
+"factor is for use in a linear change of variable). The argument `c` is an "
+"array of coefficients from low to high degree along each axis, e.g., [1,2,3] "
+"represents the series ``1*L_0 + 2*L_1 + 3*L_2`` while [[1,2],[1,2]] "
+"represents ``1*L_0(x)*L_0(y) + 1*L_1(x)*L_0(y) + 2*L_0(x)*L_1(y) + "
+"2*L_1(x)*L_1(y)`` if axis=0 is ``x`` and axis=1 is ``y``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:18
+msgid "**c**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:-1
+msgid "array_like"
+msgstr "array_like"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:16
+msgid ""
+"Array of Laguerre series coefficients. If `c` is multidimensional the "
+"different axis correspond to different variables with the degree in each "
+"axis given by the corresponding index."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:21
+msgid "**m**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:21
+msgid "Number of derivatives taken, must be non-negative. (Default: 1)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:26
+msgid "**scl**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:-1
+msgid "scalar, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:24
+msgid ""
+"Each differentiation is multiplied by `scl`.  The end result is "
+"multiplication by ``scl**m``.  This is for use in a linear change of "
+"variable. (Default: 1)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:31
+msgid "**axis**"
+msgstr "**axis**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:29
+msgid "Axis over which the derivative is taken. (Default: 0)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:42
+msgid "**der**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:-1
+msgid "ndarray"
+msgstr "ndarray"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:36
+msgid "Laguerre series of the derivative."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:47
+msgid ":obj:`lagint`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:51
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:52
+msgid ""
+"In general, the result of differentiating a Laguerre series does not "
+"resemble the same operation on a power series. Thus the result of this "
+"function may be \"unintuitive,\" albeit correct; see Examples section below."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:59
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:-1
+msgid ""
+"<div id=\"206a75dc-798c-4f4c-83dd-920527153aff\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('3fe753c8-0248-4589-a2d6-"
+"d669e4b426f2','206a75dc-798c-4f4c-83dd-920527153aff')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('3fe753c8-0248-4589-a2d6-"
+"d669e4b426f2','206a75dc-798c-4f4c-83dd-920527153aff')\">Open In Tab</"
+"button></div><div id=\"6bb9ea8f-6099-4714-87af-f6d5ed328c8c\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagder:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

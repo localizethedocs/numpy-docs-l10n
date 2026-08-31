@@ -1,0 +1,216 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.busdaycalendar.rst:2
+msgid "numpy.busdaycalendar"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:2
+msgid ""
+"A business day calendar object that efficiently stores information defining "
+"valid days for the busday family of functions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:5
+msgid ""
+"The default valid days are Monday through Friday (\"business days\"). A "
+"busdaycalendar object can be specified with any set of weekly valid days, "
+"plus an optional \"holiday\" dates that always will be invalid."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:9
+msgid ""
+"Once a busdaycalendar object is created, the weekmask and holidays cannot be "
+"modified."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:20
+msgid "**weekmask**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:-1
+msgid "str or array_like of bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:15
+msgid ""
+"A seven-element array indicating which of Monday through Sunday are valid "
+"days. May be specified as a length-seven list or array, like "
+"[1,1,1,1,1,0,0]; a length-seven string, like '1111100'; or a string like "
+"\"Mon Tue Wed Thu Fri\", made up of 3-character abbreviations for weekdays, "
+"optionally separated by white space. Valid abbreviations are: Mon Tue Wed "
+"Thu Fri Sat Sun"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:27
+msgid "**holidays**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:-1
+msgid "array_like of datetime64[D], optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:23
+msgid ""
+"An array of dates to consider as invalid dates, no matter which weekday they "
+"fall upon.  Holiday dates may be specified in any order, and NaT (not-a-"
+"time) dates are ignored.  This list is saved in a normalized form that is "
+"suited for fast calculations of valid days."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:0
+msgid "Attributes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:32
+msgid ":obj:`weekmask <weekmask>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:-1
+msgid "(copy) seven-element array of bool"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:32
+msgid "A copy of the seven-element boolean mask indicating valid days."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:36
+msgid ":obj:`holidays <holidays>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:-1
+msgid "(copy) sorted array of datetime64[D]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:35
+msgid "A copy of the holiday array indicating additional invalid days."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:48
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:-1
+msgid "busdaycalendar"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:41
+msgid ""
+"A business day calendar object containing the specified weekmask and "
+"holidays values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:53
+msgid ":obj:`is_busday`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:54
+msgid "Returns a boolean array indicating valid days."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:55
+msgid ":obj:`busday_offset`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:56
+msgid "Applies an offset counted in valid days."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:57
+msgid ":obj:`busday_count`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:58
+msgid "Counts how many valid days are in a half-open date range."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:62
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:63
+msgid ""
+"Once a busdaycalendar object is created, you cannot modify the weekmask or "
+"holidays.  The attributes return copies of internal data."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:68
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:-1
+msgid ""
+"<div id=\"9dd9a1ec-1550-4af5-8623-0d6c0e2a7d09\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('dbe78dbf-1fdf-48d1-"
+"b2f6-220d5e1faf7c','9dd9a1ec-1550-4af5-8623-0d6c0e2a7d09')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('dbe78dbf-1fdf-48d1-"
+"b2f6-220d5e1faf7c','9dd9a1ec-1550-4af5-8623-0d6c0e2a7d09')\">Open In Tab</"
+"button></div><div id=\"471c5c2e-ec62-4912-a6dc-c90f9fc70cdf\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busdaycalendar:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

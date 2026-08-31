@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/simd/index.rst:6
+msgid "CPU/SIMD optimizations"
+msgstr ""
+
+#: ../../../reference/simd/index.rst:8
+msgid ""
+"NumPy comes with a flexible working mechanism that allows it to harness the "
+"SIMD features that CPUs own, in order to provide faster and more stable "
+"performance on all popular platforms. Currently, NumPy supports the X86, IBM/"
+"Power, ARM7 and ARM8 architectures."
+msgstr ""
+
+#: ../../../reference/simd/index.rst:13
+msgid "The optimization process in NumPy is carried out in three layers:"
+msgstr ""
+
+#: ../../../reference/simd/index.rst:15
+msgid ""
+"Code is *written* using the universal intrinsics which is a set of types, "
+"macros and functions that are mapped to each supported instruction-sets by "
+"using guards that will enable use of the them only when the compiler "
+"recognizes them. This allow us to generate multiple kernels for the same "
+"functionality, in which each generated kernel represents a set of "
+"instructions that related one or multiple certain CPU features. The first "
+"kernel represents the minimum (baseline) CPU features, and the other kernels "
+"represent the additional (dispatched) CPU features."
+msgstr ""
+
+#: ../../../reference/simd/index.rst:23
+msgid ""
+"At *compile* time, CPU build options are used to define the minimum and "
+"additional features to support, based on user choice and compiler support. "
+"The appropriate intrinsics are overlaid with the platform / architecture "
+"intrinsics, and multiple kernels are compiled."
+msgstr ""
+
+#: ../../../reference/simd/index.rst:28
+msgid ""
+"At *runtime import*, the CPU is probed for the set of supported CPU "
+"features. A mechanism is used to grab the pointer to the most appropriate "
+"kernel, and this will be the one called for the function."
+msgstr ""
+
+#: ../../../reference/simd/index.rst:34
+msgid ""
+"NumPy community had a deep discussion before implementing this work, please "
+"check :external+neps:doc:`nep-0038-SIMD-optimizations` for more "
+"clarification."
+msgstr ""

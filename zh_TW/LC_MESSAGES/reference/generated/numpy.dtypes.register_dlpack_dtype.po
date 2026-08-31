@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.dtypes.register_dlpack_dtype.rst:4
+msgid "numpy.dtypes.register\\_dlpack\\_dtype"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/dtypes.py:docstring
+#: of numpy.dtypes.register_dlpack_dtype:2
+msgid ""
+"Register a NumPy dtype for a DLPack ``(code, bits)`` pair so that `numpy."
+"from_dlpack` can import it and ``ndarray.__dlpack__`` can export it.  Built-"
+"in dtype mappings take priority on import."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/dtypes.py:docstring
+#: of numpy.dtypes.register_dlpack_dtype:6
+msgid ""
+"If you think a conflict is possible but unproblematic you may wrap this into "
+"a try/except block as NumPy will raise an error if another DType is already "
+"registered for the same (code, bits) pair. While an error is raised, the "
+"export is registered even on error."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/dtypes.py:docstring
+#: of numpy.dtypes.register_dlpack_dtype:11
+msgid ""
+"Registering an identical (not equal) dtype multiple times is allowed but "
+"normally registration should happen at import time."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/dtypes.py:docstring
+#: of numpy.dtypes.register_dlpack_dtype:15
+msgid ""
+"It is the responsibility of the registering user to ensure that the mapping "
+"is valid."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/dtypes.py:docstring
+#: of numpy.dtypes.register_dlpack_dtype:19
+msgid ""
+"This function was added primarily for ``ml_dtypes`` and may be replaced with "
+"a different mechanism in the future.  It is intended to be used by authors "
+"of user-defined dtypes and not end-users."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/dtypes.py:docstring
+#: of numpy.dtypes.register_dlpack_dtype:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/dtypes.py:docstring
+#: of numpy.dtypes.register_dlpack_dtype:27
+msgid "**dlpack_key**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/dtypes.py:docstring
+#: of numpy.dtypes.register_dlpack_dtype:-1
+msgid "tuple of int"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/dtypes.py:docstring
+#: of numpy.dtypes.register_dlpack_dtype:26
+msgid ""
+"``(dl_dtype_code, dl_bits)`` matching the DLPack ``DLDataType``, lanes is "
+"assumed to be always 1, currently."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/dtypes.py:docstring
+#: of numpy.dtypes.register_dlpack_dtype:36
+msgid "**dtype**"
+msgstr "**dtype**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/dtypes.py:docstring
+#: of numpy.dtypes.register_dlpack_dtype:-1
+msgid "dtype"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/dtypes.py:docstring
+#: of numpy.dtypes.register_dlpack_dtype:30
+msgid "A NumPy dtype instance."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/dtypes.py:docstring
+#: of numpy.dtypes.register_dlpack_dtype:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/dtypes.py:docstring
+#: of numpy.dtypes.register_dlpack_dtype:43
+msgid "**ValueError**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/dtypes.py:docstring
+#: of numpy.dtypes.register_dlpack_dtype:-1
+msgid "If a conflicting registration was already done."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/dtypes.py:docstring
+#: of numpy.dtypes.register_dlpack_dtype:48
+msgid ":obj:`numpy.from_dlpack`"
+msgstr ""

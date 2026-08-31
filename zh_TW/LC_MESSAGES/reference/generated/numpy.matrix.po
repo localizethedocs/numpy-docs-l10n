@@ -1,0 +1,980 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.matrix.rst:2
+msgid "numpy.matrix"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:2
+msgid "Returns a matrix from an array-like object, or from a string of data."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:4
+msgid ""
+"A matrix is a specialized 2-D array that retains its 2-D nature through "
+"operations.  It has certain special operators, such as ``*`` (matrix "
+"multiplication) and ``**`` (matrix power)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:8
+msgid ""
+"It is no longer recommended to use this class, even for linear algebra. "
+"Instead use regular arrays. The class may be removed in the future."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:16
+msgid "**data**"
+msgstr "**data**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:-1
+msgid "array_like or string"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:15
+msgid ""
+"If `data` is a string, it is interpreted as a matrix with commas or spaces "
+"separating columns, and semicolons separating rows."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:19
+msgid "**dtype**"
+msgstr "**dtype**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:-1
+msgid "data-type"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:19
+msgid "Data-type of the output matrix."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:24
+msgid "**copy**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:-1
+msgid "bool"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:22
+msgid ""
+"If `data` is already an `ndarray`, then this flag determines whether the "
+"data is copied (the default), or whether a view is constructed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:0
+msgid "Attributes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:29
+msgid ":obj:`A <A>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:29 numpy.matrix:162:<autosummary>:1
+msgid "Return `self` as an `ndarray` object."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:32
+msgid ":obj:`A1 <A1>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:32 numpy.matrix:162:<autosummary>:1
+msgid "Return `self` as a flattened `ndarray`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:35
+msgid ":obj:`H <H>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:35 numpy.matrix:162:<autosummary>:1
+msgid "Returns the (complex) conjugate transpose of `self`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:38
+msgid ":obj:`I <I>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:38 numpy.matrix:162:<autosummary>:1
+msgid "Returns the (multiplicative) inverse of invertible `self`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:41
+msgid ":obj:`T <T>`"
+msgstr ":obj:`T <T>`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:41 numpy.matrix:162:<autosummary>:1
+msgid "Returns the transpose of the matrix."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:44
+msgid ":obj:`base <base>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:44
+msgid "Base object if memory is from some other object."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:47
+msgid ":obj:`ctypes <ctypes>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:47
+msgid ""
+"An object to simplify the interaction of the array with the ctypes module."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:50
+msgid ":obj:`data <data>`"
+msgstr ":obj:`data <data>`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:50
+msgid "Python buffer object pointing to the start of the array's data."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:53
+msgid "**device**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:56
+msgid ":obj:`dtype <dtype>`"
+msgstr ":obj:`dtype <dtype>`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:56
+msgid "Data-type of the array's elements."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:59
+msgid ":obj:`flags <flags>`"
+msgstr ":obj:`flags <flags>`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:59
+msgid "Information about the memory layout of the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:62
+msgid ":obj:`flat <flat>`"
+msgstr ":obj:`flat <flat>`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:62
+msgid "A 1-D iterator over the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:65
+msgid ":obj:`imag <imag>`"
+msgstr ":obj:`imag <imag>`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:65
+msgid "The imaginary part of the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:68
+msgid ":obj:`itemsize <itemsize>`"
+msgstr ":obj:`itemsize <itemsize>`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:68
+msgid "Length of one array element in bytes."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:71
+msgid ":obj:`mT <mT>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:71
+msgid "View of the matrix transposed array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:74
+msgid ":obj:`nbytes <nbytes>`"
+msgstr ":obj:`nbytes <nbytes>`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:74
+msgid "Total bytes consumed by the elements of the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:77
+msgid ":obj:`ndim <ndim>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:77
+msgid "Number of array dimensions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:80
+msgid ":obj:`real <real>`"
+msgstr ":obj:`real <real>`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:80
+msgid "The real part of the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:83
+msgid ":obj:`shape <shape>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:83
+msgid "Tuple of array dimensions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:86
+msgid ":obj:`size <size>`"
+msgstr ":obj:`size <size>`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:86
+msgid "Number of elements in the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:89
+msgid ":obj:`strides <strides>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:89
+msgid "Tuple of bytes to step in each dimension when traversing an array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:92
+msgid "Methods"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`all <numpy.matrix.all>`\\ \\(\\[axis\\, out\\]\\)"
+msgstr ":py:obj:`all <numpy.matrix.all>`\\ \\(\\[axis\\, out\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Test whether all matrix elements along a given axis evaluate to True."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`any <numpy.matrix.any>`\\ \\(\\[axis\\, out\\]\\)"
+msgstr ":py:obj:`any <numpy.matrix.any>`\\ \\(\\[axis\\, out\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Test whether any array element along a given axis evaluates to True."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`argmax <numpy.matrix.argmax>`\\ \\(\\[axis\\, out\\]\\)"
+msgstr ":py:obj:`argmax <numpy.matrix.argmax>`\\ \\(\\[axis\\, out\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Indexes of the maximum values along an axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`argmin <numpy.matrix.argmin>`\\ \\(\\[axis\\, out\\]\\)"
+msgstr ":py:obj:`argmin <numpy.matrix.argmin>`\\ \\(\\[axis\\, out\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Indexes of the minimum values along an axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`argpartition <numpy.matrix.argpartition>`\\ \\(kth\\[\\, axis\\, "
+"kind\\, order\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Returns the indices that would partition this array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`argsort <numpy.matrix.argsort>`\\ \\(\\[axis\\, kind\\, order\\, "
+"stable\\, descending\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Returns the indices that would sort this array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`astype <numpy.matrix.astype>`\\ \\(dtype\\[\\, order\\, casting\\, "
+"subok\\, copy\\]\\)"
+msgstr ""
+":py:obj:`astype <numpy.matrix.astype>`\\ \\(dtype\\[\\, order\\, casting\\, "
+"subok\\, copy\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Copy of the array, cast to a specified type."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`byteswap <numpy.matrix.byteswap>`\\ \\(\\[inplace\\]\\)"
+msgstr ":py:obj:`byteswap <numpy.matrix.byteswap>`\\ \\(\\[inplace\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Swap the bytes of the array elements"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`choose <numpy.matrix.choose>`\\ \\(choices\\[\\, out\\, mode\\]\\)"
+msgstr ""
+":py:obj:`choose <numpy.matrix.choose>`\\ \\(choices\\[\\, out\\, mode\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Use an index array to construct a new array from a set of choices."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`clip <numpy.matrix.clip>`\\ \\(\\[min\\, max\\, out\\]\\)"
+msgstr ":py:obj:`clip <numpy.matrix.clip>`\\ \\(\\[min\\, max\\, out\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Return an array whose values are limited to ``[min, max]``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`compress <numpy.matrix.compress>`\\ \\(condition\\[\\, axis\\, "
+"out\\]\\)"
+msgstr ""
+":py:obj:`compress <numpy.matrix.compress>`\\ \\(condition\\[\\, axis\\, "
+"out\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Return selected slices of this array along given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`conj <numpy.matrix.conj>`\\ \\(\\)"
+msgstr ":py:obj:`conj <numpy.matrix.conj>`\\ \\(\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Complex-conjugate all elements."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`conjugate <numpy.matrix.conjugate>`\\ \\(\\)"
+msgstr ":py:obj:`conjugate <numpy.matrix.conjugate>`\\ \\(\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Return the complex conjugate, element-wise."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`copy <numpy.matrix.copy>`\\ \\(\\[order\\]\\)"
+msgstr ":py:obj:`copy <numpy.matrix.copy>`\\ \\(\\[order\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Return a copy of the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`cumprod <numpy.matrix.cumprod>`\\ \\(\\[axis\\, dtype\\, out\\]\\)"
+msgstr ""
+":py:obj:`cumprod <numpy.matrix.cumprod>`\\ \\(\\[axis\\, dtype\\, out\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Return the cumulative product of the elements along the given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`cumsum <numpy.matrix.cumsum>`\\ \\(\\[axis\\, dtype\\, out\\]\\)"
+msgstr ""
+":py:obj:`cumsum <numpy.matrix.cumsum>`\\ \\(\\[axis\\, dtype\\, out\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Return the cumulative sum of the elements along the given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`diagonal <numpy.matrix.diagonal>`\\ \\(\\[offset\\, axis1\\, "
+"axis2\\]\\)"
+msgstr ""
+":py:obj:`diagonal <numpy.matrix.diagonal>`\\ \\(\\[offset\\, axis1\\, "
+"axis2\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Return specified diagonals."
+msgstr "傳回指定的對角線。"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`dot <numpy.matrix.dot>`\\ \\(other\\, \\/\\[\\, out\\]\\)"
+msgstr ":py:obj:`dot <numpy.matrix.dot>`\\ \\(other\\, \\/\\[\\, out\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Refer to :func:`numpy.dot` for full documentation."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`dump <numpy.matrix.dump>`\\ \\(file\\)"
+msgstr ":py:obj:`dump <numpy.matrix.dump>`\\ \\(file\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Dump a pickle of the array to the specified file."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`dumps <numpy.matrix.dumps>`\\ \\(\\)"
+msgstr ":py:obj:`dumps <numpy.matrix.dumps>`\\ \\(\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Returns the pickle of the array as a string."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`fill <numpy.matrix.fill>`\\ \\(value\\)"
+msgstr ":py:obj:`fill <numpy.matrix.fill>`\\ \\(value\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Fill the array with a scalar value."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`flatten <numpy.matrix.flatten>`\\ \\(\\[order\\]\\)"
+msgstr ":py:obj:`flatten <numpy.matrix.flatten>`\\ \\(\\[order\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Return a flattened copy of the matrix."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`getA <numpy.matrix.getA>`\\ \\(\\)"
+msgstr ":py:obj:`getA <numpy.matrix.getA>`\\ \\(\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`getA1 <numpy.matrix.getA1>`\\ \\(\\)"
+msgstr ":py:obj:`getA1 <numpy.matrix.getA1>`\\ \\(\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`getH <numpy.matrix.getH>`\\ \\(\\)"
+msgstr ":py:obj:`getH <numpy.matrix.getH>`\\ \\(\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`getI <numpy.matrix.getI>`\\ \\(\\)"
+msgstr ":py:obj:`getI <numpy.matrix.getI>`\\ \\(\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`getT <numpy.matrix.getT>`\\ \\(\\)"
+msgstr ":py:obj:`getT <numpy.matrix.getT>`\\ \\(\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`getfield <numpy.matrix.getfield>`\\ \\(dtype\\[\\, offset\\]\\)"
+msgstr ""
+":py:obj:`getfield <numpy.matrix.getfield>`\\ \\(dtype\\[\\, offset\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Returns a field of the given array as a certain type."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`item <numpy.matrix.item>`\\ \\(\\*args\\)"
+msgstr ":py:obj:`item <numpy.matrix.item>`\\ \\(\\*args\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Copy an element of an array to a standard Python scalar and return it."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`max <numpy.matrix.max>`\\ \\(\\[axis\\, out\\]\\)"
+msgstr ":py:obj:`max <numpy.matrix.max>`\\ \\(\\[axis\\, out\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Return the maximum value along an axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`mean <numpy.matrix.mean>`\\ \\(\\[axis\\, dtype\\, out\\]\\)"
+msgstr ":py:obj:`mean <numpy.matrix.mean>`\\ \\(\\[axis\\, dtype\\, out\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Returns the average of the matrix elements along the given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`min <numpy.matrix.min>`\\ \\(\\[axis\\, out\\]\\)"
+msgstr ":py:obj:`min <numpy.matrix.min>`\\ \\(\\[axis\\, out\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Return the minimum value along an axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`nonzero <numpy.matrix.nonzero>`\\ \\(\\)"
+msgstr ":py:obj:`nonzero <numpy.matrix.nonzero>`\\ \\(\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Return the indices of the elements that are non-zero."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`partition <numpy.matrix.partition>`\\ \\(kth\\[\\, axis\\, kind\\, "
+"order\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+"Partially sorts the elements in the array in such a way that the value of "
+"the element in k-th position is in the position it would be in a sorted "
+"array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`prod <numpy.matrix.prod>`\\ \\(\\[axis\\, dtype\\, out\\]\\)"
+msgstr ":py:obj:`prod <numpy.matrix.prod>`\\ \\(\\[axis\\, dtype\\, out\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Return the product of the array elements over the given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`ptp <numpy.matrix.ptp>`\\ \\(\\[axis\\, out\\]\\)"
+msgstr ":py:obj:`ptp <numpy.matrix.ptp>`\\ \\(\\[axis\\, out\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Peak-to-peak (maximum - minimum) value along the given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`put <numpy.matrix.put>`\\ \\(indices\\, values\\[\\, mode\\]\\)"
+msgstr ""
+":py:obj:`put <numpy.matrix.put>`\\ \\(indices\\, values\\[\\, mode\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Set ``a.flat[n] = values[n]`` for all ``n`` in indices."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`ravel <numpy.matrix.ravel>`\\ \\(\\[order\\]\\)"
+msgstr ":py:obj:`ravel <numpy.matrix.ravel>`\\ \\(\\[order\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Return a flattened matrix."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`repeat <numpy.matrix.repeat>`\\ \\(repeats\\[\\, axis\\]\\)"
+msgstr ":py:obj:`repeat <numpy.matrix.repeat>`\\ \\(repeats\\[\\, axis\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Repeat elements of an array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`reshape <numpy.matrix.reshape>`\\ \\(a.reshape\\)"
+msgstr ":py:obj:`reshape <numpy.matrix.reshape>`\\ \\(a.reshape\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Returns an array containing the same data with a new shape."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`resize <numpy.matrix.resize>`\\ \\(a.resize\\)"
+msgstr ":py:obj:`resize <numpy.matrix.resize>`\\ \\(a.resize\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Change shape and size of array in-place."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`round <numpy.matrix.round>`\\ \\(\\[decimals\\, out\\]\\)"
+msgstr ":py:obj:`round <numpy.matrix.round>`\\ \\(\\[decimals\\, out\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Return `a` with each element rounded to the given number of decimals."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`searchsorted <numpy.matrix.searchsorted>`\\ \\(v\\[\\, side\\, "
+"sorter\\]\\)"
+msgstr ""
+":py:obj:`searchsorted <numpy.matrix.searchsorted>`\\ \\(v\\[\\, side\\, "
+"sorter\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+"Find indices where elements of `v` should be inserted in `a` to maintain "
+"order."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`setfield <numpy.matrix.setfield>`\\ \\(val\\, dtype\\[\\, "
+"offset\\]\\)"
+msgstr ""
+":py:obj:`setfield <numpy.matrix.setfield>`\\ \\(val\\, dtype\\[\\, "
+"offset\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Put a value into a specified place in a field defined by a data-type."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`setflags <numpy.matrix.setflags>`\\ \\(\\[write\\, align\\, "
+"uic\\]\\)"
+msgstr ""
+":py:obj:`setflags <numpy.matrix.setflags>`\\ \\(\\[write\\, align\\, "
+"uic\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Set array flags WRITEABLE, ALIGNED, WRITEBACKIFCOPY, respectively."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`sort <numpy.matrix.sort>`\\ \\(\\[axis\\, kind\\, order\\, "
+"stable\\, descending\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Sort an array in-place."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`squeeze <numpy.matrix.squeeze>`\\ \\(\\[axis\\]\\)"
+msgstr ":py:obj:`squeeze <numpy.matrix.squeeze>`\\ \\(\\[axis\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Return a possibly reshaped matrix."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`std <numpy.matrix.std>`\\ \\(\\[axis\\, dtype\\, out\\, ddof\\]\\)"
+msgstr ""
+":py:obj:`std <numpy.matrix.std>`\\ \\(\\[axis\\, dtype\\, out\\, ddof\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+"Return the standard deviation of the array elements along the given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`sum <numpy.matrix.sum>`\\ \\(\\[axis\\, dtype\\, out\\]\\)"
+msgstr ":py:obj:`sum <numpy.matrix.sum>`\\ \\(\\[axis\\, dtype\\, out\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Returns the sum of the matrix elements, along the given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`swapaxes <numpy.matrix.swapaxes>`\\ \\(axis1\\, axis2\\, \\/\\)"
+msgstr ""
+":py:obj:`swapaxes <numpy.matrix.swapaxes>`\\ \\(axis1\\, axis2\\, \\/\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Return a view of the array with `axis1` and `axis2` interchanged."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`take <numpy.matrix.take>`\\ \\(indices\\[\\, axis\\, out\\, "
+"mode\\]\\)"
+msgstr ""
+":py:obj:`take <numpy.matrix.take>`\\ \\(indices\\[\\, axis\\, out\\, "
+"mode\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Return an array formed from the elements of `a` at the given indices."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`to_device <numpy.matrix.to_device>`\\ \\(device\\, \\/\\, \\*\\[\\, "
+"stream\\]\\)"
+msgstr ""
+":py:obj:`to_device <numpy.matrix.to_device>`\\ \\(device\\, \\/\\, \\*\\[\\, "
+"stream\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "For Array API compatibility."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`tobytes <numpy.matrix.tobytes>`\\ \\(\\[order\\]\\)"
+msgstr ":py:obj:`tobytes <numpy.matrix.tobytes>`\\ \\(\\[order\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Construct Python bytes containing the raw data bytes in the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`tofile <numpy.matrix.tofile>`\\ \\(fid\\, \\/\\[\\, sep\\, "
+"format\\]\\)"
+msgstr ""
+":py:obj:`tofile <numpy.matrix.tofile>`\\ \\(fid\\, \\/\\[\\, sep\\, "
+"format\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Write array to a file as text or binary (default)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`tolist <numpy.matrix.tolist>`\\ \\(\\)"
+msgstr ":py:obj:`tolist <numpy.matrix.tolist>`\\ \\(\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Return the matrix as a (possibly nested) list."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`trace <numpy.matrix.trace>`\\ \\(\\[offset\\, axis1\\, axis2\\, "
+"dtype\\, out\\]\\)"
+msgstr ""
+":py:obj:`trace <numpy.matrix.trace>`\\ \\(\\[offset\\, axis1\\, axis2\\, "
+"dtype\\, out\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Return the sum along diagonals of the array."
+msgstr "傳回數組對角線上的所有元素總和。"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`transpose <numpy.matrix.transpose>`\\ \\(\\*axes\\)"
+msgstr ":py:obj:`transpose <numpy.matrix.transpose>`\\ \\(\\*axes\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Returns a view of the array with axes transposed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ""
+":py:obj:`var <numpy.matrix.var>`\\ \\(\\[axis\\, dtype\\, out\\, ddof\\]\\)"
+msgstr ""
+":py:obj:`var <numpy.matrix.var>`\\ \\(\\[axis\\, dtype\\, out\\, ddof\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "Returns the variance of the matrix elements, along the given axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid ":py:obj:`view <numpy.matrix.view>`\\ \\(\\[dtype\\]\\[\\, type\\]\\)"
+msgstr ":py:obj:`view <numpy.matrix.view>`\\ \\(\\[dtype\\]\\[\\, type\\]\\)"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:162:<autosummary>:1
+msgid "New view of array with the same data."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:166
+msgid ":obj:`array`"
+msgstr ":obj:`array`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:172
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:-1
+msgid ""
+"<div id=\"bfedfde7-a192-4dec-89c0-8888424e37bc\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('12bd897e-63b5-464f-9ac8-1ebc4f7bb91d','bfedfde7-"
+"a192-4dec-89c0-8888424e37bc')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('12bd897e-63b5-464f-9ac8-1ebc4f7bb91d','bfedfde7-"
+"a192-4dec-89c0-8888424e37bc')\">Open In Tab</button></div><div "
+"id=\"a6f1ab82-6f66-4bfa-b020-78e102eafa6f\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.matrix:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

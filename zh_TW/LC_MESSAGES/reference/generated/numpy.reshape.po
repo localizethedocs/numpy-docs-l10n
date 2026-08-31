@@ -1,0 +1,198 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.reshape.rst:4
+msgid "numpy.reshape"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:2
+msgid "Returns a reshaped ndarray without changing data."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:8
+msgid "**a**"
+msgstr "**a**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:-1
+msgid "array_like"
+msgstr "array_like"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:8
+msgid "Array to be reshaped."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:14
+msgid "**shape**"
+msgstr "**shape**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:-1
+msgid "int or tuple of ints"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:11
+msgid ""
+"The new shape should be compatible with the original shape. If an integer, "
+"then the result will be a 1-D array of that length. One shape dimension can "
+"be -1. In this case, the value is inferred from the length of the array and "
+"remaining dimensions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:28
+msgid "**order**"
+msgstr "**命令**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:-1
+msgid "{'C', 'F', 'A'}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:17
+msgid ""
+"Read the elements of ``a`` using this index order, and place the elements "
+"into the reshaped array using this index order. 'C' means to read / write "
+"the elements using C-like index order, with the last axis index changing "
+"fastest, back to the first axis index changing slowest. 'F' means to read / "
+"write the elements using Fortran-like index order, with the first index "
+"changing fastest, and the last index changing slowest. Note that the 'C' and "
+"'F' options take no account of the memory layout of the underlying array, "
+"and only refer to the order of indexing. 'A' means to read / write the "
+"elements in Fortran-like index order if ``a`` is Fortran *contiguous* in "
+"memory, C-like order otherwise."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:35
+msgid "**copy**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:31
+msgid ""
+"If ``True``, then the array data is copied. If ``None``, a copy will only be "
+"made if it's required by ``order``. For ``False`` it raises a ``ValueError`` "
+"if a copy cannot be avoided. Default: ``None``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:48
+msgid "**reshaped_array**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:-1
+msgid "ndarray"
+msgstr "ndarray"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:40
+msgid ""
+"This will be a new view object if possible; otherwise, it will be a copy.  "
+"Note there is no guarantee of the *memory layout* (C- or Fortran- "
+"contiguous) of the returned array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:53
+msgid ":obj:`ndarray.reshape`"
+msgstr ":obj:`ndarray.reshape`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:54
+msgid "Equivalent method."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:58
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:59
+msgid ""
+"It is not always possible to change the shape of an array without copying "
+"the data."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:62
+msgid ""
+"The ``order`` keyword gives the index ordering both for *fetching* the "
+"values from ``a``, and then *placing* the values into the output array. For "
+"example, let's say you have an array:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:72
+msgid ""
+"You can think of reshaping as first raveling the array (using the given "
+"index order), then inserting the elements from the raveled array into the "
+"new array using the same kind of index ordering as was used for the raveling."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:92
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:-1
+msgid ""
+"<div id=\"9a1c2f09-17b7-45dd-93a4-475e8ac15c07\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('d79189c1-e115-4708-"
+"bb4f-30cca3c36242','9a1c2f09-17b7-45dd-93a4-475e8ac15c07')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('d79189c1-e115-4708-"
+"bb4f-30cca3c36242','9a1c2f09-17b7-45dd-93a4-475e8ac15c07')\">Open In Tab</"
+"button></div><div id=\"b8839901-b536-4b18-bb48-db9e4b5c35fb\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.reshape:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""
