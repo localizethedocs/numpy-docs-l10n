@@ -1,0 +1,187 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../user/basics.copies.rst:5
+msgid "Copies and views"
+msgstr ""
+
+#: ../../../user/basics.copies.rst:7
+msgid ""
+"When operating on NumPy arrays, it is possible to access the internal data "
+"buffer directly using a :ref:`view <view>` without copying data around. This "
+"ensures good performance but can also cause unwanted problems if the user is "
+"not aware of how this works. Hence, it is important to know the difference "
+"between these two terms and to know which operations return copies and which "
+"return views."
+msgstr ""
+
+#: ../../../user/basics.copies.rst:14
+msgid ""
+"The NumPy array is a data structure consisting of two parts: the :term:"
+"`contiguous` data buffer with the actual data elements and the metadata that "
+"contains information about the data buffer. The metadata includes data type, "
+"strides, and other important information that helps manipulate the :class:`."
+"ndarray` easily. See the :ref:`numpy-internals` section for a detailed look."
+msgstr ""
+
+#: ../../../user/basics.copies.rst:24
+msgid "View"
+msgstr ""
+
+#: ../../../user/basics.copies.rst:26
+msgid ""
+"It is possible to access the array differently by just changing certain "
+"metadata like :term:`stride` and :term:`dtype` without changing the data "
+"buffer. This creates a new way of looking at the data and these new arrays "
+"are called views. The data buffer remains the same, so any changes made to a "
+"view reflects in the original copy. A view can be forced through the :meth:`."
+"ndarray.view` method."
+msgstr ""
+
+#: ../../../user/basics.copies.rst:34
+msgid "Copy"
+msgstr ""
+
+#: ../../../user/basics.copies.rst:36
+msgid ""
+"When a new array is created by duplicating the data buffer as well as the "
+"metadata, it is called a copy. Changes made to the copy do not reflect on "
+"the original array. Making a copy is slower and memory-consuming but "
+"sometimes necessary. A copy can be forced by using :meth:`.ndarray.copy`."
+msgstr ""
+
+#: ../../../user/basics.copies.rst:45
+msgid "Indexing operations"
+msgstr ""
+
+#: ../../../user/basics.copies.rst:47
+msgid ":ref:`basics.indexing`"
+msgstr ":ref:`basics.indexing`"
+
+#: ../../../user/basics.copies.rst:49
+msgid ""
+"Views are created when elements can be addressed with offsets and strides in "
+"the original array. Hence, basic indexing always creates views. For example::"
+msgstr ""
+
+#: ../../../user/basics.copies.rst:53
+msgid ""
+">>> import numpy as np\n"
+">>> x = np.arange(10)\n"
+">>> x\n"
+"array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])\n"
+">>> y = x[1:3]  # creates a view\n"
+">>> y\n"
+"array([1, 2])\n"
+">>> x[1:3] = [10, 11]\n"
+">>> x\n"
+"array([ 0, 10, 11,  3,  4,  5,  6,  7,  8,  9])\n"
+">>> y\n"
+"array([10, 11])"
+msgstr ""
+
+#: ../../../user/basics.copies.rst:66
+msgid "Here, ``y`` gets changed when ``x`` is changed because it is a view."
+msgstr ""
+
+#: ../../../user/basics.copies.rst:68
+msgid ""
+":ref:`advanced-indexing`, on the other hand, always creates copies. For "
+"example::"
+msgstr ""
+
+#: ../../../user/basics.copies.rst:71
+msgid ""
+">>> import numpy as np\n"
+">>> x = np.arange(9).reshape(3, 3)\n"
+">>> x\n"
+"array([[0, 1, 2],\n"
+"       [3, 4, 5],\n"
+"       [6, 7, 8]])\n"
+">>> y = x[[1, 2]]\n"
+">>> y\n"
+"array([[3, 4, 5],\n"
+"       [6, 7, 8]])\n"
+">>> y.base is None\n"
+"True"
+msgstr ""
+
+#: ../../../user/basics.copies.rst:84
+msgid ""
+"Here, ``y`` is a copy, as signified by the :attr:`base <.ndarray.base>` "
+"attribute. We can also confirm this by assigning new values to ``x[[1, 2]]`` "
+"which in turn will not affect ``y`` at all::"
+msgstr ""
+
+#: ../../../user/basics.copies.rst:88
+msgid ""
+">>> x[[1, 2]] = [[10, 11, 12], [13, 14, 15]]\n"
+">>> x\n"
+"array([[ 0,  1,  2],\n"
+"       [10, 11, 12],\n"
+"       [13, 14, 15]])\n"
+">>> y\n"
+"array([[3, 4, 5],\n"
+"       [6, 7, 8]])"
+msgstr ""
+
+#: ../../../user/basics.copies.rst:97
+msgid ""
+"It must be noted here that during the assignment of ``x[[1, 2]]`` no view or "
+"copy is created as the assignment happens in-place."
+msgstr ""
+
+#: ../../../user/basics.copies.rst:102
+msgid "Other operations"
+msgstr ""
+
+#: ../../../user/basics.copies.rst:104
+msgid ""
+"The :func:`numpy.reshape` function creates a view where possible or a copy "
+"otherwise. In most cases, the strides can be modified to reshape the array "
+"with a view. However, in some cases where the array becomes non-contiguous "
+"(perhaps after a :meth:`.ndarray.transpose` operation), the reshaping cannot "
+"be done by modifying strides and requires a copy."
+msgstr ""
+
+#: ../../../user/basics.copies.rst:110
+msgid ""
+"Taking the example of another operation, :func:`numpy.ravel` returns a "
+"contiguous flattened view of the array wherever possible. On the other "
+"hand, :meth:`.ndarray.flatten` always returns a flattened copy of the array. "
+"However, to guarantee a view in most cases, ``x.reshape(-1)`` may be "
+"preferable."
+msgstr ""
+
+#: ../../../user/basics.copies.rst:116
+msgid "How to tell if the array is a view or a copy"
+msgstr ""
+
+#: ../../../user/basics.copies.rst:118
+msgid ""
+"The :attr:`base <.ndarray.base>` attribute of the ndarray makes it easy to "
+"tell if an array is a view or a copy. The base attribute of a view returns "
+"the original array while it returns ``None`` for a copy."
+msgstr ""
+
+#: ../../../user/basics.copies.rst:140
+msgid ""
+"Note that the ``base`` attribute should not be used to determine if an "
+"ndarray object is *new*; only if it is a view or a copy of another ndarray."
+msgstr ""

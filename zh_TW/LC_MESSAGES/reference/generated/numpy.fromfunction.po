@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.fromfunction.rst:4
+msgid "numpy.fromfunction"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:2
+msgid "Construct an array by executing a function over each coordinate."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:4
+msgid ""
+"The resulting array therefore has a value ``fn(x, y, z)`` at coordinate "
+"``(x, y, z)``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:14
+msgid "**function**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:-1
+msgid "callable"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:10
+msgid ""
+"The function is called with N parameters, where N is the rank of `shape`.  "
+"Each parameter represents the coordinates of the array varying along a "
+"specific axis.  For example, if `shape` were ``(2, 2)``, then the parameters "
+"would be ``array([[0, 0], [1, 1]])`` and ``array([[0, 1], [0, 1]])``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:18
+msgid "**shape**"
+msgstr "**shape**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:-1
+msgid "(N,) tuple of ints"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:17
+msgid ""
+"Shape of the output array, which also determines the shape of the coordinate "
+"arrays passed to `function`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:22
+msgid "**dtype**"
+msgstr "**dtype**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:-1
+msgid "data-type, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:21
+msgid ""
+"Data-type of the coordinate arrays passed to `function`. By default, `dtype` "
+"is float."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:33
+msgid "**like**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:25
+msgid ""
+"Reference object to allow the creation of arrays which are not NumPy arrays. "
+"If an array-like passed in as ``like`` supports the ``__array_function__`` "
+"protocol, the result will be defined by it. In this case, it ensures the "
+"creation of an array object compatible with that passed in via this argument."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:47
+msgid "**fromfunction**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:-1
+msgid "any"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:38
+msgid ""
+"The result of the call to `function` is passed back directly. Therefore the "
+"shape of `fromfunction` is completely determined by `function`.  If "
+"`function` returns a scalar value, the shape of `fromfunction` would not "
+"match the `shape` parameter."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:52
+msgid ":obj:`indices`, :obj:`meshgrid`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:56
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:57
+msgid "Keywords other than `dtype` and `like` are passed to `function`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:61
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:-1
+msgid ""
+"<div id=\"b30cc761-f4ec-4d31-936d-2bd64d24f24b\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('69bcfc57-3d2f-4922-8605-b93e6f499ca5','b30cc761-"
+"f4ec-4d31-936d-2bd64d24f24b')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('69bcfc57-3d2f-4922-8605-b93e6f499ca5','b30cc761-"
+"f4ec-4d31-936d-2bd64d24f24b')\">Open In Tab</button></div><div "
+"id=\"c7263791-0326-460d-a754-4feda3e84328\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

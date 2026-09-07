@@ -1,0 +1,190 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/routines.err.rst:4
+msgid "Floating point error handling"
+msgstr ""
+
+#: ../../../reference/routines.err.rst:8
+msgid ""
+"Error handling settings are stored in :py:mod:`python:contextvars` allowing "
+"different threads or async tasks to have independent configurations. For "
+"more information, see :ref:`thread_safety`."
+msgstr ""
+
+#: ../../../reference/routines.err.rst:15
+msgid "How numpy handles numerical exceptions"
+msgstr ""
+
+#: ../../../reference/routines.err.rst:17
+msgid ""
+"The default is to ``'warn'`` for ``invalid``, ``divide``, and ``overflow`` "
+"and ``'ignore'`` for ``underflow``.  But this can be changed, and it can be "
+"set individually for different kinds of exceptions. The different behaviors "
+"are:"
+msgstr ""
+
+#: ../../../reference/routines.err.rst:22
+msgid "``'ignore'`` : Take no action when the exception occurs."
+msgstr ""
+
+#: ../../../reference/routines.err.rst:23
+msgid ""
+"``'warn'``   : Print a :py:exc:`RuntimeWarning` (via the Python :py:mod:"
+"`warnings` module)."
+msgstr ""
+
+#: ../../../reference/routines.err.rst:24
+msgid "``'raise'``  : Raise a :py:exc:`FloatingPointError`."
+msgstr ""
+
+#: ../../../reference/routines.err.rst:25
+msgid "``'call'``   : Call a specified function."
+msgstr ""
+
+#: ../../../reference/routines.err.rst:26
+msgid "``'print'``  : Print a warning directly to ``stdout``."
+msgstr ""
+
+#: ../../../reference/routines.err.rst:27
+msgid "``'log'``    : Record error in a Log object."
+msgstr ""
+
+#: ../../../reference/routines.err.rst:29
+msgid "These behaviors can be set for all kinds of errors or specific ones:"
+msgstr ""
+
+#: ../../../reference/routines.err.rst:31
+msgid "``all``       : apply to all numeric exceptions"
+msgstr ""
+
+#: ../../../reference/routines.err.rst:32
+msgid "``invalid``   : when NaNs are generated"
+msgstr ""
+
+#: ../../../reference/routines.err.rst:33
+msgid "``divide``    : divide by zero (for integers as well!)"
+msgstr ""
+
+#: ../../../reference/routines.err.rst:34
+msgid "``overflow``  : floating point overflows"
+msgstr ""
+
+#: ../../../reference/routines.err.rst:35
+msgid "``underflow`` : floating point underflows"
+msgstr ""
+
+#: ../../../reference/routines.err.rst:37
+msgid "Note that integer divide-by-zero is handled by the same machinery."
+msgstr ""
+
+#: ../../../reference/routines.err.rst:39
+msgid ""
+"The error handling mode can be configured :func:`numpy.errstate` context "
+"manager."
+msgstr ""
+
+#: ../../../reference/routines.err.rst:43
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../reference/routines.err.rst:47
+msgid ""
+">>> with np.errstate(all='warn'):\n"
+"...     np.zeros(5, dtype=np.float32) / 0.0\n"
+"<python-input-1>:2: RuntimeWarning: invalid value encountered in divide\n"
+"array([nan, nan, nan, nan, nan], dtype=float32)"
+msgstr ""
+
+#: ../../../reference/routines.err.rst:54
+msgid ""
+">>> with np.errstate(under='ignore'):\n"
+"...     np.array([1.e-100])**10\n"
+"array([0.])"
+msgstr ""
+
+#: ../../../reference/routines.err.rst:60
+msgid ""
+">>> with np.errstate(invalid='raise'):\n"
+"...     np.sqrt(np.array([-1.]))\n"
+"...\n"
+"Traceback (most recent call last):\n"
+"  File \"<python-input-1>\", line 2, in <module>\n"
+"    np.sqrt(np.array([-1.]))\n"
+"    ~~~~~~~^^^^^^^^^^^^^^^^^\n"
+"FloatingPointError: invalid value encountered in sqrt"
+msgstr ""
+
+#: ../../../reference/routines.err.rst:71
+msgid ""
+">>> def errorhandler(errstr, errflag):\n"
+"...     print(\"saw stupid error!\")\n"
+">>> with np.errstate(call=errorhandler, all='call'):\n"
+"...     np.zeros(5, dtype=np.int32) / 0\n"
+"saw stupid error!\n"
+"array([nan, nan, nan, nan, nan])"
+msgstr ""
+
+#: ../../../reference/routines.err.rst:79
+msgid "Setting and getting error handling"
+msgstr ""
+
+#: ../../../reference/routines.err.rst:88:<autosummary>:1
+msgid ""
+":py:obj:`seterr <numpy.seterr>`\\ \\(\\[all\\, divide\\, over\\, under\\, "
+"invalid\\]\\)"
+msgstr ""
+":py:obj:`seterr <numpy.seterr>`\\ \\(\\[all\\, divide\\, over\\, under\\, "
+"invalid\\]\\)"
+
+#: ../../../reference/routines.err.rst:88:<autosummary>:1
+msgid "Set how floating-point errors are handled."
+msgstr ""
+
+#: ../../../reference/routines.err.rst:88:<autosummary>:1
+msgid ":py:obj:`geterr <numpy.geterr>`\\ \\(\\)"
+msgstr ":py:obj:`geterr <numpy.geterr>`\\ \\(\\)"
+
+#: ../../../reference/routines.err.rst:88:<autosummary>:1
+msgid "Get the current way of handling floating-point errors."
+msgstr ""
+
+#: ../../../reference/routines.err.rst:88:<autosummary>:1
+msgid ":py:obj:`seterrcall <numpy.seterrcall>`\\ \\(func\\)"
+msgstr ":py:obj:`seterrcall <numpy.seterrcall>`\\ \\(func\\)"
+
+#: ../../../reference/routines.err.rst:88:<autosummary>:1
+msgid "Set the floating-point error callback function or log object."
+msgstr ""
+
+#: ../../../reference/routines.err.rst:88:<autosummary>:1
+msgid ":py:obj:`geterrcall <numpy.geterrcall>`\\ \\(\\)"
+msgstr ":py:obj:`geterrcall <numpy.geterrcall>`\\ \\(\\)"
+
+#: ../../../reference/routines.err.rst:88:<autosummary>:1
+msgid "Return the current callback function used on floating-point errors."
+msgstr ""
+
+#: ../../../reference/routines.err.rst:88:<autosummary>:1
+msgid ":py:obj:`errstate <numpy.errstate>`\\ \\(\\*\\*kwargs\\)"
+msgstr ":py:obj:`errstate <numpy.errstate>`\\ \\(\\*\\*kwargs\\)"
+
+#: ../../../reference/routines.err.rst:88:<autosummary>:1
+msgid "Context manager for floating-point error handling."
+msgstr ""

@@ -1,0 +1,221 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../building/understanding_meson.rst:2
+msgid "Understanding Meson"
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:4
+msgid ""
+"Building NumPy relies on the following tools, which can be considered part "
+"of the build system:"
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:7
+msgid ""
+"``meson``: the Meson build system, installable as a pure Python package from "
+"PyPI or conda-forge"
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:9
+msgid ""
+"``ninja``: the build tool invoked by Meson to do the actual building (e.g. "
+"invoking compilers). Installable also from PyPI (on all common platforms) or "
+"conda-forge."
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:12
+msgid ""
+"``pkg-config``: the tool used for discovering dependencies (in particular "
+"BLAS/LAPACK). Available on conda-forge (and Homebrew, Chocolatey, and Linux "
+"package managers), but not packaged on PyPI."
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:15
+msgid ""
+"``meson-python``: the Python build backend (i.e., the thing that gets "
+"invoked via a hook in ``pyproject.toml`` by a build frontend like ``pip`` or "
+"``pypa/build``). This is a thin layer on top of Meson, with as main roles "
+"(a) interface with build frontends, and (b) produce sdists and wheels with "
+"valid file names and metadata."
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:23
+msgid ""
+"As of Dec'23, NumPy vendors a custom version of Meson, which is needed for "
+"SIMD and BLAS/LAPACK features that are not yet available in upstream Meson. "
+"Hence, using the ``meson`` executable directly is not possible. Instead, "
+"wherever instructions say ``meson xxx``, use ``python vendored-meson/meson/"
+"meson.py xxx`` instead."
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:29
+msgid "Building with Meson happens in stages:"
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:31
+msgid ""
+"A configure stage (``meson setup``) to detect compilers, dependencies and "
+"build options, and create the build directory and ``build.ninja`` file,"
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:33
+msgid ""
+"A compile stage (``meson compile`` or ``ninja``), where the extension "
+"modules that are part of a built NumPy package get compiled,"
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:35
+msgid ""
+"An install stage (``meson install``) to install the installable files from "
+"the source and build directories to the target install directory,"
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:38
+msgid ""
+"Meson has a good build dependency tracking system, so invoking a build for a "
+"second time will rebuild only targets for which any sources or dependencies "
+"have changed."
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:44
+msgid "To learn more about Meson"
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:46
+msgid ""
+"Meson has `very good documentation <https://mesonbuild.com/>`__; it pays off "
+"to read it, and is often the best source of answers for \"how to do X\". "
+"Furthermore, an extensive pdf book on Meson can be obtained for free at "
+"https://nibblestew.blogspot.com/2021/12/this-year-receive-gift-of-free-meson."
+"html"
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:51
+msgid ""
+"To learn more about the design principles Meson uses, the recent talks "
+"linked from `mesonbuild.com/Videos <https://mesonbuild.com/Videos.html>`__ "
+"are also a good resource."
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:57
+msgid "Explanation of build stages"
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:59
+msgid ""
+"*This is for teaching purposes only; there should be no need to execute "
+"these stages separately!*"
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:62
+msgid ""
+"Assume we're starting from a clean repo and a fully set up conda "
+"environment::"
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:64
+msgid ""
+"git clone git@github.com:numpy/numpy.git\n"
+"git submodule update --init\n"
+"mamba env create -f environment.yml\n"
+"mamba activate numpy-dev"
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:69
+msgid ""
+"To now run the configure stage of the build and instruct Meson to put the "
+"build artifacts in ``build/`` and a local install under ``build-install/`` "
+"relative to the root of the repo, do::"
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:73
+msgid "meson setup build --prefix=$PWD/build-install"
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:75
+msgid "To then run the compile stage of the build, do::"
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:77
+msgid "ninja -C build"
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:79
+msgid ""
+"In the command above, ``-C`` is followed by the name of the build directory. "
+"You can have multiple build directories at the same time. Meson is fully out-"
+"of-place, so those builds will not interfere with each other. You can for "
+"example have a GCC build, a Clang build and a debug build in different "
+"directories."
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:85
+msgid ""
+"To then install NumPy into the prefix (``build-install/`` here, but note "
+"that that's just an arbitrary name we picked here)::"
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:88
+msgid "meson install -C build"
+msgstr "meson install -C build"
+
+#: ../../../building/understanding_meson.rst:90
+msgid ""
+"It will then install to ``build-install/lib/python3.12/site-packages/"
+"numpy``, which is not on your Python path, so to add it do (*again, this is "
+"for learning purposes, using ``PYTHONPATH`` explicitly is typically not the "
+"best idea*)::"
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:94
+msgid "export PYTHONPATH=$PWD/build-install/lib/python3.12/site-packages/"
+msgstr "export PYTHONPATH=$PWD/build-install/lib/python3.12/site-packages/"
+
+#: ../../../building/understanding_meson.rst:96
+msgid ""
+"Now we should be able to import ``numpy`` and run the tests. Remembering "
+"that we need to move out of the root of the repo to ensure we pick up the "
+"package and not the local ``numpy/`` source directory::"
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:100
+msgid ""
+"cd doc\n"
+"python -c \"import numpy as np; np.test()\""
+msgstr ""
+"cd doc\n"
+"python -c \"import numpy as np; np.test()\""
+
+#: ../../../building/understanding_meson.rst:103
+msgid ""
+"The above runs the \"fast\" numpy test suite. Other ways of running the "
+"tests should also work, for example::"
+msgstr ""
+
+#: ../../../building/understanding_meson.rst:106
+msgid "pytest --pyargs numpy"
+msgstr "pytest --pyargs numpy"
+
+#: ../../../building/understanding_meson.rst:108
+msgid ""
+"The full test suite should pass, without any build warnings on Linux (with "
+"the GCC version for which ``-Werror`` is enforced in CI at least) and with "
+"at most a moderate amount of warnings on other platforms."
+msgstr ""

@@ -1,0 +1,1813 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../user/numpy-for-matlab-users.rst:5
+msgid "NumPy for MATLAB users"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:8
+msgid "Introduction"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:10
+msgid ""
+"MATLAB® and NumPy have a lot in common, but NumPy was created to work with "
+"Python, not to be a MATLAB clone.  This guide will help MATLAB users get "
+"started with NumPy."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:14
+msgid ""
+"<style>\n"
+"table.docutils td { border: solid 1px #ccc; }\n"
+"</style>"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:21
+msgid "Some key differences"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:26
+msgid ""
+"In MATLAB, the basic type, even for scalars, is a multidimensional array. "
+"Array assignments in MATLAB are stored as 2D arrays of double precision "
+"floating point numbers, unless you specify the number of dimensions and "
+"type.  Operations on the 2D instances of these arrays are modeled on matrix "
+"operations in linear algebra."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:33
+msgid ""
+"In NumPy, the basic type is a multidimensional ``array``.  Array assignments "
+"in NumPy are usually stored as :ref:`n-dimensional arrays<arrays>` with the "
+"minimum type required to hold the objects in sequence, unless you specify "
+"the number of dimensions and type. NumPy performs operations element-by-"
+"element, so multiplying 2D arrays with ``*`` is not a matrix multiplication "
+"-- it's an element-by-element multiplication. (The ``@`` operator, available "
+"since Python 3.5, can be used for conventional matrix multiplication.)"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:43
+msgid ""
+"MATLAB numbers indices from 1; ``a(1)`` is the first element. :ref:`See note "
+"INDEXING <numpy-for-matlab-users.notes>`"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:45
+msgid ""
+"NumPy, like Python, numbers indices from 0; ``a[0]`` is the first element."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:48
+msgid ""
+"MATLAB's scripting language was created for linear algebra so the syntax for "
+"some array manipulations is more compact than NumPy's. On the other hand, "
+"the API for adding GUIs and creating full-fledged applications is more or "
+"less an afterthought."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:52
+msgid ""
+"NumPy is  based on Python, a general-purpose language.  The advantage to "
+"NumPy is access to Python libraries including: `SciPy <https://www.scipy.org/"
+">`_, `Matplotlib <https://matplotlib.org/>`_, `Pandas <https://pandas.pydata."
+"org/>`_, `OpenCV <https://opencv.org/>`_, and more. In addition, Python is "
+"often `embedded as a scripting language <https://en.wikipedia.org/wiki/"
+"List_of_Python_software#Embedded_as_a_scripting_language>`_ in other "
+"software, allowing NumPy to be used there too."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:61
+msgid ""
+"MATLAB array slicing uses pass-by-value semantics, with a lazy copy-on-write "
+"scheme to prevent creating copies until they are needed. Slicing operations "
+"copy parts of the array."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:64
+msgid ""
+"NumPy array slicing uses pass-by-reference, that does not copy the "
+"arguments. Slicing operations are views into an array."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:69
+msgid "Rough equivalents"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:71
+msgid ""
+"The table below gives rough equivalents for some common MATLAB expressions. "
+"These are similar expressions, not equivalents. For details, see the :ref:"
+"`documentation<reference>`."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:75
+msgid ""
+"In the table below, it is assumed that you have executed the following "
+"commands in Python:"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:80
+msgid ""
+"import numpy as np\n"
+"from scipy import io, integrate, linalg, signal\n"
+"from scipy.sparse.linalg import cg, eigs"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:84
+msgid ""
+"Also assume below that if the Notes talk about \"matrix\" that the arguments "
+"are two-dimensional entities."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:88
+msgid "General purpose equivalents"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:93
+#: ../../../user/numpy-for-matlab-users.rst:203
+msgid "MATLAB"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:94
+#: ../../../user/numpy-for-matlab-users.rst:204
+msgid "NumPy"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:95
+#: ../../../user/numpy-for-matlab-users.rst:205
+#: ../../../user/numpy-for-matlab-users.rst:573
+msgid "Notes"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:97
+msgid "``help func``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:98
+msgid "``info(func)`` or ``help(func)`` or ``func?`` (in IPython)"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:99
+msgid "get help on the function *func*"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:101
+msgid "``which func``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:102
+msgid ":ref:`see note HELP <numpy-for-matlab-users.notes>`"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:103
+msgid "find out where *func* is defined"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:105
+msgid "``type func``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:106
+msgid "``np.source(func)`` or ``func??`` (in IPython)"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:107
+msgid "print source for *func* (if not a native function)"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:109
+msgid "``% comment``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:110
+msgid "``# comment``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:111
+msgid "comment a line of code with the text ``comment``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:115
+msgid ""
+"for i=1:3\n"
+"    fprintf('%i\\n',i)\n"
+"end"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:121
+msgid ""
+"for i in range(1, 4):\n"
+"   print(i)"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:124
+msgid ""
+"use a for-loop to print the numbers 1, 2, and 3 using :py:class:`range "
+"<range>`"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:126
+msgid "``a && b``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:127
+msgid "``a and b``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:128
+msgid ""
+"short-circuiting logical AND operator (:ref:`Python native operator <python:"
+"boolean>`); scalar arguments only"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:131
+msgid "``a || b``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:132
+msgid "``a or b``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:133
+msgid ""
+"short-circuiting logical OR operator (:ref:`Python native operator <python:"
+"boolean>`); scalar arguments only"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:136
+msgid ""
+">> 4 == 4\n"
+"ans = 1\n"
+">> 4 == 5\n"
+"ans = 0"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:145
+msgid ""
+">>> 4 == 4\n"
+"True\n"
+">>> 4 == 5\n"
+"False"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:150
+msgid ""
+"The :ref:`boolean objects <python:bltin-boolean-values>` in Python are "
+"``True`` and ``False``, as opposed to MATLAB logical types of ``1`` and "
+"``0``."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:154
+msgid ""
+"a=4\n"
+"if a==4\n"
+"    fprintf('a = 4\\n')\n"
+"elseif a==5\n"
+"    fprintf('a = 5\\n')\n"
+"end"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:165
+msgid ""
+"a = 4\n"
+"if a == 4:\n"
+"    print('a = 4')\n"
+"elif a == 5:\n"
+"    print('a = 5')"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:171
+msgid ""
+"create an if-else statement to check if ``a`` is 4 or 5 and print result"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:173
+msgid "``1*i``, ``1*j``,  ``1i``, ``1j``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:174
+msgid "``1j``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:175
+msgid "complex numbers"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:177
+msgid "``eps``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:178
+msgid "``np.finfo(float).eps`` or ``np.spacing(1)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:179
+msgid ""
+"distance from 1 to the next larger representable real number in double "
+"precision"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:182
+msgid "``load data.mat``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:183
+msgid "``io.loadmat('data.mat')``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:184
+msgid ""
+"Load MATLAB variables saved to the file ``data.mat``. (Note: When saving "
+"arrays to ``data.mat`` in MATLAB/Octave, use a recent binary format. :func:"
+"`scipy.io.loadmat` will create a dictionary with the saved arrays and "
+"further information.)"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:188
+msgid "``ode45``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:189
+msgid "``integrate.solve_ivp(f)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:190
+msgid "integrate an ODE with Runge-Kutta 4,5"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:192
+msgid "``ode15s``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:193
+msgid "``integrate.solve_ivp(f, method='BDF')``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:194
+msgid "integrate an ODE with BDF method"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:198
+msgid "Linear algebra equivalents"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:207
+msgid "``ndims(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:208
+msgid "``np.ndim(a)`` or ``a.ndim``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:209
+msgid "number of dimensions of array ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:211
+msgid "``numel(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:212
+msgid "``np.size(a)`` or ``a.size``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:213
+msgid "number of elements of array ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:215
+msgid "``size(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:216
+msgid "``np.shape(a)`` or ``a.shape``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:217
+msgid "\"size\" of array ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:219
+msgid "``size(a,n)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:220
+msgid "``a.shape[n-1]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:221
+msgid ""
+"get the number of elements of the n-th dimension of array ``a``. (Note that "
+"MATLAB uses 1 based indexing while Python uses 0 based indexing, See note :"
+"ref:`INDEXING <numpy-for-matlab-users.notes>`)"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:225
+msgid "``[ 1 2 3; 4 5 6 ]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:226
+msgid "``np.array([[1., 2., 3.], [4., 5., 6.]])``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:227
+msgid "define a 2x3 2D array"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:229
+msgid "``[ a b; c d ]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:230
+msgid "``np.block([[a, b], [c, d]])``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:231
+msgid "construct a matrix from blocks ``a``, ``b``, ``c``, and ``d``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:233
+msgid "``a(end)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:234
+msgid "``a[-1]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:235
+msgid ""
+"access last element in MATLAB vector (1xn or nx1) or 1D NumPy array ``a`` "
+"(length n)"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:238
+msgid "``a(2,5)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:239
+msgid "``a[1, 4]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:240
+msgid "access element in second row, fifth column in 2D array ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:242
+msgid "``a(2,:)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:243
+msgid "``a[1]`` or  ``a[1, :]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:244
+msgid "entire second row of 2D array ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:246
+msgid "``a(1:5,:)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:247
+msgid "``a[0:5]`` or ``a[:5]`` or ``a[0:5, :]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:248
+msgid "first 5 rows of 2D array ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:250
+msgid "``a(end-4:end,:)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:251
+msgid "``a[-5:]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:252
+msgid "last 5 rows of 2D array ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:254
+msgid "``a(1:3,5:9)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:255
+msgid "``a[0:3, 4:9]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:256
+msgid ""
+"The first through third rows and fifth through ninth columns of a 2D array, "
+"``a``."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:258
+msgid "``a([2,4,5],[1,3])``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:259
+msgid "``a[np.ix_([1, 3, 4], [0, 2])]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:260
+msgid ""
+"rows 2,4 and 5 and columns 1 and 3.  This allows the matrix to be modified, "
+"and doesn't require a regular slice."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:263
+msgid "``a(3:2:21,:)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:264
+msgid "``a[2:21:2,:]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:265
+msgid ""
+"every other row of ``a``, starting with the third and going to the twenty-"
+"first"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:268
+msgid "``a(1:2:end,:)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:269
+msgid "``a[::2, :]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:270
+msgid "every other row of ``a``, starting with the first"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:272
+msgid "``a(end:-1:1,:)``  or ``flipud(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:273
+msgid "``a[::-1,:]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:274
+msgid "``a`` with rows in reverse order"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:276
+msgid "``a([1:end 1],:)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:277
+msgid "``a[np.r_[:len(a),0]]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:278
+msgid "``a`` with copy of the first row appended to the end"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:280
+msgid "``a.'``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:281
+msgid "``a.transpose()`` or ``a.T``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:282
+msgid "transpose of ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:284
+msgid "``a'``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:285
+msgid "``a.conj().transpose()`` or ``a.conj().T``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:286
+msgid "conjugate transpose of ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:288
+#: ../../../user/numpy-for-matlab-users.rst:293
+msgid "``a * b``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:289
+msgid "``a @ b``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:290
+msgid "matrix multiply"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:292
+msgid "``a .* b``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:294
+msgid "element-wise multiply"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:296
+msgid "``a./b``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:297
+msgid "``a/b``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:298
+msgid "element-wise divide"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:300
+msgid "``a.^3``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:301
+msgid "``a**3``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:302
+msgid "element-wise exponentiation"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:304
+#: ../../../user/numpy-for-matlab-users.rst:305
+msgid "``(a > 0.5)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:306
+msgid ""
+"matrix whose i,jth element is (a_ij > 0.5).  The MATLAB result is an array "
+"of logical values 0 and 1.  The NumPy result is an array of the boolean "
+"values ``False`` and ``True``."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:310
+msgid "``find(a > 0.5)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:311
+msgid "``np.nonzero(a > 0.5)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:312
+msgid "find the indices where (``a`` > 0.5)"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:314
+msgid "``a(:,find(v > 0.5))``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:315
+msgid "``a[:,np.nonzero(v > 0.5)[0]]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:316
+msgid "extract the columns of ``a`` where vector v > 0.5"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:318
+msgid "``a(:,find(v>0.5))``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:319
+msgid "``a[:, v.T > 0.5]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:320
+msgid "extract the columns of ``a`` where column vector v > 0.5"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:322
+msgid "``a(a<0.5)=0``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:323
+msgid "``a[a < 0.5]=0``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:324
+#: ../../../user/numpy-for-matlab-users.rst:328
+msgid "``a`` with elements less than 0.5 zeroed out"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:326
+msgid "``a .* (a>0.5)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:327
+msgid "``a * (a > 0.5)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:330
+msgid "``a(:) = 3``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:331
+msgid "``a[:] = 3``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:332
+msgid "set all values to the same scalar value"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:334
+msgid "``y=x``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:335
+msgid "``y = x.copy()``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:336
+msgid "NumPy assigns by reference"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:338
+msgid "``y=x(2,:)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:339
+msgid "``y = x[1, :].copy()``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:340
+msgid "NumPy slices are by reference"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:342
+msgid "``y=x(:)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:343
+msgid "``y = x.flatten()``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:344
+msgid ""
+"turn array into vector (note that this forces a copy). To obtain the same "
+"data ordering as in MATLAB, use ``x.flatten('F')``."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:347
+msgid "``1:10``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:348
+msgid "``np.arange(1., 11.)`` or ``np.r_[1.:11.]`` or  ``np.r_[1:10:10j]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:349
+#: ../../../user/numpy-for-matlab-users.rst:354
+msgid ""
+"create an increasing vector (see note :ref:`RANGES <numpy-for-matlab-users."
+"notes>`)"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:352
+msgid "``0:9``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:353
+msgid "``np.arange(10.)`` or  ``np.r_[:10.]`` or  ``np.r_[:9:10j]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:357
+msgid "``[1:10]'``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:358
+msgid "``np.arange(1.,11.)[:, np.newaxis]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:359
+msgid "create a column vector"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:361
+msgid "``zeros(3,4)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:362
+msgid "``np.zeros((3, 4))``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:363
+msgid "3x4 two-dimensional array full of 64-bit floating point zeros"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:365
+msgid "``zeros(3,4,5)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:366
+msgid "``np.zeros((3, 4, 5))``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:367
+msgid "3x4x5 three-dimensional array full of 64-bit floating point zeros"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:369
+msgid "``ones(3,4)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:370
+msgid "``np.ones((3, 4))``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:371
+msgid "3x4 two-dimensional array full of 64-bit floating point ones"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:373
+msgid "``eye(3)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:374
+msgid "``np.eye(3)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:375
+msgid "3x3 identity matrix"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:377
+msgid "``diag(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:378
+msgid "``np.diag(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:379
+msgid "returns a vector of the diagonal elements of 2D array, ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:381
+msgid "``diag(v,0)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:382
+msgid "``np.diag(v, 0)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:383
+msgid ""
+"returns a square diagonal matrix whose nonzero values are the elements of "
+"vector, ``v``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:386
+msgid ""
+"rng(42,'twister')\n"
+"rand(3,4)"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:393
+msgid ""
+"from numpy.random import default_rng\n"
+"rng = default_rng(42)\n"
+"rng.random((3, 4))"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:397
+msgid "or older version: ``random.rand((3, 4))``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:399
+msgid ""
+"generate a random 3x4 array with default random number generator and seed = "
+"42"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:402
+msgid "``linspace(1,3,4)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:403
+msgid "``np.linspace(1,3,4)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:404
+msgid "4 equally spaced samples between 1 and 3, inclusive"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:406
+msgid "``[x,y]=meshgrid(0:8,0:5)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:407
+msgid "``np.mgrid[0:9.,0:6.]`` or ``np.meshgrid(r_[0:9.],r_[0:6.])``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:408
+msgid "two 2D arrays: one of x values, the other of y values"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:411
+msgid "``ogrid[0:9.,0:6.]`` or ``np.ix_(np.r_[0:9.],np.r_[0:6.]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:412
+#: ../../../user/numpy-for-matlab-users.rst:420
+msgid "the best way to eval functions on a grid"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:414
+msgid "``[x,y]=meshgrid([1,2,4],[2,4,5])``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:415
+msgid "``np.meshgrid([1,2,4],[2,4,5])``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:419
+msgid "``np.ix_([1,2,4],[2,4,5])``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:422
+msgid "``repmat(a, m, n)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:423
+msgid "``np.tile(a, (m, n))``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:424
+msgid "create m by n copies of ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:426
+msgid "``[a b]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:427
+msgid ""
+"``np.concatenate((a,b),1)`` or ``np.hstack((a,b))`` or ``np.column_stack((a,"
+"b))`` or ``np.c_[a,b]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:429
+msgid "concatenate columns of ``a`` and ``b``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:431
+msgid "``[a; b]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:432
+msgid "``np.concatenate((a,b))`` or ``np.vstack((a,b))`` or ``np.r_[a,b]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:433
+msgid "concatenate rows of ``a`` and ``b``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:435
+msgid "``max(max(a))``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:436
+msgid "``a.max()`` or ``np.nanmax(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:437
+msgid ""
+"maximum element of ``a`` (with ndims(a)<=2 for MATLAB, if there are NaN's, "
+"``nanmax`` will ignore these and return largest value)"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:440
+msgid "``max(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:441
+msgid "``a.max(0)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:442
+msgid "maximum element of each column of array ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:444
+msgid "``max(a,[],2)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:445
+msgid "``a.max(1)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:446
+msgid "maximum element of each row of array ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:448
+msgid "``max(a,b)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:449
+msgid "``np.maximum(a, b)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:450
+msgid ""
+"compares ``a`` and ``b`` element-wise, and returns the maximum value from "
+"each pair"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:453
+msgid "``norm(v)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:454
+msgid "``np.sqrt(v @ v)`` or ``np.linalg.norm(v)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:455
+msgid "L2 norm of vector ``v``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:457
+#: ../../../user/numpy-for-matlab-users.rst:468
+msgid "``a & b``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:458
+msgid "``logical_and(a,b)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:459
+msgid ""
+"element-by-element AND operator (NumPy ufunc) :ref:`See note LOGICOPS <numpy-"
+"for-matlab-users.notes>`"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:462
+#: ../../../user/numpy-for-matlab-users.rst:472
+msgid "``a | b``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:463
+msgid "``np.logical_or(a,b)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:464
+msgid ""
+"element-by-element OR operator (NumPy ufunc) :ref:`See note LOGICOPS <numpy-"
+"for-matlab-users.notes>`"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:467
+msgid "``bitand(a,b)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:469
+msgid "bitwise AND operator (Python native and NumPy ufunc)"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:471
+msgid "``bitor(a,b)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:473
+msgid "bitwise OR operator (Python native and NumPy ufunc)"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:475
+msgid "``inv(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:476
+msgid "``linalg.inv(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:477
+msgid "inverse of square 2D array ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:479
+msgid "``pinv(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:480
+msgid "``linalg.pinv(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:481
+msgid "pseudo-inverse of 2D array ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:483
+msgid "``rank(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:484
+msgid "``np.linalg.matrix_rank(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:485
+msgid "matrix rank of a 2D array ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:487
+msgid "``a\\b``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:488
+msgid ""
+"``linalg.solve(a, b)`` if ``a`` is square; ``linalg.lstsq(a, b)`` otherwise"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:490
+msgid "solution of a x = b for x"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:492
+msgid "``b/a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:493
+msgid "Solve ``a.T x.T = b.T`` instead"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:494
+msgid "solution of x a = b for x"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:496
+msgid "``[U,S,V]=svd(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:497
+msgid "``U, S, Vh = linalg.svd(a); V = Vh.T``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:498
+msgid "singular value decomposition of ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:500
+msgid "``chol(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:501
+msgid "``linalg.cholesky(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:502
+msgid "Cholesky factorization of a 2D array"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:504
+msgid "``[V,D]=eig(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:505
+msgid "``D,V = linalg.eig(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:506
+msgid ""
+"eigenvalues :math:`\\lambda` and eigenvectors :math:`v` of ``a``, where :"
+"math:`\\mathbf{a} v = \\lambda v`"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:509
+msgid "``[V,D]=eig(a,b)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:510
+msgid "``D,V = linalg.eig(a, b)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:511
+msgid ""
+"eigenvalues :math:`\\lambda` and eigenvectors :math:`v` of ``a``, ``b`` "
+"where :math:`\\mathbf{a} v = \\lambda \\mathbf{b} v`"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:515
+msgid "``[V,D]=eigs(a,3)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:516
+msgid "``D,V = eigs(a, k=3)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:517
+msgid ""
+"find the ``k=3`` largest eigenvalues and eigenvectors of 2D array, ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:519
+msgid "``[Q,R]=qr(a,0)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:520
+msgid "``Q,R = linalg.qr(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:521
+msgid "QR decomposition"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:523
+msgid "``[L,U,P]=lu(a)`` where ``a==P'*L*U``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:524
+msgid "``P,L,U = linalg.lu(a)`` where ``a == P@L@U``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:525
+msgid ""
+"LU decomposition with partial pivoting (note: P(MATLAB) == "
+"transpose(P(NumPy)))"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:528
+msgid "``conjgrad``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:529
+msgid "``cg``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:530
+msgid "conjugate gradients solver"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:532
+msgid "``fft(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:533
+msgid "``np.fft.fft(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:534
+msgid "Fourier transform of ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:536
+msgid "``ifft(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:537
+msgid "``np.fft.ifft(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:538
+msgid "inverse Fourier transform of ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:540
+msgid "``sort(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:541
+msgid "``np.sort(a)`` or ``a.sort(axis=0)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:542
+msgid "sort each column of a 2D array, ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:544
+msgid "``sort(a, 2)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:545
+msgid "``np.sort(a, axis=1)`` or ``a.sort(axis=1)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:546
+msgid "sort the each row of 2D array, ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:548
+msgid "``[b,I]=sortrows(a,1)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:549
+msgid "``I = np.argsort(a[:, 0]); b = a[I,:]``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:550
+msgid ""
+"save the array ``a`` as array ``b`` with rows sorted by the first column"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:552
+msgid "``x = Z\\y``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:553
+msgid "``x = linalg.lstsq(Z, y)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:554
+msgid ""
+"perform a linear regression of the form :math:`\\mathbf{Zx}=\\mathbf{y}`"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:556
+msgid "``decimate(x, q)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:557
+msgid "``signal.resample(x, np.ceil(len(x)/q))``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:558
+msgid "downsample with low-pass filtering"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:560
+msgid "``unique(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:561
+msgid "``np.unique(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:562
+msgid "a vector of unique values in array ``a``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:564
+msgid "``squeeze(a)``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:565
+msgid "``a.squeeze()``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:566
+msgid ""
+"remove singleton dimensions of array ``a``. Note that MATLAB will always "
+"return arrays of 2D or higher while NumPy will return arrays of 0D or higher"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:575
+msgid ""
+"\\ **Submatrix**: Assignment to a submatrix can be done with lists of "
+"indices using the ``ix_`` command. E.g., for 2D array ``a``, one might do: "
+"``ind=[1, 3]; a[np.ix_(ind, ind)] += 100``."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:579
+msgid ""
+"\\ **HELP**: There is no direct equivalent of MATLAB's ``which`` command, "
+"but the commands :func:`help` will usually list the filename where the "
+"function is located. Python also has an ``inspect`` module (do ``import "
+"inspect``) which provides a ``getfile`` that often works."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:584
+msgid ""
+"\\ **INDEXING**: MATLAB uses one based indexing, so the initial element of a "
+"sequence has index 1. Python uses zero based indexing, so the initial "
+"element of a sequence has index 0. Confusion and flamewars arise because "
+"each has advantages and disadvantages. One based indexing is consistent with "
+"common human language usage, where the \"first\" element of a sequence has "
+"index 1. Zero based indexing `simplifies indexing <https://groups.google.com/"
+"group/comp.lang.python/msg/1bf4d925dfbf368?q=g:thl3498076713d&hl=en>`__. See "
+"also `a text by prof.dr. Edsger W. Dijkstra <https://www.cs.utexas.edu/users/"
+"EWD/transcriptions/EWD08xx/EWD831.html>`__."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:594
+msgid ""
+"\\ **RANGES**: In MATLAB, ``0:5`` can be used as both a range literal and a "
+"'slice' index (inside parentheses); however, in Python, constructs like "
+"``0:5`` can *only* be used as a slice index (inside square brackets). Thus "
+"the somewhat quirky ``r_`` object was created to allow NumPy to have a "
+"similarly terse range construction mechanism. Note that ``r_`` is not called "
+"like a function or a constructor, but rather *indexed* using square "
+"brackets, which allows the use of Python's slice syntax in the arguments."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:603
+msgid ""
+"\\ **LOGICOPS**: ``&`` or ``|`` in NumPy is bitwise AND/OR, while in MATLAB "
+"& and ``|`` are logical AND/OR. The two can appear to work the same, but "
+"there are important differences. If you would have used MATLAB's ``&`` or ``|"
+"`` operators, you should use the NumPy ufuncs ``logical_and``/"
+"``logical_or``. The notable differences between MATLAB's and NumPy's ``&`` "
+"and ``|`` operators are:"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:610
+msgid ""
+"Non-logical {0,1} inputs: NumPy's output is the bitwise AND of the inputs. "
+"MATLAB treats any non-zero value as 1 and returns the logical AND. For "
+"example ``(3 & 4)`` in NumPy is ``0``, while in MATLAB both ``3`` and ``4`` "
+"are considered logical true and ``(3 & 4)`` returns ``1``."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:616
+msgid ""
+"Precedence: NumPy's & operator is higher precedence than logical operators "
+"like ``<`` and ``>``; MATLAB's is the reverse."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:619
+msgid ""
+"If you know you have boolean arguments, you can get away with using NumPy's "
+"bitwise operators, but be careful with parentheses, like this: ``z = (x > 1) "
+"& (x < 2)``. The absence of NumPy operator forms of ``logical_and`` and "
+"``logical_or`` is an unfortunate consequence of Python's design."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:624
+msgid ""
+"**RESHAPE and LINEAR INDEXING**: MATLAB always allows multi-dimensional "
+"arrays to be accessed using scalar or linear indices, NumPy does not. Linear "
+"indices are common in MATLAB programs, e.g. ``find()`` on a matrix returns "
+"them, whereas NumPy's find behaves differently. When converting MATLAB code "
+"it might be necessary to first reshape a matrix to a linear sequence, "
+"perform some indexing operations and then reshape back. As reshape (usually) "
+"produces views onto the same storage, it should be possible to do this "
+"fairly efficiently. Note that the scan order used by reshape in NumPy "
+"defaults to the 'C' order, whereas MATLAB uses the Fortran order. If you are "
+"simply converting to a linear sequence and back this doesn't matter. But if "
+"you are converting reshapes from MATLAB code which relies on the scan order, "
+"then this MATLAB code: ``z = reshape(x,3,4);`` should become ``z = x."
+"reshape(3,4,order='F').copy()`` in NumPy."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:640
+msgid "'array' or 'matrix'? Which should I use?"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:642
+msgid ""
+"Historically, NumPy has provided a special matrix type, `np.matrix`, which "
+"is a subclass of ndarray which makes binary operations linear algebra "
+"operations. You may see it used in some existing code instead of `np.array`. "
+"So, which one to use?"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:648
+msgid "Short answer"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:650
+msgid "**Use arrays**."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:652
+msgid "They support multidimensional array algebra that is supported in MATLAB"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:653
+msgid ""
+"They are the standard vector/matrix/tensor type of NumPy. Many NumPy "
+"functions return arrays, not matrices."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:655
+msgid ""
+"There is a clear distinction between element-wise operations and linear "
+"algebra operations."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:657
+msgid "You can have standard vectors or row/column vectors if you like."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:659
+msgid ""
+"Until Python 3.5 the only disadvantage of using the array type was that you "
+"had to use ``dot`` instead of ``*`` to multiply (reduce) two tensors (scalar "
+"product, matrix vector multiplication etc.). Since Python 3.5 you can use "
+"the matrix multiplication ``@`` operator."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:664
+msgid "Given the above, we intend to deprecate ``matrix`` eventually."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:667
+msgid "Long answer"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:669
+msgid ""
+"NumPy contains both an ``array`` class and a ``matrix`` class. The ``array`` "
+"class is intended to be a general-purpose n-dimensional array for many kinds "
+"of numerical computing, while ``matrix`` is intended to facilitate linear "
+"algebra computations specifically. In practice there are only a handful of "
+"key differences between the two."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:675
+msgid "Operators ``*`` and ``@``, functions ``dot()``, and ``multiply()``:"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:677
+msgid ""
+"For ``array``, ``*`` **means element-wise multiplication**, while ``@`` "
+"**means matrix multiplication**; they have associated functions "
+"``multiply()`` and ``dot()``."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:680
+msgid ""
+"For ``matrix``, ``*`` **means matrix multiplication**, and for element-wise "
+"multiplication one has to use the ``multiply()`` function."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:683
+msgid "Handling of vectors (one-dimensional arrays)"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:685
+msgid ""
+"For ``array``, the **vector shapes 1xN, Nx1, and N are all different "
+"things**. Operations like ``A[:,1]`` return a one-dimensional array of shape "
+"N, not a two-dimensional array of shape Nx1. Transpose on a one-dimensional "
+"``array`` does nothing."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:689
+msgid ""
+"For ``matrix``, **one-dimensional arrays are always upconverted to 1xN or "
+"Nx1 matrices** (row or column vectors). ``A[:,1]`` returns a two-dimensional "
+"matrix of shape Nx1."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:693
+msgid "Handling of higher-dimensional arrays (ndim > 2)"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:695
+msgid "``array`` objects **can have number of dimensions > 2**;"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:696
+msgid "``matrix`` objects **always have exactly two dimensions**."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:698
+msgid "Convenience attributes"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:700
+msgid ""
+"``array`` **has a .T attribute**, which returns the transpose of the data."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:702
+msgid ""
+"``matrix`` **also has .H, .I, and .A attributes**, which return the "
+"conjugate transpose, inverse, and ``asarray()`` of the matrix, respectively."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:706
+msgid "Convenience constructor"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:708
+msgid ""
+"The ``array`` constructor **takes (nested) Python sequences as "
+"initializers**. As in, ``array([[1,2,3],[4,5,6]])``."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:710
+msgid ""
+"The ``matrix`` constructor additionally **takes a convenient string "
+"initializer**. As in ``matrix(\"[1 2 3; 4 5 6]\")``."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:713
+msgid "There are pros and cons to using both:"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:715
+msgid "``array``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:717
+msgid "``:)`` Element-wise multiplication is easy: ``A*B``."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:718
+msgid ""
+"``:(`` You have to remember that matrix multiplication has its own operator, "
+"``@``."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:720
+msgid ""
+"``:)`` You can treat one-dimensional arrays as *either* row or column "
+"vectors. ``A @ v`` treats ``v`` as a column vector, while ``v @ A`` treats "
+"``v`` as a row vector. This can save you having to type a lot of transposes."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:724
+msgid ""
+"``:)`` ``array`` is the \"default\" NumPy type, so it gets the most testing, "
+"and is the type most likely to be returned by 3rd party code that uses NumPy."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:727
+msgid "``:)`` Is quite at home handling data of any number of dimensions."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:728
+msgid ""
+"``:)`` Closer in semantics to tensor algebra, if you are familiar with that."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:730
+msgid ""
+"``:)`` *All* operations (``*``, ``/``, ``+``, ``-`` etc.) are element-wise."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:732
+msgid ""
+"``:(`` Sparse matrices from ``scipy.sparse`` do not interact as well with "
+"arrays."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:735
+msgid "``matrix``"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:737
+msgid "``:\\\\`` Behavior is more like that of MATLAB matrices."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:738
+msgid ""
+"``<:(`` Maximum of two-dimensional. To hold three-dimensional data you need "
+"``array`` or perhaps a Python list of ``matrix``."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:740
+msgid ""
+"``<:(`` Minimum of two-dimensional. You cannot have vectors. They must be "
+"cast as single-column or single-row matrices."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:742
+msgid ""
+"``<:(`` Since ``array`` is the default in NumPy, some functions may return "
+"an ``array`` even if you give them a ``matrix`` as an argument. This "
+"shouldn't happen with NumPy functions (if it does it's a bug), but 3rd party "
+"code based on NumPy may not honor type preservation like NumPy does."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:747
+msgid ""
+"``:)`` ``A*B`` is matrix multiplication, so it looks just like you write it "
+"in linear algebra (For Python >= 3.5 plain arrays have the same convenience "
+"with the ``@`` operator)."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:750
+msgid ""
+"``<:(`` Element-wise multiplication requires calling a function, "
+"``multiply(A,B)``."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:752
+msgid ""
+"``<:(`` The use of operator overloading is a bit illogical: ``*`` does not "
+"work element-wise but ``/`` does."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:754
+msgid "Interaction with ``scipy.sparse`` is a bit cleaner."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:756
+msgid ""
+"The ``array`` is thus much more advisable to use.  Indeed, we intend to "
+"deprecate ``matrix`` eventually."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:760
+msgid "Customizing your environment"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:762
+msgid ""
+"In MATLAB the main tool available to you for customizing the environment is "
+"to modify the search path with the locations of your favorite functions. You "
+"can put such customizations into a startup script that MATLAB will run on "
+"startup."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:767
+msgid "NumPy, or rather Python, has similar facilities."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:769
+msgid ""
+"To modify your Python search path to include the locations of your own "
+"modules, define the ``PYTHONPATH`` environment variable."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:772
+msgid ""
+"To have a particular script file executed when the interactive Python "
+"interpreter is started, define the ``PYTHONSTARTUP`` environment variable to "
+"contain the name of your startup script."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:776
+msgid ""
+"Unlike MATLAB, where anything on your path can be called immediately, with "
+"Python you need to first do an 'import' statement to make functions in a "
+"particular file accessible."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:780
+msgid ""
+"For example you might make a startup script that looks like this (Note: this "
+"is just an example, not a statement of \"best practices\"):"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:785
+msgid ""
+"# Make all numpy available via shorter 'np' prefix\n"
+"import numpy as np\n"
+"#\n"
+"# Make the SciPy linear algebra functions available as linalg.func()\n"
+"# e.g. linalg.lu, linalg.eig (for general l*B@u==A@u solution)\n"
+"from scipy import linalg\n"
+"#\n"
+"# Define a Hermitian function\n"
+"def hermitian(A, **kwargs):\n"
+"    return np.conj(A,**kwargs).T\n"
+"# Make a shortcut for hermitian:\n"
+"#    hermitian(A) --> H(A)\n"
+"H = hermitian"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:799
+msgid "To use the deprecated `matrix` and other `matlib` functions:"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:803
+msgid ""
+"# Make all matlib functions accessible at the top level via M.func()\n"
+"import numpy.matlib as M\n"
+"# Make some matlib functions accessible directly at the top level via, e.g. "
+"rand(3,3)\n"
+"from numpy.matlib import matrix,rand,zeros,ones,empty,eye"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:809
+msgid "Links"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:811
+msgid ""
+"Another somewhat outdated MATLAB/NumPy cross-reference can be found at "
+"https://mathesaurus.sf.net/"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:814
+msgid ""
+"An extensive list of tools for scientific work with Python can be found in "
+"the `topical software page <https://projects.scipy.org/topical-software."
+"html>`__."
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:817
+msgid ""
+"See `List of Python software: scripting <https://en.wikipedia.org/wiki/"
+"List_of_Python_software#Embedded_as_a_scripting_language>`_ for a list of "
+"software that use Python as a scripting language"
+msgstr ""
+
+#: ../../../user/numpy-for-matlab-users.rst:822
+msgid "MATLAB® and SimuLink® are registered trademarks of The MathWorks, Inc."
+msgstr ""

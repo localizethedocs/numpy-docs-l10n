@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.from_dlpack.rst:4
+msgid "numpy.from\\_dlpack"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.from_dlpack:2
+msgid ""
+"Create a NumPy array from an object implementing the ``__dlpack__`` "
+"protocol. Generally, the returned NumPy array is a view of the input object. "
+"See [Re9eadf7a166b-1]_ and [Re9eadf7a166b-2]_ for more details."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.from_dlpack:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.from_dlpack:11
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.from_dlpack:-1
+msgid "object"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.from_dlpack:10
+msgid ""
+"A Python object that implements the ``__dlpack__`` and ``__dlpack_device__`` "
+"methods."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.from_dlpack:16
+msgid "**device**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.from_dlpack:-1
+msgid "device, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.from_dlpack:14
+msgid ""
+"Device on which to place the created array. Default: ``None``. Must be "
+"``\"cpu\"`` if passed which may allow importing an array that is not already "
+"CPU available."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.from_dlpack:27
+msgid "**copy**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.from_dlpack:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.from_dlpack:19
+msgid ""
+"Boolean indicating whether or not to copy the input. If ``True``, the copy "
+"will be made. If ``False``, the function will never copy, and will raise "
+"``BufferError`` in case a copy is deemed necessary. Passing it requests a "
+"copy from the exporter who may or may not implement the capability. If "
+"``None``, the function will reuse the existing memory buffer if possible and "
+"copy otherwise. Default: ``None``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.from_dlpack:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.from_dlpack:40
+msgid "**out**"
+msgstr "**out**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.from_dlpack:-1
+msgid "ndarray"
+msgstr "ndarray"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.from_dlpack:43
+msgid "References"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.from_dlpack:44
+msgid ""
+"Array API documentation, https://data-apis.org/array-api/latest/"
+"design_topics/data_interchange.html#syntax-for-data-interchange-with-dlpack"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.from_dlpack:47
+msgid ""
+"Python specification for DLPack, https://dmlc.github.io/dlpack/latest/"
+"python_spec.html"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.from_dlpack:52
+msgid "[Re9eadf7a166b-1]_, [Re9eadf7a166b-2]_"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.from_dlpack:55
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.from_dlpack:-1
+msgid ""
+"<div id=\"950ee8d8-eb60-421c-9b0f-0839c65a78ce\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('352f22e9-353c-4b7b-823f-d5da89ba1a11','950ee8d8-"
+"eb60-421c-9b0f-0839c65a78ce')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('352f22e9-353c-4b7b-823f-d5da89ba1a11','950ee8d8-"
+"eb60-421c-9b0f-0839c65a78ce')\">Open In Tab</button></div><div "
+"id=\"20cc60cd-1478-43be-9bed-8427b1a984af\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.from_dlpack:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

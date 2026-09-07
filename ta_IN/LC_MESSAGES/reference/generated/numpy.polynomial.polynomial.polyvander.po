@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.polynomial.polyvander.rst:4
+msgid "numpy.polynomial.polynomial.polyvander"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander:2
+msgid "Vandermonde matrix of given degree."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander:4
+msgid ""
+"Returns the Vandermonde matrix of degree `deg` and sample points `x`. The "
+"Vandermonde matrix is defined by"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander:7
+msgid ""
+"V[..., i] = x^i,\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander:9
+msgid ""
+"where ``0 <= i <= deg``. The leading indices of `V` index the elements of "
+"`x` and the last index is the power of `x`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander:12
+msgid ""
+"If `c` is a 1-D array of coefficients of length ``n + 1`` and `V` is the "
+"matrix ``V = polyvander(x, n)``, then ``np.dot(V, c)`` and ``polyval(x, c)`` "
+"are the same up to roundoff. This equivalence is useful both for least "
+"squares fitting and for the evaluation of a large number of polynomials of "
+"the same degree and sample points."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander:23
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander:21
+msgid ""
+"Array of points. The dtype is converted to float64 or complex128 depending "
+"on whether any of the elements are complex. If `x` is scalar it is converted "
+"to a 1-D array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander:28
+msgid "**deg**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander:-1
+msgid "int"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander:26
+msgid "Degree of the resulting matrix."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander:41
+msgid "**vander**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander:-1
+msgid "ndarray."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander:33
+msgid ""
+"The Vandermonde matrix. The shape of the returned matrix is ``x.shape + (deg "
+"+ 1,)``, where the last index is the power of `x`. The dtype will be the "
+"same as the converted `x`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander:46
+msgid ":obj:`polyvander2d`, :obj:`polyvander3d`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander:52
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander:57
+msgid ""
+"The Vandermonde matrix of degree ``deg = 5`` and sample points ``x = [-1, 2, "
+"3]`` contains the element-wise powers of `x` from 0 to 5 as its columns."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander:-1
+msgid ""
+"<div id=\"d913d70b-d512-4acd-bcb3-c11aada8e893\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('c2854205-cb72-47d1-a588-feca3c21ecf9','d913d70b-"
+"d512-4acd-bcb3-c11aada8e893')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('c2854205-"
+"cb72-47d1-a588-feca3c21ecf9','d913d70b-d512-4acd-bcb3-c11aada8e893')\">Open "
+"In Tab</button></div><div id=\"f7ff2b01-0902-4351-a76e-7e507495e2ea\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

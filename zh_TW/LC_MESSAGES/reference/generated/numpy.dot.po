@@ -1,0 +1,260 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.dot.rst:4
+msgid "numpy.dot"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:2
+msgid "Dot product of two arrays. Specifically,"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:4
+msgid ""
+"If both `a` and `b` are 1-D arrays, it is inner product of vectors (without "
+"complex conjugation)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:7
+msgid ""
+"If both `a` and `b` are 2-D arrays, it is matrix multiplication, but using :"
+"func:`matmul` or ``a @ b`` is preferred."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:10
+msgid ""
+"If either `a` or `b` is 0-D (scalar), it is equivalent to :func:`multiply` "
+"and using ``numpy.multiply(a, b)`` or ``a * b`` is preferred."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:14
+msgid ""
+"If `a` is an N-D array and `b` is a 1-D array, it is a sum product over the "
+"last axis of `a` and `b`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:17
+msgid ""
+"If `a` is an N-D array and `b` is an M-D array (where ``M>=2``), it is a sum "
+"product over the last axis of `a` and the second-to-last axis of `b`::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:21
+msgid "dot(a, b)[i,j,k,m] = sum(a[i,j,:] * b[k,:,m])"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:23
+msgid "It uses an optimized BLAS library when possible (see `numpy.linalg`)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:28
+msgid "**a**"
+msgstr "**a**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:-1
+msgid "array_like"
+msgstr "array_like"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:28
+msgid "First argument."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:31
+msgid "**b**"
+msgstr "**b**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:31
+msgid "Second argument."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:41
+msgid "**out**"
+msgstr "**out**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:-1
+msgid "ndarray, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:34
+msgid ""
+"Output argument. This must have the exact kind that would be returned if it "
+"was not used. In particular, it must have the right type, must be C-"
+"contiguous, and its dtype must be the dtype that would be returned for "
+"`dot(a,b)`. This is a performance feature. Therefore, if these conditions "
+"are not met, an exception is raised, instead of attempting to be flexible."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:52
+msgid "**output**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:-1
+msgid "ndarray"
+msgstr "ndarray"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:46
+msgid ""
+"Returns the dot product of `a` and `b`.  If `a` and `b` are both scalars or "
+"both 1-D arrays then a scalar is returned; otherwise an array is returned. "
+"If `out` is given, then it is returned."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:60
+msgid "ValueError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:57
+msgid ""
+"If the last dimension of `a` is not the same size as the second-to-last "
+"dimension of `b`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:65
+msgid ":obj:`vdot`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:66
+msgid "Complex-conjugating dot product."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:67
+msgid ":obj:`vecdot`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:68
+msgid "Vector dot product of two arrays."
+msgstr "兩個數組的向量點積。"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:69
+msgid ":obj:`tensordot`"
+msgstr ":obj:`tensordot`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:70
+msgid "Sum products over arbitrary axes."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:71
+msgid ":obj:`einsum`"
+msgstr ":obj:`einsum`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:72
+msgid "Einstein summation convention."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:73
+msgid ":obj:`matmul`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:74
+msgid "'@' operator as method with out parameter."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:75
+msgid ":obj:`linalg.multi_dot`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:76
+msgid "Chained dot product."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:82
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:91
+msgid "Neither argument is complex-conjugated:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:96
+msgid "For 2-D arrays it is the matrix product:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:-1
+msgid ""
+"<div id=\"32168711-45fc-45e2-8562-b148c8295e4c\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('c51b5030-59b3-494b-"
+"bfb5-64050b48f727','32168711-45fc-45e2-8562-b148c8295e4c')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('c51b5030-59b3-494b-bfb5-64050b48f727','32168711-45fc-45e2-8562-"
+"b148c8295e4c')\">Open In Tab</button></div><div "
+"id=\"9d1bb65e-0e68-4e9a-9035-072429b9dc52\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.dot:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

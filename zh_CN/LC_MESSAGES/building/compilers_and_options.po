@@ -1,0 +1,159 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../building/compilers_and_options.rst:2
+msgid "Compiler selection and customizing a build"
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:5
+msgid "Selecting a specific compiler"
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:7
+msgid ""
+"Meson supports the standard environment variables ``CC``, ``CXX`` and ``FC`` "
+"to select specific C, C++ and/or Fortran compilers. These environment "
+"variables are documented in `the reference tables in the Meson docs <https://"
+"mesonbuild.com/Reference-tables.html#compiler-and-linker-flag-environment-"
+"variables>`__."
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:12
+msgid ""
+"Note that environment variables only get applied from a clean build, because "
+"they affect the configure stage (i.e., ``meson setup``). An incremental "
+"rebuild does not react to changes in environment variables - you have to run "
+"``git clean -xdf`` and do a full rebuild, or run ``meson setup --"
+"reconfigure``."
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:19
+msgid "Adding a custom compiler or linker flag"
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:21
+msgid ""
+"Meson by design prefers builds being configured through command-line options "
+"passed to ``meson setup``. It provides many built-in options:"
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:24
+msgid ""
+"For enabling a debug build and the optimization level, see the next section "
+"on \"build types\","
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:26
+msgid ""
+"Enabling ``-Werror`` in a portable manner is done via ``-Dwerror=true``,"
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:27
+msgid ""
+"Enabling warning levels is done via ``-Dwarning_level=<val>``, with "
+"``<val>`` one of ``{0, 1, 2, 3, everything}``,"
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:29
+msgid ""
+"There are many other builtin options, from activating Visual Studio (``-"
+"Dvsenv=true``) and building with link time optimization (``-Db_lto``) to "
+"changing the default C++ language level (``-Dcpp_std='c++17'``) or linker "
+"flags (``-Dcpp_link_args='-Wl,-z,defs'``)."
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:34
+msgid ""
+"For a comprehensive overview of options, see `Meson's builtin options docs "
+"page <https://mesonbuild.com/Builtin-options.html>`__."
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:37
+msgid ""
+"Meson also supports the standard environment variables ``CFLAGS``, "
+"``CXXFLAGS``, ``FFLAGS`` and ``LDFLAGS`` to inject extra flags - with the "
+"same caveat as in the previous section about those environment variables "
+"being picked up only for a clean build and not an incremental build."
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:44
+msgid "Using different build types with Meson"
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:46
+msgid ""
+"Meson provides different build types while configuring the project. You can "
+"see the available options for build types in `the \"core options\" section "
+"of the Meson documentation <https://mesonbuild.com/Builtin-options.html#core-"
+"options>`__."
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:50
+msgid ""
+"Assuming that you are building from scratch (do ``git clean -xdf`` if "
+"needed), you can configure the build as following to use the ``debug`` build "
+"type::"
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:53
+msgid "spin build -- -Dbuildtype=debug"
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:55
+msgid ""
+"Now, you can use the ``spin`` interface for further building, installing and "
+"testing NumPy as normal::"
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:58
+msgid "spin test -s linalg"
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:60
+msgid ""
+"This will work because after initial configuration, Meson will remember the "
+"config options."
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:65
+msgid "Controlling build parallelism"
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:67
+msgid ""
+"By default, ``ninja`` will launch ``2*n_cpu + 2``, with ``n_cpu`` the number "
+"of physical CPU cores, parallel build jobs. This is fine in the vast "
+"majority of cases, and results in close to optimal build times. In some "
+"cases, on machines with a small amount of RAM relative to the number of CPU "
+"cores, this leads to a job running out of memory. In case that happens, "
+"lower the number of jobs ``N`` such that you have at least 2 GB RAM per job. "
+"For example, to launch 6 jobs::"
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:74
+msgid "python -m pip install . -Ccompile-args=\"-j6\""
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:76
+msgid "or::"
+msgstr ""
+
+#: ../../../building/compilers_and_options.rst:78
+msgid "spin build -j6"
+msgstr ""

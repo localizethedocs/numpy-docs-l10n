@@ -1,0 +1,316 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../f2py/advanced/boilerplating.rst:5
+msgid "Boilerplate reduction and templating"
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:8
+msgid "Using FYPP for binding generic interfaces"
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:10
+msgid ""
+"``f2py`` doesn't currently support binding interface blocks. However, there "
+"are workarounds in use. Perhaps the best known is the usage of ``tempita`` "
+"for using ``.pyf.src`` files as is done in the bindings which `are part of "
+"scipy`_. `tempita` support has been removed and is no longer recommended in "
+"any case."
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:16
+msgid ""
+"The reason interfaces cannot be supported within ``f2py`` itself is because "
+"they don't correspond to exported symbols in compiled libraries."
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:19
+msgid ""
+"❯ nm gen.o\n"
+" 0000000000000078 T __add_mod_MOD_add_complex\n"
+" 0000000000000000 T __add_mod_MOD_add_complex_dp\n"
+" 0000000000000150 T __add_mod_MOD_add_integer\n"
+" 0000000000000124 T __add_mod_MOD_add_real\n"
+" 00000000000000ee T __add_mod_MOD_add_real_dp"
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:28
+msgid ""
+"Here we will discuss a few techniques to leverage ``f2py`` in conjunction "
+"with `fypp`_ to emulate generic interfaces and to ease the binding of "
+"multiple (similar) functions."
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:34
+msgid "Basic example: Addition module"
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:36
+msgid ""
+"Let us build on the example (from the user guide, :ref:`f2py-examples`) of a "
+"subroutine which takes in two arrays and returns its sum."
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:39
+msgid ""
+"C\n"
+"      SUBROUTINE ZADD(A,B,C,N)\n"
+"C\n"
+"      DOUBLE COMPLEX A(*)\n"
+"      DOUBLE COMPLEX B(*)\n"
+"      DOUBLE COMPLEX C(*)\n"
+"      INTEGER N\n"
+"      DO 20 J = 1, N\n"
+"         C(J) = A(J)+B(J)\n"
+" 20   CONTINUE\n"
+"      END\n"
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:43
+msgid "We will recast this into modern fortran:"
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:45
+msgid ""
+"module adder\n"
+"    implicit none\n"
+"contains\n"
+"\n"
+"    subroutine zadd(a, b, c, n)\n"
+"        integer, intent(in) :: n\n"
+"        double complex, intent(in) :: a(n), b(n)\n"
+"        double complex, intent(out) :: c(n)\n"
+"        integer :: j\n"
+"        do j = 1, n\n"
+"            c(j) = a(j) + b(j)\n"
+"        end do\n"
+"    end subroutine zadd\n"
+"\n"
+"end module adder\n"
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:48
+msgid ""
+"We could go on as in the original example, adding intents by hand among "
+"other things, however in production often there are other concerns. For one, "
+"we can template via FYPP the construction of similar functions:"
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:52
+msgid ""
+"module adder\n"
+"    implicit none\n"
+"contains\n"
+"\n"
+"#:def add_subroutine(dtype_prefix, dtype)\n"
+"    subroutine ${dtype_prefix}$add(a, b, c, n)\n"
+"        integer, intent(in) :: n\n"
+"        ${dtype}$, intent(in) :: a(n), b(n)\n"
+"        ${dtype}$ :: c(n)\n"
+"        integer :: j\n"
+"        do j = 1, n\n"
+"            c(j) = a(j) + b(j)\n"
+"        end do\n"
+"    end subroutine ${dtype_prefix}$add\n"
+"\n"
+"#:enddef\n"
+"\n"
+"#:for dtype_prefix, dtype in [('i', 'integer'), ('s', 'real'), ('d', "
+"'real(kind=8)'), ('c', 'complex'), ('z', 'double complex')]\n"
+"    @:add_subroutine(${dtype_prefix}$, ${dtype}$)\n"
+"#:endfor\n"
+"\n"
+"end module adder\n"
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:54
+msgid "This can be pre-processed to generate the full fortran code:"
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:56
+msgid "❯ fypp gen_adder.f90.fypp > adder.f90"
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:60
+msgid "As to be expected, this can be wrapped by ``f2py`` subsequently."
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:62
+msgid ""
+"Now we will consider maintaining the bindings in a separate file. Note the "
+"following basic ``.pyf`` which can be generated for a single subroutine via "
+"``f2py -m adder adder_base.f90 -h adder.pyf``:"
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:65
+msgid ""
+"!    -*- f90 -*-\n"
+"! Note: the context of this file is case sensitive.\n"
+"\n"
+"python module adder ! in\n"
+"    interface  ! in :adder\n"
+"        module adder ! in :adder:adder_base.f90\n"
+"            subroutine zadd(a,b,c,n) ! in :adder:adder_base.f90:adder\n"
+"                double complex dimension(n),intent(in) :: a\n"
+"                double complex dimension(n),intent(in),depend(n) :: b\n"
+"                double complex dimension(n),intent(out),depend(n) :: c\n"
+"                integer, optional,intent(in),check(shape(a, 0) == n),"
+"depend(a) :: n=shape(a, 0)\n"
+"            end subroutine zadd\n"
+"        end module adder\n"
+"    end interface\n"
+"end python module adder\n"
+"\n"
+"! This file was auto-generated with f2py (version:2.0.0.dev0+git20240101."
+"bab7280).\n"
+"! See:\n"
+"! https://web.archive.org/web/20140822061353/http://cens.ioc.ee/projects/"
+"f2py2e\n"
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:68
+msgid "With the docstring:"
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:70
+msgid ""
+"c = zadd(a,b,[n])\n"
+"\n"
+"Wrapper for ``zadd``.\n"
+"\n"
+"Parameters\n"
+"----------\n"
+"a : input rank-1 array('D') with bounds (n)\n"
+"b : input rank-1 array('D') with bounds (n)\n"
+"\n"
+"Other Parameters\n"
+"----------------\n"
+"n : input int, optional\n"
+"    Default: shape(a, 0)\n"
+"\n"
+"Returns\n"
+"-------\n"
+"c : rank-1 array('D') with bounds (n)\n"
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:73
+msgid ""
+"Which is already pretty good. However, ``n`` should never be passed in the "
+"first place so we will make some minor adjustments."
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:76
+msgid ""
+"!    -*- f90 -*-\n"
+"! Note: the context of this file is case sensitive.\n"
+"\n"
+"python module adder ! in\n"
+"    interface  ! in :adder\n"
+"        module adder ! in :adder:adder_base.f90\n"
+"            subroutine zadd(a,b,c,n) ! in :adder:adder_base.f90:adder\n"
+"                integer intent(hide),depend(a) :: n=len(a)\n"
+"                double complex dimension(n),intent(in) :: a\n"
+"                double complex dimension(n),intent(in),depend(n) :: b\n"
+"                double complex dimension(n),intent(out),depend(n) :: c\n"
+"            end subroutine zadd\n"
+"        end module adder\n"
+"    end interface\n"
+"end python module adder\n"
+"\n"
+"! This file was auto-generated with f2py (version:2.0.0.dev0+git20240101."
+"bab7280).\n"
+"! See:\n"
+"! https://numpy.org/doc/stable/f2py/\n"
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:79
+msgid "Which corresponds to:"
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:81
+msgid ""
+"In [3]: ?adder.adder.zadd\n"
+"Call signature: adder.adder.zadd(*args, **kwargs)\n"
+"Type:           fortran\n"
+"String form:    <fortran function zadd>\n"
+"Docstring:\n"
+"c = zadd(a,b)\n"
+"\n"
+"Wrapper for ``zadd``.\n"
+"\n"
+"Parameters\n"
+"----------\n"
+"a : input rank-1 array('D') with bounds (n)\n"
+"b : input rank-1 array('D') with bounds (n)\n"
+"\n"
+"Returns\n"
+"-------\n"
+"c : rank-1 array('D') with bounds (n)\n"
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:84
+msgid ""
+"Finally, we can template over this in a similar manner, to attain the "
+"original goal of having bindings which make use of ``f2py`` directives and "
+"have minimal spurious repetition."
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:88
+msgid ""
+"!    -*- f90 -*-\n"
+"! Note: the context of this file is case sensitive.\n"
+"\n"
+"python module adder ! in\n"
+"    interface  ! in :adder\n"
+"        module adder ! in :adder:adder_base.f90\n"
+"#:def add_subroutine(dtype_prefix, dtype)\n"
+"            subroutine ${dtype_prefix}$add(a,b,c,n) ! in :adder:adder_base."
+"f90:adder\n"
+"                integer intent(hide),depend(a) :: n=len(a)\n"
+"                ${dtype}$ dimension(n),intent(in) :: a\n"
+"                ${dtype}$ dimension(n),intent(in),depend(n) :: b\n"
+"                ${dtype}$ dimension(n),intent(out),depend(n) :: c\n"
+"            end subroutine ${dtype_prefix}$add\n"
+"\n"
+"#:enddef\n"
+"\n"
+"#:for dtype_prefix, dtype in [('i', 'integer'), ('s', 'real'), ('d', "
+"'real(kind=8)'), ('c', 'complex'), ('z', 'complex(kind=8)')]\n"
+"    @:add_subroutine(${dtype_prefix}$, ${dtype}$)\n"
+"#:endfor\n"
+"        end module adder\n"
+"    end interface\n"
+"end python module adder\n"
+"\n"
+"! This file was auto-generated with f2py (version:2.0.0.dev0+git20240101."
+"bab7280).\n"
+"! See:\n"
+"! https://numpy.org/doc/stable/f2py/\n"
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:90
+msgid "Usage boils down to:"
+msgstr ""
+
+#: ../../../f2py/advanced/boilerplating.rst:92
+msgid ""
+"fypp gen_adder.f90.fypp > adder.f90\n"
+"fypp adder.pyf.fypp > adder.pyf\n"
+"f2py -m adder -c adder.pyf adder.f90 --backend meson"
+msgstr ""
