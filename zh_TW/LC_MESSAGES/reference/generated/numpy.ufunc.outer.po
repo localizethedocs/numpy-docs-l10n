@@ -1,0 +1,184 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.ufunc.outer.rst:4
+msgid "numpy.ufunc.outer"
+msgstr ""
+
+#: ../../../reference/generated/numpy.ufunc.outer.rst:8
+msgid "method"
+msgstr "方法"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:2
+msgid "Apply the ufunc `op` to all pairs (a, b) with a in `A` and b in `B`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:4
+msgid ""
+"Let ``M = A.ndim``, ``N = B.ndim``. Then the result, `C`, of ``op.outer(A, "
+"B)`` is an array of dimension M + N such that:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:7
+msgid ""
+"C[i_0, ..., i_{M-1}, j_0, ..., j_{N-1}] =\n"
+"op(A[i_0, ..., i_{M-1}], B[j_0, ..., j_{N-1}])\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:10
+msgid "For `A` and `B` one-dimensional, this is equivalent to::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:12
+msgid ""
+"r = empty(len(A),len(B))\n"
+"for i in range(len(A)):\n"
+"    for j in range(len(B)):\n"
+"        r[i,j] = op(A[i], B[j])  # op = ufunc in question"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:20
+msgid "**A**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:-1
+msgid "array_like"
+msgstr "array_like"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:20
+msgid "First array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:23
+msgid "**B**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:23
+msgid "Second array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:29
+msgid "**kwargs**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:-1
+msgid "any"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:26
+msgid ""
+"Arguments to pass on to the ufunc. Typically `dtype` or `out`. See `ufunc` "
+"for a comprehensive overview of all available arguments."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:40
+msgid "**r**"
+msgstr "**r**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:-1
+msgid "ndarray"
+msgstr "ndarray"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:34
+msgid "Output array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:45
+msgid ":obj:`numpy.outer`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:46
+msgid ""
+"A less powerful version of ``np.multiply.outer`` that `ravel`\\ s all inputs "
+"to 1D. This exists primarily for compatibility with old code."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:47
+msgid ":obj:`tensordot`"
+msgstr ":obj:`tensordot`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:48
+msgid ""
+"``np.tensordot(a, b, axes=((), ()))`` and ``np.multiply.outer(a, b)`` behave "
+"same for all dimensions of a and b."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:54
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:64
+msgid "A multi-dimensional example:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:-1
+msgid ""
+"<div id=\"733a7f07-4720-4739-afd6-23092e9d628f\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('cca11932-8131-430d-a850-"
+"c24a4d5bf791','733a7f07-4720-4739-afd6-23092e9d628f')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('cca11932-8131-430d-a850-c24a4d5bf791','733a7f07-4720-4739-"
+"afd6-23092e9d628f')\">Open In Tab</button></div><div id=\"dcd8b6f9-"
+"e0ed-476b-9978-a321a44ac7c9\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.outer:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

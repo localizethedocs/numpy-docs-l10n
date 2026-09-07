@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.hermite_e.hermegrid3d.rst:4
+msgid "numpy.polynomial.hermite\\_e.hermegrid3d"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermegrid3d:2
+msgid "Evaluate a 3-D HermiteE series on the Cartesian product of x, y, and z."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermegrid3d:4
+msgid "This function returns the values:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermegrid3d:6
+msgid ""
+"p(a,b,c) = \\sum_{i,j,k} c_{i,j,k} * He_i(a) * He_j(b) * He_k(c)\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermegrid3d:8
+msgid ""
+"where the points ``(a, b, c)`` consist of all triples formed by taking `a` "
+"from `x`, `b` from `y`, and `c` from `z`. The resulting points form a grid "
+"with `x` in the first dimension, `y` in the second, and `z` in the third."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermegrid3d:13
+msgid ""
+"The parameters `x`, `y`, and `z` are converted to arrays only if they are "
+"tuples or a lists, otherwise they are treated as a scalars. In either case, "
+"either `x`, `y`, and `z` or their elements must support multiplication and "
+"addition both with themselves and with the elements of `c`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermegrid3d:19
+msgid ""
+"If `c` has fewer than three dimensions, ones are implicitly appended to its "
+"shape to make it 3-D. The shape of the result will be c.shape[3:] + x.shape "
+"+ y.shape + z.shape."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermegrid3d:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermegrid3d:30
+msgid "**x, y, z**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermegrid3d:-1
+msgid "array_like, compatible objects"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermegrid3d:26
+msgid ""
+"The three dimensional series is evaluated at the points in the Cartesian "
+"product of `x`, `y`, and `z`.  If `x`, `y`, or `z` is a list or tuple, it is "
+"first converted to an ndarray, otherwise it is left unchanged and, if it "
+"isn't an ndarray, it is treated as a scalar."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermegrid3d:38
+msgid "**c**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermegrid3d:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermegrid3d:33
+msgid ""
+"Array of coefficients ordered so that the coefficients for terms of degree i,"
+"j are contained in ``c[i,j]``. If `c` has dimension greater than two the "
+"remaining indices enumerate multiple sets of coefficients."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermegrid3d:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermegrid3d:50
+msgid "**values**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermegrid3d:-1
+msgid "ndarray, compatible object"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermegrid3d:43
+msgid ""
+"The values of the two dimensional polynomial at points in the Cartesian "
+"product of `x` and `y`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/hermite_e.py:docstring
+#: of numpy.polynomial.hermite_e.hermegrid3d:55
+msgid ""
+":obj:`hermeval`, :obj:`hermeval2d`, :obj:`hermegrid2d`, :obj:`hermeval3d`"
+msgstr ""

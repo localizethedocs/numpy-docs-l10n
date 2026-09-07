@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/bit_generators/generated/numpy.random.SeedSequence.rst:2
+msgid "numpy.random.SeedSequence"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:2
+msgid ""
+"SeedSequence mixes sources of entropy in a reproducible way to set the "
+"initial state for independent and very probably non-overlapping "
+"BitGenerators."
+msgstr ""
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:6
+msgid ""
+"Once the SeedSequence is instantiated, you can call the `generate_state` "
+"method to get an appropriately sized seed. Calling `spawn(n) <spawn>` will "
+"create ``n`` SeedSequences that can be used to seed independent "
+"BitGenerators, i.e. for different threads."
+msgstr ""
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:15
+#: numpy.random.bit_generator.SeedSequence:36
+msgid "**entropy**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:-1
+msgid "{None, int, sequence[int]}, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:14
+msgid ""
+"The entropy for creating a `SeedSequence`. All integer values must be non-"
+"negative."
+msgstr ""
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:21
+#: numpy.random.bit_generator.SeedSequence:48
+msgid "**spawn_key**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:-1
+msgid "{(), sequence[int]}, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:18
+msgid ""
+"An additional source of entropy based on the position of this `SeedSequence` "
+"in the tree of such objects created with the `SeedSequence.spawn` method. "
+"Typically, only `SeedSequence.spawn` will set this, and users will not."
+msgstr ""
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:27
+#: numpy.random.bit_generator.SeedSequence:45
+msgid "**pool_size**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:-1
+msgid "{int}, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:24
+msgid ""
+"Size of the pooled entropy to store. Default is 4 to give a 128-bit entropy "
+"pool. 8 (for 256 bits) is another reasonable choice if working with larger "
+"PRNGs, but there is very little to be gained by selecting another value."
+msgstr ""
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:31
+#: numpy.random.bit_generator.SeedSequence:39
+msgid "**n_children_spawned**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:30
+msgid ""
+"The number of children already spawned. Only pass this if reconstructing a "
+"`SeedSequence` from a serialized form."
+msgstr ""
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:0
+msgid "Attributes"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:42
+msgid "**pool**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:51
+msgid "**state**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:54
+msgid "Methods"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random.bit_generator.SeedSequence:68:<autosummary>:1
+msgid ""
+":py:obj:`generate_state <numpy.random.SeedSequence.generate_state>`\\ "
+"\\(n\\_words\\[\\, dtype\\]\\)"
+msgstr ""
+":py:obj:`generate_state <numpy.random.SeedSequence.generate_state>`\\ "
+"\\(n\\_words\\[\\, dtype\\]\\)"
+
+#: ../../../../docstring of
+#: numpy.random.bit_generator.SeedSequence:68:<autosummary>:1
+msgid "Return the requested number of words for PRNG seeding."
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random.bit_generator.SeedSequence:68:<autosummary>:1
+msgid ":py:obj:`spawn <numpy.random.SeedSequence.spawn>`\\ \\(n\\_children\\)"
+msgstr ":py:obj:`spawn <numpy.random.SeedSequence.spawn>`\\ \\(n\\_children\\)"
+
+#: ../../../../docstring of
+#: numpy.random.bit_generator.SeedSequence:68:<autosummary>:1
+msgid "Spawn a number of child `SeedSequence` s by extending the `spawn_key`."
+msgstr ""
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:70
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.bit_generator.SeedSequence:71
+msgid ""
+"Best practice for achieving reproducible bit streams is to use the default "
+"``None`` for the initial entropy, and then use `SeedSequence.entropy` to log/"
+"pickle the `entropy` for reproducibility:"
+msgstr ""

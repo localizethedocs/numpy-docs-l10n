@@ -1,0 +1,332 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.load.rst:4
+msgid "numpy.load"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:2
+msgid ""
+"Load arrays or pickled objects from ``.npy``, ``.npz`` or pickled files."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:4
+msgid ""
+"Loading files that contain object arrays uses the ``pickle`` module, which "
+"is not secure against erroneous or maliciously constructed data. Consider "
+"passing ``allow_pickle=False`` to load data that is known not to contain "
+"object arrays for the safer handling of untrusted sources."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:16
+msgid "**file**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:-1
+msgid "file-like object, string, or pathlib.Path"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:13
+msgid ""
+"The file to read. File-like objects must support the ``seek()`` and "
+"``read()`` methods and must always be opened in binary mode.  Pickled files "
+"require that the file-like object support the ``readline()`` method as well."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:24
+msgid "**mmap_mode**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:-1
+msgid "{None, 'r+', 'r', 'w+', 'c'}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:19
+msgid ""
+"If not None, then memory-map the file, using the given mode (see `numpy."
+"memmap` for a detailed description of the modes).  A memory-mapped array is "
+"kept on disk. However, it can be accessed and sliced like any ndarray.  "
+"Memory mapping is especially useful for accessing small fragments of large "
+"files without reading the entire file into memory."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:30
+msgid "**allow_pickle**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:27
+msgid ""
+"Allow loading pickled object arrays stored in npy files. Reasons for "
+"disallowing pickles include security, as loading pickled data can execute "
+"arbitrary code. If pickles are disallowed, loading object arrays will fail. "
+"Default: False"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:36
+msgid "**fix_imports**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:33
+msgid ""
+"Only useful when loading Python 2 generated pickled files, which includes "
+"npy/npz files containing object arrays. If `fix_imports` is True, pickle "
+"will try to map the old Python 2 names to the new names used in Python 3."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:43
+msgid "**encoding**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:-1
+msgid "str, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:39
+msgid ""
+"What encoding to use when reading Python 2 strings. Only useful when loading "
+"Python 2 generated pickled files, which includes npy/npz files containing "
+"object arrays. Values other than 'latin1', 'ASCII', and 'bytes' are not "
+"allowed, as they can corrupt numerical data. Default: 'ASCII'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:52
+msgid "**max_header_size**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:46
+msgid ""
+"Maximum allowed size of the header.  Large headers may not be safe to load "
+"securely and thus require explicitly passing a larger value. See :py:func:"
+"`ast.literal_eval()` for details. This option is ignored when `allow_pickle` "
+"is passed.  In that case the file is by definition trusted and the limit is "
+"unnecessary."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:61
+msgid "**result**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:-1
+msgid "array, tuple, dict, etc."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:57
+msgid ""
+"Data stored in the file. For ``.npz`` files, the returned instance of "
+"NpzFile class must be closed to avoid leaking file descriptors."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:66
+msgid "OSError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:66
+msgid "If the input file does not exist or cannot be read."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:69
+msgid "UnpicklingError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:69
+msgid "If ``allow_pickle=True``, but the file cannot be loaded as a pickle."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:72
+msgid "ValueError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:72
+msgid "The file contains an object array, but ``allow_pickle=False`` given."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:78
+msgid "EOFError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:75
+msgid ""
+"When calling ``np.load`` multiple times on the same file handle, if all data "
+"has already been read"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:83
+msgid ":obj:`save`, :obj:`savez`, :obj:`savez_compressed`, :obj:`loadtxt`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:85
+msgid ":obj:`memmap`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:86
+msgid "Create a memory-map to an array stored in a file on disk."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:87
+msgid ":obj:`lib.format.open_memmap`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:88
+msgid "Create or load a memory-mapped ``.npy`` file."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:92
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:93
+msgid ""
+"If the file contains pickle data, then whatever object is stored in the "
+"pickle is returned."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:95
+msgid "If the file is a ``.npy`` file, then a single array is returned."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:96
+msgid ""
+"If the file is a ``.npz`` file, then a dictionary-like object is returned, "
+"containing ``{filename: array}`` key-value pairs, one for each file in the "
+"archive."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:99
+msgid ""
+"If the file is a ``.npz`` file, the returned value supports the context "
+"manager protocol in a similar fashion to the open function::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:102
+msgid ""
+"with load('foo.npz') as data:\n"
+"    a = data['a']"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:105
+msgid "The underlying file descriptor is closed when exiting the 'with' block."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:110
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:117
+msgid "Store data to disk, and load it again:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:124
+msgid "Store compressed data to disk, and load it again:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:137
+msgid ""
+"Mem-map the stored array, and then access the second row directly from disk:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:-1
+msgid ""
+"<div id=\"6ece7c47-d6fe-46f0-bb48-f365d3a27e37\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('ba0cb4ec-e9a6-437f-a4cd-3adb7be84f28','6ece7c47-"
+"d6fe-46f0-bb48-f365d3a27e37')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('ba0cb4ec-"
+"e9a6-437f-a4cd-3adb7be84f28','6ece7c47-d6fe-46f0-bb48-f365d3a27e37')\">Open "
+"In Tab</button></div><div id=\"be92bdb4-c817-4a4a-b6ea-7a1244fdac19\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.load:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

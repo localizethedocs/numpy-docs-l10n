@@ -1,0 +1,215 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.busday_count.rst:4
+msgid "numpy.busday\\_count"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:2
+msgid ""
+"Counts the number of valid days between `begindates` and `enddates`, not "
+"including the day of `enddates`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:5
+msgid ""
+"If ``enddates`` specifies a date value that is earlier than the "
+"corresponding ``begindates`` date value, the count will be negative."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:11
+msgid "**begindates**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:-1
+msgid "array_like of datetime64[D]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:11
+msgid "The array of the first dates for counting."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:15
+msgid "**enddates**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:14
+msgid ""
+"The array of the end dates for counting, which are excluded from the count "
+"themselves."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:23
+msgid "**weekmask**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:-1
+msgid "str or array_like of bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:18
+msgid ""
+"A seven-element array indicating which of Monday through Sunday are valid "
+"days. May be specified as a length-seven list or array, like "
+"[1,1,1,1,1,0,0]; a length-seven string, like '1111100'; or a string like "
+"\"Mon Tue Wed Thu Fri\", made up of 3-character abbreviations for weekdays, "
+"optionally separated by white space. Valid abbreviations are: Mon Tue Wed "
+"Thu Fri Sat Sun"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:29
+msgid "**holidays**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:-1
+msgid "array_like of datetime64[D], optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:26
+msgid ""
+"An array of dates to consider as invalid dates.  They may be specified in "
+"any order, and NaT (not-a-time) dates are ignored. This list is saved in a "
+"normalized form that is suited for fast calculations of valid days."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:34
+msgid "**busdaycal**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:-1
+msgid "busdaycalendar, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:32
+msgid ""
+"A `busdaycalendar` object which specifies the valid days. If this parameter "
+"is provided, neither weekmask nor holidays may be provided."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:39 numpy.busday_count:52
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:-1
+msgid "array of int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:37
+msgid "If provided, this array is filled with the result."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:-1
+msgid "array of int"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:44
+msgid ""
+"An array with a shape from broadcasting ``begindates`` and ``enddates`` "
+"together, containing the number of valid days between the begin and end "
+"dates."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:57
+msgid ":obj:`busdaycalendar`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:58
+msgid "An object that specifies a custom set of valid days."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:59
+msgid ":obj:`is_busday`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:60
+msgid "Returns a boolean array indicating valid days."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:61
+msgid ":obj:`busday_offset`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:62
+msgid "Applies an offset counted in valid days."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:68
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:-1
+msgid ""
+"<div id=\"75221f26-67e2-4363-a6cb-31fbdc1983fd\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('8d8ee122-bf30-4ed6-ae13-"
+"a0f0016a3d97','75221f26-67e2-4363-a6cb-31fbdc1983fd')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('8d8ee122-bf30-4ed6-ae13-a0f0016a3d97','75221f26-67e2-4363-"
+"a6cb-31fbdc1983fd')\">Open In Tab</button></div><div "
+"id=\"3905fb3c-00f8-4f64-83e4-1bbec9e7ca5e\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.busday_count:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

@@ -1,0 +1,330 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.block.rst:4
+msgid "numpy.block"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:2
+msgid "Assemble an nd-array from nested lists of blocks."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:4
+msgid ""
+"Blocks in the innermost lists are concatenated (see `concatenate`) along the "
+"last dimension (-1), then these are concatenated along the second-last "
+"dimension (-2), and so on until the outermost list is reached."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:8
+msgid ""
+"Blocks can be of any dimension, but will not be broadcasted using the normal "
+"rules. Instead, leading axes of size 1 are inserted, to make ``block.ndim`` "
+"the same for all blocks. This is primarily useful for working with scalars, "
+"and means that code like ``np.block([v, 1])`` is valid, where ``v.ndim == "
+"1``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:14
+msgid ""
+"When the nested list is two levels deep, this allows block matrices to be "
+"constructed from their components."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:27
+msgid "**arrays**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:-1
+msgid "nested list of array_like or scalars (but not tuples)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:20
+msgid ""
+"If passed a single ndarray or scalar (a nested list of depth 0), this is "
+"returned unmodified (and not copied)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:23
+msgid ""
+"Elements shapes must match along the appropriate axes (without "
+"broadcasting), but leading 1s will be prepended to the shape as necessary to "
+"make the dimensions match."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:40
+msgid "**block_array**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:-1
+msgid "ndarray"
+msgstr "ndarray"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:32
+msgid "The array assembled from the given blocks."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:34
+msgid "The dimensionality of the output is equal to the greatest of:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:36
+msgid "the dimensionality of all the inputs"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:37
+msgid "the depth to which the input list is nested"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:49
+msgid "ValueError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:45
+msgid ""
+"If list depths are mismatched - for instance, ``[[a, b], c]`` is illegal, "
+"and should be spelt ``[[a, b], [c]]``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:47
+msgid "If lists are empty - for instance, ``[[a, b], []]``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:54
+msgid ":obj:`concatenate`"
+msgstr ":obj:`concatenate`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:55
+msgid "Join a sequence of arrays along an existing axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:56
+msgid ":obj:`stack`"
+msgstr ":obj:`stack`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:57
+msgid "Join a sequence of arrays along a new axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:58
+msgid ":obj:`vstack`"
+msgstr ":obj:`vstack`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:59
+msgid "Stack arrays in sequence vertically (row wise)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:60
+msgid ":obj:`hstack`"
+msgstr ":obj:`hstack`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:61
+msgid "Stack arrays in sequence horizontally (column wise)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:62
+msgid ":obj:`dstack`"
+msgstr ":obj:`dstack`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:63
+msgid "Stack arrays in sequence depth wise (along third axis)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:64
+msgid ":obj:`column_stack`"
+msgstr ":obj:`column_stack`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:65
+msgid "Stack 1-D arrays as columns into a 2-D array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:66
+msgid ":obj:`vsplit`"
+msgstr ":obj:`vsplit`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:67
+msgid "Split an array into multiple sub-arrays vertically (row-wise)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:68
+msgid ":obj:`unstack`"
+msgstr ":obj:`unstack`"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:69
+msgid "Split an array into a tuple of sub-arrays along an axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:73
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:74
+msgid ""
+"When called with only scalars, ``np.block`` is equivalent to an ndarray "
+"call. So ``np.block([[1, 2], [3, 4]])`` is equivalent to ``np.array([[1, 2], "
+"[3, 4]])``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:78
+msgid ""
+"This function does not enforce that the blocks lie on a fixed grid. ``np."
+"block([[a, b], [c, d]])`` is not restricted to arrays of the form::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:81
+msgid ""
+"AAAbb\n"
+"AAAbb\n"
+"cccDD"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:85
+msgid "But is also allowed to produce, for some ``a, b, c, d``::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:87
+msgid ""
+"AAAbb\n"
+"AAAbb\n"
+"cDDDD"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:91
+msgid ""
+"Since concatenation happens along the last axis first, `block` is *not* "
+"capable of producing the following directly::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:94
+msgid ""
+"AAAbb\n"
+"cccbb\n"
+"cccDD"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:98
+msgid ""
+"Matlab's \"square bracket stacking\", ``[A, B, ...; p, q, ...]``, is "
+"equivalent to ``np.block([[A, B, ...], [p, q, ...]])``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:103
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:108
+msgid "The most common use of this function is to build a block matrix:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:123
+msgid "With a list of depth 1, `block` can be used as `hstack`:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:139
+msgid "With a list of depth 2, `block` can be used in place of `vstack`:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:155
+msgid "It can also be used in place of `atleast_1d` and `atleast_2d`:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:-1
+msgid ""
+"<div id=\"f43d4a5b-864e-43de-a238-62920e58577f\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('9921e232-4901-48a4-"
+"ab42-00ce58091096','f43d4a5b-864e-43de-a238-62920e58577f')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('9921e232-4901-48a4-ab42-00ce58091096','f43d4a5b-864e-43de-"
+"a238-62920e58577f')\">Open In Tab</button></div><div id=\"404686cd-38a5-49c0-"
+"a611-c52fdfa468ae\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.block:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

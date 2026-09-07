@@ -1,0 +1,702 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release/1.26.0-notes.rst:5
+msgid "NumPy 1.26.0 Release Notes"
+msgstr "NumPy 1.26.0 發行備註"
+
+#: ../../../release/1.26.0-notes.rst:7
+msgid ""
+"The NumPy 1.26.0 release is a continuation of the 1.25.x release cycle with "
+"the addition of Python 3.12.0 support. Python 3.12 dropped distutils, "
+"consequently supporting it required finding a replacement for the setup.py/"
+"distutils based build system NumPy was using. We have chosen to use the "
+"Meson build system instead, and this is the first NumPy release supporting "
+"it. This is also the first release that supports Cython 3.0 in addition to "
+"retaining 0.29.X compatibility. Supporting those two upgrades was a large "
+"project, over 100 files have been touched in this release. The changelog "
+"doesn't capture the full extent of the work, special thanks to Ralf Gommers, "
+"Sayed Adel, Stéfan van der Walt, and Matti Picus who did much of the work in "
+"the main development branch."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:18
+msgid "The highlights of this release are:"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:20
+msgid "Python 3.12.0 support."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:21
+msgid "Cython 3.0.0 compatibility."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:22
+msgid "Use of the Meson build system"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:23
+msgid "Updated SIMD support"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:24
+msgid "f2py fixes, meson and bind(x) support"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:25 ../../../release/1.26.0-notes.rst:44
+msgid "Support for the updated Accelerate BLAS/LAPACK library"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:27
+msgid "The Python versions supported in this release are 3.9-3.12."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:31
+msgid "New Features"
+msgstr "新功能"
+
+#: ../../../release/1.26.0-notes.rst:34
+msgid "Array API v2022.12 support in ``numpy.array_api``"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:36
+msgid ""
+"``numpy.array_api`` now full supports the `v2022.12 version <https://data-"
+"apis.org/array-api/2022.12>`__ of the array API standard. Note that this "
+"does not yet include the optional ``fft`` extension in the standard."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:41
+msgid "(`gh-23789 <https://github.com/numpy/numpy/pull/23789>`__)"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:45
+msgid ""
+"Support for the updated Accelerate BLAS/LAPACK library, including ILP64 (64-"
+"bit integer) support, in macOS 13.3 has been added. This brings arm64 "
+"support, and significant performance improvements of up to 10x for commonly "
+"used linear algebra operations. When Accelerate is selected at build time, "
+"the 13.3+ version will automatically be used if available."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:51
+msgid "(`gh-24053 <https://github.com/numpy/numpy/pull/24053>`__)"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:54
+msgid "``meson`` backend for ``f2py``"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:55
+msgid ""
+"``f2py`` in compile mode (i.e. ``f2py -c``) now accepts the ``--backend "
+"meson`` option. This is the default option for Python ``3.12`` on-wards. "
+"Older versions will still default to ``--backend distutils``."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:59
+msgid ""
+"To support this in realistic use-cases, in compile mode ``f2py`` takes a ``--"
+"dep`` flag one or many times which maps to ``dependency()`` calls in the "
+"``meson`` backend, and does nothing in the ``distutils`` backend."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:63
+msgid ""
+"There are no changes for users of ``f2py`` only as a code generator, i.e. "
+"without ``-c``."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:66
+msgid "(`gh-24532 <https://github.com/numpy/numpy/pull/24532>`__)"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:69
+msgid "``bind(c)`` support for ``f2py``"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:70
+msgid ""
+"Both functions and subroutines can be annotated with ``bind(c)``. ``f2py`` "
+"will handle both the correct type mapping, and preserve the unique label for "
+"other ``C`` interfaces."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:74
+msgid ""
+"**Note:** ``bind(c, name = 'routine_name_other_than_fortran_routine')`` is "
+"not honored by the ``f2py`` bindings by design, since ``bind(c)`` with the "
+"``name`` is meant to guarantee only the same name in ``C`` and ``Fortran``, "
+"not in ``Python`` and ``Fortran``."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:79 ../../../release/1.26.0-notes.rst:91
+msgid "(`gh-24555 <https://github.com/numpy/numpy/pull/24555>`__)"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:83
+msgid "Improvements"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:86
+msgid "``iso_c_binding`` support for ``f2py``"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:87
+msgid ""
+"Previously, users would have to define their own custom ``f2cmap`` file to "
+"use type mappings defined by the Fortran2003 ``iso_c_binding`` intrinsic "
+"module. These type maps are now natively supported by ``f2py``"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:95
+msgid "Build system changes"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:97
+msgid ""
+"In this release, NumPy has switched to Meson as the build system and meson-"
+"python as the build backend. Installing NumPy or building a wheel can be "
+"done with standard tools like ``pip`` and ``pypa/build``. The following are "
+"supported:"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:102
+msgid ""
+"Regular installs: ``pip install numpy`` or (in a cloned repo) ``pip install ."
+"``"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:104
+msgid "Building a wheel: ``python -m build`` (preferred), or ``pip wheel .``"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:105
+msgid "Editable installs: ``pip install -e . --no-build-isolation``"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:106
+msgid ""
+"Development builds through the custom CLI implemented with `spin <https://"
+"github.com/scientific-python/spin>`__: ``spin build``."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:109
+msgid ""
+"All the regular ``pip`` and ``pypa/build`` flags (e.g., ``--no-build-"
+"isolation``) should work as expected."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:113
+msgid "NumPy-specific build customization"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:115
+msgid ""
+"Many of the NumPy-specific ways of customizing builds have changed. The "
+"``NPY_*`` environment variables which control BLAS/LAPACK, SIMD, threading, "
+"and other such options are no longer supported, nor is a ``site.cfg`` file "
+"to select BLAS and LAPACK. Instead, there are command-line flags that can be "
+"passed to the build via ``pip``/``build``'s config-settings interface. These "
+"flags are all listed in the ``meson_options.txt`` file in the root of the "
+"repo. Detailed documented will be available before the final 1.26.0 release; "
+"for now please see `the SciPy \"building from source\" docs <http://scipy."
+"github.io/devdocs/building/index.html>`__ since most build customization "
+"works in an almost identical way in SciPy as it does in NumPy."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:127
+msgid "Build dependencies"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:129
+msgid ""
+"While the runtime dependencies of NumPy have not changed, the build "
+"dependencies have. Because we temporarily vendor Meson and meson-python, "
+"there are several new dependencies - please see the ``[build-system]`` "
+"section of ``pyproject.toml`` for details."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:135
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:137
+msgid ""
+"This build system change is quite large. In case of unexpected issues, it is "
+"still possible to use a ``setup.py``-based build as a temporary workaround "
+"(on Python 3.9-3.11, not 3.12), by copying ``pyproject.toml.setuppy`` to "
+"``pyproject.toml``. However, please open an issue with details on the NumPy "
+"issue tracker. We aim to phase out ``setup.py`` builds as soon as possible, "
+"and therefore would like to see all potential blockers surfaced early on in "
+"the 1.26.0 release cycle."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:147
+msgid "Contributors"
+msgstr "貢獻者"
+
+#: ../../../release/1.26.0-notes.rst:149
+msgid ""
+"A total of 20 people contributed to this release.  People with a \"+\" by "
+"their names contributed a patch for the first time."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:152
+msgid "@DWesl"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:153
+msgid "Albert Steppi +"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:154
+msgid "Bas van Beek"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:155
+msgid "Charles Harris"
+msgstr "Charles Harris"
+
+#: ../../../release/1.26.0-notes.rst:156
+msgid "Developer-Ecosystem-Engineering"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:157
+msgid "Filipe Laíns +"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:158
+msgid "Jake Vanderplas"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:159
+msgid "Liang Yan +"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:160
+msgid "Marten van Kerkwijk"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:161
+msgid "Matti Picus"
+msgstr "Matti Picus"
+
+#: ../../../release/1.26.0-notes.rst:162
+msgid "Melissa Weber Mendonça"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:163
+msgid "Namami Shanker"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:164
+msgid "Nathan Goldbaum"
+msgstr "Nathan Goldbaum"
+
+#: ../../../release/1.26.0-notes.rst:165
+msgid "Ralf Gommers"
+msgstr "Ralf Gommers"
+
+#: ../../../release/1.26.0-notes.rst:166
+msgid "Rohit Goswami"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:167
+msgid "Sayed Adel"
+msgstr "Sayed Adel"
+
+#: ../../../release/1.26.0-notes.rst:168
+msgid "Sebastian Berg"
+msgstr "Sebastian Berg"
+
+#: ../../../release/1.26.0-notes.rst:169
+msgid "Stefan van der Walt"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:170
+msgid "Tyler Reddy"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:171
+msgid "Warren Weckesser"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:175
+msgid "Pull requests merged"
+msgstr "合併拉取請求"
+
+#: ../../../release/1.26.0-notes.rst:177
+msgid "A total of 59 pull requests were merged for this release."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:179
+msgid ""
+"`#24305 <https://github.com/numpy/numpy/pull/24305>`__: MAINT: Prepare 1.26."
+"x branch for development"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:180
+msgid ""
+"`#24308 <https://github.com/numpy/numpy/pull/24308>`__: MAINT: Massive "
+"update of files from main for numpy 1.26"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:181
+msgid ""
+"`#24322 <https://github.com/numpy/numpy/pull/24322>`__: CI: fix wheel builds "
+"on the 1.26.x branch"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:182
+msgid ""
+"`#24326 <https://github.com/numpy/numpy/pull/24326>`__: BLD: update openblas "
+"to newer version"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:183
+msgid ""
+"`#24327 <https://github.com/numpy/numpy/pull/24327>`__: TYP: Trim down the "
+"``_NestedSequence.__getitem__`` signature"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:184
+msgid ""
+"`#24328 <https://github.com/numpy/numpy/pull/24328>`__: BUG: fix choose "
+"refcount leak"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:185
+msgid ""
+"`#24337 <https://github.com/numpy/numpy/pull/24337>`__: TST: fix running the "
+"test suite in builds without BLAS/LAPACK"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:186
+msgid ""
+"`#24338 <https://github.com/numpy/numpy/pull/24338>`__: BUG: random: Fix "
+"generation of nan by dirichlet."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:187
+msgid ""
+"`#24340 <https://github.com/numpy/numpy/pull/24340>`__: MAINT: Dependabot "
+"updates from main"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:188
+msgid ""
+"`#24342 <https://github.com/numpy/numpy/pull/24342>`__: MAINT: Add back "
+"NPY_RUN_MYPY_IN_TESTSUITE=1"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:189
+msgid ""
+"`#24353 <https://github.com/numpy/numpy/pull/24353>`__: MAINT: Update "
+"``extbuild.py`` from main."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:190
+msgid ""
+"`#24356 <https://github.com/numpy/numpy/pull/24356>`__: TST: fix distutils "
+"tests for deprecations in recent setuptools..."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:191
+msgid ""
+"`#24375 <https://github.com/numpy/numpy/pull/24375>`__: MAINT: Update "
+"cibuildwheel to version 2.15.0"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:192
+msgid ""
+"`#24381 <https://github.com/numpy/numpy/pull/24381>`__: MAINT: Fix "
+"codespaces setup.sh script"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:193
+msgid ""
+"`#24403 <https://github.com/numpy/numpy/pull/24403>`__: ENH: Vendor meson "
+"for multi-target build support"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:194
+msgid ""
+"`#24404 <https://github.com/numpy/numpy/pull/24404>`__: BLD: vendor meson-"
+"python to make the Windows builds with SIMD..."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:195
+msgid ""
+"`#24405 <https://github.com/numpy/numpy/pull/24405>`__: BLD, SIMD: The meson "
+"CPU dispatcher implementation"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:196
+msgid ""
+"`#24406 <https://github.com/numpy/numpy/pull/24406>`__: MAINT: Remove "
+"versioneer"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:197
+msgid ""
+"`#24409 <https://github.com/numpy/numpy/pull/24409>`__: REL: Prepare for the "
+"NumPy 1.26.0b1 release."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:198
+msgid ""
+"`#24453 <https://github.com/numpy/numpy/pull/24453>`__: MAINT: Pin upper "
+"version of sphinx."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:199
+msgid ""
+"`#24455 <https://github.com/numpy/numpy/pull/24455>`__: ENH: Add prefix to "
+"_ALIGN Macro"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:200
+msgid ""
+"`#24456 <https://github.com/numpy/numpy/pull/24456>`__: BUG: cleanup "
+"warnings [skip azp][skip circle][skip travis][skip..."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:201
+msgid ""
+"`#24460 <https://github.com/numpy/numpy/pull/24460>`__: MAINT: Upgrade to "
+"spin 0.5"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:202
+msgid ""
+"`#24495 <https://github.com/numpy/numpy/pull/24495>`__: BUG: ``asv dev`` has "
+"been removed, use ``asv run``."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:203
+msgid ""
+"`#24496 <https://github.com/numpy/numpy/pull/24496>`__: BUG: Fix meson build "
+"failure due to unchanged inplace auto-generated..."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:204
+msgid ""
+"`#24521 <https://github.com/numpy/numpy/pull/24521>`__: BUG: fix issue with "
+"git-version script, needs a shebang to run"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:205
+msgid ""
+"`#24522 <https://github.com/numpy/numpy/pull/24522>`__: BUG: Use a default "
+"assignment for git_hash [skip ci]"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:206
+msgid ""
+"`#24524 <https://github.com/numpy/numpy/pull/24524>`__: BUG: fix "
+"NPY_cast_info error handling in choose"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:207
+msgid ""
+"`#24526 <https://github.com/numpy/numpy/pull/24526>`__: BUG: Fix common "
+"block handling in f2py"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:208
+msgid ""
+"`#24541 <https://github.com/numpy/numpy/pull/24541>`__: CI,TYP: Bump mypy to "
+"1.4.1"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:209
+msgid ""
+"`#24542 <https://github.com/numpy/numpy/pull/24542>`__: BUG: Fix assumed "
+"length f2py regression"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:210
+msgid ""
+"`#24544 <https://github.com/numpy/numpy/pull/24544>`__: MAINT: Harmonize "
+"fortranobject"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:211
+msgid ""
+"`#24545 <https://github.com/numpy/numpy/pull/24545>`__: TYP: add kind "
+"argument to numpy.isin type specification"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:212
+msgid ""
+"`#24561 <https://github.com/numpy/numpy/pull/24561>`__: BUG: fix comparisons "
+"between masked and unmasked structured arrays"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:213
+msgid ""
+"`#24590 <https://github.com/numpy/numpy/pull/24590>`__: CI: Exclude import "
+"libraries from list of DLLs on Cygwin."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:214
+msgid ""
+"`#24591 <https://github.com/numpy/numpy/pull/24591>`__: BLD: fix "
+"``_umath_linalg`` dependencies"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:215
+msgid ""
+"`#24594 <https://github.com/numpy/numpy/pull/24594>`__: MAINT: Stop testing "
+"on ppc64le."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:216
+msgid ""
+"`#24602 <https://github.com/numpy/numpy/pull/24602>`__: BLD: meson-cpu: fix "
+"SIMD support on platforms with no features"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:217
+msgid ""
+"`#24606 <https://github.com/numpy/numpy/pull/24606>`__: BUG: Change Cython "
+"``binding`` directive to \"False\"."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:218
+msgid ""
+"`#24613 <https://github.com/numpy/numpy/pull/24613>`__: ENH: Adopt new macOS "
+"Accelerate BLAS/LAPACK Interfaces, including..."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:219
+msgid ""
+"`#24614 <https://github.com/numpy/numpy/pull/24614>`__: DOC: Update building "
+"docs to use Meson"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:220
+msgid ""
+"`#24615 <https://github.com/numpy/numpy/pull/24615>`__: TYP: Add the missing "
+"``casting`` keyword to ``np.clip``"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:221
+msgid ""
+"`#24616 <https://github.com/numpy/numpy/pull/24616>`__: TST: convert cython "
+"test from setup.py to meson"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:222
+msgid ""
+"`#24617 <https://github.com/numpy/numpy/pull/24617>`__: MAINT: Fixup "
+"``fromnumeric.pyi``"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:223
+msgid ""
+"`#24622 <https://github.com/numpy/numpy/pull/24622>`__: BUG, ENH: Fix "
+"``iso_c_binding`` type maps and fix ``bind(c)``..."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:224
+msgid ""
+"`#24629 <https://github.com/numpy/numpy/pull/24629>`__: TYP: Allow "
+"``binary_repr`` to accept any object implementing..."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:225
+msgid ""
+"`#24630 <https://github.com/numpy/numpy/pull/24630>`__: TYP: Explicitly "
+"declare ``dtype`` and ``generic`` hashable"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:226
+msgid ""
+"`#24637 <https://github.com/numpy/numpy/pull/24637>`__: ENH: Refactor the "
+"typing \"reveal\" tests using `typing.assert_type`"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:227
+msgid ""
+"`#24638 <https://github.com/numpy/numpy/pull/24638>`__: MAINT: Bump actions/"
+"checkout from 3.6.0 to 4.0.0"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:228
+msgid ""
+"`#24647 <https://github.com/numpy/numpy/pull/24647>`__: ENH: ``meson`` "
+"backend for ``f2py``"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:229
+msgid ""
+"`#24648 <https://github.com/numpy/numpy/pull/24648>`__: MAINT: Refactor "
+"partial load Workaround for Clang"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:230
+msgid ""
+"`#24653 <https://github.com/numpy/numpy/pull/24653>`__: REL: Prepare for the "
+"NumPy 1.26.0rc1 release."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:231
+msgid ""
+"`#24659 <https://github.com/numpy/numpy/pull/24659>`__: BLD: allow "
+"specifying the long double format to avoid the runtime..."
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:232
+msgid ""
+"`#24665 <https://github.com/numpy/numpy/pull/24665>`__: BLD: fix bug in "
+"random.mtrand extension, don't link libnpyrandom"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:233
+msgid ""
+"`#24675 <https://github.com/numpy/numpy/pull/24675>`__: BLD: build wheels "
+"for 32-bit Python on Windows, using MSVC"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:234
+msgid ""
+"`#24700 <https://github.com/numpy/numpy/pull/24700>`__: BLD: fix issue with "
+"compiler selection during cross compilation"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:235
+msgid ""
+"`#24701 <https://github.com/numpy/numpy/pull/24701>`__: BUG: Fix data stmt "
+"handling for complex values in f2py"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:236
+msgid ""
+"`#24707 <https://github.com/numpy/numpy/pull/24707>`__: TYP: Add annotations "
+"for the py3.12 buffer protocol"
+msgstr ""
+
+#: ../../../release/1.26.0-notes.rst:237
+msgid ""
+"`#24718 <https://github.com/numpy/numpy/pull/24718>`__: DOC: fix a few doc "
+"build issues on 1.26.x and update `spin docs`..."
+msgstr ""

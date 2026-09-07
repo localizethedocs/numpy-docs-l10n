@@ -1,0 +1,687 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/c-api/coremath.rst:2
+msgid "NumPy core math library"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:4
+msgid ""
+"This library contains most math-related C99 functionality, which can be used "
+"on platforms where C99 is not well supported. The core math functions have "
+"the same API as the C99 ones, except for the ``npy_*`` prefix."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:8
+msgid ""
+"The available functions are defined in ``<numpy/npy_math.h>`` - please refer "
+"to this header when in doubt."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:13
+msgid ""
+"An effort is underway to make ``npymath`` smaller (since C99 compatibility "
+"of compilers has improved over time) and more easily vendorable or usable as "
+"a header-only dependency. That will avoid problems with shipping a static "
+"library built with a compiler which may not match the compiler used by a "
+"downstream package or end user. See `gh-20880 <https://github.com/numpy/"
+"numpy/issues/20880>`__ for details."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:21
+msgid "Floating point classification"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:25
+msgid ""
+"This macro is defined to a NaN (Not a Number), and is guaranteed to have the "
+"signbit unset ('positive' NaN). The corresponding single and extension "
+"precision macro are available with the suffix F and L."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:31
+msgid ""
+"This macro is defined to a positive inf. The corresponding single and "
+"extension precision macro are available with the suffix F and L."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:36
+msgid ""
+"This macro is defined to positive zero. The corresponding single and "
+"extension precision macro are available with the suffix F and L."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:41
+msgid ""
+"This macro is defined to negative zero (that is with the sign bit set). The "
+"corresponding single and extension precision macro are available with the "
+"suffix F and L."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:47
+msgid ""
+"This is an alias for C99 isnan: works for single, double and extended "
+"precision, and return a non 0 value if x is a NaN."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:52
+msgid ""
+"This is an alias for C99 isfinite: works for single, double and extended "
+"precision, and return a non 0 value if x is neither a NaN nor an infinity."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:58
+msgid ""
+"This is an alias for C99 isinf: works for single, double and extended "
+"precision, and return a non 0 value if x is infinite (positive and negative)."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:64
+msgid ""
+"This is an alias for C99 signbit: works for single, double and extended "
+"precision, and return a non 0 value if x has the signbit set (that is the "
+"number is negative)."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:70
+msgid ""
+"This is an alias for  C99 copysign: return x with the same sign as y. Works "
+"for any value, including inf and nan. Single and extended precisions are "
+"available with suffix f and l."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:75
+msgid "Useful math constants"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:77
+msgid ""
+"The following math constants are available in ``npy_math.h``. Single and "
+"extended precision are also available by adding the ``f`` and ``l`` suffixes "
+"respectively."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:83
+msgid "Base of natural logarithm (:math:`e`)"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:87
+msgid ""
+"Logarithm to base 2 of the Euler constant (:math:`\\frac{\\ln(e)}{\\ln(2)}`)"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:91
+msgid ""
+"Logarithm to base 10 of the Euler constant (:math:`\\frac{\\ln(e)}{\\ln(10)}"
+"`)"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:95
+msgid "Natural logarithm of 2 (:math:`\\ln(2)`)"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:99
+msgid "Natural logarithm of 10 (:math:`\\ln(10)`)"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:103
+msgid "Pi (:math:`\\pi`)"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:107
+msgid "Pi divided by 2 (:math:`\\frac{\\pi}{2}`)"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:111
+msgid "Pi divided by 4 (:math:`\\frac{\\pi}{4}`)"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:115
+msgid "Reciprocal of pi (:math:`\\frac{1}{\\pi}`)"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:119
+msgid "Two times the reciprocal of pi (:math:`\\frac{2}{\\pi}`)"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:123
+msgid "The Euler constant"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:124
+msgid ""
+":math:`\\lim_{n\\rightarrow\\infty}({\\sum_{k=1}^n{\\frac{1}{k}}-\\ln n})`"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:127
+msgid "Low-level floating point manipulation"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:129
+msgid "Those can be useful for precise floating point comparison."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:133
+msgid ""
+"This is an alias to C99 nextafter: return next representable floating point "
+"value from x in the direction of y. Single and extended precisions are "
+"available with suffix f and l."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:139
+msgid ""
+"This is a function equivalent to Fortran intrinsic. Return distance between "
+"x and next representable floating point value from x, e.g. spacing(1) == "
+"eps. spacing of nan and +/- inf return nan. Single and extended precisions "
+"are available with suffix f and l."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:146
+msgid "Set the divide by zero floating point exception"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:150
+msgid "Set the overflow floating point exception"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:154
+msgid "Set the underflow floating point exception"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:158
+msgid "Set the invalid floating point exception"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:162
+msgid ""
+"Get floating point status. Returns a bitmask with following possible flags:"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:164
+#: ../../../reference/c-api/coremath.rst:182
+msgid "NPY_FPE_DIVIDEBYZERO"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:165
+#: ../../../reference/c-api/coremath.rst:183
+msgid "NPY_FPE_OVERFLOW"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:166
+#: ../../../reference/c-api/coremath.rst:184
+msgid "NPY_FPE_UNDERFLOW"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:167
+#: ../../../reference/c-api/coremath.rst:185
+msgid "NPY_FPE_INVALID"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:169
+msgid ""
+"Note that :c:func:`npy_get_floatstatus_barrier` is preferable as it prevents "
+"aggressive compiler optimizations reordering the call relative to the code "
+"setting the status, which could lead to incorrect results."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:175
+msgid ""
+"Get floating point status. A pointer to a local variable is passed in to "
+"prevent aggressive compiler optimizations from reordering this function call "
+"relative to the code setting the status, which could lead to incorrect "
+"results."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:180
+msgid "Returns a bitmask with following possible flags:"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:189
+msgid "Clears the floating point status. Returns the previous status mask."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:191
+msgid ""
+"Note that :c:func:`npy_clear_floatstatus_barrier` is preferable as it "
+"prevents aggressive compiler optimizations reordering the call relative to "
+"the code setting the status, which could lead to incorrect results."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:197
+msgid ""
+"Clears the floating point status. A pointer to a local variable is passed in "
+"to prevent aggressive compiler optimizations from reordering this function "
+"call. Returns the previous status mask."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:204
+msgid "Support for complex numbers"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:206
+msgid ""
+"C99-like complex functions have been added. Those can be used if you wish to "
+"implement portable C extensions. Since NumPy 2.0 we use C99 complex types as "
+"the underlying type:"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:210
+msgid ""
+"typedef double _Complex npy_cdouble;\n"
+"typedef float _Complex npy_cfloat;\n"
+"typedef long double _Complex npy_clongdouble;"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:216
+msgid ""
+"MSVC does not support the ``_Complex`` type itself, but has added support "
+"for the C99 ``complex.h`` header by providing its own implementation. Thus, "
+"under MSVC, the equivalent MSVC types will be used:"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:220
+msgid ""
+"typedef _Dcomplex npy_cdouble;\n"
+"typedef _Fcomplex npy_cfloat;\n"
+"typedef _Lcomplex npy_clongdouble;"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:226
+msgid ""
+"Because MSVC still does not support C99 syntax for initializing a complex "
+"number, you need to restrict to C90-compatible syntax, e.g.:"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:229
+msgid ""
+"/* a = 1 + 2i \\*/\n"
+"npy_complex a = npy_cpack(1, 2);\n"
+"npy_complex b;\n"
+"\n"
+"b = npy_log(a);"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:237
+msgid ""
+"A few utilities have also been added in ``numpy/npy_math.h``, in order to "
+"retrieve or set the real or the imaginary part of a complex number:"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:241
+msgid ""
+"npy_cdouble c;\n"
+"npy_csetreal(&c, 1.0);\n"
+"npy_csetimag(&c, 0.0);\n"
+"printf(\"%d + %di\\n\", npy_creal(c), npy_cimag(c));"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:250
+msgid ""
+"The underlying C types for all of numpy's complex types have been changed to "
+"use C99 complex types. Up until now the following was being used to "
+"represent complex types:"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:254
+msgid ""
+"typedef struct { double real, imag; } npy_cdouble;\n"
+"typedef struct { float real, imag; } npy_cfloat;\n"
+"typedef struct {npy_longdouble real, imag;} npy_clongdouble;"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:260
+msgid ""
+"Using the ``struct`` representation ensured that complex numbers could be "
+"used on all platforms, even the ones without support for built-in complex "
+"types. It also meant that a static library had to be shipped together with "
+"NumPy to provide a C99 compatibility layer for downstream packages to use. "
+"In recent years however, support for native complex types has been improved "
+"immensely, with MSVC adding built-in support for the ``complex.h`` header in "
+"2019."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:267
+msgid ""
+"To ease cross-version compatibility, macros that use the new set APIs have "
+"been added."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:270
+msgid ""
+"#define NPY_CSETREAL(z, r) npy_csetreal(z, r)\n"
+"#define NPY_CSETIMAG(z, i) npy_csetimag(z, i)"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:275
+msgid ""
+"A compatibility layer is also provided in ``numpy/npy_2_complexcompat.h``. "
+"It checks whether the macros exist, and falls back to the 1.x syntax in case "
+"they don't."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:279
+msgid ""
+"#include <numpy/npy_math.h>\n"
+"\n"
+"#ifndef NPY_CSETREALF\n"
+"#define NPY_CSETREALF(c, r) (c)->real = (r)\n"
+"#endif\n"
+"#ifndef NPY_CSETIMAGF\n"
+"#define NPY_CSETIMAGF(c, i) (c)->imag = (i)\n"
+"#endif"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:290
+msgid ""
+"We suggest all downstream packages that need this functionality to copy-"
+"paste the compatibility layer code into their own sources and use that, so "
+"that they can continue to support both NumPy 1.x and 2.x without issues. "
+"Note also that the ``complex.h`` header is included in ``numpy/npy_common."
+"h``, which makes ``complex`` a reserved keyword."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:299
+msgid "Linking against the core math library in an extension"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:301
+msgid ""
+"To use the core math library that NumPy ships as a static library in your "
+"own Python extension, you need to add the ``npymath`` compile and link "
+"options to your extension. The exact steps to take will depend on the build "
+"system you are using. The generic steps to take are:"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:306
+msgid ""
+"Add the numpy include directory (= the value of ``np.get_include()``) to "
+"your include directories,"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:308
+msgid ""
+"The ``npymath`` static library resides in the ``lib`` directory right next "
+"to numpy's include directory (i.e., ``pathlib.Path(np.get_include()) / "
+"'..' / 'lib'``). Add that to your library search directories,"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:311
+msgid "Link with ``libnpymath`` and ``libm``."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:315
+msgid ""
+"Keep in mind that when you are cross compiling, you must use the ``numpy`` "
+"for the platform you are building for, not the native one for the build "
+"machine. Otherwise you pick up a static library built for the wrong "
+"architecture."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:320
+msgid "When you are building with `Meson <https://mesonbuild.com>`__, use::"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:322
+msgid ""
+"# Note that this will get easier in the future, when Meson has\n"
+"# support for numpy built in; most of this can then be replaced\n"
+"# by `dependency('numpy')`.\n"
+"incdir_numpy = run_command(py3,\n"
+"  [\n"
+"    '-c',\n"
+"    'import os; os.chdir(\"..\"); import numpy; print(numpy.get_include())'\n"
+"  ],\n"
+"  check: true\n"
+").stdout().strip()\n"
+"\n"
+"inc_np = include_directories(incdir_numpy)\n"
+"\n"
+"cc = meson.get_compiler('c')\n"
+"npymath_path = incdir_numpy / '..' / 'lib'\n"
+"npymath_lib = cc.find_library('npymath', dirs: npymath_path)\n"
+"\n"
+"py3.extension_module('module_name',\n"
+"  ...\n"
+"  include_directories: inc_np,\n"
+"  dependencies: [npymath_lib],"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:345
+msgid "Half-precision functions"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:347
+msgid ""
+"The header file ``<numpy/halffloat.h>`` provides functions to work with IEEE "
+"754-2008 16-bit floating point values. While this format is not typically "
+"used for numerical computations, it is useful for storing values which "
+"require floating point but do not need much precision. It can also be used "
+"as an educational tool to understand the nature of floating point round-off "
+"error."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:354
+msgid ""
+"Like for other types, NumPy includes a typedef npy_half for the 16 bit "
+"float.  Unlike for most of the other types, you cannot use this as a normal "
+"type in C, since it is a typedef for npy_uint16.  For example, 1.0 looks "
+"like 0x3c00 to C, and if you do an equality comparison between the different "
+"signed zeros, you will get -0.0 != 0.0 (0x8000 != 0x0000), which is "
+"incorrect."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:361
+msgid ""
+"For these reasons, NumPy provides an API to work with npy_half values "
+"accessible by including ``<numpy/halffloat.h>`` and linking to ``npymath``. "
+"For functions that are not provided directly, such as the arithmetic "
+"operations, the preferred method is to convert to float or double and back "
+"again, as in the following example."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:367
+msgid ""
+"npy_half sum(int n, npy_half *array) {\n"
+"    float ret = 0;\n"
+"    while(n--) {\n"
+"        ret += npy_half_to_float(*array++);\n"
+"    }\n"
+"    return npy_float_to_half(ret);\n"
+"}"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:377
+msgid "External Links:"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:379
+msgid "`754-2008 IEEE Standard for Floating-Point Arithmetic`__"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:380
+msgid "`Half-precision Float Wikipedia Article`__."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:381
+msgid "`OpenGL Half Float Pixel Support`__"
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:382
+msgid "`The OpenEXR image format`__."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:391
+#: ../../../reference/c-api/coremath.rst:395
+msgid "This macro is defined to positive zero."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:399
+msgid "This macro is defined to negative zero."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:403
+msgid "This macro is defined to 1.0."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:407
+msgid "This macro is defined to -1.0."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:411
+msgid "This macro is defined to +inf."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:415
+msgid "This macro is defined to -inf."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:419
+msgid ""
+"This macro is defined to a NaN value, guaranteed to have its sign bit unset."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:423
+msgid "Converts a half-precision float to a single-precision float."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:427
+msgid "Converts a half-precision float to a double-precision float."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:431
+msgid ""
+"Converts a single-precision float to a half-precision float.  The value is "
+"rounded to the nearest representable half, with ties going to the nearest "
+"even.  If the value is too small or too big, the system's floating point "
+"underflow or overflow bit will be set."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:438
+msgid ""
+"Converts a double-precision float to a half-precision float.  The value is "
+"rounded to the nearest representable half, with ties going to the nearest "
+"even.  If the value is too small or too big, the system's floating point "
+"underflow or overflow bit will be set."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:445
+msgid "Compares two half-precision floats (h1 == h2)."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:449
+msgid "Compares two half-precision floats (h1 != h2)."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:453
+msgid "Compares two half-precision floats (h1 <= h2)."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:457
+msgid "Compares two half-precision floats (h1 < h2)."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:461
+msgid "Compares two half-precision floats (h1 >= h2)."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:465
+msgid "Compares two half-precision floats (h1 > h2)."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:469
+msgid ""
+"Compares two half-precision floats that are known to not be NaN (h1 == h2).  "
+"If a value is NaN, the result is undefined."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:474
+msgid ""
+"Compares two half-precision floats that are known to not be NaN (h1 < h2).  "
+"If a value is NaN, the result is undefined."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:479
+msgid ""
+"Compares two half-precision floats that are known to not be NaN (h1 <= h2).  "
+"If a value is NaN, the result is undefined."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:484
+msgid ""
+"Tests whether the half-precision float has a value equal to zero.  This may "
+"be slightly faster than calling npy_half_eq(h, NPY_ZERO)."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:489
+msgid "Tests whether the half-precision float is a NaN."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:493
+msgid "Tests whether the half-precision float is plus or minus Inf."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:497
+msgid "Tests whether the half-precision float is finite (not NaN or Inf)."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:501
+msgid "Returns 1 is h is negative, 0 otherwise."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:505
+msgid ""
+"Returns the value of x with the sign bit copied from y.  Works for any "
+"value, including Inf and NaN."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:510
+msgid ""
+"This is the same for half-precision float as npy_spacing and npy_spacingf "
+"described in the low-level floating point section."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:515
+msgid ""
+"This is the same for half-precision float as npy_nextafter and "
+"npy_nextafterf described in the low-level floating point section."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:520
+msgid ""
+"Low-level function which converts a 32-bit single-precision float, stored as "
+"a uint32, into a 16-bit half-precision float."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:525
+msgid ""
+"Low-level function which converts a 64-bit double-precision float, stored as "
+"a uint64, into a 16-bit half-precision float."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:530
+msgid ""
+"Low-level function which converts a 16-bit half-precision float into a 32-"
+"bit single-precision float, stored as a uint32."
+msgstr ""
+
+#: ../../../reference/c-api/coremath.rst:535
+msgid ""
+"Low-level function which converts a 16-bit half-precision float into a 64-"
+"bit double-precision float, stored as a uint64."
+msgstr ""

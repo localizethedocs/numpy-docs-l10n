@@ -1,0 +1,187 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.polynomial.polyvander2d.rst:4
+msgid "numpy.polynomial.polynomial.polyvander2d"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:2
+msgid "Pseudo-Vandermonde matrix of given degrees."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:4
+msgid ""
+"Returns the pseudo-Vandermonde matrix of degrees `deg` and sample points "
+"``(x, y)``. The pseudo-Vandermonde matrix is defined by"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:7
+msgid ""
+"V[..., (deg[1] + 1)*i + j] = x^i * y^j,\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:9
+msgid ""
+"where ``0 <= i <= deg[0]`` and ``0 <= j <= deg[1]``. The leading indices of "
+"`V` index the points ``(x, y)`` and the last index encodes the powers of `x` "
+"and `y`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:13
+msgid ""
+"If ``V = polyvander2d(x, y, [xdeg, ydeg])``, then the columns of `V` "
+"correspond to the elements of a 2-D coefficient array `c` of shape (xdeg + "
+"1, ydeg + 1) in the order"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:17
+msgid ""
+"c_{00}, c_{01}, c_{02}, ... , c_{10}, c_{11}, c_{12}, ...\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:19
+msgid ""
+"and ``np.dot(V, c.flat)`` and ``polyval2d(x, y, c)`` will be the same up to "
+"roundoff. This equivalence is useful both for least squares fitting and for "
+"the evaluation of a large number of 2-D polynomials of the same degrees and "
+"sample points."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:30
+msgid "**x, y**"
+msgstr "**x, y**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:-1
+msgid "array_like"
+msgstr "array_like"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:27
+msgid ""
+"Arrays of point coordinates, all of the same shape. The dtypes will be "
+"converted to either float64 or complex128 depending on whether any of the "
+"elements are complex. Scalars are converted to 1-D arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:35
+msgid "**deg**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:-1
+msgid "list of ints"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:33
+msgid "List of maximum degrees of the form [x_deg, y_deg]."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:48
+msgid "**vander2d**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:-1
+msgid "ndarray"
+msgstr "ndarray"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:40
+msgid ""
+"The shape of the returned matrix is ``x.shape + (order,)``, where :math:"
+"`order = (deg[0]+1)*(deg[1]+1)`.  The dtype will be the same as the "
+"converted `x` and `y`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:53
+msgid ""
+":obj:`polyvander`, :obj:`polyvander3d`, :obj:`polyval2d`, :obj:`polyval3d`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:59
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:66
+msgid ""
+"The 2-D pseudo-Vandermonde matrix of degree ``[1, 2]`` and sample points ``x "
+"= [-1, 2]`` and ``y = [1, 3]`` is as follows:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:79
+msgid "We can verify the columns for any ``0 <= i <= m`` and ``0 <= j <= n``:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:85
+msgid ""
+"The (1D) Vandermonde matrix of sample points ``x`` and degree ``m`` is a "
+"special case of the (2D) pseudo-Vandermonde matrix with ``y`` points all "
+"zero and degree ``[m, 0]``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:-1
+msgid ""
+"<div id=\"943537fc-8f9c-4607-b7b4-e4b20193509b\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('978a926d-7f48-4566-"
+"bf14-92600a842822','943537fc-8f9c-4607-b7b4-e4b20193509b')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('978a926d-7f48-4566-bf14-92600a842822','943537fc-8f9c-4607-b7b4-"
+"e4b20193509b')\">Open In Tab</button></div><div id=\"761f0297-0efa-430a-aa0e-"
+"f45e6e7c8648\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvander2d:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""
