@@ -1,0 +1,224 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.matmul.rst:4
+msgid "numpy.matmul"
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:2
+msgid "Matrix product of two arrays."
+msgstr "兩個陣列的矩陣乘積。"
+
+#: ../../../../docstring of numpy.matmul:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../docstring of numpy.matmul:8
+msgid "**x1, x2**"
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:-1
+msgid "array_like"
+msgstr "array_like"
+
+#: ../../../../docstring of numpy.matmul:8
+msgid "Input arrays, scalars not allowed."
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:13
+msgid "**out**"
+msgstr "**out**"
+
+#: ../../../../docstring of numpy.matmul:-1
+msgid "ndarray, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:11
+msgid ""
+"A location into which the result is stored. If provided, it must have a "
+"shape that matches the signature `(n,k),(k,m)->(n,m)`. If not provided or "
+"None, a freshly-allocated array is returned."
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:20
+msgid "**\\*\\*kwargs**"
+msgstr "**\\*\\*kwargs**"
+
+#: ../../../../docstring of numpy.matmul:16
+msgid ""
+"For other keyword-only arguments, see the :ref:`ufunc docs <ufuncs.kwargs>`."
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:19
+msgid "Now handles ufunc kwargs"
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../docstring of numpy.matmul:29
+msgid "**y**"
+msgstr "**y**"
+
+#: ../../../../docstring of numpy.matmul:-1
+msgid "ndarray"
+msgstr "ndarray"
+
+#: ../../../../docstring of numpy.matmul:25
+msgid ""
+"The matrix product of the inputs. This is a scalar only when both x1, x2 are "
+"1-d vectors."
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:39
+msgid "ValueError"
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:34
+msgid ""
+"If the last dimension of `x1` is not the same size as the second-to-last "
+"dimension of `x2`."
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:37
+msgid "If a scalar value is passed in."
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:44
+msgid ":obj:`vdot`"
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:45
+msgid "Complex-conjugating dot product."
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:46
+msgid ":obj:`tensordot`"
+msgstr ":obj:`tensordot`"
+
+#: ../../../../docstring of numpy.matmul:47
+msgid "Sum products over arbitrary axes."
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:48
+msgid ":obj:`einsum`"
+msgstr ":obj:`einsum`"
+
+#: ../../../../docstring of numpy.matmul:49
+msgid "Einstein summation convention."
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:50
+msgid ":obj:`dot`"
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:51
+msgid "alternative matrix product with different broadcasting rules."
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:55
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:56
+msgid "The behavior depends on the arguments in the following way."
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:58
+msgid ""
+"If both arguments are 2-D they are multiplied like conventional matrices."
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:60
+msgid ""
+"If either argument is N-D, N > 2, it is treated as a stack of matrices "
+"residing in the last two indexes and broadcast accordingly."
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:62
+msgid ""
+"If the first argument is 1-D, it is promoted to a matrix by prepending a 1 "
+"to its dimensions. After matrix multiplication the prepended 1 is removed."
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:65
+msgid ""
+"If the second argument is 1-D, it is promoted to a matrix by appending a 1 "
+"to its dimensions. After matrix multiplication the appended 1 is removed."
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:69
+msgid "``matmul`` differs from ``dot`` in two important ways:"
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:71
+msgid "Multiplication by scalars is not allowed, use ``*`` instead."
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:72
+msgid ""
+"Stacks of matrices are broadcast together as if the matrices were elements, "
+"respecting the signature ``(n,k),(k,m)->(n,m)``:"
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:83
+msgid ""
+"The matmul function implements the semantics of the ``@`` operator "
+"introduced in Python 3.5 following :pep:`465`."
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:86
+msgid "It uses an optimized BLAS library when possible (see `numpy.linalg`)."
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:90
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../docstring of numpy.matmul:91
+msgid "For 2-D arrays it is the matrix product:"
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:101
+msgid "For 2-D mixed with 1-D, the result is the usual."
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:111
+msgid "Broadcasting is conventional for stacks of arrays"
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:122
+msgid ""
+"Vector, vector returns the scalar inner product, but neither argument is "
+"complex-conjugated:"
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:128
+msgid "Scalar multiplication raises an error."
+msgstr ""
+
+#: ../../../../docstring of numpy.matmul:135
+msgid ""
+"The ``@`` operator can be used as a shorthand for ``np.matmul`` on ndarrays."
+msgstr ""

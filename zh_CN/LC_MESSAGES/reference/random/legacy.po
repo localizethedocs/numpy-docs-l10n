@@ -1,0 +1,943 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/legacy.rst:6
+msgid "Legacy Random Generation"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:7
+msgid ""
+"The `RandomState` provides access to legacy generators. This generator is "
+"considered frozen and will have no further improvements.  It is guaranteed "
+"to produce the same values as the final point release of NumPy v1.16. These "
+"all depend on Box-Muller normals or inverse CDF exponentials or gammas. This "
+"class should only be used if it is essential to have randoms that are "
+"identical to what would have been produced by previous versions of NumPy."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:15
+msgid ""
+"`RandomState` adds additional information to the state which is required "
+"when using Box-Muller normals since these are produced in pairs. It is "
+"important to use `RandomState.get_state`, and not the underlying bit "
+"generators `state`, when accessing the state so that these extra values are "
+"saved."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:21
+msgid ""
+"Although we provide the `MT19937` BitGenerator for use independent of "
+"`RandomState`, note that its default seeding uses `SeedSequence` rather than "
+"the legacy seeding algorithm. `RandomState` will use the legacy seeding "
+"algorithm. The methods to use the legacy seeding algorithm are currently "
+"private as the main reason to use them is just to implement `RandomState`. "
+"However, one can reset the state of `MT19937` using the state of the "
+"`RandomState`:"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:29
+msgid ""
+"from numpy.random import MT19937\n"
+"from numpy.random import RandomState\n"
+"\n"
+"rs = RandomState(12345)\n"
+"mt19937 = MT19937()\n"
+"mt19937.state = rs.get_state()\n"
+"rs2 = RandomState(mt19937)\n"
+"\n"
+"# Same output\n"
+"rs.standard_normal()\n"
+"rs2.standard_normal()\n"
+"\n"
+"rs.random()\n"
+"rs2.random()\n"
+"\n"
+"rs.standard_exponential()\n"
+"rs2.standard_exponential()"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.mtrand.RandomState:2
+msgid ""
+"Container for the slow Mersenne Twister pseudo-random number generator. "
+"Consider using a different BitGenerator with the Generator container instead."
+msgstr ""
+
+#: ../../../../docstring of numpy.random.mtrand.RandomState:6
+msgid ""
+"`RandomState` and `Generator` expose a number of methods for generating "
+"random numbers drawn from a variety of probability distributions. In "
+"addition to the distribution-specific arguments, each method takes a keyword "
+"argument `size` that defaults to ``None``. If `size` is ``None``, then a "
+"single value is generated and returned. If `size` is an integer, then a 1-D "
+"array filled with generated values is returned. If `size` is a tuple, then "
+"an array with that shape is filled and returned."
+msgstr ""
+
+#: ../../../../docstring of numpy.random.mtrand.RandomState:14
+msgid "**Compatibility Guarantee**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.mtrand.RandomState:16
+msgid ""
+"A fixed bit generator using a fixed seed and a fixed series of calls to "
+"'RandomState' methods using the same parameters will always produce the same "
+"results up to roundoff error except when the values were incorrect. "
+"`RandomState` is effectively frozen and will only receive updates that are "
+"required by changes in the internals of Numpy. More substantial changes, "
+"including algorithmic improvements, are reserved for `Generator`."
+msgstr ""
+
+#: ../../../../docstring of numpy.random.mtrand.RandomState:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.mtrand.RandomState:41
+msgid "**seed**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.mtrand.RandomState:-1
+msgid "{None, int, array_like, BitGenerator}, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.mtrand.RandomState:27
+msgid ""
+"Random seed used to initialize the pseudo-random number generator or an "
+"instantized BitGenerator.  If an integer or array, used as a seed for the "
+"MT19937 BitGenerator. Values can be any integer between 0 and 2**32 - 1 "
+"inclusive, an array (or other sequence) of such integers, or ``None`` (the "
+"default).  If `seed` is ``None``, then the `MT19937` BitGenerator is "
+"initialized by reading data from ``/dev/urandom`` (or the Windows analogue) "
+"if available or seed from the clock otherwise."
+msgstr ""
+
+#: ../../../../docstring of numpy.random.mtrand.RandomState:46
+msgid ":obj:`Generator`"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.mtrand.RandomState:48
+msgid ":obj:`MT19937`"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.mtrand.RandomState:50
+msgid ":obj:`numpy.random.BitGenerator`"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.mtrand.RandomState:54
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.random.mtrand.RandomState:55
+msgid ""
+"The Python stdlib module \"random\" also contains a Mersenne Twister pseudo-"
+"random number generator with a number of methods that are similar to the "
+"ones available in `RandomState`. `RandomState`, besides being NumPy-aware, "
+"has the advantage that it provides a much larger number of probability "
+"distributions to choose from."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:55
+msgid "Seeding and State"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`get_state <numpy.random.RandomState.get_state>`\\ \\(\\[legacy\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+#: ../../../reference/random/legacy.rst:63:<autosummary>:1
+msgid "Return a tuple representing the internal state of the generator."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:63:<autosummary>:1
+msgid ":py:obj:`set_state <numpy.random.RandomState.set_state>`\\ \\(state\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+#: ../../../reference/random/legacy.rst:63:<autosummary>:1
+msgid "Set the internal state of the generator from a tuple."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:63:<autosummary>:1
+msgid ":py:obj:`seed <numpy.random.RandomState.seed>`\\ \\(\\[seed\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:63:<autosummary>:1
+msgid "Reseed a legacy MT19937 BitGenerator"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:65
+msgid "Simple random data"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:76:<autosummary>:1
+msgid ""
+":py:obj:`rand <numpy.random.RandomState.rand>`\\ \\(d0\\, d1\\, ...\\, dn\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+#: ../../../reference/random/legacy.rst:76:<autosummary>:1
+msgid "Random values in a given shape."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:76:<autosummary>:1
+msgid ""
+":py:obj:`randn <numpy.random.RandomState.randn>`\\ \\(d0\\, d1\\, ...\\, "
+"dn\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+#: ../../../reference/random/legacy.rst:76:<autosummary>:1
+msgid "Return a sample (or samples) from the \"standard normal\" distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:76:<autosummary>:1
+msgid ""
+":py:obj:`randint <numpy.random.RandomState.randint>`\\ \\(low\\[\\, high\\, "
+"size\\, dtype\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+#: ../../../reference/random/legacy.rst:76:<autosummary>:1
+msgid "Return random integers from `low` (inclusive) to `high` (exclusive)."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:76:<autosummary>:1
+msgid ""
+":py:obj:`random_integers <numpy.random.RandomState.random_integers>`\\ "
+"\\(low\\[\\, high\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+#: ../../../reference/random/legacy.rst:76:<autosummary>:1
+msgid "Random integers of type `np.int_` between `low` and `high`, inclusive."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:76:<autosummary>:1
+msgid ""
+":py:obj:`random_sample <numpy.random.RandomState.random_sample>`\\ "
+"\\(\\[size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+#: ../../../reference/random/legacy.rst:76:<autosummary>:1
+msgid "Return random floats in the half-open interval [0.0, 1.0)."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:76:<autosummary>:1
+msgid ""
+":py:obj:`choice <numpy.random.RandomState.choice>`\\ \\(a\\[\\, size\\, "
+"replace\\, p\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+#: ../../../reference/random/legacy.rst:76:<autosummary>:1
+msgid "Generates a random sample from a given 1-D array"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:76:<autosummary>:1
+msgid ":py:obj:`bytes <numpy.random.RandomState.bytes>`\\ \\(length\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+#: ../../../reference/random/legacy.rst:76:<autosummary>:1
+msgid "Return random bytes."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:78
+msgid "Permutations"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:84:<autosummary>:1
+msgid ":py:obj:`shuffle <numpy.random.RandomState.shuffle>`\\ \\(x\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+#: ../../../reference/random/legacy.rst:84:<autosummary>:1
+msgid "Modify a sequence in-place by shuffling its contents."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:84:<autosummary>:1
+msgid ":py:obj:`permutation <numpy.random.RandomState.permutation>`\\ \\(x\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+#: ../../../reference/random/legacy.rst:84:<autosummary>:1
+msgid "Randomly permute a sequence, or return a permuted range."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:86
+msgid "Distributions"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`beta <numpy.random.RandomState.beta>`\\ \\(a\\, b\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a Beta distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`binomial <numpy.random.RandomState.binomial>`\\ \\(n\\, p\\[\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a binomial distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`chisquare <numpy.random.RandomState.chisquare>`\\ \\(df\\[\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a chi-square distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`dirichlet <numpy.random.RandomState.dirichlet>`\\ \\(alpha\\[\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from the Dirichlet distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`exponential <numpy.random.RandomState.exponential>`\\ "
+"\\(\\[scale\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from an exponential distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`f <numpy.random.RandomState.f>`\\ \\(dfnum\\, dfden\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from an F distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`gamma <numpy.random.RandomState.gamma>`\\ \\(shape\\[\\, scale\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a Gamma distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`geometric <numpy.random.RandomState.geometric>`\\ \\(p\\[\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from the geometric distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`gumbel <numpy.random.RandomState.gumbel>`\\ \\(\\[loc\\, scale\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a Gumbel distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`hypergeometric <numpy.random.RandomState.hypergeometric>`\\ "
+"\\(ngood\\, nbad\\, nsample\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a Hypergeometric distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`laplace <numpy.random.RandomState.laplace>`\\ \\(\\[loc\\, scale\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+"Draw samples from the Laplace or double exponential distribution with "
+"specified location (or mean) and scale (decay)."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`logistic <numpy.random.RandomState.logistic>`\\ \\(\\[loc\\, "
+"scale\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a logistic distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`lognormal <numpy.random.RandomState.lognormal>`\\ \\(\\[mean\\, "
+"sigma\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a log-normal distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`logseries <numpy.random.RandomState.logseries>`\\ \\(p\\[\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a logarithmic series distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`multinomial <numpy.random.RandomState.multinomial>`\\ \\(n\\, "
+"pvals\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a multinomial distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`multivariate_normal <numpy.random.RandomState."
+"multivariate_normal>`\\ \\(mean\\, cov\\[\\, size\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw random samples from a multivariate normal distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`negative_binomial <numpy.random.RandomState.negative_binomial>`\\ "
+"\\(n\\, p\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a negative binomial distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`noncentral_chisquare <numpy.random.RandomState."
+"noncentral_chisquare>`\\ \\(df\\, nonc\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a noncentral chi-square distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`noncentral_f <numpy.random.RandomState.noncentral_f>`\\ \\(dfnum\\, "
+"dfden\\, nonc\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from the noncentral F distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`normal <numpy.random.RandomState.normal>`\\ \\(\\[loc\\, scale\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw random samples from a normal (Gaussian) distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`pareto <numpy.random.RandomState.pareto>`\\ \\(a\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+"Draw samples from a Pareto II or Lomax distribution with specified shape."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`poisson <numpy.random.RandomState.poisson>`\\ \\(\\[lam\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a Poisson distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`power <numpy.random.RandomState.power>`\\ \\(a\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+"Draws samples in [0, 1] from a power distribution with positive exponent a - "
+"1."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`rayleigh <numpy.random.RandomState.rayleigh>`\\ \\(\\[scale\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a Rayleigh distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`standard_cauchy <numpy.random.RandomState.standard_cauchy>`\\ "
+"\\(\\[size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a standard Cauchy distribution with mode = 0."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`standard_exponential <numpy.random.RandomState."
+"standard_exponential>`\\ \\(\\[size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from the standard exponential distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`standard_gamma <numpy.random.RandomState.standard_gamma>`\\ "
+"\\(shape\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a standard Gamma distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`standard_normal <numpy.random.RandomState.standard_normal>`\\ "
+"\\(\\[size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a standard Normal distribution (mean=0, stdev=1)."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`standard_t <numpy.random.RandomState.standard_t>`\\ \\(df\\[\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+"Draw samples from a standard Student's t distribution with `df` degrees of "
+"freedom."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`triangular <numpy.random.RandomState.triangular>`\\ \\(left\\, "
+"mode\\, right\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+"Draw samples from the triangular distribution over the interval ``[left, "
+"right]``."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`uniform <numpy.random.RandomState.uniform>`\\ \\(\\[low\\, high\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a uniform distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`vonmises <numpy.random.RandomState.vonmises>`\\ \\(mu\\, "
+"kappa\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a von Mises distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`wald <numpy.random.RandomState.wald>`\\ \\(mean\\, scale\\[\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a Wald, or inverse Gaussian, distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ""
+":py:obj:`weibull <numpy.random.RandomState.weibull>`\\ \\(a\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a Weibull distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+msgid ":py:obj:`zipf <numpy.random.RandomState.zipf>`\\ \\(a\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:125:<autosummary>:1
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Draw samples from a Zipf distribution."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:129
+msgid "Functions in `numpy.random`"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:130
+msgid ""
+"Many of the RandomState methods above are exported as functions in `numpy."
+"random` This usage is discouraged, as it is implemented via a global "
+"`RandomState` instance which is not advised on two counts:"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:134
+msgid ""
+"It uses global state, which means results will change as the code changes"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:136
+msgid "It uses a `RandomState` rather than the more modern `Generator`."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:138
+msgid "For backward compatible legacy reasons, we will not change this."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`beta <numpy.random.beta>`\\ \\(a\\, b\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`binomial <numpy.random.binomial>`\\ \\(n\\, p\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`bytes <numpy.random.bytes>`\\ \\(length\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`chisquare <numpy.random.chisquare>`\\ \\(df\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`choice <numpy.random.choice>`\\ \\(a\\[\\, size\\, replace\\, "
+"p\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`dirichlet <numpy.random.dirichlet>`\\ \\(alpha\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`exponential <numpy.random.exponential>`\\ \\(\\[scale\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`f <numpy.random.f>`\\ \\(dfnum\\, dfden\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`gamma <numpy.random.gamma>`\\ \\(shape\\[\\, scale\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`geometric <numpy.random.geometric>`\\ \\(p\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`get_state <numpy.random.get_state>`\\ \\(\\[legacy\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`gumbel <numpy.random.gumbel>`\\ \\(\\[loc\\, scale\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`hypergeometric <numpy.random.hypergeometric>`\\ \\(ngood\\, nbad\\, "
+"nsample\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`laplace <numpy.random.laplace>`\\ \\(\\[loc\\, scale\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`logistic <numpy.random.logistic>`\\ \\(\\[loc\\, scale\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`lognormal <numpy.random.lognormal>`\\ \\(\\[mean\\, sigma\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`logseries <numpy.random.logseries>`\\ \\(p\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`multinomial <numpy.random.multinomial>`\\ \\(n\\, pvals\\[\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`multivariate_normal <numpy.random.multivariate_normal>`\\ "
+"\\(mean\\, cov\\[\\, size\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`negative_binomial <numpy.random.negative_binomial>`\\ \\(n\\, "
+"p\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`noncentral_chisquare <numpy.random.noncentral_chisquare>`\\ "
+"\\(df\\, nonc\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`noncentral_f <numpy.random.noncentral_f>`\\ \\(dfnum\\, dfden\\, "
+"nonc\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`normal <numpy.random.normal>`\\ \\(\\[loc\\, scale\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`pareto <numpy.random.pareto>`\\ \\(a\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`permutation <numpy.random.permutation>`\\ \\(x\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`poisson <numpy.random.poisson>`\\ \\(\\[lam\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`power <numpy.random.power>`\\ \\(a\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`rand <numpy.random.rand>`\\ \\(d0\\, d1\\, ...\\, dn\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`randint <numpy.random.randint>`\\ \\(low\\[\\, high\\, size\\, "
+"dtype\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`randn <numpy.random.randn>`\\ \\(d0\\, d1\\, ...\\, dn\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`random <numpy.random.random>`\\ \\(\\[size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`random_integers <numpy.random.random_integers>`\\ \\(low\\[\\, "
+"high\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`random_sample <numpy.random.random_sample>`\\ \\(\\[size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`ranf <numpy.random.ranf>`\\"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "This is an alias of `random_sample`."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`rayleigh <numpy.random.rayleigh>`\\ \\(\\[scale\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`sample <numpy.random.sample>`\\"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`seed <numpy.random.seed>`\\ \\(\\[seed\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid "Reseed the singleton RandomState instance."
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`set_state <numpy.random.set_state>`\\ \\(state\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`shuffle <numpy.random.shuffle>`\\ \\(x\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`standard_cauchy <numpy.random.standard_cauchy>`\\ \\(\\[size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`standard_exponential <numpy.random.standard_exponential>`\\ "
+"\\(\\[size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`standard_gamma <numpy.random.standard_gamma>`\\ \\(shape\\[\\, "
+"size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`standard_normal <numpy.random.standard_normal>`\\ \\(\\[size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`standard_t <numpy.random.standard_t>`\\ \\(df\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`triangular <numpy.random.triangular>`\\ \\(left\\, mode\\, "
+"right\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`uniform <numpy.random.uniform>`\\ \\(\\[low\\, high\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ""
+":py:obj:`vonmises <numpy.random.vonmises>`\\ \\(mu\\, kappa\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`wald <numpy.random.wald>`\\ \\(mean\\, scale\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`weibull <numpy.random.weibull>`\\ \\(a\\[\\, size\\]\\)"
+msgstr ""
+
+#: ../../../reference/random/legacy.rst:193:<autosummary>:1
+msgid ":py:obj:`zipf <numpy.random.zipf>`\\ \\(a\\[\\, size\\]\\)"
+msgstr ""

@@ -1,0 +1,1009 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../dev/development_workflow.rst:5
+msgid "Development workflow"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:7
+msgid ""
+"You already have your own forked copy of the NumPy_ repository, by "
+"following :ref:`forking`, :ref:`set-up-fork`, you have configured git_ by "
+"following :ref:`configure-git`, and have linked the upstream repository as "
+"explained in :ref:`linking-to-upstream`."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:12
+msgid "What is described below is a recommended workflow with Git."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:15
+msgid "Basic workflow"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:17
+msgid "In short:"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:19
+msgid ""
+"Start a new *feature branch* for each set of edits that you do. See :ref:"
+"`below <making-a-new-feature-branch>`."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:22
+msgid "Hack away! See :ref:`below <editing-workflow>`"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:24
+msgid "When finished:"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:26
+msgid ""
+"*Contributors*: push your feature branch to your own Github repo, and :ref:"
+"`create a pull request <asking-for-merging>`."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:29
+msgid ""
+"*Core developers*: If you want to push changes without further review, see "
+"the notes :ref:`below <pushing-to-main>`."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:32
+msgid ""
+"This way of working helps to keep work well organized and the history as "
+"clear as possible."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:37
+msgid ""
+"There are many online tutorials to help you `learn git`_. For discussions of "
+"specific git workflows, see these discussions on `linux git workflow`_, and "
+"`ipython git workflow`_."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:44
+msgid "Making a new feature branch"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:46
+msgid "First, fetch new commits from the ``upstream`` repository:"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:50
+#: ../../../dev/development_workflow.rst:322
+msgid "git fetch upstream"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:52
+msgid ""
+"Then, create a new branch based on the main branch of the upstream "
+"repository::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:55
+msgid "git checkout -b my-new-feature upstream/main"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:61
+msgid "The editing workflow"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:64
+msgid "Overview"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:68
+msgid ""
+"# hack hack\n"
+"git status # Optional\n"
+"git diff # Optional\n"
+"git add modified_file\n"
+"git commit\n"
+"# push the branch to your own Github repo\n"
+"git push origin my-new-feature"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:77
+msgid "In more detail"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:79
+msgid ""
+"Make some changes. When you feel that you've made a complete, working set of "
+"related changes, move on to the next steps."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:82
+msgid ""
+"Optional: Check which files have changed with ``git status`` (see `git "
+"status`_).  You'll see a listing like this one::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:85
+msgid ""
+"# On branch my-new-feature\n"
+"# Changed but not updated:\n"
+"#   (use \"git add <file>...\" to update what will be committed)\n"
+"#   (use \"git checkout -- <file>...\" to discard changes in working "
+"directory)\n"
+"#\n"
+"#  modified:   README\n"
+"#\n"
+"# Untracked files:\n"
+"#   (use \"git add <file>...\" to include in what will be committed)\n"
+"#\n"
+"#  INSTALL\n"
+"no changes added to commit (use \"git add\" and/or \"git commit -a\")"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:98
+msgid ""
+"Optional: Compare the changes with the previous version using with ``git "
+"diff`` (`git diff`_). This brings up a simple text browser interface that "
+"highlights the difference between your files and the previous version."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:102
+msgid ""
+"Add any relevant modified or new files using  ``git add modified_file`` (see "
+"`git add`_). This puts the files into a staging area, which is a queue of "
+"files that will be added to your next commit. Only add files that have "
+"related, complete changes. Leave files with unfinished changes for later "
+"commits."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:108
+msgid ""
+"To commit the staged files into the local copy of your repo, do ``git "
+"commit``. At this point, a text editor will open up to allow you to write a "
+"commit message. Read the :ref:`commit message section<writing-the-commit-"
+"message>` to be sure that you are writing a properly formatted and "
+"sufficiently detailed commit message. After saving your message and closing "
+"the editor, your commit will be saved. For trivial commits, a short commit "
+"message can be passed in through the command line using the ``-m`` flag. For "
+"example, ``git commit -am \"ENH: Some message\"``."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:117
+msgid ""
+"In some cases, you will see this form of the commit command: ``git commit -"
+"a``. The extra ``-a`` flag automatically commits all modified files and "
+"removes all deleted files. This can save you some typing of numerous ``git "
+"add`` commands; however, it can add unwanted changes to a commit if you're "
+"not careful. For more information, see `why the -a flag?`_ - and the helpful "
+"use-case description in the `tangled working copy problem`_."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:124
+msgid "Push the changes to your forked repo on github_::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:126
+msgid "git push origin my-new-feature"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:128
+msgid "For more information, see `git push`_."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:132
+msgid ""
+"Assuming you have followed the instructions in these pages, git will create "
+"a default link to your github_ repo called ``origin``.  In git >= 1.7 you "
+"can ensure that the link to origin is permanently set by using the ``--set-"
+"upstream`` option::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:137
+msgid "git push --set-upstream origin my-new-feature"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:139
+msgid ""
+"From now on git_ will know that ``my-new-feature`` is related to the ``my-"
+"new-feature`` branch in your own github_ repo. Subsequent push calls are "
+"then simplified to the following::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:143
+msgid "git push"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:145
+msgid "You have to use ``--set-upstream`` for each new branch that you create."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:148
+msgid ""
+"It may be the case that while you were working on your edits, new commits "
+"have been added to ``upstream`` that affect your work. In this case, follow "
+"the :ref:`rebasing-on-main` section of this document to apply those changes "
+"to your branch."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:156
+msgid "Writing the commit message"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:158
+msgid ""
+"Commit messages should be clear and follow a few basic rules.  Example::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:160
+msgid ""
+"ENH: add functionality X to numpy.<submodule>.\n"
+"\n"
+"The first line of the commit message starts with a capitalized acronym\n"
+"(options listed below) indicating what type of commit this is.  Then a "
+"blank\n"
+"line, then more text if needed.  Lines shouldn't be longer than 72\n"
+"characters.  If the commit is related to a ticket, indicate that with\n"
+"\"See #3456\", \"See ticket 3456\", \"Closes #3456\" or similar."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:168
+msgid ""
+"Describing the motivation for a change, the nature of a bug for bug fixes or "
+"some details on what an enhancement does are also good to include in a "
+"commit message.  Messages should be understandable without looking at the "
+"code changes.  A commit message like ``MAINT: fixed another one`` is an "
+"example of what not to do; the reader has to go look for context elsewhere."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:174
+msgid "Standard acronyms to start the commit message with are::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:176
+msgid ""
+"API: an (incompatible) API change\n"
+"BENCH: changes to the benchmark suite\n"
+"BLD: change related to building numpy\n"
+"BUG: bug fix\n"
+"DEP: deprecate something, or remove a deprecated object\n"
+"DEV: development tool or utility\n"
+"DOC: documentation\n"
+"ENH: enhancement\n"
+"MAINT: maintenance commit (refactoring, typos, etc.)\n"
+"REV: revert an earlier commit\n"
+"STY: style fix (whitespace, PEP8)\n"
+"TST: addition or modification of tests\n"
+"TYP: static typing\n"
+"REL: related to releasing numpy"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:192
+msgid "Commands to skip continuous integration"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:194
+msgid ""
+"By default a lot of continuous integration (CI) jobs are run for every PR, "
+"from running the test suite on different operating systems and hardware "
+"platforms to building the docs. In some cases you already know that CI isn't "
+"needed (or not all of it), for example if you work on CI config files, text "
+"in the README, or other files that aren't involved in regular build, test or "
+"docs sequences. In such cases you may explicitly skip CI by including one of "
+"these fragments in your commit message:"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:202
+msgid "``[skip ci]``: skip all CI"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:204
+msgid ""
+"Only recommended if you are still not ready for the checks to run on your PR "
+"(for example, if this is only a draft.)"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:207
+msgid "``[skip actions]``: skip GitHub Actions jobs"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:209
+msgid ""
+"`GitHub Actions <https://docs.github.com/actions>`__ is where most of the CI "
+"checks are run, including the linter, benchmarking, running basic tests for "
+"most architectures and OSs, and several compiler and CPU optimization "
+"settings. `See the configuration files for these checks. <https://github.com/"
+"numpy/numpy/tree/main/.github/workflows>`__"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:215
+msgid "``[skip travis]``: skip TravisCI jobs"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:217
+msgid ""
+"`TravisCI <https://www.travis-ci.com/>`__ will test your changes against "
+"Python 3.9 on the PowerPC and s390x architectures. `See the configuration "
+"file for these checks. <https://github.com/numpy/numpy/blob/main/.travis."
+"yml>`__"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:221
+msgid "``[skip azp]``: skip Azure jobs"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:223
+msgid ""
+"`Azure <https://azure.microsoft.com/en-us/products/devops/pipelines>`__ is "
+"where all comprehensive tests are run. This is an expensive run, and one you "
+"could typically skip if you do documentation-only changes, for example. `See "
+"the main configuration file for these checks. <https://github.com/numpy/"
+"numpy/blob/main/azure-pipelines.yml>`__"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:228
+msgid "``[skip circle]``: skip CircleCI jobs"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:230
+msgid ""
+"`CircleCI <https://circleci.com/>`__ is where we build the documentation and "
+"store the generated artifact for preview in each PR. This check will also "
+"run all the docstrings examples and verify their results. If you don't make "
+"documentation changes, but you make changes to a function's API, for "
+"example, you may need to run these tests to verify that the doctests are "
+"still valid. `See the configuration file for these checks. <https://github."
+"com/numpy/numpy/blob/main/.circleci/config.yml>`__"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:237
+msgid "``[skip cirrus]``: skip Cirrus jobs"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:239
+msgid ""
+"`CirrusCI <https://cirrus-ci.org/>`__ mostly triggers Linux aarch64 and "
+"MacOS Arm64 wheels uploads. `See the configuration file for these checks. "
+"<https://github.com/numpy/numpy/blob/main/.cirrus.star>`__"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:244
+msgid "Test building wheels"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:246
+msgid ""
+"Numpy currently uses `cibuildwheel <https://https://cibuildwheel.readthedocs."
+"io/en/stable/>`_ in order to build wheels through continuous integration "
+"services. To save resources, the cibuildwheel wheel builders are not run by "
+"default on every single PR or commit to main."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:250
+msgid ""
+"If you would like to test that your pull request do not break the wheel "
+"builders, you may either append ``[wheel build]`` to the end of the commit "
+"message of the commit or add one of the following labels to the pull "
+"request(if you have the permissions to do so):"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:254
+msgid ""
+"``36 - Build``: for pull requests changing build processes/configurations"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:255
+msgid "``03 - Maintenance``: for pull requests upgrading dependencies"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:256
+msgid "``14 - Release``: for pull requests preparing for a release"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:258
+msgid ""
+"The wheels built via github actions (including 64-bit linux, macOS, and "
+"windows, arm64 macOS, and 32-bit windows) will be uploaded as artifacts in "
+"zip files. You can access them from the Summary page of the \"Wheel "
+"builder\" Action_. The aarch64 wheels built via travis_ CI are not available "
+"as artifacts. Additionally, the wheels will be uploaded to https://anaconda."
+"org/scientific-python-nightly-wheels/ on the following conditions:"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:265
+msgid "by a weekly cron job or"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:266
+msgid ""
+"if the github action or travis build has been manually triggered, which "
+"requires appropriate permissions"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:268
+msgid ""
+"The wheels will be uploaded to https://anaconda.org/multibuild-wheels-"
+"staging/ if the build was triggered by a tag to the repo that begins with "
+"``v``"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:277
+msgid "Get the mailing list's opinion"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:279
+msgid ""
+"If you plan a new feature or API change, it's wisest to first email the "
+"NumPy `mailing list <https://mail.python.org/mailman/listinfo/numpy-"
+"discussion>`_ asking for comment. If you haven't heard back in a week, it's "
+"OK to ping the list again."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:287
+msgid "Asking for your changes to be merged with the main repo"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:289
+msgid ""
+"When you feel your work is finished, you can create a pull request (PR). "
+"Github has a nice help page that outlines the process for `filing pull "
+"requests`_."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:292
+msgid ""
+"If your changes involve modifications to the API or addition/modification of "
+"a function, add a release note to the ``doc/release/upcoming_changes/`` "
+"directory, following the instructions and format in the ``doc/release/"
+"upcoming_changes/README.rst`` file."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:301
+msgid "Getting your PR reviewed"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:303
+msgid ""
+"We review pull requests as soon as we can, typically within a week. If you "
+"get no review comments within two weeks, feel free to ask for feedback by "
+"adding a comment on your PR (this will notify maintainers)."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:307
+msgid ""
+"If your PR is large or complicated, asking for input on the numpy-discussion "
+"mailing list may also be useful."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:315
+msgid "Rebasing on main"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:317
+msgid ""
+"This updates your feature branch with changes from the upstream `NumPy "
+"github`_ repo. If you do not absolutely need to do this, try to avoid doing "
+"it, except perhaps when you are finished. The first step will be to update "
+"the remote repository with new commits from upstream::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:324
+msgid "Next, you need to update the feature branch::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:326
+msgid ""
+"# go to the feature branch\n"
+"git checkout my-new-feature\n"
+"# make a backup in case you mess up\n"
+"git branch tmp my-new-feature\n"
+"# rebase on upstream main branch\n"
+"git rebase upstream/main"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:333
+msgid ""
+"If you have made changes to files that have changed also upstream, this may "
+"generate merge conflicts that you need to resolve. See :ref:"
+"`below<recovering-from-mess-up>` for help in this case."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:337
+msgid "Finally, remove the backup branch upon a successful rebase::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:339
+msgid "git branch -D tmp"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:344
+msgid ""
+"Rebasing on main is preferred over merging upstream back to your branch. "
+"Using ``git merge`` and ``git pull`` is discouraged when working on feature "
+"branches."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:351
+msgid "Recovering from mess-ups"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:353
+msgid ""
+"Sometimes, you mess up merges or rebases. Luckily, in Git it is relatively "
+"straightforward to recover from such mistakes."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:356
+msgid "If you mess up during a rebase::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:358
+msgid "git rebase --abort"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:360
+msgid "If you notice you messed up after the rebase::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:362
+msgid ""
+"# reset branch back to the saved point\n"
+"git reset --hard tmp"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:365
+msgid "If you forgot to make a backup branch::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:367
+msgid ""
+"# look at the reflog of the branch\n"
+"git reflog show my-feature-branch\n"
+"\n"
+"8630830 my-feature-branch@{0}: commit: BUG: io: close file handles "
+"immediately\n"
+"278dd2a my-feature-branch@{1}: rebase finished: refs/heads/my-feature-branch "
+"onto 11ee694744f2552d\n"
+"26aa21a my-feature-branch@{2}: commit: BUG: lib: make seek_gzip_factory not "
+"leak gzip obj\n"
+"...\n"
+"\n"
+"# reset the branch to where it was before the botched rebase\n"
+"git reset --hard my-feature-branch@{2}"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:378
+msgid ""
+"If you didn't actually mess up but there are merge conflicts, you need to "
+"resolve those.  This can be one of the trickier things to get right.  For a "
+"good description of how to do this, see `this article on merging conflicts`_."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:384
+msgid "Additional things you might want to do"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:389
+msgid "Rewriting commit history"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:393
+msgid "Do this only for your own feature branches."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:395
+msgid ""
+"There's an embarrassing typo in a commit you made? Or perhaps you made "
+"several false starts you would like the posterity not to see."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:398
+msgid "This can be done via *interactive rebasing*."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:400
+msgid "Suppose that the commit history looks like this::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:402
+msgid ""
+"git log --oneline\n"
+"eadc391 Fix some remaining bugs\n"
+"a815645 Modify it so that it works\n"
+"2dec1ac Fix a few bugs + disable\n"
+"13d7934 First implementation\n"
+"6ad92e5 * masked is now an instance of a new object, MaskedConstant\n"
+"29001ed Add pre-nep for a couple of structured_array_extensions.\n"
+"..."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:411
+msgid ""
+"and ``6ad92e5`` is the last commit in the ``main`` branch. Suppose we want "
+"to make the following changes:"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:414
+msgid "Rewrite the commit message for ``13d7934`` to something more sensible."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:415
+msgid ""
+"Combine the commits ``2dec1ac``, ``a815645``, ``eadc391`` into a single one."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:417
+msgid "We do as follows::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:419
+msgid ""
+"# make a backup of the current state\n"
+"git branch tmp HEAD\n"
+"# interactive rebase\n"
+"git rebase -i 6ad92e5"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:424
+msgid "This will open an editor with the following text in it::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:426
+msgid ""
+"pick 13d7934 First implementation\n"
+"pick 2dec1ac Fix a few bugs + disable\n"
+"pick a815645 Modify it so that it works\n"
+"pick eadc391 Fix some remaining bugs\n"
+"\n"
+"# Rebase 6ad92e5..eadc391 onto 6ad92e5\n"
+"#\n"
+"# Commands:\n"
+"#  p, pick = use commit\n"
+"#  r, reword = use commit, but edit the commit message\n"
+"#  e, edit = use commit, but stop for amending\n"
+"#  s, squash = use commit, but meld into previous commit\n"
+"#  f, fixup = like \"squash\", but discard this commit's log message\n"
+"#\n"
+"# If you remove a line here THAT COMMIT WILL BE LOST.\n"
+"# However, if you remove everything, the rebase will be aborted.\n"
+"#"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:444
+msgid "To achieve what we want, we will make the following changes to it::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:446
+msgid ""
+"r 13d7934 First implementation\n"
+"pick 2dec1ac Fix a few bugs + disable\n"
+"f a815645 Modify it so that it works\n"
+"f eadc391 Fix some remaining bugs"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:451
+msgid ""
+"This means that (i) we want to edit the commit message for ``13d7934``, and "
+"(ii) collapse the last three commits into one. Now we save and quit the "
+"editor."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:455
+msgid ""
+"Git will then immediately bring up an editor for editing the commit message. "
+"After revising it, we get the output::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:458
+msgid ""
+"[detached HEAD 721fc64] FOO: First implementation\n"
+" 2 files changed, 199 insertions(+), 66 deletions(-)\n"
+"[detached HEAD 0f22701] Fix a few bugs + disable\n"
+" 1 files changed, 79 insertions(+), 61 deletions(-)\n"
+"Successfully rebased and updated refs/heads/my-feature-branch."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:464
+msgid "and the history looks now like this::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:466
+msgid ""
+"0f22701 Fix a few bugs + disable\n"
+"721fc64 ENH: Sophisticated feature\n"
+"6ad92e5 * masked is now an instance of a new object, MaskedConstant"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:470
+msgid ""
+"If it went wrong, recovery is again possible as explained :ref:`above "
+"<recovering-from-mess-up>`."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:474
+msgid "Deleting a branch on github_"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:478
+msgid ""
+"git checkout main\n"
+"# delete branch locally\n"
+"git branch -D my-unwanted-branch\n"
+"# delete branch on github\n"
+"git push origin --delete my-unwanted-branch"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:484
+msgid ""
+"See also: https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-"
+"branch-locally-and-remotely"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:489
+msgid "Several people sharing a single repository"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:491
+msgid ""
+"If you want to work on some stuff with other people, where you are all "
+"committing into the same repository, or even the same branch, then just "
+"share it via github_."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:495
+msgid "First fork NumPy into your account, as from :ref:`forking`."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:497
+msgid ""
+"Then, go to your forked repository github page, say ``https://github.com/"
+"your-user-name/numpy``"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:500
+msgid ""
+"Click on the 'Admin' button, and add anyone else to the repo as a "
+"collaborator:"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:505
+msgid "Now all those people can do::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:507
+msgid "git clone git@github.com:your-user-name/numpy.git"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:509
+msgid ""
+"Remember that links starting with ``git@`` use the ssh protocol and are read-"
+"write; links starting with ``git://`` are read-only."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:512
+msgid ""
+"Your collaborators can then commit directly into that repo with the usual::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:515
+msgid ""
+"git commit -am 'ENH - much better code'\n"
+"git push origin my-feature-branch # pushes directly into your repo"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:520
+msgid "Checkout changes from an existing pull request"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:522
+msgid ""
+"If you want to test the changes in a pull request or continue the work in a "
+"new pull request, the commits are to be cloned into a local branch in your "
+"forked repository"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:526
+msgid ""
+"First ensure your upstream points to the main repo, as from :ref:`linking-to-"
+"upstream`"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:528
+msgid ""
+"Then, fetch the changes and create a local branch. Assuming ``$ID`` is the "
+"pull request number and ``$BRANCHNAME`` is the name of the *new local* "
+"branch you wish to create::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:531
+msgid "git fetch upstream pull/$ID/head:$BRANCHNAME"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:533
+msgid "Checkout the newly created branch::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:535
+msgid "git checkout $BRANCHNAME"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:537
+msgid "You now have the changes in the pull request."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:541
+msgid "Exploring your repository"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:543
+msgid ""
+"To see a graphical representation of the repository branches and commits::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:546
+msgid "gitk --all"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:548
+msgid "To see a linear list of commits for this branch::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:550
+msgid "git log"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:552
+msgid ""
+"You can also look at the `network graph visualizer`_ for your github_ repo."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:556
+msgid "Backporting"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:558
+msgid ""
+"Backporting is the process of copying new feature/fixes committed in `numpy/"
+"main`_ back to stable release branches. To do this you make a branch off the "
+"branch you are backporting to, cherry pick the commits you want from ``numpy/"
+"main``, and then submit a pull request for the branch containing the "
+"backport."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:564
+msgid ""
+"First, you need to make the branch you will work on. This needs to be based "
+"on the older version of NumPy (not main)::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:567
+msgid ""
+"# Make a new branch based on numpy/maintenance/1.8.x,\n"
+"# backport-3324 is our new name for the branch.\n"
+"git checkout -b backport-3324 upstream/maintenance/1.8.x"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:571
+msgid ""
+"Now you need to apply the changes from main to this branch using `git cherry-"
+"pick`_::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:574
+msgid ""
+"# Update remote\n"
+"git fetch upstream\n"
+"# Check the commit log for commits to cherry pick\n"
+"git log upstream/main\n"
+"# This pull request included commits aa7a047 to c098283 (inclusive)\n"
+"# so you use the .. syntax (for a range of commits), the ^ makes the\n"
+"# range inclusive.\n"
+"git cherry-pick aa7a047^..c098283\n"
+"...\n"
+"# Fix any conflicts, then if needed:\n"
+"git cherry-pick --continue"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:586
+msgid ""
+"You might run into some conflicts cherry picking here. These are resolved "
+"the same way as merge/rebase conflicts. Except here you can use `git blame`_ "
+"to see the difference between main and the backported branch to make sure "
+"nothing gets screwed up."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:591
+msgid "Push the new branch to your Github repository::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:593
+msgid "git push -u origin backport-3324"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:595
+msgid ""
+"Finally make a pull request using Github. Make sure it is against the "
+"maintenance branch and not main, Github will usually suggest you make the "
+"pull request against main."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:602
+msgid "Pushing changes to the main repo"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:604
+msgid "*Requires commit rights to the main NumPy repo.*"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:606
+msgid ""
+"When you have a set of \"ready\" changes in a feature branch ready for "
+"NumPy's ``main`` or ``maintenance`` branches, you can push them to "
+"``upstream`` as follows:"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:610
+msgid "First, merge or rebase on the target branch."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:612
+msgid "Only a few, unrelated commits then prefer rebasing::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:614
+msgid ""
+"git fetch upstream\n"
+"git rebase upstream/main"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:617
+msgid "See :ref:`rebasing-on-main`."
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:619
+msgid "If all of the commits are related, create a merge commit::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:621
+msgid ""
+"git fetch upstream\n"
+"git merge --no-ff upstream/main"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:624
+msgid "Check that what you are going to push looks sensible::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:626
+msgid ""
+"git log -p upstream/main..\n"
+"git log --oneline --graph"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:629
+msgid "Push to upstream::"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:631
+msgid "git push upstream my-feature-branch:main"
+msgstr ""
+
+#: ../../../dev/development_workflow.rst:635
+msgid ""
+"It's usually a good idea to use the ``-n`` flag to ``git push`` to check "
+"first that you're about to push the changes you want to the place you want."
+msgstr ""

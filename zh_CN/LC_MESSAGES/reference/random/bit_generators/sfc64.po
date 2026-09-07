@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/bit_generators/sfc64.rst:2
+msgid "SFC64 Small Fast Chaotic PRNG"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._sfc64.SFC64:2
+msgid "BitGenerator for Chris Doty-Humphrey's Small Fast Chaotic PRNG."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._sfc64.SFC64:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._sfc64.SFC64:20
+msgid "**seed**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._sfc64.SFC64:-1
+msgid "{None, int, array_like[ints], SeedSequence}, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._sfc64.SFC64:8
+msgid ""
+"A seed to initialize the `BitGenerator`. If None, then fresh, unpredictable "
+"entropy will be pulled from the OS. If an ``int`` or ``array_like[ints]`` is "
+"passed, then it will be passed to `SeedSequence` to derive the initial "
+"`BitGenerator` state. One may also pass in a `SeedSequence` instance."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._sfc64.SFC64:23
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._sfc64.SFC64:24
+msgid ""
+"``SFC64`` is a 256-bit implementation of Chris Doty-Humphrey's Small Fast "
+"Chaotic PRNG ([R50352647a6aa-1]_). ``SFC64`` has a few different cycles that "
+"one might be on, depending on the seed; the expected period will be about :"
+"math:`2^{255}` ([R50352647a6aa-2]_). ``SFC64`` incorporates a 64-bit counter "
+"which means that the absolute minimum cycle length is :math:`2^{64}` and "
+"that distinct seeds will not run into each other for at least :math:`2^{64}` "
+"iterations."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._sfc64.SFC64:31
+msgid ""
+"``SFC64`` provides a capsule containing function pointers that produce "
+"doubles, and unsigned 32 and 64- bit integers. These are not directly "
+"consumable in Python and must be consumed by a ``Generator`` or similar "
+"object that supports low-level access."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._sfc64.SFC64:36
+msgid "**State and Seeding**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._sfc64.SFC64:38
+msgid ""
+"The ``SFC64`` state vector consists of 4 unsigned 64-bit values. The last is "
+"a 64-bit counter that increments by 1 each iteration."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._sfc64.SFC64:41
+msgid ""
+"The input seed is processed by `SeedSequence` to generate the first 3 "
+"values, then the ``SFC64`` algorithm is iterated a small number of times to "
+"mix."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._sfc64.SFC64:45
+msgid "**Compatibility Guarantee**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._sfc64.SFC64:47
+msgid ""
+"``SFC64`` makes a guarantee that a fixed seed will always produce the same "
+"random integer stream."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._sfc64.SFC64:51
+msgid "References"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._sfc64.SFC64:52
+msgid "`\"PractRand\" <http://pracrand.sourceforge.net/RNG_engines.txt>`_"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._sfc64.SFC64:54
+msgid ""
+"`\"Random Invertible Mapping Statistics\" <http://www.pcg-random.org/posts/"
+"random-invertible-mapping-statistics.html>`_"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._sfc64.SFC64:59
+msgid "[R50352647a6aa-1]_, [R50352647a6aa-2]_"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/sfc64.rst:11
+msgid "State"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/sfc64.rst:17:<autosummary>:1
+msgid ":py:obj:`state <numpy.random.SFC64.state>`\\"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/sfc64.rst:17:<autosummary>:1
+msgid "Get or set the PRNG state"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/sfc64.rst:19
+msgid "Extending"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/sfc64.rst:27:<autosummary>:1
+msgid ":py:obj:`cffi <numpy.random.SFC64.cffi>`\\"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/sfc64.rst:27:<autosummary>:1
+msgid "CFFI interface"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/sfc64.rst:27:<autosummary>:1
+msgid ":py:obj:`ctypes <numpy.random.SFC64.ctypes>`\\"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/sfc64.rst:27:<autosummary>:1
+msgid "ctypes interface"
+msgstr ""

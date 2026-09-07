@@ -1,0 +1,234 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.format_float_positional.rst:4
+msgid "numpy.format\\_float\\_positional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:2
+msgid ""
+"Format a floating-point scalar as a decimal string in positional notation."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:4
+msgid ""
+"Provides control over rounding, trimming and padding. Uses and assumes IEEE "
+"unbiased rounding. Uses the \"Dragon4\" algorithm."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:10
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:-1
+msgid "python float or numpy floating scalar"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:10
+msgid "Value to format."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:14
+msgid "**precision**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:-1
+msgid "non-negative integer or None, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:13
+msgid ""
+"Maximum number of digits to print. May be None if `unique` is `True`, but "
+"must be an integer if unique is `False`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:25
+msgid "**unique**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:-1
+msgid "boolean, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:17
+msgid ""
+"If `True`, use a digit-generation strategy which gives the shortest "
+"representation which uniquely identifies the floating-point number from "
+"other values of the same type, by judicious rounding. If `precision` is "
+"given fewer digits than necessary can be printed, or if `min_digits` is "
+"given more can be printed, in which cases the last digit is rounded with "
+"unbiased rounding. If `False`, digits are generated as if printing an "
+"infinite-precision value and stopping after `precision` digits, rounding the "
+"remaining value with unbiased rounding"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:33
+msgid "**fractional**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:28
+msgid ""
+"If `True`, the cutoffs of `precision` and `min_digits` refer to the total "
+"number of digits after the decimal point, including leading zeros. If "
+"`False`, `precision` and `min_digits` refer to the total number of "
+"significant digits, before or after the decimal point, ignoring leading "
+"zeros."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:42
+msgid "**trim**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:-1
+msgid "one of 'k', '.', '0', '-', optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:36
+msgid "Controls post-processing trimming of trailing digits, as follows:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:38
+msgid "'k' : keep trailing zeros, keep decimal point (no trimming)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:39
+msgid "'.' : trim all trailing zeros, leave decimal point"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:40
+msgid ""
+"'0' : trim all but the zero before the decimal point. Insert the zero if it "
+"is missing."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:42
+msgid "'-' : trim trailing zeros and any trailing decimal point"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:45
+msgid "**sign**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:45
+msgid "Whether to show the sign for positive values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:49
+msgid "**pad_left**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:-1
+msgid "non-negative integer, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:48
+msgid ""
+"Pad the left side of the string with whitespace until at least that many "
+"characters are to the left of the decimal point."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:53
+msgid "**pad_right**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:52
+msgid ""
+"Pad the right side of the string with whitespace until at least that many "
+"characters are to the right of the decimal point."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:60
+msgid "**min_digits**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:56
+msgid ""
+"Minimum number of digits to print. Only has an effect if `unique=True` in "
+"which case additional digits past those necessary to uniquely identify the "
+"value may be printed, rounding the last additional digit."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:60
+msgid "-- versionadded:: 1.21.0"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:71
+msgid "**rep**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:-1
+msgid "string"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:65
+msgid "The string representation of the floating point value"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:76
+msgid ":obj:`format_float_scientific`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.format_float_positional:82
+msgid "Examples"
+msgstr "範例"

@@ -1,0 +1,1070 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.chararray.rst:2
+msgid "numpy.chararray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:2
+msgid "Provides a convenient view on arrays of string and unicode values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:5
+msgid ""
+"The `chararray` class exists for backwards compatibility with Numarray, it "
+"is not recommended for new development. Starting from numpy 1.4, if one "
+"needs arrays of strings, it is recommended to use arrays of `dtype` "
+"`object_`, `bytes_` or `str_`, and use the free functions in the `numpy."
+"char` module for fast vectorized string operations."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:11
+msgid ""
+"Versus a regular NumPy array of type `str` or `unicode`, this class adds the "
+"following functionality:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:14
+msgid "values automatically have whitespace removed from the end when indexed"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:17
+msgid ""
+"comparison operators automatically remove whitespace from the end when "
+"comparing values"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:20
+msgid ""
+"vectorized string operations are provided as methods (e.g. `.endswith`) and "
+"infix operators (e.g. ``\"+\", \"*\", \"%\"``)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:23
+msgid ""
+"chararrays should be created using `numpy.char.array` or `numpy.char."
+"asarray`, rather than this constructor directly."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:26
+msgid ""
+"This constructor creates the array, using `buffer` (with `offset` and "
+"`strides`) if it is not ``None``. If `buffer` is ``None``, then constructs a "
+"new array with `strides` in \"C order\", unless both ``len(shape) >= 2`` and "
+"``order='F'``, in which case `strides` is in \"Fortran order\"."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:35
+msgid "**shape**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:-1
+msgid "tuple"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:35
+msgid "Shape of the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:38
+msgid "**itemsize**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:38
+msgid "Length of each array element, in number of characters. Default is 1."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:42
+msgid "**unicode**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:41
+msgid ""
+"Are the array elements of type unicode (True) or string (False). Default is "
+"False."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:46
+msgid "**buffer**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:-1
+msgid "object exposing the buffer interface or str, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:45
+msgid ""
+"Memory address of the start of the array data.  Default is None, in which "
+"case a new array is created."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:50
+msgid "**offset**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:49
+msgid ""
+"Fixed stride displacement from the beginning of an axis? Default is 0. Needs "
+"to be >=0."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:54
+msgid "**strides**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:-1
+msgid "array_like of ints, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:53
+msgid ""
+"Strides for the array (see `ndarray.strides` for full description). Default "
+"is None."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:69
+msgid "**order**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:-1
+msgid "{'C', 'F'}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:57
+msgid ""
+"The order in which the array data is stored in memory: 'C' -> \"row major\" "
+"order (the default), 'F' -> \"column major\" (Fortran) order."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:72
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:0
+msgid "Attributes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:90
+msgid ":obj:`T <T>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:90
+msgid "View of the transposed array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:93
+msgid ":obj:`base <base>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:93
+msgid "Base object if memory is from some other object."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:96
+msgid ":obj:`ctypes <ctypes>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:96
+msgid ""
+"An object to simplify the interaction of the array with the ctypes module."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:99
+msgid ":obj:`data <data>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:99
+msgid "Python buffer object pointing to the start of the array's data."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:102
+msgid ":obj:`dtype <dtype>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:102
+msgid "Data-type of the array's elements."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:105
+msgid ":obj:`flags <flags>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:105
+msgid "Information about the memory layout of the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:108
+msgid ":obj:`flat <flat>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:108
+msgid "A 1-D iterator over the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:111
+msgid ":obj:`imag <imag>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:111
+msgid "The imaginary part of the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:114
+msgid ":obj:`itemsize <itemsize>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:114
+msgid "Length of one array element in bytes."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:117
+msgid ":obj:`nbytes <nbytes>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:117
+msgid "Total bytes consumed by the elements of the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:120
+msgid ":obj:`ndim <ndim>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:120
+msgid "Number of array dimensions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:123
+msgid ":obj:`real <real>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:123
+msgid "The real part of the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:126
+msgid ":obj:`shape <shape>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:126
+msgid "Tuple of array dimensions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:129
+msgid ":obj:`size <size>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:129
+msgid "Number of elements in the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:132
+msgid ":obj:`strides <strides>`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:132
+msgid "Tuple of bytes to step in each dimension when traversing an array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:135
+msgid "Methods"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`astype <numpy.chararray.astype>`\\ \\(dtype\\[\\, order\\, "
+"casting\\, subok\\, copy\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Copy of the array, cast to a specified type."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`argsort <numpy.chararray.argsort>`\\ \\(\\[axis\\, kind\\, "
+"order\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Returns the indices that would sort this array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`copy <numpy.chararray.copy>`\\ \\(\\[order\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Return a copy of the array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`count <numpy.chararray.count>`\\ \\(sub\\[\\, start\\, end\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"Returns an array with the number of non-overlapping occurrences of substring "
+"`sub` in the range [`start`, `end`]."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`decode <numpy.chararray.decode>`\\ \\(\\[encoding\\, errors\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Calls ``bytes.decode`` element-wise."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`dump <numpy.chararray.dump>`\\ \\(file\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Dump a pickle of the array to the specified file."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`dumps <numpy.chararray.dumps>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Returns the pickle of the array as a string."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`encode <numpy.chararray.encode>`\\ \\(\\[encoding\\, errors\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Calls `str.encode` element-wise."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`endswith <numpy.chararray.endswith>`\\ \\(suffix\\[\\, start\\, "
+"end\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"Returns a boolean array which is `True` where the string element in `self` "
+"ends with `suffix`, otherwise `False`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`expandtabs <numpy.chararray.expandtabs>`\\ \\(\\[tabsize\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"Return a copy of each string element where all tab characters are replaced "
+"by one or more spaces."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`fill <numpy.chararray.fill>`\\ \\(value\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Fill the array with a scalar value."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`find <numpy.chararray.find>`\\ \\(sub\\[\\, start\\, end\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"For each element, return the lowest index in the string where substring "
+"`sub` is found."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`flatten <numpy.chararray.flatten>`\\ \\(\\[order\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Return a copy of the array collapsed into one dimension."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`getfield <numpy.chararray.getfield>`\\ \\(dtype\\[\\, offset\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Returns a field of the given array as a certain type."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`index <numpy.chararray.index>`\\ \\(sub\\[\\, start\\, end\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Like `find`, but raises `ValueError` when the substring is not found."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`isalnum <numpy.chararray.isalnum>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"Returns true for each element if all characters in the string are "
+"alphanumeric and there is at least one character, false otherwise."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`isalpha <numpy.chararray.isalpha>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"Returns true for each element if all characters in the string are alphabetic "
+"and there is at least one character, false otherwise."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`isdecimal <numpy.chararray.isdecimal>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"For each element in `self`, return True if there are only decimal characters "
+"in the element."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`isdigit <numpy.chararray.isdigit>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"Returns true for each element if all characters in the string are digits and "
+"there is at least one character, false otherwise."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`islower <numpy.chararray.islower>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"Returns true for each element if all cased characters in the string are "
+"lowercase and there is at least one cased character, false otherwise."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`isnumeric <numpy.chararray.isnumeric>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"For each element in `self`, return True if there are only numeric characters "
+"in the element."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`isspace <numpy.chararray.isspace>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"Returns true for each element if there are only whitespace characters in the "
+"string and there is at least one character, false otherwise."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`istitle <numpy.chararray.istitle>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"Returns true for each element if the element is a titlecased string and "
+"there is at least one character, false otherwise."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`isupper <numpy.chararray.isupper>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"Returns true for each element if all cased characters in the string are "
+"uppercase and there is at least one character, false otherwise."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`item <numpy.chararray.item>`\\ \\(\\*args\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Copy an element of an array to a standard Python scalar and return it."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`join <numpy.chararray.join>`\\ \\(seq\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"Return a string which is the concatenation of the strings in the sequence "
+"`seq`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`ljust <numpy.chararray.ljust>`\\ \\(width\\[\\, fillchar\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"Return an array with the elements of `self` left-justified in a string of "
+"length `width`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`lower <numpy.chararray.lower>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Return an array with the elements of `self` converted to lowercase."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`lstrip <numpy.chararray.lstrip>`\\ \\(\\[chars\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"For each element in `self`, return a copy with the leading characters "
+"removed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`nonzero <numpy.chararray.nonzero>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Return the indices of the elements that are non-zero."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`put <numpy.chararray.put>`\\ \\(indices\\, values\\[\\, mode\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Set ``a.flat[n] = values[n]`` for all `n` in indices."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`ravel <numpy.chararray.ravel>`\\ \\(\\[order\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Return a flattened array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`repeat <numpy.chararray.repeat>`\\ \\(repeats\\[\\, axis\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Repeat elements of an array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`replace <numpy.chararray.replace>`\\ \\(old\\, new\\[\\, count\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"For each element in `self`, return a copy of the string with all occurrences "
+"of substring `old` replaced by `new`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`reshape <numpy.chararray.reshape>`\\ \\(shape\\[\\, order\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Returns an array containing the same data with a new shape."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`resize <numpy.chararray.resize>`\\ \\(new\\_shape\\[\\, "
+"refcheck\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Change shape and size of array in-place."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`rfind <numpy.chararray.rfind>`\\ \\(sub\\[\\, start\\, end\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"For each element in `self`, return the highest index in the string where "
+"substring `sub` is found, such that `sub` is contained within [`start`, "
+"`end`]."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`rindex <numpy.chararray.rindex>`\\ \\(sub\\[\\, start\\, end\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"Like `rfind`, but raises `ValueError` when the substring `sub` is not found."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`rjust <numpy.chararray.rjust>`\\ \\(width\\[\\, fillchar\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"Return an array with the elements of `self` right-justified in a string of "
+"length `width`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`rsplit <numpy.chararray.rsplit>`\\ \\(\\[sep\\, maxsplit\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"For each element in `self`, return a list of the words in the string, using "
+"`sep` as the delimiter string."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`rstrip <numpy.chararray.rstrip>`\\ \\(\\[chars\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"For each element in `self`, return a copy with the trailing characters "
+"removed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`searchsorted <numpy.chararray.searchsorted>`\\ \\(v\\[\\, side\\, "
+"sorter\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"Find indices where elements of v should be inserted in a to maintain order."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`setfield <numpy.chararray.setfield>`\\ \\(val\\, dtype\\[\\, "
+"offset\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Put a value into a specified place in a field defined by a data-type."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`setflags <numpy.chararray.setflags>`\\ \\(\\[write\\, align\\, "
+"uic\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Set array flags WRITEABLE, ALIGNED, WRITEBACKIFCOPY, respectively."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`sort <numpy.chararray.sort>`\\ \\(\\[axis\\, kind\\, order\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Sort an array in-place."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`split <numpy.chararray.split>`\\ \\(\\[sep\\, maxsplit\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`splitlines <numpy.chararray.splitlines>`\\ \\(\\[keepends\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"For each element in `self`, return a list of the lines in the element, "
+"breaking at line boundaries."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`squeeze <numpy.chararray.squeeze>`\\ \\(\\[axis\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Remove axes of length one from `a`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`startswith <numpy.chararray.startswith>`\\ \\(prefix\\[\\, start\\, "
+"end\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"Returns a boolean array which is `True` where the string element in `self` "
+"starts with `prefix`, otherwise `False`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`strip <numpy.chararray.strip>`\\ \\(\\[chars\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"For each element in `self`, return a copy with the leading and trailing "
+"characters removed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`swapaxes <numpy.chararray.swapaxes>`\\ \\(axis1\\, axis2\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Return a view of the array with `axis1` and `axis2` interchanged."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`swapcase <numpy.chararray.swapcase>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"For each element in `self`, return a copy of the string with uppercase "
+"characters converted to lowercase and vice versa."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`take <numpy.chararray.take>`\\ \\(indices\\[\\, axis\\, out\\, "
+"mode\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Return an array formed from the elements of `a` at the given indices."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`title <numpy.chararray.title>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"For each element in `self`, return a titlecased version of the string: words "
+"start with uppercase characters, all remaining cased characters are "
+"lowercase."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`tofile <numpy.chararray.tofile>`\\ \\(fid\\[\\, sep\\, format\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Write array to a file as text or binary (default)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`tolist <numpy.chararray.tolist>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"Return the array as an ``a.ndim``-levels deep nested list of Python scalars."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`tostring <numpy.chararray.tostring>`\\ \\(\\[order\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "A compatibility alias for `tobytes`, with exactly the same behavior."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+":py:obj:`translate <numpy.chararray.translate>`\\ \\(table\\[\\, "
+"deletechars\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"For each element in `self`, return a copy of the string where all characters "
+"occurring in the optional argument `deletechars` are removed, and the "
+"remaining characters have been mapped through the given translation table."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`transpose <numpy.chararray.transpose>`\\ \\(\\*axes\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Returns a view of the array with axes transposed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`upper <numpy.chararray.upper>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "Return an array with the elements of `self` converted to uppercase."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`view <numpy.chararray.view>`\\ \\(\\[dtype\\]\\[\\, type\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid "New view of array with the same data."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ":py:obj:`zfill <numpy.chararray.zfill>`\\ \\(width\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.chararray:201:<autosummary>:1
+msgid ""
+"Return the numeric string left-filled with zeros in a string of length "
+"`width`."
+msgstr ""

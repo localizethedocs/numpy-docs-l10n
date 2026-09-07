@@ -1,0 +1,242 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/bit_generators/philox.rst:2
+msgid "Philox Counter-based RNG"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:2
+msgid "Container for the Philox (4x64) pseudo-random number generator."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../docstring of numpy.random._philox.Philox:12
+msgid "**seed**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:-1
+msgid "{None, int, array_like[ints], SeedSequence}, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:8
+msgid ""
+"A seed to initialize the `BitGenerator`. If None, then fresh, unpredictable "
+"entropy will be pulled from the OS. If an ``int`` or ``array_like[ints]`` is "
+"passed, then it will be passed to `SeedSequence` to derive the initial "
+"`BitGenerator` state. One may also pass in a `SeedSequence` instance."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:17
+msgid "**counter**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:-1
+msgid "{None, int, array_like}, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:15
+msgid ""
+"Counter to use in the Philox state. Can be either a Python int (long in 2.x) "
+"in [0, 2**256) or a 4-element uint64 array. If not provided, the RNG is "
+"initialized at 0."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:30
+msgid "**key**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:20
+msgid ""
+"Key to use in the Philox state.  Unlike ``seed``, the value in key is "
+"directly set. Can be either a Python int in [0, 2**128) or a 2-element "
+"uint64 array. `key` and ``seed`` cannot both be used."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:33
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:34
+msgid ""
+"Philox is a 64-bit PRNG that uses a counter-based design based on weaker "
+"(and faster) versions of cryptographic functions [R40f8e2ad755a-1]_. "
+"Instances using different values of the key produce independent sequences.  "
+"Philox has a period of :math:`2^{256} - 1` and supports arbitrary advancing "
+"and jumping the sequence in increments of :math:`2^{128}`. These features "
+"allow multiple non-overlapping sequences to be generated."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:41
+msgid ""
+"``Philox`` provides a capsule containing function pointers that produce "
+"doubles, and unsigned 32 and 64- bit integers. These are not directly "
+"consumable in Python and must be consumed by a ``Generator`` or similar "
+"object that supports low-level access."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:46
+msgid "**State and Seeding**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:48
+msgid ""
+"The ``Philox`` state vector consists of a 256-bit value encoded as a 4-"
+"element uint64 array and a 128-bit value encoded as a 2-element uint64 "
+"array. The former is a counter which is incremented by 1 for every 4 64-bit "
+"randoms produced. The second is a key which determined the sequence "
+"produced. Using different keys produces independent sequences."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:54
+msgid ""
+"The input ``seed`` is processed by `SeedSequence` to generate the key. The "
+"counter is set to 0."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:57
+msgid ""
+"Alternately, one can omit the ``seed`` parameter and set the ``key`` and "
+"``counter`` directly."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:60
+msgid "**Parallel Features**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:62
+msgid ""
+"The preferred way to use a BitGenerator in parallel applications is to use "
+"the `SeedSequence.spawn` method to obtain entropy values, and to use these "
+"to generate new BitGenerators:"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:70
+msgid ""
+"``Philox`` can be used in parallel applications by calling the ``jumped`` "
+"method  to advances the state as-if :math:`2^{128}` random numbers have been "
+"generated. Alternatively, ``advance`` can be used to advance the counter for "
+"any positive step in [0, 2**256). When using ``jumped``, all generators "
+"should be chained to ensure that the segments come from the same sequence."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:84
+msgid ""
+"Alternatively, ``Philox`` can be used in parallel applications by using a "
+"sequence of distinct keys where each instance uses different key."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:90
+msgid "**Compatibility Guarantee**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:92
+msgid ""
+"``Philox`` makes a guarantee that a fixed ``seed`` will always produce the "
+"same random integer stream."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:96
+msgid "References"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:97
+msgid ""
+"John K. Salmon, Mark A. Moraes, Ron O. Dror, and David E. Shaw, \"Parallel "
+"Random Numbers: As Easy as 1, 2, 3,\" Proceedings of the International "
+"Conference for High Performance Computing, Networking, Storage and Analysis "
+"(SC11), New York, NY: ACM, 2011."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:104
+msgid "[R40f8e2ad755a-1]_"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:107
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../docstring of numpy.random._philox.Philox:0
+msgid "Attributes"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:120
+msgid "**lock: threading.Lock**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._philox.Philox:116
+msgid ""
+"Lock instance that is shared so that the same bit git generator can be used "
+"in multiple Generators without corrupting the state. Code that generates "
+"values from a bit generator should hold the bit generator's lock."
+msgstr ""
+
+#: ../../../reference/random/bit_generators/philox.rst:11
+msgid "State"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/philox.rst:17:<autosummary>:1
+msgid ":py:obj:`state <numpy.random.Philox.state>`\\"
+msgstr ":py:obj:`state <numpy.random.Philox.state>`\\"
+
+#: ../../../reference/random/bit_generators/philox.rst:17:<autosummary>:1
+msgid "Get or set the PRNG state"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/philox.rst:19
+msgid "Parallel generation"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/philox.rst:25:<autosummary>:1
+msgid ":py:obj:`advance <numpy.random.Philox.advance>`\\ \\(delta\\)"
+msgstr ":py:obj:`advance <numpy.random.Philox.advance>`\\ \\(delta\\)"
+
+#: ../../../reference/random/bit_generators/philox.rst:25:<autosummary>:1
+msgid "Advance the underlying RNG as-if delta draws have occurred."
+msgstr ""
+
+#: ../../../reference/random/bit_generators/philox.rst:25:<autosummary>:1
+msgid ":py:obj:`jumped <numpy.random.Philox.jumped>`\\ \\(\\[jumps\\]\\)"
+msgstr ":py:obj:`jumped <numpy.random.Philox.jumped>`\\ \\(\\[jumps\\]\\)"
+
+#: ../../../reference/random/bit_generators/philox.rst:25:<autosummary>:1
+msgid "Returns a new bit generator with the state jumped"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/philox.rst:27
+msgid "Extending"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/philox.rst:34:<autosummary>:1
+msgid ":py:obj:`cffi <numpy.random.Philox.cffi>`\\"
+msgstr ":py:obj:`cffi <numpy.random.Philox.cffi>`\\"
+
+#: ../../../reference/random/bit_generators/philox.rst:34:<autosummary>:1
+msgid "CFFI interface"
+msgstr ""
+
+#: ../../../reference/random/bit_generators/philox.rst:34:<autosummary>:1
+msgid ":py:obj:`ctypes <numpy.random.Philox.ctypes>`\\"
+msgstr ":py:obj:`ctypes <numpy.random.Philox.ctypes>`\\"
+
+#: ../../../reference/random/bit_generators/philox.rst:34:<autosummary>:1
+msgid "ctypes interface"
+msgstr ""
