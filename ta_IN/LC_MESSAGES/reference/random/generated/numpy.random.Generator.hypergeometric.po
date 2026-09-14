@@ -1,0 +1,252 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/generated/numpy.random.Generator.hypergeometric.rst:4
+msgid "numpy.random.Generator.hypergeometric"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.hypergeometric.rst:8
+msgid "method"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:2
+msgid "Draw samples from a Hypergeometric distribution."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:4
+msgid ""
+"Samples are drawn from a hypergeometric distribution with specified "
+"parameters, `ngood` (ways to make a good selection), `nbad` (ways to make a "
+"bad selection), and `nsample` (number of items sampled, which is less than "
+"or equal to the sum ``ngood + nbad``)."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:13
+msgid "**ngood**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:-1
+msgid "int or array_like of ints"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:12
+msgid ""
+"Number of ways to make a good selection.  Must be nonnegative and less than "
+"10**9."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:17
+msgid "**nbad**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:16
+msgid ""
+"Number of ways to make a bad selection.  Must be nonnegative and less than "
+"10**9."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:21
+msgid "**nsample**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:20
+msgid ""
+"Number of items sampled.  Must be nonnegative and less than ``ngood + nbad``."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:30
+msgid "**size**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:-1
+msgid "int or tuple of ints, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:24
+msgid ""
+"Output shape.  If the given shape is, e.g., ``(m, n, k)``, then ``m * n * "
+"k`` samples are drawn.  If size is ``None`` (default), a single value is "
+"returned if `ngood`, `nbad`, and `nsample` are all scalars.  Otherwise, ``np."
+"broadcast(ngood, nbad, nsample).size`` samples are drawn."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:43
+msgid "**out**"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:-1
+msgid "ndarray or scalar"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:35
+msgid ""
+"Drawn samples from the parameterized hypergeometric distribution. Each "
+"sample is the number of good items within a randomly selected subset of size "
+"`nsample` taken from a set of `ngood` good items and `nbad` bad items."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:48
+msgid ":obj:`multivariate_hypergeometric`"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:49
+msgid "Draw samples from the multivariate hypergeometric distribution."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:50
+msgid ":obj:`scipy.stats.hypergeom`"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:51
+msgid ""
+"probability density function, distribution or cumulative density function, "
+"etc."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:55
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:56
+msgid ""
+"The probability mass function (PMF) for the Hypergeometric distribution is"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:58
+msgid ""
+"P(x) = \\frac{\\binom{g}{x}\\binom{b}{n-x}}{\\binom{g+b}{n}},\n"
+"\n"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:60
+msgid "where :math:`0 \\le x \\le n` and :math:`n-b \\le x \\le g`"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:62
+msgid ""
+"for P(x) the probability of ``x`` good results in the drawn sample, g = "
+"`ngood`, b = `nbad`, and n = `nsample`."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:65
+msgid ""
+"Consider an urn with black and white marbles in it, `ngood` of them are "
+"black and `nbad` are white. If you draw `nsample` balls without replacement, "
+"then the hypergeometric distribution describes the distribution of black "
+"balls in the drawn sample."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:70
+msgid ""
+"Note that this distribution is very similar to the binomial distribution, "
+"except that in this case, samples are drawn without replacement, whereas in "
+"the Binomial case samples are drawn with replacement (or the sample space is "
+"infinite). As the sample space becomes large, this distribution approaches "
+"the binomial."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:76
+msgid ""
+"The arguments `ngood` and `nbad` each must be less than `10**9`. For "
+"extremely large arguments, the algorithm that is used to compute the samples "
+"[R688e4aa3bfc3-4]_ breaks down because of loss of precision in floating "
+"point calculations.  For such large values, if `nsample` is not also large, "
+"the distribution can be approximated with the binomial distribution, "
+"`binomial(n=nsample, p=ngood/(ngood + nbad))`."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:84
+msgid "References"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:85
+msgid ""
+"Lentner, Marvin, \"Elementary Applied Statistics\", Bogden and Quigley, 1972."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:87
+msgid ""
+"Weisstein, Eric W. \"Hypergeometric Distribution.\" From MathWorld--A "
+"Wolfram Web Resource. https://mathworld.wolfram.com/"
+"HypergeometricDistribution.html"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:90
+msgid ""
+"Wikipedia, \"Hypergeometric distribution\", https://en.wikipedia.org/wiki/"
+"Hypergeometric_distribution"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:92
+msgid ""
+"Stadlober, Ernst, \"The ratio of uniforms approach for generating discrete "
+"random variates\", Journal of Computational and Applied Mathematics, 31, pp. "
+"181-189 (1990)."
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:98
+msgid ""
+"[R688e4aa3bfc3-1]_, [R688e4aa3bfc3-2]_, [R688e4aa3bfc3-3]_, "
+"[R688e4aa3bfc3-4]_"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.hypergeometric:101
+msgid "Examples"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.hypergeometric:106
+msgid "Draw samples from the distribution:"
+msgstr ""
+
+#: ../../../../docstring of
+#: numpy.random._generator.Generator.hypergeometric:116
+msgid ""
+"Suppose you have an urn with 15 white and 15 black marbles. If you pull 15 "
+"marbles at random, how likely is it that 12 or more of them are one color?"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:-1
+msgid ""
+"<div id=\"70ca281f-90df-47bb-b339-fb0f58be14f2\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('450b353c-6d30-41c9-"
+"a334-6d105249365a','70ca281f-90df-47bb-b339-fb0f58be14f2')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('450b353c-6d30-41c9-a334-6d105249365a','70ca281f-90df-47bb-b339-"
+"fb0f58be14f2')\">Open In Tab</button></div><div id=\"f47db080-70af-426d-88d5-"
+"a44cd83bfaec\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../docstring of numpy.random._generator.Generator.hypergeometric:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../../try_examples.json\");});</script>"
+msgstr ""

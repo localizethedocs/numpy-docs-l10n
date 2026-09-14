@@ -1,0 +1,743 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../user/basics.performant_code.rst:6
+msgid "Writing Performant NumPy Code with Multi-Core CPUs"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:10
+msgid "Introduction"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:12
+msgid ""
+"NumPy is designed for high performance numerical computing in Python by "
+"leveraging vectorized operations. However, vectorization does not always "
+"fully utilize the capabilities of multi-core processors. To exploit "
+"parallelism, additional strategies are necessary."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:16
+msgid "In this section, we cover the following topics:"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:18
+msgid ""
+":ref:`General concepts for using multi-core processors in Python <basics."
+"performant_code.general_concepts_for_multi_core_processors>`"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:19
+msgid ""
+":ref:`Using multi-core processors with Python standard libraries <basics."
+"performant_code.multi_core_with_standard_libraries>`"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:20
+msgid ""
+":ref:`Third party libraries for multi-core processing <basics."
+"performant_code.third_party_libraries>`"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:26
+msgid "General concepts for multi-core processors in Python"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:30
+msgid "Multiprocessing"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:32
+msgid ""
+"Multiprocessing is a technique that allows the execution of multiple "
+"processes simultaneously, each with its own Python interpreter and memory "
+"space. As a high-level API, Python provides the `concurrent.futures."
+"ProcessPoolExecutor` class to facilitate multiprocessing."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:37
+msgid "Firstly, we introduce brief Pros and Cons of multiprocessing:"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:40
+#: ../../../user/basics.performant_code.rst:135
+msgid "Pros"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:41
+msgid "Bypasses the Global Interpreter Lock (GIL), allowing true parallelism"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:42
+msgid "Avoids accidental data sharing due to separate memory spaces"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:46
+#: ../../../user/basics.performant_code.rst:140
+msgid "Cons"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:47
+msgid "Higher memory usage due to separate memory spaces for each process"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:48
+msgid ""
+"Difficulty in sharing data between processes, requiring serialization "
+"(pickling) of objects"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:52
+#: ../../../user/basics.performant_code.rst:145
+msgid "General tips"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:54
+msgid ""
+"The following are general tips for utilizing multiprocessing. Some of these "
+"tips are used in the `Multiprocessing Example <#multiprocessing-example>`__."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:58
+msgid "Reduce creation overhead"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:60
+msgid ""
+"Process creation has a higher overhead compared to thread creation due to "
+"the need to initialize a new Python interpreter and memory space. To "
+"mitigate this overhead, consider the following strategies:"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:63
+msgid ""
+"Use process pools to reuse existing processes instead of creating new ones "
+"for each task. `concurrent.futures.ProcessPoolExecutor` provides this "
+"feature."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:65
+msgid ""
+"Select appropriate startup methods. Avoid explicitly selecting ``fork`` "
+"unless you know that it is safe in your application. Forking a multithreaded "
+"process is problematic and can lead to deadlocks or crashes. Python 3.14 "
+"changed the default start method on POSIX platforms from ``fork`` to "
+"``forkserver`` to avoid common multithreaded process incompatibilities. See "
+"the `multiprocessing documentation <https://docs.python.org/3/library/"
+"multiprocessing.html#contexts-and-start-methods>`__ for more details."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:76
+msgid "Reduce communication overhead"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:78
+msgid ""
+"Inter-process communication (IPC) can introduce significant overhead due to "
+"data serialization and transfer between processes. In Python, only picklable "
+"objects are allowed to be passed between processes. Due to this limitation, "
+"multiprocessing is not suitable for programs which need to serialize data "
+"between processes frequently."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:81
+msgid "To reduce communication overhead, consider the following strategies:"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:83
+msgid "Minimize the amount of data transferred between processes."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:84
+msgid ""
+"Use shared memory constructs such as `multiprocessing.shared_memory`, "
+"`multiprocessing.Array` or `multiprocessing.Value` for large data that needs "
+"to be accessed by multiple processes."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:86
+msgid ""
+"`Balance processing load <#balance-processing-load>`__ to ensure that all "
+"processes are utilized efficiently and avoid idle time."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:91
+msgid "Pickling considerations"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:93
+msgid ""
+"The worker function and its arguments must be picklable when using "
+"multiprocessing. This requirement can become a limitation when working with "
+"complex data structures or dynamically defined functions."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:97
+msgid ""
+"If you encounter pickling-related issues, consider the following strategies:"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:99
+msgid ""
+"Refactor your code to use simpler data structures or functions. For example, "
+"define worker functions at the top level of a module and avoid lambda or "
+"nested functions."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:101
+msgid ""
+"Consider third-party libraries such as `joblib <https://github.com/joblib/"
+"joblib>`__. ``joblib``'s default backend ``loky`` relies on `cloudpickle "
+"<https://github.com/cloudpipe/cloudpickle>`__ for serialization and can "
+"handle a wider range of Python objects than the standard ``pickle`` module. "
+"See the ``joblib`` documentaion on `Serialization of un-picklable objects "
+"<https://joblib.readthedocs.io/en/latest/auto_examples/"
+"serialization_and_wrappers.html>`__ for more details."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:109
+msgid "Multithreading"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:111
+msgid ""
+"Multithreading allows multiple threads to run within the same process, "
+"sharing the same memory space."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:114
+msgid ""
+"Free-threaded Python was introduced experimentally in Python 3.13 and became "
+"a supported (non-experimental) feature in Python 3.14. When combined with "
+"libraries that are explicitly designed to be thread-safe, this can enable "
+"true parallel execution with threads. For details on free-threaded Python "
+"builds, see the `Python Free-Threading Guide <https://py-free-threading."
+"github.io/>`__."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:122
+msgid ""
+"As a high-level API, Python provides the `concurrent.futures."
+"ThreadPoolExecutor` class for thread-based parallelism. Python also provides "
+"the `concurrent.futures.InterpreterPoolExecutor <https://docs.python.org/3/"
+"library/concurrent.futures.html#concurrent.futures."
+"InterpreterPoolExecutor>`__, which uses multiple interpreters running in "
+"separate threads and avoids sharing Python objects between them. However, it "
+"is not yet available in NumPy. (See `gh-24755 <https://github.com/numpy/"
+"numpy/issues/24755>`__ for details.)"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:132
+msgid "The main pros and cons of multithreading are as follows:"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:136
+msgid "Lower memory usage since threads share the same memory space"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:137
+msgid "Easier communication between threads"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:141
+msgid ""
+"Possibility of race conditions when mutating shared data simultaneously with "
+"reads in other threads"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:142
+msgid ""
+"Limited performance improvement if using Python libraries are not thread-"
+"safe or have limited support for free-threaded Python builds"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:147
+msgid ""
+"The following are general tips for utilizing multithreading. For more "
+"details on thread safety guarantees for built-in types in Python's free-"
+"threaded build, see the Python documentation on `Thread Safety Guarantees "
+"<https://docs.python.org/3.15/library/threadsafety.html#thread-safety-"
+"guarantees>`__. Some of these tips are used in the `Multithreading Example "
+"<#multithreading-example>`__."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:155
+msgid "Avoid race conditions"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:157
+msgid ""
+"Race conditions occur when multiple threads update shared data "
+"simultaneously, leading to unpredictable results. To avoid race conditions, "
+"consider the following strategies:"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:161
+msgid ""
+"Minimize the amount of shared data between threads by designing your program "
+"to use thread-local storage or by passing data explicitly to threads."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:163
+msgid ""
+"Prefer immutable NumPy arrays or read-only access patterns when possible, "
+"since they reduce the need for explicit synchronization."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:165
+msgid ""
+"Use thread-safe data structures or synchronization primitives like locks, "
+"semaphores, or condition variables to manage access to shared data. Note "
+"that improper use of these synchronization mechanisms can cause deadlocks, "
+"so they should be used with care."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:172
+msgid "Avoid CPU oversubscription"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:174
+msgid ""
+"Some NumPy operations, such as matrix multiplication and linear algebra "
+"functions (See :ref:`Linear Algebra <routines.linalg>`), may use multiple "
+"threads provided by the underlying BLAS library (e.g. OpenBLAS, MKL)."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:179
+msgid ""
+"If these operations are executed from another thread pool that already uses "
+"all available CPU cores, CPU oversubscription can occur. In this situation, "
+"both the outer thread pool and the BLAS threads compete for the same CPU "
+"resources, which can reduce performance."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:184
+msgid "To avoid CPU oversubscription, consider the following strategies:"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:186
+msgid ""
+"Limit the number of threads in BLAS to 1, for example using `threadpoolctl "
+"<https://github.com/joblib/threadpoolctl>`__"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:192
+msgid "Common tips for both multiprocessing and multithreading"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:195
+msgid "Balance processing load"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:197
+msgid ""
+"If the processing load is not evenly distributed among workers, some workers "
+"may finish their tasks earlier and remain idle while others are still "
+"working. It leads to inefficient use of resources and longer overall "
+"execution time."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:201
+msgid "To achieve better load balancing, consider the following strategies:"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:203
+msgid ""
+"Use dynamic task allocation where tasks are assigned to workers as they "
+"become available, rather than pre-allocating tasks."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:205
+msgid ""
+"Check ``chunksize`` parameter to ensure that tasks are neither too small "
+"(causing excessive overhead) nor too large (leading to load imbalance)."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:210
+msgid "Determine the correct number of cpus"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:212
+msgid ""
+"Pythons provides `os.cpu_count` and `os.process_cpu_count <https://docs."
+"python.org/3/library/os.html#os.process_cpu_count>`__ functions to get the "
+"number of CPUs in the system and the current process, respectively. However, "
+"in some environments (e.g., Docker containers or HPC clusters), this may not "
+"reflect the actual number of CPUs available to the process."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:217
+msgid ""
+"To get a more accurate count of available CPUs, consider the following "
+"strategies:"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:219
+msgid ""
+"Use `joblib.cpu_count() <https://joblib.readthedocs.io/en/latest/generated/"
+"joblib.cpu_count.html>`__, which takes into account constraints such as CPU "
+"affinity settings and Linux CFS scheduler quotas. (See `joblib <#joblib>`__ "
+"section for more details about joblib.)"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:227
+msgid "Using multi-core processors with Python standard libraries"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:229
+msgid ""
+"In this section, we demonstrate how to use Python's standard libraries to "
+"leverage multi-core processors with NumPy."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:231
+msgid ""
+"As an example, we use `Mandelbrot set <https://en.wikipedia.org/wiki/"
+"Mandelbrot_set>`__ generation. Mandelbrot set is defined as the set of "
+"complex numbers ``c`` for which the sequence defined by the iterative "
+"function does not diverge to infinity:"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:235
+msgid "z_{n+1} = z_n^2 + c, \\quad z_0 = 0"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:240
+msgid ""
+"If the absolute value of :math:`z_n` remains bounded (i.e., does not exceed "
+"a certain threshold, typically ``2`` ) after a fixed number of iterations, "
+"then ``c`` is considered to be in the Mandelbrot set."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:244
+msgid ""
+"Following to this definition, we can calculate each point in the complex "
+"plane independently, making it suited for parallel computation."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:247
+msgid ""
+"The hot colors in the image below represent the number of iterations it took "
+"for the sequence to diverge for each point in the complex plane."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:-1
+msgid "Mandelbrot set"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:259
+msgid "Multiprocessing Example"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:261
+msgid ""
+"The following code demonstrates how to use `concurrent.futures."
+"ProcessPoolExecutor` to parallelize the Mandelbrot set generation across "
+"multiple processes."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:264
+msgid ""
+"This example prioritizes clarity over efficiency. In practice, transferring "
+"large NumPy arrays between processes can be expensive. Defining shared-"
+"memory arrays or creating arrays within each process may be more efficient "
+"implementation."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:269
+msgid ""
+"from concurrent.futures import ProcessPoolExecutor\n"
+"\n"
+"import numpy as np\n"
+"from numpy.typing import NDArray\n"
+"\n"
+"\n"
+"def mandelbrot_block(\n"
+"    c_block: NDArray[np.complex128], max_iter: int\n"
+") -> NDArray[np.int64]:\n"
+"    z = np.zeros(c_block.shape, dtype=np.complex128)\n"
+"    steps = np.zeros(c_block.shape, dtype=np.int64)\n"
+"\n"
+"    for _ in range(max_iter):\n"
+"        mask = np.abs(z) <= 2\n"
+"        z[mask] = z[mask] * z[mask] + c_block[mask]\n"
+"        steps[mask] += 1\n"
+"    return steps\n"
+"\n"
+"\n"
+"def mandelbrot_set(\n"
+"    arr: NDArray[np.complex128],\n"
+"    max_iter: int,\n"
+"    n_workers: int,\n"
+") -> NDArray[np.int64]:\n"
+"    n_workers = min(n_workers, arr.size)\n"
+"    arrs = np.array_split(arr, n_workers)\n"
+"\n"
+"    with ProcessPoolExecutor(max_workers=n_workers) as pool:\n"
+"        futures = [\n"
+"            pool.submit(mandelbrot_block, _arr, max_iter) for _arr in arrs\n"
+"        ]\n"
+"        results = [future.result() for future in futures]\n"
+"\n"
+"    return np.concatenate(results)\n"
+"\n"
+"\n"
+"if __name__ == '__main__':\n"
+"\n"
+"    xmin, xmax, ymin, ymax = -2.0, 1.0, -1.5, 1.5\n"
+"    nx, ny = 800, 800\n"
+"    max_iter = 10000\n"
+"    n_workers = 10\n"
+"\n"
+"    real = np.linspace(xmin, xmax, nx, dtype=np.float64)\n"
+"    imag = np.linspace(ymin, ymax, ny, dtype=np.float64)\n"
+"\n"
+"    arr = (real[:, np.newaxis] + 1j * imag[np.newaxis, :]).ravel()\n"
+"    mandelbrot_image = mandelbrot_set(arr, max_iter, n_workers)\n"
+"    mandelbrot_image = mandelbrot_image.reshape((nx, ny))"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:323
+msgid "Multithreading Example"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:325
+msgid ""
+"As in the multiprocessing example, we demonstrate how to use `concurrent."
+"futures.ThreadPoolExecutor` to parallelize the Mandelbrot set generation "
+"across multiple threads. For more detailed explanations and additional "
+"examples, see `Examples Demonstrating Free-Threaded Python <https://py-free-"
+"threading.github.io/examples/>`__."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:331
+msgid "Setup"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:334
+msgid "Install a free-threaded build Python"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:336
+msgid ""
+"Before running the multithreading example, ensure you have a free-threaded "
+"build of Python 3.13 or later. About how to install a free-threaded build of "
+"Python, please refer to the `Installing Free-Threaded Python  <https://py-"
+"free-threading.github.io/installing-cpython/>`__."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:341
+msgid ""
+"According to the `Python documentation <https://docs.python.org/3/howto/free-"
+"threading-python.html>`__, there are several ways to verify if your Python "
+"build is free-threaded."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:344
+msgid ""
+"Run ``python -VV`` in your terminal and check ``free-threading build`` is "
+"shown"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:345
+msgid ""
+"Check the value of `sys._is_gil_enabled()` in a Python shell, which should "
+"return `False`."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:349
+msgid "Code Example"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:351
+msgid ""
+"The following code demonstrates how to use `concurrent.futures."
+"ThreadPoolExecutor` to parallelize the Mandelbrot set generation across "
+"multiple threads."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:354
+msgid ""
+"This implementation shares several arrays between threads. For example, "
+"``SHARED_readonly_arr`` is a read-only array that holds the complex numbers "
+"to be evaluated, and ``SHARED_updating_steps`` is an array that holds the "
+"number of iterations for each point."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:360
+msgid ""
+"import sys\n"
+"from concurrent.futures import ThreadPoolExecutor\n"
+"\n"
+"import numpy as np\n"
+"\n"
+"\n"
+"def mandelbrot_block(start: int, stop: int, max_iter: int) -> None:\n"
+"    z_target = np.zeros(stop - start, dtype=np.complex128)\n"
+"\n"
+"    indexes = slice(start, stop)\n"
+"    arr_target = SHARED_readonly_arr[indexes]\n"
+"    steps_target = SHARED_updating_steps[indexes]\n"
+"\n"
+"    threshold = 2.0\n"
+"    for _ in range(max_iter):\n"
+"        mask = np.abs(z_target) <= threshold\n"
+"        z_target[mask] = z_target[mask] * z_target[mask] + arr_target[mask]\n"
+"        steps_target[mask] += 1\n"
+"    SHARED_updating_steps[indexes] = steps_target\n"
+"    return None\n"
+"\n"
+"\n"
+"def mandelbrot_set(\n"
+"    total_size: int,\n"
+"    max_iter: int,\n"
+"    n_workers: int,\n"
+") -> None:\n"
+"\n"
+"    chunksize = total_size // n_workers\n"
+"    with ThreadPoolExecutor(max_workers=n_workers) as pool:\n"
+"        futures = [\n"
+"            pool.submit(\n"
+"                mandelbrot_block, start, min(start + chunksize, total_size), "
+"max_iter\n"
+"            )\n"
+"            for start in range(0, total_size, chunksize)\n"
+"        ]\n"
+"        _ = [future.result() for future in futures]\n"
+"\n"
+"\n"
+"if __name__ == '__main__':\n"
+"\n"
+"    print(\"Python version is free-threaded:\", not sys._is_gil_enabled())\n"
+"    assert not sys._is_gil_enabled()\n"
+"\n"
+"    xmin, xmax, ymin, ymax = -2.0, 1.0, -1.5, 1.5\n"
+"    nx, ny = 800, 800\n"
+"    max_iter = 10000\n"
+"    n_workers = 10\n"
+"\n"
+"    real = np.linspace(xmin, xmax, nx, dtype=np.float64)\n"
+"    imag = np.linspace(ymin, ymax, ny, dtype=np.float64)\n"
+"\n"
+"    SHARED_readonly_arr = (real[:, np.newaxis] + 1j * imag[np.newaxis, :])."
+"ravel()\n"
+"    SHARED_readonly_arr.flags.writeable = False\n"
+"\n"
+"    SHARED_updating_steps = np.zeros(SHARED_readonly_arr.shape, dtype=np."
+"int64)\n"
+"\n"
+"    mandelbrot_set(SHARED_readonly_arr.size, max_iter, n_workers)\n"
+"    mandelbrot_image = SHARED_updating_steps.reshape((nx, ny))"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:427
+msgid "Third Party Libraries for Multi-Core Processing"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:429
+msgid ""
+"In many practical scenarios, third-party libraries can provide more "
+"convenient and efficient solutions than using Python's standard libraries."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:434
+msgid "Dask"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:436
+msgid ""
+"Dask is an open-source library that provides parallel compuing features not "
+"only for a single machine but also for a cluster of machines. It also "
+"provides ``DaskArray`` which has a similar API to NumPy's ``ndarray``. If "
+"you are familiar with NumPy, you can easily get started with ``DaskArray``."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:441
+msgid "Dask Documentaion: https://docs.dask.org/en/stable/"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:442
+msgid "Dask GitHub Repository: https://github.com/dask/dask"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:447
+msgid "joblib"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:450
+msgid ""
+"``joblib`` is a library that provides helper functions which make it easy to "
+"parallelize tasks."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:453
+msgid "For example,"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:455
+msgid ""
+"``joblib``'s default backend ``loky`` relies on `cloudpickle <https://github."
+"com/cloudpipe/cloudpickle>`__ for serialization and can handle a wider range "
+"of Python objects than the standard ``pickle`` module. (e.g., lambda "
+"functions)"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:459
+msgid ""
+"`joblib.cpu_count() <https://joblib.readthedocs.io/en/latest/generated/"
+"joblib.cpu_count.html>`__ returns the number of CPUs available to the "
+"current process, taking into account constraints such as CPU affinity "
+"settings and Linux CFS scheduler quotas. This may provide a more accurate "
+"value than `os.cpu_count` and `os.process_cpu_count <https://docs.python."
+"org/3/library/os.html#os.process_cpu_count>`__ functions in Docker "
+"containers and other resource-constrained environments."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:467
+msgid "For more details on ``joblib``, see the following resources:"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:469
+msgid "joblib Documentation: https://joblib.readthedocs.io/en/latest/"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:470
+msgid "joblib GitHub Repository: https://github.com/joblib/joblib"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:475
+msgid "threadpoolctl"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:477
+msgid ""
+"``threadpoolctl`` is a library that provides utilities to control the "
+"behavior of thread pools in Python, including other thread pools used by "
+"libraries such as BLAS and OpenMP. It allows you to avoid CPU "
+"oversubscription when using multiple libraries that utilize threads."
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:483
+msgid "For more details on ``threadpoolctl``, see the following resources:"
+msgstr ""
+
+#: ../../../user/basics.performant_code.rst:485
+msgid ""
+"threadpoolctl GitHub Repository: https://github.com/joblib/threadpoolctl"
+msgstr ""

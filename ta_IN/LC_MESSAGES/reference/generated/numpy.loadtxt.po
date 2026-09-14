@@ -1,0 +1,457 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.loadtxt.rst:4
+msgid "numpy.loadtxt"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:2
+msgid "Load data from a text file."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:11
+msgid "**fname**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:-1
+msgid "file, str, pathlib.Path, list of str, generator"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:8
+msgid ""
+"File, filename, list, or generator to read.  If the filename extension is ``."
+"gz`` or ``.bz2``, the file is first decompressed. Note that generators must "
+"return bytes or strings. The strings in a list or produced by a generator "
+"are treated as lines."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:18
+msgid "**dtype**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:-1
+msgid "data-type, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:14
+msgid ""
+"Data-type of the resulting array; default: float.  If this is a structured "
+"data-type, the resulting array will be 1-dimensional, and each row will be "
+"interpreted as an element of the array.  In this case, the number of columns "
+"used must match the number of fields in the data-type."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:23
+msgid "**comments**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:-1
+msgid "str or sequence of str or None, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:21
+msgid ""
+"The characters or list of characters used to indicate the start of a "
+"comment. None implies no comments. For backwards compatibility, byte strings "
+"will be decoded as 'latin1'. The default is '#'."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:31
+msgid "**delimiter**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:-1
+msgid "str, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:26
+msgid ""
+"The character used to separate the values. For backwards compatibility, byte "
+"strings will be decoded as 'latin1'. The default is whitespace."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:29
+msgid ""
+"Only single character delimiters are supported. Newline characters cannot be "
+"used as the delimiter."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:42
+msgid "**converters**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:-1
+msgid "dict or callable, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:34
+msgid ""
+"Converter functions to customize value parsing. If `converters` is callable, "
+"the function is applied to all columns, else it must be a dict that maps "
+"column number to a parser function. See examples for further details. "
+"Default: None."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:40
+msgid ""
+"The ability to pass a single callable to be applied to all columns was added."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:45
+msgid "**skiprows**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:45
+msgid "Skip the first `skiprows` lines, including comments; default: 0."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:50
+msgid "**usecols**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:-1
+msgid "int or sequence, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:48
+msgid ""
+"Which columns to read, with 0 being the first. For example, ``usecols = "
+"(1,4,5)`` will extract the 2nd, 5th and 6th columns. The default, None, "
+"results in all columns being read."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:56
+msgid "**unpack**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:53
+msgid ""
+"If True, the returned array is transposed, so that arguments may be unpacked "
+"using ``x, y, z = loadtxt(...)``.  When used with a structured data-type, "
+"arrays are returned for each field. Default is False."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:61
+msgid "**ndmin**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:59
+msgid ""
+"The returned array will have at least `ndmin` dimensions. Otherwise mono-"
+"dimensional axes will be squeezed. Legal values: 0 (default), 1 or 2."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:73
+msgid "**encoding**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:64
+msgid ""
+"Encoding used to decode the inputfile. Does not apply to input streams. The "
+"special value 'bytes' enables backward compatibility workarounds that "
+"ensures you receive byte arrays as results if possible and passes 'latin1' "
+"encoded strings to converters. Override this value to receive unicode arrays "
+"and pass strings as input to converters.  If set to None the system default "
+"is used. The default value is None."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:71
+msgid ""
+"Before NumPy 2, the default was ``'bytes'`` for Python 2 compatibility. The "
+"default is now ``None``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:84
+msgid "**max_rows**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:76
+msgid ""
+"Read `max_rows` rows of content after `skiprows` lines. The default is to "
+"read all the rows. Note that empty rows containing no data such as empty "
+"lines and comment lines are not counted towards `max_rows`, while such lines "
+"are counted in `skiprows`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:81
+msgid ""
+"Lines containing no data, including comment lines (e.g., lines starting with "
+"'#' or as specified via `comments`) are not counted towards `max_rows`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:95
+msgid "**quotechar**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:-1
+msgid "unicode character or None, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:87
+msgid ""
+"The character used to denote the start and end of a quoted item. Occurrences "
+"of the delimiter or comment characters are ignored within a quoted item. The "
+"default value is ``quotechar=None``, which means quoting support is disabled."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:92
+msgid ""
+"If two consecutive instances of `quotechar` are found within a quoted field, "
+"the first is treated as an escape character. See examples."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:106
+msgid "**like**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:98
+msgid ""
+"Reference object to allow the creation of arrays which are not NumPy arrays. "
+"If an array-like passed in as ``like`` supports the ``__array_function__`` "
+"protocol, the result will be defined by it. In this case, it ensures the "
+"creation of an array object compatible with that passed in via this argument."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:117
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:111
+msgid "Data read from the text file."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:122
+msgid ":obj:`load`, :obj:`fromstring`, :obj:`fromregex`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:124
+msgid ":obj:`genfromtxt`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:125
+msgid "Load data with missing values handled as specified."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:126
+msgid ":obj:`scipy.io.loadmat`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:127
+msgid "reads MATLAB data files"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:131
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:132
+msgid ""
+"This function aims to be a fast reader for simply formatted files.  The "
+"`genfromtxt` function provides more sophisticated handling of, e.g., lines "
+"with missing values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:136
+msgid ""
+"Each row in the input text file must have the same number of values to be "
+"able to read all values. If all rows do not have same number of values, a "
+"subset of up to n columns (where n is the least number of values present in "
+"all rows) can be read by specifying the columns via `usecols`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:141
+msgid ""
+"The strings produced by the Python float.hex method can be used as input for "
+"floats."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:146
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:171
+msgid ""
+"The `converters` argument is used to specify functions to preprocess the "
+"text prior to parsing. `converters` can be a dictionary that maps "
+"preprocessing functions to each column:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:184
+msgid ""
+"`converters` can be a callable instead of a dictionary, in which case it is "
+"applied to all columns:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:194
+msgid ""
+"This example shows how `converters` can be used to convert a field with a "
+"trailing minus sign into a negative number."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:206
+msgid ""
+"Using a callable as the converter can be particularly useful for handling "
+"values with different formatting, e.g. floats with underscores:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:213
+msgid ""
+"This idea can be extended to automatically handle values specified in many "
+"different formats, such as hex values:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:225
+msgid "Or a format where the ``-`` sign comes after the number:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:234
+msgid ""
+"Support for quoted fields is enabled with the `quotechar` parameter. Comment "
+"and delimiter characters are ignored when they appear within a quoted item "
+"delineated by `quotechar`:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:244
+msgid "Quoted fields can be separated by multiple whitespace characters:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:252
+msgid ""
+"Two consecutive quote characters within a quoted field are treated as a "
+"single escaped character:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:259
+msgid ""
+"Read subset of columns when all rows do not contain equal number of values:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:-1
+msgid ""
+"<div id=\"3780c165-42e6-478a-a6a6-7839e14988ee\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('f4c5a23a-af9a-4a74-"
+"af9c-4fc7766e5fc7','3780c165-42e6-478a-a6a6-7839e14988ee')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('f4c5a23a-af9a-4a74-af9c-4fc7766e5fc7','3780c165-42e6-478a-"
+"a6a6-7839e14988ee')\">Open In Tab</button></div><div id=\"0febe073-"
+"d63a-427f-834c-f3008432621e\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.loadtxt:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""
