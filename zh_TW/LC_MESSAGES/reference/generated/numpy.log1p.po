@@ -1,0 +1,189 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.log1p.rst:4
+msgid "numpy.log1p"
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:2
+msgid "Return the natural logarithm of one plus the input array, element-wise."
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:4
+msgid "Calculates ``log(1 + x)``."
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../docstring of numpy.log1p:9
+msgid "**x**"
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:-1
+msgid "array_like"
+msgstr "array_like"
+
+#: ../../../../docstring of numpy.log1p:9
+msgid "Input values."
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:15
+msgid "**out**"
+msgstr "**out**"
+
+#: ../../../../docstring of numpy.log1p:-1
+msgid "ndarray, None, or tuple of ndarray and None, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:12
+msgid ""
+"A location into which the result is stored. If provided, it must have a "
+"shape that the inputs broadcast to. If not provided or None, a freshly-"
+"allocated array is returned. A tuple (possible only as a keyword argument) "
+"must have length equal to the number of outputs."
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:23
+msgid "**where**"
+msgstr "**where**"
+
+#: ../../../../docstring of numpy.log1p:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:18
+msgid ""
+"This condition is broadcast over the input. At locations where the condition "
+"is True, the `out` array will be set to the ufunc result. Elsewhere, the "
+"`out` array will retain its original value. Note that if an uninitialized "
+"`out` array is created via the default ``out=None``, locations within it "
+"where the condition is False will remain uninitialized."
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:29
+msgid "**\\*\\*kwargs**"
+msgstr "**\\*\\*kwargs**"
+
+#: ../../../../docstring of numpy.log1p:26
+msgid ""
+"For other keyword-only arguments, see the :ref:`ufunc docs <ufuncs.kwargs>`."
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../docstring of numpy.log1p:41
+msgid "**y**"
+msgstr "**y**"
+
+#: ../../../../docstring of numpy.log1p:-1
+msgid "ndarray"
+msgstr "ndarray"
+
+#: ../../../../docstring of numpy.log1p:34
+msgid ""
+"Natural logarithm of `1 + x`, element-wise. This is a scalar if `x` is a "
+"scalar."
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:46
+msgid ":obj:`expm1`"
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:47
+msgid "``exp(x) - 1``, the inverse of `log1p`."
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:51
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:52
+msgid ""
+"For real-valued input, `log1p` is accurate also for `x` so small that `1 + x "
+"== 1` in floating-point accuracy."
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:55
+msgid ""
+"Logarithm is a multivalued function: for each `x` there is an infinite "
+"number of `z` such that `exp(z) = 1 + x`. The convention is to return the "
+"`z` whose imaginary part lies in `[-pi, pi]`."
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:59
+msgid ""
+"For real-valued input data types, `log1p` always returns real output. For "
+"each value that cannot be expressed as a real number or infinity, it yields "
+"``nan`` and sets the `invalid` floating point error flag."
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:63
+msgid ""
+"For complex-valued input, `log1p` is a complex analytical function that has "
+"a branch cut `[-inf, -1]` and is continuous from above on it. `log1p` "
+"handles the floating-point negative zero as an infinitesimal negative "
+"number, conforming to the C99 standard."
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:69
+msgid "References"
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:70
+msgid ""
+"M. Abramowitz and I.A. Stegun, \"Handbook of Mathematical Functions\", 10th "
+"printing, 1964, pp. 67. https://personal.math.ubc.ca/~cbm/aands/page_67.htm"
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:73
+msgid "Wikipedia, \"Logarithm\". https://en.wikipedia.org/wiki/Logarithm"
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:77
+msgid "[Rfecb7f1c5ef1-1]_, [Rfecb7f1c5ef1-2]_"
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:80
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../docstring of numpy.log1p:-1
+msgid ""
+"<div id=\"8176d3a6-6f52-40e2-93cf-881d330c711b\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('4d3c8245-aaab-4b26-a780-"
+"f7ec0274129c','8176d3a6-6f52-40e2-93cf-881d330c711b')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('4d3c8245-aaab-4b26-a780-"
+"f7ec0274129c','8176d3a6-6f52-40e2-93cf-881d330c711b')\">Open In Tab</"
+"button></div><div id=\"6be5af28-0ee4-4bbb-9220-0c9ba01be246\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../docstring of numpy.log1p:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

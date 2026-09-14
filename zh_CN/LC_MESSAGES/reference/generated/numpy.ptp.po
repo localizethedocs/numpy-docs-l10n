@@ -1,0 +1,185 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.ptp.rst:4
+msgid "numpy.ptp"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:2
+msgid "Range of values (maximum - minimum) along an axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:4
+msgid "The name of the function comes from the acronym for 'peak to peak'."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:7
+msgid ""
+"`ptp` preserves the data type of the array. This means the return value for "
+"an input of signed integers with n bits (e.g. `numpy.int8`, `numpy.int16`, "
+"etc) is also a signed integer with n bits.  In that case, peak-to-peak "
+"values greater than ``2**(n-1)-1`` will be returned as negative values. An "
+"example with a work-around is shown below."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:17
+msgid "**a**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:17
+msgid "Input values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:24
+msgid "**axis**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:-1
+msgid "None or int or tuple of ints, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:20
+msgid ""
+"Axis along which to find the peaks.  By default, flatten the array.  `axis` "
+"may be negative, in which case it counts from the last to the first axis. If "
+"this is a tuple of ints, a reduction is performed on multiple axes, instead "
+"of a single axis or all the axes as before."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:29
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:27
+msgid ""
+"Alternative output array in which to place the result. It must have the same "
+"shape and buffer length as the expected output, but the type of the output "
+"values will be cast if necessary."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:42
+msgid "**keepdims**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:32
+msgid ""
+"If this is set to True, the axes which are reduced are left in the result as "
+"dimensions with size one. With this option, the result will broadcast "
+"correctly against the input array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:36
+msgid ""
+"If the default value is passed, then `keepdims` will not be passed through "
+"to the `ptp` method of sub-classes of `ndarray`, however any non-default "
+"value will be.  If the sub-class' method does not implement `keepdims` any "
+"exceptions will be raised."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:57
+msgid "**ptp**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:-1
+msgid "ndarray or scalar"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:47
+msgid ""
+"The range of a given array - `scalar` if array is one-dimensional or a new "
+"array holding the result along the given axis"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:60
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:78
+msgid ""
+"This example shows that a negative value can be returned when the input is "
+"an array of signed integers."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:88
+msgid ""
+"A work-around is to use the `view()` method to view the result as unsigned "
+"integers with the same bit width:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:-1
+msgid ""
+"<div id=\"0a041c15-8c3f-4347-9fde-0dd6b2db2960\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('855ba345-06d3-449c-"
+"be29-4c8c0324adbe','0a041c15-8c3f-4347-9fde-0dd6b2db2960')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('855ba345-06d3-449c-"
+"be29-4c8c0324adbe','0a041c15-8c3f-4347-9fde-0dd6b2db2960')\">Open In Tab</"
+"button></div><div id=\"332afec1-f26e-4094-8464-1274a8365f03\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ptp:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

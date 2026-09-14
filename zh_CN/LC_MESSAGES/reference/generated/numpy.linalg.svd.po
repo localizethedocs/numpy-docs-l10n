@@ -1,0 +1,282 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.linalg.svd.rst:4
+msgid "numpy.linalg.svd"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:2
+msgid "Singular Value Decomposition."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:4
+msgid ""
+"When `a` is a 2D array, and ``full_matrices=False``, then it is factorized "
+"as ``u @ np.diag(s) @ vh = (u * s) @ vh``, where `u` and the Hermitian "
+"transpose of `vh` are 2D arrays with orthonormal columns and `s` is a 1D "
+"array of `a`'s singular values. When `a` is higher-dimensional, SVD is "
+"applied in stacked mode as explained below."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:14
+msgid "**a**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:-1
+msgid "(..., M, N) array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:14
+msgid "A real or complex array with ``a.ndim >= 2``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:20
+msgid "**full_matrices**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:17
+msgid ""
+"If True (default), `u` and `vh` have the shapes ``(..., M, M)`` and ``(..., "
+"N, N)``, respectively.  Otherwise, the shapes are ``(..., M, K)`` and "
+"``(..., K, N)``, respectively, where ``K = min(M, N)``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:24
+msgid "**compute_uv**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:23
+msgid ""
+"Whether or not to compute `u` and `vh` in addition to `s`.  True by default."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:31
+msgid "**hermitian**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:27
+msgid ""
+"If True, `a` is assumed to be Hermitian (symmetric if real-valued), enabling "
+"a more efficient method for finding singular values. Defaults to False."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:39
+msgid "**U**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:-1
+msgid "{ (..., M, M), (..., M, K) } array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:36 numpy.linalg.svd:47
+msgid ""
+"Unitary array(s). The first ``a.ndim - 2`` dimensions have the same size as "
+"those of the input `a`. The size of the last two dimensions depends on the "
+"value of `full_matrices`. Only returned when `compute_uv` is True."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:44
+msgid "**S**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:-1
+msgid "(..., K) array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:42
+msgid ""
+"Vector(s) with the singular values, within each vector sorted in descending "
+"order. The first ``a.ndim - 2`` dimensions have the same size as those of "
+"the input `a`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:53
+msgid "**Vh**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:-1
+msgid "{ (..., N, N), (..., K, N) } array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:60
+msgid "LinAlgError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:58
+msgid "If SVD computation does not converge."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:65
+msgid ":obj:`scipy.linalg.svd`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:66
+msgid "Similar function in SciPy."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:67
+msgid ":obj:`scipy.linalg.svdvals`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:68
+msgid "Compute singular values of a matrix."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:72
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:73
+msgid ""
+"When `compute_uv` is True, the result is a namedtuple with the following "
+"attribute names: `U`, `S`, and `Vh`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:76
+msgid "The decomposition is performed using LAPACK routine ``_gesdd``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:78
+msgid ""
+"SVD is usually described for the factorization of a 2D matrix :math:`A`. The "
+"higher-dimensional case will be discussed below. In the 2D case, SVD is "
+"written as :math:`A = U S V^H`, where :math:`A = a`, :math:`U= u`, :math:`S= "
+"\\mathtt{np.diag}(s)` and :math:`V^H = vh`. The 1D array `s` contains the "
+"singular values of `a` and `u` and `vh` are unitary. The rows of `vh` are "
+"the eigenvectors of :math:`A^H A` and the columns of `u` are the "
+"eigenvectors of :math:`A A^H`. In both cases the corresponding (possibly non-"
+"zero) eigenvalues are given by ``s**2``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:87
+msgid ""
+"If `a` has more than two dimensions, then broadcasting rules apply, as "
+"explained in :ref:`routines.linalg-broadcasting`. This means that SVD is "
+"working in \"stacked\" mode: it iterates over all indices of the first ``a."
+"ndim - 2`` dimensions and for each combination SVD is applied to the last "
+"two indices. The matrix `a` can be reconstructed from the decomposition with "
+"either ``(u * s[..., None, :]) @ vh`` or ``u @ (s[..., None] * vh)``. (The "
+"``@`` operator can be replaced by the function ``np.matmul`` for python "
+"versions below 3.5.)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:96
+msgid ""
+"If `a` is a ``matrix`` object (as opposed to an ``ndarray``), then so are "
+"all the return values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:101
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:111
+msgid "Reconstruction based on full SVD, 2D case:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:123
+msgid "Reconstruction based on reduced SVD, 2D case:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:134
+msgid "Reconstruction based on full SVD, 4D case:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:144
+msgid "Reconstruction based on reduced SVD, 4D case:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:-1
+msgid ""
+"<div id=\"0a8651ac-47cb-4f1e-933f-2c8e3f2b1cb8\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('f1a7b584-"
+"bb72-4fac-917a-3cef7a4679d8','0a8651ac-47cb-4f1e-933f-2c8e3f2b1cb8')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('f1a7b584-"
+"bb72-4fac-917a-3cef7a4679d8','0a8651ac-47cb-4f1e-933f-2c8e3f2b1cb8')\">Open "
+"In Tab</button></div><div id=\"c480dfec-058e-498d-8043-3ea74d979ae0\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/linalg/__init__.py:docstring
+#: of numpy.linalg.svd:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

@@ -1,0 +1,210 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.lexsort.rst:4
+msgid "numpy.lexsort"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:2
+msgid "Perform an indirect stable sort using a sequence of keys."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:4
+msgid ""
+"Given multiple sorting keys, lexsort returns an array of integer indices "
+"that describes the sort order by multiple keys. The last key in the sequence "
+"is used for the primary sort order, ties are broken by the second-to-last "
+"key, and so on."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:15
+msgid "**keys**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:-1
+msgid "(k, m, n, ...) array-like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:12
+msgid ""
+"The `k` keys to be sorted. The *last* key (e.g, the last row if `keys` is a "
+"2D array) is the primary sort key. Each element of `keys` along the zeroth "
+"axis must be an array-like object of the same shape."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:22
+msgid "**axis**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:18
+msgid ""
+"Axis to be indirectly sorted. By default, sort over the last axis of each "
+"sequence. Separate slices along `axis` sorted over independently; see last "
+"example."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:33
+msgid "**indices**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:-1
+msgid "(m, n, ...) ndarray of ints"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:27
+msgid "Array of indices that sort the keys along the specified axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:38
+msgid ":obj:`argsort`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:39
+msgid "Indirect sort."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:40
+msgid ":obj:`ndarray.sort`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:41
+msgid "In-place sort."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:42
+msgid ":obj:`sort`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:43
+msgid "Return a sorted copy of an array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:49
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:54
+msgid "Sort names: first by surname, then by name."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:66
+msgid ""
+"Sort according to two numerical keys, first by elements of ``a``, then "
+"breaking ties according to elements of ``b``:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:77
+msgid "Compare against `argsort`, which would sort each key independently."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:83
+msgid ""
+"To sort lexicographically with `argsort`, we would need to provide a "
+"structured array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:91
+msgid ""
+"The zeroth axis of `keys` always corresponds with the sequence of keys, so "
+"2D arrays are treated just like other sequences of keys."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:98
+msgid ""
+"Accordingly, the `axis` parameter refers to an axis of *each* key, not of "
+"the `keys` argument itself. For instance, the array ``arr`` is treated as a "
+"sequence of two 1-D keys, so specifying ``axis=0`` is equivalent to using "
+"the default axis, ``axis=-1``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:106
+msgid ""
+"For higher-dimensional arrays, the axis parameter begins to matter. The "
+"resulting array has the same shape as each key, and the values are what we "
+"would expect if `lexsort` were performed on corresponding slices of the keys "
+"independently. For instance,"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:122
+msgid ""
+"Each row of the result is what we would expect if we were to perform "
+"`lexsort` on the corresponding row of the keys:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:-1
+msgid ""
+"<div id=\"568d3fbd-fcf2-4b77-a6e0-ee2555134961\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('7f19c731-b964-4d6b-af9f-93642102420d','568d3fbd-"
+"fcf2-4b77-a6e0-ee2555134961')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('7f19c731-"
+"b964-4d6b-af9f-93642102420d','568d3fbd-fcf2-4b77-a6e0-ee2555134961')\">Open "
+"In Tab</button></div><div id=\"63600615-5e9f-4675-b059-f4105b68bc85\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.lexsort:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

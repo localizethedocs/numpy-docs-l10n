@@ -1,0 +1,229 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.chebyshev.chebint.rst:4
+msgid "numpy.polynomial.chebyshev.chebint"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:2
+msgid "Integrate a Chebyshev series."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:4
+msgid ""
+"Returns the Chebyshev series coefficients `c` integrated `m` times from "
+"`lbnd` along `axis`. At each iteration the resulting series is "
+"**multiplied** by `scl` and an integration constant, `k`, is added. The "
+"scaling factor is for use in a linear change of variable.  (\"Buyer "
+"beware\": note that, depending on what one is doing, one may want `scl` to "
+"be the reciprocal of what one might expect; for more information, see the "
+"Notes section below.)  The argument `c` is an array of coefficients from low "
+"to high degree along each axis, e.g., [1,2,3] represents the series ``T_0 + "
+"2*T_1 + 3*T_2`` while [[1,2],[1,2]] represents ``1*T_0(x)*T_0(y) + "
+"1*T_1(x)*T_0(y) + 2*T_0(x)*T_1(y) + 2*T_1(x)*T_1(y)`` if axis=0 is ``x`` and "
+"axis=1 is ``y``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:21
+msgid "**c**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:19
+msgid ""
+"Array of Chebyshev series coefficients. If c is multidimensional the "
+"different axis correspond to different variables with the degree in each "
+"axis given by the corresponding index."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:24
+msgid "**m**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:24
+msgid "Order of integration, must be positive. (Default: 1)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:31
+msgid "**k**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:-1
+msgid "{[], list, scalar}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:27
+msgid ""
+"Integration constant(s).  The value of the first integral at zero is the "
+"first value in the list, the value of the second integral at zero is the "
+"second value, etc.  If ``k == []`` (the default), all constants are set to "
+"zero.  If ``m == 1``, a single scalar can be given instead of a list."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:34
+msgid "**lbnd**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:-1
+msgid "scalar, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:34
+msgid "The lower bound of the integral. (Default: 0)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:38
+msgid "**scl**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:37
+msgid ""
+"Following each integration the result is *multiplied* by `scl` before the "
+"integration constant is added. (Default: 1)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:43
+msgid "**axis**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:41
+msgid "Axis over which the integral is taken. (Default: 0)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:51
+msgid "**S**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:48
+msgid "C-series coefficients of the integral."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:59
+msgid "ValueError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:56
+msgid ""
+"If ``m < 1``, ``len(k) > m``, ``np.ndim(lbnd) != 0``, or ``np.ndim(scl) != "
+"0``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:64
+msgid ":obj:`chebder`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:68
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:69
+msgid ""
+"Note that the result of each integration is *multiplied* by `scl`. Why is "
+"this important to note?  Say one is making a linear change of variable :math:"
+"`u = ax + b` in an integral relative to `x`.  Then :math:`dx = du/a`, so one "
+"will need to set `scl` equal to :math:`1/a`- perhaps not what one would have "
+"first thought."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:75
+msgid ""
+"Also note that, in general, the result of integrating a C-series needs to be "
+"\"reprojected\" onto the C-series basis set.  Thus, typically, the result of "
+"this function is \"unintuitive,\" albeit correct; see Examples section below."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:82
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:-1
+msgid ""
+"<div id=\"637e1354-e685-4e1d-9510-009482840750\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('7ae29f54-c3b0-4d22-b1c2-e966f0bfa290','637e1354-"
+"e685-4e1d-9510-009482840750')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('7ae29f54-"
+"c3b0-4d22-b1c2-e966f0bfa290','637e1354-e685-4e1d-9510-009482840750')\">Open "
+"In Tab</button></div><div id=\"d0dcc672-a47e-4d1c-afdb-a6f69a29eee6\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebint:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

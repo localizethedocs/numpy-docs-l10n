@@ -1,0 +1,245 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.nan_to_num.rst:4
+msgid "numpy.nan\\_to\\_num"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:2
+msgid ""
+"Replace NaN with zero and infinity with large finite numbers (default "
+"behaviour) or with the numbers defined by the user using the `nan`, `posinf` "
+"and/or `neginf` keywords."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:6
+msgid ""
+"If `x` is inexact, NaN is replaced by zero or by the user defined value in "
+"`nan` keyword, infinity is replaced by the largest finite floating point "
+"values representable by ``x.dtype`` or by the user defined value in `posinf` "
+"keyword and -infinity is replaced by the most negative finite floating point "
+"values representable by ``x.dtype`` or by the user defined value in `neginf` "
+"keyword."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:13
+msgid ""
+"For complex dtypes, the above is applied to each of the real and imaginary "
+"components of `x` separately."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:16
+msgid "If `x` is not inexact, then no replacements are made."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:21
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:-1
+msgid "scalar or array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:21
+msgid "Input data."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:27
+msgid "**copy**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:24
+msgid ""
+"Whether to create a copy of `x` (True) or to replace values in-place "
+"(False). The in-place operation only occurs if casting to an array does not "
+"require a copy. Default is True."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:31
+msgid "**nan**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:-1
+msgid "int, float, or bool or array_like of int, float, or bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:30
+msgid ""
+"Values to be used to fill NaN values. If no values are passed then NaN "
+"values will be replaced with 0.0."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:36
+msgid "**posinf**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:34
+msgid ""
+"Values to be used to fill positive infinity values. If no values are passed "
+"then positive infinity values will be replaced with a very large number."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:43
+msgid "**neginf**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:39
+msgid ""
+"Values to be used to fill negative infinity values. If no values are passed "
+"then negative infinity values will be replaced with a very small (or "
+"negative) number."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:55
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:48
+msgid ""
+"`x`, with the non-finite values replaced. If `copy` is False, this may be "
+"`x` itself."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:60
+msgid ":obj:`isinf`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:61
+msgid "Shows which elements are positive or negative infinity."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:62
+msgid ":obj:`isneginf`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:63
+msgid "Shows which elements are negative infinity."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:64
+msgid ":obj:`isposinf`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:65
+msgid "Shows which elements are positive infinity."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:66
+msgid ":obj:`isnan`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:67
+msgid "Shows which elements are Not a Number (NaN)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:68
+msgid ":obj:`isfinite`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:69
+msgid "Shows which elements are finite (not NaN, not infinity)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:73
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:74
+msgid ""
+"NumPy uses the IEEE Standard for Binary Floating-Point for Arithmetic (IEEE "
+"754). This means that Not a Number is not equivalent to infinity."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:79
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:-1
+msgid ""
+"<div id=\"5062caa1-122a-453d-89b9-572f74f888fb\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('138f3ce3-23ed-4df6-83a2-"
+"a5144d38b6dd','5062caa1-122a-453d-89b9-572f74f888fb')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('138f3ce3-23ed-4df6-83a2-"
+"a5144d38b6dd','5062caa1-122a-453d-89b9-572f74f888fb')\">Open In Tab</"
+"button></div><div id=\"5ed79385-ce16-4049-881b-961f42cf8e04\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.nan_to_num:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

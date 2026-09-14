@@ -1,0 +1,492 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.set_printoptions.rst:4
+msgid "numpy.set\\_printoptions"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:2
+msgid "Set printing options."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:4
+msgid ""
+"These options determine the way floating point numbers, arrays and other "
+"NumPy objects are displayed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:12
+msgid "**precision**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:-1
+msgid "int or None, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:10
+msgid ""
+"Number of digits of precision for floating point output (default 8). May be "
+"None if `floatmode` is not `fixed`, to print as many digits as necessary to "
+"uniquely specify the value."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:17
+msgid "**threshold**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:15
+msgid ""
+"Total number of array elements which trigger summarization rather than full "
+"repr (default 1000). To always use the full repr without summarization, pass "
+"`sys.maxsize`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:21
+msgid "**edgeitems**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:20
+msgid ""
+"Number of array items in summary at beginning and end of each dimension "
+"(default 3)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:25
+msgid "**linewidth**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:24
+msgid ""
+"The number of characters per line for the purpose of inserting line breaks "
+"(default 75)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:32
+msgid "**suppress**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:28
+msgid ""
+"If True, always print floating point numbers using fixed point notation, in "
+"which case numbers equal to zero in the current precision will print as "
+"zero.  If False, then scientific notation is used when absolute value of the "
+"smallest number is < 1e-4 or the ratio of the maximum absolute value to the "
+"minimum is > 1e3. The default is False."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:35
+msgid "**nanstr**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:-1
+msgid "str, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:35
+msgid "String representation of floating point not-a-number (default nan)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:38
+msgid "**infstr**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:38
+msgid "String representation of floating point infinity (default inf)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:48
+msgid "**sign**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:-1
+msgid "string, either '-', '+', or ' ', optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:41
+msgid ""
+"Controls printing of the sign of floating-point types. If '+', always print "
+"the sign of positive values. If ' ', always prints a space (whitespace "
+"character) in the sign position of positive values.  If '-', omit the sign "
+"character of positive values. (default '-')"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:46
+msgid ""
+"The sign parameter can now be an integer type, previously types were "
+"floating-point types."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:74
+msgid "**formatter**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:-1
+msgid "dict of callables, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:51
+msgid ""
+"If not None, the keys should indicate the type(s) that the respective "
+"formatting function applies to.  Callables should return a string. Types "
+"that are not specified (by their corresponding keys) are handled by the "
+"default formatters.  Individual types for which a formatter can be set are:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:57
+msgid "'bool'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:58
+msgid "'int'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:59
+msgid "'timedelta' : a `numpy.timedelta64`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:60
+msgid "'datetime' : a `numpy.datetime64`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:61
+msgid "'float'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:62
+msgid "'longfloat' : 128-bit floats"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:63
+msgid "'complexfloat'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:64
+msgid "'longcomplexfloat' : composed of two 128-bit floats"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:65
+msgid "'numpystr' : types `numpy.bytes_` and `numpy.str_`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:66
+msgid "'object' : `np.object_` arrays"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:68
+msgid "Other keys that can be used to set a group of types at once are:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:70
+msgid "'all' : sets all types"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:71
+msgid "'int_kind' : sets 'int'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:72
+msgid "'float_kind' : sets 'float' and 'longfloat'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:73
+msgid "'complex_kind' : sets 'complexfloat' and 'longcomplexfloat'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:74
+msgid "'str_kind' : sets 'numpystr'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:94
+msgid "**floatmode**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:77
+msgid ""
+"Controls the interpretation of the `precision` option for floating-point "
+"types. Can take the following values (default maxprec_equal):"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:82
+msgid "'fixed': Always print exactly `precision` fractional digits,"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:82
+msgid ""
+"even if this would print more or fewer digits than necessary to specify the "
+"value uniquely."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:86
+msgid "'unique': Print the minimum number of fractional digits necessary"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:85
+msgid ""
+"to represent each value uniquely. Different elements may have a different "
+"number of digits. The value of the `precision` option is ignored."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:89
+msgid "'maxprec': Print at most `precision` fractional digits, but if"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:89
+msgid ""
+"an element can be uniquely represented with fewer digits only print it with "
+"that many."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:94
+msgid "'maxprec_equal': Print at most `precision` fractional digits,"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:92
+msgid ""
+"but if every element in the array can be uniquely represented with an equal "
+"number of fewer digits, use that many digits for all elements."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:124
+msgid "**legacy** : string or `False`, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:-1
+msgid "string or"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:97
+msgid ""
+"If set to the string ``'1.13'`` enables 1.13 legacy printing mode. This "
+"approximates numpy 1.13 print output by including a space in the sign "
+"position of floats and different behavior for 0d arrays. This also enables "
+"1.21 legacy printing mode (described below)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:102
+msgid ""
+"If set to the string ``'1.21'`` enables 1.21 legacy printing mode. This "
+"approximates numpy 1.21 print output of complex structured dtypes by not "
+"inserting spaces after commas that separate fields and after colons."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:107
+msgid ""
+"If set to ``'1.25'`` approximates printing of 1.25 which mainly means that "
+"numeric scalars are printed without their type information, e.g. as ``3.0`` "
+"rather than ``np.float64(3.0)``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:111
+msgid ""
+"If set to ``'2.1'``, shape information is not given when arrays are "
+"summarized (i.e., multiple elements replaced with ``...``)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:114
+msgid ""
+"If set to ``'2.2'``, the transition to use scientific notation for printing "
+"``np.float16`` and ``np.float32`` types may happen later or not at all for "
+"larger values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:118
+msgid "If set to `False`, disables legacy mode."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:120
+msgid ""
+"Unrecognized strings will be ignored with a warning for forward "
+"compatibility."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:137
+msgid "**override_repr: callable, optional**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:127
+msgid ""
+"If set a passed function will be used for generating arrays' repr. Other "
+"options will be ignored."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:142
+msgid ":obj:`get_printoptions`, :obj:`printoptions`, :obj:`array2string`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:146
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:147
+msgid "``formatter`` is always reset with a call to `set_printoptions`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:148
+msgid "Use `printoptions` as a context manager to set the values temporarily."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:149
+msgid "These print options apply only to NumPy ndarrays, not to scalars."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:151
+msgid "**Concurrency note:** see :ref:`text_formatting_options`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:155
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:160
+msgid "Floating point precision can be set:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:167
+msgid "Long arrays can be summarised:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:173
+msgid "Small results can be suppressed:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:183
+msgid "A custom formatter can be used to display array elements as desired:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:193
+msgid "To put back the default options, you can use:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:199
+msgid ""
+"Also to temporarily override options, use `printoptions` as a context "
+"manager:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:-1
+msgid ""
+"<div id=\"1c9ce943-0d74-4547-bf17-a684da59af17\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('954c316f-"
+"aabd-48e3-88d7-8bd8d28761e0','1c9ce943-0d74-4547-bf17-a684da59af17')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('954c316f-aabd-48e3-88d7-8bd8d28761e0','1c9ce943-0d74-4547-bf17-"
+"a684da59af17')\">Open In Tab</button></div><div id=\"db322894-eed5-4a6c-a08f-"
+"d273b520e9de\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.set_printoptions:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

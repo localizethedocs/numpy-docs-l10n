@@ -1,0 +1,160 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.polynomial.polygrid2d.rst:4
+msgid "numpy.polynomial.polynomial.polygrid2d"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polygrid2d:2
+msgid "Evaluate a 2-D polynomial on the Cartesian product of x and y."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polygrid2d:4
+msgid "This function returns the values:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polygrid2d:6
+msgid ""
+"p(a,b) = \\sum_{i,j} c_{i,j} * a^i * b^j\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polygrid2d:8
+msgid ""
+"where the points ``(a, b)`` consist of all pairs formed by taking `a` from "
+"`x` and `b` from `y`. The resulting points form a grid with `x` in the first "
+"dimension and `y` in the second."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polygrid2d:12
+msgid ""
+"The parameters `x` and `y` are converted to arrays only if they are tuples "
+"or a lists, otherwise they are treated as a scalars. In either case, either "
+"`x` and `y` or their elements must support multiplication and addition both "
+"with themselves and with the elements of `c`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polygrid2d:17
+msgid ""
+"If `c` has fewer than two dimensions, ones are implicitly appended to its "
+"shape to make it 2-D. The shape of the result will be c.shape[2:] + x.shape "
+"+ y.shape."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polygrid2d:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polygrid2d:27
+msgid "**x, y**"
+msgstr "**x, y**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polygrid2d:-1
+msgid "array_like, compatible objects"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polygrid2d:24
+msgid ""
+"The two dimensional series is evaluated at the points in the Cartesian "
+"product of `x` and `y`.  If `x` or `y` is a list or tuple, it is first "
+"converted to an ndarray, otherwise it is left unchanged and, if it isn't an "
+"ndarray, it is treated as a scalar."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polygrid2d:35
+msgid "**c**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polygrid2d:-1
+msgid "array_like"
+msgstr "array_like"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polygrid2d:30
+msgid ""
+"Array of coefficients ordered so that the coefficients for terms of degree i,"
+"j are contained in ``c[i,j]``. If `c` has dimension greater than two the "
+"remaining indices enumerate multiple sets of coefficients."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polygrid2d:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polygrid2d:47
+msgid "**values**"
+msgstr "**values**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polygrid2d:-1
+msgid "ndarray, compatible object"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polygrid2d:40
+msgid ""
+"The values of the two dimensional polynomial at points in the Cartesian "
+"product of `x` and `y`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polygrid2d:52
+msgid ":obj:`polyval`, :obj:`polyval2d`, :obj:`polyval3d`, :obj:`polygrid3d`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polygrid2d:58
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polygrid2d:-1
+msgid ""
+"<div id=\"27670c0b-aae8-48b1-a07e-8cbfc5ce139c\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('06e3a36a-c18a-4665-acb3-dbad4bc369f1','27670c0b-"
+"aae8-48b1-a07e-8cbfc5ce139c')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('06e3a36a-"
+"c18a-4665-acb3-dbad4bc369f1','27670c0b-aae8-48b1-a07e-8cbfc5ce139c')\">Open "
+"In Tab</button></div><div id=\"65e4afb7-aeb2-44cf-b695-55a69bbc49ab\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polygrid2d:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

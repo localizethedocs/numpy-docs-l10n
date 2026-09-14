@@ -1,0 +1,243 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.testing.assert_array_equal.rst:4
+msgid "numpy.testing.assert\\_array\\_equal"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:2
+msgid "Raises an AssertionError if two array_like objects are not equal."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:4
+msgid ""
+"Given two array_like objects, check that the shape is equal and all elements "
+"of these objects are equal (but see the Notes for the special handling of a "
+"scalar). An exception is raised at shape mismatch or conflicting values. In "
+"contrast to the standard usage in numpy, NaNs are compared like numbers, no "
+"assertion is raised if both objects have NaNs in the same positions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:11
+msgid ""
+"The usual caution for verifying equality with floating point numbers is "
+"advised."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:14
+msgid ""
+"When either `actual` or `desired` is already an instance of `numpy.ndarray` "
+"and `desired` is not a ``dict``, the behavior of ``assert_equal(actual, "
+"desired)`` is identical to the behavior of this function. Otherwise, this "
+"function performs `np.asanyarray` on the inputs before comparison, whereas "
+"`assert_equal` defines special comparison rules for common Python types. For "
+"example, only `assert_equal` can be used to compare nested Python lists. In "
+"new code, consider using only `assert_equal`, explicitly converting either "
+"`actual` or `desired` to arrays if the behavior of `assert_array_equal` is "
+"desired."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:28
+msgid "**actual**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:28
+msgid "The actual object to check."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:31
+msgid "**desired**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:31
+msgid "The desired, expected object."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:34
+msgid "**err_msg**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:-1
+msgid "str, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:34
+msgid "The error message to be printed in case of failure."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:37
+msgid "**verbose**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:37
+msgid "If True, the conflicting values are appended to the error message."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:50
+msgid "**strict**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:40
+msgid ""
+"If True, raise an AssertionError when either the shape or the data type of "
+"the array_like objects does not match. The special handling for scalars "
+"mentioned in the Notes section is disabled."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:57
+msgid "AssertionError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:55
+msgid "If actual and desired objects are not equal."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:62
+msgid ":obj:`assert_allclose`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:63
+msgid ""
+"Compare two array_like objects for equality with desired relative and/or "
+"absolute precision."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:64
+msgid ""
+":obj:`assert_array_almost_equal_nulp`, :obj:`assert_array_max_ulp`, :obj:"
+"`assert_equal`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:68
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:69
+msgid ""
+"When one of `actual` and `desired` is a scalar and the other is array_like, "
+"the function checks that each element of the array_like is equal to the "
+"scalar. Note that empty arrays are therefore considered equal to scalars. "
+"This behaviour can be disabled by setting ``strict==True``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:76
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:83
+msgid "The first assert does not raise an exception:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:88
+msgid "Assert fails with numerical imprecision with floats:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:105
+msgid ""
+"Use `assert_allclose` or one of the nulp (number of floating point values) "
+"functions for these cases instead:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:112
+msgid ""
+"As mentioned in the Notes section, `assert_array_equal` has special handling "
+"for scalars. Here the test checks that each value in `x` is 3:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:118
+msgid ""
+"Use `strict` to raise an AssertionError when comparing a scalar with an "
+"array:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:132
+msgid "The `strict` parameter also ensures that the array data types match:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:-1
+msgid ""
+"<div id=\"0e537c2e-2214-4525-a041-359488b137e2\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('09de8555-0bbe-42fd-9af0-"
+"a3a39608208d','0e537c2e-2214-4525-a041-359488b137e2')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('09de8555-0bbe-42fd-9af0-a3a39608208d','0e537c2e-2214-4525-"
+"a041-359488b137e2')\">Open In Tab</button></div><div "
+"id=\"7a67e440-7e09-4ce1-88ea-2350ef161358\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/utils.py:docstring
+#: of numpy.testing._private.utils.assert_array_equal:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""
