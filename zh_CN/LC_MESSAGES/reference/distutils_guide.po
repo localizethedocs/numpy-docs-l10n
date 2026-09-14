@@ -1,0 +1,959 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/distutils_guide.rst:4
+msgid "NumPy distutils - users guide"
+msgstr ""
+
+#: ../../../reference/distutils_guide.rst:8
+msgid ""
+"``numpy.distutils`` is deprecated, and will be removed for Python >= 3.12. "
+"For more details, see :ref:`distutils-status-migration`"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:3
+msgid "SciPy structure"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:5
+msgid "Currently SciPy project consists of two packages:"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:7
+msgid "NumPy --- it provides packages like:"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:9
+msgid "numpy.distutils - extension to Python distutils"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:10
+msgid "numpy.f2py - a tool to bind Fortran/C codes to Python"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:11
+msgid "numpy.core - future replacement of Numeric and numarray packages"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:12
+msgid "numpy.lib - extra utility functions"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:13
+msgid "numpy.testing - numpy-style tools for unit testing"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:14
+msgid "etc"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:16
+msgid "SciPy --- a collection of scientific tools for Python."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:18
+msgid "The aim of this document is to describe how to add new tools to SciPy."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:22
+msgid "Requirements for SciPy packages"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:24
+msgid ""
+"SciPy consists of Python packages, called SciPy packages, that are available "
+"to Python users via the ``scipy`` namespace. Each SciPy package may contain "
+"other SciPy packages. And so on. Therefore, the SciPy directory tree is a "
+"tree of packages with arbitrary depth and width. Any SciPy package may "
+"depend on NumPy packages but the dependence on other SciPy packages should "
+"be kept minimal or zero."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:31
+msgid ""
+"A SciPy package contains, in addition to its sources, the following files "
+"and directories:"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:34
+msgid "``setup.py`` --- building script"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:35
+msgid "``__init__.py`` --- package initializer"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:36
+msgid "``tests/`` --- directory of unittests"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:38
+msgid "Their contents are described below."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:41
+msgid "The ``setup.py`` file"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:43
+msgid ""
+"In order to add a Python package to SciPy, its build script (``setup.py``) "
+"must meet certain requirements. The most important requirement is that the "
+"package define a ``configuration(parent_package='',top_path=None)`` function "
+"which returns a dictionary suitable for passing to ``numpy.distutils.core."
+"setup(..)``. To simplify the construction of this dictionary, ``numpy."
+"distutils.misc_util`` provides the ``Configuration`` class, described below."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:52
+msgid "SciPy pure Python package example"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:54
+msgid ""
+"Below is an example of a minimal ``setup.py`` file for a pure SciPy package::"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:56
+msgid ""
+"#!/usr/bin/env python3\n"
+"def configuration(parent_package='',top_path=None):\n"
+"    from numpy.distutils.misc_util import Configuration\n"
+"    config = Configuration('mypackage',parent_package,top_path)\n"
+"    return config\n"
+"\n"
+"if __name__ == \"__main__\":\n"
+"    from numpy.distutils.core import setup\n"
+"    #setup(**configuration(top_path='').todict())\n"
+"    setup(configuration=configuration)"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:67
+msgid ""
+"The arguments of the ``configuration`` function specify the name of parent "
+"SciPy package (``parent_package``) and the directory location of the main "
+"``setup.py`` script (``top_path``).  These arguments, along with the name of "
+"the current package, should be passed to the ``Configuration`` constructor."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:73
+msgid ""
+"The ``Configuration`` constructor has a fourth optional argument, "
+"``package_path``, that can be used when package files are located in a "
+"different location than the directory of the ``setup.py`` file."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:77
+msgid ""
+"Remaining ``Configuration`` arguments are all keyword arguments that will be "
+"used to initialize attributes of ``Configuration`` instance. Usually, these "
+"keywords are the same as the ones that ``setup(..)`` function would expect, "
+"for example, ``packages``, ``ext_modules``, ``data_files``, "
+"``include_dirs``, ``libraries``, ``headers``, ``scripts``, ``package_dir``, "
+"etc.  However, the direct specification of these keywords is not recommended "
+"as the content of these keyword arguments will not be processed or checked "
+"for the consistency of SciPy building system."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:87
+msgid ""
+"Finally, ``Configuration`` has ``.todict()`` method that returns all the "
+"configuration data as a dictionary suitable for passing on to the "
+"``setup(..)`` function."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:92
+msgid "``Configuration`` instance attributes"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:94
+msgid ""
+"In addition to attributes that can be specified via keyword arguments to "
+"``Configuration`` constructor, ``Configuration`` instance (let us denote as "
+"``config``) has the following attributes that can be useful in writing setup "
+"scripts:"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:99
+msgid ""
+"``config.name`` - full name of the current package. The names of parent "
+"packages can be extracted as ``config.name.split('.')``."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:102
+msgid ""
+"``config.local_path`` - path to the location of current ``setup.py`` file."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:104
+msgid "``config.top_path`` - path to the location of main ``setup.py`` file."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:107
+msgid "``Configuration`` instance methods"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:109
+msgid ""
+"``config.todict()`` --- returns configuration dictionary suitable for "
+"passing to ``numpy.distutils.core.setup(..)`` function."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:112
+msgid ""
+"``config.paths(*paths) --- applies ``glob.glob(..)`` to items of ``paths`` "
+"if necessary. Fixes ``paths`` item that is relative to ``config.local_path``."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:116
+msgid ""
+"``config.get_subpackage(subpackage_name,subpackage_path=None)`` --- returns "
+"a list of subpackage configurations. Subpackage is looked in the current "
+"directory under the name ``subpackage_name`` but the path can be specified "
+"also via optional ``subpackage_path`` argument. If ``subpackage_name`` is "
+"specified as ``None`` then the subpackage name will be taken the basename of "
+"``subpackage_path``. Any ``*`` used for subpackage names are expanded as "
+"wildcards."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:124
+msgid ""
+"``config.add_subpackage(subpackage_name,subpackage_path=None)`` --- add "
+"SciPy subpackage configuration to the current one. The meaning and usage of "
+"arguments is explained above, see ``config.get_subpackage()`` method."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:129
+msgid ""
+"``config.add_data_files(*files)`` --- prepend ``files`` to ``data_files`` "
+"list. If ``files`` item is a tuple then its first element defines the suffix "
+"of where data files are copied relative to package installation directory "
+"and the second element specifies the path to data files. By default data "
+"files are copied under package installation directory. For example,"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:138
+msgid ""
+"config.add_data_files('foo.dat',\n"
+"                      ('fun',['gun.dat','nun/pun.dat','/tmp/sun.dat']),\n"
+"                      'bar/car.dat'.\n"
+"                      '/full/path/to/can.dat',\n"
+"                      )"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:144 ../../../../DISTUTILS.rst:178
+msgid "will install data files to the following locations"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:148
+msgid ""
+"<installation path of config.name package>/\n"
+"  foo.dat\n"
+"  fun/\n"
+"    gun.dat\n"
+"    pun.dat\n"
+"    sun.dat\n"
+"  bar/\n"
+"    car.dat\n"
+"  can.dat"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:158
+msgid ""
+"Path to data files can be a function taking no arguments and returning "
+"path(s) to data files -- this is a useful when data files are generated "
+"while building the package. (XXX: explain the step when this function are "
+"called exactly)"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:163
+msgid ""
+"``config.add_data_dir(data_path)`` --- add directory ``data_path`` "
+"recursively to ``data_files``. The whole directory tree starting at "
+"``data_path`` will be copied under package installation directory. If "
+"``data_path`` is a tuple then its first element defines the suffix of where "
+"data files are copied relative to package installation directory and the "
+"second element specifies the path to data directory. By default, data "
+"directory are copied under package installation directory under the basename "
+"of ``data_path``. For example,"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:174
+msgid ""
+"config.add_data_dir('fun')  # fun/ contains foo.dat bar/car.dat\n"
+"config.add_data_dir(('sun','fun'))\n"
+"config.add_data_dir(('gun','/full/path/to/fun'))"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:182
+msgid ""
+"<installation path of config.name package>/\n"
+"  fun/\n"
+"     foo.dat\n"
+"     bar/\n"
+"        car.dat\n"
+"  sun/\n"
+"     foo.dat\n"
+"     bar/\n"
+"        car.dat\n"
+"  gun/\n"
+"     foo.dat\n"
+"     bar/\n"
+"        car.dat"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:196
+msgid ""
+"``config.add_include_dirs(*paths)`` --- prepend ``paths`` to "
+"``include_dirs`` list. This list will be visible to all extension modules of "
+"the current package."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:200
+msgid ""
+"``config.add_headers(*files)`` --- prepend ``files`` to ``headers`` list. By "
+"default, headers will be installed under ``<prefix>/include/pythonX.X/"
+"<config.name.replace('.','/')>/`` directory. If ``files`` item is a tuple "
+"then it's first argument specifies the installation suffix relative to "
+"``<prefix>/include/pythonX.X/`` path.  This is a Python distutils method; "
+"its use is discouraged for NumPy and SciPy in favour of ``config."
+"add_data_files(*files)``."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:209
+msgid ""
+"``config.add_scripts(*files)`` --- prepend ``files`` to ``scripts`` list. "
+"Scripts will be installed under ``<prefix>/bin/`` directory."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:212
+msgid ""
+"``config.add_extension(name,sources,**kw)`` --- create and add an "
+"``Extension`` instance to ``ext_modules`` list. The first argument ``name`` "
+"defines the name of the extension module that will be installed under "
+"``config.name`` package. The second argument is a list of sources. "
+"``add_extension`` method takes also keyword arguments that are passed on to "
+"the ``Extension`` constructor. The list of allowed keywords is the "
+"following: ``include_dirs``, ``define_macros``, ``undef_macros``, "
+"``library_dirs``, ``libraries``, ``runtime_library_dirs``, "
+"``extra_objects``, ``extra_compile_args``, ``extra_link_args``, "
+"``export_symbols``, ``swig_opts``, ``depends``, ``language``, "
+"``f2py_options``, ``module_dirs``, ``extra_info``, "
+"``extra_f77_compile_args``, ``extra_f90_compile_args``."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:225
+msgid ""
+"Note that ``config.paths`` method is applied to all lists that may contain "
+"paths. ``extra_info`` is a dictionary or a list of dictionaries that content "
+"will be appended to keyword arguments. The list ``depends`` contains paths "
+"to files or directories that the sources of the extension module depend on. "
+"If any path in the ``depends`` list is newer than the extension module, then "
+"the module will be rebuilt."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:233
+msgid ""
+"The list of sources may contain functions ('source generators') with a "
+"pattern ``def <funcname>(ext, build_dir): return <source(s) or None>``. If "
+"``funcname`` returns ``None``, no sources are generated. And if the "
+"``Extension`` instance has no sources after processing all source "
+"generators, no extension module will be built. This is the recommended way "
+"to conditionally define extension modules. Source generator functions are "
+"called by the ``build_src`` sub-command of ``numpy.distutils``."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:242
+msgid "For example, here is a typical source generator function::"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:244
+msgid ""
+"def generate_source(ext,build_dir):\n"
+"    import os\n"
+"    from distutils.dep_util import newer\n"
+"    target = os.path.join(build_dir,'somesource.c')\n"
+"    if newer(target,__file__):\n"
+"        # create target file\n"
+"    return target"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:252
+msgid ""
+"The first argument contains the Extension instance that can be useful to "
+"access its attributes like ``depends``, ``sources``, etc. lists and modify "
+"them during the building process. The second argument gives a path to a "
+"build directory that must be used when creating files to a disk."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:258
+msgid ""
+"``config.add_library(name, sources, **build_info)`` --- add a library to "
+"``libraries`` list. Allowed keywords arguments are ``depends``, ``macros``, "
+"``include_dirs``, ``extra_compiler_args``, ``f2py_options``, "
+"``extra_f77_compile_args``, ``extra_f90_compile_args``.  See ``."
+"add_extension()`` method for more information on arguments."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:265
+msgid ""
+"``config.have_f77c()`` --- return True if Fortran 77 compiler is available "
+"(read: a simple Fortran 77 code compiled successfully)."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:268
+msgid ""
+"``config.have_f90c()`` --- return True if Fortran 90 compiler is available "
+"(read: a simple Fortran 90 code compiled successfully)."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:271
+msgid ""
+"``config.get_version()`` --- return version string of the current package, "
+"``None`` if version information could not be detected. This methods scans "
+"files ``__version__.py``, ``<packagename>_version.py``, ``version.py``, "
+"``__svn_version__.py`` for string variables ``version``, ``__version__``, "
+"``<packagename>_version``."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:277
+msgid ""
+"``config.make_svn_version_py()`` --- appends a data function to "
+"``data_files`` list that will generate ``__svn_version__.py`` file to the "
+"current package directory. The file will be removed from the source "
+"directory when Python exits."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:282
+msgid ""
+"``config.get_build_temp_dir()`` --- return a path to a temporary directory. "
+"This is the place where one should build temporary files."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:286
+msgid ""
+"``config.get_distribution()`` --- return distutils ``Distribution`` instance."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:289
+msgid ""
+"``config.get_config_cmd()`` --- returns ``numpy.distutils`` config command "
+"instance."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:292
+msgid "``config.get_info(*names)`` ---"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:298
+msgid "Conversion of ``.src`` files using Templates"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:300
+msgid ""
+"NumPy distutils supports automatic conversion of source files named "
+"<somefile>.src. This facility can be used to maintain very similar code "
+"blocks requiring only simple changes between blocks. During the build phase "
+"of setup, if a template file named <somefile>.src is encountered, a new file "
+"named <somefile> is constructed from the template and placed in the build "
+"directory to be used instead. Two forms of template conversion are "
+"supported. The first form occurs for files named <file>.ext.src where ext is "
+"a recognized Fortran extension (f, f90, f95, f77, for, ftn, pyf). The second "
+"form is used for all other cases."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:315
+msgid "Fortran files"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:317
+msgid ""
+"This template converter will replicate all **function** and **subroutine** "
+"blocks in the file with names that contain '<...>' according to the rules in "
+"'<...>'. The number of comma-separated words in '<...>' determines the "
+"number of times the block is repeated. What these words are indicates what "
+"that repeat rule, '<...>', should be replaced with in each block. All of the "
+"repeat rules in a block must contain the same number of comma-separated "
+"words indicating the number of times that block should be repeated. If the "
+"word in the repeat rule needs a comma, leftarrow, or rightarrow, then "
+"prepend it with a backslash ' \\'. If a word in the repeat rule matches ' \\"
+"\\<index>' then it will be replaced with the <index>-th word in the same "
+"repeat specification. There are two forms for the repeat rule: named and "
+"short."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:332
+msgid "Named repeat rule"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:334
+msgid ""
+"A named repeat rule is useful when the same set of repeats must be used "
+"several times in a block. It is specified using <rule1=item1, item2, "
+"item3,..., itemN>, where N is the number of times the block should be "
+"repeated. On each repeat of the block, the entire expression, '<...>' will "
+"be replaced first with item1, and then with item2, and so forth until N "
+"repeats are accomplished. Once a named repeat specification has been "
+"introduced, the same repeat rule may be used **in the current block** by "
+"referring only to the name (i.e. <rule1>)."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:346
+msgid "Short repeat rule"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:348
+msgid ""
+"A short repeat rule looks like <item1, item2, item3, ..., itemN>. The rule "
+"specifies that the entire expression, '<...>' should be replaced first with "
+"item1, and then with item2, and so forth until N repeats are accomplished."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:355
+msgid "Pre-defined names"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:357
+msgid "The following predefined named repeat rules are available:"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:359
+msgid "<prefix=s,d,c,z>"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:361
+msgid "<_c=s,d,c,z>"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:363
+msgid "<_t=real, double precision, complex, double complex>"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:365
+msgid "<ftype=real, double precision, complex, double complex>"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:367
+msgid "<ctype=float, double, complex_float, complex_double>"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:369
+msgid "<ftypereal=float, double precision, \\\\0, \\\\1>"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:371
+msgid "<ctypereal=float, double, \\\\0, \\\\1>"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:375
+msgid "Other files"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:377
+msgid ""
+"Non-Fortran files use a separate syntax for defining template blocks that "
+"should be repeated using a variable expansion similar to the named repeat "
+"rules of the Fortran-specific repeats."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:381
+msgid ""
+"NumPy Distutils preprocesses C source files (extension: :file:`.c.src`) "
+"written in a custom templating language to generate C code. The ``@`` symbol "
+"is used to wrap macro-style variables to empower a string substitution "
+"mechanism that might describe (for instance) a set of data types."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:386
+msgid ""
+"The template language blocks are delimited by ``/**begin repeat`` and ``/"
+"**end repeat**/`` lines, which may also be nested using consecutively "
+"numbered delimiting lines such as ``/**begin repeat1`` and ``/**end "
+"repeat1**/``:"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:391
+msgid ""
+"``/**begin repeat`` on a line by itself marks the beginning of a segment "
+"that should be repeated."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:394
+msgid ""
+"Named variable expansions are defined using ``#name=item1, item2, "
+"item3, ..., itemN#`` and placed on successive lines. These variables are "
+"replaced in each repeat block with corresponding word. All named variables "
+"in the same repeat block must define the same number of words."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:400
+msgid ""
+"In specifying the repeat rule for a named variable, ``item*N`` is short- "
+"hand for ``item, item, ..., item`` repeated N times. In addition, "
+"parenthesis in combination with ``*N`` can be used for grouping several "
+"items that should be repeated. Thus, ``#name=(item1, item2)*4#`` is "
+"equivalent to ``#name=item1, item2, item1, item2, item1, item2, item1, "
+"item2#``."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:407
+msgid ""
+"``*/`` on a line by itself marks the end of the variable expansion naming. "
+"The next line is the first line that will be repeated using the named rules."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:411
+msgid ""
+"Inside the block to be repeated, the variables that should be expanded are "
+"specified as ``@name@``."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:414
+msgid ""
+"``/**end repeat**/`` on a line by itself marks the previous line as the last "
+"line of the block to be repeated."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:417
+msgid ""
+"A loop in the NumPy C source code may have a ``@TYPE@`` variable, targeted "
+"for string substitution, which is preprocessed to a number of otherwise "
+"identical loops with several strings such as ``INT``, ``LONG``, ``UINT``, "
+"``ULONG``. The ``@TYPE@`` style syntax thus reduces code duplication and "
+"maintenance burden by mimicking languages that have generic type support."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:423
+msgid ""
+"The above rules may be clearer in the following template source example:"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:425
+msgid ""
+" /* TIMEDELTA to non-float types */\n"
+"\n"
+" /**begin repeat\n"
+"  *\n"
+"  * #TOTYPE = BYTE, UBYTE, SHORT, USHORT, INT, UINT, LONG, ULONG,\n"
+"  *           LONGLONG, ULONGLONG, DATETIME,\n"
+"  *           TIMEDELTA#\n"
+"  * #totype = npy_byte, npy_ubyte, npy_short, npy_ushort, npy_int, "
+"npy_uint,\n"
+"  *           npy_long, npy_ulong, npy_longlong, npy_ulonglong,\n"
+"  *           npy_datetime, npy_timedelta#\n"
+"  */\n"
+"\n"
+" /**begin repeat1\n"
+"  *\n"
+"  * #FROMTYPE = TIMEDELTA#\n"
+"  * #fromtype = npy_timedelta#\n"
+"  */\n"
+" static void\n"
+" @FROMTYPE@_to_@TOTYPE@(void *input, void *output, npy_intp n,\n"
+"         void *NPY_UNUSED(aip), void *NPY_UNUSED(aop))\n"
+" {\n"
+"     const @fromtype@ *ip = input;\n"
+"     @totype@ *op = output;\n"
+"\n"
+"     while (n--) {\n"
+"         *op++ = (@totype@)*ip++;\n"
+"     }\n"
+" }\n"
+" /**end repeat1**/\n"
+"\n"
+" /**end repeat**/"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:461
+msgid ""
+"The preprocessing of generically-typed C source files (whether in NumPy "
+"proper or in any third party package using NumPy Distutils) is performed by "
+"`conv_template.py`_. The type-specific C files generated (extension: ``.c``) "
+"by these modules during the build process are ready to be compiled. This "
+"form of generic typing is also supported for C header files (preprocessed to "
+"produce ``.h`` files)."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:472
+msgid "Useful functions in ``numpy.distutils.misc_util``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:474
+msgid ""
+"``get_numpy_include_dirs()`` --- return a list of NumPy base include "
+"directories. NumPy base include directories contain header files such as "
+"``numpy/arrayobject.h``, ``numpy/funcobject.h`` etc. For installed NumPy the "
+"returned list has length 1 but when building NumPy the list may contain more "
+"directories, for example, a path to ``config.h`` file that ``numpy/base/"
+"setup.py`` file generates and is used by ``numpy`` header files."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:483
+msgid "``append_path(prefix,path)`` --- smart append ``path`` to ``prefix``."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:485
+msgid ""
+"``gpaths(paths, local_path='')`` --- apply glob to paths and prepend "
+"``local_path`` if needed."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:488
+msgid ""
+"``njoin(*path)`` --- join pathname components + convert ``/``-separated path "
+"to ``os.sep``-separated path and resolve ``..``, ``.`` from paths. Ex. "
+"``njoin('a',['b','./c'],'..','g') -> os.path.join('a','b','g')``."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:492
+msgid "``minrelpath(path)`` --- resolves dots in ``path``."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:494
+msgid ""
+"``rel_path(path, parent_path)`` --- return ``path`` relative to "
+"``parent_path``."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:496
+msgid ""
+"``def get_cmd(cmdname,_cache={})`` --- returns ``numpy.distutils`` command "
+"instance."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:499
+msgid "``all_strings(lst)``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:501
+msgid "``has_f_sources(sources)``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:503
+msgid "``has_cxx_sources(sources)``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:505
+msgid ""
+"``filter_sources(sources)`` --- return ``c_sources, cxx_sources, f_sources, "
+"fmodule_sources``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:508
+msgid "``get_dependencies(sources)``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:510
+msgid "``is_local_src_dir(directory)``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:512
+msgid "``get_ext_source_files(ext)``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:514
+msgid "``get_script_files(scripts)``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:516
+msgid "``get_lib_source_files(lib)``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:518
+msgid "``get_data_files(data)``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:520
+msgid "``dot_join(*args)`` --- join non-zero arguments with a dot."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:522
+msgid ""
+"``get_frame(level=0)`` --- return frame object from call stack with given "
+"level."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:524
+msgid "``cyg2win32(path)``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:526
+msgid "``mingw32()`` --- return ``True`` when using mingw32 environment."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:528
+msgid ""
+"``terminal_has_colors()``, ``red_text(s)``, ``green_text(s)``, "
+"``yellow_text(s)``, ``blue_text(s)``, ``cyan_text(s)``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:531
+msgid ""
+"``get_path(mod_name,parent_path=None)`` --- return path of a module relative "
+"to parent_path when given. Handles also ``__main__`` and ``__builtin__`` "
+"modules."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:535
+msgid "``allpath(name)`` --- replaces ``/`` with ``os.sep`` in ``name``."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:537
+msgid ""
+"``cxx_ext_match``, ``fortran_ext_match``, ``f90_ext_match``, "
+"``f90_module_name_match``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:541
+msgid "``numpy.distutils.system_info`` module"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:543
+msgid "``get_info(name,notfound_action=0)``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:544
+msgid "``combine_paths(*args,**kws)``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:545
+msgid "``show_all()``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:548
+msgid "``numpy.distutils.cpuinfo`` module"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:550
+msgid "``cpuinfo``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:553
+msgid "``numpy.distutils.log`` module"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:555
+msgid "``set_verbosity(v)``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:559
+msgid "``numpy.distutils.exec_command`` module"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:561
+msgid "``get_pythonexe()``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:562
+msgid "``find_executable(exe, path=None)``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:563
+msgid ""
+"``exec_command( command, execute_in='', use_shell=None, use_tee=None, "
+"**env )``"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:566
+msgid "The ``__init__.py`` file"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:568
+msgid "The header of a typical SciPy ``__init__.py`` is::"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:570
+msgid ""
+"\"\"\"\n"
+"Package docstring, typically with a brief description and function listing.\n"
+"\"\"\"\n"
+"\n"
+"# import functions into module namespace\n"
+"from .subpackage import *\n"
+"...\n"
+"\n"
+"__all__ = [s for s in dir() if not s.startswith('_')]\n"
+"\n"
+"from numpy.testing import Tester\n"
+"test = Tester().test\n"
+"bench = Tester().bench"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:585
+msgid "Extra features in NumPy Distutils"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:588
+msgid "Specifying config_fc options for libraries in setup.py script"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:590
+msgid ""
+"It is possible to specify config_fc options in setup.py scripts. For "
+"example, using"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:595
+msgid "config.add_library('library',"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:594
+msgid "sources=[...], config_fc={'noopt':(__file__,1)})"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:597
+msgid "will compile the ``library`` sources without optimization flags."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:599
+msgid ""
+"It's recommended to specify only those config_fc options in such a way that "
+"are compiler independent."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:603
+msgid "Getting extra Fortran 77 compiler options from source"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:605
+msgid ""
+"Some old Fortran codes need special compiler options in order to work "
+"correctly. In order to specify compiler options per source file, ``numpy."
+"distutils`` Fortran compiler looks for the following pattern::"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:610
+msgid "CF77FLAGS(<fcompiler type>) = <fcompiler f77flags>"
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:612
+msgid ""
+"in the first 20 lines of the source and use the ``f77flags`` for specified "
+"type of the fcompiler (the first character ``C`` is optional)."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:615
+msgid ""
+"TODO: This feature can be easily extended for Fortran 90 codes as well. Let "
+"us know if you would need such a feature."
+msgstr ""
+
+#: ../../../../DISTUTILS.rst:311
+msgid "code generation"
+msgstr ""

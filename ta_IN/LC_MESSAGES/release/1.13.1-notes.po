@@ -1,0 +1,183 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release/1.13.1-notes.rst:3
+msgid "NumPy 1.13.1 Release Notes"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:5
+msgid ""
+"This is a bugfix release for problems found in 1.13.0. The major changes are "
+"fixes for the new memory overlap detection and temporary elision as well as "
+"reversion of the removal of the boolean binary ``-`` operator. Users of "
+"1.13.0 should upgrade."
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:10
+msgid ""
+"Thr Python versions supported are 2.7 and 3.4 - 3.6. Note that the Python "
+"3.6 wheels available from PIP are built against 3.6.1, hence will not work "
+"when used with 3.6.0 due to Python bug 29943_. NumPy 1.13.2 will be released "
+"shortly after Python 3.6.2 is out to fix that problem. If you are using "
+"3.6.0 the workaround is to upgrade to 3.6.1 or use an earlier Python version."
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:20
+msgid "Pull requests merged"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:21
+msgid "A total of 19 pull requests were merged for this release."
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:23
+msgid "#9240 DOC: BLD: fix lots of Sphinx warnings/errors."
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:24
+msgid "#9255 Revert \"DEP: Raise TypeError for subtract(bool, bool).\""
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:25
+msgid ""
+"#9261 BUG: don't elide into readonly and updateifcopy temporaries for..."
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:26
+msgid "#9262 BUG: fix missing keyword rename for common block in numpy.f2py"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:27
+msgid "#9263 BUG: handle resize of 0d array"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:28
+msgid "#9267 DOC: update f2py front page and some doc build metadata."
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:29
+msgid "#9299 BUG: Fix Intel compilation on Unix."
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:30
+msgid "#9317 BUG: fix wrong ndim used in empty where check"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:31
+msgid "#9319 BUG: Make extensions compilable with MinGW on Py2.7"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:32
+msgid "#9339 BUG: Prevent crash if ufunc doc string is null"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:33
+msgid "#9340 BUG: umath: un-break ufunc where= when no out= is given"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:34
+msgid "#9371 DOC: Add isnat/positive ufunc to documentation"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:35
+msgid "#9372 BUG: Fix error in fromstring function from numpy.core.records..."
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:36
+msgid ""
+"#9373 BUG: ')' is printed at the end pointer of the buffer in numpy.f2py."
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:37
+msgid "#9374 DOC: Create NumPy 1.13.1 release notes."
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:38
+msgid "#9376 BUG: Prevent hang traversing ufunc userloop linked list"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:39
+msgid "#9377 DOC: Use x1 and x2 in the heaviside docstring."
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:40
+msgid "#9378 DOC: Add $PARAMS to the isnat docstring"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:41
+msgid "#9379 DOC: Update the 1.13.1 release notes"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:45
+msgid "Contributors"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:46
+msgid ""
+"A total of 12 people contributed to this release.  People with a \"+\" by "
+"their names contributed a patch for the first time."
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:49
+msgid "Andras Deak +"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:50
+msgid "Bob Eldering +"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:51
+msgid "Charles Harris"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:52
+msgid "Daniel Hrisca +"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:53
+msgid "Eric Wieser"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:54
+msgid "Joshua Leahy +"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:55
+msgid "Julian Taylor"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:56
+msgid "Michael Seifert"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:57
+msgid "Pauli Virtanen"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:58
+msgid "Ralf Gommers"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:59
+msgid "Roland Kaufmann"
+msgstr ""
+
+#: ../../../release/1.13.1-notes.rst:60
+msgid "Warren Weckesser"
+msgstr ""

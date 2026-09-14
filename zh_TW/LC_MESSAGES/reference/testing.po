@@ -1,0 +1,767 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/testing.rst:4
+msgid "Testing Guidelines"
+msgstr ""
+
+#: ../../../../TESTS.rst:2
+msgid "Introduction"
+msgstr ""
+
+#: ../../../../TESTS.rst:4
+msgid ""
+"Until the 1.15 release, NumPy used the `nose`_ testing framework, it now "
+"uses the `pytest`_ framework. The older framework is still maintained in "
+"order to support downstream projects that use the old numpy framework, but "
+"all tests for NumPy should use pytest."
+msgstr ""
+
+#: ../../../../TESTS.rst:9
+msgid ""
+"Our goal is that every module and package in NumPy should have a thorough "
+"set of unit tests. These tests should exercise the full functionality of a "
+"given routine as well as its robustness to erroneous or unexpected input "
+"arguments. Well-designed tests with good coverage make an enormous "
+"difference to the ease of refactoring. Whenever a new bug is found in a "
+"routine, you should write a new test for that specific case and add it to "
+"the test suite to prevent that bug from creeping back in unnoticed."
+msgstr ""
+
+#: ../../../../TESTS.rst:21
+msgid ""
+"SciPy uses the testing framework from :mod:`numpy.testing`, so all of the "
+"NumPy examples shown below are also applicable to SciPy"
+msgstr ""
+
+#: ../../../../TESTS.rst:25
+msgid "Testing NumPy"
+msgstr ""
+
+#: ../../../../TESTS.rst:27
+msgid ""
+"NumPy can be tested in a number of ways, choose any way you feel comfortable."
+msgstr ""
+
+#: ../../../../TESTS.rst:30
+msgid "Running tests from inside Python"
+msgstr ""
+
+#: ../../../../TESTS.rst:32
+msgid ""
+"You can test an installed NumPy by `numpy.test`, for example, To run NumPy's "
+"full test suite, use the following::"
+msgstr ""
+
+#: ../../../../TESTS.rst:35
+msgid ""
+">>> import numpy\n"
+">>> numpy.test(label='slow')"
+msgstr ""
+
+#: ../../../../TESTS.rst:38
+msgid ""
+"The test method may take two or more arguments; the first ``label`` is a "
+"string specifying what should be tested and the second ``verbose`` is an "
+"integer giving the level of output verbosity. See the docstring `numpy.test` "
+"for details. The default value for ``label`` is 'fast' - which will run the "
+"standard tests.  The string 'full' will run the full battery of tests, "
+"including those identified as being slow to run. If ``verbose`` is 1 or "
+"less, the tests will just show information messages about the tests that are "
+"run; but if it is greater than 1, then the tests will also provide warnings "
+"on missing tests. So if you want to run every test and get messages about "
+"which modules don't have tests::"
+msgstr ""
+
+#: ../../../../TESTS.rst:50
+msgid ">>> numpy.test(label='full', verbose=2)  # or numpy.test('full', 2)"
+msgstr ""
+
+#: ../../../../TESTS.rst:52
+msgid ""
+"Finally, if you are only interested in testing a subset of NumPy, for "
+"example, the ``core`` module, use the following::"
+msgstr ""
+
+#: ../../../../TESTS.rst:55
+msgid ">>> numpy.core.test()"
+msgstr ""
+
+#: ../../../../TESTS.rst:58
+msgid "Running tests from the command line"
+msgstr ""
+
+#: ../../../../TESTS.rst:60
+msgid ""
+"If you want to build NumPy in order to work on NumPy itself, use the "
+"``spin`` utility. To run NumPy's full test suite::"
+msgstr ""
+
+#: ../../../../TESTS.rst:63
+msgid "$ spin test -m full"
+msgstr ""
+
+#: ../../../../TESTS.rst:65
+msgid "Testing a subset of NumPy::"
+msgstr ""
+
+#: ../../../../TESTS.rst:67
+msgid "$ spin test -t numpy/core/tests"
+msgstr ""
+
+#: ../../../../TESTS.rst:69
+msgid "For detailed info on testing, see :ref:`testing-builds`"
+msgstr ""
+
+#: ../../../../TESTS.rst:72
+msgid "Other methods of running tests"
+msgstr ""
+
+#: ../../../../TESTS.rst:74
+msgid "Run tests using your favourite IDE such as `vscode`_ or `pycharm`_"
+msgstr ""
+
+#: ../../../../TESTS.rst:77
+msgid "Writing your own tests"
+msgstr ""
+
+#: ../../../../TESTS.rst:79
+msgid ""
+"If you are writing a package that you'd like to become part of NumPy, please "
+"write the tests as you develop the package. Every Python module, extension "
+"module, or subpackage in the NumPy package directory should have a "
+"corresponding ``test_<name>.py`` file. Pytest examines these files for test "
+"methods (named ``test*``) and test classes (named ``Test*``)."
+msgstr ""
+
+#: ../../../../TESTS.rst:86
+msgid ""
+"Suppose you have a NumPy module ``numpy/xxx/yyy.py`` containing a function "
+"``zzz()``.  To test this function you would create a test module called "
+"``test_yyy.py``.  If you only need to test one aspect of ``zzz``, you can "
+"simply add a test function::"
+msgstr ""
+
+#: ../../../../TESTS.rst:91
+msgid ""
+"def test_zzz():\n"
+"    assert zzz() == 'Hello from zzz'"
+msgstr ""
+
+#: ../../../../TESTS.rst:94
+msgid ""
+"More often, we need to group a number of tests together, so we create a test "
+"class::"
+msgstr ""
+
+#: ../../../../TESTS.rst:97
+msgid ""
+"import pytest\n"
+"\n"
+"# import xxx symbols\n"
+"from numpy.xxx.yyy import zzz\n"
+"import pytest\n"
+"\n"
+"class TestZzz:\n"
+"    def test_simple(self):\n"
+"        assert zzz() == 'Hello from zzz'\n"
+"\n"
+"    def test_invalid_parameter(self):\n"
+"        with pytest.raises(ValueError, match='.*some matching regex.*'):\n"
+"            ..."
+msgstr ""
+
+#: ../../../../TESTS.rst:111
+msgid ""
+"Within these test methods, ``assert`` and related functions are used to test "
+"whether a certain assumption is valid. If the assertion fails, the test "
+"fails. ``pytest`` internally rewrites the ``assert`` statement to give "
+"informative output when it fails, so should be preferred over the legacy "
+"variant ``numpy.testing.assert_``. Whereas plain ``assert`` statements are "
+"ignored when running Python in optimized mode with ``-O``, this is not an "
+"issue when running tests with pytest."
+msgstr ""
+
+#: ../../../../TESTS.rst:119
+msgid ""
+"Similarly, the pytest functions :func:`pytest.raises` and :func:`pytest."
+"warns` should be preferred over their legacy counterparts :func:`numpy."
+"testing.assert_raises` and :func:`numpy.testing.assert_warns`, since the "
+"pytest variants are more broadly used and allow more explicit targeting of "
+"warnings and errors when used with the ``match`` regex."
+msgstr ""
+
+#: ../../../../TESTS.rst:126
+msgid ""
+"Note that ``test_`` functions or methods should not have a docstring, "
+"because that makes it hard to identify the test from the output of running "
+"the test suite with ``verbose=2`` (or similar verbosity setting).  Use plain "
+"comments (``#``) if necessary."
+msgstr ""
+
+#: ../../../../TESTS.rst:131
+msgid ""
+"Also since much of NumPy is legacy code that was originally written without "
+"unit tests, there are still several modules that don't have tests yet. "
+"Please feel free to choose one of these modules and develop tests for it."
+msgstr ""
+
+#: ../../../../TESTS.rst:137
+msgid "Using C code in tests"
+msgstr ""
+
+#: ../../../../TESTS.rst:139
+msgid ""
+"NumPy exposes a rich :ref:`C-API<c-api>` . These are tested using c-"
+"extension modules written \"as-if\" they know nothing about the internals of "
+"NumPy, rather using the official C-API interfaces only. Examples of such "
+"modules are tests for a user-defined ``rational`` dtype in "
+"``_rational_tests`` or the ufunc machinery tests in ``_umath_tests`` which "
+"are part of the binary distribution. Starting from version 1.21, you can "
+"also write snippets of C code in tests that will be compiled locally into c-"
+"extension modules and loaded into python."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/testing/_private/extbuild.py:docstring
+#: of numpy.testing._private.extbuild.build_and_import_extension:2
+msgid ""
+"Build and imports a c-extension module `modname` from a list of function "
+"fragments `functions`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/_pytesttester.py:docstring
+#: of numpy.test:0
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/testing/_private/extbuild.py:docstring
+#: numpy.testing._private.extbuild.build_and_import_extension:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/testing/_private/extbuild.py:docstring
+#: of numpy.testing._private.extbuild.build_and_import_extension:9
+msgid "**functions**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/testing/_private/extbuild.py:docstring
+#: of numpy.testing._private.extbuild.build_and_import_extension:-1
+msgid "list of fragments"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/testing/_private/extbuild.py:docstring
+#: of numpy.testing._private.extbuild.build_and_import_extension:9
+msgid "Each fragment is a sequence of func_name, calling convention, snippet."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/testing/_private/extbuild.py:docstring
+#: of numpy.testing._private.extbuild.build_and_import_extension:13
+msgid "**prologue**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/testing/_private/extbuild.py:docstring
+#: of numpy.testing._private.extbuild.build_and_import_extension:-1
+msgid "string"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/testing/_private/extbuild.py:docstring
+#: of numpy.testing._private.extbuild.build_and_import_extension:12
+msgid ""
+"Code to precede the rest, usually extra ``#include`` or ``#define`` macros."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/testing/_private/extbuild.py:docstring
+#: of numpy.testing._private.extbuild.build_and_import_extension:16
+msgid "**build_dir**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/testing/_private/extbuild.py:docstring
+#: of numpy.testing._private.extbuild.build_and_import_extension:-1
+msgid "pathlib.Path"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/testing/_private/extbuild.py:docstring
+#: of numpy.testing._private.extbuild.build_and_import_extension:16
+msgid "Where to build the module, usually a temporary directory"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/testing/_private/extbuild.py:docstring
+#: of numpy.testing._private.extbuild.build_and_import_extension:19
+msgid "**include_dirs**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/testing/_private/extbuild.py:docstring
+#: of numpy.testing._private.extbuild.build_and_import_extension:-1
+msgid "list"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/testing/_private/extbuild.py:docstring
+#: of numpy.testing._private.extbuild.build_and_import_extension:19
+msgid "Extra directories to find include files when compiling"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/testing/_private/extbuild.py:docstring
+#: of numpy.testing._private.extbuild.build_and_import_extension:22
+msgid "**more_init**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/testing/_private/extbuild.py:docstring
+#: of numpy.testing._private.extbuild.build_and_import_extension:22
+msgid "Code to appear in the module PyMODINIT_FUNC"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/testing/_private/extbuild.py:docstring
+#: of numpy.testing._private.extbuild.build_and_import_extension:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/testing/_private/extbuild.py:docstring
+#: of numpy.testing._private.extbuild.build_and_import_extension:36
+msgid "out: module"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/testing/_private/extbuild.py:docstring
+#: of numpy.testing._private.extbuild.build_and_import_extension:27
+msgid "The module will have been loaded and is ready for use"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/testing/_private/extbuild.py:docstring
+#: of numpy.testing._private.extbuild.build_and_import_extension:39
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../TESTS.rst:152
+msgid "Labeling tests"
+msgstr ""
+
+#: ../../../../TESTS.rst:154
+msgid ""
+"Unlabeled tests like the ones above are run in the default ``numpy.test()`` "
+"run.  If you want to label your test as slow - and therefore reserved for a "
+"full ``numpy.test(label='full')`` run, you can label it with ``pytest.mark."
+"slow``::"
+msgstr ""
+
+#: ../../../../TESTS.rst:159
+msgid ""
+"import pytest\n"
+"\n"
+"@pytest.mark.slow\n"
+"def test_big(self):\n"
+"    print('Big, slow test')"
+msgstr ""
+
+#: ../../../../TESTS.rst:165
+msgid "Similarly for methods::"
+msgstr ""
+
+#: ../../../../TESTS.rst:167
+msgid ""
+"class test_zzz:\n"
+"    @pytest.mark.slow\n"
+"    def test_simple(self):\n"
+"        assert_(zzz() == 'Hello from zzz')"
+msgstr ""
+
+#: ../../../../TESTS.rst:173
+msgid "Easier setup and teardown functions / methods"
+msgstr ""
+
+#: ../../../../TESTS.rst:175
+msgid ""
+"Testing looks for module-level or class method-level setup and teardown "
+"functions by name; thus::"
+msgstr ""
+
+#: ../../../../TESTS.rst:178
+msgid ""
+"def setup_module():\n"
+"    \"\"\"Module-level setup\"\"\"\n"
+"    print('doing setup')\n"
+"\n"
+"def teardown_module():\n"
+"    \"\"\"Module-level teardown\"\"\"\n"
+"    print('doing teardown')\n"
+"\n"
+"\n"
+"class TestMe:\n"
+"    def setup_method(self):\n"
+"        \"\"\"Class-level setup\"\"\"\n"
+"        print('doing setup')\n"
+"\n"
+"    def teardown_method():\n"
+"        \"\"\"Class-level teardown\"\"\"\n"
+"        print('doing teardown')"
+msgstr ""
+
+#: ../../../../TESTS.rst:197
+msgid ""
+"Setup and teardown functions to functions and methods are known as "
+"\"fixtures\", and they should be used sparingly. ``pytest`` supports more "
+"general fixture at various scopes which may be used automatically via "
+"special arguments.  For example,  the special argument name ``tmpdir`` is "
+"used in test to create a temporary directory."
+msgstr ""
+
+#: ../../../../TESTS.rst:204
+msgid "Parametric tests"
+msgstr ""
+
+#: ../../../../TESTS.rst:206
+msgid ""
+"One very nice feature of testing is allowing easy testing across a range of "
+"parameters - a nasty problem for standard unit tests. Use the ``pytest.mark."
+"parametrize`` decorator."
+msgstr ""
+
+#: ../../../../TESTS.rst:211
+msgid "Doctests"
+msgstr ""
+
+#: ../../../../TESTS.rst:213
+msgid ""
+"Doctests are a convenient way of documenting the behavior of a function and "
+"allowing that behavior to be tested at the same time.  The output of an "
+"interactive Python session can be included in the docstring of a function, "
+"and the test framework can run the example and compare the actual output to "
+"the expected output."
+msgstr ""
+
+#: ../../../../TESTS.rst:219
+msgid ""
+"The doctests can be run by adding the ``doctests`` argument to the "
+"``test()`` call; for example, to run all tests (including doctests) for "
+"numpy.lib::"
+msgstr ""
+
+#: ../../../../TESTS.rst:223
+msgid ""
+">>> import numpy as np\n"
+">>> np.lib.test(doctests=True)"
+msgstr ""
+
+#: ../../../../TESTS.rst:226
+msgid ""
+"The doctests are run as if they are in a fresh Python instance which has "
+"executed ``import numpy as np``. Tests that are part of a NumPy subpackage "
+"will have that subpackage already imported. E.g. for a test in ``numpy/"
+"linalg/tests/``, the namespace will be created such that ``from numpy import "
+"linalg`` has already executed."
+msgstr ""
+
+#: ../../../../TESTS.rst:234
+msgid "``tests/``"
+msgstr ""
+
+#: ../../../../TESTS.rst:236
+msgid ""
+"Rather than keeping the code and the tests in the same directory, we put all "
+"the tests for a given subpackage in a ``tests/`` subdirectory. For our "
+"example, if it doesn't already exist you will need to create a ``tests/`` "
+"directory in ``numpy/xxx/``. So the path for ``test_yyy.py`` is ``numpy/xxx/"
+"tests/test_yyy.py``."
+msgstr ""
+
+#: ../../../../TESTS.rst:242
+msgid ""
+"Once the ``numpy/xxx/tests/test_yyy.py`` is written, its possible to run the "
+"tests by going to the ``tests/`` directory and typing::"
+msgstr ""
+
+#: ../../../../TESTS.rst:245
+msgid "python test_yyy.py"
+msgstr ""
+
+#: ../../../../TESTS.rst:247
+msgid ""
+"Or if you add ``numpy/xxx/tests/`` to the Python path, you could run the "
+"tests interactively in the interpreter like this::"
+msgstr ""
+
+#: ../../../../TESTS.rst:250
+msgid ""
+">>> import test_yyy\n"
+">>> test_yyy.test()"
+msgstr ""
+
+#: ../../../../TESTS.rst:254
+msgid "``__init__.py`` and ``setup.py``"
+msgstr ""
+
+#: ../../../../TESTS.rst:256
+msgid ""
+"Usually, however, adding the ``tests/`` directory to the python path isn't "
+"desirable. Instead it would better to invoke the test straight from the "
+"module ``xxx``. To this end, simply place the following lines at the end of "
+"your package's ``__init__.py`` file::"
+msgstr ""
+
+#: ../../../../TESTS.rst:261
+msgid ""
+"...\n"
+"def test(level=1, verbosity=1):\n"
+"    from numpy.testing import Tester\n"
+"    return Tester().test(level, verbosity)"
+msgstr ""
+
+#: ../../../../TESTS.rst:266
+msgid ""
+"You will also need to add the tests directory in the configuration section "
+"of your setup.py::"
+msgstr ""
+
+#: ../../../../TESTS.rst:269
+msgid ""
+"...\n"
+"def configuration(parent_package='', top_path=None):\n"
+"    ...\n"
+"    config.add_subpackage('tests')\n"
+"    return config\n"
+"..."
+msgstr ""
+
+#: ../../../../TESTS.rst:276
+msgid "Now you can do the following to test your module::"
+msgstr ""
+
+#: ../../../../TESTS.rst:278
+msgid ""
+">>> import numpy\n"
+">>> numpy.xxx.test()"
+msgstr ""
+
+#: ../../../../TESTS.rst:281
+msgid ""
+"Also, when invoking the entire NumPy test suite, your tests will be found "
+"and run::"
+msgstr ""
+
+#: ../../../../TESTS.rst:284
+msgid ""
+">>> import numpy\n"
+">>> numpy.test()\n"
+"# your tests are included and run automatically!"
+msgstr ""
+
+#: ../../../../TESTS.rst:289
+msgid "Tips & Tricks"
+msgstr ""
+
+#: ../../../../TESTS.rst:292
+msgid "Creating many similar tests"
+msgstr ""
+
+#: ../../../../TESTS.rst:294
+msgid ""
+"If you have a collection of tests that must be run multiple times with minor "
+"variations, it can be helpful to create a base class containing all the "
+"common tests, and then create a subclass for each variation. Several "
+"examples of this technique exist in NumPy; below are excerpts from one in "
+"`numpy/linalg/tests/test_linalg.py <https://github.com/numpy/numpy/blob/main/"
+"numpy/linalg/tests/test_linalg.py>`__::"
+msgstr ""
+
+#: ../../../../TESTS.rst:301
+msgid ""
+"class LinalgTestCase:\n"
+"    def test_single(self):\n"
+"        a = array([[1., 2.], [3., 4.]], dtype=single)\n"
+"        b = array([2., 1.], dtype=single)\n"
+"        self.do(a, b)\n"
+"\n"
+"    def test_double(self):\n"
+"        a = array([[1., 2.], [3., 4.]], dtype=double)\n"
+"        b = array([2., 1.], dtype=double)\n"
+"        self.do(a, b)\n"
+"\n"
+"    ...\n"
+"\n"
+"class TestSolve(LinalgTestCase):\n"
+"    def do(self, a, b):\n"
+"        x = linalg.solve(a, b)\n"
+"        assert_allclose(b, dot(a, x))\n"
+"        assert imply(isinstance(b, matrix), isinstance(x, matrix))\n"
+"\n"
+"class TestInv(LinalgTestCase):\n"
+"    def do(self, a, b):\n"
+"        a_inv = linalg.inv(a)\n"
+"        assert_allclose(dot(a, a_inv), identity(asarray(a).shape[0]))\n"
+"        assert imply(isinstance(a, matrix), isinstance(a_inv, matrix))"
+msgstr ""
+
+#: ../../../../TESTS.rst:326
+msgid ""
+"In this case, we wanted to test solving a linear algebra problem using "
+"matrices of several data types, using ``linalg.solve`` and ``linalg.inv``.  "
+"The common test cases (for single-precision, double-precision, etc. "
+"matrices) are collected in ``LinalgTestCase``."
+msgstr ""
+
+#: ../../../../TESTS.rst:332
+msgid "Known failures & skipping tests"
+msgstr ""
+
+#: ../../../../TESTS.rst:334
+msgid ""
+"Sometimes you might want to skip a test or mark it as a known failure, such "
+"as when the test suite is being written before the code it's meant to test, "
+"or if a test only fails on a particular architecture."
+msgstr ""
+
+#: ../../../../TESTS.rst:338
+msgid "To skip a test, simply use ``skipif``::"
+msgstr ""
+
+#: ../../../../TESTS.rst:340
+msgid ""
+"import pytest\n"
+"\n"
+"@pytest.mark.skipif(SkipMyTest, reason=\"Skipping this test because...\")\n"
+"def test_something(foo):\n"
+"    ..."
+msgstr ""
+
+#: ../../../../TESTS.rst:346
+msgid ""
+"The test is marked as skipped if ``SkipMyTest`` evaluates to nonzero, and "
+"the message in verbose test output is the second argument given to "
+"``skipif``.  Similarly, a test can be marked as a known failure by using "
+"``xfail``::"
+msgstr ""
+
+#: ../../../../TESTS.rst:351
+msgid ""
+"import pytest\n"
+"\n"
+"@pytest.mark.xfail(MyTestFails, reason=\"This test is known to fail "
+"because...\")\n"
+"def test_something_else(foo):\n"
+"    ..."
+msgstr ""
+
+#: ../../../../TESTS.rst:357
+msgid ""
+"Of course, a test can be unconditionally skipped or marked as a known "
+"failure by using ``skip`` or ``xfail`` without argument, respectively."
+msgstr ""
+
+#: ../../../../TESTS.rst:360
+msgid ""
+"A total of the number of skipped and known failing tests is displayed at the "
+"end of the test run.  Skipped tests are marked as ``'S'`` in the test "
+"results (or ``'SKIPPED'`` for ``verbose > 1``), and known failing tests are "
+"marked as ``'x'`` (or ``'XFAIL'`` if ``verbose > 1``)."
+msgstr ""
+
+#: ../../../../TESTS.rst:367
+msgid "Tests on random data"
+msgstr ""
+
+#: ../../../../TESTS.rst:369
+msgid ""
+"Tests on random data are good, but since test failures are meant to expose "
+"new bugs or regressions, a test that passes most of the time but fails "
+"occasionally with no code changes is not helpful. Make the random data "
+"deterministic by setting the random number seed before generating it.  Use "
+"either Python's ``random.seed(some_number)`` or NumPy's ``numpy.random."
+"seed(some_number)``, depending on the source of random numbers."
+msgstr ""
+
+#: ../../../../TESTS.rst:376
+msgid ""
+"Alternatively, you can use `Hypothesis`_ to generate arbitrary data. "
+"Hypothesis manages both Python's and Numpy's random seeds for you, and "
+"provides a very concise and powerful way to describe data (including "
+"``hypothesis.extra.numpy``, e.g. for a set of mutually-broadcastable shapes)."
+msgstr ""
+
+#: ../../../../TESTS.rst:381
+msgid ""
+"The advantages over random generation include tools to replay and share "
+"failures without requiring a fixed seed, reporting *minimal* examples for "
+"each failure, and better-than-naive-random techniques for triggering bugs."
+msgstr ""
+
+#: ../../../../TESTS.rst:387
+msgid "Documentation for ``numpy.test``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/_pytesttester.py:docstring
+#: of numpy.test:2
+msgid "Pytest test runner."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/_pytesttester.py:docstring
+#: of numpy.test:4
+msgid "A test function is typically added to a package's __init__.py like so::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/_pytesttester.py:docstring
+#: of numpy.test:6
+msgid ""
+"from numpy._pytesttester import PytestTester\n"
+"test = PytestTester(__name__).test\n"
+"del PytestTester"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/_pytesttester.py:docstring
+#: of numpy.test:10
+msgid ""
+"Calling this test function finds and runs all tests associated with the "
+"module and all its sub-modules."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/_pytesttester.py:docstring
+#: of numpy.test:24 numpy.test:38
+msgid "**module_name**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/_pytesttester.py:docstring
+#: of numpy.test:-1
+msgid "module name"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/_pytesttester.py:docstring
+#: of numpy.test:16
+msgid "The name of the module to test."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/_pytesttester.py:docstring
+#: of numpy.test:27
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/_pytesttester.py:docstring
+#: of numpy.test:28
+msgid ""
+"Unlike the previous ``nose``-based implementation, this class is not "
+"publicly exposed as it performs some ``numpy``-specific warning suppression."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/_pytesttester.py:docstring
+#: of numpy.test:0
+msgid "Attributes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/_pytesttester.py:docstring
+#: of numpy.test:-1
+msgid "str"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/_pytesttester.py:docstring
+#: of numpy.test:37
+msgid "Full path to the package to test."
+msgstr ""

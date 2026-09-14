@@ -1,0 +1,214 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.interp.rst:4
+msgid "numpy.interp"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:2
+msgid ""
+"One-dimensional linear interpolation for monotonically increasing sample "
+"points."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:4
+msgid ""
+"Returns the one-dimensional piecewise linear interpolant to a function with "
+"given discrete data points (`xp`, `fp`), evaluated at `x`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:10
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:10
+msgid "The x-coordinates at which to evaluate the interpolated values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:15
+msgid "**xp**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:-1
+msgid "1-D sequence of floats"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:13
+msgid ""
+"The x-coordinates of the data points, must be increasing if argument "
+"`period` is not specified. Otherwise, `xp` is internally sorted after "
+"normalizing the periodic boundaries with ``xp = xp % period``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:18
+msgid "**fp**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:-1
+msgid "1-D sequence of float or complex"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:18
+msgid "The y-coordinates of the data points, same length as `xp`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:21
+msgid "**left**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:-1
+msgid "optional float or complex corresponding to fp"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:21
+msgid "Value to return for `x < xp[0]`, default is `fp[0]`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:24
+msgid "**right**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:24
+msgid "Value to return for `x > xp[-1]`, default is `fp[-1]`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:31
+msgid "**period**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:-1
+msgid "None or float, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:27
+msgid ""
+"A period for the x-coordinates. This parameter allows the proper "
+"interpolation of angular x-coordinates. Parameters `left` and `right` are "
+"ignored if `period` is specified."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:39
+msgid "**y**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:-1
+msgid "float or complex (corresponding to fp) or ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:36
+msgid "The interpolated values, same shape as `x`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:47
+msgid "ValueError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:44
+msgid ""
+"If `xp` and `fp` have different length If `xp` or `fp` are not 1-D sequences "
+"If `period == 0`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:51
+msgid ""
+"The x-coordinate sequence is expected to be increasing, but this is not "
+"explicitly enforced.  However, if the sequence `xp` is non-increasing, "
+"interpolation results are meaningless."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:55
+msgid "Note that, since NaN is unsortable, `xp` also cannot contain NaNs."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:57
+msgid "A simple check for `xp` being strictly increasing is::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:59
+msgid "np.all(np.diff(xp) > 0)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:64
+msgid ":obj:`scipy.interpolate`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.interp:70
+msgid "Examples"
+msgstr ""
+
+#: ../../../reference/generated/numpy.interp.rst:13
+msgid "Plot an interpolant to the sine function:"
+msgstr ""
+
+#: ../../../reference/generated/numpy.interp.rst:51
+msgid "Interpolation with periodic x-coordinates:"
+msgstr ""
+
+#: ../../../reference/generated/numpy.interp.rst:59
+msgid "Complex interpolation:"
+msgstr ""
