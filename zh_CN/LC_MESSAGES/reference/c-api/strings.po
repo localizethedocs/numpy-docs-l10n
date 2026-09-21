@@ -1,0 +1,323 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/c-api/strings.rst:2
+msgid "NpyString API"
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:8
+msgid ""
+"This API allows access to the UTF-8 string data stored in NumPy StringDType "
+"arrays. See :ref:`NEP-55 <NEP55>` for more in-depth details into the design "
+"of StringDType."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:13
+msgid "Examples"
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:16
+msgid "Loading a String"
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:18
+msgid ""
+"Say we are writing a ufunc implementation for ``StringDType``. If we are "
+"given ``const char *buf`` pointer to the beginning of a ``StringDType`` "
+"array entry, and a ``PyArray_Descr *`` pointer to the array descriptor, one "
+"can access the underlying string data like so:"
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:23
+msgid ""
+"npy_string_allocator *allocator = NpyString_acquire_allocator(\n"
+"        (PyArray_StringDTypeObject *)descr);\n"
+"\n"
+"npy_static_string sdata = {0, NULL};\n"
+"npy_packed_static_string *packed_string = (npy_packed_static_string *)buf;\n"
+"int is_null = 0;\n"
+"\n"
+"is_null = NpyString_load(allocator, packed_string, &sdata);\n"
+"\n"
+"if (is_null == -1) {\n"
+"    // failed to load string, set error\n"
+"    return -1;\n"
+"}\n"
+"else if (is_null) {\n"
+"    // handle missing string\n"
+"    // sdata->buf is NULL\n"
+"    // sdata->size is 0\n"
+"}\n"
+"else {\n"
+"    // sdata->buf is a pointer to the beginning of a string\n"
+"    // sdata->size is the size of the string\n"
+"}\n"
+"NpyString_release_allocator(allocator);"
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:50
+msgid "Packing a String"
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:52
+msgid "This example shows how to pack a new string entry into an array:"
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:54
+msgid ""
+"char *str = \"Hello world\";\n"
+"size_t size = 11;\n"
+"npy_packed_static_string *packed_string = (npy_packed_static_string *)buf;\n"
+"\n"
+"npy_string_allocator *allocator = NpyString_acquire_allocator(\n"
+"        (PyArray_StringDTypeObject *)descr);\n"
+"\n"
+"// copy contents of str into packed_string\n"
+"if (NpyString_pack(allocator, packed_string, str, size) == -1) {\n"
+"    // string packing failed, set error\n"
+"    return -1;\n"
+"}\n"
+"\n"
+"// packed_string contains a copy of \"Hello world\"\n"
+"\n"
+"NpyString_release_allocator(allocator);"
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:74
+msgid "Types"
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:78
+msgid ""
+"An opaque struct that represents \"packed\" encoded strings. Individual "
+"entries in array buffers are instances of this struct. Direct access to the "
+"data in the struct is undefined and future version of the library may change "
+"the packed representation of strings."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:85
+msgid "An unpacked string allowing access to the UTF-8 string data."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:87
+msgid ""
+"typedef struct npy_unpacked_static_string {\n"
+"    size_t size;\n"
+"    const char *buf;\n"
+"} npy_static_string;"
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:96
+msgid "The size of the string, in bytes."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:100
+msgid ""
+"The string buffer. Holds UTF-8-encoded bytes. Does not currently end in a "
+"null string but we may decide to add null termination in the future, so do "
+"not rely on the presence or absence of null-termination."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:104
+msgid ""
+"Note that this is a ``const`` buffer. If you want to alter an entry in an "
+"array, you should create a new string and pack it into the array entry."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:110
+msgid ""
+"An opaque pointer to an object that handles string allocation. Before using "
+"the allocator, you must acquire the allocator lock and release the lock "
+"after you are done interacting with strings managed by the allocator."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:117
+msgid ""
+"The C struct backing instances of StringDType in Python. Attributes store "
+"the settings the object was created with, an instance of "
+"``npy_string_allocator`` that manages string allocations for arrays "
+"associated with the DType instance, and several attributes caching "
+"information about the missing string object that is commonly needed in cast "
+"and ufunc loop implementations."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:124
+msgid ""
+"typedef struct {\n"
+"    PyArray_Descr base;\n"
+"    PyObject *na_object;\n"
+"    char coerce;\n"
+"    char has_nan_na;\n"
+"    char has_string_na;\n"
+"    char array_owned;\n"
+"    npy_static_string default_string;\n"
+"    npy_static_string na_name;\n"
+"    npy_string_allocator *allocator;\n"
+"} PyArray_StringDTypeObject;"
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:140
+msgid ""
+"The base object. Use this member to access fields common to all descriptor "
+"objects."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:145
+msgid ""
+"A reference to the object representing the null value. If there is no null "
+"value (the default) this will be NULL."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:150
+msgid "1 if string coercion is enabled, 0 otherwise."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:154
+msgid "1 if the missing string object (if any) is NaN-like, 0 otherwise."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:158
+msgid "1 if the missing string object (if any) is a string, 0 otherwise."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:162
+msgid "1 if an array owns the StringDType instance, 0 otherwise."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:166
+msgid ""
+"The default string to use in operations. If the missing string object is a "
+"string, this will contain the string data for the missing string."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:171
+msgid ""
+"The name of the missing string object, if any. An empty string otherwise."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:176
+msgid ""
+"The allocator instance associated with the array that owns this descriptor "
+"instance. The allocator should only be directly accessed after acquiring the "
+"allocator_lock and the lock should be released immediately after the "
+"allocator is no longer needed"
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:183
+msgid "Functions"
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:188
+msgid ""
+"Acquire the mutex locking the allocator attached to ``descr``. "
+"``NpyString_release_allocator`` must be called on the allocator returned by "
+"this function exactly once. Note that functions requiring the GIL should not "
+"be called while the allocator mutex is held, as doing so may cause deadlocks."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:198
+msgid ""
+"Simultaneously acquire the mutexes locking the allocators attached to "
+"multiple descriptors. Writes a pointer to the associated allocator in the "
+"allocators array for each StringDType descriptor in the array. If any of the "
+"descriptors are not StringDType instances, write NULL to the allocators "
+"array for that entry."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:204
+msgid ""
+"``n_descriptors`` is the number of descriptors in the descrs array that "
+"should be examined. Any descriptor after ``n_descriptors`` elements is "
+"ignored. A buffer overflow will happen if the ``descrs`` array does not "
+"contain n_descriptors elements."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:209
+msgid ""
+"If pointers to the same descriptor are passed multiple times, only acquires "
+"the allocator mutex once but sets identical allocator pointers "
+"appropriately. The allocator mutexes must be released after this function "
+"returns, see ``NpyString_release_allocators``."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:214
+msgid ""
+"Note that functions requiring the GIL should not be called while the "
+"allocator mutex is held, as doing so may cause deadlocks."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:220
+msgid ""
+"Release the mutex locking an allocator. This must be called exactly once "
+"after acquiring the allocator mutex and all operations requiring the "
+"allocator are done."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:224
+msgid ""
+"If you need to release multiple allocators, see "
+"NpyString_release_allocators, which can correctly handle releasing the "
+"allocator once when given several references to the same allocator."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:231
+msgid ""
+"Release the mutexes locking N allocators. ``length`` is the length of the "
+"allocators array. NULL entries are ignored."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:234
+msgid ""
+"If pointers to the same allocator are passed multiple times, only releases "
+"the allocator mutex once."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:241
+msgid ""
+"Extract the packed contents of ``packed_string`` into ``unpacked_string``."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:243
+msgid ""
+"The ``unpacked_string`` is a read-only view onto the ``packed_string`` data "
+"and should not be used to modify the string data. If ``packed_string`` is "
+"the null string, sets ``unpacked_string.buf`` to the NULL pointer. Returns "
+"-1 if unpacking the string fails, returns 1 if ``packed_string`` is the null "
+"string, and returns 0 otherwise."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:249
+msgid ""
+"A useful pattern is to define a stack-allocated npy_static_string instance "
+"initialized to ``{0, NULL}`` and pass a pointer to the stack-allocated "
+"unpacked string to this function.  This function can be used to "
+"simultaneously unpack a string and determine if it is a null string."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:258
+msgid ""
+"Pack the null string into ``packed_string``. Returns 0 on success and -1 on "
+"failure."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:267
+msgid ""
+"Copy and pack the first ``size`` entries of the buffer pointed to by ``buf`` "
+"into the ``packed_string``. Returns 0 on success and -1 on failure."
+msgstr ""

@@ -1,0 +1,136 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-25 11:58+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.laguerre.lagvalnd.rst:4
+msgid "numpy.polynomial.laguerre.lagvalnd"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvalnd:2
+msgid "Evaluate an N-D Laguerre series at points."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvalnd:4
+msgid "This function returns the values:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvalnd:6
+msgid ""
+"p(pts, c) = \\sum_{i_1, i_2, \\dots, i_n}\n"
+"c_{i_1, i_2, \\dots, i_n} * L_{i_1}(x_1) * L_{i_2}(x_2) \\dots L_{i_n}(x_n)\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvalnd:10
+msgid ""
+"where :math:`x_1, x_2, \\dots, x_n = pts`. Note that `pts` may also be an "
+"`(n, m)` array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvalnd:13
+msgid ""
+"The parameters in `pts` are converted to arrays only if they are tuples or "
+"lists, otherwise they are treated as scalars and they must have the same "
+"shape after conversion. In either case, either the elements of `pts` or "
+"their elements must support multiplication and addition both with themselves "
+"and with the elements of `c`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvalnd:19
+msgid ""
+"If `c` has fewer than N dimensions, ones are implicitly appended to its "
+"shape to make it N-D. The shape of the result will be c.shape[N:] + pts[0]."
+"shape."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvalnd:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvalnd:30
+msgid "**pts**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvalnd:-1
+msgid "tuple or list of array_like, compatible objects"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvalnd:26
+msgid ""
+"The N-dimensional series is evaluated at the points ``(x_1, x_2, ..., x_n)`` "
+"provided in the `pts` iterable, where all elements must have the same shape. "
+"If any element is a list or tuple, it is first converted to an ndarray, "
+"otherwise it is left unchanged and if it isn't an ndarray it is treated as a "
+"scalar."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvalnd:38
+msgid "**c**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvalnd:-1
+msgid "array_like"
+msgstr "array_like"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvalnd:33
+msgid ""
+"Array of coefficients ordered so that the coefficient of the term of multi-"
+"degree i,j,k,... is contained in ``c[i,j,k,...]``. If `c` has dimension "
+"greater than N, the remaining indices enumerate multiple sets of "
+"coefficients."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvalnd:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvalnd:50
+msgid "**values**"
+msgstr "**values**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvalnd:-1
+msgid "ndarray, compatible object"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvalnd:43
+msgid ""
+"The values of the multidimensional polynomial on points formed with N-tuples "
+"of corresponding values from `pts`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/laguerre.py:docstring
+#: of numpy.polynomial.laguerre.lagvalnd:55
+msgid ":obj:`lagval`, :obj:`lagval2d`, :obj:`lagval3d`"
+msgstr ""

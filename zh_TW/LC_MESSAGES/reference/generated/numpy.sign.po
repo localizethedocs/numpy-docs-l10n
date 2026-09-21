@@ -1,0 +1,161 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.sign.rst:4
+msgid "numpy.sign"
+msgstr ""
+
+#: ../../../../docstring of numpy.sign:2
+msgid "Returns an element-wise indication of the sign of a number."
+msgstr ""
+
+#: ../../../../docstring of numpy.sign:4
+msgid ""
+"The `sign` function returns ``-1 if x < 0, 0 if x==0, 1 if x > 0``.  nan is "
+"returned for nan inputs."
+msgstr ""
+
+#: ../../../../docstring of numpy.sign:7
+msgid ""
+"For complex inputs, the `sign` function returns ``x / abs(x)``, the "
+"generalization of the above (and ``0 if x==0``)."
+msgstr ""
+
+#: ../../../../docstring of numpy.sign:10
+msgid "Definition of complex sign changed to follow the Array API standard."
+msgstr ""
+
+#: ../../../../docstring of numpy.sign:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../docstring of numpy.sign:16
+msgid "**x**"
+msgstr ""
+
+#: ../../../../docstring of numpy.sign:-1
+msgid "array_like"
+msgstr "array_like"
+
+#: ../../../../docstring of numpy.sign:16
+msgid "Input values."
+msgstr ""
+
+#: ../../../../docstring of numpy.sign:22
+msgid "**out**"
+msgstr "**out**"
+
+#: ../../../../docstring of numpy.sign:-1
+msgid "ndarray, None, or tuple of ndarray and None, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.sign:19
+msgid ""
+"A location into which the result is stored. If provided, it must have a "
+"shape that the inputs broadcast to. If not provided or None, a freshly-"
+"allocated array is returned. A tuple (possible only as a keyword argument) "
+"must have length equal to the number of outputs."
+msgstr ""
+
+#: ../../../../docstring of numpy.sign:30
+msgid "**where**"
+msgstr "**where**"
+
+#: ../../../../docstring of numpy.sign:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../docstring of numpy.sign:25
+msgid ""
+"This condition is broadcast over the input. At locations where the condition "
+"is True, the `out` array will be set to the ufunc result. Elsewhere, the "
+"`out` array will retain its original value. Note that if an uninitialized "
+"`out` array is created via the default ``out=None``, locations within it "
+"where the condition is False will remain uninitialized."
+msgstr ""
+
+#: ../../../../docstring of numpy.sign:36
+msgid "**\\*\\*kwargs**"
+msgstr "**\\*\\*kwargs**"
+
+#: ../../../../docstring of numpy.sign:33
+msgid ""
+"For other keyword-only arguments, see the :ref:`ufunc docs <ufuncs.kwargs>`."
+msgstr ""
+
+#: ../../../../docstring of numpy.sign:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../docstring of numpy.sign:48
+msgid "**y**"
+msgstr "**y**"
+
+#: ../../../../docstring of numpy.sign:-1
+msgid "ndarray"
+msgstr "ndarray"
+
+#: ../../../../docstring of numpy.sign:41
+msgid "The sign of `x`. This is a scalar if `x` is a scalar."
+msgstr ""
+
+#: ../../../../docstring of numpy.sign:53
+msgid ":obj:`signbit`"
+msgstr ""
+
+#: ../../../../docstring of numpy.sign:55
+msgid ":obj:`copysign`"
+msgstr ""
+
+#: ../../../../docstring of numpy.sign:59
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of numpy.sign:60
+msgid ""
+"There is more than one definition of sign in common use for complex "
+"numbers.  The definition used here, :math:`x/|x|`, is the more common and "
+"useful one, but is different from the one used in numpy prior to version "
+"2.0, :math:`x/\\sqrt{x*x}`, which is equivalent to ``sign(x.real) + 0j if x."
+"real != 0 else sign(x.imag) + 0j``."
+msgstr ""
+
+#: ../../../../docstring of numpy.sign:68
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../docstring of numpy.sign:-1
+msgid ""
+"<div id=\"4ab13428-d3c9-420f-a0c4-0ba3602fbfde\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('67c3b43d-e134-4056-8694-896f47aa9a68','4ab13428-"
+"d3c9-420f-a0c4-0ba3602fbfde')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('67c3b43d-"
+"e134-4056-8694-896f47aa9a68','4ab13428-d3c9-420f-a0c4-0ba3602fbfde')\">Open "
+"In Tab</button></div><div id=\"111eca02-3b0f-4b4a-b34e-c710ac0b65c0\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../docstring of numpy.sign:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

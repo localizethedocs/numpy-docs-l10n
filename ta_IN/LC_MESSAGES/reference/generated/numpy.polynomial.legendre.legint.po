@@ -1,0 +1,230 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.legendre.legint.rst:4
+msgid "numpy.polynomial.legendre.legint"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:2
+msgid "Integrate a Legendre series."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:4
+msgid ""
+"Returns the Legendre series coefficients `c` integrated `m` times from "
+"`lbnd` along `axis`. At each iteration the resulting series is "
+"**multiplied** by `scl` and an integration constant, `k`, is added. The "
+"scaling factor is for use in a linear change of variable.  (\"Buyer "
+"beware\": note that, depending on what one is doing, one may want `scl` to "
+"be the reciprocal of what one might expect; for more information, see the "
+"Notes section below.)  The argument `c` is an array of coefficients from low "
+"to high degree along each axis, e.g., [1,2,3] represents the series ``L_0 + "
+"2*L_1 + 3*L_2`` while [[1,2],[1,2]] represents ``1*L_0(x)*L_0(y) + "
+"1*L_1(x)*L_0(y) + 2*L_0(x)*L_1(y) + 2*L_1(x)*L_1(y)`` if axis=0 is ``x`` and "
+"axis=1 is ``y``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:21
+msgid "**c**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:19
+msgid ""
+"Array of Legendre series coefficients. If c is multidimensional the "
+"different axis correspond to different variables with the degree in each "
+"axis given by the corresponding index."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:24
+msgid "**m**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:24
+msgid "Order of integration, must be positive. (Default: 1)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:31
+msgid "**k**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:-1
+msgid "{[], list, scalar}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:27
+msgid ""
+"Integration constant(s).  The value of the first integral at ``lbnd`` is the "
+"first value in the list, the value of the second integral at ``lbnd`` is the "
+"second value, etc.  If ``k == []`` (the default), all constants are set to "
+"zero.  If ``m == 1``, a single scalar can be given instead of a list."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:34
+msgid "**lbnd**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:-1
+msgid "scalar, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:34
+msgid "The lower bound of the integral. (Default: 0)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:38
+msgid "**scl**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:37
+msgid ""
+"Following each integration the result is *multiplied* by `scl` before the "
+"integration constant is added. (Default: 1)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:43
+msgid "**axis**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:41
+msgid "Axis over which the integral is taken. (Default: 0)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:51
+msgid "**S**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:48
+msgid "Legendre series coefficient array of the integral."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:59
+msgid "ValueError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:56
+msgid ""
+"If ``m < 0``, ``len(k) > m``, ``np.ndim(lbnd) != 0``, or ``np.ndim(scl) != "
+"0``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:64
+msgid ":obj:`legder`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:68
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:69
+msgid ""
+"Note that the result of each integration is *multiplied* by `scl`. Why is "
+"this important to note?  Say one is making a linear change of variable :math:"
+"`u = ax + b` in an integral relative to `x`.  Then :math:`dx = du/a`, so one "
+"will need to set `scl` equal to :math:`1/a` - perhaps not what one would "
+"have first thought."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:75
+msgid ""
+"Also note that, in general, the result of integrating a C-series needs to be "
+"\"reprojected\" onto the C-series basis set.  Thus, typically, the result of "
+"this function is \"unintuitive,\" albeit correct; see Examples section below."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:82
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:-1
+msgid ""
+"<div id=\"eced78e7-656e-4f5e-bf43-cc4f35eba3dc\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('326c1303-2c54-4544-9613-082cd1c69557','eced78e7-656e-4f5e-"
+"bf43-cc4f35eba3dc')\">Go Back</button><button class=\"try_examples_button\" "
+"onclick=\"window."
+"openInNewTab('326c1303-2c54-4544-9613-082cd1c69557','eced78e7-656e-4f5e-bf43-"
+"cc4f35eba3dc')\">Open In Tab</button></div><div id=\"cd25bb9b-870c-418a-"
+"acf6-370ff1fb2454\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/legendre.py:docstring
+#: of numpy.polynomial.legendre.legint:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""
