@@ -1,0 +1,230 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../../../benchmarks/README.rst:5
+msgid "NumPy benchmarks"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:7
+msgid "Benchmarking NumPy with Airspeed Velocity."
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:11
+msgid "Usage"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:13
+msgid ""
+"Airspeed Velocity manages building and Python virtualenvs by itself, unless "
+"told otherwise. To run the benchmarks, you do not need to install a "
+"development version of NumPy to your current Python environment."
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:17
+msgid ""
+"Before beginning, ensure that *airspeed velocity* is installed. By default, "
+"`asv` ships with support for anaconda and virtualenv::"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:20
+msgid ""
+"pip install asv\n"
+"pip install virtualenv"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:23
+msgid ""
+"After contributing new benchmarks, you should test them locally before "
+"submitting a pull request."
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:26
+msgid ""
+"To run all benchmarks, navigate to the root NumPy directory at the command "
+"line and execute::"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:29
+msgid "spin bench"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:31
+msgid ""
+"This builds NumPy and runs all available benchmarks defined in ``benchmarks/"
+"``. (Note: this could take a while. Each benchmark is run multiple times to "
+"measure the distribution in execution times.)"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:36
+msgid ""
+"For **testing** benchmarks locally, it may be better to run these without "
+"replications::"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:39
+msgid ""
+"cd benchmarks/\n"
+"export REGEXP=\"bench.*Ufunc\"\n"
+"asv run --dry-run --show-stderr --python=same --quick -b $REGEXP"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:43
+msgid ""
+"Where the regular expression used to match benchmarks is stored in "
+"``$REGEXP``, and `--quick` is used to avoid repetitions."
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:46
+msgid ""
+"To run benchmarks from a particular benchmark module, such as ``bench_core."
+"py``, simply append the filename without the extension::"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:49
+msgid "spin bench -t bench_core"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:51
+msgid ""
+"To run a benchmark defined in a class, such as ``MeshGrid`` from "
+"``bench_creation.py``::"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:54
+msgid "spin bench -t bench_creation.MeshGrid"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:56
+msgid ""
+"Compare changes in benchmark results to another version/commit/branch, use "
+"the ``--compare`` option (or the equivalent ``-c``)::"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:59
+msgid ""
+"spin bench --compare v1.6.2 -t bench_core\n"
+"spin bench --compare 20d03bcfd -t bench_core\n"
+"spin bench -c main -t bench_core"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:63
+msgid ""
+"All of the commands above display the results in plain text in the console, "
+"and the results are not saved for comparison with future commits. For "
+"greater control, a graphical view, and to have results saved for future "
+"comparison you can run ASV commands (record results and generate HTML)::"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:69
+msgid ""
+"cd benchmarks\n"
+"asv run -n -e --python=same\n"
+"asv publish\n"
+"asv preview"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:74
+msgid ""
+"More on how to use ``asv`` can be found in `ASV documentation`_ Command-line "
+"help is available as usual via ``asv --help`` and ``asv run --help``."
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:81
+msgid "Benchmarking versions"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:83
+msgid ""
+"To benchmark or visualize only releases on different machines locally, the "
+"tags with their commits can be generated, before being run with ``asv``, "
+"that is::"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:85
+msgid ""
+"cd benchmarks\n"
+"# Get commits for tags\n"
+"# delete tag_commits.txt before re-runs\n"
+"for gtag in $(git tag --list --sort taggerdate | grep \"^v\"); do\n"
+"git log $gtag --oneline -n1 --decorate=no | awk '{print $1;}' >> tag_commits."
+"txt\n"
+"done\n"
+"# Use the last 20\n"
+"tail --lines=20 tag_commits.txt > 20_vers.txt\n"
+"asv run HASHFILE:20_vers.txt\n"
+"# Publish and view\n"
+"asv publish\n"
+"asv preview"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:98
+msgid ""
+"For details on contributing these, see the `benchmark results repository`_."
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:103
+msgid "Writing benchmarks"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:105
+msgid "See `ASV documentation`_ for basics on how to write benchmarks."
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:107
+msgid "Some things to consider:"
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:109
+msgid "The benchmark suite should be importable with any NumPy version."
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:111
+msgid ""
+"The benchmark parameters etc. should not depend on which NumPy version is "
+"installed."
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:114
+msgid "Try to keep the runtime of the benchmark reasonable."
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:116
+msgid ""
+"Prefer ASV's ``time_`` methods for benchmarking times rather than cooking up "
+"time measurements via ``time.clock``, even if it requires some juggling when "
+"writing the benchmark."
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:120
+msgid ""
+"Preparing arrays etc. should generally be put in the ``setup`` method rather "
+"than the ``time_`` methods, to avoid counting preparation time together with "
+"the time of the benchmarked operation."
+msgstr ""
+
+#: ../../../../../benchmarks/README.rst:124
+msgid ""
+"Be mindful that large arrays created with ``np.empty`` or ``np.zeros`` might "
+"not be allocated in physical memory until the memory is accessed. If this is "
+"desired behaviour, make sure to comment it in your setup function. If you "
+"are benchmarking an algorithm, it is unlikely that a user will be executing "
+"said algorithm on a newly created empty/zero array. One can force pagefaults "
+"to occur in the setup phase either by calling ``np.ones`` or ``arr."
+"fill(value)`` after creating the array."
+msgstr ""

@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.mask_indices.rst:4
+msgid "numpy.mask\\_indices"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:2
+msgid "Return the indices to access (n, n) arrays, given a masking function."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:4
+msgid ""
+"Assume `mask_func` is a function that, for a square array a of size ``(n, "
+"n)`` with a possible offset argument `k`, when called as ``mask_func(a, k)`` "
+"returns a new array with zeros in certain locations (functions like `triu` "
+"or `tril` do precisely this). Then this function returns the indices where "
+"the non-zero values would be located."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:13
+msgid "**n**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:-1
+msgid "int"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:13
+msgid "The returned indices will be valid to access arrays of shape (n, n)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:18
+msgid "**mask_func**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:-1
+msgid "callable"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:16
+msgid ""
+"A function whose call signature is similar to that of `triu`, `tril`. That "
+"is, ``mask_func(x, k)`` returns a boolean array, shaped like `x`. `k` is an "
+"optional argument to the function."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:25
+msgid "**k**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:-1
+msgid "scalar"
+msgstr "純量（scalar）"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:21
+msgid ""
+"An optional argument which is passed through to `mask_func`. Functions like "
+"`triu`, `tril` take a second argument that is interpreted as an offset."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:37
+msgid "**indices**"
+msgstr "**indices**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:-1
+msgid "tuple of arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:30
+msgid ""
+"The `n` arrays of indices corresponding to the locations where "
+"``mask_func(np.ones((n, n)), k)`` is True."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:42
+msgid ":obj:`triu`, :obj:`tril`, :obj:`triu_indices`, :obj:`tril_indices`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:48
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:55
+msgid ""
+"These are the indices that would allow you to access the upper triangular "
+"part of any 3x3 array:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:60
+msgid "For example, if `a` is a 3x3 array:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:70
+msgid ""
+"An offset can be passed also to the masking function.  This gets us the "
+"indices starting on the first diagonal right of the main one:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:75
+msgid "with which we now extract only three elements:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:-1
+msgid ""
+"<div id=\"1d5b184e-7de0-453a-b719-0f05a63fa02d\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('8173c7ec-c17f-45ee-8d6c-"
+"c37114f890ae','1d5b184e-7de0-453a-b719-0f05a63fa02d')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('8173c7ec-c17f-45ee-8d6c-c37114f890ae','1d5b184e-7de0-453a-"
+"b719-0f05a63fa02d')\">Open In Tab</button></div><div "
+"id=\"945845a6-623d-4e71-9f56-f5067b7c3752\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.mask_indices:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

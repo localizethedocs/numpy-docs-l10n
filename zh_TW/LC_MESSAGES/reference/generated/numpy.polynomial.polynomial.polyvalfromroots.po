@@ -1,0 +1,177 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.polynomial.polyvalfromroots.rst:4
+msgid "numpy.polynomial.polynomial.polyvalfromroots"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:2
+msgid "Evaluate a polynomial specified by its roots at points x."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:4
+msgid "If `r` is of length ``N``, this function returns the value"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:6
+msgid ""
+"p(x) = \\prod_{n=1}^{N} (x - r_n)\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:8
+msgid ""
+"The parameter `x` is converted to an array only if it is a tuple or a list, "
+"otherwise it is treated as a scalar. In either case, either `x` or its "
+"elements must support multiplication and addition both with themselves and "
+"with the elements of `r`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:13
+msgid ""
+"If `r` is a 1-D array, then ``p(x)`` will have the same shape as `x`.  If "
+"`r` is multidimensional, then the shape of the result depends on the value "
+"of `tensor`. If `tensor` is ``True`` the shape will be r.shape[1:] + x."
+"shape; that is, each polynomial is evaluated at every value of `x`. If "
+"`tensor` is ``False``, the shape will be r.shape[1:]; that is, each "
+"polynomial is evaluated only for the corresponding broadcast value of `x`. "
+"Note that scalars have shape (,)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:27
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:-1
+msgid "array_like, compatible object"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:24
+msgid ""
+"If `x` is a list or tuple, it is converted to an ndarray, otherwise it is "
+"left unchanged and treated as a scalar. In either case, `x` or its elements "
+"must support addition and multiplication with with themselves and with the "
+"elements of `r`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:33
+msgid "**r**"
+msgstr "**r**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:-1
+msgid "array_like"
+msgstr "array_like"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:30
+msgid ""
+"Array of roots. If `r` is multidimensional the first index is the root "
+"index, while the remaining indices enumerate multiple polynomials. For "
+"instance, in the two dimensional case the roots of each polynomial may be "
+"thought of as stored in the columns of `r`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:43
+msgid "**tensor**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:-1
+msgid "boolean, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:36
+msgid ""
+"If True, the shape of the roots array is extended with ones on the right, "
+"one for each dimension of `x`. Scalars have dimension 0 for this action. The "
+"result is that every column of coefficients in `r` is evaluated for every "
+"element of `x`. If False, `x` is broadcast over the columns of `r` for the "
+"evaluation.  This keyword is useful when `r` is multidimensional. The "
+"default value is True."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:54
+msgid "**values**"
+msgstr "**values**"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:-1
+msgid "ndarray, compatible object"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:48
+msgid "The shape of the returned array is described above."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:59
+msgid ":obj:`polyroots`, :obj:`polyfromroots`, :obj:`polyval`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:65
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:-1
+msgid ""
+"<div id=\"8a0befdb-6de4-410b-b138-d36ca2596494\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('e27bb56d-f2fa-4a98-"
+"aaae-48662f377d72','8a0befdb-6de4-410b-b138-d36ca2596494')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('e27bb56d-f2fa-4a98-aaae-48662f377d72','8a0befdb-6de4-410b-b138-"
+"d36ca2596494')\">Open In Tab</button></div><div "
+"id=\"0d3d3c6a-4d85-415e-8cbf-2baab2408a4a\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/polynomial/polynomial.py:docstring
+#: of numpy.polynomial.polynomial.polyvalfromroots:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""
