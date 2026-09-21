@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.memmap.resize.rst:4
+msgid "numpy.memmap.resize"
+msgstr ""
+
+#: ../../../reference/generated/numpy.memmap.resize.rst:8
+msgid "method"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:2
+msgid "Change shape and size of array in-place."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:8
+msgid "**new_shape** : tuple of ints, or `n` ints"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:-1
+msgid "tuple of ints, or"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:8
+msgid "Shape of resized array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:11
+msgid "**refcheck**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:11
+msgid "If False, reference count will not be checked. Default is True."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:19
+msgid "None"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:28
+msgid "ValueError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:24
+msgid ""
+"If `a` does not own its own data or references or views to it exist, and the "
+"data memory must be changed. PyPy only: will always raise if the data memory "
+"must be changed, since there is no reliable way to determine if references "
+"or views to it exist."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:34
+msgid "SystemError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:31
+msgid ""
+"If the `order` keyword argument is specified. This behaviour is a bug in "
+"NumPy."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:39
+msgid ":obj:`resize`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:40
+msgid "Return a new array with the specified shape."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:44
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:45
+msgid "This reallocates space for the data area if necessary."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:47
+msgid ""
+"Only contiguous arrays (data elements consecutive in memory) can be resized."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:50
+msgid ""
+"The purpose of the reference count check is to make sure you do not use this "
+"array as a buffer for another Python object and then reallocate the memory. "
+"However, reference counts can increase in other ways so if you are sure that "
+"you have not shared the memory for this array with another Python object, "
+"then you may safely set `refcheck` to False."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:59
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:60
+msgid ""
+"Shrinking an array: array is flattened (in the order that the data are "
+"stored in memory), resized, and reshaped:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:75
+msgid ""
+"Enlarging an array: as above, but missing entries are filled with zeros:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:83
+msgid "Referencing an array prevents resizing..."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.memmap.resize:91
+msgid "Unless `refcheck` is False:"
+msgstr ""

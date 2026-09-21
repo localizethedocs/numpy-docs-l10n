@@ -1,0 +1,1544 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/array_api.rst:5
+msgid "Array API Standard Compatibility"
+msgstr ""
+
+#: ../../../reference/array_api.rst:9
+msgid ""
+"The ``numpy.array_api`` module is still experimental. See `NEP 47 <https://"
+"numpy.org/neps/nep-0047-array-api-standard.html>`__."
+msgstr ""
+
+#: ../../../reference/array_api.rst:12
+msgid ""
+"NumPy includes a reference implementation of the `array API standard "
+"<https://data-apis.org/array-api/latest/>`__ in ``numpy.array_api``. `NEP 47 "
+"<https://numpy.org/neps/nep-0047-array-api-standard.html>`__ describes the "
+"motivation and scope for implementing the array API standard in NumPy."
+msgstr ""
+
+#: ../../../reference/array_api.rst:17
+msgid ""
+"The ``numpy.array_api`` module serves as a minimal, reference implementation "
+"of the array API standard. In being minimal, the module only implements "
+"those things that are explicitly required by the specification. Certain "
+"things are allowed by the specification but are explicitly disallowed in "
+"``numpy.array_api``. This is so that the module can serve as a reference "
+"implementation for users of the array API standard. Any consumer of the "
+"array API can test their code against ``numpy.array_api`` and be sure that "
+"they aren't using any features that aren't guaranteed by the spec, and which "
+"may not be present in other conforming libraries."
+msgstr ""
+
+#: ../../../reference/array_api.rst:27
+msgid ""
+"The ``numpy.array_api`` module is not documented here. For a listing of the "
+"functions present in the array API specification, refer to the `array API "
+"standard <https://data-apis.org/array-api/latest/>`__. The ``numpy."
+"array_api`` implementation is functionally complete, so all functionality "
+"described in the standard is implemented."
+msgstr ""
+
+#: ../../../reference/array_api.rst:36
+msgid "Table of Differences between ``numpy.array_api`` and ``numpy``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:38
+msgid ""
+"This table outlines the primary differences between ``numpy.array_api`` from "
+"the main ``numpy`` namespace. There are three types of differences:"
+msgstr ""
+
+#: ../../../reference/array_api.rst:41
+msgid ""
+"**Strictness**. Things that are only done so that ``numpy.array_api`` is a "
+"strict, minimal implementation. They aren't actually required by the spec, "
+"and other conforming libraries may not follow them. In most cases, spec does "
+"not specify or require any behavior outside of the given domain. The main "
+"``numpy`` namespace would not need to change in any way to be spec-"
+"compatible for these."
+msgstr ""
+
+#: ../../../reference/array_api.rst:48
+msgid ""
+"**Compatible**. Things that could be added to the main ``numpy`` namespace "
+"without breaking backwards compatibility."
+msgstr ""
+
+#: ../../../reference/array_api.rst:51
+msgid ""
+"**Breaking**. Things that would break backwards compatibility if implemented "
+"in the main ``numpy`` namespace."
+msgstr ""
+
+#: ../../../reference/array_api.rst:55
+msgid "Name Differences"
+msgstr ""
+
+#: ../../../reference/array_api.rst:57
+msgid ""
+"Many functions have been renamed in the spec from NumPy. These are otherwise "
+"identical in behavior, and are thus all **compatible** changes, unless "
+"otherwise noted."
+msgstr ""
+
+#: ../../../reference/array_api.rst:64
+msgid "Function Name Changes"
+msgstr ""
+
+#: ../../../reference/array_api.rst:66
+msgid "The following functions are named differently in the array API"
+msgstr ""
+
+#: ../../../reference/array_api.rst:71
+msgid "Array API name"
+msgstr ""
+
+#: ../../../reference/array_api.rst:72
+msgid "NumPy namespace name"
+msgstr ""
+
+#: ../../../reference/array_api.rst:73 ../../../reference/array_api.rst:170
+#: ../../../reference/array_api.rst:215 ../../../reference/array_api.rst:281
+#: ../../../reference/array_api.rst:549 ../../../reference/array_api.rst:587
+#: ../../../reference/array_api.rst:606 ../../../reference/array_api.rst:634
+#: ../../../reference/array_api.rst:710 ../../../reference/array_api.rst:736
+#: ../../../reference/array_api.rst:759 ../../../reference/array_api.rst:781
+#: ../../../reference/array_api.rst:799
+msgid "Notes"
+msgstr ""
+
+#: ../../../reference/array_api.rst:74 ../../../reference/array_api.rst:341
+msgid "``acos``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:75
+msgid "``arccos``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:77 ../../../reference/array_api.rst:343
+msgid "``acosh``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:78
+msgid "``arccosh``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:80
+msgid "``asin``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:81
+msgid "``arcsin``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:83
+msgid "``asinh``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:84
+msgid "``arcsinh``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:86
+msgid "``atan``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:87
+msgid "``arctan``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:89
+msgid "``atan2``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:90
+msgid "``arctan2``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:92
+msgid "``atanh``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:93
+msgid "``arctanh``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:95
+msgid "``bitwise_left_shift``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:96
+msgid "``left_shift``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:98 ../../../reference/array_api.rst:359
+msgid "``bitwise_invert``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:99
+msgid "``invert``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:101
+msgid "``bitwise_right_shift``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:102
+msgid "``right_shift``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:104
+msgid "``bool``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:105
+msgid "``bool_``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:106
+msgid ""
+"This is **breaking** because ``np.bool`` is currently a deprecated alias for "
+"the built-in ``bool``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:108
+msgid "``concat``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:109
+msgid "``concatenate``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:111
+msgid "``matrix_norm`` and ``vector_norm``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:112
+msgid "``norm``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:113
+msgid ""
+"``matrix_norm`` and ``vector_norm`` each do a limited subset of what ``np."
+"norm`` does."
+msgstr ""
+
+#: ../../../reference/array_api.rst:115
+msgid "``permute_dims``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:116
+msgid "``transpose``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:117
+msgid ""
+"Unlike ``np.transpose``, the ``axis`` keyword-argument to ``permute_dims`` "
+"is required."
+msgstr ""
+
+#: ../../../reference/array_api.rst:119
+msgid "``pow``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:120
+msgid "``power``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:122
+msgid ""
+"``unique_all``, ``unique_counts``, ``unique_inverse``, and ``unique_values``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:124
+msgid "``unique``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:125
+msgid "Each is equivalent to ``np.unique`` with certain flags set."
+msgstr ""
+
+#: ../../../reference/array_api.rst:129
+msgid "Function instead of method"
+msgstr ""
+
+#: ../../../reference/array_api.rst:131
+msgid ""
+"``astype`` is a function in the array API, whereas it is a method on "
+"``ndarray`` in ``numpy``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:136
+msgid "``linalg`` Namespace Differences"
+msgstr ""
+
+#: ../../../reference/array_api.rst:138
+msgid ""
+"These functions are in the ``linalg`` sub-namespace in the array API, but "
+"are only in the top-level namespace in NumPy:"
+msgstr ""
+
+#: ../../../reference/array_api.rst:141 ../../../reference/array_api.rst:477
+msgid "``cross``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:142 ../../../reference/array_api.rst:481
+msgid "``diagonal``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:143
+msgid "``matmul`` (*)"
+msgstr ""
+
+#: ../../../reference/array_api.rst:144 ../../../reference/array_api.rst:499
+msgid "``outer``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:145
+msgid "``tensordot`` (*)"
+msgstr ""
+
+#: ../../../reference/array_api.rst:146 ../../../reference/array_api.rst:515
+msgid "``trace``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:148
+msgid ""
+"(*): These functions are also in the top-level namespace in the array API."
+msgstr ""
+
+#: ../../../reference/array_api.rst:151
+msgid "Keyword Argument Renames"
+msgstr ""
+
+#: ../../../reference/array_api.rst:153
+msgid ""
+"The following functions have keyword arguments that have been renamed. The "
+"functionality of the keyword argument is identical unless otherwise stated. "
+"Renamed keyword arguments with the same semantic definition may be "
+"considered either **compatible** or **breaking**, depending on how the "
+"change is implemented."
+msgstr ""
+
+#: ../../../reference/array_api.rst:159
+msgid ""
+"Note, this page does not list function keyword arguments that are in the "
+"main ``numpy`` namespace but not in the array API. Such keyword arguments "
+"are omitted from ``numpy.array_api`` for **strictness**, as the spec allows "
+"functions to include additional keyword arguments from those required."
+msgstr ""
+
+#: ../../../reference/array_api.rst:167
+msgid "Function"
+msgstr ""
+
+#: ../../../reference/array_api.rst:168
+msgid "Array API keyword name"
+msgstr ""
+
+#: ../../../reference/array_api.rst:169
+msgid "NumPy keyword name"
+msgstr ""
+
+#: ../../../reference/array_api.rst:171
+msgid "``argsort`` and ``sort``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:172
+msgid "``stable``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:173
+msgid "``kind``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:174
+msgid ""
+"The definitions of ``stable`` and ``kind`` differ, as do the default values. "
+"The change of the default value makes this **breaking**. See :ref:`array_api-"
+"set-functions-differences`."
+msgstr ""
+
+#: ../../../reference/array_api.rst:177 ../../../reference/array_api.rst:495
+msgid "``matrix_rank``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:178 ../../../reference/array_api.rst:184
+msgid "``rtol``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:179
+msgid "``tol``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:180
+msgid ""
+"The definitions of ``rtol`` and ``tol`` differ, as do the default values. "
+"The change of the default value makes this **breaking**. See :ref:`array_api-"
+"linear-algebra-differences`."
+msgstr ""
+
+#: ../../../reference/array_api.rst:183 ../../../reference/array_api.rst:501
+msgid "``pinv``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:185
+msgid "``rcond``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:186
+msgid ""
+"The definitions of ``rtol`` and ``rcond`` are the same, but their default "
+"values differ, making this **breaking**. See :ref:`array_api-linear-algebra-"
+"differences`."
+msgstr ""
+
+#: ../../../reference/array_api.rst:189
+msgid "``std`` and ``var``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:190
+msgid "``correction``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:191
+msgid "``ddof``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:193
+msgid "``reshape``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:194
+msgid "``shape``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:195
+msgid "``newshape``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:196
+msgid ""
+"The argument may be passed as a positional or keyword argument for both "
+"NumPy and the array API."
+msgstr ""
+
+#: ../../../reference/array_api.rst:202
+msgid "Type Promotion Differences"
+msgstr ""
+
+#: ../../../reference/array_api.rst:204
+msgid ""
+"Type promotion is the biggest area where NumPy deviates from the spec. The "
+"most notable difference is that NumPy does value-based casting in many "
+"cases. The spec explicitly disallows value-based casting. In the array API, "
+"the result type of any operation is always determined entirely by the input "
+"types, independently of values or shapes."
+msgstr ""
+
+#: ../../../reference/array_api.rst:213 ../../../reference/array_api.rst:279
+#: ../../../reference/array_api.rst:547 ../../../reference/array_api.rst:585
+#: ../../../reference/array_api.rst:604 ../../../reference/array_api.rst:632
+#: ../../../reference/array_api.rst:708 ../../../reference/array_api.rst:734
+#: ../../../reference/array_api.rst:757 ../../../reference/array_api.rst:779
+#: ../../../reference/array_api.rst:797
+msgid "Feature"
+msgstr ""
+
+#: ../../../reference/array_api.rst:214 ../../../reference/array_api.rst:280
+#: ../../../reference/array_api.rst:548 ../../../reference/array_api.rst:586
+#: ../../../reference/array_api.rst:605 ../../../reference/array_api.rst:633
+#: ../../../reference/array_api.rst:709 ../../../reference/array_api.rst:735
+#: ../../../reference/array_api.rst:758 ../../../reference/array_api.rst:780
+#: ../../../reference/array_api.rst:798
+msgid "Type"
+msgstr ""
+
+#: ../../../reference/array_api.rst:216
+msgid "Limited set of dtypes."
+msgstr ""
+
+#: ../../../reference/array_api.rst:217 ../../../reference/array_api.rst:223
+#: ../../../reference/array_api.rst:238 ../../../reference/array_api.rst:244
+#: ../../../reference/array_api.rst:254 ../../../reference/array_api.rst:260
+#: ../../../reference/array_api.rst:263 ../../../reference/array_api.rst:283
+#: ../../../reference/array_api.rst:286 ../../../reference/array_api.rst:294
+#: ../../../reference/array_api.rst:297 ../../../reference/array_api.rst:551
+#: ../../../reference/array_api.rst:559 ../../../reference/array_api.rst:612
+#: ../../../reference/array_api.rst:616 ../../../reference/array_api.rst:715
+#: ../../../reference/array_api.rst:718 ../../../reference/array_api.rst:801
+#: ../../../reference/array_api.rst:805 ../../../reference/array_api.rst:809
+#: ../../../reference/array_api.rst:812
+msgid "**Strictness**"
+msgstr ""
+
+#: ../../../reference/array_api.rst:218
+msgid ""
+"``numpy.array_api`` only implements those `dtypes that are required by the "
+"spec <https://data-apis.org/array-api/latest/API_specification/data_types."
+"html>`__."
+msgstr ""
+
+#: ../../../reference/array_api.rst:221
+msgid ""
+"Operators (like ``+``) with Python scalars only accept matching scalar types."
+msgstr ""
+
+#: ../../../reference/array_api.rst:224
+msgid ""
+"For example, ``<int32 array> + 1.0`` is not allowed. See `the spec rules for "
+"mixing arrays and Python scalars <https://data-apis.org/array-api/latest/"
+"API_specification/type_promotion.html#mixing-arrays-with-python-scalars>`__."
+msgstr ""
+
+#: ../../../reference/array_api.rst:227
+msgid ""
+"Operators (like ``+``) with Python scalars always return the same dtype as "
+"the array."
+msgstr ""
+
+#: ../../../reference/array_api.rst:229 ../../../reference/array_api.rst:234
+#: ../../../reference/array_api.rst:249 ../../../reference/array_api.rst:267
+#: ../../../reference/array_api.rst:572 ../../../reference/array_api.rst:620
+#: ../../../reference/array_api.rst:639 ../../../reference/array_api.rst:642
+#: ../../../reference/array_api.rst:656 ../../../reference/array_api.rst:665
+#: ../../../reference/array_api.rst:673 ../../../reference/array_api.rst:678
+#: ../../../reference/array_api.rst:685 ../../../reference/array_api.rst:698
+#: ../../../reference/array_api.rst:762 ../../../reference/array_api.rst:784
+#: ../../../reference/array_api.rst:816
+msgid "**Breaking**"
+msgstr ""
+
+#: ../../../reference/array_api.rst:230
+msgid ""
+"For example, ``numpy.array_api.asarray(0., dtype=float32) + 1e64`` is a "
+"``float32`` array."
+msgstr ""
+
+#: ../../../reference/array_api.rst:232
+msgid ""
+"In-place operators are disallowed when the left-hand side would be promoted."
+msgstr ""
+
+#: ../../../reference/array_api.rst:235
+msgid ""
+"Example: ``a = np.array(1, dtype=np.int8); a += np.array(1, dtype=np."
+"int16)``. The spec explicitly disallows this."
+msgstr ""
+
+#: ../../../reference/array_api.rst:236
+msgid ""
+"In-place operators are disallowed when the right-hand side operand cannot "
+"broadcast to the shape of the left-hand side operand."
+msgstr ""
+
+#: ../../../reference/array_api.rst:239
+msgid ""
+"This so-called \"reverse broadcasting\" should not be allowed. Example: ``a "
+"= np.empty((2, 3, 4)); a += np.empty((3, 4))`` should error. See https://"
+"github.com/numpy/numpy/issues/10404."
+msgstr ""
+
+#: ../../../reference/array_api.rst:242
+msgid ""
+"``int`` promotion for operators is only specified for integers within the "
+"bounds of the dtype."
+msgstr ""
+
+#: ../../../reference/array_api.rst:245
+msgid ""
+"``numpy.array_api`` fallsback to ``np.ndarray`` behavior (either cast or "
+"raise ``OverflowError``)."
+msgstr ""
+
+#: ../../../reference/array_api.rst:247
+msgid ""
+"``__pow__`` and ``__rpow__`` do not do value-based casting for 0-D arrays."
+msgstr ""
+
+#: ../../../reference/array_api.rst:250
+msgid ""
+"For example, ``np.array(0., dtype=float32)**np.array(0., dtype=float64)`` is "
+"``float32``. Note that this is value-based casting on 0-D arrays, not "
+"scalars."
+msgstr ""
+
+#: ../../../reference/array_api.rst:253 ../../../reference/array_api.rst:719
+msgid "No cross-kind casting."
+msgstr ""
+
+#: ../../../reference/array_api.rst:255
+msgid ""
+"Namely, boolean, integer, and floating-point data types do not cast to each "
+"other, except explicitly with ``astype`` (this is separate from the behavior "
+"with Python scalars)."
+msgstr ""
+
+#: ../../../reference/array_api.rst:258
+msgid ""
+"No casting unsigned integer dtypes to floating dtypes (e.g., ``int64 + "
+"uint64 -> float64``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:262
+msgid "``can_cast`` and ``result_type`` are restricted."
+msgstr ""
+
+#: ../../../reference/array_api.rst:264
+msgid "The ``numpy.array_api`` implementations disallow cross-kind casting."
+msgstr ""
+
+#: ../../../reference/array_api.rst:265 ../../../reference/array_api.rst:782
+msgid ""
+"``sum`` and ``prod`` always upcast ``float32`` to ``float64`` when "
+"``dtype=None``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:271
+msgid "Indexing Differences"
+msgstr ""
+
+#: ../../../reference/array_api.rst:273
+msgid ""
+"The spec requires only a subset of indexing, but all indexing rules in the "
+"spec are compatible with NumPy's more broad indexing rules."
+msgstr ""
+
+#: ../../../reference/array_api.rst:282
+msgid "No implicit ellipses (``...``)."
+msgstr ""
+
+#: ../../../reference/array_api.rst:284
+msgid "If an index does not include an ellipsis, all axes must be indexed."
+msgstr ""
+
+#: ../../../reference/array_api.rst:285
+msgid "The start and stop of a slice may not be out of bounds."
+msgstr ""
+
+#: ../../../reference/array_api.rst:287
+msgid "For a slice ``i:j:k``, only the following are allowed:"
+msgstr ""
+
+#: ../../../reference/array_api.rst:289
+msgid "``i`` or ``j`` omitted (``None``)."
+msgstr ""
+
+#: ../../../reference/array_api.rst:290
+msgid "``-n <= i <= max(0, n - 1)``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:291
+msgid "For ``k > 0`` or ``k`` omitted (``None``), ``-n <= j <= n``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:292
+msgid "For ``k < 0``, ``-n - 1 <= j <= max(0, n - 1)``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:293
+msgid "Boolean array indices are only allowed as the sole index."
+msgstr ""
+
+#: ../../../reference/array_api.rst:296
+msgid "Integer array indices are not allowed at all."
+msgstr ""
+
+#: ../../../reference/array_api.rst:298
+msgid "With the exception of 0-D arrays, which are treated like integers."
+msgstr ""
+
+#: ../../../reference/array_api.rst:303
+msgid "Type Strictness"
+msgstr ""
+
+#: ../../../reference/array_api.rst:305
+msgid ""
+"Functions in ``numpy.array_api`` restrict their inputs to only those dtypes "
+"that are explicitly required by the spec, even when the wrapped "
+"corresponding NumPy function would allow a broader set. Here, we list each "
+"function and the dtypes that are allowed in ``numpy.array_api``. These are "
+"**strictness** differences because the spec does not require that other "
+"dtypes result in an error. The categories here are defined as follows:"
+msgstr ""
+
+#: ../../../reference/array_api.rst:312
+msgid "**Floating-point**: ``float32`` or ``float64``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:313
+msgid ""
+"**Integer**: Any signed or unsigned integer dtype (``int8``, ``int16``, "
+"``int32``, ``int64``, ``uint8``, ``uint16``, ``uint32``, or ``uint64``)."
+msgstr ""
+
+#: ../../../reference/array_api.rst:315
+msgid "**Boolean**: ``bool``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:316
+msgid ""
+"**Integer or boolean**: Any signed or unsigned integer dtype, or ``bool``. "
+"For two-argument functions, both arguments must be integer or both must be "
+"``bool``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:319
+msgid ""
+"**Numeric**: Any integer or floating-point dtype. For two-argument "
+"functions, both arguments must be integer or both must be floating-point."
+msgstr ""
+
+#: ../../../reference/array_api.rst:322
+msgid ""
+"**All**: Any of the above dtype categories. For two-argument functions, both "
+"arguments must be the same kind (integer, floating-point, or boolean)."
+msgstr ""
+
+#: ../../../reference/array_api.rst:325
+msgid ""
+"In all cases, the return dtype is chosen according to `the rules outlined in "
+"the spec <https://data-apis.org/array-api/latest/API_specification/"
+"type_promotion.html>`__, and does not differ from NumPy's return dtype for "
+"any of the allowed input dtypes, except in the cases mentioned specifically "
+"in the subsections below."
+msgstr ""
+
+#: ../../../reference/array_api.rst:332
+msgid "Elementwise Functions"
+msgstr ""
+
+#: ../../../reference/array_api.rst:337 ../../../reference/array_api.rst:461
+#: ../../../reference/array_api.rst:473
+msgid "Function Name"
+msgstr ""
+
+#: ../../../reference/array_api.rst:338 ../../../reference/array_api.rst:462
+#: ../../../reference/array_api.rst:474
+msgid "Dtypes"
+msgstr ""
+
+#: ../../../reference/array_api.rst:339
+msgid "``abs``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:340 ../../../reference/array_api.rst:346
+#: ../../../reference/array_api.rst:370 ../../../reference/array_api.rst:384
+#: ../../../reference/array_api.rst:386 ../../../reference/array_api.rst:388
+#: ../../../reference/array_api.rst:390 ../../../reference/array_api.rst:392
+#: ../../../reference/array_api.rst:394 ../../../reference/array_api.rst:396
+#: ../../../reference/array_api.rst:398 ../../../reference/array_api.rst:400
+#: ../../../reference/array_api.rst:420 ../../../reference/array_api.rst:422
+#: ../../../reference/array_api.rst:426 ../../../reference/array_api.rst:428
+#: ../../../reference/array_api.rst:430 ../../../reference/array_api.rst:432
+#: ../../../reference/array_api.rst:434 ../../../reference/array_api.rst:442
+#: ../../../reference/array_api.rst:444 ../../../reference/array_api.rst:450
+#: ../../../reference/array_api.rst:478 ../../../reference/array_api.rst:490
+#: ../../../reference/array_api.rst:500 ../../../reference/array_api.rst:514
+#: ../../../reference/array_api.rst:516 ../../../reference/array_api.rst:518
+msgid "Numeric"
+msgstr ""
+
+#: ../../../reference/array_api.rst:342 ../../../reference/array_api.rst:344
+#: ../../../reference/array_api.rst:348 ../../../reference/array_api.rst:350
+#: ../../../reference/array_api.rst:352 ../../../reference/array_api.rst:354
+#: ../../../reference/array_api.rst:356 ../../../reference/array_api.rst:372
+#: ../../../reference/array_api.rst:374 ../../../reference/array_api.rst:376
+#: ../../../reference/array_api.rst:380 ../../../reference/array_api.rst:382
+#: ../../../reference/array_api.rst:402 ../../../reference/array_api.rst:404
+#: ../../../reference/array_api.rst:406 ../../../reference/array_api.rst:408
+#: ../../../reference/array_api.rst:410 ../../../reference/array_api.rst:436
+#: ../../../reference/array_api.rst:438 ../../../reference/array_api.rst:440
+#: ../../../reference/array_api.rst:446 ../../../reference/array_api.rst:448
+#: ../../../reference/array_api.rst:476 ../../../reference/array_api.rst:480
+#: ../../../reference/array_api.rst:484 ../../../reference/array_api.rst:486
+#: ../../../reference/array_api.rst:488 ../../../reference/array_api.rst:492
+#: ../../../reference/array_api.rst:494 ../../../reference/array_api.rst:496
+#: ../../../reference/array_api.rst:502 ../../../reference/array_api.rst:504
+#: ../../../reference/array_api.rst:506 ../../../reference/array_api.rst:508
+#: ../../../reference/array_api.rst:510 ../../../reference/array_api.rst:512
+#: ../../../reference/array_api.rst:520
+msgid "Floating-point"
+msgstr ""
+
+#: ../../../reference/array_api.rst:345
+msgid "``add``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:347
+msgid "``asin`` (*)"
+msgstr ""
+
+#: ../../../reference/array_api.rst:349
+msgid "``asinh`` (*)"
+msgstr ""
+
+#: ../../../reference/array_api.rst:351
+msgid "``atan`` (*)"
+msgstr ""
+
+#: ../../../reference/array_api.rst:353
+msgid "``atan2`` (*)"
+msgstr ""
+
+#: ../../../reference/array_api.rst:355
+msgid "``atanh`` (*)"
+msgstr ""
+
+#: ../../../reference/array_api.rst:357
+msgid "``bitwise_and``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:358 ../../../reference/array_api.rst:360
+#: ../../../reference/array_api.rst:364 ../../../reference/array_api.rst:368
+msgid "Integer or boolean"
+msgstr ""
+
+#: ../../../reference/array_api.rst:361
+msgid "``bitwise_left_shift`` (*)"
+msgstr ""
+
+#: ../../../reference/array_api.rst:362 ../../../reference/array_api.rst:366
+msgid "Integer"
+msgstr ""
+
+#: ../../../reference/array_api.rst:363
+msgid "``bitwise_or``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:365
+msgid "``bitwise_right_shift`` (*)"
+msgstr ""
+
+#: ../../../reference/array_api.rst:367
+msgid "``bitwise_xor``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:369
+msgid "``ceil``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:371
+msgid "``cos``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:373
+msgid "``cosh``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:375
+msgid "``divide``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:377
+msgid "``equal``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:378 ../../../reference/array_api.rst:424
+msgid "All"
+msgstr ""
+
+#: ../../../reference/array_api.rst:379
+msgid "``exp``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:381
+msgid "``expm1``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:383
+msgid "``floor``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:385
+msgid "``floor_divide``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:387
+msgid "``greater``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:389
+msgid "``greater_equal``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:391
+msgid "``isfinite``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:393
+msgid "``isinf``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:395
+msgid "``isnan``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:397
+msgid "``less``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:399
+msgid "``less_equal``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:401
+msgid "``log``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:403
+msgid "``logaddexp``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:405
+msgid "``log10``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:407
+msgid "``log1p``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:409
+msgid "``log2``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:411
+msgid "``logical_and``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:412 ../../../reference/array_api.rst:414
+#: ../../../reference/array_api.rst:416 ../../../reference/array_api.rst:418
+msgid "Boolean"
+msgstr ""
+
+#: ../../../reference/array_api.rst:413
+msgid "``logical_not``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:415
+msgid "``logical_or``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:417
+msgid "``logical_xor``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:419
+msgid "``multiply``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:421
+msgid "``negative``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:423
+msgid "``not_equal``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:425
+msgid "``positive``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:427
+msgid "``pow`` (*)"
+msgstr ""
+
+#: ../../../reference/array_api.rst:429
+msgid "``remainder``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:431
+msgid "``round``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:433
+msgid "``sign``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:435
+msgid "``sin``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:437
+msgid "``sinh``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:439
+msgid "``sqrt``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:441
+msgid "``square``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:443
+msgid "``subtract``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:445
+msgid "``tan``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:447
+msgid "``tanh``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:449
+msgid "``trunc``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:452
+msgid ""
+"(*) These functions have different names from the main ``numpy`` namespace. "
+"See :ref:`array_api-name-changes`."
+msgstr ""
+
+#: ../../../reference/array_api.rst:456
+msgid "Creation Functions"
+msgstr ""
+
+#: ../../../reference/array_api.rst:463
+msgid "``meshgrid``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:464
+msgid "Any (all input dtypes must be the same)"
+msgstr ""
+
+#: ../../../reference/array_api.rst:468
+msgid "Linear Algebra Functions"
+msgstr ""
+
+#: ../../../reference/array_api.rst:475
+msgid "``cholesky``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:479
+msgid "``det``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:482 ../../../reference/array_api.rst:498
+msgid "Any"
+msgstr ""
+
+#: ../../../reference/array_api.rst:483
+msgid "``eigh``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:485
+msgid "``eighvals``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:487
+msgid "``inv``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:489
+msgid "``matmul``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:491
+msgid "``matrix_norm`` (*)"
+msgstr ""
+
+#: ../../../reference/array_api.rst:493
+msgid "``matrix_power``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:497
+msgid "``matrix_transpose`` (**)"
+msgstr ""
+
+#: ../../../reference/array_api.rst:503
+msgid "``qr``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:505
+msgid "``slogdet``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:507
+msgid "``solve``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:509
+msgid "``svd``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:511
+msgid "``svdvals`` (**)"
+msgstr ""
+
+#: ../../../reference/array_api.rst:513
+msgid "``tensordot``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:517
+msgid "``vecdot`` (**)"
+msgstr ""
+
+#: ../../../reference/array_api.rst:519
+msgid "``vector_norm`` (*)"
+msgstr ""
+
+#: ../../../reference/array_api.rst:522
+msgid ""
+"(*) These functions are split from ``norm`` from the main ``numpy`` "
+"namespace. See :ref:`array_api-name-changes`."
+msgstr ""
+
+#: ../../../reference/array_api.rst:525
+msgid ""
+"(**) These functions are new in the array API and are not in the main "
+"``numpy`` namespace."
+msgstr ""
+
+#: ../../../reference/array_api.rst:529
+msgid "Array Object"
+msgstr ""
+
+#: ../../../reference/array_api.rst:531
+msgid ""
+"All the special ``__operator__`` methods on the array object behave "
+"identically to their corresponding functions (see `the spec <https://data-"
+"apis.org/array-api/latest/API_specification/array_object.html#methods>`__ "
+"for a list of which methods correspond to which functions). The exception is "
+"that operators explicitly allow Python scalars according to the `rules "
+"outlined in the spec <https://data-apis.org/array-api/latest/"
+"API_specification/type_promotion.html#mixing-arrays-with-python-scalars>`__ "
+"(see :ref:`array_api-type-promotion-differences`)."
+msgstr ""
+
+#: ../../../reference/array_api.rst:542
+msgid "Array Object Differences"
+msgstr ""
+
+#: ../../../reference/array_api.rst:550
+msgid "No array scalars"
+msgstr ""
+
+#: ../../../reference/array_api.rst:552
+msgid ""
+"The spec does not have array scalars, only 0-D arrays. However, other than "
+"the promotion differences outlined in :ref:`array_api-type-promotion-"
+"differences`, scalars duck type as 0-D arrays for the purposes of the spec. "
+"The are immutable, but the spec `does not require mutability <https://data-"
+"apis.org/array-api/latest/design_topics/copies_views_and_mutation.html>`__."
+msgstr ""
+
+#: ../../../reference/array_api.rst:558
+msgid "``bool()``, ``int()``, and ``float()`` only work on 0-D arrays."
+msgstr ""
+
+#: ../../../reference/array_api.rst:560
+msgid "See https://github.com/numpy/numpy/issues/10404."
+msgstr ""
+
+#: ../../../reference/array_api.rst:561
+msgid "``__imatmul__``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:562 ../../../reference/array_api.rst:567
+#: ../../../reference/array_api.rst:576 ../../../reference/array_api.rst:589
+#: ../../../reference/array_api.rst:595 ../../../reference/array_api.rst:608
+#: ../../../reference/array_api.rst:636 ../../../reference/array_api.rst:646
+#: ../../../reference/array_api.rst:650 ../../../reference/array_api.rst:668
+#: ../../../reference/array_api.rst:692 ../../../reference/array_api.rst:695
+#: ../../../reference/array_api.rst:712 ../../../reference/array_api.rst:721
+#: ../../../reference/array_api.rst:725 ../../../reference/array_api.rst:739
+#: ../../../reference/array_api.rst:742 ../../../reference/array_api.rst:746
+#: ../../../reference/array_api.rst:770 ../../../reference/array_api.rst:788
+msgid "**Compatible**"
+msgstr ""
+
+#: ../../../reference/array_api.rst:563
+msgid ""
+"``np.ndarray`` does not currently implement ``__imatmul``. Note that ``a @= "
+"b`` should only defined when it does not change the shape of ``a``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:566
+msgid "The ``mT`` attribute for matrix transpose."
+msgstr ""
+
+#: ../../../reference/array_api.rst:568
+msgid ""
+"See `the spec definition <https://data-apis.org/array-api/latest/"
+"API_specification/generated/signatures.array_object.array.mT.html>`__ for "
+"``mT``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:571
+msgid "The ``T`` attribute should error if the input is not 2-dimensional."
+msgstr ""
+
+#: ../../../reference/array_api.rst:573
+msgid ""
+"See `the note in the spec <https://data-apis.org/array-api/latest/"
+"API_specification/generated/signatures.array_object.array.T.html>`__."
+msgstr ""
+
+#: ../../../reference/array_api.rst:575
+msgid "New method ``to_device`` and attribute ``device``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:577
+msgid "The methods would effectively not do anything since NumPy is CPU only"
+msgstr ""
+
+#: ../../../reference/array_api.rst:580
+msgid "Creation Functions Differences"
+msgstr ""
+
+#: ../../../reference/array_api.rst:588
+msgid "``copy`` keyword argument to ``asarray``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:591
+msgid ""
+"New ``device`` keyword argument to all array creation functions "
+"(``asarray``, ``arange``, ``empty``, ``empty_like``, ``eye``, ``full``, "
+"``full_like``, ``linspace``, ``ones``, ``ones_like``, ``zeros``, and "
+"``zeros_like``)."
+msgstr ""
+
+#: ../../../reference/array_api.rst:596
+msgid "``device`` would effectively do nothing, since NumPy is CPU only."
+msgstr ""
+
+#: ../../../reference/array_api.rst:599
+msgid "Elementwise Functions Differences"
+msgstr ""
+
+#: ../../../reference/array_api.rst:607
+msgid "Various functions have been renamed."
+msgstr ""
+
+#: ../../../reference/array_api.rst:609 ../../../reference/array_api.rst:713
+#: ../../../reference/array_api.rst:740
+msgid "See :ref:`array_api-name-changes`."
+msgstr ""
+
+#: ../../../reference/array_api.rst:610
+msgid ""
+"Elementwise functions are only defined for given input type combinations."
+msgstr ""
+
+#: ../../../reference/array_api.rst:613
+msgid "See :ref:`array_api-type-strictness`."
+msgstr ""
+
+#: ../../../reference/array_api.rst:614
+msgid ""
+"``bitwise_left_shift`` and ``bitwise_right_shift`` are only defined for "
+"``x2`` nonnegative."
+msgstr ""
+
+#: ../../../reference/array_api.rst:618
+msgid ""
+"``ceil``, ``floor``, and ``trunc`` return an integer with integer input."
+msgstr ""
+
+#: ../../../reference/array_api.rst:621
+msgid ""
+"``np.ceil``, ``np.floor``, and ``np.trunc`` return a floating-point dtype on "
+"integer dtype input."
+msgstr ""
+
+#: ../../../reference/array_api.rst:627
+msgid "Linear Algebra Differences"
+msgstr ""
+
+#: ../../../reference/array_api.rst:635
+msgid "``cholesky`` includes an ``upper`` keyword argument."
+msgstr ""
+
+#: ../../../reference/array_api.rst:638
+msgid "``cross`` does not allow size 2 vectors (only size 3)."
+msgstr ""
+
+#: ../../../reference/array_api.rst:641
+msgid "``diagonal`` operates on the last two axes."
+msgstr ""
+
+#: ../../../reference/array_api.rst:643
+msgid ""
+"Strictly speaking this can be **compatible** because ``diagonal`` is moved "
+"to the ``linalg`` namespace."
+msgstr ""
+
+#: ../../../reference/array_api.rst:645
+msgid "``eigh``, ``qr``, ``slogdet`` and ``svd`` return a named tuple."
+msgstr ""
+
+#: ../../../reference/array_api.rst:647
+msgid ""
+"The corresponding ``numpy`` functions return a ``tuple``, with the resulting "
+"arrays in the same order."
+msgstr ""
+
+#: ../../../reference/array_api.rst:649
+msgid "New functions ``matrix_norm`` and ``vector_norm``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:651
+msgid ""
+"The ``norm`` function has been omitted from the array API and split into "
+"``matrix_norm`` for matrix norms and ``vector_norm`` for vector norms. Note "
+"that ``vector_norm`` supports any number of axes, whereas ``np.linalg.norm`` "
+"only supports a single axis for vector norms."
+msgstr ""
+
+#: ../../../reference/array_api.rst:655
+msgid "``matrix_rank`` has an ``rtol`` keyword argument instead of ``tol``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:657
+msgid ""
+"In the array API, ``rtol`` filters singular values smaller than ``rtol * "
+"largest_singular_value``. In ``np.linalg.matrix_rank``, ``tol`` filters "
+"singular values smaller than ``tol``. Furthermore, the default value for "
+"``rtol`` is ``max(M, N) * eps``, whereas the default value of ``tol`` in "
+"``np.linalg.matrix_rank`` is ``S.max() * max(M, N) * eps``, where ``S`` is "
+"the singular values of the input. The new flag name is compatible but the "
+"default change is breaking"
+msgstr ""
+
+#: ../../../reference/array_api.rst:664
+msgid "``matrix_rank`` does not support 1-dimensional arrays."
+msgstr ""
+
+#: ../../../reference/array_api.rst:667
+msgid "New function ``matrix_transpose``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:669
+msgid ""
+"Unlike ``np.transpose``, ``matrix_transpose`` only transposes the last two "
+"axes. See `the spec definition <https://data-apis.org/array-api/latest/"
+"API_specification/generated/signatures.linear_algebra_functions."
+"matrix_transpose.html#signatures.linear_algebra_functions."
+"matrix_transpose>`__"
+msgstr ""
+
+#: ../../../reference/array_api.rst:672
+msgid "``outer`` only supports 1-dimensional arrays."
+msgstr ""
+
+#: ../../../reference/array_api.rst:674
+msgid ""
+"The spec currently only specifies behavior on 1-D arrays but future behavior "
+"will likely be to broadcast, rather than flatten, which is what ``np.outer`` "
+"does."
+msgstr ""
+
+#: ../../../reference/array_api.rst:677
+msgid "``pinv`` has an ``rtol`` keyword argument instead of ``rcond``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:679
+msgid ""
+"The meaning of ``rtol`` and ``rcond`` is the same, but the default value for "
+"``rtol`` is ``max(M, N) * eps``, whereas the default value for ``rcond`` is "
+"``1e-15``. The new flag name is compatible but the default change is "
+"breaking."
+msgstr ""
+
+#: ../../../reference/array_api.rst:683
+msgid ""
+"``solve`` only accepts ``x2`` as a vector when it is exactly 1-dimensional."
+msgstr ""
+
+#: ../../../reference/array_api.rst:686
+msgid ""
+"The ``np.linalg.solve`` behavior is ambiguous. See `this numpy issue "
+"<https://github.com/numpy/numpy/issues/15349>`__ and `this array API "
+"specification issue <https://github.com/data-apis/array-api/issues/285>`__ "
+"for more details."
+msgstr ""
+
+#: ../../../reference/array_api.rst:691
+msgid "New function ``svdvals``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:693
+msgid "Equivalent to ``np.linalg.svd(compute_uv=False)``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:694
+msgid "The ``axis`` keyword to ``tensordot`` must be a tuple."
+msgstr ""
+
+#: ../../../reference/array_api.rst:696
+msgid "In ``np.tensordot``, it can also be an array or array-like."
+msgstr ""
+
+#: ../../../reference/array_api.rst:697
+msgid "``trace`` operates on the last two axes."
+msgstr ""
+
+#: ../../../reference/array_api.rst:699
+msgid ""
+"``np.trace`` operates on the first two axes by default. Note that the array "
+"API ``trace`` does not allow specifying which axes to operate on."
+msgstr ""
+
+#: ../../../reference/array_api.rst:703
+msgid "Manipulation Functions Differences"
+msgstr ""
+
+#: ../../../reference/array_api.rst:711
+msgid "Various functions have been renamed"
+msgstr ""
+
+#: ../../../reference/array_api.rst:714
+msgid "``concat`` has different default casting rules from ``np.concatenate``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:716
+msgid ""
+"No cross-kind casting. No value-based casting on scalars (when axis=None)."
+msgstr ""
+
+#: ../../../reference/array_api.rst:717
+msgid "``stack`` has different default casting rules from ``np.stack``"
+msgstr ""
+
+#: ../../../reference/array_api.rst:720
+msgid "New function ``permute_dims``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:722
+msgid ""
+"Unlike ``np.transpose``, the ``axis`` keyword argument to ``permute_dims`` "
+"is required."
+msgstr ""
+
+#: ../../../reference/array_api.rst:724
+msgid "``reshape`` function has a ``copy`` keyword argument"
+msgstr ""
+
+#: ../../../reference/array_api.rst:726
+msgid "See https://github.com/numpy/numpy/issues/9818."
+msgstr ""
+
+#: ../../../reference/array_api.rst:729 ../../../reference/array_api.rst:752
+msgid "Set Functions Differences"
+msgstr ""
+
+#: ../../../reference/array_api.rst:737
+msgid ""
+"New functions ``unique_all``, ``unique_counts``, ``unique_inverse``, and "
+"``unique_values``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:741
+msgid "The four ``unique_*`` functions return a named tuple."
+msgstr ""
+
+#: ../../../reference/array_api.rst:744
+msgid ""
+"``unique_all`` and ``unique_indices`` return indices with the same shape as "
+"``x``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:747
+msgid "See https://github.com/numpy/numpy/issues/20638."
+msgstr ""
+
+#: ../../../reference/array_api.rst:760
+msgid ""
+"``argsort`` and ``sort`` have a ``stable`` keyword argument instead of "
+"``kind``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:763
+msgid ""
+"``stable`` is a boolean keyword argument, defaulting to ``True``. ``kind`` "
+"takes a string, defaulting to ``\"quicksort\"``. ``stable=True`` is "
+"equivalent to ``kind=\"stable\"`` and ``kind=False`` is equivalent to "
+"``kind=\"quicksort\"``, although any sorting algorithm is allowed by the "
+"spec when ``stable=False``. The new flag name is compatible but the default "
+"change is breaking."
+msgstr ""
+
+#: ../../../reference/array_api.rst:769
+msgid "``argsort`` and ``sort`` have a ``descending`` keyword argument."
+msgstr ""
+
+#: ../../../reference/array_api.rst:774
+msgid "Statistical Functions Differences"
+msgstr ""
+
+#: ../../../reference/array_api.rst:786
+msgid ""
+"The ``std`` and ``var`` functions have a ``correction`` keyword argument "
+"instead of ``ddof``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:792
+msgid "Other Differences"
+msgstr ""
+
+#: ../../../reference/array_api.rst:800
+msgid "Dtypes can only be spelled as dtype objects."
+msgstr ""
+
+#: ../../../reference/array_api.rst:802
+msgid ""
+"For example, ``numpy.array_api.asarray([0], dtype='int32')`` is not allowed."
+msgstr ""
+
+#: ../../../reference/array_api.rst:804
+msgid "``asarray`` is not implicitly called in any function."
+msgstr ""
+
+#: ../../../reference/array_api.rst:806
+msgid ""
+"The exception is Python operators, which accept Python scalars in certain "
+"cases (see :ref:`array_api-type-promotion-differences`)."
+msgstr ""
+
+#: ../../../reference/array_api.rst:808
+msgid "``tril`` and ``triu`` require the input to be at least 2-D."
+msgstr ""
+
+#: ../../../reference/array_api.rst:811
+msgid "finfo() return type uses ``float`` for the various attributes."
+msgstr ""
+
+#: ../../../reference/array_api.rst:813
+msgid ""
+"The spec allows duck typing, so ``finfo`` returning dtype scalars is "
+"considered type compatible with ``float``."
+msgstr ""
+
+#: ../../../reference/array_api.rst:815
+msgid "Positional arguments in every function are positional-only."
+msgstr ""
+
+#: ../../../reference/array_api.rst:817
+msgid ""
+"See the spec for the exact signature of each function. Note that NumPy "
+"ufuncs already use positional-only arguments, but non-ufuncs like "
+"``asarray`` generally do not."
+msgstr ""

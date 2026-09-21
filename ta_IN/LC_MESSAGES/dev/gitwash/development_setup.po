@@ -1,0 +1,296 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../dev/gitwash/development_setup.rst:5
+msgid "Setting up git for NumPy development"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:7
+msgid "To contribute code or documentation, you first need"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:9
+msgid "git installed on your machine"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:10
+msgid "a GitHub account"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:11
+msgid "a fork of NumPy"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:16
+msgid "Install git"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:18
+msgid ""
+"You may already have git; check by typing ``git --version``. If it's "
+"installed you'll see some variation of ``git version 2.11.0``. If instead "
+"you see ``command is not recognized``, ``command not found``, etc., `install "
+"git <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_."
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:24
+msgid "Then set your name and email: ::"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:26
+msgid ""
+"git config --global user.email you@yourdomain.example.com\n"
+"git config --global user.name \"Your Name\""
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:33
+msgid "Create a GitHub account"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:35
+msgid ""
+"If you don't have a GitHub account, visit https://github.com/join to create "
+"one."
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:42
+msgid "Create a NumPy fork"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:44
+msgid ""
+"``Forking`` has two steps -- visit GitHub to create a fork repo in your "
+"account, then make a copy of it on your own machine."
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:48
+msgid "Create the fork repo"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:50
+msgid "Log into your GitHub account."
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:51
+msgid "Go to the `NumPy GitHub home <https://github.com/numpy/numpy>`_."
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:52
+msgid "At the upper right of the page, click ``Fork``:"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:56
+msgid "You'll see"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:60
+msgid "and then you'll be taken to the home page of your forked copy:"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:68
+msgid "Make the local copy"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:70
+msgid "In the directory where you want the copy created, run ::"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:72
+#: ../../../dev/gitwash/development_setup.rst:172
+msgid "git clone https://github.com/your-user-name/numpy.git"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:74
+msgid "You'll see something like: ::"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:76
+msgid ""
+"$ git clone https://github.com/your-user-name/numpy.git\n"
+"Cloning into 'numpy'...\n"
+"remote: Enumerating objects: 12, done.\n"
+"remote: Counting objects: 100% (12/12), done.\n"
+"remote: Compressing objects: 100% (12/12), done.\n"
+"remote: Total 175837 (delta 0), reused 0 (delta 0), pack-reused 175825\n"
+"Receiving objects: 100% (175837/175837), 78.16 MiB | 9.87 MiB/s, done.\n"
+"Resolving deltas: 100% (139317/139317), done."
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:85
+msgid ""
+"A directory ``numpy`` is created on your machine. (If you already have a "
+"numpy directory, GitHub will choose a different name like ``numpy-1``.) ::"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:89
+msgid ""
+"$ ls -l\n"
+"total 0\n"
+"drwxrwxrwx 1 bjn bjn 4096 Jun 20 07:20 numpy"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:95
+msgid "Give the name ``upstream`` to the main NumPy repo: ::"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:97
+msgid ""
+"cd numpy\n"
+"git remote add upstream https://github.com/numpy/numpy.git"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:100
+msgid ""
+"Set up your repository so ``git pull`` pulls from ``upstream`` by default: ::"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:103
+msgid ""
+"git config branch.main.remote upstream\n"
+"git config branch.main.merge refs/heads/main"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:106
+msgid "Initialize the required git submodules: ::"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:108
+msgid "git submodule update --init"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:110
+msgid "Pull from upstream to get latest tag information: ::"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:112
+msgid "git pull"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:116
+msgid "Look it over"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:118
+msgid "The branches shown by ``git branch -a`` will include"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:120
+msgid "the ``main`` branch you just cloned on your own machine"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:121
+msgid ""
+"the ``main`` branch from your fork on GitHub, which git named ``origin`` by "
+"default"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:123
+msgid ""
+"the ``main`` branch on the main NumPy repo, which you named ``upstream``."
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:128
+msgid ""
+"main\n"
+"remotes/origin/main\n"
+"remotes/upstream/main"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:132
+msgid ""
+"If ``upstream`` isn't there, it will be added after you access the NumPy "
+"repo with a command like ``git fetch`` or ``git pull``."
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:136
+msgid ""
+"The repos shown by ``git remote -v show`` will include your fork on GitHub "
+"and the main repo: ::"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:139
+msgid ""
+"upstream    https://github.com/numpy/numpy.git (fetch)\n"
+"upstream    https://github.com/numpy/numpy.git (push)\n"
+"origin      https://github.com/your-user-name/numpy.git (fetch)\n"
+"origin      https://github.com/your-user-name/numpy.git (push)"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:144
+msgid "``git config --list`` will include ::"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:146
+msgid ""
+"user.email=your_email@example.com\n"
+"user.name=Your Name\n"
+"remote.origin.url=git@github.com:your-github-id/numpy.git\n"
+"remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*\n"
+"branch.main.remote=upstream\n"
+"branch.main.merge=refs/heads/main\n"
+"remote.upstream.url=https://github.com/numpy/numpy.git\n"
+"remote.upstream.fetch=+refs/heads/*:refs/remotes/upstream/*"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:160
+msgid "Optional: set up SSH keys to avoid passwords"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:162
+msgid ""
+"Cloning your NumPy fork repo required no password, because it read the "
+"remote repo without changing it. Later, though, submitting your pull "
+"requests will write to it, and GitHub will ask for your username and "
+"password -- even though it's your own repo. You can eliminate this "
+"authentication without compromising security by `setting up SSH keys \\ "
+"<https://help.github.com/en/github/authenticating-to-github/connecting-to-"
+"github-with-ssh>`_."
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:169
+msgid ""
+"**If you set up the keys before cloning**, the instructions above change "
+"slightly. Instead of ::"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:174
+msgid "run ::"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:176
+msgid "git clone git@github.com:your-user-name/numpy.git"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:178
+msgid ""
+"and instead of showing an ``https`` URL,  ``git remote -v`` will show ::"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:180
+msgid ""
+"origin  git@github.com:your-user-name/numpy.git (fetch)\n"
+"origin  git@github.com:your-user-name/numpy.git (push)"
+msgstr ""
+
+#: ../../../dev/gitwash/development_setup.rst:184
+msgid ""
+"**If you have cloned already** and want to start using SSH, see `Switching "
+"remote URLs from HTTPS to SSH \\ <https://help.github.com/en/github/using-"
+"git/changing-a-remotes-url#switching-remote-urls-from-https-to-ssh>`_."
+msgstr ""

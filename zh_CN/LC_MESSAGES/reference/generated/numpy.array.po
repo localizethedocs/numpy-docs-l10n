@@ -1,0 +1,371 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.array.rst:4
+msgid "numpy.array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:2
+msgid "Create an array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:11
+msgid "**object**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:8
+msgid ""
+"An array, any object exposing the array interface, an object whose "
+"``__array__`` method returns an array, or any (nested) sequence. If object "
+"is a scalar, a 0-dimensional array containing object is returned."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:16
+msgid "**dtype**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:-1
+msgid "data-type, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:14
+msgid ""
+"The desired data-type for the array. If not given, NumPy will try to use a "
+"default ``dtype`` that can represent the values (by applying promotion rules "
+"when necessary.)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:22
+msgid "**copy**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:19
+msgid ""
+"If true (default), then the object is copied.  Otherwise, a copy will only "
+"be made if ``__array__`` returns a copy, if obj is a nested sequence, or if "
+"a copy is needed to satisfy any of the other requirements (``dtype``, "
+"``order``, etc.)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:41
+msgid "**order**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:-1
+msgid "{'K', 'A', 'C', 'F'}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:25
+msgid ""
+"Specify the memory layout of the array. If object is not an array, the newly "
+"created array will be in C order (row major) unless 'F' is specified, in "
+"which case it will be in Fortran order (column major). If object is an array "
+"the following holds."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:31
+msgid "order"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:31
+msgid "no copy"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:31
+msgid "copy=True"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:33
+msgid "'K'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:33 numpy.array:34
+msgid "unchanged"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:33
+msgid "F & C order preserved, otherwise most similar order"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:34
+msgid "'A'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:34
+msgid "F order if input is F and not C, otherwise C order"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:35
+msgid "'C'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:35
+msgid "C order"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:36
+msgid "'F'"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:36
+msgid "F order"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:39
+msgid ""
+"When ``copy=False`` and a copy is made for other reasons, the result is the "
+"same as if ``copy=True``, with some exceptions for 'A', see the Notes "
+"section. The default order is 'K'."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:45
+msgid "**subok**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:44
+msgid ""
+"If True, then sub-classes will be passed-through, otherwise the returned "
+"array will be forced to be a base-class array (default)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:50
+msgid "**ndmin**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:48
+msgid ""
+"Specifies the minimum number of dimensions that the resulting array should "
+"have.  Ones will be prepended to the shape as needed to meet this "
+"requirement."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:59
+msgid "**like**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:-1
+msgid "array_like, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:53
+msgid ""
+"Reference object to allow the creation of arrays which are not NumPy arrays. "
+"If an array-like passed in as ``like`` supports the ``__array_function__`` "
+"protocol, the result will be defined by it. In this case, it ensures the "
+"creation of an array object compatible with that passed in via this argument."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:70
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:64
+msgid "An array object satisfying the specified requirements."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:75
+msgid ":obj:`empty_like`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:76
+msgid "Return an empty array with shape and type of input."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:77
+msgid ":obj:`ones_like`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:78
+msgid "Return an array of ones with shape and type of input."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:79
+msgid ":obj:`zeros_like`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:80
+msgid "Return an array of zeros with shape and type of input."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:81
+msgid ":obj:`full_like`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:82
+msgid "Return a new array with shape of input filled with value."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:83
+msgid ":obj:`empty`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:84
+msgid "Return a new uninitialized array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:85
+msgid ":obj:`ones`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:86
+msgid "Return a new array setting values to one."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:87
+msgid ":obj:`zeros`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:88
+msgid "Return a new array setting values to zero."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:89
+msgid ":obj:`full`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:90
+msgid "Return a new array of given shape filled with value."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:94
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:95
+msgid ""
+"When order is 'A' and ``object`` is an array in neither 'C' nor 'F' order, "
+"and a copy is forced by a change in dtype, then the order of the result is "
+"not necessarily 'C' as expected. This is likely a bug."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:101
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:105
+msgid "Upcasting:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:110
+msgid "More than one dimension:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:116
+msgid "Minimum dimensions 2:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:121
+msgid "Type provided:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:126
+msgid "Data-type consisting of more than one element:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.array:132
+msgid "Creating an array from sub-classes:"
+msgstr ""

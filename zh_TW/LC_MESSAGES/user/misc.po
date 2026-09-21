@@ -1,0 +1,414 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../user/misc.rst:5
+msgid "Miscellaneous"
+msgstr ""
+
+#: ../../../user/misc.rst:8
+msgid "IEEE 754 Floating Point Special Values"
+msgstr ""
+
+#: ../../../user/misc.rst:10
+msgid "Special values defined in numpy: nan, inf,"
+msgstr ""
+
+#: ../../../user/misc.rst:12
+msgid ""
+"NaNs can be used as a poor-man's mask (if you don't care what the original "
+"value was)"
+msgstr ""
+
+#: ../../../user/misc.rst:15
+msgid "Note: cannot use equality to test NaNs. E.g.: ::"
+msgstr ""
+
+#: ../../../user/misc.rst:17
+msgid ""
+">>> myarr = np.array([1., 0., np.nan, 3.])\n"
+">>> np.nonzero(myarr == np.nan)\n"
+"(array([], dtype=int64),)\n"
+">>> np.nan == np.nan  # is always False! Use special numpy functions "
+"instead.\n"
+"False\n"
+">>> myarr[myarr == np.nan] = 0. # doesn't work\n"
+">>> myarr\n"
+"array([  1.,   0.,  nan,   3.])\n"
+">>> myarr[np.isnan(myarr)] = 0. # use this instead find\n"
+">>> myarr\n"
+"array([1.,  0.,  0.,  3.])"
+msgstr ""
+
+#: ../../../user/misc.rst:29
+msgid "Other related special value functions: ::"
+msgstr ""
+
+#: ../../../user/misc.rst:31
+msgid ""
+"isinf():    True if value is inf\n"
+"isfinite(): True if not nan or inf\n"
+"nan_to_num(): Map nan to 0, inf to max float, -inf to min float"
+msgstr ""
+
+#: ../../../user/misc.rst:35
+msgid ""
+"The following corresponds to the usual functions except that nans are "
+"excluded from the results: ::"
+msgstr ""
+
+#: ../../../user/misc.rst:38
+msgid ""
+"nansum()\n"
+"nanmax()\n"
+"nanmin()\n"
+"nanargmax()\n"
+"nanargmin()\n"
+"\n"
+">>> x = np.arange(10.)\n"
+">>> x[3] = np.nan\n"
+">>> x.sum()\n"
+"nan\n"
+">>> np.nansum(x)\n"
+"42.0"
+msgstr ""
+
+#: ../../../user/misc.rst:52
+msgid "How numpy handles numerical exceptions"
+msgstr ""
+
+#: ../../../user/misc.rst:54
+msgid ""
+"The default is to ``'warn'`` for ``invalid``, ``divide``, and ``overflow`` "
+"and ``'ignore'`` for ``underflow``.  But this can be changed, and it can be "
+"set individually for different kinds of exceptions. The different behaviors "
+"are:"
+msgstr ""
+
+#: ../../../user/misc.rst:59
+msgid "'ignore' : Take no action when the exception occurs."
+msgstr ""
+
+#: ../../../user/misc.rst:60
+msgid "'warn'   : Print a `RuntimeWarning` (via the Python `warnings` module)."
+msgstr ""
+
+#: ../../../user/misc.rst:61
+msgid "'raise'  : Raise a `FloatingPointError`."
+msgstr ""
+
+#: ../../../user/misc.rst:62
+msgid "'call'   : Call a function specified using the `seterrcall` function."
+msgstr ""
+
+#: ../../../user/misc.rst:63
+msgid "'print'  : Print a warning directly to ``stdout``."
+msgstr ""
+
+#: ../../../user/misc.rst:64
+msgid "'log'    : Record error in a Log object specified by `seterrcall`."
+msgstr ""
+
+#: ../../../user/misc.rst:66
+msgid "These behaviors can be set for all kinds of errors or specific ones:"
+msgstr ""
+
+#: ../../../user/misc.rst:68
+msgid "all       : apply to all numeric exceptions"
+msgstr ""
+
+#: ../../../user/misc.rst:69
+msgid "invalid   : when NaNs are generated"
+msgstr ""
+
+#: ../../../user/misc.rst:70
+msgid "divide    : divide by zero (for integers as well!)"
+msgstr ""
+
+#: ../../../user/misc.rst:71
+msgid "overflow  : floating point overflows"
+msgstr ""
+
+#: ../../../user/misc.rst:72
+msgid "underflow : floating point underflows"
+msgstr ""
+
+#: ../../../user/misc.rst:74
+msgid ""
+"Note that integer divide-by-zero is handled by the same machinery. These "
+"behaviors are set on a per-thread basis."
+msgstr ""
+
+#: ../../../user/misc.rst:78
+msgid "Examples"
+msgstr ""
+
+#: ../../../user/misc.rst:82
+msgid ""
+">>> oldsettings = np.seterr(all='warn')\n"
+">>> np.zeros(5,dtype=np.float32)/0.\n"
+"Traceback (most recent call last):\n"
+"...\n"
+"RuntimeWarning: invalid value encountered in divide\n"
+">>> j = np.seterr(under='ignore')\n"
+">>> np.array([1.e-100])**10\n"
+"array([0.])\n"
+">>> j = np.seterr(invalid='raise')\n"
+">>> np.sqrt(np.array([-1.]))\n"
+"Traceback (most recent call last):\n"
+"...\n"
+"FloatingPointError: invalid value encountered in sqrt\n"
+">>> def errorhandler(errstr, errflag):\n"
+"...      print(\"saw stupid error!\")\n"
+">>> np.seterrcall(errorhandler)\n"
+">>> j = np.seterr(all='call')\n"
+">>> np.zeros(5, dtype=np.int32)/0\n"
+"saw stupid error!\n"
+"array([nan, nan, nan, nan, nan])\n"
+">>> j = np.seterr(**oldsettings) # restore previous\n"
+"...                              # error-handling settings"
+msgstr ""
+
+#: ../../../user/misc.rst:106
+msgid "Interfacing to C"
+msgstr ""
+
+#: ../../../user/misc.rst:107
+msgid "Only a survey of the choices. Little detail on how each works."
+msgstr ""
+
+#: ../../../user/misc.rst:109
+msgid "Bare metal, wrap your own C-code manually."
+msgstr ""
+
+#: ../../../user/misc.rst:111 ../../../user/misc.rst:130
+#: ../../../user/misc.rst:147 ../../../user/misc.rst:170
+#: ../../../user/misc.rst:188
+msgid "Plusses:"
+msgstr ""
+
+#: ../../../user/misc.rst:113
+msgid "Efficient"
+msgstr ""
+
+#: ../../../user/misc.rst:114
+msgid "No dependencies on other tools"
+msgstr ""
+
+#: ../../../user/misc.rst:116 ../../../user/misc.rst:140
+#: ../../../user/misc.rst:163 ../../../user/misc.rst:177
+#: ../../../user/misc.rst:194
+msgid "Minuses:"
+msgstr ""
+
+#: ../../../user/misc.rst:118
+msgid "Lots of learning overhead:"
+msgstr ""
+
+#: ../../../user/misc.rst:120
+msgid "need to learn basics of Python C API"
+msgstr ""
+
+#: ../../../user/misc.rst:121
+msgid "need to learn basics of numpy C API"
+msgstr ""
+
+#: ../../../user/misc.rst:122
+msgid "need to learn how to handle reference counting and love it."
+msgstr ""
+
+#: ../../../user/misc.rst:124
+msgid "Reference counting often difficult to get right."
+msgstr ""
+
+#: ../../../user/misc.rst:126
+msgid "getting it wrong leads to memory leaks, and worse, segfaults"
+msgstr ""
+
+#: ../../../user/misc.rst:128 ../../../user/misc.rst:210
+msgid "Cython"
+msgstr ""
+
+#: ../../../user/misc.rst:132
+msgid "avoid learning C API's"
+msgstr ""
+
+#: ../../../user/misc.rst:133
+msgid "no dealing with reference counting"
+msgstr ""
+
+#: ../../../user/misc.rst:134
+msgid "can code in pseudo python and generate C code"
+msgstr ""
+
+#: ../../../user/misc.rst:135
+msgid "can also interface to existing C code"
+msgstr ""
+
+#: ../../../user/misc.rst:136
+msgid "should shield you from changes to Python C api"
+msgstr ""
+
+#: ../../../user/misc.rst:137
+msgid "has become the de-facto standard within the scientific Python community"
+msgstr ""
+
+#: ../../../user/misc.rst:138
+msgid "fast indexing support for arrays"
+msgstr ""
+
+#: ../../../user/misc.rst:142
+msgid "Can write code in non-standard form which may become obsolete"
+msgstr ""
+
+#: ../../../user/misc.rst:143
+msgid "Not as flexible as manual wrapping"
+msgstr ""
+
+#: ../../../user/misc.rst:145
+msgid "ctypes"
+msgstr ""
+
+#: ../../../user/misc.rst:149
+msgid "part of Python standard library"
+msgstr ""
+
+#: ../../../user/misc.rst:150
+msgid ""
+"good for interfacing to existing shareable libraries, particularly Windows "
+"DLLs"
+msgstr ""
+
+#: ../../../user/misc.rst:152
+msgid "avoids API/reference counting issues"
+msgstr ""
+
+#: ../../../user/misc.rst:153
+msgid "good numpy support: arrays have all these in their ctypes attribute: ::"
+msgstr ""
+
+#: ../../../user/misc.rst:156
+msgid ""
+"a.ctypes.data\n"
+"a.ctypes.data_as\n"
+"a.ctypes.shape\n"
+"a.ctypes.shape_as\n"
+"a.ctypes.strides\n"
+"a.ctypes.strides_as"
+msgstr ""
+
+#: ../../../user/misc.rst:165
+msgid ""
+"can't use for writing code to be turned into C extensions, only a wrapper "
+"tool."
+msgstr ""
+
+#: ../../../user/misc.rst:168
+msgid "SWIG (automatic wrapper generator)"
+msgstr ""
+
+#: ../../../user/misc.rst:172
+msgid "around a long time"
+msgstr ""
+
+#: ../../../user/misc.rst:173
+msgid "multiple scripting language support"
+msgstr ""
+
+#: ../../../user/misc.rst:174
+msgid "C++ support"
+msgstr ""
+
+#: ../../../user/misc.rst:175
+msgid "Good for wrapping large (many functions) existing C libraries"
+msgstr ""
+
+#: ../../../user/misc.rst:179
+msgid "generates lots of code between Python and the C code"
+msgstr ""
+
+#: ../../../user/misc.rst:180
+msgid ""
+"can cause performance problems that are nearly impossible to optimize out"
+msgstr ""
+
+#: ../../../user/misc.rst:182
+msgid "interface files can be hard to write"
+msgstr ""
+
+#: ../../../user/misc.rst:183
+msgid ""
+"doesn't necessarily avoid reference counting issues or needing to know API's"
+msgstr ""
+
+#: ../../../user/misc.rst:186
+msgid "Psyco"
+msgstr ""
+
+#: ../../../user/misc.rst:190
+msgid ""
+"Turns pure python into efficient machine code through jit-like optimizations"
+msgstr ""
+
+#: ../../../user/misc.rst:192
+msgid "very fast when it optimizes well"
+msgstr ""
+
+#: ../../../user/misc.rst:196
+msgid "Only on intel (windows?)"
+msgstr ""
+
+#: ../../../user/misc.rst:197
+msgid "Doesn't do much for numpy?"
+msgstr ""
+
+#: ../../../user/misc.rst:200
+msgid "Interfacing to Fortran:"
+msgstr ""
+
+#: ../../../user/misc.rst:201
+msgid ""
+"The clear choice to wrap Fortran code is `f2py <https://docs.scipy.org/doc/"
+"numpy/f2py/>`_."
+msgstr ""
+
+#: ../../../user/misc.rst:204
+msgid ""
+"Pyfort is an older alternative, but not supported any longer. Fwrap is a "
+"newer project that looked promising but isn't being developed any longer."
+msgstr ""
+
+#: ../../../user/misc.rst:209
+msgid "Interfacing to C++:"
+msgstr ""
+
+#: ../../../user/misc.rst:211
+msgid "CXX"
+msgstr ""
+
+#: ../../../user/misc.rst:212
+msgid "Boost.python"
+msgstr ""
+
+#: ../../../user/misc.rst:213
+msgid "SWIG"
+msgstr ""
+
+#: ../../../user/misc.rst:214
+msgid "SIP (used mainly in PyQT)"
+msgstr ""
