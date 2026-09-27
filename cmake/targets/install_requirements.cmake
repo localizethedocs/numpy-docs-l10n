@@ -211,8 +211,9 @@ elseif (VERSION_OF_GRAPHVIZ STREQUAL "")
 else()
     set(PACKAGE_OF_GRAPHVIZ "conda-forge::doxygen=${VERSION_OF_GRAPHVIZ}")
 endif()
-set(PACKAGE_OF_BINUTILS "conda-forge::binutils")
-set(PACKAGE_OF_NINJA    "conda-forge::ninja")
+set(PACKAGE_OF_BINUTILS     "conda-forge::binutils")
+set(PACKAGE_OF_NINJA        "conda-forge::ninja")
+set(PACKAGE_OF_PKGCONFIG    "conda-forge::pkg-config")
 remove_cmake_message_indent()
 message("")
 execute_process(
@@ -225,6 +226,7 @@ execute_process(
             ${PACKAGE_OF_GRAPHVIZ}
             ${PACKAGE_OF_BINUTILS}
             ${PACKAGE_OF_NINJA}
+            ${PACKAGE_OF_PKGCONFIG}
             --prefix ${PROJ_CONDA_DIR}
             --channel conda-forge
             --yes
