@@ -1,0 +1,188 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.top_k.rst:4
+msgid "numpy.top\\_k"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:2
+msgid ""
+"Returns the ``k`` largest or smallest elements and their indices along an "
+"axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:5
+msgid ""
+"A tuple of ``(values, indices)`` is returned, where ``values`` and "
+"``indices`` are the values and indices, respectively, of the largest/"
+"smallest elements of each row of the input array in the given ``axis``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:11
+msgid "**a: array_like**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:12
+msgid "The source array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:14
+msgid "**k: int**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:15
+msgid ""
+"The number of largest/smallest elements to return. ``k`` must be a non-"
+"negative integer and within indexable range specified by ``axis``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:19
+msgid "**axis: int, optional**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:20
+msgid ""
+"Axis along which to find the largest/smallest elements. The default is -1 "
+"(the last axis)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:23
+msgid "**mode: {\"largest\", \"smallest\"}, optional**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:24
+msgid ""
+"If \"largest\", the largest elements are returned. If \"smallest\", the "
+"smallest elements are returned. The default is \"largest\"."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:27
+msgid ""
+"Similarly to sorts, NaN values are pushed to the end and therefore only "
+"present in the output if they are among the top ``k`` values, regardless of "
+"the value of ``mode``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:31
+msgid "**sorted: bool, optional**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:32
+msgid ""
+"If True, the top ``k`` elements are returned in sorted order. If False, "
+"sorted order is not guaranteed. The default is True."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:39
+msgid "tuple_of_array: tuple"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:40
+msgid ""
+"The output tuple of ``(topk_values, topk_indices)``, where ``topk_values`` "
+"are the top ``k`` values and ``topk_indices`` are the corresponding indices. "
+"Both arrays are of the shape of the input array with the dimension along "
+"``axis`` replaced by ``k``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:55
+msgid ":obj:`argpartition`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:56
+msgid "Indirect partition."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:57
+msgid ":obj:`sort`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:58
+msgid "Full sorting."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:62
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:63
+msgid ""
+"The returned indices are not guaranteed to be stable, i.e., the order of the "
+"returned indices for any duplicate values is not guaranteed to be the same "
+"as their order in the input array. This is the case regardless of the value "
+"of the ``sorted`` parameter."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:70
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:-1
+msgid ""
+"<div id=\"49ac52fc-c0c8-45ea-b475-7f6594af11bd\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('78080e56-a2b5-4037-b100-cfde60113279','49ac52fc-"
+"c0c8-45ea-b475-7f6594af11bd')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('78080e56-"
+"a2b5-4037-b100-cfde60113279','49ac52fc-c0c8-45ea-b475-7f6594af11bd')\">Open "
+"In Tab</button></div><div id=\"7e71c746-9014-452c-b344-f7b801abb033\" "
+"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.top_k:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

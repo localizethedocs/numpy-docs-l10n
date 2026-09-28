@@ -1,0 +1,317 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release/2.5.2-notes.rst:5
+msgid "NumPy 2.5.2 Release Notes"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:7
+msgid "*Released on 2026-08-09.*"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:9
+msgid ""
+"The NumPy 2.5.2 is a patch release that fixes bugs discovered after the "
+"2.5.1 release. The big news is that it includes wheels for the newly "
+"released Python 3.15.0rc1."
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:13
+msgid "This release supports Python versions 3.12-3.15"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:17
+msgid "C API changes"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:20
+msgid "``PyArray_StringDTypeObject`` is opaque under the abi3t stable ABI"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:22
+msgid ""
+"The ``PyArray_StringDTypeObject`` was accidentally exposed in NumPy 2.5 when "
+"targeting the free-threading-compatible stable ABI (``Py_TARGET_ABI3T``). "
+"``PyArray_StringDTypeObject`` is now an opaque struct: extensions compiled "
+"that way cannot access its fields, since the struct layout depends on the "
+"size of the object header. Any code that accessed "
+"``PyArray_StringDTypeObject`` fields in an abi3t build would have crashed, "
+"so we are making this API change in a bugfix release."
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:31
+msgid ""
+"The ``NpyString`` allocator API remains usable by passing the descriptor "
+"object pointer, e.g. "
+"``NpyString_acquire_allocator((PyArray_StringDTypeObject *)descr)``."
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:35
+msgid "(`gh-31771 <https://github.com/numpy/numpy/pull/31771>`__)"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:39
+msgid "Contributors"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:41
+msgid ""
+"A total of 16 people contributed to this release.  People with a \"+\" by "
+"their names contributed a patch for the first time."
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:44
+msgid "Abhijeetsingh Meena +"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:45
+msgid "Charalampos Stratakis"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:46
+msgid "Charles Harris"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:47
+msgid "Chris Ninham +"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:48
+msgid "David Woods"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:49
+msgid "Geonho +"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:50
+msgid "Gopu Yeshwanth Reddy +"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:51
+msgid "Iason Krommydas"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:52
+msgid "Ijtihed Kilani"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:53
+msgid "Jelle Zijlstra +"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:54
+msgid "Joren Hammudoglu"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:55
+msgid "Kumar Aditya"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:56
+msgid "Mike Boyle"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:57
+msgid "Nathan Goldbaum"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:58
+msgid "Raghuveer Devulapalli"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:59
+msgid "Sebastian Berg"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:62
+msgid "Pull requests merged"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:64
+msgid "A total of 28 pull requests were merged for this release."
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:66
+msgid ""
+"`#31864 <https://github.com/numpy/numpy/pull/31864>`__: MAINT: Prepare 2.5.x "
+"for further development"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:67
+msgid ""
+"`#31889 <https://github.com/numpy/numpy/pull/31889>`__: TYP: Backport "
+"multiple static typing fixes 1."
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:68
+msgid ""
+"`#31900 <https://github.com/numpy/numpy/pull/31900>`__: TST: add tests for "
+"stable ABI numpy extensions (#31822)"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:69
+msgid ""
+"`#31901 <https://github.com/numpy/numpy/pull/31901>`__: BUG: fix "
+"``StringDType`` coerce flag in binary ufunc promotion..."
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:70
+msgid ""
+"`#31902 <https://github.com/numpy/numpy/pull/31902>`__: BLD: fix meson "
+"deprecation warnings (#31892)"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:71
+msgid ""
+"`#31921 <https://github.com/numpy/numpy/pull/31921>`__: TYP: Backport "
+"multiple typing fixes 2."
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:72
+msgid ""
+"`#31947 <https://github.com/numpy/numpy/pull/31947>`__: MAINT: Update x86-"
+"simd-sort subproject (5adb334 → fa944ef) (#31908)"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:73
+msgid ""
+"`#31949 <https://github.com/numpy/numpy/pull/31949>`__: BUG: fix crash on 32 "
+"bit systems using abi3t (#31771)"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:74
+msgid ""
+"`#31950 <https://github.com/numpy/numpy/pull/31950>`__: MNT: remove some "
+"obsolete string to bool workarounds (#31859)"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:75
+msgid ""
+"`#31952 <https://github.com/numpy/numpy/pull/31952>`__: BUG: centralized "
+"helper for output coerce and na_object in stringdtype..."
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:76
+msgid ""
+"`#31953 <https://github.com/numpy/numpy/pull/31953>`__: BUG: fix CPU feature "
+"env diagnostic buffer overruns (#31905)"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:77
+msgid ""
+"`#31954 <https://github.com/numpy/numpy/pull/31954>`__: BUG: restore ndarray."
+"conjugate() for legacy user-defined dtypes..."
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:78
+msgid ""
+"`#31955 <https://github.com/numpy/numpy/pull/31955>`__: TYP: Avoid shadowed "
+"dtype annotations"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:79
+msgid ""
+"`#32077 <https://github.com/numpy/numpy/pull/32077>`__: MAINT: Update "
+"verdored-meson/meson to match main."
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:80
+msgid ""
+"`#32114 <https://github.com/numpy/numpy/pull/32114>`__: BUG: fix refcount "
+"leak on overlapping copyto with where=False"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:81
+msgid ""
+"`#32115 <https://github.com/numpy/numpy/pull/32115>`__: BUG: fix swallowed "
+"cast error in fancy indexing assignment (#31975)"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:82
+msgid ""
+"`#32116 <https://github.com/numpy/numpy/pull/32116>`__: BUG: Fix buffered "
+"iterator stride after removing multi-index"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:83
+msgid ""
+"`#32117 <https://github.com/numpy/numpy/pull/32117>`__: BUG: fix ``np."
+"fromiter`` corruption when reusing a ``StringDType``..."
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:84
+msgid ""
+"`#32119 <https://github.com/numpy/numpy/pull/32119>`__: BUG: add a special "
+"case for StringDType in np.isdtype (#32030)"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:85
+msgid ""
+"`#32121 <https://github.com/numpy/numpy/pull/32121>`__: BUG: reference leak "
+"in ``simd_sequence_from_iterable`` (#32038)"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:86
+msgid ""
+"`#32122 <https://github.com/numpy/numpy/pull/32122>`__: BUG: ensure lock is "
+"held when accessing or writing to RNG state..."
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:87
+msgid ""
+"`#32123 <https://github.com/numpy/numpy/pull/32123>`__: BUG: fully reset "
+"cached RNG state for non-MT19937 RNGs (#32062)"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:88
+msgid ""
+"`#32135 <https://github.com/numpy/numpy/pull/32135>`__: TYP: type "
+"capabilities max dimensions"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:89
+msgid ""
+"`#32158 <https://github.com/numpy/numpy/pull/32158>`__: BUG: avoid possible "
+"stack overflow in arraydescr_dealloc (#32133)"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:90
+msgid ""
+"`#32206 <https://github.com/numpy/numpy/pull/32206>`__: MAINT: Update "
+"cibuildwheel to v4.2.0"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:91
+msgid ""
+"`#32214 <https://github.com/numpy/numpy/pull/32214>`__: MAINT: Skip "
+"limited_api tests on some platforms."
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:92
+msgid ""
+"`#32220 <https://github.com/numpy/numpy/pull/32220>`__: TYP: ``isclose`` "
+"shape-typing fix for 2d array-likes (#32205)"
+msgstr ""
+
+#: ../../../release/2.5.2-notes.rst:93
+msgid ""
+"`#32221 <https://github.com/numpy/numpy/pull/32221>`__: BUG: avoid segfaults "
+"when legacy copyswap slot is not defined..."
+msgstr ""
