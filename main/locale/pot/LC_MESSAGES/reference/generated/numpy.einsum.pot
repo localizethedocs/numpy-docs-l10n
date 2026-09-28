@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,7 +54,7 @@ msgid "Parameters"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:21
+#: of numpy.einsum:17
 msgid "**subscripts**"
 msgstr ""
 
@@ -73,7 +73,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:24
+#: of numpy.einsum:23
 msgid "**operands**"
 msgstr ""
 
@@ -88,7 +88,7 @@ msgid "These are the arrays for the operation."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:27
+#: of numpy.einsum:26
 msgid "**out**"
 msgstr ""
 
@@ -103,7 +103,7 @@ msgid "If provided, the calculation is done into this array."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:32
+#: of numpy.einsum:29
 msgid "**dtype**"
 msgstr ""
 
@@ -121,7 +121,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:40
+#: of numpy.einsum:34
 msgid "**order**"
 msgstr ""
 
@@ -141,7 +141,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:53
+#: of numpy.einsum:42
 msgid "**casting**"
 msgstr ""
 
@@ -190,7 +190,7 @@ msgid "Default is 'safe'."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:61
+#: of numpy.einsum:55
 msgid "**optimize**"
 msgstr ""
 
@@ -214,13 +214,13 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:72
+#: of numpy.einsum:65
 msgid "**output**"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.einsum:-1
-msgid "ndarray"
+msgid "ndarray or scalar"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
@@ -229,19 +229,47 @@ msgid "The calculation based on the Einstein summation convention."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:77
+#: of numpy.einsum:68
+msgid ""
+"An output with one or more indices is always returned as an ndarray. When "
+"the output has no indices (e.g. ``'i,i->'``) the result is 0-dimensional and "
+"the exact type depends on the arguments:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:73
+msgid "If `out` is given, it is returned unchanged (an ndarray)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:74
+msgid ""
+"With the default ``optimize=False``, a scalar (e.g. ``np.float64``) is "
+"returned rather than a 0-d array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:76
+msgid ""
+"With ``optimize`` enabled the 0-d result may be either a scalar or a 0-d "
+"ndarray depending on the contraction path, and should not be relied upon. "
+"Pass `out` to guarantee an ndarray."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.einsum:89
 msgid ""
 ":obj:`einsum_path`, :obj:`dot`, :obj:`inner`, :obj:`outer`, :obj:"
 "`tensordot`, :obj:`linalg.multi_dot`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:79
+#: of numpy.einsum:91
 msgid ":obj:`einsum`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:80
+#: of numpy.einsum:92
 msgid ""
 "Similar verbose interface is provided by the `einops <https://github.com/"
 "arogozhnikov/einops>`_ package to cover additional operations: transpose, "
@@ -251,12 +279,12 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:84
+#: of numpy.einsum:96
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:85
+#: of numpy.einsum:97
 msgid ""
 "The Einstein summation convention can be used to compute many multi-"
 "dimensional, linear algebraic array operations. `einsum` provides a succinct "
@@ -264,79 +292,79 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:89
+#: of numpy.einsum:101
 msgid ""
 "A non-exhaustive list of these operations, which can be computed by "
 "`einsum`, is shown below along with examples:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:92
+#: of numpy.einsum:104
 msgid "Trace of an array, :py:func:`numpy.trace`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:93
+#: of numpy.einsum:105
 msgid "Return a diagonal, :py:func:`numpy.diag`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:94
+#: of numpy.einsum:106
 msgid "Array axis summations, :py:func:`numpy.sum`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:95
+#: of numpy.einsum:107
 msgid "Transpositions and permutations, :py:func:`numpy.transpose`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:96
+#: of numpy.einsum:108
 msgid "Matrix multiplication and dot product, :py:func:`numpy.matmul`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:97
+#: of numpy.einsum:109
 msgid ":py:func:`numpy.dot`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:98
+#: of numpy.einsum:110
 msgid "Vector inner and outer products, :py:func:`numpy.inner`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:99
+#: of numpy.einsum:111
 msgid ":py:func:`numpy.outer`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:100
+#: of numpy.einsum:112
 msgid "Broadcasting, element-wise and scalar multiplication,"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:101
+#: of numpy.einsum:113
 msgid ":py:func:`numpy.multiply`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:102
+#: of numpy.einsum:114
 msgid "Tensor contractions, :py:func:`numpy.tensordot`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:104
+#: of numpy.einsum:115
 msgid "Chained array operations, in efficient calculation order,"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:104
+#: of numpy.einsum:116
 msgid ":py:func:`numpy.einsum_path`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:106
+#: of numpy.einsum:118
 msgid ""
 "The subscripts string is a comma-separated list of subscript labels, where "
 "each label refers to a dimension of the corresponding operand. Whenever a "
@@ -351,7 +379,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:118
+#: of numpy.einsum:130
 msgid ""
 "In *implicit mode*, the chosen subscripts are important since the axes of "
 "the output are reordered alphabetically.  This means that ``np.einsum('ij', "
@@ -362,7 +390,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:126
+#: of numpy.einsum:138
 msgid ""
 "In *explicit mode* the output can be directly controlled by specifying "
 "output subscript labels.  This requires the identifier '->' as well as the "
@@ -378,7 +406,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:139
+#: of numpy.einsum:151
 msgid ""
 "To enable and control broadcasting, use an ellipsis.  Default NumPy-style "
 "broadcasting is done by adding an ellipsis to the left of each term, like "
@@ -390,7 +418,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:149
+#: of numpy.einsum:161
 msgid ""
 "When there is only one operand, no axes are summed, and no output parameter "
 "is provided, a view into the operand is returned instead of a new array.  "
@@ -399,7 +427,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:154
+#: of numpy.einsum:166
 msgid ""
 "`einsum` also provides an alternative way to provide the subscripts and "
 "operands as ``einsum(op0, sublist0, op1, sublist1, ..., [sublistout])``. If "
@@ -409,7 +437,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:161
+#: of numpy.einsum:173
 msgid ""
 "Views returned from einsum are now writeable whenever the input array is "
 "writeable. For example, ``np.einsum('ijk...->kji...', a)`` will now have the "
@@ -419,7 +447,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:167
+#: of numpy.einsum:179
 msgid ""
 "Added the ``optimize`` argument which will optimize the contraction order of "
 "an einsum expression. For a contraction with three or more operands this can "
@@ -428,7 +456,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:172
+#: of numpy.einsum:184
 msgid ""
 "Typically a 'greedy' algorithm is applied which empirical tests have shown "
 "returns the optimal path in the majority of cases. In some cases 'optimal' "
@@ -439,79 +467,79 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:179
+#: of numpy.einsum:191
 msgid "See :py:func:`numpy.einsum_path` for more details."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:183
+#: of numpy.einsum:195
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:192
+#: of numpy.einsum:204
 msgid "Trace of a matrix:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:201
+#: of numpy.einsum:213
 msgid "Extract the diagonal (requires explicit form):"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:210
+#: of numpy.einsum:222
 msgid "Sum over an axis (requires explicit form):"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:219
+#: of numpy.einsum:231
 msgid ""
 "For higher dimensional arrays summing a single axis can be done with "
 "ellipsis:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:227
+#: of numpy.einsum:239
 msgid "Compute a matrix transpose, or reorder any number of axes:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:246
+#: of numpy.einsum:258
 msgid "Vector inner products:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:255
+#: of numpy.einsum:267
 msgid "Matrix vector multiplication:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:266
+#: of numpy.einsum:278
 msgid "Broadcasting and scalar multiplication:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:281
+#: of numpy.einsum:293
 msgid "Vector outer product:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:293
+#: of numpy.einsum:305
 msgid "Tensor contraction:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:316
+#: of numpy.einsum:328
 msgid "Writeable returned arrays (since version 1.10.0):"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:325
+#: of numpy.einsum:337
 msgid "Example of ellipsis use:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:339
+#: of numpy.einsum:351
 msgid ""
 "Chained array operations. For more complicated contractions, speed ups might "
 "be achieved by repeatedly computing a 'greedy' path or pre-computing the "
@@ -521,39 +549,39 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:347
+#: of numpy.einsum:359
 msgid "Basic `einsum`: ~1520ms  (benchmarked on 3.1GHz Intel i5.)"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:352
+#: of numpy.einsum:364
 msgid "Sub-optimal `einsum` (due to repeated path calculation time): ~330ms"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:358
+#: of numpy.einsum:370
 msgid "Greedy `einsum` (faster optimal path approximation): ~160ms"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.einsum:363
+#: of numpy.einsum:375
 msgid "Optimal `einsum` (best usage pattern in some use cases): ~110ms"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.einsum:-1
 msgid ""
-"<div id=\"713e98ed-a5d0-459b-8867-338a524b366e\" "
+"<div id=\"608dd2d0-e921-45a5-a14e-4831509805df\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('324016db-5952-4ab8-bbc9-e0399115e2f0','713e98ed-"
-"a5d0-459b-8867-338a524b366e')\">Go Back</button><button "
+"tryExamplesHideIframe('a136b6cc-74fa-42c6-bfa5-fe621f1eb612','608dd2d0-"
+"e921-45a5-a14e-4831509805df')\">Go Back</button><button "
 "class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('324016db-5952-4ab8-bbc9-e0399115e2f0','713e98ed-"
-"a5d0-459b-8867-338a524b366e')\">Open In Tab</button></div><div id=\"d95d5598-"
-"de5c-4247-8df4-a7c9c820a081\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"openInNewTab('a136b6cc-74fa-42c6-bfa5-fe621f1eb612','608dd2d0-e921-45a5-"
+"a14e-4831509805df')\">Open In Tab</button></div><div id=\"56a07536-7e72-4d13-"
+"abaf-e8ab7bbb54ca\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
