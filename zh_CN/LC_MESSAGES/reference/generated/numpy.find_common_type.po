@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.find_common_type.rst:4
+msgid "numpy.find\\_common\\_type"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.find_common_type:2
+msgid "Determine common type following standard coercion rules."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.find_common_type:4
+msgid "1.25"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.find_common_type:6
+msgid ""
+"This function is deprecated, use `numpy.promote_types` or `numpy."
+"result_type` instead.  To achieve semantics for the `scalar_types` argument, "
+"use `numpy.result_type` and pass the Python values `0`, `0.0`, or `0j`. This "
+"will give the same results in almost all cases. More information and rare "
+"exception can be found in the `NumPy 1.25 release notes <https://numpy.org/"
+"devdocs/release/1.25.0-notes.html>`_."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.find_common_type:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.find_common_type:17
+msgid "**array_types**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.find_common_type:-1
+msgid "sequence"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.find_common_type:17
+msgid "A list of dtypes or dtype convertible objects representing arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.find_common_type:20
+msgid "**scalar_types**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.find_common_type:20
+msgid "A list of dtypes or dtype convertible objects representing scalars."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.find_common_type:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.find_common_type:34
+msgid "**datatype**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.find_common_type:-1
+msgid "dtype"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.find_common_type:25
+msgid ""
+"The common data type, which is the maximum of `array_types` ignoring "
+"`scalar_types`, unless the maximum of `scalar_types` is of a different kind "
+"(`dtype.kind`). If the kind is not understood, then None is returned."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.find_common_type:39
+msgid ":obj:`dtype`, :obj:`common_type`, :obj:`can_cast`, :obj:`mintypecode`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.find_common_type:45
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.find_common_type:51
+msgid ""
+"The standard casting rules ensure that a scalar cannot up-cast an array "
+"unless the scalar is of a fundamentally different kind of data (i.e. under a "
+"different hierarchy in the data type hierarchy) then the array:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.find_common_type:59
+msgid ""
+"Complex is of a different type, so it up-casts the float in the "
+"`array_types` argument:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.find_common_type:65
+msgid ""
+"Type specifier strings are convertible to dtypes and can therefore be used "
+"instead of dtypes:"
+msgstr ""

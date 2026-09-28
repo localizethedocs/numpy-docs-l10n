@@ -1,0 +1,177 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.put_along_axis.rst:4
+msgid "numpy.put\\_along\\_axis"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:2
+msgid ""
+"Put values into the destination array by matching 1d index and data slices."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:4
+msgid ""
+"This iterates over matching 1d slices oriented along the specified axis in "
+"the index and data arrays, and uses the former to place values into the "
+"latter. These slices can be different lengths."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:8
+msgid ""
+"Functions returning an index along an axis, like `argsort` and "
+"`argpartition`, produce suitable indices for this function."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:16
+msgid "**arr**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:-1
+msgid "ndarray (Ni..., M, Nk...)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:16
+msgid "Destination array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:21
+msgid "**indices**"
+msgstr "**indices**"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:-1
+msgid "ndarray (Ni..., J, Nk...)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:19
+msgid ""
+"Indices to change along each 1d slice of `arr`. This must match the "
+"dimension of arr, but dimensions in Ni and Nj may be 1 to broadcast against "
+"`arr`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:25
+msgid "**values**"
+msgstr "**values**"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:-1
+msgid "array_like (Ni..., J, Nk...)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:24
+msgid ""
+"values to insert at those indices. Its shape and dimension are broadcast to "
+"match that of `indices`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:36
+msgid "**axis**"
+msgstr "**axis**"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:-1
+msgid "int"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:28
+msgid ""
+"The axis to take 1d slices along. If axis is None, the destination array is "
+"treated as if a flattened 1d view had been created of it."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:41
+msgid ":obj:`take_along_axis`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:42
+msgid "Take values from the input array by matching 1d index and data slices"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:46
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:47
+msgid ""
+"This is equivalent to (but faster than) the following use of `ndindex` and "
+"`s_`, which sets each of ``ii`` and ``kk`` to a tuple of indices::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:50
+msgid ""
+"Ni, M, Nk = a.shape[:axis], a.shape[axis], a.shape[axis+1:]\n"
+"J = indices.shape[axis]  # Need not equal M\n"
+"\n"
+"for ii in ndindex(Ni):\n"
+"    for kk in ndindex(Nk):\n"
+"        a_1d       = a      [ii + s_[:,] + kk]\n"
+"        indices_1d = indices[ii + s_[:,] + kk]\n"
+"        values_1d  = values [ii + s_[:,] + kk]\n"
+"        for j in range(J):\n"
+"            a_1d[indices_1d[j]] = values_1d[j]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:61
+msgid "Equivalently, eliminating the inner loop, the last two lines would be::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:63
+msgid "a_1d[indices_1d] = values_1d"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:67
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:68
+msgid "For this sample array"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.put_along_axis:72
+msgid "We can replace the maximum values with:"
+msgstr ""

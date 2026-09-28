@@ -1,0 +1,1337 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/distutils.rst:3
+msgid "Packaging (:mod:`numpy.distutils`)"
+msgstr ""
+
+#: ../../../reference/distutils.rst:9
+msgid ""
+"``numpy.distutils`` is deprecated, and will be removed for Python >= 3.12. "
+"For more details, see :ref:`distutils-status-migration`"
+msgstr ""
+
+#: ../../../reference/distutils.rst:14
+msgid ""
+"Note that ``setuptools`` does major releases often and those may contain "
+"changes that break ``numpy.distutils``, which will *not* be updated anymore "
+"for new ``setuptools`` versions. It is therefore recommended to set an upper "
+"version bound in your build configuration for the last known version of "
+"``setuptools`` that works with your build."
+msgstr ""
+
+#: ../../../reference/distutils.rst:20
+msgid ""
+"NumPy provides enhanced distutils functionality to make it easier to build "
+"and install sub-packages, auto-generate code, and extension modules that use "
+"Fortran-compiled libraries. To use features of NumPy distutils, use the :"
+"func:`setup <core.setup>` command from :mod:`numpy.distutils.core`. A "
+"useful :class:`Configuration <misc_util.Configuration>` class is also "
+"provided in :mod:`numpy.distutils.misc_util` that can make it easier to "
+"construct keyword arguments to pass to the setup function (by passing the "
+"dictionary obtained from the todict() method of the class). More information "
+"is available in the :ref:`distutils-user-guide`."
+msgstr ""
+
+#: ../../../reference/distutils.rst:31
+msgid ""
+"The choice and location of linked libraries such as BLAS and LAPACK as well "
+"as include paths and other such build options can be specified in a ``site."
+"cfg`` file located in the NumPy root repository or a ``.numpy-site.cfg`` "
+"file in your home directory. See the ``site.cfg.example`` example file "
+"included in the NumPy repository or sdist for documentation."
+msgstr ""
+
+#: ../../../reference/distutils.rst:42
+msgid "Modules in :mod:`numpy.distutils`"
+msgstr ""
+
+#: ../../../reference/distutils.rst:63:<autosummary>:1
+msgid ":py:obj:`ccompiler <numpy.distutils.ccompiler>`\\"
+msgstr ""
+
+#: ../../../reference/distutils.rst:63:<autosummary>:1
+msgid ":py:obj:`ccompiler_opt <numpy.distutils.ccompiler_opt>`\\"
+msgstr ""
+
+#: ../../../reference/distutils.rst:63:<autosummary>:1
+msgid ""
+"Provides the `CCompilerOpt` class, used for handling the CPU/hardware "
+"optimization, starting from parsing the command arguments, to managing the "
+"relation between the CPU baseline and dispatch-able features, also "
+"generating the required C headers and ending with compiling the sources with "
+"proper compiler's flags."
+msgstr ""
+
+#: ../../../reference/distutils.rst:63:<autosummary>:1
+msgid ":py:obj:`cpuinfo.cpu <numpy.distutils.cpuinfo.cpu>`\\"
+msgstr ""
+
+#: ../../../reference/distutils.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`core.Extension <numpy.distutils.core.Extension>`\\ \\(name\\, "
+"sources\\[\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_dir:0
+#: numpy.distutils.misc_util.Configuration.add_data_files:0
+#: numpy.distutils.misc_util.Configuration.add_extension:0
+#: numpy.distutils.misc_util.Configuration.add_headers:0
+#: numpy.distutils.misc_util.Configuration.add_installed_library:0
+#: numpy.distutils.misc_util.Configuration.add_library:0
+#: numpy.distutils.misc_util.Configuration.add_npy_pkg_config:0
+#: numpy.distutils.misc_util.Configuration.add_subpackage:0
+#: numpy.distutils.misc_util.Configuration.get_subpackage:0
+#: ../../../reference/distutils.rst:63:<autosummary>:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../reference/distutils.rst:63:<autosummary>:1
+msgid ":py:obj:`exec_command <numpy.distutils.exec_command>`\\"
+msgstr ""
+
+#: ../../../reference/distutils.rst:63:<autosummary>:1
+msgid "exec_command"
+msgstr ""
+
+#: ../../../reference/distutils.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`log.set_verbosity <numpy.distutils.log.set_verbosity>`\\ \\(v\\[\\, "
+"force\\]\\)"
+msgstr ""
+
+#: ../../../reference/distutils.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`system_info.get_info <numpy.distutils.system_info.get_info>`\\ "
+"\\(name\\[\\, notfound\\_action\\]\\)"
+msgstr ""
+
+#: ../../../reference/distutils.rst:63:<autosummary>:1
+msgid "notfound_action:"
+msgstr ""
+
+#: ../../../reference/distutils.rst:63:<autosummary>:1
+msgid ""
+":py:obj:`system_info.get_standard_file <numpy.distutils.system_info."
+"get_standard_file>`\\ \\(fname\\)"
+msgstr ""
+
+#: ../../../reference/distutils.rst:63:<autosummary>:1
+msgid ""
+"Returns a list of files named 'fname' from 1) System-wide directory "
+"(directory-location of this module) 2) Users HOME directory (os."
+"environ['HOME']) 3) Local directory"
+msgstr ""
+
+#: ../../../reference/distutils.rst:65
+msgid "Configuration class"
+msgstr ""
+
+#: ../../../reference/distutils.rst:71
+msgid ""
+"Construct a configuration instance for the given package name. If "
+"*parent_name* is not None, then construct the package as a sub-package of "
+"the *parent_name* package. If *top_path* and *package_path* are None then "
+"they are assumed equal to the path of the file this instance was created in. "
+"The setup.py files in the numpy distribution are good examples of how to use "
+"the :class:`Configuration` instance."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.todict:2
+msgid ""
+"Return a dictionary compatible with the keyword arguments of distutils setup "
+"function."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_dir:42
+#: numpy.distutils.misc_util.Configuration.add_data_files:71
+#: numpy.distutils.misc_util.Configuration.add_npy_pkg_config:42
+#: numpy.distutils.misc_util.Configuration.todict:18
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.get_distribution:2
+msgid "Return the distutils distribution object for self."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.get_subpackage:2
+msgid "Return list of subpackage configurations."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_subpackage:10
+#: numpy.distutils.misc_util.Configuration.get_subpackage:9
+msgid "**subpackage_name**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.get_subpackage:-1
+msgid "str or None"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.get_subpackage:8
+msgid ""
+"Name of the subpackage to get the configuration. '*' in subpackage_name is "
+"handled as a wildcard."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_subpackage:15
+#: numpy.distutils.misc_util.Configuration.get_subpackage:14
+msgid "**subpackage_path**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:-1
+#: numpy.distutils.misc_util.Configuration.add_installed_library:-1
+#: numpy.distutils.misc_util.Configuration.add_library:-1
+#: numpy.distutils.misc_util.Configuration.add_npy_pkg_config:-1
+#: numpy.distutils.misc_util.Configuration.add_subpackage:-1
+#: numpy.distutils.misc_util.Configuration.get_subpackage:-1
+msgid "str"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.get_subpackage:12
+msgid ""
+"If None, then the path is assumed to be the local path plus the "
+"subpackage_name. If a setup.py file is not found in the subpackage_path, "
+"then a default configuration is used."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.get_subpackage:30
+msgid "**parent_name**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.get_subpackage:17
+msgid "Parent name."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_subpackage:2
+msgid "Add a sub-package to the current Configuration instance."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_subpackage:4
+msgid ""
+"This is useful in a setup.py script for adding sub-packages to a package."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_subpackage:10
+msgid "name of the subpackage"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_subpackage:13
+msgid ""
+"if given, the subpackage path such as the subpackage is in subpackage_path / "
+"subpackage_name. If None,the subpackage is assumed to be located in the "
+"local path / subpackage_name."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_subpackage:31
+msgid "**standalone**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_subpackage:-1
+msgid "bool"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:2
+msgid "Add data files to configuration data_files."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:20
+#: numpy.distutils.misc_util.Configuration.add_headers:30
+msgid "**files**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:-1
+#: numpy.distutils.misc_util.Configuration.add_installed_library:-1
+#: numpy.distutils.misc_util.Configuration.add_library:-1
+msgid "sequence"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:8
+msgid "Argument(s) can be either"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:10
+msgid "2-sequence (<datadir prefix>,<path to data file(s)>)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:11
+msgid ""
+"paths to data files where python datadir prefix defaults to package dir."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_dir:28
+#: numpy.distutils.misc_util.Configuration.add_data_files:23
+#: numpy.distutils.misc_util.Configuration.add_extension:88
+#: numpy.distutils.misc_util.Configuration.add_installed_library:49
+#: numpy.distutils.misc_util.Configuration.add_npy_pkg_config:36
+#: numpy.distutils.misc_util.Configuration.get_version:17
+#: numpy.distutils.misc_util.Configuration.have_f77c:17
+#: numpy.distutils.misc_util.Configuration.have_f90c:17
+#: numpy.distutils.misc_util.Configuration.make_svn_version_py:19
+msgid "Notes"
+msgstr "備註"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:24
+msgid ""
+"The form of each element of the files sequence is very flexible allowing "
+"many combinations of where to get the files from the package and where they "
+"should ultimately be installed on the system. The most basic usage is for an "
+"element of the files argument sequence to be a simple filename. This will "
+"cause that file from the local path to be installed to the installation path "
+"of the self.name package (package path). The file argument can also be a "
+"relative path in which case the entire relative path will be installed into "
+"the package directory. Finally, the file can be an absolute path name in "
+"which case the file will be found at the absolute path name but installed to "
+"the package path."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:36
+msgid ""
+"This basic behavior can be augmented by passing a 2-tuple in as the file "
+"argument. The first element of the tuple should specify the relative path "
+"(under the package install directory) where the remaining sequence of files "
+"should be installed to (it has nothing to do with the file-names in the "
+"source distribution). The second element of the tuple is the sequence of "
+"files that should be installed. The files in this sequence can be filenames, "
+"relative paths, or absolute paths. For absolute paths the file will be "
+"installed in the top-level package installation directory (regardless of the "
+"first argument). Filenames and relative path names will be installed in the "
+"package install directory under the path name given as the first element of "
+"the tuple."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:49
+msgid "Rules for installation paths:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:51
+msgid "file.txt -> (., file.txt)-> parent/file.txt"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:52
+msgid "foo/file.txt -> (foo, foo/file.txt) -> parent/foo/file.txt"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:53
+msgid "/foo/bar/file.txt -> (., /foo/bar/file.txt) -> parent/file.txt"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:54
+msgid "``*``.txt -> parent/a.txt, parent/b.txt"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:55
+msgid "foo/``*``.txt`` -> parent/foo/a.txt, parent/foo/b.txt"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:56
+msgid ""
+"``*/*.txt`` -> (``*``, ``*``/``*``.txt) -> parent/c/a.txt, parent/d/b.txt"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:57
+msgid "(sun, file.txt) -> parent/sun/file.txt"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:58
+msgid "(sun, bar/file.txt) -> parent/sun/file.txt"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:59
+msgid "(sun, /foo/bar/file.txt) -> parent/sun/file.txt"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:60
+msgid "(sun, ``*``.txt) -> parent/sun/a.txt, parent/sun/b.txt"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:61
+msgid "(sun, bar/``*``.txt) -> parent/sun/a.txt, parent/sun/b.txt"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:62
+msgid "(sun/``*``, ``*``/``*``.txt) -> parent/sun/c/a.txt, parent/d/b.txt"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:64
+msgid ""
+"An additional feature is that the path to a data-file can actually be a "
+"function that takes no arguments and returns the actual path(s) to the data-"
+"files. This is useful when the data files are generated while building the "
+"package."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:72
+msgid "Add files to the list of data_files to be included with the package."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:79
+msgid "will install these data files to::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:81
+msgid ""
+"<package install directory>/\n"
+" foo.dat\n"
+" fun/\n"
+"   gun.dat\n"
+"   nun/\n"
+"     pun.dat\n"
+" sun.dat\n"
+" bar/\n"
+"   car.dat\n"
+" can.dat"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_files:92
+msgid ""
+"where <package install directory> is the package (or sub-package) directory "
+"such as '/usr/lib/python2.4/site-packages/mypackage' ('C: \\Python2.4 \\Lib "
+"\\site-packages \\mypackage') or '/usr/lib/python2.4/site- packages/"
+"mypackage/mysubpackage' ('C: \\Python2.4 \\Lib \\site-packages \\mypackage "
+"\\mysubpackage')."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_dir:2
+msgid "Recursively add files under data_path to data_files list."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_dir:4
+msgid ""
+"Recursively add files under data_path to the list of data_files to be "
+"installed (and distributed). The data_path can be either a relative path-"
+"name, or an absolute path-name, or a 2-tuple where the first argument shows "
+"where in the install directory the data directory should be installed to."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_dir:25
+msgid "**data_path**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_dir:-1
+msgid "seq or str"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_dir:13
+msgid "Argument can be either"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_dir:15
+msgid "2-sequence (<datadir suffix>, <path to data directory>)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_dir:16
+msgid ""
+"path to data directory where python datadir suffix defaults to package dir."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_dir:29
+msgid "Rules for installation paths::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_dir:31
+msgid ""
+"foo/bar -> (foo/bar, foo/bar) -> parent/foo/bar\n"
+"(gun, foo/bar) -> parent/gun\n"
+"foo/* -> (foo/a, foo/a), (foo/b, foo/b) -> parent/foo/a, parent/foo/b\n"
+"(gun, foo/*) -> (gun, foo/a), (gun, foo/b) -> gun\n"
+"(gun/*, foo/*) -> parent/gun/a, parent/gun/b\n"
+"/foo/bar -> (bar, /foo/bar) -> parent/bar\n"
+"(gun, /foo/bar) -> parent/gun\n"
+"(fun/*/gun/*, sun/foo/bar) -> parent/fun/foo/gun/bar"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_dir:43
+msgid ""
+"For example suppose the source directory contains fun/foo.dat and fun/bar/"
+"car.dat:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_dir:50
+msgid "Will install data-files to the locations::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_data_dir:52
+msgid ""
+"<package install directory>/\n"
+"  fun/\n"
+"    foo.dat\n"
+"    bar/\n"
+"      car.dat\n"
+"  sun/\n"
+"    foo.dat\n"
+"    bar/\n"
+"      car.dat\n"
+"  gun/\n"
+"    foo.dat\n"
+"    car.dat"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_include_dirs:2
+msgid "Add paths to configuration include directories."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_include_dirs:4
+msgid ""
+"Add the given sequence of paths to the beginning of the include_dirs list. "
+"This list will be visible to all extension modules of the current package."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_headers:2
+msgid "Add installable headers to configuration."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_headers:4
+msgid ""
+"Add the given sequence of files to the beginning of the headers list. By "
+"default, headers will be installed under <python- include>/<self.name."
+"replace('.','/')>/ directory. If an item of files is a tuple, then its first "
+"argument specifies the actual installation location relative to the <python-"
+"include> path."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_headers:-1
+msgid "str or seq"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_headers:13
+msgid "Argument(s) can be either:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_headers:15
+msgid "2-sequence (<includedir suffix>,<path to header file(s)>)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_headers:16
+msgid ""
+"path(s) to header file(s) where python includedir suffix will default to "
+"package name."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:2
+msgid "Add extension to configuration."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:4
+msgid ""
+"Create and add an Extension instance to the ext_modules list. This method "
+"also takes the following optional keyword arguments that are passed on to "
+"the Extension constructor."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:11
+#: numpy.distutils.misc_util.Configuration.add_installed_library:11
+#: numpy.distutils.misc_util.Configuration.add_library:8
+msgid "**name**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:11
+msgid "name of the extension"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:20
+#: numpy.distutils.misc_util.Configuration.add_installed_library:14
+#: numpy.distutils.misc_util.Configuration.add_library:17
+msgid "**sources**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:-1
+msgid "seq"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:14
+msgid ""
+"list of the sources. The list of sources may contain functions (called "
+"source generators) which must take an extension instance and a build "
+"directory as inputs and return a source file or list of source files or "
+"None. If None is returned then no sources are generated. If the Extension "
+"instance has no sources after processing all source generators, then no "
+"extension module is built."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:23
+msgid "**include_dirs**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:26
+msgid "**define_macros**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:29
+msgid "**undef_macros**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:32
+msgid "**library_dirs**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:35
+msgid "**libraries**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:38
+msgid "**runtime_library_dirs**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:41
+msgid "**extra_objects**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:44
+msgid "**extra_compile_args**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:47
+msgid "**extra_link_args**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:50
+msgid "**extra_f77_compile_args**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:53
+msgid "**extra_f90_compile_args**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:56
+msgid "**export_symbols**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:59
+msgid "**swig_opts**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:65
+msgid "**depends**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:62
+msgid ""
+"The depends list contains paths to files or directories that the sources of "
+"the extension module depend on. If any path in the depends list is newer "
+"than the extension module, then the module will be rebuilt."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:68
+msgid "**language**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:71
+msgid "**f2py_options**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:74
+msgid "**module_dirs**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:85
+msgid "**extra_info**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:-1
+msgid "dict or list"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:77
+msgid "dict or list of dict of keywords to be appended to keywords."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_extension:89
+msgid ""
+"The self.paths(...) method is applied to all lists that may contain paths."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_library:2
+msgid "Add library to configuration."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_library:8
+msgid "Name of the extension."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_library:11
+msgid ""
+"List of the sources. The list of sources may contain functions (called "
+"source generators) which must take an extension instance and a build "
+"directory as inputs and return a source file or list of source files or "
+"None. If None is returned then no sources are generated. If the Extension "
+"instance has no sources after processing all source generators, then no "
+"extension module is built."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_installed_library:29
+#: numpy.distutils.misc_util.Configuration.add_library:42
+msgid "**build_info**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_installed_library:-1
+#: numpy.distutils.misc_util.Configuration.add_library:-1
+#: numpy.distutils.misc_util.Configuration.add_npy_pkg_config:-1
+msgid "dict, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_installed_library:20
+#: numpy.distutils.misc_util.Configuration.add_library:20
+msgid "The following keys are allowed:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_installed_library:22
+#: numpy.distutils.misc_util.Configuration.add_library:22
+msgid "depends"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_installed_library:23
+#: numpy.distutils.misc_util.Configuration.add_library:23
+msgid "macros"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_installed_library:24
+#: numpy.distutils.misc_util.Configuration.add_library:24
+msgid "include_dirs"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_installed_library:25
+#: numpy.distutils.misc_util.Configuration.add_library:25
+msgid "extra_compiler_args"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_installed_library:26
+#: numpy.distutils.misc_util.Configuration.add_library:26
+msgid "extra_f77_compile_args"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_installed_library:27
+#: numpy.distutils.misc_util.Configuration.add_library:27
+msgid "extra_f90_compile_args"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_installed_library:28
+#: numpy.distutils.misc_util.Configuration.add_library:28
+msgid "f2py_options"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_installed_library:29
+#: numpy.distutils.misc_util.Configuration.add_library:29
+msgid "language"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_scripts:2
+msgid "Add scripts to configuration."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_scripts:4
+msgid ""
+"Add the sequence of files to the beginning of the scripts list. Scripts will "
+"be installed under the <prefix>/bin/ directory."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_installed_library:2
+msgid "Similar to add_library, but the specified library is installed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_installed_library:4
+msgid ""
+"Most C libraries used with `distutils` are only used to build python "
+"extensions, but libraries built through this method will be installed so "
+"that they can be reused by third-party packages."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_installed_library:11
+msgid "Name of the installed library."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_installed_library:14
+msgid "List of the library's source files. See `add_library` for details."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_installed_library:17
+#: numpy.distutils.misc_util.Configuration.add_npy_pkg_config:14
+msgid "**install_dir**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_installed_library:17
+msgid "Path to install the library, relative to the current sub-package."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_installed_library:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_installed_library:40
+msgid "None"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_installed_library:45
+msgid ":obj:`add_library`, :obj:`add_npy_pkg_config`, :obj:`get_info`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_installed_library:50
+msgid ""
+"The best way to encode the options required to link against the specified C "
+"libraries is to use a \"libname.ini\" file, and use `get_info` to retrieve "
+"the required options (see `add_npy_pkg_config` for more information)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_npy_pkg_config:2
+msgid "Generate and install a npy-pkg config file from a template."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_npy_pkg_config:4
+msgid ""
+"The config file generated from `template` is installed in the given install "
+"directory, using `subst_dict` for variable substitution."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_npy_pkg_config:10
+msgid "**template**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_npy_pkg_config:10
+msgid "The path of the template, relatively to the current package path."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_npy_pkg_config:13
+msgid ""
+"Where to install the npy-pkg config file, relatively to the current package "
+"path."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_npy_pkg_config:27
+msgid "**subst_dict**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_npy_pkg_config:17
+msgid ""
+"If given, any string of the form ``@key@`` will be replaced by "
+"``subst_dict[key]`` in the template file when installed. The install prefix "
+"is always available through the variable ``@prefix@``, since the install "
+"prefix is not easy to get reliably from setup.py."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_npy_pkg_config:32
+msgid ":obj:`add_installed_library`, :obj:`get_info`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_npy_pkg_config:37
+msgid ""
+"This works for both standard installs and in-place builds, i.e. the "
+"``@prefix@`` refer to the source directory for in-place builds."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_npy_pkg_config:45
+msgid "config.add_npy_pkg_config('foo.ini.in', 'lib', {'foo': bar})"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_npy_pkg_config:47
+msgid "Assuming the foo.ini.in file has the following content::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_npy_pkg_config:49
+msgid ""
+"[meta]\n"
+"Name=@foo@\n"
+"Version=1.0\n"
+"Description=dummy description\n"
+"\n"
+"[default]\n"
+"Cflags=-I@prefix@/include\n"
+"Libs="
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_npy_pkg_config:58
+msgid "The generated file will have the following content::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_npy_pkg_config:60
+msgid ""
+"[meta]\n"
+"Name=bar\n"
+"Version=1.0\n"
+"Description=dummy description\n"
+"\n"
+"[default]\n"
+"Cflags=-Iprefix_dir/include\n"
+"Libs="
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_npy_pkg_config:69
+msgid "and will be installed as foo.ini in the 'lib' subpath."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_npy_pkg_config:71
+msgid ""
+"When cross-compiling with numpy distutils, it might be necessary to use "
+"modified npy-pkg-config files.  Using the default/generated files will link "
+"with the host libraries (i.e. libnpymath.a).  For cross-compilation you of-"
+"course need to link with target libraries, while using the host Python "
+"installation."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_npy_pkg_config:77
+msgid ""
+"You can copy out the numpy/core/lib/npy-pkg-config directory, add a pkgdir "
+"value to the .ini files and set NPY_PKG_CONFIG_PATH environment variable to "
+"point to the directory with the modified npy-pkg-config files."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_npy_pkg_config:82
+msgid "Example npymath.ini modified for cross-compilation::"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.add_npy_pkg_config:84
+msgid ""
+"[meta]\n"
+"Name=npymath\n"
+"Description=Portable, core math library implementing C99 standard\n"
+"Version=0.1\n"
+"\n"
+"[variables]\n"
+"pkgname=numpy.core\n"
+"pkgdir=/build/arm-linux-gnueabi/sysroot/usr/lib/python3.7/site-packages/"
+"numpy/core\n"
+"prefix=${pkgdir}\n"
+"libdir=${prefix}/lib\n"
+"includedir=${prefix}/include\n"
+"\n"
+"[default]\n"
+"Libs=-L${libdir} -lnpymath\n"
+"Cflags=-I${includedir}\n"
+"Requires=mlib\n"
+"\n"
+"[msvc]\n"
+"Libs=/LIBPATH:${libdir} npymath.lib\n"
+"Cflags=/INCLUDE:${includedir}\n"
+"Requires=mlib"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.paths:2
+msgid "Apply glob to paths and prepend local_path if needed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.paths:4
+msgid ""
+"Applies glob.glob(...) to each path in the sequence (if needed) and pre-"
+"pends the local_path if needed. Because this is called on all source lists, "
+"this allows wildcard characters to be specified in lists of sources for "
+"extension modules and libraries and scripts and allows path-names be "
+"relative to the source directory."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.get_config_cmd:2
+msgid "Returns the numpy.distutils config command instance."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.get_build_temp_dir:2
+msgid ""
+"Return a path to a temporary directory where temporary files should be "
+"placed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.have_f77c:2
+msgid "Check for availability of Fortran 77 compiler."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.have_f77c:4
+#: numpy.distutils.misc_util.Configuration.have_f90c:4
+msgid ""
+"Use it inside source generating function to ensure that setup distribution "
+"instance has been initialized."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.have_f77c:18
+msgid ""
+"True if a Fortran 77 compiler is available (because a simple Fortran 77 code "
+"was able to be compiled successfully)."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.have_f90c:2
+msgid "Check for availability of Fortran 90 compiler."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.have_f90c:18
+msgid ""
+"True if a Fortran 90 compiler is available (because a simple Fortran 90 code "
+"was able to be compiled successfully)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.get_version:2
+msgid "Try to get version string of a package."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.get_version:4
+msgid ""
+"Return a version string of the current package or None if the version "
+"information could not be detected."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.get_version:18
+msgid ""
+"This method scans files named __version__.py, <packagename>_version.py, "
+"version.py, and __svn_version__.py for string variables version, "
+"__version__, and <packagename>_version, until a version number is found."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.make_svn_version_py:2
+msgid ""
+"Appends a data function to the data_files list that will generate "
+"__svn_version__.py file to the current package directory."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.make_svn_version_py:5
+msgid ""
+"Generate package __svn_version__.py file from SVN revision number, it will "
+"be removed after python exits but will be available when sdist, etc commands "
+"are executed."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.make_svn_version_py:20
+msgid "If __svn_version__.py existed before, nothing is done."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.make_svn_version_py:22
+msgid ""
+"This is intended for working with source directories that are in an SVN "
+"repository."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.make_config_py:2
+msgid ""
+"Generate package __config__.py file containing system_info information used "
+"during building the package."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.make_config_py:5
+msgid "This file is installed to the package installation directory."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.get_info:2
+msgid "Get resources information."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/distutils/misc_util.py:docstring
+#: of numpy.distutils.misc_util.Configuration.get_info:4
+msgid ""
+"Return information (from system_info.get_info) for all of the names in the "
+"argument list in a single dictionary."
+msgstr ""
+
+#: ../../../reference/distutils.rst:124
+msgid "Building Installable C libraries"
+msgstr ""
+
+#: ../../../reference/distutils.rst:126
+msgid ""
+"Conventional C libraries (installed through `add_library`) are not "
+"installed, and are just used during the build (they are statically linked).  "
+"An installable C library is a pure C library, which does not depend on the "
+"python C runtime, and is installed such that it may be used by third-party "
+"packages. To build and install the C library, you just use the method "
+"`add_installed_library` instead of `add_library`, which takes the same "
+"arguments except for an additional ``install_dir`` argument::"
+msgstr ""
+
+#: ../../../reference/distutils.rst:134
+msgid ""
+".. hidden in a comment so as to be included in refguide but not rendered "
+"documentation\n"
+"  >>> import numpy.distutils.misc_util\n"
+"  >>> config = np.distutils.misc_util.Configuration(None, '', '.')\n"
+"  >>> with open('foo.c', 'w') as f: pass\n"
+"\n"
+">>> config.add_installed_library('foo', sources=['foo.c'], install_dir='lib')"
+msgstr ""
+
+#: ../../../reference/distutils.rst:142
+msgid "npy-pkg-config files"
+msgstr ""
+
+#: ../../../reference/distutils.rst:144
+msgid ""
+"To make the necessary build options available to third parties, you could "
+"use the `npy-pkg-config` mechanism implemented in `numpy.distutils`. This "
+"mechanism is based on a .ini file which contains all the options. A .ini "
+"file is very similar to .pc files as used by the pkg-config unix utility::"
+msgstr ""
+
+#: ../../../reference/distutils.rst:149
+msgid ""
+"[meta]\n"
+"Name: foo\n"
+"Version: 1.0\n"
+"Description: foo library\n"
+"\n"
+"[variables]\n"
+"prefix = /home/user/local\n"
+"libdir = ${prefix}/lib\n"
+"includedir = ${prefix}/include\n"
+"\n"
+"[default]\n"
+"cflags = -I${includedir}\n"
+"libs = -L${libdir} -lfoo"
+msgstr ""
+
+#: ../../../reference/distutils.rst:163
+msgid ""
+"Generally, the file needs to be generated during the build, since it needs "
+"some information known at build time only (e.g. prefix). This is mostly "
+"automatic if one uses the `Configuration` method `add_npy_pkg_config`. "
+"Assuming we have a template file foo.ini.in as follows::"
+msgstr ""
+
+#: ../../../reference/distutils.rst:168
+msgid ""
+"[meta]\n"
+"Name: foo\n"
+"Version: @version@\n"
+"Description: foo library\n"
+"\n"
+"[variables]\n"
+"prefix = @prefix@\n"
+"libdir = ${prefix}/lib\n"
+"includedir = ${prefix}/include\n"
+"\n"
+"[default]\n"
+"cflags = -I${includedir}\n"
+"libs = -L${libdir} -lfoo"
+msgstr ""
+
+#: ../../../reference/distutils.rst:182
+msgid "and the following code in setup.py::"
+msgstr ""
+
+#: ../../../reference/distutils.rst:184
+msgid ""
+">>> config.add_installed_library('foo', sources=['foo.c'], "
+"install_dir='lib')\n"
+">>> subst = {'version': '1.0'}\n"
+">>> config.add_npy_pkg_config('foo.ini.in', 'lib', subst_dict=subst)"
+msgstr ""
+
+#: ../../../reference/distutils.rst:188
+msgid ""
+"This will install the file foo.ini into the directory package_dir/lib, and "
+"the foo.ini file will be generated from foo.ini.in, where each ``@version@`` "
+"will be replaced by ``subst_dict['version']``. The dictionary has an "
+"additional prefix substitution rule automatically added, which contains the "
+"install prefix (since this is not easy to get from setup.py).  npy-pkg-"
+"config files can also be installed at the same location as used for numpy, "
+"using the path returned from `get_npy_pkg_dir` function."
+msgstr ""
+
+#: ../../../reference/distutils.rst:197
+msgid "Reusing a C library from another package"
+msgstr ""
+
+#: ../../../reference/distutils.rst:199
+msgid ""
+"Info are easily retrieved from the `get_info` function in `numpy.distutils."
+"misc_util`::"
+msgstr ""
+
+#: ../../../reference/distutils.rst:202
+msgid ""
+">>> info = np.distutils.misc_util.get_info('npymath')\n"
+">>> config.add_extension('foo', sources=['foo.c'], extra_info=info)\n"
+"<numpy.distutils.extension.Extension('foo') at 0x...>"
+msgstr ""
+
+#: ../../../reference/distutils.rst:207
+msgid ""
+"An additional list of paths to look for .ini files can be given to "
+"`get_info`."
+msgstr ""
+
+#: ../../../reference/distutils.rst:210
+msgid "Conversion of ``.src`` files"
+msgstr ""
+
+#: ../../../reference/distutils.rst:212
+msgid ""
+"NumPy distutils supports automatic conversion of source files named "
+"<somefile>.src. This facility can be used to maintain very similar code "
+"blocks requiring only simple changes between blocks. During the build phase "
+"of setup, if a template file named <somefile>.src is encountered, a new file "
+"named <somefile> is constructed from the template and placed in the build "
+"directory to be used instead. Two forms of template conversion are "
+"supported. The first form occurs for files named <file>.ext.src where ext is "
+"a recognized Fortran extension (f, f90, f95, f77, for, ftn, pyf). The second "
+"form is used for all other cases. See :ref:`templating`."
+msgstr ""
+
+#: ../../../reference/distutils.rst:37
+msgid "distutils"
+msgstr ""

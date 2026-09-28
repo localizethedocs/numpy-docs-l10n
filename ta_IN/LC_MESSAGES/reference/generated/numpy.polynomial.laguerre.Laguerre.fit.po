@@ -1,0 +1,261 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.laguerre.Laguerre.fit.rst:4
+msgid "numpy.polynomial.laguerre.Laguerre.fit"
+msgstr ""
+
+#: ../../../reference/generated/numpy.polynomial.laguerre.Laguerre.fit.rst:8
+msgid "method"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:2
+msgid "Least squares fit to data."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:4
+msgid ""
+"Return a series instance that is the least squares fit to the data `y` "
+"sampled at `x`. The domain of the returned instance can be specified and "
+"this will often result in a superior fit with less chance of ill "
+"conditioning."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:12
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:-1
+msgid "array_like, shape (M,)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:12
+msgid "x-coordinates of the M sample points ``(x[i], y[i])``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:15
+msgid "**y**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:15
+msgid "y-coordinates of the M sample points ``(x[i], y[i])``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:21
+msgid "**deg**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:-1
+msgid "int or 1-D array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:18
+msgid ""
+"Degree(s) of the fitting polynomials. If `deg` is a single integer all terms "
+"up to and including the `deg`'th term are included in the fit. For NumPy "
+"versions >= 1.11.0 a list of integers specifying the degrees of the terms to "
+"include may be used instead."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:28
+msgid "**domain**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:-1
+msgid "{None, [beg, end], []}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:24
+msgid ""
+"Domain to use for the returned series. If ``None``, then a minimal domain "
+"that covers the points `x` is chosen.  If ``[]`` the class domain is used. "
+"The default value was the class domain in NumPy 1.4 and ``None`` in later "
+"versions. The ``[]`` option was added in numpy 1.5.0."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:35
+msgid "**rcond**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:-1
+msgid "float, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:31
+msgid ""
+"Relative condition number of the fit. Singular values smaller than this "
+"relative to the largest singular value will be ignored. The default value is "
+"len(x)*eps, where eps is the relative precision of the float type, about "
+"2e-16 in most cases."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:41
+msgid "**full**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:38
+msgid ""
+"Switch determining nature of return value. When it is False (the default) "
+"just the coefficients are returned, when True diagnostic information from "
+"the singular value decomposition is also returned."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:50
+msgid "**w**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:-1
+msgid "array_like, shape (M,), optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:44
+msgid ""
+"Weights. If not None, the weight ``w[i]`` applies to the unsquared residual "
+"``y[i] - y_hat[i]`` at ``x[i]``. Ideally the weights are chosen so that the "
+"errors of the products ``w[i]*y[i]`` all have the same variance.  When using "
+"inverse-variance weighting, use ``w[i] = 1/sigma(y[i])``.  The default value "
+"is None."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:56
+msgid "**window**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:-1
+msgid "{[beg, end]}, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:53
+msgid ""
+"Window to use for the returned series. The default value is the default "
+"class domain"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:59
+msgid "**symbol**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:-1
+msgid "str, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:59
+msgid "Symbol representing the independent variable. Default is 'x'."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:67
+msgid "**new_series**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:-1
+msgid "series"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:64
+msgid ""
+"A series that represents the least squares fit to the data and has the "
+"domain and window specified in the call. If the coefficients for the "
+"unscaled and unshifted basis polynomials are of interest, do ``new_series."
+"convert().coef``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:89
+msgid "**[resid, rank, sv, rcond]**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:-1
+msgid "list"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:70
+msgid "These values are only returned if ``full == True``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:72
+msgid "resid -- sum of squared residuals of the least squares fit"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:73
+msgid "rank -- the numerical rank of the scaled Vandermonde matrix"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:74
+msgid "sv -- singular values of the scaled Vandermonde matrix"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:75
+msgid "rcond -- value of `rcond`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/_polybase.py:docstring
+#: of numpy.polynomial._polybase.ABCPolyBase.fit:77
+msgid "For more details, see `linalg.lstsq`."
+msgstr ""
