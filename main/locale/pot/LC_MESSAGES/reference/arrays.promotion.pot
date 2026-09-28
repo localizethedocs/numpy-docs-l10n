@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -188,28 +188,56 @@ msgid ""
 "e.g., ``np.array(100, dtype=np.uint8) + 100`` will *not* warn."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:136
+#: ../../../reference/arrays.promotion.rst:138
+msgid "Cast safety of Python scalars"
+msgstr ""
+
+#: ../../../reference/arrays.promotion.rst:139
+msgid ""
+"The ``casting`` argument of ufuncs, `numpy.copyto` and `numpy.concatenate` "
+"treats a Python ``int``, ``float`` or ``complex`` by its kind, since the "
+"scalar has no precision of its own. Converting a Python ``int`` to any NumPy "
+"integer dtype or a Python ``float`` to any NumPy floating point dtype counts "
+"as \"safe\", even though the value may not fit or may lose precision. An "
+"integer that does not fit raises ``OverflowError`` on conversion, as shown "
+"above, while a ``float`` is rounded to the lower precision, or overflows to "
+"``inf`` with a ``RuntimeWarning``. Lowering the kind, such as a Python "
+"``float`` into an integer dtype, requires ``casting=\"unsafe\"``."
+msgstr ""
+
+#: ../../../reference/arrays.promotion.rst:161
+msgid ""
+"Under ``casting=\"equiv\"`` and ``casting=\"no\"`` a Python scalar must "
+"convert to its default dtype (``int64``, ``float64`` or ``complex128``) or "
+"to ``object``; any other conversion raises ``TypeError``:"
+msgstr ""
+
+#: ../../../reference/arrays.promotion.rst:171
+msgid "`numpy.can_cast` does not accept Python scalars."
+msgstr ""
+
+#: ../../../reference/arrays.promotion.rst:174
 msgid "Numerical promotion"
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:138
+#: ../../../reference/arrays.promotion.rst:176
 msgid ""
 "The following image shows the numerical promotion rules with the kinds on "
 "the vertical axis and the precision on the horizontal axis."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:144
+#: ../../../reference/arrays.promotion.rst:182
 msgid ""
 "The input dtype with the higher kind determines the kind of the result "
 "dtype. The result dtype has a precision as low as possible without appearing "
 "to the left of either input dtype in the diagram."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:148
+#: ../../../reference/arrays.promotion.rst:186
 msgid "Note the following specific rules and observations:"
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:150
+#: ../../../reference/arrays.promotion.rst:188
 msgid ""
 "When a Python ``float`` or ``complex`` interacts with a NumPy integer the "
 "result will be ``float64`` or ``complex128`` (yellow border). NumPy booleans "
@@ -217,7 +245,7 @@ msgid ""
 "relevant when additionally NumPy floating point values are involved."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:155
+#: ../../../reference/arrays.promotion.rst:193
 msgid ""
 "The precision is drawn such that ``float16 < int16 < uint16`` because large "
 "``uint16`` do not fit ``int16`` and large ``int16`` will lose precision when "
@@ -226,29 +254,29 @@ msgid ""
 "for any integer value."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:161
+#: ../../../reference/arrays.promotion.rst:199
 msgid ""
 "A special case is that NumPy promotes many combinations of signed and "
 "unsigned integers to ``float64``.  A higher kind is used here because no "
 "signed integer dtype is sufficiently precise to hold a ``uint64``."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:167
+#: ../../../reference/arrays.promotion.rst:205
 msgid "Exceptions to the general promotion rules"
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:169
+#: ../../../reference/arrays.promotion.rst:207
 msgid ""
 "In NumPy promotion refers to what specific functions do with the result and "
 "in some cases, this means that NumPy may deviate from what the `np."
 "result_type` would give."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:174
+#: ../../../reference/arrays.promotion.rst:212
 msgid "Behavior of ``sum`` and ``prod``"
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:175
+#: ../../../reference/arrays.promotion.rst:213
 msgid ""
 "``np.sum`` and ``np.prod`` will always return the default integer type when "
 "summing over integer values (or booleans).  This is usually an ``int64``. "
@@ -257,117 +285,117 @@ msgid ""
 "underlying ``np.add.reduce`` and ``np.multiply.reduce``."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:183
+#: ../../../reference/arrays.promotion.rst:221
 msgid "Notable behavior with NumPy or Python integer scalars"
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:184
+#: ../../../reference/arrays.promotion.rst:222
 msgid ""
 "NumPy promotion refers to the result dtype and operation precision, but the "
 "operation will sometimes dictate that result. Division always returns "
 "floating point values and comparison always booleans."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:188
+#: ../../../reference/arrays.promotion.rst:226
 msgid "This leads to what may appear as \"exceptions\" to the rules:"
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:190
+#: ../../../reference/arrays.promotion.rst:228
 msgid ""
 "NumPy comparisons with Python integers or mixed precision integers always "
 "return the correct result.  The inputs will never be cast in a way which "
 "loses precision."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:193
+#: ../../../reference/arrays.promotion.rst:231
 msgid ""
 "Equality comparisons between types which cannot be promoted will be "
 "considered all ``False`` (equality) or all ``True`` (not-equal)."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:195
+#: ../../../reference/arrays.promotion.rst:233
 msgid ""
 "Unary math functions like ``np.sin`` that always return floating point "
 "values, accept any Python integer input by converting it to ``float64``."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:197
+#: ../../../reference/arrays.promotion.rst:235
 msgid ""
 "Division always returns floating point values and thus also allows divisions "
 "between any NumPy integer with any Python integer value by casting both to "
 "``float64``."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:201
+#: ../../../reference/arrays.promotion.rst:239
 msgid ""
 "In principle, some of these exceptions may make sense for other functions. "
 "Please raise an issue if you feel this is the case."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:205
+#: ../../../reference/arrays.promotion.rst:243
 msgid "Notable behavior with Python builtin type classes"
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:207
+#: ../../../reference/arrays.promotion.rst:245
 msgid ""
 "When combining Python's builtin scalar *types* (i.e., ``float``, ``int``, or "
 "``complex``, not scalar *values*), the promotion rules can appear surprising:"
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:217
+#: ../../../reference/arrays.promotion.rst:255
 msgid ""
 "The reason for this behavior is that NumPy converts ``int`` to its default "
 "integer type, and uses that type for promotion:"
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:223
+#: ../../../reference/arrays.promotion.rst:261
 msgid "See also :ref:`dtype-constructing-from-python-types` for more details."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:226
+#: ../../../reference/arrays.promotion.rst:264
 msgid "Promotion of non-numerical datatypes"
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:228
+#: ../../../reference/arrays.promotion.rst:266
 msgid ""
 "NumPy extends the promotion to non-numerical types, although in many cases "
 "promotion is not well defined and simply rejected."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:231
+#: ../../../reference/arrays.promotion.rst:269
 msgid "The following rules apply:"
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:233
+#: ../../../reference/arrays.promotion.rst:271
 msgid ""
 "NumPy byte strings (``np.bytes_``) can be promoted to unicode strings (``np."
 "str_``).  However, casting the bytes to unicode will fail for non-ascii "
 "characters."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:236
+#: ../../../reference/arrays.promotion.rst:274
 msgid ""
 "For some purposes NumPy will promote almost any other datatype to strings. "
 "This applies to array creation or concatenation."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:238
+#: ../../../reference/arrays.promotion.rst:276
 msgid ""
 "The array constructors like ``np.array()`` will use ``object`` dtype when "
 "there is no viable promotion."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:240
+#: ../../../reference/arrays.promotion.rst:278
 msgid ""
 "Structured dtypes can promote when their field names and order matches. In "
 "that case all fields are promoted individually."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:242
+#: ../../../reference/arrays.promotion.rst:280
 msgid "NumPy ``timedelta`` can in some cases promote with integers."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:245
+#: ../../../reference/arrays.promotion.rst:283
 msgid ""
 "Some of these rules are somewhat surprising, and are being considered for "
 "change in the future. However, any backward-incompatible changes have to be "
@@ -375,11 +403,11 @@ msgid ""
 "if you have particular ideas about how promotion should work."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:251
+#: ../../../reference/arrays.promotion.rst:289
 msgid "Details of promoted ``dtype`` instances"
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:252
+#: ../../../reference/arrays.promotion.rst:290
 msgid ""
 "The above discussion has mainly dealt with the behavior when mixing "
 "different DType classes. A ``dtype`` instance attached to an array can carry "
@@ -387,45 +415,45 @@ msgid ""
 "structured dtype layout."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:257
+#: ../../../reference/arrays.promotion.rst:295
 msgid ""
 "While the string length or field names of a structured dtype are important, "
 "NumPy considers byte-order, metadata, and the exact layout of a structured "
 "dtype as storage details."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:261
+#: ../../../reference/arrays.promotion.rst:299
 msgid ""
 "During promotion NumPy does *not* take these storage details into account:"
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:263
+#: ../../../reference/arrays.promotion.rst:301
 msgid "Byte-order is converted to native byte-order."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:264
+#: ../../../reference/arrays.promotion.rst:302
 msgid "Metadata attached to the dtype may or may not be preserved."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:265
+#: ../../../reference/arrays.promotion.rst:303
 msgid ""
 "Resulting structured dtypes will be packed (but aligned if inputs were)."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:267
+#: ../../../reference/arrays.promotion.rst:305
 msgid ""
 "This behaviors is the best behavior for most programs where storage details "
 "are not relevant to the final results and where the use of incorrect byte-"
 "order could drastically slow down evaluation."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:272
+#: ../../../reference/arrays.promotion.rst:310
 msgid ""
 "To a large degree, this may just be for choices made early on in NumPy's "
 "predecessors.  For more details, see :ref:`NEP 50 <NEP50>`."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:275
+#: ../../../reference/arrays.promotion.rst:313
 msgid ""
 "See also :ref:`NEP 50 <NEP50>` which changed the rules for NumPy 2.0. "
 "Previous versions of NumPy would sometimes return higher precision results "
@@ -434,7 +462,7 @@ msgid ""
 "arrays for promotion purposes."
 msgstr ""
 
-#: ../../../reference/arrays.promotion.rst:281
+#: ../../../reference/arrays.promotion.rst:319
 msgid ""
 "The default integer is marked as ``int64`` in the schema but is ``int32`` on "
 "32bit platforms.  However, most modern systems are 64bit."

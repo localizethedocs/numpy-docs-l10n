@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -515,7 +515,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:84
-#: ../../../../RELEASE_WALKTHROUGH.rst:290
+#: ../../../../RELEASE_WALKTHROUGH.rst:303
 msgid "$ gvim pyproject.toml"
 msgstr ""
 
@@ -529,7 +529,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:92
-#: ../../../../RELEASE_WALKTHROUGH.rst:286
+#: ../../../../RELEASE_WALKTHROUGH.rst:299
 msgid "$ gvim doc/source/release.rst"
 msgstr ""
 
@@ -589,11 +589,17 @@ msgid ""
 "it is too long. Check previous release notes to see how this is done."
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:132
-msgid "Test the wheel builds"
+#: ../../../../RELEASE_WALKTHROUGH.rst:130
+msgid ""
+"Replace the ``*Unreleased.*`` line below the release notes title with the "
+"expected release date, for example ``*Released on 2024-06-15.*``."
 msgstr ""
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:134
+msgid "Test the wheel builds"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:136
 msgid ""
 "After the release PR is merged, go to the ``numpy-release`` repository in "
 "your browser and manually trigger the workflow on the ``maintenance/2.4.x`` "
@@ -607,11 +613,11 @@ msgid ""
 "release."
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:146
+#: ../../../../RELEASE_WALKTHROUGH.rst:148
 msgid "Release walkthrough"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:148
+#: ../../../../RELEASE_WALKTHROUGH.rst:150
 msgid ""
 "Note that in the code snippets below, ``upstream`` refers to the root "
 "repository on GitHub and ``origin`` to its fork in your personal GitHub "
@@ -620,17 +626,17 @@ msgid ""
 "and add ``upstream`` if it isn't already present."
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:156
+#: ../../../../RELEASE_WALKTHROUGH.rst:158
 msgid "1. Tag the release commit"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:158
+#: ../../../../RELEASE_WALKTHROUGH.rst:160
 msgid ""
 "Checkout the branch for the release, make sure it is up to date, and clean "
 "the repository::"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:161
+#: ../../../../RELEASE_WALKTHROUGH.rst:163
 msgid ""
 "$ git checkout maintenance/2.4.x\n"
 "$ git pull upstream maintenance/2.4.x\n"
@@ -638,41 +644,41 @@ msgid ""
 "$ git clean -xdfq"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:166
+#: ../../../../RELEASE_WALKTHROUGH.rst:168
 msgid "Sanity check::"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:168
+#: ../../../../RELEASE_WALKTHROUGH.rst:170
 msgid "$ python3 -m spin test -m full"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:170
+#: ../../../../RELEASE_WALKTHROUGH.rst:172
 msgid ""
 "Tag the release and push the tag. This requires write permission for the "
 "numpy repository::"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:173
+#: ../../../../RELEASE_WALKTHROUGH.rst:175
 msgid ""
 "$ git tag -a -s v2.4.0 -m\"NumPy 2.4.0 release\"\n"
 "$ git push upstream v2.4.0"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:176
+#: ../../../../RELEASE_WALKTHROUGH.rst:178
 msgid "If you need to delete the tag due to error::"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:178
+#: ../../../../RELEASE_WALKTHROUGH.rst:180
 msgid ""
 "$ git tag -d v2.4.0\n"
 "$ git push --delete upstream v2.4.0"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:183
+#: ../../../../RELEASE_WALKTHROUGH.rst:185
 msgid "2. Build wheels and sdist"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:185
+#: ../../../../RELEASE_WALKTHROUGH.rst:187
 msgid ""
 "Go to the ``numpy-release`` repository in your browser and manually trigger "
 "the workflow on the ``maintenance/2.4.x`` branch using the ``Run workflow`` "
@@ -685,11 +691,11 @@ msgid ""
 "looks good trigger the upload."
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:197
+#: ../../../../RELEASE_WALKTHROUGH.rst:199
 msgid "3. Upload files to GitHub Releases"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:199
+#: ../../../../RELEASE_WALKTHROUGH.rst:201
 msgid ""
 "Go to `<https://github.com/numpy/numpy/releases>`_, there should be a "
 "``v2.4.0`` tag, click on it and hit the edit button for that tag and update "
@@ -698,11 +704,11 @@ msgid ""
 "so translate the release notes from rst to md::"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:205
+#: ../../../../RELEASE_WALKTHROUGH.rst:207
 msgid "$ python tools/write_release.py 2.4.0"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:207
+#: ../../../../RELEASE_WALKTHROUGH.rst:209
 msgid ""
 "this will create a ``release/README.md`` file that you can edit. Check the "
 "result to see that it looks correct. Things that may need fixing: wrapped "
@@ -711,44 +717,44 @@ msgid ""
 "window. It may take several tries to get it look right. Then"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:213
+#: ../../../../RELEASE_WALKTHROUGH.rst:215
 msgid ""
 "Download the sdist (``numpy-2.4.0.tar.gz``) from PyPI and upload it to "
 "GitHub as a binary file. You cannot do this using pip."
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:215
+#: ../../../../RELEASE_WALKTHROUGH.rst:217
 msgid "Upload ``release/README.rst`` as a binary file."
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:216
+#: ../../../../RELEASE_WALKTHROUGH.rst:218
 msgid "Upload ``doc/changelog/2.4.0-changelog.rst`` as a binary file."
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:217
+#: ../../../../RELEASE_WALKTHROUGH.rst:219
 msgid "Check the pre-release button if this is a pre-releases."
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:218
+#: ../../../../RELEASE_WALKTHROUGH.rst:220
 msgid "Hit the ``Publish release`` button at the bottom."
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:221
+#: ../../../../RELEASE_WALKTHROUGH.rst:223
 msgid ""
 "Please ensure that all 3 files are uploaded are present and the release text "
 "is complete. Releases are configured to be immutable, so mistakes can't "
 "(easily) be fixed anymore."
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:227
+#: ../../../../RELEASE_WALKTHROUGH.rst:229
 msgid "4. Upload documents to numpy.org (skip for prereleases)"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:229
+#: ../../../../RELEASE_WALKTHROUGH.rst:231
 msgid "You will need a GitHub personal access token to push the update."
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:231
+#: ../../../../RELEASE_WALKTHROUGH.rst:233
 msgid ""
 "This step is only needed for final releases and can be skipped for pre-"
 "releases and most patch releases. ``make merge-doc`` clones the ``numpy/"
@@ -756,90 +762,107 @@ msgid ""
 "documentation::"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:235
+#: ../../../../RELEASE_WALKTHROUGH.rst:237
 msgid ""
 "$ git clean -xdfq\n"
-"$ git co v2.4.0\n"
+"$ git co v2.5.0\n"
 "$ rm -rf doc/build  # want version to be current\n"
-"$ python -m spin docs merge-doc --build\n"
-"$ pushd doc/build/merge"
+"$ python -m spin docs merge-doc --build"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:241
+#: ../../../../RELEASE_WALKTHROUGH.rst:243
+msgid "Then if needed build the pdf documentation::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:245
+msgid ""
+"$ python -m spin docs latex\n"
+"$ pushd doc/build/latex\n"
+"$ make all-pdf\n"
+"$ popd\n"
+"$ cp doc/build/latex/numpy-user.pdf doc/build/latex/numpy-ref.pdf doc/build/"
+"merge/2.5/"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:251
 msgid ""
 "If the release series is a new one, you will need to add a new section to "
 "the ``doc/build/merge/index.html`` front page just after the \"insert here\" "
 "comment::"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:244
-msgid "$ gvim index.html +/'insert here'"
+#: ../../../../RELEASE_WALKTHROUGH.rst:254
+msgid ""
+"$ pushd doc/build/merge\n"
+"$ gvim index.html +/'insert here'"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:246
+#: ../../../../RELEASE_WALKTHROUGH.rst:257
 msgid ""
 "Further, update the version-switcher json file to add the new release and "
 "update the version marked ``(stable)`` and ``preferred``::"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:249
+#: ../../../../RELEASE_WALKTHROUGH.rst:260
 msgid "$ gvim _static/versions.json"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:251
+#: ../../../../RELEASE_WALKTHROUGH.rst:262
 msgid "Then run ``update.py`` to update the version in ``_static``::"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:253
+#: ../../../../RELEASE_WALKTHROUGH.rst:264
 msgid "$ python3 update.py"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:255
+#: ../../../../RELEASE_WALKTHROUGH.rst:266
 msgid ""
 "You can \"test run\" the new documentation in a browser to make sure the "
 "links work, although the version dropdown will not change, it pulls its "
 "information from ``numpy.org``::"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:259
+#: ../../../../RELEASE_WALKTHROUGH.rst:270
 msgid "$ firefox index.html  # or google-chrome, etc."
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:261
+#: ../../../../RELEASE_WALKTHROUGH.rst:272
 msgid "Update the stable link and update::"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:263
+#: ../../../../RELEASE_WALKTHROUGH.rst:274
 msgid ""
-"$ ln -sfn 2.4 stable\n"
-"$ ls -l  # check the link"
+"$ ln -sfn 2.5 stable\n"
+"$ ls -l stable # check the link"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:266
+#: ../../../../RELEASE_WALKTHROUGH.rst:277
 msgid ""
 "Once everything seems satisfactory, update, commit and upload the changes::"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:268
+#: ../../../../RELEASE_WALKTHROUGH.rst:279
 msgid ""
-"$ git commit -a -m\"Add documentation for v2.4.0\"\n"
+"$ git checkout -b v2.5\n"
+"$ git add 2.5/*.pdf\n"
+"$ git commit -a -m\"Add documentation for v2.5.0\"\n"
 "$ git push git@github.com:numpy/doc\n"
 "$ popd"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:274
+#: ../../../../RELEASE_WALKTHROUGH.rst:287
 msgid ""
 "5. Reset the maintenance branch into a development state (skip for "
 "prereleases)"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:276
+#: ../../../../RELEASE_WALKTHROUGH.rst:289
 msgid ""
 "Create release notes for next release and edit them to set the version. "
 "These notes will be a skeleton and have little content::"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:279
+#: ../../../../RELEASE_WALKTHROUGH.rst:292
 msgid ""
 "$ git checkout -b begin-2.4.1 maintenance/2.4.x\n"
 "$ cp doc/source/release/template.rst doc/source/release/2.4.1-notes.rst\n"
@@ -847,41 +870,41 @@ msgid ""
 "$ git add doc/source/release/2.4.1-notes.rst"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:284
+#: ../../../../RELEASE_WALKTHROUGH.rst:297
 msgid "Add a link to the new release notes::"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:288
+#: ../../../../RELEASE_WALKTHROUGH.rst:301
 msgid "Update the ``version`` in ``pyproject.toml``::"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:292
+#: ../../../../RELEASE_WALKTHROUGH.rst:305
 msgid ""
 "Commit the result, edit the commit message, note the files in the commit, "
-"and add a line ``[skip cirrus] [skip actions]``, then push::"
+"and add a line ``[skip actions]``, then push::"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:295
+#: ../../../../RELEASE_WALKTHROUGH.rst:308
 msgid ""
 "$ git commit -a -m\"MAINT: Prepare 2.4.x for further development\"\n"
 "$ git rebase -i HEAD^\n"
 "$ git push origin HEAD"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:299
+#: ../../../../RELEASE_WALKTHROUGH.rst:312
 msgid "Go to GitHub and make a PR. It should be merged quickly."
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:303
+#: ../../../../RELEASE_WALKTHROUGH.rst:316
 msgid "6. Announce the release on numpy.org (skip for prereleases)"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:305
+#: ../../../../RELEASE_WALKTHROUGH.rst:318
 msgid ""
 "This assumes that you have forked `<https://github.com/numpy/numpy.org>`_::"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:307
+#: ../../../../RELEASE_WALKTHROUGH.rst:320
 msgid ""
 "$ cd ../numpy.org\n"
 "$ git checkout main\n"
@@ -890,50 +913,50 @@ msgid ""
 "$ gvim content/en/news.md"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:313
+#: ../../../../RELEASE_WALKTHROUGH.rst:326
 msgid ""
 "For all releases, go to the bottom of the page and add a one line link. Look "
 "to the previous links for example."
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:315
+#: ../../../../RELEASE_WALKTHROUGH.rst:328
 msgid "For the ``*.0`` release in a cycle:"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:317
+#: ../../../../RELEASE_WALKTHROUGH.rst:330
 msgid ""
 "Add a new section at the top with a short description of the new features "
 "and point the news link to it."
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:319
+#: ../../../../RELEASE_WALKTHROUGH.rst:332
 msgid "Edit the newsHeader and date fields at the top of news.md"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:320
+#: ../../../../RELEASE_WALKTHROUGH.rst:333
 msgid "Also edit the buttonText on line 14 in content/en/config.yaml"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:322
+#: ../../../../RELEASE_WALKTHROUGH.rst:335
 msgid "commit and push::"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:324
+#: ../../../../RELEASE_WALKTHROUGH.rst:337
 msgid ""
 "$ git commit -a -m\"announce the NumPy 2.4.0 release\"\n"
 "$ git push origin HEAD"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:327
-#: ../../../../RELEASE_WALKTHROUGH.rst:355
+#: ../../../../RELEASE_WALKTHROUGH.rst:340
+#: ../../../../RELEASE_WALKTHROUGH.rst:368
 msgid "Go to GitHub and make a PR."
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:331
+#: ../../../../RELEASE_WALKTHROUGH.rst:344
 msgid "7. Announce to mailing lists"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:333
+#: ../../../../RELEASE_WALKTHROUGH.rst:346
 msgid ""
 "The release should be announced on the numpy-discussion and python-announce-"
 "list mailing lists. Look at previous announcements for the basic template. "
@@ -942,17 +965,17 @@ msgid ""
 "replies will not be sent to that list."
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:341
+#: ../../../../RELEASE_WALKTHROUGH.rst:354
 msgid "8. Post-release update main (skip for prereleases)"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:343
+#: ../../../../RELEASE_WALKTHROUGH.rst:356
 msgid ""
 "Checkout main and forward port the documentation changes. You may also want "
 "to update these notes if procedures have changed or improved::"
 msgstr ""
 
-#: ../../../../RELEASE_WALKTHROUGH.rst:346
+#: ../../../../RELEASE_WALKTHROUGH.rst:359
 msgid ""
 "$ git checkout -b post-2.4.0-release-update main\n"
 "$ git checkout maintenance/2.4.x doc/source/release/2.4.0-notes.rst\n"
