@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -90,41 +90,53 @@ msgstr ""
 msgid ""
 "There is exactly one function that must be defined in your C-code in order "
 "for Python to use it as an extension module. The function must be called "
-"init{name} where {name} is the name of the module from Python. This function "
-"must be declared so that it is visible to code outside of the routine. "
-"Besides adding the methods and constants you desire, this subroutine must "
-"also contain calls like ``import_array()`` and/or ``import_ufunc()`` "
-"depending on which C-API is needed. Forgetting to place these commands will "
-"show itself as an ugly segmentation fault (crash) as soon as any C-API "
-"subroutine is actually called. It is actually possible to have multiple "
-"init{name} functions in a single file in which case multiple modules will be "
-"defined by that file. However, there are some tricks to get that to work "
-"correctly and it is not covered here."
+"``PyInit_{name}`` where ``{name}`` is the name of the module from Python. "
+"This function must be declared so that it is visible to code outside of the "
+"routine. Besides adding the methods and constants you desire, this "
+"subroutine must also contain calls like ``import_array()`` and/or "
+"``import_ufunc()`` depending on which C-API is needed. Forgetting to place "
+"these commands will show itself as an ugly segmentation fault (crash) as "
+"soon as any C-API subroutine is actually called. It is actually possible to "
+"have multiple ``PyInit_{name}`` functions in a single file in which case "
+"multiple modules will be defined by that file. However, there are some "
+"tricks to get that to work correctly and it is not covered here."
 msgstr ""
 
 #: ../../../user/c-info.how-to-extend.rst:68
-msgid "A minimal ``init{name}`` method looks like:"
+msgid "A minimal ``PyInit_{name}`` method looks like:"
 msgstr ""
 
 #: ../../../user/c-info.how-to-extend.rst:70
 msgid ""
+"static struct PyModuleDef moduledef = {\n"
+"    PyModuleDef_HEAD_INIT,\n"
+"    \"{name}\",\n"
+"    NULL,\n"
+"    -1,\n"
+"    mymethods,\n"
+"    NULL,\n"
+"    NULL,\n"
+"    NULL,\n"
+"    NULL\n"
+"};\n"
+"\n"
 "PyMODINIT_FUNC\n"
-"init{name}(void)\n"
+"PyInit_{name}(void)\n"
 "{\n"
-"   (void)Py_InitModule({name}, mymethods);\n"
 "   import_array();\n"
+"   return PyModule_Create(&moduledef);\n"
 "}"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:79
+#: ../../../user/c-info.how-to-extend.rst:91
 msgid ""
 "The mymethods must be an array (usually statically declared) of PyMethodDef "
 "structures which contain method names, actual C-functions, a variable "
 "indicating whether the method uses keyword arguments or not, and docstrings. "
 "These are explained in the next section. If you want to add constants to the "
-"module, then you store the returned value from Py_InitModule which is a "
-"module object. The most general way to add items to the module is to get the "
-"module dictionary using PyModule_GetDict(module). With the module "
+"module, then you store the returned value from ``PyModule_Create`` which is "
+"a module object. The most general way to add items to the module is to get "
+"the module dictionary using PyModule_GetDict(module). With the module "
 "dictionary, you can add whatever you like to the module manually. An easier "
 "way to add objects to the module is to use one of three additional Python C-"
 "API calls that do not require a separate extraction of the module "
@@ -132,28 +144,28 @@ msgid ""
 "here for convenience:"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:102
+#: ../../../user/c-info.how-to-extend.rst:114
 msgid ""
 "All three of these functions require the *module* object (the return value "
-"of Py_InitModule). The *name* is a string that labels the value in the "
+"of ``PyModule_Create``). The *name* is a string that labels the value in the "
 "module. Depending on which function is called, the *value* argument is "
 "either a general object (:c:func:`PyModule_AddObject` steals a reference to "
 "it), an integer constant, or a string constant."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:111
+#: ../../../user/c-info.how-to-extend.rst:123
 msgid "Defining functions"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:113
+#: ../../../user/c-info.how-to-extend.rst:125
 msgid ""
-"The second argument passed in to the Py_InitModule function is a structure "
-"that makes it easy to define functions in the module. In the example given "
-"above, the mymethods structure would have been defined earlier in the file "
-"(usually right before the init{name} subroutine) to:"
+"The second argument passed in to the ``PyModuleDef`` structure is a "
+"structure that makes it easy to define functions in the module. In the "
+"example given above, the mymethods structure would have been defined earlier "
+"in the file (usually right before the ``PyInit_{name}`` subroutine) to:"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:119
+#: ../../../user/c-info.how-to-extend.rst:131
 msgid ""
 "static PyMethodDef mymethods[] = {\n"
 "    { nokeywordfunc,nokeyword_cfunc,\n"
@@ -166,7 +178,7 @@ msgid ""
 "}"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:131
+#: ../../../user/c-info.how-to-extend.rst:143
 msgid ""
 "Each entry in the mymethods array is a :c:type:`PyMethodDef` structure "
 "containing 1) the Python name, 2) the C-function that implements the "
@@ -178,7 +190,7 @@ msgid ""
 "defined."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:140
+#: ../../../user/c-info.how-to-extend.rst:152
 msgid ""
 "The last thing that must be done to finish the extension module is to "
 "actually write the code that performs the desired functions. There are two "
@@ -186,15 +198,15 @@ msgid ""
 "that do."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:147
+#: ../../../user/c-info.how-to-extend.rst:159
 msgid "Functions without keyword arguments"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:149
+#: ../../../user/c-info.how-to-extend.rst:161
 msgid "Functions that don't accept keyword arguments should be written as:"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:151
+#: ../../../user/c-info.how-to-extend.rst:163
 msgid ""
 "static PyObject*\n"
 "nokeyword_cfunc (PyObject *dummy, PyObject *args)\n"
@@ -205,7 +217,7 @@ msgid ""
 "}"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:161
+#: ../../../user/c-info.how-to-extend.rst:173
 msgid ""
 "The dummy argument is not used in this context and can be safely ignored. "
 "The *args* argument contains all of the arguments passed in to the function "
@@ -226,13 +238,13 @@ msgid ""
 "address of the C-variables that should be filled in."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:180
+#: ../../../user/c-info.how-to-extend.rst:192
 msgid ""
 "There are lots of examples of how to use :c:func:`PyArg_ParseTuple` "
 "throughout the NumPy source code. The standard usage is like this:"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:183
+#: ../../../user/c-info.how-to-extend.rst:195
 msgid ""
 "PyObject *input;\n"
 "PyArray_Descr *dtype;\n"
@@ -241,7 +253,7 @@ msgid ""
 "                      &dtype)) return NULL;"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:191
+#: ../../../user/c-info.how-to-extend.rst:203
 msgid ""
 "It is important to keep in mind that you get a *borrowed* reference to the "
 "object when using the \"O\" format string. However, the converter functions "
@@ -256,7 +268,7 @@ msgid ""
 "c:func:`Py_XDECREF` on *dtype* before returning."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:204
+#: ../../../user/c-info.how-to-extend.rst:216
 msgid ""
 "After the input arguments are processed, the code that actually does the "
 "work is written (likely calling other functions as needed). The final step "
@@ -277,17 +289,17 @@ msgid ""
 "reference to an object and need to create one to provide for the tuple."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:226
+#: ../../../user/c-info.how-to-extend.rst:238
 msgid "Functions with keyword arguments"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:228
+#: ../../../user/c-info.how-to-extend.rst:240
 msgid ""
 "These functions are very similar to functions without keyword arguments. The "
 "only difference is that the function signature is:"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:231
+#: ../../../user/c-info.how-to-extend.rst:243
 msgid ""
 "static PyObject*\n"
 "keyword_cfunc (PyObject *dummy, PyObject *args, PyObject *kwds)\n"
@@ -296,7 +308,7 @@ msgid ""
 "}"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:239
+#: ../../../user/c-info.how-to-extend.rst:251
 msgid ""
 "The kwds argument holds a Python dictionary whose keys are the names of the "
 "keyword arguments and whose values are the corresponding keyword-argument "
@@ -310,18 +322,18 @@ msgid ""
 "function will raise a TypeError if invalid keyword arguments are passed in."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:251
+#: ../../../user/c-info.how-to-extend.rst:263
 msgid ""
 "For more help on this function please see section 1.8 (Keyword Parameters "
 "for Extension Functions) of the Extending and Embedding tutorial in the "
 "Python documentation."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:257
+#: ../../../user/c-info.how-to-extend.rst:269
 msgid "Reference counting"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:259
+#: ../../../user/c-info.how-to-extend.rst:271
 msgid ""
 "The biggest difficulty when writing extension modules is reference counting. "
 "It is an important reason for the popularity of f2py, weave, Cython, ctypes, "
@@ -341,7 +353,7 @@ msgid ""
 "most functions that take :c:type:`PyArray_Descr` objects)."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:280
+#: ../../../user/c-info.how-to-extend.rst:292
 msgid ""
 "Typically you get a new reference to a variable when it is created or is the "
 "return value of some function (there are some prominent exceptions, however "
@@ -361,7 +373,7 @@ msgid ""
 "frustrating at first."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:298
+#: ../../../user/c-info.how-to-extend.rst:310
 msgid ""
 "One common source of reference-count errors is the :c:func:`Py_BuildValue` "
 "function. Pay careful attention to the difference between the 'N' format "
@@ -378,11 +390,11 @@ msgid ""
 "count."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:319
+#: ../../../user/c-info.how-to-extend.rst:331
 msgid "Dealing with array objects"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:321
+#: ../../../user/c-info.how-to-extend.rst:333
 msgid ""
 "Most extension modules for NumPy will need to access the memory for an "
 "ndarray object (or one of it's sub-classes). The easiest way to do this "
@@ -390,35 +402,35 @@ msgid ""
 "to"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:326
+#: ../../../user/c-info.how-to-extend.rst:338
 msgid ""
 "Ensure you are dealing with a well-behaved array (aligned, in machine byte-"
 "order and single-segment) of the correct type and number of dimensions."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:330
+#: ../../../user/c-info.how-to-extend.rst:342
 msgid ""
 "By converting it from some Python object using :c:func:`PyArray_FromAny` or "
 "a macro built on it."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:333
+#: ../../../user/c-info.how-to-extend.rst:345
 msgid ""
 "By constructing a new ndarray of your desired shape and type using :c:func:"
 "`PyArray_NewFromDescr` or a simpler macro or function based on it."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:338
+#: ../../../user/c-info.how-to-extend.rst:350
 msgid "Get the shape of the array and a pointer to its actual data."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:340
+#: ../../../user/c-info.how-to-extend.rst:352
 msgid ""
 "Pass the data and shape information on to a subroutine or other section of "
 "code that actually performs the computation."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:343
+#: ../../../user/c-info.how-to-extend.rst:355
 msgid ""
 "If you are writing the algorithm, then I recommend that you use the stride "
 "information contained in the array to access the elements of the array (the :"
@@ -427,15 +439,15 @@ msgid ""
 "that might result."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:349
+#: ../../../user/c-info.how-to-extend.rst:361
 msgid "Each of these sub-topics is covered in the following sub-sections."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:353
+#: ../../../user/c-info.how-to-extend.rst:365
 msgid "Converting an arbitrary sequence object"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:355
+#: ../../../user/c-info.how-to-extend.rst:367
 msgid ""
 "The main routine for obtaining an array from any Python object that can be "
 "converted to an array is :c:func:`PyArray_FromAny`. This function is very "
@@ -447,11 +459,11 @@ msgid ""
 "contiguous, aligned, and writeable). The syntax is"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:482
+#: ../../../user/c-info.how-to-extend.rst:377
 msgid ":c:func:`PyArray_FROM_OTF`"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:366
+#: ../../../user/c-info.how-to-extend.rst:378
 msgid ""
 "Return an ndarray from any Python object, *obj*, that can be converted to an "
 "array. The number of dimensions in the returned array is determined by the "
@@ -463,11 +475,11 @@ msgid ""
 "exception is set."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:392
+#: ../../../user/c-info.how-to-extend.rst:388
 msgid "*obj*"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:377
+#: ../../../user/c-info.how-to-extend.rst:389
 msgid ""
 "The object can be any Python object convertible to an ndarray. If the object "
 "is already (a subclass of) the ndarray that satisfies the requirements then "
@@ -484,17 +496,17 @@ msgid ""
 "in :c:data:`NPY_ARRAY_ENSURECOPY` to the requirements flag."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:419
+#: ../../../user/c-info.how-to-extend.rst:406
 msgid "*typenum*"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:395
+#: ../../../user/c-info.how-to-extend.rst:407
 msgid ""
 "One of the enumerated types or :c:data:`NPY_NOTYPE` if the data-type should "
 "be determined from the object itself. The C-based names can be used:"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:399
+#: ../../../user/c-info.how-to-extend.rst:411
 msgid ""
 ":c:data:`NPY_BOOL`, :c:data:`NPY_BYTE`, :c:data:`NPY_UBYTE`, :c:data:"
 "`NPY_SHORT`, :c:data:`NPY_USHORT`, :c:data:`NPY_INT`, :c:data:`NPY_UINT`, :c:"
@@ -504,13 +516,13 @@ msgid ""
 "`NPY_OBJECT`."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:406
+#: ../../../user/c-info.how-to-extend.rst:418
 msgid ""
 "Alternatively, the bit-width names can be used as supported on the platform. "
 "For example:"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:409
+#: ../../../user/c-info.how-to-extend.rst:421
 msgid ""
 ":c:data:`NPY_INT8`, :c:data:`NPY_INT16`, :c:data:`NPY_INT32`, :c:data:"
 "`NPY_INT64`, :c:data:`NPY_UINT8`, :c:data:`NPY_UINT16`, :c:data:"
@@ -518,7 +530,7 @@ msgid ""
 "`NPY_FLOAT64`, :c:data:`NPY_COMPLEX64`, :c:data:`NPY_COMPLEX128`."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:416
+#: ../../../user/c-info.how-to-extend.rst:428
 msgid ""
 "The object will be converted to the desired type only if it can be done "
 "without losing precision. Otherwise ``NULL`` will be returned and an error "
@@ -526,11 +538,11 @@ msgid ""
 "override this behavior."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:482
+#: ../../../user/c-info.how-to-extend.rst:433
 msgid "*requirements*"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:422
+#: ../../../user/c-info.how-to-extend.rst:434
 msgid ""
 "The memory model for an ndarray admits arbitrary strides in each dimension "
 "to advance to the next element of the array. Often, however, you need to "
@@ -543,7 +555,7 @@ msgid ""
 "behaved\" for your specific usage."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:434
+#: ../../../user/c-info.how-to-extend.rst:446
 msgid ""
 "The requirements flag allows specification of what kind of array is "
 "acceptable. If the object passed in does not satisfy this requirements then "
@@ -555,32 +567,32 @@ msgid ""
 "c:data:`NPY_ARRAY_INOUT_ARRAY`:"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:447
+#: ../../../user/c-info.how-to-extend.rst:456
 msgid ":c:data:`NPY_ARRAY_IN_ARRAY`"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:445
+#: ../../../user/c-info.how-to-extend.rst:457
 msgid ""
 "This flag is useful for arrays that must be in C-contiguous order and "
 "aligned. These kinds of arrays are usually input arrays for some algorithm."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:454
+#: ../../../user/c-info.how-to-extend.rst:461
 msgid ":c:data:`NPY_ARRAY_OUT_ARRAY`"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:450
+#: ../../../user/c-info.how-to-extend.rst:462
 msgid ""
 "This flag is useful to specify an array that is in C-contiguous order, is "
 "aligned, and can be written to as well. Such an array is usually returned as "
 "output (although normally such output arrays are created from scratch)."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:469
+#: ../../../user/c-info.how-to-extend.rst:468
 msgid ":c:data:`NPY_ARRAY_INOUT_ARRAY`"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:457
+#: ../../../user/c-info.how-to-extend.rst:469
 msgid ""
 "This flag is useful to specify an array that will be used for both input and "
 "output. :c:func:`PyArray_ResolveWritebackIfCopy` must be called before :c:"
@@ -594,38 +606,38 @@ msgid ""
 "original array."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:471
+#: ../../../user/c-info.how-to-extend.rst:483
 msgid "Other useful flags that can be OR'd as additional requirements are:"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:475
+#: ../../../user/c-info.how-to-extend.rst:485
 msgid ":c:data:`NPY_ARRAY_FORCECAST`"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:474
+#: ../../../user/c-info.how-to-extend.rst:486
 msgid ""
 "Cast to the desired type, even if it can't be done without losing "
 "information."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:478
+#: ../../../user/c-info.how-to-extend.rst:489
 msgid ":c:data:`NPY_ARRAY_ENSURECOPY`"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:478
+#: ../../../user/c-info.how-to-extend.rst:490
 msgid "Make sure the resulting array is a copy of the original."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:482
+#: ../../../user/c-info.how-to-extend.rst:492
 msgid ":c:data:`NPY_ARRAY_ENSUREARRAY`"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:481
+#: ../../../user/c-info.how-to-extend.rst:493
 msgid ""
 "Make sure the resulting object is an actual ndarray and not a sub- class."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:486
+#: ../../../user/c-info.how-to-extend.rst:498
 msgid ""
 "Whether or not an array is byte-swapped is determined by the data-type of "
 "the array. Native byte-order arrays are always requested by :c:func:"
@@ -634,11 +646,11 @@ msgid ""
 "way to get a byte-swapped array from this routine."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:494
+#: ../../../user/c-info.how-to-extend.rst:506
 msgid "Creating a brand-new ndarray"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:496
+#: ../../../user/c-info.how-to-extend.rst:508
 msgid ""
 "Quite often, new arrays must be created from within extension-module code. "
 "Perhaps an output array is needed and you don't want the caller to have to "
@@ -653,11 +665,11 @@ msgid ""
 "common use cases."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:510
+#: ../../../user/c-info.how-to-extend.rst:522
 msgid "Getting at ndarray memory and accessing elements of the ndarray"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:512
+#: ../../../user/c-info.how-to-extend.rst:524
 msgid ""
 "If obj is an ndarray (:c:expr:`PyArrayObject *`), then the data-area of the "
 "ndarray is pointed to by the void* pointer :c:func:`PyArray_DATA` (obj) or "
@@ -676,7 +688,7 @@ msgid ""
 "``E[i,j,k]`` is obtained as :c:func:`PyArray_GETPTR3` (E, i, j, k)."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:529
+#: ../../../user/c-info.how-to-extend.rst:541
 msgid ""
 "As explained previously, C-style contiguous arrays and Fortran-style "
 "contiguous arrays have particular striding patterns. Two array flags (:c:"
@@ -693,11 +705,11 @@ msgid ""
 "contiguous striding reduces copying that otherwise must be made."
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:546
+#: ../../../user/c-info.how-to-extend.rst:558
 msgid "Example"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:551
+#: ../../../user/c-info.how-to-extend.rst:563
 msgid ""
 "The following example shows how you might write a wrapper that accepts two "
 "input arguments (that will be converted to an array) and an output argument "
@@ -706,7 +718,7 @@ msgid ""
 "above"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:557
+#: ../../../user/c-info.how-to-extend.rst:569
 msgid ""
 "static PyObject *\n"
 "example_wrapper(PyObject *dummy, PyObject *args)\n"
@@ -741,7 +753,7 @@ msgid ""
 "    Py_DECREF(arr1);\n"
 "    Py_DECREF(arr2);\n"
 "#if NPY_API_VERSION >= 0x0000000c\n"
-"    PyArray_ResolveWritebackIfCopy(oarr);\n"
+"    PyArray_ResolveWritebackIfCopy((PyArrayObject *)oarr);\n"
 "#endif\n"
 "    Py_DECREF(oarr);\n"
 "    Py_INCREF(Py_None);\n"
@@ -751,7 +763,7 @@ msgid ""
 "    Py_XDECREF(arr1);\n"
 "    Py_XDECREF(arr2);\n"
 "#if NPY_API_VERSION >= 0x0000000c\n"
-"    PyArray_DiscardWritebackIfCopy(oarr);\n"
+"    PyArray_DiscardWritebackIfCopy((PyArrayObject *)oarr);\n"
 "#endif\n"
 "    Py_XDECREF(oarr);\n"
 "    return NULL;\n"
@@ -759,11 +771,11 @@ msgid ""
 msgstr ""
 
 #: ../../../user/c-info.how-to-extend.rst:30
-#: ../../../user/c-info.how-to-extend.rst:548
+#: ../../../user/c-info.how-to-extend.rst:560
 msgid "extension module"
 msgstr ""
 
-#: ../../../user/c-info.how-to-extend.rst:277
-#: ../../../user/c-info.how-to-extend.rst:312
+#: ../../../user/c-info.how-to-extend.rst:289
+#: ../../../user/c-info.how-to-extend.rst:324
 msgid "reference counting"
 msgstr ""

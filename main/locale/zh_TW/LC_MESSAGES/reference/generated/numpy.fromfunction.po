@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,8 +29,15 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.fromfunction:4
 msgid ""
-"The resulting array therefore has a value ``fn(x, y, z)`` at coordinate "
-"``(x, y, z)``."
+"The function is called once with one coordinate array for each dimension of "
+"`shape` instead of once per coordinate."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:7
+msgid ""
+"For functions that operate elementwise on array arguments, the resulting "
+"array has a value ``fn(x, y, z)`` at coordinate ``(x, y, z)``."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
@@ -39,7 +46,7 @@ msgid "Parameters"
 msgstr "參數"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.fromfunction:14
+#: of numpy.fromfunction:12
 msgid "**function**"
 msgstr ""
 
@@ -49,16 +56,16 @@ msgid "callable"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.fromfunction:10
+#: of numpy.fromfunction:13
 msgid ""
-"The function is called with N parameters, where N is the rank of `shape`.  "
-"Each parameter represents the coordinates of the array varying along a "
+"The function is called once with N coordinate arrays as parameters, where N "
+"is the length of `shape`. Each array represents the coordinates along a "
 "specific axis.  For example, if `shape` were ``(2, 2)``, then the parameters "
 "would be ``array([[0, 0], [1, 1]])`` and ``array([[0, 1], [0, 1]])``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.fromfunction:18
+#: of numpy.fromfunction:19
 msgid "**shape**"
 msgstr "**shape**"
 
@@ -68,14 +75,15 @@ msgid "(N,) tuple of ints"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.fromfunction:17
+#: of numpy.fromfunction:20
 msgid ""
-"Shape of the output array, which also determines the shape of the coordinate "
-"arrays passed to `function`."
+"Shape of the coordinate arrays passed to `function`. The shape of the output "
+"is determined by the value returned by `function` and may be different from "
+"`shape`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.fromfunction:22
+#: of numpy.fromfunction:24
 msgid "**dtype**"
 msgstr "**dtype**"
 
@@ -85,14 +93,14 @@ msgid "data-type, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.fromfunction:21
+#: of numpy.fromfunction:25
 msgid ""
 "Data-type of the coordinate arrays passed to `function`. By default, `dtype` "
 "is float."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.fromfunction:33
+#: of numpy.fromfunction:28
 msgid "**like**"
 msgstr ""
 
@@ -102,7 +110,7 @@ msgid "array_like, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.fromfunction:25
+#: of numpy.fromfunction:29
 msgid ""
 "Reference object to allow the creation of arrays which are not NumPy arrays. "
 "If an array-like passed in as ``like`` supports the ``__array_function__`` "
@@ -116,7 +124,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.fromfunction:47
+#: of numpy.fromfunction:41
 msgid "**fromfunction**"
 msgstr ""
 
@@ -126,7 +134,7 @@ msgid "any"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.fromfunction:38
+#: of numpy.fromfunction:42
 msgid ""
 "The result of the call to `function` is passed back directly. Therefore the "
 "shape of `fromfunction` is completely determined by `function`.  If "
@@ -135,38 +143,45 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.fromfunction:52
+#: of numpy.fromfunction:56
 msgid ":obj:`indices`, :obj:`meshgrid`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.fromfunction:56
+#: of numpy.fromfunction:60
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.fromfunction:57
+#: of numpy.fromfunction:61
 msgid "Keywords other than `dtype` and `like` are passed to `function`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.fromfunction:61
+#: of numpy.fromfunction:64
+msgid ""
+"`shape` determines the shape of the coordinate arrays passed to `function`. "
+"It does not enforce that the function returns a result with that shape. If "
+"`function` returns a scalar, the result is a scalar rather than an array "
+"with the given `shape`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.fromfunction:71
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.fromfunction:-1
 msgid ""
-"<div id=\"b30cc761-f4ec-4d31-936d-2bd64d24f24b\" "
+"<div id=\"44e6079c-2a23-4e9c-98fc-1599576d62fa\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('69bcfc57-3d2f-4922-8605-b93e6f499ca5','b30cc761-"
-"f4ec-4d31-936d-2bd64d24f24b')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('69bcfc57-3d2f-4922-8605-b93e6f499ca5','b30cc761-"
-"f4ec-4d31-936d-2bd64d24f24b')\">Open In Tab</button></div><div "
-"id=\"c7263791-0326-460d-a754-4feda3e84328\" "
+"tryExamplesHideIframe('3496c41c-4c07-45cf-917a-5e8be178e9fa','44e6079c-2a23-4e9c-98fc-1599576d62fa')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('3496c41c-4c07-45cf-917a-5e8be178e9fa','44e6079c-2a23-4e9c-98fc-1599576d62fa')\">Open "
+"In Tab</button></div><div id=\"4baac79f-1134-4532-8cf0-2142e2961136\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 

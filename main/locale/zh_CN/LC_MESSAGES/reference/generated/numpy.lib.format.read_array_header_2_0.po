@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,7 +39,7 @@ msgid "Parameters"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
-#: of numpy.lib.format.read_array_header_2_0:10
+#: of numpy.lib.format.read_array_header_2_0:9
 msgid "**fp**"
 msgstr ""
 
@@ -50,11 +50,14 @@ msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
 #: of numpy.lib.format.read_array_header_2_0:10
-msgid "A file object or something with a `.read()` method like a file."
+msgid ""
+"A file object or something with a `.read()` method like a file. Must be "
+"positioned at the start of the header, just after the magic string and "
+"version bytes. This can be done by calling `read_magic` on ``fp`` first."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
-#: of numpy.lib.format.read_array_header_2_0:17
+#: of numpy.lib.format.read_array_header_2_0:15
 msgid "**max_header_size**"
 msgstr ""
 
@@ -64,7 +67,7 @@ msgid "int, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
-#: of numpy.lib.format.read_array_header_2_0:13
+#: of numpy.lib.format.read_array_header_2_0:16
 msgid ""
 "Maximum allowed size of the header.  Large headers may not be safe to load "
 "securely and thus require explicitly passing a larger value. See :py:func:"
@@ -77,7 +80,7 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
-#: of numpy.lib.format.read_array_header_2_0:22
+#: of numpy.lib.format.read_array_header_2_0:24
 msgid "**shape**"
 msgstr ""
 
@@ -87,7 +90,7 @@ msgid "tuple of int"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
-#: of numpy.lib.format.read_array_header_2_0:22
+#: of numpy.lib.format.read_array_header_2_0:25
 msgid "The shape of the array."
 msgstr ""
 
@@ -102,7 +105,7 @@ msgid "bool"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
-#: of numpy.lib.format.read_array_header_2_0:25
+#: of numpy.lib.format.read_array_header_2_0:28
 msgid ""
 "The array data will be written out directly if it is either C-contiguous or "
 "Fortran-contiguous. Otherwise, it will be made contiguous before writing it "
@@ -110,7 +113,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
-#: of numpy.lib.format.read_array_header_2_0:33
+#: of numpy.lib.format.read_array_header_2_0:32
 msgid "**dtype**"
 msgstr ""
 
@@ -120,7 +123,7 @@ msgid "dtype"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
-#: of numpy.lib.format.read_array_header_2_0:30
+#: of numpy.lib.format.read_array_header_2_0:33
 msgid "The dtype of the file's data."
 msgstr ""
 
@@ -130,11 +133,11 @@ msgid "Raises"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
-#: of numpy.lib.format.read_array_header_2_0:44
+#: of numpy.lib.format.read_array_header_2_0:40
 msgid "ValueError"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/lib/format.py:docstring
-#: of numpy.lib.format.read_array_header_2_0:38
+#: of numpy.lib.format.read_array_header_2_0:41
 msgid "If the data is invalid."
 msgstr ""

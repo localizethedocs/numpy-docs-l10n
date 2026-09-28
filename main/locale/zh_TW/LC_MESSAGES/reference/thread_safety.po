@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,30 +64,112 @@ msgid ""
 "object_`` do not release the GIL."
 msgstr ""
 
-#: ../../../reference/thread_safety.rst:36
-msgid "Context-local state"
-msgstr ""
-
 #: ../../../reference/thread_safety.rst:38
-msgid ""
-"NumPy maintains some state for ufuncs context-local basis, which means each "
-"thread in a multithreaded program or task in an asyncio program has its own "
-"independent configuration of the `numpy.errstate` (see :doc:`/reference/"
-"routines.err`), and of :ref:`text_formatting_options`."
+msgid "Context Local State"
 msgstr ""
 
-#: ../../../reference/thread_safety.rst:43
+#: ../../../reference/thread_safety.rst:40
 msgid ""
-"You can update state stored in a context variable by entering a context "
-"manager. As soon as the context manager exits, the state will be reset to "
-"its value before entering the context manager."
+"NumPy stores user-adjustable configuration options in :py:mod:`context "
+"variables <python:contextvars>`. Context variables allow *context-local "
+"state*, which means each thread in a multithreaded program or task in an "
+"asyncio program has its own independent configuration. This includes the "
+"following state:"
 msgstr ""
 
-#: ../../../reference/thread_safety.rst:48
+#: ../../../reference/thread_safety.rst:45
+msgid ""
+"The `numpy.errstate`, which storesl floating-point error handling "
+"configuration options and the ufunc buffer size settable via `numpy."
+"setbufsize`. See :doc:`/reference/routines.err` and :ref:`use-of-internal-"
+"buffers` for more details."
+msgstr ""
+
+#: ../../../reference/thread_safety.rst:49
+msgid ""
+"The `numpy.printoptions`  and all text-formatting configuration options. "
+"See :ref:`text_formatting_options` for more details."
+msgstr ""
+
+#: ../../../reference/thread_safety.rst:51
+msgid ""
+"The memory allocator, see :ref:`data_memory` and :ref:`NEP 49 <NEP49>` for "
+"more details."
+msgstr ""
+
+#: ../../../reference/thread_safety.rst:54
+msgid ""
+"State stored in a context variable is set syntactically using the ``with`` "
+"statement. For example, you can update the numpy printing options state like "
+"so:"
+msgstr ""
+
+#: ../../../reference/thread_safety.rst:57
+msgid ""
+">>> with np.printoptions(precision=2):\n"
+"...    np.array([2.0]) / 3\n"
+"array([0.67])\n"
+">>> np.array([2.0]) / 3\n"
+"array([0.66666667])"
+msgstr ""
+
+#: ../../../reference/thread_safety.rst:66
+msgid ""
+"This property applies to all context-local state, not just `numpy."
+"printoptions`."
+msgstr ""
+
+#: ../../../reference/thread_safety.rst:69
+msgid "Interaction with the `threading` module"
+msgstr ""
+
+#: ../../../reference/thread_safety.rst:71
+msgid ""
+"Before Python 3.14, new threads always start with newly initialized context "
+"state. For example:"
+msgstr ""
+
+#: ../../../reference/thread_safety.rst:74
+msgid ""
+"$ python3.12\n"
+">>> import numpy, threading\n"
+">>> def print_printoptions():\n"
+"...     print(numpy.get_printoptions()['precision'])\n"
+">>> with numpy.printoptions(precision=2):\n"
+"...     threading.Thread(target=print_printoptions).start()\n"
+"8"
+msgstr ""
+
+#: ../../../reference/thread_safety.rst:84
+msgid ""
+"Starting in Python 3.14 a new ``thread_inherit_context`` startup "
+"configuration option for Python allows opting into a new behavior where "
+"context state for spawned threads behaves syntactically as one would expect "
+"the above code to behave:"
+msgstr ""
+
+#: ../../../reference/thread_safety.rst:89
+msgid ""
+"$ python3.14 -Xthread_inherit_context=1\n"
+">>> import numpy, threading\n"
+">>> def print_printoptions():\n"
+"...     print(numpy.get_printoptions()['precision'])\n"
+">>> with numpy.printoptions(precision=2):\n"
+"...     threading.Thread(target=print_printoptions).start()\n"
+"2"
+msgstr ""
+
+#: ../../../reference/thread_safety.rst:99
+msgid ""
+"See `the CPython documentation <https://docs.python.org/3/using/cmdline."
+"html#envvar-PYTHON_THREAD_INHERIT_CONTEXT>`_ for more details."
+msgstr ""
+
+#: ../../../reference/thread_safety.rst:104
 msgid "Free-threaded Python"
 msgstr ""
 
-#: ../../../reference/thread_safety.rst:52
+#: ../../../reference/thread_safety.rst:108
 msgid ""
 "Starting with NumPy 2.1 and CPython 3.13, NumPy also has experimental "
 "support for python runtimes with the GIL disabled. See https://py-free-"
@@ -96,7 +178,7 @@ msgid ""
 "supporting it in libraries that depend on NumPy."
 msgstr ""
 
-#: ../../../reference/thread_safety.rst:58
+#: ../../../reference/thread_safety.rst:114
 msgid ""
 "Because free-threaded Python does not have a global interpreter lock to "
 "serialize access to Python objects, there are more opportunities for threads "
@@ -107,22 +189,28 @@ msgid ""
 "outside free-threaded python."
 msgstr ""
 
-#: ../../../reference/thread_safety.rst:67
+#: ../../../reference/thread_safety.rst:122
+msgid ""
+"Free-threaded Python has ``thread_inherit_context`` turned on by default "
+"starting in Python 3.14. See :ref:`context_local` for more information."
+msgstr ""
+
+#: ../../../reference/thread_safety.rst:126
 msgid "C-API Threading Support"
 msgstr ""
 
-#: ../../../reference/thread_safety.rst:69
+#: ../../../reference/thread_safety.rst:128
 msgid ""
 "For developers writing C extensions that interact with NumPy, several parts "
 "of the :doc:`C-API array documentation </reference/c-api/array>` provide "
 "detailed information about multithreading considerations."
 msgstr ""
 
-#: ../../../reference/thread_safety.rst:74
+#: ../../../reference/thread_safety.rst:133
 msgid "See Also"
 msgstr ""
 
-#: ../../../reference/thread_safety.rst:76
+#: ../../../reference/thread_safety.rst:135
 msgid ""
 ":doc:`/reference/random/multithreading` - Practical example of using NumPy's "
 "random number generators in a multithreaded context with :mod:`concurrent."

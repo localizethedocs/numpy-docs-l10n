@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:58+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1607,7 +1607,7 @@ msgid ""
 msgstr ""
 
 #: ../../../reference/routines.ma.rst:387:<autosummary>:1
-msgid "Least squares polynomial fit."
+msgid "Least squares polynomial fit to data with possible masked values."
 msgstr ""
 
 #: ../../../reference/routines.ma.rst:389
@@ -1637,7 +1637,7 @@ msgid ":py:obj:`ma.round <numpy.ma.round>`\\ \\(a\\[\\, decimals\\, out\\]\\)"
 msgstr ""
 
 #: ../../../reference/routines.ma.rst:399:<autosummary>:1
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid "Return a copy of a, rounded to 'decimals' places."
 msgstr ""
 
@@ -1707,222 +1707,233 @@ msgstr ""
 msgid "Miscellanea"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ""
 ":py:obj:`ma.allequal <numpy.ma.allequal>`\\ \\(a\\, b\\[\\, "
 "fill\\_value\\]\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ""
 "Return True if all entries of a and b are equal, using fill_value as a truth "
 "value where either or both are masked."
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ""
 ":py:obj:`ma.allclose <numpy.ma.allclose>`\\ \\(a\\, b\\[\\, "
 "masked\\_equal\\, rtol\\, atol\\]\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid "Returns True if two arrays are element-wise equal within a tolerance."
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ""
 ":py:obj:`ma.amax <numpy.ma.amax>`\\ \\(a\\[\\, axis\\, out\\, keepdims\\, "
 "initial\\, where\\]\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid "Return the maximum of an array or maximum along an axis."
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ""
 ":py:obj:`ma.amin <numpy.ma.amin>`\\ \\(a\\[\\, axis\\, out\\, keepdims\\, "
 "initial\\, where\\]\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid "Return the minimum of an array or minimum along an axis."
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ""
 ":py:obj:`ma.apply_along_axis <numpy.ma.apply_along_axis>`\\ \\(func1d\\, "
 "axis\\, arr\\, ...\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
-msgid "Apply a function to 1-D slices along the given axis."
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
+msgid "Apply a function to 1-D slices of a masked array along an axis."
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ""
 ":py:obj:`ma.apply_over_axes <numpy.ma.apply_over_axes>`\\ \\(func\\, a\\, "
 "axes\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid "Apply a function repeatedly over multiple axes."
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ""
 ":py:obj:`ma.arange <numpy.ma.arange>`\\ \\(\\[start\\,\\] stop\\[\\, step\\,"
 "\\]\\[\\, dtype\\, ...\\]\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid "Return evenly spaced values within a given interval."
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ""
 ":py:obj:`ma.choose <numpy.ma.choose>`\\ \\(indices\\, choices\\[\\, out\\, "
 "mode\\]\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid "Use an index array to construct a new array from a list of choices."
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ":py:obj:`ma.compress_nd <numpy.ma.compress_nd>`\\ \\(x\\[\\, axis\\]\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid "Suppress slices from multiple dimensions which contain masked values."
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ""
 ":py:obj:`ma.convolve <numpy.ma.convolve>`\\ \\(a\\, v\\[\\, mode\\, "
 "propagate\\_mask\\]\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ""
 "Returns the discrete, linear convolution of two one-dimensional sequences."
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ""
 ":py:obj:`ma.correlate <numpy.ma.correlate>`\\ \\(a\\, v\\[\\, mode\\, "
 "propagate\\_mask\\]\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid "Cross-correlation of two 1-dimensional sequences."
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ""
 ":py:obj:`ma.ediff1d <numpy.ma.ediff1d>`\\ \\(arr\\[\\, to\\_end\\, "
 "to\\_begin\\]\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid "Compute the differences between consecutive elements of an array."
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ":py:obj:`ma.flatten_mask <numpy.ma.flatten_mask>`\\ \\(mask\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ""
 "Returns a completely flattened version of the mask, where nested fields are "
 "collapsed."
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ""
 ":py:obj:`ma.flatten_structured_array <numpy.ma.flatten_structured_array>`\\ "
 "\\(a\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid "Flatten a structured array."
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ":py:obj:`ma.fromflex <numpy.ma.fromflex>`\\ \\(fxarray\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid "Build a masked array from a suitable flexible-type array."
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ""
 ":py:obj:`ma.indices <numpy.ma.indices>`\\ \\(dimensions\\[\\, dtype\\, "
 "sparse\\, ...\\]\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid "Return an array representing the indices of a grid."
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ":py:obj:`ma.left_shift <numpy.ma.left_shift>`\\ \\(a\\, n\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid "Shift the bits of an integer to the left."
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ":py:obj:`ma.ndim <numpy.ma.ndim>`\\ \\(obj\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid "Return the number of dimensions of an array."
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ""
 ":py:obj:`ma.put <numpy.ma.put>`\\ \\(a\\, indices\\, values\\[\\, mode\\]\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid "Set storage-indexed locations to corresponding values."
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ":py:obj:`ma.putmask <numpy.ma.putmask>`\\ \\(a\\, mask\\, values\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid "Changes elements of an array based on conditional and input values."
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ":py:obj:`ma.right_shift <numpy.ma.right_shift>`\\ \\(a\\, n\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid "Shift the bits of an integer to the right."
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ""
 ":py:obj:`ma.round_ <numpy.ma.round_>`\\ \\(a\\[\\, decimals\\, out\\]\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ""
 ":py:obj:`ma.take <numpy.ma.take>`\\ \\(a\\, indices\\[\\, axis\\, out\\, "
 "mode\\]\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
+msgid ""
+":py:obj:`ma.unwrap <numpy.ma.unwrap>`\\ \\(p\\[\\, discont\\, axis\\, "
+"period\\]\\)"
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
+msgid ""
+"Unwrap by taking the complement of large deltas with respect to the period."
+msgstr ""
+
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ":py:obj:`ma.where <numpy.ma.where>`\\ \\(condition\\[\\, x\\, y\\]\\)"
 msgstr ""
 
-#: ../../../reference/routines.ma.rst:440:<autosummary>:1
+#: ../../../reference/routines.ma.rst:441:<autosummary>:1
 msgid ""
 "Return a masked array with elements from `x` or `y`, depending on condition."
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -197,8 +197,8 @@ msgstr ""
 #: ../../../user/how-to-io.rst:197
 msgid ""
 "For :ref:`security and portability <how-to-io-pickle-file>`, set "
-"``allow_pickle=False`` unless the dtype contains Python objects, which "
-"requires pickling."
+"``allow_pickle=False`` unless the dtype contains Python objects or is `numpy."
+"dtypes.StringDType`, which requires pickling."
 msgstr ""
 
 #: ../../../user/how-to-io.rst:201
@@ -287,7 +287,7 @@ msgid ""
 "    # it does not have a fixed size\n"
 "])\n"
 "\n"
-"header = np.fromfile(f, dtype=wave_header_dtype, count=1)[0]"
+"header = np.fromfile(f, dtype=wav_header_dtype, count=1)[0]"
 msgstr ""
 
 #: ../../../user/how-to-io.rst:263
@@ -398,8 +398,8 @@ msgstr ""
 #: ../../../user/how-to-io.rst:320
 msgid ""
 "Use :func:`numpy.save` and :func:`numpy.load`.  Set ``allow_pickle=False``, "
-"unless the array dtype includes Python objects, in which case pickling is "
-"required."
+"unless the array dtype includes Python objects or is `numpy.dtypes."
+"StringDType`, in which case pickling is required."
 msgstr ""
 
 #: ../../../user/how-to-io.rst:324

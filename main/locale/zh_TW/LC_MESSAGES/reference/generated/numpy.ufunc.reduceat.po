@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,11 +72,9 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:16
 msgid ""
-"The shape of the output depends on the size of `indices`, and may be larger "
-"than `array` (this happens if ``len(indices) > array.shape[axis]``)."
+"The shape of the output depends on the size of ``indices``, and may be "
+"larger than ``array`` (this happens if ``len(indices) > array.shape[axis]``)."
 msgstr ""
-"輸出的形狀取決於 `indices` 的大小，可能大於 `array`（如果 ``len(indices) > "
-"array.shape[axis]`` 就會發生這種情況）。"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:0
@@ -84,7 +82,7 @@ msgid "Parameters"
 msgstr "參數"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduceat:22
+#: of numpy.ufunc.reduceat:21
 msgid "**array**"
 msgstr "**array**"
 
@@ -99,7 +97,7 @@ msgid "The array to act on."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduceat:26
+#: of numpy.ufunc.reduceat:24
 msgid "**indices**"
 msgstr "**indices**"
 
@@ -110,7 +108,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduceat:29
+#: of numpy.ufunc.reduceat:28
 msgid "**axis**"
 msgstr "**axis**"
 
@@ -125,7 +123,7 @@ msgid "The axis along which to apply the reduceat."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduceat:35
+#: of numpy.ufunc.reduceat:31
 msgid "**dtype**"
 msgstr "**dtype**"
 
@@ -144,7 +142,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduceat:44
+#: of numpy.ufunc.reduceat:37
 msgid "**out**"
 msgstr "**out**"
 
@@ -168,7 +166,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduceat:57
+#: of numpy.ufunc.reduceat:48
 msgid "**r**"
 msgstr "**r**"
 
@@ -195,8 +193,8 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:63
 msgid ""
-"If `array` is 1-D, the function `ufunc.accumulate(array)` is the same as "
-"``ufunc.reduceat(array, indices)[::2]`` where `indices` is "
+"If ``array`` is 1-D, the function ``ufunc.accumulate(array)`` is the same as "
+"``ufunc.reduceat(array, indices)[::2]`` where ``indices`` is "
 "``range(len(array) - 1)`` with a zero placed in every other element: "
 "``indices = zeros(2 * len(array) - 1)``, ``indices[1::2] = range(1, "
 "len(array))``."
@@ -205,8 +203,8 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:70
 msgid ""
-"Don't be fooled by this attribute's name: `reduceat(array)` is not "
-"necessarily smaller than `array`."
+"Don't be fooled by this attribute's name: ``reduceat(array)`` is not "
+"necessarily smaller than ``array``."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
@@ -245,15 +243,16 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:-1
 msgid ""
-"<div id=\"99d46084-b74c-4b13-9f84-6b7067392a44\" "
+"<div id=\"7c4214e3-b2d0-43e2-8123-63d8f8bbece8\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('4a2b294c-e000-483a-973a-b5f0eac4bedd','99d46084-"
-"b74c-4b13-9f84-6b7067392a44')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window.openInNewTab('4a2b294c-"
-"e000-483a-973a-b5f0eac4bedd','99d46084-b74c-4b13-9f84-6b7067392a44')\">Open "
-"In Tab</button></div><div id=\"49bfd6a7-ec57-4c4c-85a7-350b7073f4d9\" "
+"tryExamplesHideIframe('2945f8aa-5a33-4a4f-a107-ee118e0b5e9d','7c4214e3-"
+"b2d0-43e2-8123-63d8f8bbece8')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('2945f8aa-5a33-4a4f-a107-ee118e0b5e9d','7c4214e3-"
+"b2d0-43e2-8123-63d8f8bbece8')\">Open In Tab</button></div><div "
+"id=\"c24bbb03-19b2-478e-9210-690e3c41e67e\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
@@ -263,3 +262,11 @@ msgid ""
 "<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
 "loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
 msgstr ""
+
+#~ msgid ""
+#~ "The shape of the output depends on the size of `indices`, and may be "
+#~ "larger than `array` (this happens if ``len(indices) > array."
+#~ "shape[axis]``)."
+#~ msgstr ""
+#~ "輸出的形狀取決於 `indices` 的大小，可能大於 `array`（如果 ``len(indices) "
+#~ "> array.shape[axis]`` 就會發生這種情況）。"

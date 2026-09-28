@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,7 +53,7 @@ msgid "Parameters"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.correlate:15
+#: of numpy.correlate:14
 msgid "**a, v**"
 msgstr ""
 
@@ -68,7 +68,7 @@ msgid "Input sequences."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.correlate:21
+#: of numpy.correlate:17
 msgid "**mode**"
 msgstr ""
 
@@ -90,7 +90,7 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.correlate:32
+#: of numpy.correlate:25
 msgid "**out**"
 msgstr ""
 
@@ -145,11 +145,26 @@ msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.correlate:50
-msgid "which is related to :math:`c_k` by :math:`c'_k = c_{-k}`."
+msgid "which is related to :math:`c_k` by :math:`c'_k = c_{-k}`. For example:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.correlate:52
+#: of numpy.correlate:56
+msgid ""
+"Using NumPy's definition, the valid correlation values correspond to the "
+"lags -4, -3, -2, -1, and 0, so the returned values correspond to :math:"
+"`[c_{-4}, c_{-3}, c_{-2}, c_{-1}, c_0]`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.correlate:60
+msgid ""
+"Under the alternative definition, :math:`c'_k = c_{-k}`, the same "
+"correlation values are associated with the opposite lag sign."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.correlate:63
 msgid ""
 "`numpy.correlate` may perform slowly in large arrays (i.e. n = 1e5) because "
 "it does not use the FFT to compute the convolution; in that case, `scipy."
@@ -157,34 +172,34 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.correlate:57
+#: of numpy.correlate:68
 msgid "References"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.correlate:58
+#: of numpy.correlate:69
 msgid ""
 "Wikipedia, \"Cross-correlation\", https://en.wikipedia.org/wiki/Cross-"
 "correlation"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.correlate:63
+#: of numpy.correlate:74
 msgid "[Rd663958e4897-1]_"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.correlate:66
+#: of numpy.correlate:77
 msgid "Examples"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.correlate:79
+#: of numpy.correlate:90
 msgid "Using complex sequences:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.correlate:84
+#: of numpy.correlate:95
 msgid ""
 "Note that you get the time reversed, complex conjugated result (:math:"
 "`\\overline{c_{-k}}`) when the two input sequences a and v change places:"
@@ -193,16 +208,16 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.correlate:-1
 msgid ""
-"<div id=\"92968f3f-077c-47ba-acfb-a508910192e0\" "
+"<div id=\"8255151a-6bec-4618-9b3b-fabe52b3ae52\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('e334ff60-1fc5-4759-"
-"a70a-50b69e45f309','92968f3f-077c-47ba-acfb-a508910192e0')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('e334ff60-1fc5-4759-a70a-50b69e45f309','92968f3f-077c-47ba-acfb-"
-"a508910192e0')\">Open In Tab</button></div><div id=\"e08599d6-6499-4826-aaa3-"
-"b96c46bee789\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('509b9090-"
+"f256-4c02-80d3-4916b00d9af7','8255151a-6bec-4618-9b3b-fabe52b3ae52')\">Go "
+"Back</button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('509b9090-f256-4c02-80d3-4916b00d9af7','8255151a-6bec-4618-9b3b-"
+"fabe52b3ae52')\">Open In Tab</button></div><div id=\"952f4f6c-15d3-459e-858e-"
+"b79ad9789bcf\" class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring

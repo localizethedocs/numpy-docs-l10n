@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,8 +75,8 @@ msgstr ""
 
 #: ../../../user/basics.strings.rst:45
 msgid ""
-"Since this is a one-byte encoding, the byteorder is `'|'` (not applicable), "
-"and the data type detected is a maximum 5 character bytestring."
+"Since this stores individual bytes, the byteorder is `'|'` (not applicable), "
+"and the data type detected is a maximum 5-byte bytestring."
 msgstr ""
 
 #: ../../../user/basics.strings.rst:49
@@ -126,11 +126,12 @@ msgstr ""
 #: ../../../user/basics.strings.rst:93
 msgid ""
 "Also note that unlike fixed-width strings and most other NumPy data types, "
-"``StringDType`` does not store the string data in the \"main\" ``ndarray`` "
-"data buffer. Instead, the array buffer is used to store metadata about where "
-"the string data are stored in memory. This difference means that code "
-"expecting the array buffer to contain string data will not function "
-"correctly, and will need to be updated to support ``StringDType``."
+"``StringDType`` does not always store the string data in the \"main\" "
+"``ndarray`` data buffer. Instead, the array buffer can store short strings "
+"or metadata about where longer string data are stored in memory. This "
+"difference means that code expecting the array buffer to contain string data "
+"will not function correctly, and will need to be updated to support "
+"``StringDType``."
 msgstr ""
 
 #: ../../../user/basics.strings.rst:102
@@ -183,11 +184,18 @@ msgid ""
 "to the end of the array:"
 msgstr ""
 
-#: ../../../user/basics.strings.rst:153
+#: ../../../user/basics.strings.rst:152
+msgid ""
+"Comparisons also follow floating-point NaN semantics: equality and ordered "
+"comparisons involving a NaN-like sentinel return ``False``, while inequality "
+"returns ``True``."
+msgstr ""
+
+#: ../../../user/basics.strings.rst:160
 msgid "String Missing Data Sentinels"
 msgstr ""
 
-#: ../../../user/basics.strings.rst:155
+#: ../../../user/basics.strings.rst:162
 msgid ""
 "A string missing data value is an instance of ``str`` or subtype of ``str``. "
 "If such an array is passed to a string operation or a cast, \"missing\" "
@@ -196,84 +204,83 @@ msgid ""
 "entries."
 msgstr ""
 
-#: ../../../user/basics.strings.rst:161
+#: ../../../user/basics.strings.rst:168
 msgid "Other Sentinels"
 msgstr ""
 
-#: ../../../user/basics.strings.rst:163
+#: ../../../user/basics.strings.rst:170
 msgid ""
 "Other objects, such as ``None`` are also supported as missing data "
 "sentinels. If any missing data are present in an array using such a "
-"sentinel, then string operations will raise an error:"
-msgstr ""
-
-#: ../../../user/basics.strings.rst:175
-msgid "Coercing Non-strings"
-msgstr ""
-
-#: ../../../user/basics.strings.rst:177
-msgid "By default, non-string data are coerced to strings:"
+"sentinel, then operations such as sorting will raise an error:"
 msgstr ""
 
 #: ../../../user/basics.strings.rst:182
+msgid "Coercing Non-strings"
+msgstr ""
+
+#: ../../../user/basics.strings.rst:184
+msgid "By default, non-string data are coerced to strings:"
+msgstr ""
+
+#: ../../../user/basics.strings.rst:189
 msgid ""
 "If this behavior is not desired, an instance of the DType can be created "
 "that disables string coercion by setting ``coerce=False`` in the initializer:"
 msgstr ""
 
-#: ../../../user/basics.strings.rst:190
+#: ../../../user/basics.strings.rst:197
 msgid ""
 "This allows strict data validation in the same pass over the data NumPy uses "
 "to create the array. Setting ``coerce=True`` recovers the default behavior "
 "allowing coercion to strings."
 msgstr ""
 
-#: ../../../user/basics.strings.rst:195
+#: ../../../user/basics.strings.rst:202
 msgid "Casting To and From Fixed-Width Strings"
 msgstr ""
 
-#: ../../../user/basics.strings.rst:197
+#: ../../../user/basics.strings.rst:204
 msgid ""
 "``StringDType`` supports round-trip casts between `numpy.str_`, `numpy."
 "bytes_`, and `numpy.void`. Casting to a fixed-width string is most useful "
 "when strings need to be memory-mapped in an ndarray or when a fixed-width "
 "string is needed for reading and writing to a columnar data format with a "
-"known maximum string length."
+"known maximum string length. The `numpy.bytes_` cast is most useful for "
+"string data that is known to contain only ASCII characters, as characters "
+"outside this range cannot be represented in a single byte in the UTF-8 "
+"encoding and are rejected."
 msgstr ""
 
-#: ../../../user/basics.strings.rst:203
+#: ../../../user/basics.strings.rst:213
 msgid ""
-"In all cases, casting to a fixed-width string requires specifying the "
-"maximum allowed string length::"
+"When converting an array to a fixed-width string dtype with an unspecified "
+"size using `numpy.ndarray.astype`, NumPy infers the size by inspecting the "
+"array values, producing a dtype wide enough to store the widest entry "
+"without truncation::"
 msgstr ""
 
-#: ../../../user/basics.strings.rst:206
+#: ../../../user/basics.strings.rst:218
 msgid ""
-">>> arr = np.array([\"hello\", \"world\"], dtype=StringDType())\n"
-">>> arr.astype(np.str_)  \n"
-"Traceback (most recent call last):\n"
-"...\n"
-"TypeError: Casting from StringDType to a fixed-width dtype with an\n"
-"unspecified size is not currently supported, specify an explicit\n"
-"size for the output dtype instead.\n"
-"\n"
-"The above exception was the direct cause of the following\n"
-"exception:\n"
-"\n"
-"TypeError: cannot cast dtype StringDType() to <class 'numpy.dtypes."
-"StrDType'>.\n"
-">>> arr.astype(\"U5\")\n"
-"array(['hello', 'world'], dtype='<U5')"
+">>> arr = np.array([\"hello\", \"world!!\"], dtype=StringDType())\n"
+">>> arr.astype(np.str_)\n"
+"array(['hello', 'world!!'], dtype='<U7')\n"
+">>> arr.astype(\"S\")\n"
+"array([b'hello', b'world!!'], dtype='|S7')"
 msgstr ""
 
-#: ../../../user/basics.strings.rst:221
+#: ../../../user/basics.strings.rst:224
 msgid ""
-"The `numpy.bytes_` cast is most useful for string data that is known to "
-"contain only ASCII characters, as characters outside this range cannot be "
-"represented in a single byte in the UTF-8 encoding and are rejected."
+"An explicit size can still be passed, truncating entries that do not fit::"
 msgstr ""
 
-#: ../../../user/basics.strings.rst:226
+#: ../../../user/basics.strings.rst:227
+msgid ""
+">>> arr.astype(\"U4\")\n"
+"array(['hell', 'worl'], dtype='<U4')"
+msgstr ""
+
+#: ../../../user/basics.strings.rst:230
 msgid ""
 "Any valid unicode string can be cast to `numpy.str_`, although since `numpy."
 "str_` uses a 32-bit UCS4 encoding for all characters, this will often waste "
@@ -281,15 +288,23 @@ msgid ""
 "memory-efficient encoding."
 msgstr ""
 
-#: ../../../user/basics.strings.rst:231
+#: ../../../user/basics.strings.rst:235
 msgid ""
 "Additionally, any valid unicode string can be cast to `numpy.void`, storing "
 "the UTF-8 bytes directly in the output array:"
 msgstr ""
 
-#: ../../../user/basics.strings.rst:238
+#: ../../../user/basics.strings.rst:242
 msgid ""
 "Care must be taken to ensure that the output array has enough space for the "
 "UTF-8 bytes in the string, since the size of a UTF-8 bytestream in bytes is "
 "not necessarily the same as the number of characters in the string."
+msgstr ""
+
+#: ../../../user/basics.strings.rst:247
+msgid ""
+"Conversions in the other direction, from a fixed-width string array to "
+"``StringDType`` are ``\"safe\"`` casts. The bytes stored in a `numpy.bytes_` "
+"array must be valid UTF-8, and a ``UnicodeDecodeError`` is raised during the "
+"cast if they are not."
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,8 +38,8 @@ msgstr ""
 msgid ""
 "Integrate `y` (`x`) along each 1d slice on the given axis, compute :math:"
 "`\\int y(x) dx`. When `x` is specified, this integrates along the parametric "
-"curve, computing :math:`\\int_t y(t) dt = \\int_t y(t) \\left.\\frac{dx}"
-"{dt}\\right|_{x=x(t)} dt`."
+"curve :math:`C` given by :math:`(x(t), y(t))`, computing the line integral :"
+"math:`\\int_C y \\, dx = \\int y(t) \\frac{dx}{dt} \\, dt`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
@@ -48,7 +48,7 @@ msgid "Parameters"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.trapezoid:18
+#: of numpy.trapezoid:17
 msgid "**y**"
 msgstr ""
 
@@ -63,7 +63,7 @@ msgid "Input array to integrate."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.trapezoid:23
+#: of numpy.trapezoid:20
 msgid "**x**"
 msgstr ""
 
@@ -81,7 +81,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.trapezoid:26
+#: of numpy.trapezoid:25
 msgid "**dx**"
 msgstr ""
 
@@ -96,7 +96,7 @@ msgid "The spacing between sample points when `x` is None. The default is 1."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.trapezoid:31
+#: of numpy.trapezoid:28
 msgid "**axis**"
 msgstr ""
 
@@ -116,7 +116,7 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.trapezoid:45
+#: of numpy.trapezoid:35
 msgid "**trapezoid**"
 msgstr ""
 
@@ -222,16 +222,15 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.trapezoid:-1
 msgid ""
-"<div id=\"cb315ed2-0b6e-4d3f-a502-3d03a96bb770\" "
+"<div id=\"5d238579-d913-4d9a-8d11-e77f0734360a\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('e464e5c8-72fb-417d-"
-"bc9b-6b3c9eca3215','cb315ed2-0b6e-4d3f-a502-3d03a96bb770')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('e464e5c8-72fb-417d-bc9b-6b3c9eca3215','cb315ed2-0b6e-4d3f-"
-"a502-3d03a96bb770')\">Open In Tab</button></div><div "
-"id=\"498e1af0-197f-43ce-9ab2-2946911de489\" "
+"tryExamplesHideIframe('bf37584c-f549-4dc2-b331-3e441e24b46f','5d238579-"
+"d913-4d9a-8d11-e77f0734360a')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('bf37584c-"
+"f549-4dc2-b331-3e441e24b46f','5d238579-d913-4d9a-8d11-e77f0734360a')\">Open "
+"In Tab</button></div><div id=\"f2743b5a-263e-43a3-8f4e-89a764130b55\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 

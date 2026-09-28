@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,85 +22,89 @@ msgid "NumPy 2.4.0 Release Notes"
 msgstr "NumPy 2.4.0 發行備註"
 
 #: ../../../release/2.4.0-notes.rst:7
+msgid "*Released on 2025-12-20.*"
+msgstr ""
+
+#: ../../../release/2.4.0-notes.rst:9
 msgid ""
 "The NumPy 2.4.0 release continues the work to improve free threaded Python "
 "support, user dtypes implementation, and annotations. There are many expired "
 "deprecations and bug fixes as well."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:11
+#: ../../../release/2.4.0-notes.rst:13
 msgid "This release supports Python versions 3.11-3.14"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:15
+#: ../../../release/2.4.0-notes.rst:17
 msgid "Highlights"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:17
+#: ../../../release/2.4.0-notes.rst:19
 msgid ""
 "Apart from annotations and ``same_value`` kwarg, the 2.4 highlights are "
 "mostly of interest to downstream developers. They should help in "
 "implementing new user dtypes."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:21
+#: ../../../release/2.4.0-notes.rst:23
 msgid ""
 "Many annotation improvements. In particular, runtime signature introspection."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:23
+#: ../../../release/2.4.0-notes.rst:25
 msgid "New ``casting`` kwarg ``'same_value'`` for casting by value."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:25
+#: ../../../release/2.4.0-notes.rst:27
 msgid ""
 "New ``PyUFunc_AddLoopsFromSpec`` function that can be used to add user sort "
 "loops using the ``ArrayMethod`` API."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:28
+#: ../../../release/2.4.0-notes.rst:30
 msgid "New ``__numpy_dtype__`` protocol."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:31
+#: ../../../release/2.4.0-notes.rst:33
 msgid "Deprecations"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:34
+#: ../../../release/2.4.0-notes.rst:36
 msgid "Setting the ``strides`` attribute is deprecated"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:35
+#: ../../../release/2.4.0-notes.rst:37
 msgid ""
 "Setting the strides attribute is now deprecated since mutating an array is "
 "unsafe if an array is shared, especially by multiple threads.  As an "
 "alternative, you can create a new view (no copy) via:"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:39
+#: ../../../release/2.4.0-notes.rst:41
 msgid "``np.lib.stride_tricks.strided_window_view`` if applicable,"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:40
+#: ../../../release/2.4.0-notes.rst:42
 msgid "``np.lib.stride_tricks.as_strided`` for the general case,"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:41
+#: ../../../release/2.4.0-notes.rst:43
 msgid ""
 "or the ``np.ndarray`` constructor (``buffer`` is the original array) for a "
 "light-weight version."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:44
+#: ../../../release/2.4.0-notes.rst:46
 msgid "(`gh-28925 <https://github.com/numpy/numpy/pull/28925>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:47
+#: ../../../release/2.4.0-notes.rst:49
 msgid ""
 "Positional ``out`` argument to ``np.maximum``, ``np.minimum`` is deprecated"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:48
+#: ../../../release/2.4.0-notes.rst:50
 msgid ""
 "Passing the output array ``out`` positionally to ``numpy.maximum`` and "
 "``numpy.minimum`` is deprecated. For example, ``np.maximum(a, b, c)`` will "
@@ -108,21 +112,21 @@ msgid ""
 "rather than a third input."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:53
+#: ../../../release/2.4.0-notes.rst:55
 msgid ""
 "Always pass the output with the keyword form, e.g.  ``np.maximum(a, b, "
 "out=c)``. This makes intent clear and simplifies type annotations."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:56
+#: ../../../release/2.4.0-notes.rst:58
 msgid "(`gh-29052 <https://github.com/numpy/numpy/pull/29052>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:59
+#: ../../../release/2.4.0-notes.rst:61
 msgid "``align=`` must be passed as boolean to ``np.dtype()``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:60
+#: ../../../release/2.4.0-notes.rst:62
 msgid ""
 "When creating a new ``dtype`` a ``VisibleDeprecationWarning`` will be given "
 "if ``align=`` is not a boolean.  This is mainly to prevent accidentally "
@@ -131,30 +135,30 @@ msgid ""
 "suggest to always pass ``align=`` as a keyword argument."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:66
+#: ../../../release/2.4.0-notes.rst:68
 msgid "(`gh-29301 <https://github.com/numpy/numpy/pull/29301>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:69
+#: ../../../release/2.4.0-notes.rst:71
 msgid "Assertion and warning control utilities are deprecated"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:70
+#: ../../../release/2.4.0-notes.rst:72
 msgid ""
 "``np.testing.assert_warns`` and ``np.testing.suppress_warnings`` are "
 "deprecated.  Use ``warnings.catch_warnings``, ``warnings.filterwarnings``, "
 "``pytest.warns``, or ``pytest.filterwarnings`` instead."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:74
+#: ../../../release/2.4.0-notes.rst:76
 msgid "(`gh-29550 <https://github.com/numpy/numpy/pull/29550>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:77
+#: ../../../release/2.4.0-notes.rst:79
 msgid "``np.fix`` is pending deprecation"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:78
+#: ../../../release/2.4.0-notes.rst:80
 msgid ""
 "The ``numpy.fix`` function will be deprecated in a future release. It is "
 "recommended to use ``numpy.trunc`` instead, as it provides the same "
@@ -162,15 +166,15 @@ msgid ""
 "type checkers might already report a warning for the use of ``numpy.fix``."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:83
+#: ../../../release/2.4.0-notes.rst:85
 msgid "(`gh-30168 <https://github.com/numpy/numpy/pull/30168>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:86
+#: ../../../release/2.4.0-notes.rst:88
 msgid "in-place modification of ``ndarray.shape`` is pending deprecation"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:87
+#: ../../../release/2.4.0-notes.rst:89
 msgid ""
 "Setting the ``ndarray.shape`` attribute directly will be deprecated in a "
 "future release.  Instead of modifying the shape in place, it is recommended "
@@ -178,278 +182,278 @@ msgid ""
 "report a warning for assignments to ``ndarray.shape``."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:92
+#: ../../../release/2.4.0-notes.rst:94
 msgid "(`gh-30282 <https://github.com/numpy/numpy/pull/30282>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:95
+#: ../../../release/2.4.0-notes.rst:97
 msgid "Deprecation of ``numpy.lib.user_array.container``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:96
+#: ../../../release/2.4.0-notes.rst:98
 msgid ""
 "The ``numpy.lib.user_array.container`` class is deprecated and will be "
 "removed in a future version."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:99
+#: ../../../release/2.4.0-notes.rst:101
 msgid "(`gh-30284 <https://github.com/numpy/numpy/pull/30284>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:103
+#: ../../../release/2.4.0-notes.rst:105
 msgid "Expired deprecations"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:106
+#: ../../../release/2.4.0-notes.rst:108
 msgid "Removed deprecated ``MachAr`` runtime discovery mechanism."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:108 ../../../release/2.4.0-notes.rst:294
-#: ../../../release/2.4.0-notes.rst:505
+#: ../../../release/2.4.0-notes.rst:110 ../../../release/2.4.0-notes.rst:296
+#: ../../../release/2.4.0-notes.rst:507
 msgid "(`gh-29836 <https://github.com/numpy/numpy/pull/29836>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:111
+#: ../../../release/2.4.0-notes.rst:113
 msgid ""
 "Raise ``TypeError`` on attempt to convert array with ``ndim > 0`` to scalar"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:112
+#: ../../../release/2.4.0-notes.rst:114
 msgid ""
 "Conversion of an array with ``ndim > 0`` to a scalar was deprecated in NumPy "
 "1.25.  Now, attempting to do so raises ``TypeError``.  Ensure you extract a "
 "single element from your array before performing this operation."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:116
+#: ../../../release/2.4.0-notes.rst:118
 msgid "(`gh-29841 <https://github.com/numpy/numpy/pull/29841>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:119
+#: ../../../release/2.4.0-notes.rst:121
 msgid "Removed numpy.linalg.linalg and numpy.fft.helper"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:120
+#: ../../../release/2.4.0-notes.rst:122
 msgid ""
 "The following were deprecated in NumPy 2.0 and have been moved to private "
 "modules:"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:123
+#: ../../../release/2.4.0-notes.rst:125
 msgid "``numpy.linalg.linalg`` Use ``numpy.linalg`` instead."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:126
+#: ../../../release/2.4.0-notes.rst:128
 msgid "``numpy.fft.helper`` Use ``numpy.fft`` instead."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:129
+#: ../../../release/2.4.0-notes.rst:131
 msgid "(`gh-29909 <https://github.com/numpy/numpy/pull/29909>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:132
+#: ../../../release/2.4.0-notes.rst:134
 msgid ""
 "Removed ``interpolation`` parameter from quantile and percentile functions"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:133
+#: ../../../release/2.4.0-notes.rst:135
 msgid ""
 "The ``interpolation`` parameter was deprecated in NumPy 1.22.0 and has been "
 "removed from the following functions:"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:136
+#: ../../../release/2.4.0-notes.rst:138
 msgid "``numpy.percentile``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:137
+#: ../../../release/2.4.0-notes.rst:139
 msgid "``numpy.nanpercentile``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:138
+#: ../../../release/2.4.0-notes.rst:140
 msgid "``numpy.quantile``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:139
+#: ../../../release/2.4.0-notes.rst:141
 msgid "``numpy.nanquantile``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:141
+#: ../../../release/2.4.0-notes.rst:143
 msgid "Use the ``method`` parameter instead."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:143
+#: ../../../release/2.4.0-notes.rst:145
 msgid "(`gh-29973 <https://github.com/numpy/numpy/pull/29973>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:146
+#: ../../../release/2.4.0-notes.rst:148
 msgid "Removed ``numpy.in1d``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:147
+#: ../../../release/2.4.0-notes.rst:149
 msgid ""
 "``numpy.in1d`` has been deprecated since NumPy 2.0 and is now removed in "
 "favor of ``numpy.isin``."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:149
+#: ../../../release/2.4.0-notes.rst:151
 msgid "(`gh-29978 <https://github.com/numpy/numpy/pull/29978>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:152
+#: ../../../release/2.4.0-notes.rst:154
 msgid "Removed ``numpy.ndindex.ndincr()``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:153
+#: ../../../release/2.4.0-notes.rst:155
 msgid ""
 "The ``ndindex.ndincr()`` method has been deprecated since NumPy 1.20 and is "
 "now removed; use ``next(ndindex)`` instead."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:156
+#: ../../../release/2.4.0-notes.rst:158
 msgid "(`gh-29980 <https://github.com/numpy/numpy/pull/29980>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:159
+#: ../../../release/2.4.0-notes.rst:161
 msgid "Removed ``fix_imports`` parameter from ``numpy.save``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:160
+#: ../../../release/2.4.0-notes.rst:162
 msgid ""
 "The ``fix_imports`` parameter was deprecated in NumPy 2.1.0 and is now "
 "removed. This flag has been ignored since NumPy 1.17 and was only needed to "
 "support loading files in Python 2 that were written in Python 3."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:164
+#: ../../../release/2.4.0-notes.rst:166
 msgid "(`gh-29984 <https://github.com/numpy/numpy/pull/29984>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:167
+#: ../../../release/2.4.0-notes.rst:169
 msgid "Removal of four undocumented ``ndarray.ctypes`` methods"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:168
+#: ../../../release/2.4.0-notes.rst:170
 msgid ""
 "Four undocumented methods of the ``ndarray.ctypes`` object have been removed:"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:170
+#: ../../../release/2.4.0-notes.rst:172
 msgid "``_ctypes.get_data()`` (use ``_ctypes.data`` instead)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:171
+#: ../../../release/2.4.0-notes.rst:173
 msgid "``_ctypes.get_shape()`` (use ``_ctypes.shape`` instead)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:172
+#: ../../../release/2.4.0-notes.rst:174
 msgid "``_ctypes.get_strides()`` (use ``_ctypes.strides`` instead)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:173
+#: ../../../release/2.4.0-notes.rst:175
 msgid "``_ctypes.get_as_parameter()`` (use ``_ctypes._as_parameter_`` instead)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:175
+#: ../../../release/2.4.0-notes.rst:177
 msgid "These methods have been deprecated since NumPy 1.21."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:177
+#: ../../../release/2.4.0-notes.rst:179
 msgid "(`gh-29986 <https://github.com/numpy/numpy/pull/29986>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:180
+#: ../../../release/2.4.0-notes.rst:182
 msgid "Removed ``newshape`` parameter from ``numpy.reshape``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:181
+#: ../../../release/2.4.0-notes.rst:183
 msgid ""
 "The ``newshape`` parameter was deprecated in NumPy 2.1.0 and has been "
 "removed from ``numpy.reshape``. Pass it positionally or use ``shape=`` on "
 "newer NumPy versions."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:185
+#: ../../../release/2.4.0-notes.rst:187
 msgid "(`gh-29994 <https://github.com/numpy/numpy/pull/29994>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:188
+#: ../../../release/2.4.0-notes.rst:190
 msgid "Removal of deprecated functions and arguments"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:189
+#: ../../../release/2.4.0-notes.rst:191
 msgid "The following long-deprecated APIs have been removed:"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:191
+#: ../../../release/2.4.0-notes.rst:193
 msgid ""
 "``numpy.trapz`` — deprecated since NumPy 2.0 (2023-08-18). Use ``numpy."
 "trapezoid`` or ``scipy.integrate`` functions instead."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:194
+#: ../../../release/2.4.0-notes.rst:196
 msgid ""
 "``disp`` function — deprecated from 2.0 release and no longer functional. "
 "Use your own printing function instead."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:197
+#: ../../../release/2.4.0-notes.rst:199
 msgid ""
 "``bias`` and ``ddof`` arguments in ``numpy.corrcoef`` — these had no effect "
 "since NumPy 1.10."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:200
+#: ../../../release/2.4.0-notes.rst:202
 msgid "(`gh-29997 <https://github.com/numpy/numpy/pull/29997>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:203
+#: ../../../release/2.4.0-notes.rst:205
 msgid ""
 "Removed ``delimitor`` parameter from ``numpy.ma.mrecords.fromtextfile()``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:204
+#: ../../../release/2.4.0-notes.rst:206
 msgid ""
 "The ``delimitor`` parameter was deprecated in NumPy 1.22.0 and has been "
 "removed from ``numpy.ma.mrecords.fromtextfile()``. Use ``delimiter`` instead."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:207
+#: ../../../release/2.4.0-notes.rst:209
 msgid "(`gh-30021 <https://github.com/numpy/numpy/pull/30021>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:210
+#: ../../../release/2.4.0-notes.rst:212
 msgid "``numpy.array2string`` and ``numpy.sum`` deprecations finalized"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:211
+#: ../../../release/2.4.0-notes.rst:213
 msgid ""
 "The following long-deprecated APIs have been removed or converted to errors:"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:213
+#: ../../../release/2.4.0-notes.rst:215
 msgid ""
 "The ``style`` parameter has been removed from ``numpy.array2string``. This "
 "argument had no effect since Numpy 1.14.0.  Any arguments following it, such "
 "as ``formatter`` have now been made keyword-only."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:217
+#: ../../../release/2.4.0-notes.rst:219
 msgid ""
 "Calling ``np.sum(generator)`` directly on a generator object now raises a "
 "``TypeError``.  This behavior was deprecated in NumPy 1.15.0. Use ``np."
 "sum(np.fromiter(generator))`` or the python ``sum`` builtin instead."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:221
+#: ../../../release/2.4.0-notes.rst:223
 msgid "(`gh-30068 <https://github.com/numpy/numpy/pull/30068>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:225
+#: ../../../release/2.4.0-notes.rst:227
 msgid "Compatibility notes"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:227
+#: ../../../release/2.4.0-notes.rst:229
 msgid ""
 "NumPy's C extension modules have begun to use multi-phase initialisation, as "
 "defined by PEP 489. As part of this, a new explicit check has been added "
@@ -460,22 +464,22 @@ msgid ""
 "error."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:234
+#: ../../../release/2.4.0-notes.rst:236
 msgid "(`gh-29030 <https://github.com/numpy/numpy/pull/29030>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:236
+#: ../../../release/2.4.0-notes.rst:238
 msgid ""
 "``numpy.round`` now always returns a copy. Previously, it returned a view "
 "for integer inputs for ``decimals >= 0`` and a copy in all other cases. This "
 "change brings ``round`` in line with ``ceil``, ``floor`` and ``trunc``."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:240
+#: ../../../release/2.4.0-notes.rst:242
 msgid "(`gh-29137 <https://github.com/numpy/numpy/pull/29137>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:242
+#: ../../../release/2.4.0-notes.rst:244
 msgid ""
 "Type-checkers will no longer accept calls to ``numpy.arange`` with ``start`` "
 "as a keyword argument. This was done for compatibility with the Array API "
@@ -483,11 +487,11 @@ msgid ""
 "``start`` as a keyword argument."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:247
+#: ../../../release/2.4.0-notes.rst:249
 msgid "(`gh-30147 <https://github.com/numpy/numpy/pull/30147>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:249
+#: ../../../release/2.4.0-notes.rst:251
 msgid ""
 "The Macro NPY_ALIGNMENT_REQUIRED has been removed The macro was defined in "
 "the ``npy_cpu.h`` file, so might be regarded as semi public. As it turns "
@@ -497,19 +501,19 @@ msgid ""
 "equivalent to be sure."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:256
+#: ../../../release/2.4.0-notes.rst:258
 msgid "(`gh-29094 <https://github.com/numpy/numpy/pull/29094>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:260
+#: ../../../release/2.4.0-notes.rst:262
 msgid "C API changes"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:263
+#: ../../../release/2.4.0-notes.rst:265
 msgid "The NPY_SORTKIND enum has been enhanced with new variables"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:264
+#: ../../../release/2.4.0-notes.rst:266
 msgid ""
 "This is of interest if you are using ``PyArray_Sort`` or "
 "``PyArray_ArgSort``. We have changed the semantics of the old names in the "
@@ -517,72 +521,72 @@ msgid ""
 "compatible, and no recompilation is needed. The new names of interest are:"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:269
+#: ../../../release/2.4.0-notes.rst:271
 msgid "``NPY_SORT_DEFAULT`` -- default sort (same value as ``NPY_QUICKSORT``)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:270
+#: ../../../release/2.4.0-notes.rst:272
 msgid ""
 "``NPY_SORT_STABLE``  -- the sort must be stable (same value as "
 "``NPY_MERGESORT``)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:271
+#: ../../../release/2.4.0-notes.rst:273
 msgid "``NPY_SORT_DESCENDING`` -- the sort must be descending"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:273
+#: ../../../release/2.4.0-notes.rst:275
 msgid ""
 "The semantic change is that ``NPY_HEAPSORT`` is mapped to ``NPY_QUICKSORT`` "
 "when used. Note that ``NPY_SORT_DESCENDING`` is not yet implemented."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:276 ../../../release/2.4.0-notes.rst:701
+#: ../../../release/2.4.0-notes.rst:278 ../../../release/2.4.0-notes.rst:703
 msgid "(`gh-29642 <https://github.com/numpy/numpy/pull/29642>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:279
+#: ../../../release/2.4.0-notes.rst:281
 msgid "New ``NPY_DT_get_constant`` slot for DType constant retrieval"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:280
+#: ../../../release/2.4.0-notes.rst:282
 msgid ""
 "A new slot ``NPY_DT_get_constant`` has been added to the DType API, allowing "
 "dtype implementations to provide constant values such as machine limits and "
 "special values. The slot function has the signature::"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:284
+#: ../../../release/2.4.0-notes.rst:286
 msgid "int get_constant(PyArray_Descr *descr, int constant_id, void *ptr)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:286
+#: ../../../release/2.4.0-notes.rst:288
 msgid ""
 "It returns 1 on success, 0 if the constant is not available, or -1 on error. "
 "The function is always called with the GIL held and may write to unaligned "
 "memory."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:289
+#: ../../../release/2.4.0-notes.rst:291
 msgid ""
 "Integer constants (marked with the ``1 << 16`` bit) return ``npy_intp`` "
 "values, while floating-point constants return values of the dtype's native "
 "type."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:292
+#: ../../../release/2.4.0-notes.rst:294
 msgid ""
 "Implementing this can be used by user DTypes to provide ``numpy.finfo`` "
 "values."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:297
+#: ../../../release/2.4.0-notes.rst:299
 msgid ""
 "A new ``PyUFunc_AddLoopsFromSpecs`` convenience function has been added to "
 "the C API."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:298
+#: ../../../release/2.4.0-notes.rst:300
 msgid ""
 "This function allows adding multiple ufunc loops from their specs in one "
 "call using a NULL-terminated array of ``PyUFunc_LoopSlot`` structs. It "
@@ -590,36 +594,36 @@ msgid ""
 "API."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:302 ../../../release/2.4.0-notes.rst:385
+#: ../../../release/2.4.0-notes.rst:304 ../../../release/2.4.0-notes.rst:387
 msgid "(`gh-29900 <https://github.com/numpy/numpy/pull/29900>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:306
+#: ../../../release/2.4.0-notes.rst:308
 msgid "New Features"
 msgstr "新功能"
 
-#: ../../../release/2.4.0-notes.rst:308
+#: ../../../release/2.4.0-notes.rst:310
 msgid "Let ``np.size`` accept multiple axes."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:310
+#: ../../../release/2.4.0-notes.rst:312
 msgid "(`gh-29240 <https://github.com/numpy/numpy/pull/29240>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:312
+#: ../../../release/2.4.0-notes.rst:314
 msgid ""
 "Extend ``numpy.pad`` to accept a dictionary for the ``pad_width`` argument."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:314
+#: ../../../release/2.4.0-notes.rst:316
 msgid "(`gh-29273 <https://github.com/numpy/numpy/pull/29273>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:317
+#: ../../../release/2.4.0-notes.rst:319
 msgid "``'same_value'`` for casting by value"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:318
+#: ../../../release/2.4.0-notes.rst:320
 msgid ""
 "The ``casting`` kwarg now has a ``'same_value'`` option that checks the "
 "actual values can be round-trip cast without changing value. Currently it is "
@@ -628,15 +632,15 @@ msgid ""
 "including rounding of floats or overflowing of ints."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:324
+#: ../../../release/2.4.0-notes.rst:326
 msgid "(`gh-29129 <https://github.com/numpy/numpy/pull/29129>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:327
+#: ../../../release/2.4.0-notes.rst:329
 msgid "``StringDType`` fill_value support in ``numpy.ma.MaskedArray``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:328
+#: ../../../release/2.4.0-notes.rst:330
 msgid ""
 "Masked arrays now accept and preserve a Python ``str`` as their "
 "``fill_value`` when using the variable‑width ``StringDType`` (kind ``'T'``), "
@@ -646,21 +650,21 @@ msgid ""
 "`gh‑29423 <https://github.com/numpy/numpy/pull/29423>`__."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:334
+#: ../../../release/2.4.0-notes.rst:336
 msgid "(`gh-29423 <https://github.com/numpy/numpy/pull/29423>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:337
+#: ../../../release/2.4.0-notes.rst:339
 msgid "``ndmax`` option for ``numpy.array``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:338
+#: ../../../release/2.4.0-notes.rst:340
 msgid ""
 "The ``ndmax`` option is now available for ``numpy.array``. It explicitly "
 "limits the maximum number of dimensions created from nested sequences."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:341
+#: ../../../release/2.4.0-notes.rst:343
 msgid ""
 "This is particularly useful when creating arrays of list-like objects with "
 "``dtype=object``. By default, NumPy recurses through all nesting levels to "
@@ -669,7 +673,7 @@ msgid ""
 "``ndmax`` parameter provides explicit control over this recursion depth."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:347
+#: ../../../release/2.4.0-notes.rst:349
 msgid ""
 "# Default behavior: Creates a 2D array\n"
 ">>> a = np.array([[1, 2], [3, 4]], dtype=object)\n"
@@ -687,15 +691,15 @@ msgid ""
 "(2,)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:364
+#: ../../../release/2.4.0-notes.rst:366
 msgid "(`gh-29569 <https://github.com/numpy/numpy/pull/29569>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:367
+#: ../../../release/2.4.0-notes.rst:369
 msgid "Warning emitted when using ``where`` without ``out``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:368
+#: ../../../release/2.4.0-notes.rst:370
 msgid ""
 "Ufuncs called with a ``where`` mask and without an ``out`` positional or "
 "kwarg will now emit a warning. This usage tends to trip up users who expect "
@@ -704,40 +708,40 @@ msgid ""
 "``out=None``."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:373
+#: ../../../release/2.4.0-notes.rst:375
 msgid "(`gh-29813 <https://github.com/numpy/numpy/pull/29813>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:376
+#: ../../../release/2.4.0-notes.rst:378
 msgid "DType sorting and argsorting supports the ArrayMethod API"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:377
+#: ../../../release/2.4.0-notes.rst:379
 msgid ""
 "User-defined dtypes can now implement custom sorting and argsorting using "
 "the ``ArrayMethod`` API. This mechanism can be used in place of the "
 "``PyArray_ArrFuncs`` slots which may be deprecated in the future."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:381
+#: ../../../release/2.4.0-notes.rst:383
 msgid ""
 "The sorting and argsorting methods are registered by passing the arraymethod "
 "specs that implement the operations to the new ``PyUFunc_AddLoopsFromSpecs`` "
 "function.  See the ``ArrayMethod`` API documentation for details."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:388
+#: ../../../release/2.4.0-notes.rst:390
 msgid "New ``__numpy_dtype__`` protocol"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:389
+#: ../../../release/2.4.0-notes.rst:391
 msgid ""
 "NumPy now has a new ``__numpy_dtype__`` protocol. NumPy will check for this "
 "attribute when converting to a NumPy dtype via ``np.dtype(obj)`` or any "
 "``dtype=`` argument."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:393
+#: ../../../release/2.4.0-notes.rst:395
 msgid ""
 "Downstream projects are encouraged to implement this for all dtype like "
 "objects which may previously have used a ``.dtype`` attribute that returned "
@@ -747,34 +751,34 @@ msgid ""
 "or error (``.dtype`` is ignored if this is found)."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:401
+#: ../../../release/2.4.0-notes.rst:403
 msgid "(`gh-30179 <https://github.com/numpy/numpy/pull/30179>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:405
+#: ../../../release/2.4.0-notes.rst:407
 msgid "Improvements"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:408
+#: ../../../release/2.4.0-notes.rst:410
 msgid "Fix ``flatiter`` indexing edge cases"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:410
+#: ../../../release/2.4.0-notes.rst:412
 msgid ""
 "The ``flatiter`` object now shares the same index preparation logic as "
 "``ndarray``, ensuring consistent behavior and fixing several issues where "
 "invalid indices were previously accepted or misinterpreted."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:414
+#: ../../../release/2.4.0-notes.rst:416
 msgid "Key fixes and improvements:"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:416
+#: ../../../release/2.4.0-notes.rst:418
 msgid "Stricter index validation"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:418
+#: ../../../release/2.4.0-notes.rst:420
 msgid ""
 "Boolean non-array indices like ``arr.flat[[True, True]]`` were incorrectly "
 "treated as ``arr.flat[np.array([1, 1], dtype=int)]``. They now raise an "
@@ -783,103 +787,103 @@ msgid ""
 "``np.asarray(<index>)`` if you want to match that behavior."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:424
+#: ../../../release/2.4.0-notes.rst:426
 msgid ""
 "Float non-array indices were also cast to integer and incorrectly treated as "
 "``arr.flat[np.array([1.0, 1.0], dtype=int)]``. This is now deprecated and "
 "will be removed in a future version."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:427
+#: ../../../release/2.4.0-notes.rst:429
 msgid ""
 "0-dimensional boolean indices like ``arr.flat[True]`` are also deprecated "
 "and will be removed in a future version."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:430
+#: ../../../release/2.4.0-notes.rst:432
 msgid "Consistent error types:"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:432
+#: ../../../release/2.4.0-notes.rst:434
 msgid ""
 "Certain invalid ``flatiter`` indices that previously raised ``ValueError`` "
 "now correctly raise ``IndexError``, aligning with ``ndarray`` behavior."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:435
+#: ../../../release/2.4.0-notes.rst:437
 msgid "Improved error messages:"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:437
+#: ../../../release/2.4.0-notes.rst:439
 msgid ""
 "The error message for unsupported index operations now provides more "
 "specific details, including explicitly listing the valid index types, "
 "instead of the generic ``IndexError: unsupported index operation``."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:441
+#: ../../../release/2.4.0-notes.rst:443
 msgid "(`gh-28590 <https://github.com/numpy/numpy/pull/28590>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:444
+#: ../../../release/2.4.0-notes.rst:446
 msgid "Improved error handling in ``np.quantile``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:445
+#: ../../../release/2.4.0-notes.rst:447
 msgid "`np.quantile` now raises errors if:"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:447
+#: ../../../release/2.4.0-notes.rst:449
 msgid "All weights are zero"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:448
+#: ../../../release/2.4.0-notes.rst:450
 msgid "At least one weight is ``np.nan``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:449
+#: ../../../release/2.4.0-notes.rst:451
 msgid "At least one weight is ``np.inf``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:451
+#: ../../../release/2.4.0-notes.rst:453
 msgid "(`gh-28595 <https://github.com/numpy/numpy/pull/28595>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:454
+#: ../../../release/2.4.0-notes.rst:456
 msgid "Improved error message for ``assert_array_compare``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:455
+#: ../../../release/2.4.0-notes.rst:457
 msgid ""
 "The error message generated by ``assert_array_compare`` which is used by "
 "functions like ``assert_allclose``, ``assert_array_less`` etc. now also "
 "includes information about the indices at which the assertion fails."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:459
+#: ../../../release/2.4.0-notes.rst:461
 msgid "(`gh-29112 <https://github.com/numpy/numpy/pull/29112>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:462
+#: ../../../release/2.4.0-notes.rst:464
 msgid "Show unit information in ``__repr__`` for ``datetime64(\"NaT\")``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:463
+#: ../../../release/2.4.0-notes.rst:465
 msgid ""
 "When a ``datetime64`` object is \"Not a Time\" (NaT), its ``__repr__`` "
 "method now includes the time unit of the datetime64 type. This makes it "
 "consistent with the behavior of a ``timedelta64`` object."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:467
+#: ../../../release/2.4.0-notes.rst:469
 msgid "(`gh-29396 <https://github.com/numpy/numpy/pull/29396>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:470
+#: ../../../release/2.4.0-notes.rst:472
 msgid "Performance increase for scalar calculations"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:471
+#: ../../../release/2.4.0-notes.rst:473
 msgid ""
 "The speed of calculations on scalars has been improved by about a factor 6 "
 "for ufuncs that take only one input (like ``np.sin(scalar)``), reducing the "
@@ -887,15 +891,15 @@ msgid ""
 "speed for arrays is left unchanged)."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:476
+#: ../../../release/2.4.0-notes.rst:478
 msgid "(`gh-29819 <https://github.com/numpy/numpy/pull/29819>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:479
+#: ../../../release/2.4.0-notes.rst:481
 msgid "``numpy.finfo`` Refactor"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:480
+#: ../../../release/2.4.0-notes.rst:482
 msgid ""
 "The ``numpy.finfo`` class has been completely refactored to obtain floating-"
 "point constants directly from C compiler macros rather than deriving them at "
@@ -903,18 +907,18 @@ msgid ""
 "several attribute calculations:"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:485
+#: ../../../release/2.4.0-notes.rst:487
 msgid ""
 "Constants like ``eps``, ``min``, ``max``, ``smallest_normal``, and "
 "``smallest_subnormal`` now come directly from standard C macros "
 "(``FLT_EPSILON``, ``DBL_MIN``, etc.), ensuring platform-correct values."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:489
+#: ../../../release/2.4.0-notes.rst:491
 msgid "The deprecated ``MachAr`` runtime discovery mechanism has been removed."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:491
+#: ../../../release/2.4.0-notes.rst:493
 msgid ""
 "Derived attributes have been corrected to match standard definitions: "
 "``machep`` and ``negep`` now use ``int(log2(eps))``; ``nexp`` accounts for "
@@ -922,28 +926,28 @@ msgid ""
 "follows the C standard definition."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:496
+#: ../../../release/2.4.0-notes.rst:498
 msgid ""
 "longdouble constants, Specifically ``smallest_normal`` now follows the C "
 "standard definitions as per respecitive platform."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:499
+#: ../../../release/2.4.0-notes.rst:501
 msgid "Special handling added for PowerPC's IBM double-double format."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:501
+#: ../../../release/2.4.0-notes.rst:503
 msgid ""
 "New test suite added in ``test_finfo.py`` to validate all ``finfo`` "
 "properties against expected machine arithmetic values for float16, float32, "
 "and float64 types."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:508
+#: ../../../release/2.4.0-notes.rst:510
 msgid "Multiple axes are now supported in ``numpy.trim_zeros``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:509
+#: ../../../release/2.4.0-notes.rst:511
 msgid ""
 "The ``axis`` argument of ``numpy.trim_zeros`` now accepts a sequence; for "
 "example ``np.trim_zeros(x, axis=(0, 1))`` will trim the zeros from a multi-"
@@ -952,15 +956,15 @@ msgid ""
 "request `gh‑29947 <https://github.com/numpy/numpy/pull/29947>`__."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:515
+#: ../../../release/2.4.0-notes.rst:517
 msgid "(`gh-29947 <https://github.com/numpy/numpy/pull/29947>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:518
+#: ../../../release/2.4.0-notes.rst:520
 msgid "Runtime signature introspection support has been significantly improved"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:519
+#: ../../../release/2.4.0-notes.rst:521
 msgid ""
 "Many NumPy functions, classes, and methods that previously raised "
 "``ValueError`` when passed to ``inspect.signature()`` now return meaningful "
@@ -969,7 +973,7 @@ msgid ""
 "capabilities across the NumPy API."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:525
+#: ../../../release/2.4.0-notes.rst:527
 msgid ""
 "Over three hundred classes and functions have been updated in total, "
 "including, but not limited to, core classes such as ``ndarray``, "
@@ -980,19 +984,19 @@ msgid ""
 "``where``, ``bincount``, ``can_cast``, and numerous others."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:533
+#: ../../../release/2.4.0-notes.rst:535
 msgid "(`gh-30208 <https://github.com/numpy/numpy/pull/30208>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:537
+#: ../../../release/2.4.0-notes.rst:539
 msgid "Performance improvements and changes"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:540
+#: ../../../release/2.4.0-notes.rst:542
 msgid "Performance improvements to ``np.unique`` for string dtypes"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:541
+#: ../../../release/2.4.0-notes.rst:543
 msgid ""
 "The hash-based algorithm for unique extraction provides an order-of-"
 "magnitude speedup on large string arrays.  In an internal benchmark with "
@@ -1003,15 +1007,15 @@ msgid ""
 "string datasets."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:548 ../../../release/2.4.0-notes.rst:598
+#: ../../../release/2.4.0-notes.rst:550 ../../../release/2.4.0-notes.rst:600
 msgid "(`gh-28767 <https://github.com/numpy/numpy/pull/28767>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:551
+#: ../../../release/2.4.0-notes.rst:553
 msgid "Rewrite of ``np.ndindex`` using ``itertools.product``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:552
+#: ../../../release/2.4.0-notes.rst:554
 msgid ""
 "The ``numpy.ndindex`` function now uses ``itertools.product`` internally, "
 "providing significant improvements in performance for large iteration "
@@ -1020,21 +1024,21 @@ msgid ""
 "performance by a factor 5.2."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:558
+#: ../../../release/2.4.0-notes.rst:560
 msgid "(`gh-29165 <https://github.com/numpy/numpy/pull/29165>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:561
+#: ../../../release/2.4.0-notes.rst:563
 msgid "Performance improvements to ``np.unique`` for complex dtypes"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:562
+#: ../../../release/2.4.0-notes.rst:564
 msgid ""
 "The hash-based algorithm for unique extraction now also supports complex "
 "dtypes, offering noticeable performance gains."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:565
+#: ../../../release/2.4.0-notes.rst:567
 msgid ""
 "In our benchmarks on complex128 arrays with 200,000 elements, the hash-based "
 "approach was about 1.4–1.5× faster than the sort-based baseline when there "
@@ -1042,40 +1046,40 @@ msgid ""
 "unique values."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:570 ../../../release/2.4.0-notes.rst:692
+#: ../../../release/2.4.0-notes.rst:572 ../../../release/2.4.0-notes.rst:694
 msgid "(`gh-29537 <https://github.com/numpy/numpy/pull/29537>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:574
+#: ../../../release/2.4.0-notes.rst:576
 msgid "Changes"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:576
+#: ../../../release/2.4.0-notes.rst:578
 msgid ""
 "Multiplication between a string and integer now raises OverflowError instead "
 "of MemoryError if the result of the multiplication would create a string "
 "that is too large to be represented. This follows Python's behavior."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:580
+#: ../../../release/2.4.0-notes.rst:582
 msgid "(`gh-29060 <https://github.com/numpy/numpy/pull/29060>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:582
+#: ../../../release/2.4.0-notes.rst:584
 msgid ""
 "The accuracy of ``np.quantile`` and ``np.percentile`` for 16- and 32-bit "
 "floating point input data has been improved."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:585
+#: ../../../release/2.4.0-notes.rst:587
 msgid "(`gh-29105 <https://github.com/numpy/numpy/pull/29105>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:588
+#: ../../../release/2.4.0-notes.rst:590
 msgid "``unique_values`` for string dtypes may return unsorted data"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:589
+#: ../../../release/2.4.0-notes.rst:591
 msgid ""
 "np.unique now supports hash‐based duplicate removal for string dtypes. This "
 "enhancement extends the hash-table algorithm to byte strings ('S'), Unicode "
@@ -1087,11 +1091,11 @@ msgid ""
 "equal_nan=True (treating missing values as equal)."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:601
+#: ../../../release/2.4.0-notes.rst:603
 msgid "Modulate dispatched x86 CPU features"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:602
+#: ../../../release/2.4.0-notes.rst:604
 msgid ""
 "**IMPORTANT**: The default setting for ``cpu-baseline`` on x86 has been "
 "raised to ``x86-64-v2`` microarchitecture.  This can be changed to none "
@@ -1099,169 +1103,169 @@ msgid ""
 "pre-2009 processors are no longer maintained."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:607
+#: ../../../release/2.4.0-notes.rst:609
 msgid ""
 "NumPy has reorganized x86 CPU features into microarchitecture-based groups "
 "instead of individual features, aligning with Linux distribution standards "
 "and Google Highway requirements."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:611
+#: ../../../release/2.4.0-notes.rst:613
 msgid "Key changes:"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:613
+#: ../../../release/2.4.0-notes.rst:615
 msgid ""
 "Replaced individual x86 features with microarchitecture levels: ``X86_V2``, "
 "``X86_V3``, and ``X86_V4``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:615
+#: ../../../release/2.4.0-notes.rst:617
 msgid "Raised the baseline to ``X86_V2``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:616
+#: ../../../release/2.4.0-notes.rst:618
 msgid ""
 "Improved ``-`` operator behavior to properly exclude successor features that "
 "imply the excluded feature"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:618
+#: ../../../release/2.4.0-notes.rst:620
 msgid ""
 "Added meson redirections for removed feature names to maintain backward "
 "compatibility"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:620
+#: ../../../release/2.4.0-notes.rst:622
 msgid ""
 "Removed compiler compatibility workarounds for partial feature support (e."
 "g., AVX512 without mask operations)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:622
+#: ../../../release/2.4.0-notes.rst:624
 msgid ""
 "Removed legacy AMD features (XOP, FMA4) and discontinued Intel Xeon Phi "
 "support"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:625
+#: ../../../release/2.4.0-notes.rst:627
 msgid "New Feature Group Hierarchy:"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:631
+#: ../../../release/2.4.0-notes.rst:633
 msgid "Name"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:632
+#: ../../../release/2.4.0-notes.rst:634
 msgid "Implies"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:633
+#: ../../../release/2.4.0-notes.rst:635
 msgid "Includes"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:634 ../../../release/2.4.0-notes.rst:638
+#: ../../../release/2.4.0-notes.rst:636 ../../../release/2.4.0-notes.rst:640
 msgid "``X86_V2``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:636
+#: ../../../release/2.4.0-notes.rst:638
 msgid ""
 "``SSE`` ``SSE2`` ``SSE3`` ``SSSE3`` ``SSE4_1`` ``SSE4_2`` ``POPCNT`` "
 "``CX16`` ``LAHF``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:637 ../../../release/2.4.0-notes.rst:641
+#: ../../../release/2.4.0-notes.rst:639 ../../../release/2.4.0-notes.rst:643
 msgid "``X86_V3``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:639
+#: ../../../release/2.4.0-notes.rst:641
 msgid "``AVX`` ``AVX2`` ``FMA3`` ``BMI`` ``BMI2`` ``LZCNT`` ``F16C`` ``MOVBE``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:640 ../../../release/2.4.0-notes.rst:644
+#: ../../../release/2.4.0-notes.rst:642 ../../../release/2.4.0-notes.rst:646
 msgid "``X86_V4``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:642
+#: ../../../release/2.4.0-notes.rst:644
 msgid "``AVX512F`` ``AVX512CD`` ``AVX512VL`` ``AVX512BW`` ``AVX512DQ``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:643 ../../../release/2.4.0-notes.rst:647
+#: ../../../release/2.4.0-notes.rst:645 ../../../release/2.4.0-notes.rst:649
 msgid "``AVX512_ICL``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:645
+#: ../../../release/2.4.0-notes.rst:647
 msgid ""
 "``AVX512VBMI`` ``AVX512VBMI2`` ``AVX512VNNI`` ``AVX512BITALG`` "
 "``AVX512VPOPCNTDQ`` ``AVX512IFMA`` ``VAES`` ``GFNI`` ``VPCLMULQDQ``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:646
+#: ../../../release/2.4.0-notes.rst:648
 msgid "``AVX512_SPR``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:648
+#: ../../../release/2.4.0-notes.rst:650
 msgid "``AVX512FP16``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:651
+#: ../../../release/2.4.0-notes.rst:653
 msgid "These groups correspond to CPU generations:"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:653
+#: ../../../release/2.4.0-notes.rst:655
 msgid "``X86_V2``: x86-64-v2 microarchitectures (CPUs since 2009)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:654
+#: ../../../release/2.4.0-notes.rst:656
 msgid "``X86_V3``: x86-64-v3 microarchitectures (CPUs since 2015)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:655
+#: ../../../release/2.4.0-notes.rst:657
 msgid "``X86_V4``: x86-64-v4 microarchitectures (AVX-512 capable CPUs)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:656
+#: ../../../release/2.4.0-notes.rst:658
 msgid "``AVX512_ICL``: Intel Ice Lake and similar CPUs"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:657
+#: ../../../release/2.4.0-notes.rst:659
 msgid "``AVX512_SPR``: Intel Sapphire Rapids and newer CPUs"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:660
+#: ../../../release/2.4.0-notes.rst:662
 msgid "On 32-bit x86, ``cx16`` is excluded from ``X86_V2``."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:662
+#: ../../../release/2.4.0-notes.rst:664
 msgid ""
 "Documentation has been updated with details on using these new feature "
 "groups with the current meson build system."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:665
+#: ../../../release/2.4.0-notes.rst:667
 msgid "(`gh-28896 <https://github.com/numpy/numpy/pull/28896>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:668
+#: ../../../release/2.4.0-notes.rst:670
 msgid "Fix bug in ``matmul`` for non-contiguous out kwarg parameter"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:669
+#: ../../../release/2.4.0-notes.rst:671
 msgid ""
 "In some cases, if ``out`` was non-contiguous, ``np.matmul`` would cause "
 "memory corruption or a c-level assert. This was new to v2.3.0 and fixed in "
 "v2.3.1."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:672
+#: ../../../release/2.4.0-notes.rst:674
 msgid "(`gh-29179 <https://github.com/numpy/numpy/pull/29179>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:675
+#: ../../../release/2.4.0-notes.rst:677
 msgid "``__array_interface__`` with NULL pointer changed"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:676
+#: ../../../release/2.4.0-notes.rst:678
 msgid ""
 "The array interface now accepts NULL pointers (NumPy will do its own dummy "
 "allocation, though).  Previously, these incorrectly triggered an "
@@ -1270,15 +1274,15 @@ msgid ""
 "correct scalar path by not providing a ``data`` field at all."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:682
+#: ../../../release/2.4.0-notes.rst:684
 msgid "(`gh-29338 <https://github.com/numpy/numpy/pull/29338>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:685
+#: ../../../release/2.4.0-notes.rst:687
 msgid "``unique_values`` for complex dtypes may return unsorted data"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:686
+#: ../../../release/2.4.0-notes.rst:688
 msgid ""
 "np.unique now supports hash‐based duplicate removal for complex dtypes.  "
 "This enhancement extends the hash‐table algorithm to all complex types "
@@ -1287,11 +1291,11 @@ msgid ""
 "result will be sorted."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:695
+#: ../../../release/2.4.0-notes.rst:697
 msgid "Sorting ``kind='heapsort'`` now maps to ``kind='quicksort'``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:696
+#: ../../../release/2.4.0-notes.rst:698
 msgid ""
 "It is unlikely that this change will be noticed, but if you do see a change "
 "in execution time or unstable argsort order, that is likely the cause. "
@@ -1299,37 +1303,37 @@ msgid ""
 "it is improved :)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:704
+#: ../../../release/2.4.0-notes.rst:706
 msgid "``numpy.typing.DTypeLike`` no longer accepts ``None``"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:705
+#: ../../../release/2.4.0-notes.rst:707
 msgid ""
 "The type alias ``numpy.typing.DTypeLike`` no longer accepts ``None``. "
 "Instead of"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:707
+#: ../../../release/2.4.0-notes.rst:709
 msgid "dtype: DTypeLike = None"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:711
+#: ../../../release/2.4.0-notes.rst:713
 msgid "it should now be"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:713
+#: ../../../release/2.4.0-notes.rst:715
 msgid "dtype: DTypeLike | None = None"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:717
+#: ../../../release/2.4.0-notes.rst:719
 msgid "instead."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:719
+#: ../../../release/2.4.0-notes.rst:721
 msgid "(`gh-29739 <https://github.com/numpy/numpy/pull/29739>`__)"
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:721
+#: ../../../release/2.4.0-notes.rst:723
 msgid ""
 "The ``npymath`` and ``npyrandom`` libraries now have a ``.lib`` rather than "
 "a ``.a`` file extension on win-arm64, for compatibility for building with "
@@ -1338,6 +1342,6 @@ msgid ""
 "matching compiler toolchain, which is ``clang-cl`` on Windows on Arm."
 msgstr ""
 
-#: ../../../release/2.4.0-notes.rst:727
+#: ../../../release/2.4.0-notes.rst:729
 msgid "(`gh-29750 <https://github.com/numpy/numpy/pull/29750>`__)"
 msgstr ""

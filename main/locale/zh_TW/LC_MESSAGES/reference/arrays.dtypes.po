@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -115,18 +115,18 @@ msgstr ""
 #: ../../../reference/arrays.dtypes.rst:161
 #: ../../../reference/arrays.dtypes.rst:211
 #: ../../../reference/arrays.dtypes.rst:243
-#: ../../../reference/arrays.dtypes.rst:285
-#: ../../../reference/arrays.dtypes.rst:311
-#: ../../../reference/arrays.dtypes.rst:335
-#: ../../../reference/arrays.dtypes.rst:352
-#: ../../../reference/arrays.dtypes.rst:373
-#: ../../../reference/arrays.dtypes.rst:409
-#: ../../../reference/arrays.dtypes.rst:452
-#: ../../../reference/arrays.dtypes.rst:485
-#: ../../../reference/arrays.dtypes.rst:512
-#: ../../../reference/arrays.dtypes.rst:538
-#: ../../../reference/arrays.dtypes.rst:554
-#: ../../../reference/arrays.dtypes.rst:577
+#: ../../../reference/arrays.dtypes.rst:292
+#: ../../../reference/arrays.dtypes.rst:318
+#: ../../../reference/arrays.dtypes.rst:342
+#: ../../../reference/arrays.dtypes.rst:359
+#: ../../../reference/arrays.dtypes.rst:380
+#: ../../../reference/arrays.dtypes.rst:416
+#: ../../../reference/arrays.dtypes.rst:459
+#: ../../../reference/arrays.dtypes.rst:492
+#: ../../../reference/arrays.dtypes.rst:519
+#: ../../../reference/arrays.dtypes.rst:545
+#: ../../../reference/arrays.dtypes.rst:561
+#: ../../../reference/arrays.dtypes.rst:584
 msgid "Example"
 msgstr ""
 
@@ -168,14 +168,14 @@ msgid ":py:obj:`dtype <numpy.dtype>`\\ \\(dtype\\[\\, align\\, copy\\]\\)"
 msgstr ":py:obj:`dtype <numpy.dtype>`\\ \\(dtype\\[\\, align\\, copy\\]\\)"
 
 #: ../../../reference/arrays.dtypes.rst:133:<autosummary>:1
-msgid "--"
+msgid "Create a data type object."
 msgstr ""
 
 #: ../../../reference/arrays.dtypes.rst:134
 msgid "What can be converted to a data-type object is described below:"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:140
+#: ../../../reference/arrays.dtypes.rst:136
 msgid ":class:`dtype` object"
 msgstr ""
 
@@ -183,7 +183,7 @@ msgstr ""
 msgid "Used as-is."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:146
+#: ../../../reference/arrays.dtypes.rst:142
 msgid "None"
 msgstr ""
 
@@ -191,7 +191,7 @@ msgstr ""
 msgid "The default data type: :class:`float64`."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:168
+#: ../../../reference/arrays.dtypes.rst:151
 msgid "Array-scalar types"
 msgstr ""
 
@@ -209,7 +209,7 @@ msgid ""
 "require an explicitly given size to be useful."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:188
+#: ../../../reference/arrays.dtypes.rst:170
 msgid "Generic types"
 msgstr ""
 
@@ -271,7 +271,7 @@ msgid ""
 "``float32`` is a subdtype of ``np.floating``."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:224
+#: ../../../reference/arrays.dtypes.rst:192
 msgid "Built-in Python types"
 msgstr ""
 
@@ -347,7 +347,7 @@ msgid ""
 "such types may map to a specific (new) dtype in the future."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:229
+#: ../../../reference/arrays.dtypes.rst:226
 msgid "Types with ``.dtype``"
 msgstr ""
 
@@ -366,7 +366,7 @@ msgid ""
 "order."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:252
+#: ../../../reference/arrays.dtypes.rst:239
 msgid "One-character strings"
 msgstr ""
 
@@ -376,7 +376,7 @@ msgid ""
 "typecodes), that uniquely identifies it."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:295
+#: ../../../reference/arrays.dtypes.rst:254
 msgid "Array-protocol type strings (see :ref:`arrays.interface`)"
 msgstr ""
 
@@ -478,96 +478,152 @@ msgid "unsigned long long integer"
 msgstr ""
 
 #: ../../../reference/arrays.dtypes.rst:273
-msgid "``'f'``"
+msgid "``'n'``"
 msgstr ""
 
 #: ../../../reference/arrays.dtypes.rst:273
+msgid "signed :class:`intp`"
+msgstr ""
+
+#: ../../../reference/arrays.dtypes.rst:274
+msgid "``'N'``"
+msgstr ""
+
+#: ../../../reference/arrays.dtypes.rst:274
+msgid "unsigned :class:`uintp`"
+msgstr ""
+
+#: ../../../reference/arrays.dtypes.rst:275
+msgid "``'p'``"
+msgstr ""
+
+#: ../../../reference/arrays.dtypes.rst:275
+msgid "signed integer large enough for pointers"
+msgstr ""
+
+#: ../../../reference/arrays.dtypes.rst:276
+msgid "``'P'``"
+msgstr ""
+
+#: ../../../reference/arrays.dtypes.rst:276
+msgid "unsigned integer large enough for pointers"
+msgstr ""
+
+#: ../../../reference/arrays.dtypes.rst:277
+msgid "``'e'``"
+msgstr ""
+
+#: ../../../reference/arrays.dtypes.rst:277
+msgid "half precision"
+msgstr ""
+
+#: ../../../reference/arrays.dtypes.rst:278
+msgid "``'f'``"
+msgstr ""
+
+#: ../../../reference/arrays.dtypes.rst:278
 msgid "single precision"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:274
+#: ../../../reference/arrays.dtypes.rst:279
 msgid "``'F'``"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:274
+#: ../../../reference/arrays.dtypes.rst:279
 msgid "complex single precision"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:275
+#: ../../../reference/arrays.dtypes.rst:280
 msgid "``'d'``"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:275
+#: ../../../reference/arrays.dtypes.rst:280
 msgid "double precision"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:276
+#: ../../../reference/arrays.dtypes.rst:281
 msgid "``'D'``"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:276
+#: ../../../reference/arrays.dtypes.rst:281
 msgid "complex double precision"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:277
+#: ../../../reference/arrays.dtypes.rst:282
 msgid "``'g'``"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:277
+#: ../../../reference/arrays.dtypes.rst:282
 msgid "long precision"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:278
+#: ../../../reference/arrays.dtypes.rst:283
 msgid "``'G'``"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:278
+#: ../../../reference/arrays.dtypes.rst:283
 msgid "complex long double precision"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:279
-msgid "``'O'``"
-msgstr ""
-
-#: ../../../reference/arrays.dtypes.rst:279
-msgid "(Python) objects"
-msgstr ""
-
-#: ../../../reference/arrays.dtypes.rst:280
+#: ../../../reference/arrays.dtypes.rst:284
 msgid "``'S'``"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:280
+#: ../../../reference/arrays.dtypes.rst:284
 msgid "zero-terminated bytes (not recommended)"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:281
+#: ../../../reference/arrays.dtypes.rst:285
 msgid "``'U'``"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:281
+#: ../../../reference/arrays.dtypes.rst:285
 msgid "Unicode string"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:282
+#: ../../../reference/arrays.dtypes.rst:286
 msgid "``'V'``"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:282
+#: ../../../reference/arrays.dtypes.rst:286
 msgid "raw data (:class:`void`)"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:330
+#: ../../../reference/arrays.dtypes.rst:287
+msgid "``'O'``"
+msgstr ""
+
+#: ../../../reference/arrays.dtypes.rst:287
+msgid "(Python) objects"
+msgstr ""
+
+#: ../../../reference/arrays.dtypes.rst:288
+msgid "``'M'``"
+msgstr ""
+
+#: ../../../reference/arrays.dtypes.rst:288
+msgid ":class:`datetime64`"
+msgstr ""
+
+#: ../../../reference/arrays.dtypes.rst:289
+msgid "``'m'``"
+msgstr ""
+
+#: ../../../reference/arrays.dtypes.rst:289
+msgid ":class:`timedelta64`"
+msgstr ""
+
+#: ../../../reference/arrays.dtypes.rst:304
 msgid "String with comma-separated fields"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:298
+#: ../../../reference/arrays.dtypes.rst:305
 msgid ""
 "A short-hand notation for specifying the format of a structured data type is "
 "a comma-separated string of basic formats."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:301
+#: ../../../reference/arrays.dtypes.rst:308
 msgid ""
 "A basic format in this context is an optional shape specifier followed by an "
 "array-protocol type string. Parenthesis are required on the shape if it has "
@@ -579,60 +635,60 @@ msgid ""
 "then the data-type for the corresponding field describes a sub-array."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:315
+#: ../../../reference/arrays.dtypes.rst:322
 msgid "field named ``f0`` containing a 32-bit integer"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:316
+#: ../../../reference/arrays.dtypes.rst:323
 msgid ""
 "field named ``f1`` containing a 2 x 3 sub-array of 64-bit floating-point "
 "numbers"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:318
+#: ../../../reference/arrays.dtypes.rst:325
 msgid "field named ``f2`` containing a 32-bit floating-point number"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:323
+#: ../../../reference/arrays.dtypes.rst:330
 msgid "field named ``f0`` containing a 3-character string"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:324
+#: ../../../reference/arrays.dtypes.rst:331
 msgid ""
 "field named ``f1`` containing a sub-array of shape (3,) containing 64-bit "
 "unsigned integers"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:326
+#: ../../../reference/arrays.dtypes.rst:333
 msgid ""
 "field named ``f2`` containing a 3 x 4 sub-array containing 10-character "
 "strings"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:342
+#: ../../../reference/arrays.dtypes.rst:339
 msgid "Type strings"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:333
+#: ../../../reference/arrays.dtypes.rst:340
 msgid "Any string name of a NumPy dtype, e.g.:"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:359
+#: ../../../reference/arrays.dtypes.rst:354
 msgid "``(flexible_dtype, itemsize)``"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:348
+#: ../../../reference/arrays.dtypes.rst:355
 msgid ""
 "The first argument must be an object that is converted to a zero-sized "
 "flexible data-type object, the second argument is an integer providing the "
 "desired itemsize."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:380
+#: ../../../reference/arrays.dtypes.rst:368
 msgid "``(fixed_dtype, shape)``"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:365
+#: ../../../reference/arrays.dtypes.rst:372
 msgid ""
 "The first argument is any object that can be converted into a fixed-size "
 "data-type object. The second argument is the desired shape of this type. If "
@@ -642,18 +698,18 @@ msgid ""
 "array of the given shape."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:423
+#: ../../../reference/arrays.dtypes.rst:392
 msgid "``[(field_name, field_dtype, field_shape), ...]``"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:386
+#: ../../../reference/arrays.dtypes.rst:393
 msgid ""
 "*obj* should be a list of fields where each field is described by a tuple of "
 "length 2 or 3. (Equivalent to the ``descr`` item in the :obj:`~object."
 "__array_interface__` attribute.)"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:390
+#: ../../../reference/arrays.dtypes.rst:397
 msgid ""
 "The first element, *field_name*, is the field name (if this is ``''`` then a "
 "standard field name, ``'f#'``, is assigned).  The field name may also be a 2-"
@@ -663,45 +719,45 @@ msgid ""
 "identifier."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:397
+#: ../../../reference/arrays.dtypes.rst:404
 msgid ""
 "The second element, *field_dtype*, can be anything that can be interpreted "
 "as a data-type."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:400
+#: ../../../reference/arrays.dtypes.rst:407
 msgid ""
 "The optional third element *field_shape* contains the shape if this field "
 "represents an array of the data-type in the second element. Note that a 3-"
 "tuple with a third argument equal to 1 is equivalent to a 2-tuple."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:405
+#: ../../../reference/arrays.dtypes.rst:412
 msgid ""
 "This style does not accept *align* in the :class:`dtype` constructor as it "
 "is assumed that all of the memory is accounted for by the array interface "
 "description."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:413
+#: ../../../reference/arrays.dtypes.rst:420
 msgid ""
 "Data-type with fields ``big`` (big-endian 32-bit integer) and ``little`` "
 "(little-endian 32-bit integer):"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:420
+#: ../../../reference/arrays.dtypes.rst:427
 msgid ""
 "Data-type with fields ``R``, ``G``, ``B``, ``A``, each being an unsigned 8-"
 "bit integer:"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:471
+#: ../../../reference/arrays.dtypes.rst:435
 msgid ""
 "``{'names': ..., 'formats': ..., 'offsets': ..., 'titles': ..., "
 "'itemsize': ...}``"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:429
+#: ../../../reference/arrays.dtypes.rst:436
 msgid ""
 "This style has two required and three optional keys.  The *names* and "
 "*formats* keys are required. Their respective values are equal-length lists "
@@ -710,7 +766,7 @@ msgid ""
 "constructor."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:435
+#: ../../../reference/arrays.dtypes.rst:442
 msgid ""
 "When the optional keys *offsets* and *titles* are provided, their values "
 "must each be lists of the same length as the *names* and *formats* lists. "
@@ -722,7 +778,7 @@ msgid ""
 "tuple which will contain the title as an additional tuple member."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:446
+#: ../../../reference/arrays.dtypes.rst:453
 msgid ""
 "The *itemsize* key allows the total size of the dtype to be set, and must be "
 "an integer large enough so all the fields are within the dtype. If the dtype "
@@ -730,54 +786,54 @@ msgid ""
 "struct alignment. Total dtype *itemsize* is limited to `ctypes.c_int`."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:456
+#: ../../../reference/arrays.dtypes.rst:463
 msgid ""
 "Data type with fields ``r``, ``g``, ``b``, ``a``, each being an 8-bit "
 "unsigned integer:"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:464
+#: ../../../reference/arrays.dtypes.rst:471
 msgid ""
 "Data type with fields ``r`` and ``b`` (with the given titles), both being 8-"
 "bit unsigned integers, the first at byte position 0 from the start of the "
 "field and the second at position 2:"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:496
+#: ../../../reference/arrays.dtypes.rst:480
 msgid "``{'field1': ..., 'field2': ..., ...}``"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:474
+#: ../../../reference/arrays.dtypes.rst:481
 msgid ""
 "This usage is discouraged, because it is ambiguous with the other dict-based "
 "construction method. If you have a field called 'names' and a field called "
 "'formats' there will be a conflict."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:479
+#: ../../../reference/arrays.dtypes.rst:486
 msgid ""
 "This style allows passing in the :attr:`fields <dtype.fields>` attribute of "
 "a data-type object."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:482
+#: ../../../reference/arrays.dtypes.rst:489
 msgid ""
 "*obj* should contain string or unicode keys that refer to ``(data-type, "
 "offset)`` or ``(data-type, offset, title)`` tuples."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:489
+#: ../../../reference/arrays.dtypes.rst:496
 msgid ""
 "Data type containing field ``col1`` (10-character string at byte position "
 "0), ``col2`` (32-bit float at byte position 10), and ``col3`` (integers at "
 "byte position 14):"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:532
+#: ../../../reference/arrays.dtypes.rst:505
 msgid "``(base_dtype, new_dtype)``"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:499
+#: ../../../reference/arrays.dtypes.rst:506
 msgid ""
 "In NumPy 1.7 and later, this form allows `base_dtype` to be interpreted as a "
 "structured dtype. Arrays created with this dtype will have underlying dtype "
@@ -786,51 +842,51 @@ msgid ""
 "<arrays.classes.rec>`."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:505
+#: ../../../reference/arrays.dtypes.rst:512
 msgid ""
 "This form also makes it possible to specify struct dtypes with overlapping "
 "fields, functioning like the 'union' type in C. This usage is discouraged, "
 "however, and the union mechanism is preferred."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:509
+#: ../../../reference/arrays.dtypes.rst:516
 msgid ""
 "Both arguments must be convertible to data-type objects with the same total "
 "size."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:516
+#: ../../../reference/arrays.dtypes.rst:523
 msgid ""
 "32-bit integer, whose first two bytes are interpreted as an integer via "
 "field ``real``, and the following two bytes via field ``imag``."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:523
+#: ../../../reference/arrays.dtypes.rst:530
 msgid ""
 "32-bit integer, which is interpreted as consisting of a sub-array of shape "
 "``(4,)`` containing 8-bit integers:"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:528
+#: ../../../reference/arrays.dtypes.rst:535
 msgid ""
 "32-bit integer, containing fields ``r``, ``g``, ``b``, ``a`` that interpret "
 "the 4 bytes in the integer as four unsigned integers:"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:535
+#: ../../../reference/arrays.dtypes.rst:542
 msgid "Checking the data type"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:536
+#: ../../../reference/arrays.dtypes.rst:543
 msgid "When checking for a specific data type, use ``==`` comparison."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:548
+#: ../../../reference/arrays.dtypes.rst:555
 msgid ""
 "As opposed to Python types, a comparison using ``is`` should not be used."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:550
+#: ../../../reference/arrays.dtypes.rst:557
 msgid ""
 "First, NumPy treats data type specifications (everything that can be passed "
 "to the :class:`dtype` constructor) as equivalent to the data type object "
@@ -838,241 +894,241 @@ msgid ""
 "``is``."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:558
+#: ../../../reference/arrays.dtypes.rst:565
 msgid ""
 "A :class:`dtype` object is equal to all data type specifications that are "
 "equivalent to it."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:575
+#: ../../../reference/arrays.dtypes.rst:582
 msgid "Second, there is no guarantee that data type objects are singletons."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:581
+#: ../../../reference/arrays.dtypes.rst:588
 msgid ""
 "Do not use ``is`` because data type objects may or may not be singletons."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:591
+#: ../../../reference/arrays.dtypes.rst:598
 msgid ":class:`dtype`"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:593
+#: ../../../reference/arrays.dtypes.rst:600
 msgid "NumPy data type descriptions are instances of the :class:`dtype` class."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:596
+#: ../../../reference/arrays.dtypes.rst:603
 msgid "Attributes"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:598
+#: ../../../reference/arrays.dtypes.rst:605
 msgid ""
 "The type of the data is described by the following :class:`dtype`  "
 "attributes:"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:608:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:615:<autosummary>:1
 msgid ":py:obj:`dtype.type <numpy.dtype.type>`\\"
 msgstr ":py:obj:`dtype.type <numpy.dtype.type>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:608:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:615:<autosummary>:1
 msgid ":py:obj:`dtype.kind <numpy.dtype.kind>`\\"
 msgstr ":py:obj:`dtype.kind <numpy.dtype.kind>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:608:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:615:<autosummary>:1
 msgid ""
 "A character code (one of 'biufcmMOSTUV') identifying the general kind of "
 "data."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:608:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:615:<autosummary>:1
 msgid ":py:obj:`dtype.char <numpy.dtype.char>`\\"
 msgstr ":py:obj:`dtype.char <numpy.dtype.char>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:608:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:615:<autosummary>:1
 msgid "A unique character code for each of the 21 different built-in types."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:608:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:615:<autosummary>:1
 msgid ":py:obj:`dtype.num <numpy.dtype.num>`\\"
 msgstr ":py:obj:`dtype.num <numpy.dtype.num>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:608:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:615:<autosummary>:1
 msgid "A unique number for each of the 21 different built-in types."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:608:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:615:<autosummary>:1
 msgid ":py:obj:`dtype.str <numpy.dtype.str>`\\"
 msgstr ":py:obj:`dtype.str <numpy.dtype.str>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:608:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:615:<autosummary>:1
 msgid "The array-protocol typestring of this data-type object."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:609
+#: ../../../reference/arrays.dtypes.rst:616
 msgid "Size of the data is in turn described by:"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:616:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:623:<autosummary>:1
 msgid ":py:obj:`dtype.name <numpy.dtype.name>`\\"
 msgstr ":py:obj:`dtype.name <numpy.dtype.name>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:616:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:623:<autosummary>:1
 msgid "A bit-width name for this data-type."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:616:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:623:<autosummary>:1
 msgid ":py:obj:`dtype.itemsize <numpy.dtype.itemsize>`\\"
 msgstr ":py:obj:`dtype.itemsize <numpy.dtype.itemsize>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:616:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:623:<autosummary>:1
 msgid "The element size of this data-type object."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:617
+#: ../../../reference/arrays.dtypes.rst:624
 msgid "Endianness of this data:"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:623:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:630:<autosummary>:1
 msgid ":py:obj:`dtype.byteorder <numpy.dtype.byteorder>`\\"
 msgstr ":py:obj:`dtype.byteorder <numpy.dtype.byteorder>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:623:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:630:<autosummary>:1
 msgid "A character indicating the byte-order of this data-type object."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:624
+#: ../../../reference/arrays.dtypes.rst:631
 msgid "Information about sub-data-types in a :term:`structured data type`:"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:631:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:638:<autosummary>:1
 msgid ":py:obj:`dtype.fields <numpy.dtype.fields>`\\"
 msgstr ":py:obj:`dtype.fields <numpy.dtype.fields>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:631:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:638:<autosummary>:1
 msgid "Dictionary of named fields defined for this data type, or ``None``."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:631:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:638:<autosummary>:1
 msgid ":py:obj:`dtype.names <numpy.dtype.names>`\\"
 msgstr ":py:obj:`dtype.names <numpy.dtype.names>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:631:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:638:<autosummary>:1
 msgid "Ordered list of field names, or ``None`` if there are no fields."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:632
+#: ../../../reference/arrays.dtypes.rst:639
 msgid "For data types that describe sub-arrays:"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:639:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:646:<autosummary>:1
 msgid ":py:obj:`dtype.subdtype <numpy.dtype.subdtype>`\\"
 msgstr ":py:obj:`dtype.subdtype <numpy.dtype.subdtype>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:639:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:646:<autosummary>:1
 msgid ""
 "Tuple ``(item_dtype, shape)`` if this `dtype` describes a sub-array, and "
 "None otherwise."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:639:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:646:<autosummary>:1
 msgid ":py:obj:`dtype.shape <numpy.dtype.shape>`\\"
 msgstr ":py:obj:`dtype.shape <numpy.dtype.shape>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:639:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:646:<autosummary>:1
 msgid ""
 "Shape tuple of the sub-array if this data type describes a sub-array, and "
 "``()`` otherwise."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:640
+#: ../../../reference/arrays.dtypes.rst:647
 msgid "Attributes providing additional information:"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:652:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:659:<autosummary>:1
 msgid ":py:obj:`dtype.hasobject <numpy.dtype.hasobject>`\\"
 msgstr ":py:obj:`dtype.hasobject <numpy.dtype.hasobject>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:652:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:659:<autosummary>:1
 msgid ""
 "Boolean indicating whether this dtype contains any reference-counted objects "
 "in any fields or sub-dtypes."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:652:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:659:<autosummary>:1
 msgid ":py:obj:`dtype.flags <numpy.dtype.flags>`\\"
 msgstr ":py:obj:`dtype.flags <numpy.dtype.flags>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:652:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:659:<autosummary>:1
 msgid "Bit-flags describing how this data type is to be interpreted."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:652:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:659:<autosummary>:1
 msgid ":py:obj:`dtype.isbuiltin <numpy.dtype.isbuiltin>`\\"
 msgstr ":py:obj:`dtype.isbuiltin <numpy.dtype.isbuiltin>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:652:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:659:<autosummary>:1
 msgid "Integer indicating how this dtype relates to the built-in dtypes."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:652:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:659:<autosummary>:1
 msgid ":py:obj:`dtype.isnative <numpy.dtype.isnative>`\\"
 msgstr ":py:obj:`dtype.isnative <numpy.dtype.isnative>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:652:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:659:<autosummary>:1
 msgid ""
 "Boolean indicating whether the byte order of this dtype is native to the "
 "platform."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:652:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:659:<autosummary>:1
 msgid ":py:obj:`dtype.descr <numpy.dtype.descr>`\\"
 msgstr ":py:obj:`dtype.descr <numpy.dtype.descr>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:652:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:659:<autosummary>:1
 msgid "`__array_interface__` description of the data-type."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:652:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:659:<autosummary>:1
 msgid ":py:obj:`dtype.alignment <numpy.dtype.alignment>`\\"
 msgstr ":py:obj:`dtype.alignment <numpy.dtype.alignment>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:652:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:659:<autosummary>:1
 msgid ""
 "The required alignment (bytes) of this data-type according to the compiler."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:652:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:659:<autosummary>:1
 msgid ":py:obj:`dtype.base <numpy.dtype.base>`\\"
 msgstr ":py:obj:`dtype.base <numpy.dtype.base>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:652:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:659:<autosummary>:1
 msgid ""
 "Returns dtype for the base element of the subarrays, regardless of their "
 "dimension or shape."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:653
+#: ../../../reference/arrays.dtypes.rst:660
 msgid "Metadata attached by the user:"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:660:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:667:<autosummary>:1
 msgid ":py:obj:`dtype.metadata <numpy.dtype.metadata>`\\"
 msgstr ":py:obj:`dtype.metadata <numpy.dtype.metadata>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:660:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:667:<autosummary>:1
 msgid "Either ``None`` or a readonly dictionary of metadata (mappingproxy)."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:662
+#: ../../../reference/arrays.dtypes.rst:669
 msgid "Methods"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:664
+#: ../../../reference/arrays.dtypes.rst:671
 msgid "Data types have the following method for changing the byte order:"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:670:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:677:<autosummary>:1
 msgid ""
 ":py:obj:`dtype.newbyteorder <numpy.dtype.newbyteorder>`\\ "
 "\\(\\[new\\_order\\]\\)"
@@ -1080,31 +1136,31 @@ msgstr ""
 ":py:obj:`dtype.newbyteorder <numpy.dtype.newbyteorder>`\\ "
 "\\(\\[new\\_order\\]\\)"
 
-#: ../../../reference/arrays.dtypes.rst:670:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:677:<autosummary>:1
 msgid "Return a new dtype with a different byte order."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:671
+#: ../../../reference/arrays.dtypes.rst:678
 msgid "The following methods implement the pickle protocol:"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:678:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:685:<autosummary>:1
 msgid ":py:obj:`dtype.__reduce__ <numpy.dtype.__reduce__>`\\"
 msgstr ":py:obj:`dtype.__reduce__ <numpy.dtype.__reduce__>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:678:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:685:<autosummary>:1
 msgid "Helper for pickle."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:678:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:685:<autosummary>:1
 msgid ":py:obj:`dtype.__setstate__ <numpy.dtype.__setstate__>`\\"
 msgstr ":py:obj:`dtype.__setstate__ <numpy.dtype.__setstate__>`\\"
 
-#: ../../../reference/arrays.dtypes.rst:679
+#: ../../../reference/arrays.dtypes.rst:686
 msgid "Utility method for typing:"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:685:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:692:<autosummary>:1
 msgid ""
 ":py:obj:`dtype.__class_getitem__ <numpy.dtype.__class_getitem__>`\\ "
 "\\(item\\, \\/\\)"
@@ -1112,43 +1168,43 @@ msgstr ""
 ":py:obj:`dtype.__class_getitem__ <numpy.dtype.__class_getitem__>`\\ "
 "\\(item\\, \\/\\)"
 
-#: ../../../reference/arrays.dtypes.rst:685:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:692:<autosummary>:1
 msgid "Return a parametrized wrapper around the `~numpy.dtype` type."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:686
+#: ../../../reference/arrays.dtypes.rst:693
 msgid "Comparison operations:"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:694:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:701:<autosummary>:1
 msgid ":py:obj:`dtype.__ge__ <numpy.dtype.__ge__>`\\ \\(value\\, \\/\\)"
 msgstr ":py:obj:`dtype.__ge__ <numpy.dtype.__ge__>`\\ \\(value\\, \\/\\)"
 
-#: ../../../reference/arrays.dtypes.rst:694:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:701:<autosummary>:1
 msgid "Return self>=value."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:694:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:701:<autosummary>:1
 msgid ":py:obj:`dtype.__gt__ <numpy.dtype.__gt__>`\\ \\(value\\, \\/\\)"
 msgstr ":py:obj:`dtype.__gt__ <numpy.dtype.__gt__>`\\ \\(value\\, \\/\\)"
 
-#: ../../../reference/arrays.dtypes.rst:694:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:701:<autosummary>:1
 msgid "Return self>value."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:694:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:701:<autosummary>:1
 msgid ":py:obj:`dtype.__le__ <numpy.dtype.__le__>`\\ \\(value\\, \\/\\)"
 msgstr ":py:obj:`dtype.__le__ <numpy.dtype.__le__>`\\ \\(value\\, \\/\\)"
 
-#: ../../../reference/arrays.dtypes.rst:694:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:701:<autosummary>:1
 msgid "Return self<=value."
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:694:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:701:<autosummary>:1
 msgid ":py:obj:`dtype.__lt__ <numpy.dtype.__lt__>`\\ \\(value\\, \\/\\)"
 msgstr ":py:obj:`dtype.__lt__ <numpy.dtype.__lt__>`\\ \\(value\\, \\/\\)"
 
-#: ../../../reference/arrays.dtypes.rst:694:<autosummary>:1
+#: ../../../reference/arrays.dtypes.rst:701:<autosummary>:1
 msgid "Return self<value."
 msgstr ""
 
@@ -1159,10 +1215,10 @@ msgstr ""
 #: ../../../reference/arrays.dtypes.rst:143
 #: ../../../reference/arrays.dtypes.rst:148
 #: ../../../reference/arrays.dtypes.rst:231
-#: ../../../reference/arrays.dtypes.rst:344
-#: ../../../reference/arrays.dtypes.rst:362
-#: ../../../reference/arrays.dtypes.rst:382
-#: ../../../reference/arrays.dtypes.rst:425
+#: ../../../reference/arrays.dtypes.rst:351
+#: ../../../reference/arrays.dtypes.rst:369
+#: ../../../reference/arrays.dtypes.rst:389
+#: ../../../reference/arrays.dtypes.rst:432
 msgid "dtype"
 msgstr ""
 
@@ -1175,7 +1231,7 @@ msgid "field"
 msgstr "欄位（field）"
 
 #: ../../../reference/arrays.dtypes.rst:52
-#: ../../../reference/arrays.dtypes.rst:362
+#: ../../../reference/arrays.dtypes.rst:369
 msgid "sub-array"
 msgstr ""
 
@@ -1183,9 +1239,9 @@ msgstr ""
 #: ../../../reference/arrays.dtypes.rst:143
 #: ../../../reference/arrays.dtypes.rst:148
 #: ../../../reference/arrays.dtypes.rst:231
-#: ../../../reference/arrays.dtypes.rst:344
-#: ../../../reference/arrays.dtypes.rst:382
-#: ../../../reference/arrays.dtypes.rst:425
+#: ../../../reference/arrays.dtypes.rst:351
+#: ../../../reference/arrays.dtypes.rst:389
+#: ../../../reference/arrays.dtypes.rst:432
 msgid "construction"
 msgstr ""
 
@@ -1205,14 +1261,14 @@ msgstr ""
 msgid "from string"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:344
+#: ../../../reference/arrays.dtypes.rst:351
 msgid "from tuple"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:382
+#: ../../../reference/arrays.dtypes.rst:389
 msgid "from list"
 msgstr ""
 
-#: ../../../reference/arrays.dtypes.rst:425
+#: ../../../reference/arrays.dtypes.rst:432
 msgid "from dict"
 msgstr ""

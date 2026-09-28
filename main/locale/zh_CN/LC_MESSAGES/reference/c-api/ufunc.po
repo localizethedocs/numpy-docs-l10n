@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,7 @@ msgstr ""
 msgid "Deprecated, use ``NPY_{THING}_{ERR}`` instead"
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:37
+#: ../../../reference/c-api/ufunc.rst:25
 msgid "``PyUFunc_{VALUE}``"
 msgstr ""
 
@@ -147,23 +147,28 @@ msgstr ""
 msgid ""
 "The *func*, *data*, *types*, *name*, and *doc* arguments are not copied by :"
 "c:func:`PyUFunc_FromFuncAndData`. The caller must ensure that the memory "
-"used by these arrays is not freed as long as the ufunc object is alive."
+"used by these arrays is not freed as long as the ufunc object is alive. The "
+"contents of *func* and *data* should be considered fixed once the ufunc has "
+"been used: since NumPy 2.6 the selected inner loop is cached, so modifying "
+"these arrays in place may not take effect. Use :c:func:"
+"`PyUFunc_ReplaceLoopBySignature` to replace a loop after the ufunc has been "
+"created."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:134
+#: ../../../reference/c-api/ufunc.rst:138
 msgid ""
 "Must point to an array containing *ntypes* :c:type:`PyUFuncGenericFunction` "
 "elements."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:138
+#: ../../../reference/c-api/ufunc.rst:142
 msgid ""
 "Should be ``NULL`` or a pointer to an array of size *ntypes*. This array may "
 "contain arbitrary extra-data to be passed to the corresponding loop function "
 "in the func array, including ``NULL``."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:144
+#: ../../../reference/c-api/ufunc.rst:148
 msgid ""
 "Length ``(nin + nout) * ntypes`` array of ``char`` encoding the `numpy.dtype."
 "num` (built-in only) that the corresponding function in the ``func`` array "
@@ -177,7 +182,7 @@ msgid ""
 "input/output provided."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:145
+#: ../../../reference/c-api/ufunc.rst:149
 msgid ""
 "Length ``(nin + nout) * ntypes`` array of ``char`` encoding the `numpy.dtype."
 "num` (built-in only) that the corresponding function in the ``func`` array "
@@ -188,32 +193,32 @@ msgid ""
 "is 7, and ``NPY_BOOL`` is 0."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:154
+#: ../../../reference/c-api/ufunc.rst:158
 msgid ""
 "The bit-width names can also be used (e.g. :c:data:`NPY_INT32`, :c:data:"
 "`NPY_COMPLEX128` ) if desired."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:157
+#: ../../../reference/c-api/ufunc.rst:161
 msgid ""
 ":ref:`ufuncs.casting` will be used at runtime to find the first ``func`` "
 "callable by the input/output provided."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:160
+#: ../../../reference/c-api/ufunc.rst:164
 msgid ""
 "How many different data-type-specific functions the ufunc has implemented."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:163
+#: ../../../reference/c-api/ufunc.rst:167
 msgid "The number of inputs to this operation."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:166
+#: ../../../reference/c-api/ufunc.rst:170
 msgid "The number of outputs"
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:169
+#: ../../../reference/c-api/ufunc.rst:173
 msgid ""
 "Either :c:data:`PyUFunc_One`, :c:data:`PyUFunc_Zero`, :c:data:"
 "`PyUFunc_MinusOne`, or :c:data:`PyUFunc_None`. This specifies what should be "
@@ -223,7 +228,7 @@ msgid ""
 "arbitrary python object to be used as the identity."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:179
+#: ../../../reference/c-api/ufunc.rst:183
 msgid ""
 "The name for the ufunc as a ``NULL`` terminated string.  Specifying a name "
 "of 'add' or 'multiply' enables a special behavior for integer-typed "
@@ -232,7 +237,7 @@ msgid ""
 "will be internally upcast to the `numpy.int_` (or `numpy.uint`) data type."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:187
+#: ../../../reference/c-api/ufunc.rst:191
 msgid ""
 "Allows passing in a documentation string to be stored with the ufunc.  The "
 "documentation string should not contain the name of the function or the "
@@ -240,11 +245,11 @@ msgid ""
 "available when accessing the **__doc__** attribute of the ufunc."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:194
+#: ../../../reference/c-api/ufunc.rst:198
 msgid "Unused and present for backwards compatibility of the C-API."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:202
+#: ../../../reference/c-api/ufunc.rst:206
 msgid ""
 "This function is very similar to PyUFunc_FromFuncAndData above, but has an "
 "extra *signature* argument, to define a :ref:`generalized universal "
@@ -254,14 +259,14 @@ msgid ""
 "the subarrays to operate on."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:209
+#: ../../../reference/c-api/ufunc.rst:213
 msgid ""
 "The signature for the new gufunc. Setting it to NULL is equivalent to "
 "calling PyUFunc_FromFuncAndData. A copy of the string is made, so the passed "
 "in buffer can be freed."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:219
+#: ../../../reference/c-api/ufunc.rst:223
 msgid ""
 "This function is very similar to :c:func:"
 "`PyUFunc_FromFuncAndDataAndSignature` above, but has an extra "
@@ -269,14 +274,14 @@ msgid ""
 "when ``identity`` is passed as ``PyUFunc_IdentityValue``."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:223
+#: ../../../reference/c-api/ufunc.rst:227
 msgid ""
 "The identity for the new gufunc. Must be passed as ``NULL`` unless the "
 "``identity`` argument is ``PyUFunc_IdentityValue``. Setting it to NULL is "
 "equivalent to calling PyUFunc_FromFuncAndDataAndSignature."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:233
+#: ../../../reference/c-api/ufunc.rst:237
 msgid ""
 "This function allows the user to register a 1-d loop with an already- "
 "created ufunc to be used whenever the ufunc is called with any of its input "
@@ -288,7 +293,7 @@ msgid ""
 "must be a pointer to memory at least as large as ufunc->nargs."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:248
+#: ../../../reference/c-api/ufunc.rst:252
 msgid ""
 "This function behaves like PyUFunc_RegisterLoopForType above, except that it "
 "allows the user to register a 1-d loop using PyArray_Descr objects instead "
@@ -297,7 +302,7 @@ msgid ""
 "types."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:258
+#: ../../../reference/c-api/ufunc.rst:262
 msgid ""
 "Replace a 1-d loop matching the given *signature* in the already-created "
 "*ufunc* with the new 1-d loop newfunc. Return the old 1-d loop function in "
@@ -307,15 +312,15 @@ msgid ""
 "inputs followed by the outputs assumed by the 1-d loop."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:268
+#: ../../../reference/c-api/ufunc.rst:272
 msgid "Clear the IEEE error flags."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:272
+#: ../../../reference/c-api/ufunc.rst:276
 msgid "Generic functions"
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:274
+#: ../../../reference/c-api/ufunc.rst:278
 msgid ""
 "At the core of every ufunc is a collection of type-specific functions that "
 "defines the basic functionality for each of the supported types. These "
@@ -330,7 +335,7 @@ msgid ""
 "structure."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:320
+#: ../../../reference/c-api/ufunc.rst:324
 msgid ""
 "Type specific, core 1-d functions for ufuncs where each calculation is "
 "obtained by calling a function taking one input argument and returning one "
@@ -344,7 +349,7 @@ msgid ""
 "calls out to a C-function that takes double and returns double."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:366
+#: ../../../reference/c-api/ufunc.rst:370
 msgid ""
 "Type specific, core 1-d functions for ufuncs where each calculation is "
 "obtained by calling a function taking two input arguments and returning one "
@@ -356,7 +361,7 @@ msgid ""
 "that takes a different data type."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:382
+#: ../../../reference/c-api/ufunc.rst:386
 msgid ""
 "One-input, one-output, and two-input, one-output core 1-d functions for the :"
 "c:data:`NPY_OBJECT` data type. These functions handle reference count issues "
@@ -366,7 +371,7 @@ msgid ""
 "`PyUFunc_OO_O`."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:392
+#: ../../../reference/c-api/ufunc.rst:396
 msgid ""
 "This general purpose 1-d core function assumes that *func* is a string "
 "representing a method of the input object. For each iteration of the loop, "
@@ -374,7 +379,7 @@ msgid ""
 "called returning the result to the output array."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:400
+#: ../../../reference/c-api/ufunc.rst:404
 msgid ""
 "This general purpose 1-d core function assumes that *func* is a string "
 "representing a method of the input object that takes one argument. The first "
@@ -383,14 +388,14 @@ msgid ""
 "function is stored in the third entry of *args*."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:410
+#: ../../../reference/c-api/ufunc.rst:414
 msgid ""
 "This is the 1-d core function used by the dynamic ufuncs created by umath."
 "frompyfunc(function, nin, nout). In this case *func* is a pointer to a :c:"
 "type:`PyUFunc_PyFuncData` structure which has definition"
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:416
+#: ../../../reference/c-api/ufunc.rst:420
 msgid ""
 "typedef struct {\n"
 "    int nin;\n"
@@ -399,7 +404,7 @@ msgid ""
 "} PyUFunc_PyFuncData;"
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:424
+#: ../../../reference/c-api/ufunc.rst:428
 msgid ""
 "At each iteration of the loop, the *nin* input objects are extracted from "
 "their object arrays and placed into an argument tuple, the Python *callable* "
@@ -407,11 +412,11 @@ msgid ""
 "their object arrays."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:431
+#: ../../../reference/c-api/ufunc.rst:435
 msgid "Importing the API"
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:439
+#: ../../../reference/c-api/ufunc.rst:443
 msgid ""
 "Ensures that the UFunc C-API is imported and usable.  It returns ``0`` on "
 "success and ``-1`` with an error set if NumPy couldn't be imported. While "
@@ -419,13 +424,13 @@ msgid ""
 "light-weight if called multiple times."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:444
+#: ../../../reference/c-api/ufunc.rst:448
 msgid ""
 "This function mainly checks for ``PyUFunc_API == NULL`` so it can be "
 "manually backported if desired."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:450
+#: ../../../reference/c-api/ufunc.rst:454
 msgid ""
 "These are the constants and functions for accessing the ufunc C-API from "
 "extension modules in precisely the same way as the array C-API can be "
@@ -440,7 +445,7 @@ msgid ""
 "data:`NO_IMPORT_UFUNC`."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:463
+#: ../../../reference/c-api/ufunc.rst:467
 msgid ""
 "The C-API is actually an array of function pointers. This array is created "
 "(and pointed to by a global variable) by import_ufunc. The global variable "
@@ -449,10 +454,10 @@ msgid ""
 "`NO_IMPORT_UFUNC`."
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:6 ../../../reference/c-api/ufunc.rst:469
+#: ../../../reference/c-api/ufunc.rst:6 ../../../reference/c-api/ufunc.rst:473
 msgid "ufunc"
 msgstr ""
 
-#: ../../../reference/c-api/ufunc.rst:6 ../../../reference/c-api/ufunc.rst:469
+#: ../../../reference/c-api/ufunc.rst:6 ../../../reference/c-api/ufunc.rst:473
 msgid "C-API"
 msgstr ""

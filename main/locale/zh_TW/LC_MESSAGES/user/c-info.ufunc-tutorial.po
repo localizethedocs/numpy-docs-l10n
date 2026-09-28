@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -182,16 +182,11 @@ msgid ""
 "\n"
 "PyMODINIT_FUNC PyInit_spam(void)\n"
 "{\n"
-"    PyObject *m;\n"
-"    m = PyModule_Create(&moduledef);\n"
-"    if (!m) {\n"
-"        return NULL;\n"
-"    }\n"
-"    return m;\n"
+"    return PyModule_Create(&moduledef);\n"
 "}"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:160
+#: ../../../user/c-info.ufunc-tutorial.rst:155
 msgid ""
 "To create the module, one proceeds as one would for a Python package, "
 "creating a ``pyproject.toml`` file, which defines a build back-end, and then "
@@ -204,12 +199,12 @@ msgstr ""
 msgid "meson"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:170
-#: ../../../user/c-info.ufunc-tutorial.rst:374
+#: ../../../user/c-info.ufunc-tutorial.rst:165
+#: ../../../user/c-info.ufunc-tutorial.rst:369
 msgid "Sample ``pyproject.toml`` and ``meson.build``."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:172
+#: ../../../user/c-info.ufunc-tutorial.rst:167
 msgid ""
 "[project]\n"
 "name = \"spam\"\n"
@@ -220,7 +215,7 @@ msgid ""
 "build-backend = \"mesonpy\""
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:182
+#: ../../../user/c-info.ufunc-tutorial.rst:177
 msgid ""
 "project('spam', 'c')\n"
 "\n"
@@ -239,12 +234,12 @@ msgstr ""
 msgid "setuptools"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:198
-#: ../../../user/c-info.ufunc-tutorial.rst:405
+#: ../../../user/c-info.ufunc-tutorial.rst:193
+#: ../../../user/c-info.ufunc-tutorial.rst:400
 msgid "Sample ``pyproject.toml`` and ``setup.py``."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:200
+#: ../../../user/c-info.ufunc-tutorial.rst:195
 msgid ""
 "[project]\n"
 "name = \"spam\"\n"
@@ -255,7 +250,7 @@ msgid ""
 "build-backend = \"setuptools.build_meta\""
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:210
+#: ../../../user/c-info.ufunc-tutorial.rst:205
 msgid ""
 "from setuptools import setup, Extension\n"
 "\n"
@@ -265,17 +260,17 @@ msgid ""
 "      ext_modules=[spammodule])"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:219
+#: ../../../user/c-info.ufunc-tutorial.rst:214
 msgid ""
 "With either of the above, one can build and install the ``spam`` package "
 "with,"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:221
+#: ../../../user/c-info.ufunc-tutorial.rst:216
 msgid "pip install ."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:225
+#: ../../../user/c-info.ufunc-tutorial.rst:220
 msgid ""
 "Once the ``spam`` module is imported into python, you can call logit via "
 "``spam.logit``. Note that the function used above cannot be applied as-is to "
@@ -283,7 +278,7 @@ msgid ""
 "example::"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:230
+#: ../../../user/c-info.ufunc-tutorial.rst:225
 msgid ""
 ">>> import numpy as np\n"
 ">>> import spam\n"
@@ -302,7 +297,7 @@ msgid ""
 "    0.22314355,  0.69314718,  1.25276297,  2.07944154,         inf])"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:246
+#: ../../../user/c-info.ufunc-tutorial.rst:241
 msgid ""
 "THE RESULTING LOGIT FUNCTION IS NOT FAST! ``numpy.vectorize`` simply loops "
 "over ``spam.logit``. The loop is done at the C level, but the numpy array is "
@@ -313,18 +308,18 @@ msgid ""
 "of the function."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:258
+#: ../../../user/c-info.ufunc-tutorial.rst:253
 msgid "Example NumPy ufunc for one dtype"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:263
+#: ../../../user/c-info.ufunc-tutorial.rst:258
 msgid ""
 "For simplicity we give a ufunc for a single dtype, the ``'f8'`` ``double``. "
 "As in the previous section, we first give the ``.c`` file and then the files "
 "used to create a ``npufunc`` module containing the ufunc."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:267
+#: ../../../user/c-info.ufunc-tutorial.rst:262
 msgid ""
 "The place in the code corresponding to the actual computations for the ufunc "
 "are marked with ``/* BEGIN main ufunc computation */`` and ``/* END main "
@@ -332,7 +327,7 @@ msgid ""
 "that must be changed to create your own ufunc."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:272
+#: ../../../user/c-info.ufunc-tutorial.rst:267
 msgid ""
 "#define PY_SSIZE_T_CLEAN\n"
 "#include <Python.h>\n"
@@ -428,13 +423,13 @@ msgid ""
 "}"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:367
+#: ../../../user/c-info.ufunc-tutorial.rst:362
 msgid ""
 "For the files needed to create the module, the main difference from our "
 "previous example is that we now need to declare dependencies on numpy."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:376
+#: ../../../user/c-info.ufunc-tutorial.rst:371
 msgid ""
 "[project]\n"
 "name = \"npufunc\"\n"
@@ -446,7 +441,7 @@ msgid ""
 "build-backend = \"mesonpy\""
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:387
+#: ../../../user/c-info.ufunc-tutorial.rst:382
 msgid ""
 "project('npufunc', 'c')\n"
 "\n"
@@ -463,7 +458,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:407
+#: ../../../user/c-info.ufunc-tutorial.rst:402
 msgid ""
 "[project]\n"
 "name = \"npufunc\"\n"
@@ -475,7 +470,7 @@ msgid ""
 "build-backend = \"setuptools.build_meta\""
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:418
+#: ../../../user/c-info.ufunc-tutorial.rst:413
 msgid ""
 "from setuptools import setup, Extension\n"
 "from numpy import get_include\n"
@@ -487,12 +482,12 @@ msgid ""
 "setup(name='npufunc', version='1.0', ext_modules=[npufunc])"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:429
+#: ../../../user/c-info.ufunc-tutorial.rst:424
 msgid ""
 "After the above has been installed, it can be imported and used as follows::"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:431
+#: ../../../user/c-info.ufunc-tutorial.rst:426
 msgid ""
 ">>> import numpy as np\n"
 ">>> import npufunc\n"
@@ -503,11 +498,11 @@ msgid ""
 "array([       -inf, -1.09861229,  0.        ,  1.09861229,         inf])"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:443
+#: ../../../user/c-info.ufunc-tutorial.rst:438
 msgid "Example NumPy ufunc with multiple dtypes"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:448
+#: ../../../user/c-info.ufunc-tutorial.rst:443
 msgid ""
 "We now extend the above to a full ``logit`` ufunc, with inner loops for "
 "floats, doubles, and long doubles. Here, we can use the same build files as "
@@ -515,7 +510,7 @@ msgid ""
 "to ``multi_type_logit.c``."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:453
+#: ../../../user/c-info.ufunc-tutorial.rst:448
 msgid ""
 "The places in the code corresponding to the actual computations for the "
 "ufunc are marked with ``/* BEGIN main ufunc computation */`` and ``/* END "
@@ -523,7 +518,7 @@ msgid ""
 "thing that must be changed to create your own ufunc."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:459
+#: ../../../user/c-info.ufunc-tutorial.rst:454
 msgid ""
 "#define PY_SSIZE_T_CLEAN\n"
 "#include <Python.h>\n"
@@ -670,12 +665,12 @@ msgid ""
 "}"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:605
+#: ../../../user/c-info.ufunc-tutorial.rst:600
 msgid ""
 "After the above has been installed, it can be imported and used as follows."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:619
+#: ../../../user/c-info.ufunc-tutorial.rst:614
 msgid ""
 "Supporting ``float16`` (half-precision) in custom ufuncs is more complex due "
 "to its non-standard C representation and conversion requirements.  The above "
@@ -686,25 +681,25 @@ msgid ""
 "see the numpy source code."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:630
+#: ../../../user/c-info.ufunc-tutorial.rst:625
 msgid "Example NumPy ufunc with multiple arguments/return values"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:632
+#: ../../../user/c-info.ufunc-tutorial.rst:627
 msgid ""
 "Creating a ufunc with multiple arguments is not difficult. Here, we make a "
 "modification of the code for a logit ufunc, where we compute ``(A * B, "
 "logit(A * B))``. For simplicity, we only create a loop for doubles."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:636
+#: ../../../user/c-info.ufunc-tutorial.rst:631
 msgid ""
 "We again only give the C code as the files needed to create the module are "
 "the same as before, but with the source file name replaced by "
 "``multi_arg_logit.c``."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:640
+#: ../../../user/c-info.ufunc-tutorial.rst:635
 msgid ""
 "The C file is given below. The ufunc generated takes two arguments ``A`` and "
 "``B``. It returns a tuple whose first element is ``A * B`` and whose second "
@@ -712,7 +707,7 @@ msgid ""
 "broadcasting, as well as all other properties of a ufunc."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:645
+#: ../../../user/c-info.ufunc-tutorial.rst:640
 msgid ""
 "#define PY_SSIZE_T_CLEAN\n"
 "#include <Python.h>\n"
@@ -811,11 +806,11 @@ msgid ""
 "}"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:747
+#: ../../../user/c-info.ufunc-tutorial.rst:742
 msgid "Example NumPy ufunc with structured array dtype arguments"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:749
+#: ../../../user/c-info.ufunc-tutorial.rst:744
 msgid ""
 "This example shows how to create a ufunc for a structured array dtype. For "
 "the example we show a trivial ufunc for adding two arrays with dtype ``'u8,"
@@ -825,14 +820,14 @@ msgid ""
 "`PyUFunc_RegisterLoopForDescr` to finish setting up the ufunc."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:756
+#: ../../../user/c-info.ufunc-tutorial.rst:751
 msgid ""
 "We only give the C code as the files needed to construct the module are "
 "again exactly the same as before, except that the source file is now "
 "``add_triplet.c``."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:759
+#: ../../../user/c-info.ufunc-tutorial.rst:754
 msgid ""
 "#define PY_SSIZE_T_CLEAN\n"
 "#include <Python.h>\n"
@@ -944,11 +939,11 @@ msgid ""
 "}"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:869
+#: ../../../user/c-info.ufunc-tutorial.rst:864
 msgid "Sample usage::"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:871
+#: ../../../user/c-info.ufunc-tutorial.rst:866
 msgid ""
 ">>> import npufunc\n"
 ">>> import numpy as np\n"
@@ -958,11 +953,11 @@ msgid ""
 "      dtype=[('f0', '<u8'), ('f1', '<u8'), ('f2', '<u8')])"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:879
+#: ../../../user/c-info.ufunc-tutorial.rst:874
 msgid "Alternatives to writing your own ufunc"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:881
+#: ../../../user/c-info.ufunc-tutorial.rst:876
 msgid ""
 "While most people like the speed benefits that come from writing a ufunc "
 "using the Numpy C API, not everyone enjoys writing C code. Fortunately there "
@@ -970,11 +965,11 @@ msgid ""
 "having to understand the Numpy C API."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:887
+#: ../../../user/c-info.ufunc-tutorial.rst:882
 msgid "Numba"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:889
+#: ../../../user/c-info.ufunc-tutorial.rst:884
 msgid ""
 "The `Numba vectorize decorator <https://numba.readthedocs.io/en/stable/user/"
 "vectorize.html>`_ provides a quick way to compile a subset of Python to an "
@@ -983,7 +978,7 @@ msgid ""
 "as you use them):"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:895
+#: ../../../user/c-info.ufunc-tutorial.rst:890
 msgid ""
 "import numba as nb\n"
 "\n"
@@ -992,13 +987,13 @@ msgid ""
 "    return log(p/(1-p))"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:903
+#: ../../../user/c-info.ufunc-tutorial.rst:898
 msgid ""
 "or with arguments to support only specific numeric types (compiled when you "
 "define the function):"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:906
+#: ../../../user/c-info.ufunc-tutorial.rst:901
 msgid ""
 "import numba as nb\n"
 "\n"
@@ -1010,13 +1005,13 @@ msgid ""
 "    return log(p/(1-p))"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:917
+#: ../../../user/c-info.ufunc-tutorial.rst:912
 msgid ""
 "In addition to simple ufuncs, Numba can also be used to generate generalized "
 "ufuncs in a very similar way."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:920
+#: ../../../user/c-info.ufunc-tutorial.rst:915
 msgid ""
 "Numba is a run-time dependency (i.e. users of your library will need to have "
 "Numba installed), and the way that it dynamically compiles the ufuncs can "
@@ -1024,7 +1019,7 @@ msgid ""
 "function with a particular set of argument types."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:925
+#: ../../../user/c-info.ufunc-tutorial.rst:920
 msgid ""
 "One (usually) minor detail is that Numba ufuncs are not \"true\" Numpy "
 "ufuncs. This would normally only matter if you try to use them as a :c:type:"
@@ -1033,18 +1028,18 @@ msgid ""
 "that lets them handle other array types."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:932
+#: ../../../user/c-info.ufunc-tutorial.rst:927
 msgid "Cython"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:934
+#: ../../../user/c-info.ufunc-tutorial.rst:929
 msgid ""
 "Cython provides a `ufunc decorator <https://cython.readthedocs.io/en/latest/"
 "src/userguide/numpy_ufuncs.html>`_ which can transform functions written "
 "with Python-like syntax into Numpy ufuncs. For example:"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:939
+#: ../../../user/c-info.ufunc-tutorial.rst:934
 msgid ""
 "cimport cython\n"
 "from libc.math cimport log\n"
@@ -1055,15 +1050,15 @@ msgid ""
 "    return log(p/(1-p))"
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:949
+#: ../../../user/c-info.ufunc-tutorial.rst:944
 msgid ""
 "Here ``log`` is taken from the C standard library. The ``cdivision`` "
-"dectorator and ``noexcept`` exception specification are Cython extensions "
-"and ensure that a divide by zero will not raise a Python exception. They are "
+"decorator and ``noexcept`` exception specification are Cython extensions and "
+"ensure that a divide by zero will not raise a Python exception. They are "
 "useful for this specific example but not necessary for ufuncs generally."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:955
+#: ../../../user/c-info.ufunc-tutorial.rst:950
 msgid ""
 "To support multiple numeric types, use \"fused types\" as the argument types "
 "or return types (in the example above, ``double`` could be replaced with "
@@ -1071,7 +1066,7 @@ msgid ""
 "floating and complex numeric types)."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:960
+#: ../../../user/c-info.ufunc-tutorial.rst:955
 msgid ""
 "Cython functions need to be compiled ahead of time (and thus Cython is a "
 "compile-time dependency, but users of your function do not need to have "
@@ -1080,7 +1075,7 @@ msgid ""
 "ufunc C API described earlier in this section."
 msgstr ""
 
-#: ../../../user/c-info.ufunc-tutorial.rst:966
+#: ../../../user/c-info.ufunc-tutorial.rst:961
 msgid ""
 "As of May 2026, only simple ufuncs are supported and generalized ufuncs are "
 "not yet supported."
@@ -1088,14 +1083,14 @@ msgstr ""
 
 #: ../../../user/c-info.ufunc-tutorial.rst:14
 #: ../../../user/c-info.ufunc-tutorial.rst:70
-#: ../../../user/c-info.ufunc-tutorial.rst:260
-#: ../../../user/c-info.ufunc-tutorial.rst:445
+#: ../../../user/c-info.ufunc-tutorial.rst:255
+#: ../../../user/c-info.ufunc-tutorial.rst:440
 msgid "ufunc"
 msgstr ""
 
 #: ../../../user/c-info.ufunc-tutorial.rst:14
 #: ../../../user/c-info.ufunc-tutorial.rst:70
-#: ../../../user/c-info.ufunc-tutorial.rst:260
-#: ../../../user/c-info.ufunc-tutorial.rst:445
+#: ../../../user/c-info.ufunc-tutorial.rst:255
+#: ../../../user/c-info.ufunc-tutorial.rst:440
 msgid "adding new"
 msgstr ""

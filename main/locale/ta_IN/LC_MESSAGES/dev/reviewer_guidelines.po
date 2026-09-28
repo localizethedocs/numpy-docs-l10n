@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -92,7 +92,7 @@ msgstr ""
 msgid "Reviewer checklist"
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:48
+#: ../../../dev/reviewer_guidelines.rst:46
 msgid ""
 "Is the intended behavior clear under all conditions? Some things to watch:"
 msgstr ""
@@ -223,35 +223,43 @@ msgid ""
 "direct push is the best way to finish it."
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:106
+#: ../../../dev/reviewer_guidelines.rst:104
+msgid ""
+"The maintainer team can add contributors to the list of accounts allowed to "
+"have more than one non-draft PR open for review at a time (see :ref:`pull-"
+"request-limit`). We liberally add contributors who attend the community and "
+"triage meetings."
+msgstr ""
+
+#: ../../../dev/reviewer_guidelines.rst:110
 msgid "API changes"
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:107
+#: ../../../dev/reviewer_guidelines.rst:111
 msgid ""
 "As mentioned most public API changes should be discussed ahead of time and "
 "often with a wider audience (on the mailing list, or even through a NEP)."
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:110
+#: ../../../dev/reviewer_guidelines.rst:114
 msgid ""
 "For changes in the public C-API be aware that the NumPy C-API is backwards "
 "compatible so that any addition must be ABI compatible with previous "
 "versions. When it is not the case, you must add a guard."
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:114
+#: ../../../dev/reviewer_guidelines.rst:118
 msgid "For example ``PyUnicodeScalarObject`` struct contains the following::"
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:116
+#: ../../../dev/reviewer_guidelines.rst:120
 msgid ""
 "#if NPY_FEATURE_VERSION >= NPY_1_20_API_VERSION\n"
 "    char *buffer_fmt;\n"
 "#endif"
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:120
+#: ../../../dev/reviewer_guidelines.rst:124
 msgid ""
 "Because the ``buffer_fmt`` field was added to its end in NumPy 1.20 (all "
 "previous fields remained ABI compatible). Similarly, any function added to "
@@ -259,27 +267,27 @@ msgid ""
 "``MinVersion`` annotation. For example::"
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:127
+#: ../../../dev/reviewer_guidelines.rst:131
 msgid "'PyDataMem_SetHandler':                 (304, MinVersion(\"1.22\")),"
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:129
+#: ../../../dev/reviewer_guidelines.rst:133
 msgid ""
 "Header only functionality (such as a new macro) typically does not need to "
 "be guarded."
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:133
+#: ../../../dev/reviewer_guidelines.rst:137
 msgid "GitHub workflow"
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:135
+#: ../../../dev/reviewer_guidelines.rst:139
 msgid ""
 "When reviewing pull requests, please use workflow tracking features on "
 "GitHub as appropriate:"
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:138
+#: ../../../dev/reviewer_guidelines.rst:142
 msgid ""
 "After you have finished reviewing, if you want to ask for the submitter to "
 "make changes, change your review status to \"Changes requested.\" This can "
@@ -287,14 +295,14 @@ msgid ""
 "top right)."
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:142
+#: ../../../dev/reviewer_guidelines.rst:146
 msgid ""
 "If you're happy about the current status, mark the pull request as Approved "
 "(same way as Changes requested). Alternatively (for maintainers): merge the "
 "pull request, if you think it is ready to be merged."
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:146
+#: ../../../dev/reviewer_guidelines.rst:150
 msgid ""
 "It may be helpful to have a copy of the pull request code checked out on "
 "your own machine so that you can play with it locally. You can use the "
@@ -303,17 +311,17 @@ msgid ""
 "right-hand corner of the PR page."
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:152
+#: ../../../dev/reviewer_guidelines.rst:156
 msgid ""
 "Assuming you have your :ref:`development environment<development-"
 "environment>` set up, you can now build the code and test it."
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:158
+#: ../../../dev/reviewer_guidelines.rst:162
 msgid "Standard replies for reviewing"
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:160
+#: ../../../dev/reviewer_guidelines.rst:164
 msgid ""
 "It may be helpful to store some of these in GitHub's `saved replies <https://"
 "github.com/settings/replies/>`_ for reviewing:"
@@ -323,7 +331,7 @@ msgstr ""
 msgid "**Usage question**"
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:164
+#: ../../../dev/reviewer_guidelines.rst:168
 msgid ""
 "You are asking a usage question. The issue tracker is for bugs and new "
 "features.\n"
@@ -331,11 +339,11 @@ msgid ""
 "channels](https://numpy.org/gethelp/)."
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:172
+#: ../../../dev/reviewer_guidelines.rst:173
 msgid "**You’re welcome to update the docs**"
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:170
+#: ../../../dev/reviewer_guidelines.rst:174
 msgid ""
 "Please feel free to offer a pull request updating the documentation if you "
 "feel it could be improved."
@@ -345,7 +353,7 @@ msgstr ""
 msgid "**Self-contained example for bug**"
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:175
+#: ../../../dev/reviewer_guidelines.rst:179
 msgid ""
 "Please provide a [self-contained example code](https://stackoverflow.com/"
 "help/mcve), including imports and data (if possible), so that other "
@@ -353,11 +361,11 @@ msgid ""
 "Ideally your example code should be minimal."
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:187
+#: ../../../dev/reviewer_guidelines.rst:184
 msgid "**Software versions**"
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:181
+#: ../../../dev/reviewer_guidelines.rst:185
 msgid ""
 "To help diagnose your issue, please paste the output of:\n"
 "```\n"
@@ -366,11 +374,11 @@ msgid ""
 "Thanks."
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:194
+#: ../../../dev/reviewer_guidelines.rst:193
 msgid "**Code blocks**"
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:190
+#: ../../../dev/reviewer_guidelines.rst:194
 msgid ""
 "Readability can be greatly improved if you [format](https://help.github.com/"
 "articles/creating-and-highlighting-code-blocks/) your code snippets and "
@@ -380,21 +388,21 @@ msgid ""
 "This helps maintainers a lot. Thanks!"
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:199
+#: ../../../dev/reviewer_guidelines.rst:200
 msgid "**Linking to code**"
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:197
+#: ../../../dev/reviewer_guidelines.rst:201
 msgid ""
 "For clarity's sake, you can link to code like [this](https://help.github.com/"
 "articles/creating-a-permanent-link-to-a-code-snippet/)."
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:206
+#: ../../../dev/reviewer_guidelines.rst:205
 msgid "**Better description and title**"
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:202
+#: ../../../dev/reviewer_guidelines.rst:206
 msgid ""
 "Please make the title of the PR more descriptive.\n"
 "The title will become the commit message when this is merged.\n"
@@ -404,21 +412,21 @@ msgid ""
 "request-to-an-issue-using-a-keyword)."
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:211
+#: ../../../dev/reviewer_guidelines.rst:212
 msgid "**Regression test needed**"
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:209
+#: ../../../dev/reviewer_guidelines.rst:213
 msgid ""
 "Please add a [non-regression test](https://en.wikipedia.org/wiki/Non-"
 "regression_testing) that would fail at main but pass in this PR."
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:216
+#: ../../../dev/reviewer_guidelines.rst:217
 msgid "**Don’t change unrelated**"
 msgstr ""
 
-#: ../../../dev/reviewer_guidelines.rst:214
+#: ../../../dev/reviewer_guidelines.rst:218
 msgid ""
 "Please do not change unrelated lines. It makes your contribution harder to "
 "review and may introduce merge conflicts to other pull requests."

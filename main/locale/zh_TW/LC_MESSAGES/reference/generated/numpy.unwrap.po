@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,7 +50,7 @@ msgid "Parameters"
 msgstr "參數"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.unwrap:16
+#: of numpy.unwrap:15
 msgid "**p**"
 msgstr "**p**"
 
@@ -65,7 +65,7 @@ msgid "Input array."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.unwrap:22
+#: of numpy.unwrap:18
 msgid "**discont**"
 msgstr ""
 
@@ -83,7 +83,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.unwrap:25
+#: of numpy.unwrap:24
 msgid "**axis**"
 msgstr "**axis**"
 
@@ -98,8 +98,13 @@ msgid "Axis along which unwrap will operate, default is the last axis."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.unwrap:33
+#: of numpy.unwrap:27
 msgid "**period**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:-1
+msgid "float or int, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
@@ -114,7 +119,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.unwrap:44
+#: of numpy.unwrap:37
 msgid "**out**"
 msgstr "**out**"
 
@@ -125,21 +130,35 @@ msgstr "ndarray"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.unwrap:38
-msgid "Output array."
+msgid ""
+"Output array. Its dtype is ``numpy.result_type(p, period)``. In particular "
+"an integer array unwrapped with an integer `period` keeps its integer dtype, "
+"while any float `period` (including the default ``2 pi``) produces a "
+"floating-point result."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.unwrap:49
+#: of numpy.unwrap:52
 msgid ":obj:`rad2deg`, :obj:`deg2rad`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.unwrap:53
+#: of numpy.unwrap:54
+msgid ":obj:`numpy.ma.unwrap`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:55
+msgid "Mask-aware equivalent for masked arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:59
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.unwrap:54
+#: of numpy.unwrap:60
 msgid ""
 "If the discontinuity in `p` is smaller than ``period/2``, but larger than "
 "`discont`, no unwrapping is done because taking the complement would only "
@@ -147,7 +166,14 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.unwrap:60
+#: of numpy.unwrap:64
+msgid ""
+"This function does not work properly with masked arrays, use `numpy.ma."
+"unwrap` instead."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:69
 msgid "Examples"
 msgstr "範例"
 
@@ -162,23 +188,23 @@ msgid "Plot `w` and `u`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.unwrap:104
+#: of numpy.unwrap:113
 msgid ""
-"<div id=\"dfe8124c-7564-43a6-bb34-1ffdfa16fc7e\" "
+"<div id=\"65c09d94-d4d2-4ddb-8e36-cd0a4e82a516\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('d099410b-962b-4720-"
-"b791-060955407a3e','dfe8124c-7564-43a6-bb34-1ffdfa16fc7e')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('d099410b-962b-4720-b791-060955407a3e','dfe8124c-7564-43a6-"
-"bb34-1ffdfa16fc7e')\">Open In Tab</button></div><div id=\"87353296-719d-494e-"
-"b882-c8ce2b86c0fc\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"tryExamplesHideIframe('f0b2e75b-34db-4a28-83c4-2897e9f13b81','65c09d94-"
+"d4d2-4ddb-8e36-cd0a4e82a516')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('f0b2e75b-34db-4a28-83c4-2897e9f13b81','65c09d94-d4d2-4ddb-8e36-"
+"cd0a4e82a516')\">Open In Tab</button></div><div id=\"397f9804-3073-43dd-"
+"bf5b-3ce0c451898f\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
 "div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.unwrap:104
+#: of numpy.unwrap:113
 msgid ""
 "<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
 "loadTryExamplesConfig(\"../../try_examples.json\");});</script>"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -228,7 +228,8 @@ msgid ""
 "Acquire the mutex locking the allocator attached to ``descr``. "
 "``NpyString_release_allocator`` must be called on the allocator returned by "
 "this function exactly once. Note that functions requiring the GIL should not "
-"be called while the allocator mutex is held, as doing so may cause deadlocks."
+"be called while the allocator mutex is held unless re-entrancy is "
+"impossible, as doing so may cause deadlocks."
 msgstr ""
 
 #: ../../../reference/c-api/strings.rst:198
@@ -259,41 +260,42 @@ msgstr ""
 #: ../../../reference/c-api/strings.rst:214
 msgid ""
 "Note that functions requiring the GIL should not be called while the "
-"allocator mutex is held, as doing so may cause deadlocks."
+"allocator mutex is held and reentrancy is possible, as doing so may cause "
+"deadlocks."
 msgstr ""
 
-#: ../../../reference/c-api/strings.rst:220
+#: ../../../reference/c-api/strings.rst:221
 msgid ""
 "Release the mutex locking an allocator. This must be called exactly once "
 "after acquiring the allocator mutex and all operations requiring the "
 "allocator are done."
 msgstr ""
 
-#: ../../../reference/c-api/strings.rst:224
+#: ../../../reference/c-api/strings.rst:225
 msgid ""
 "If you need to release multiple allocators, see "
 "NpyString_release_allocators, which can correctly handle releasing the "
 "allocator once when given several references to the same allocator."
 msgstr ""
 
-#: ../../../reference/c-api/strings.rst:231
+#: ../../../reference/c-api/strings.rst:232
 msgid ""
 "Release the mutexes locking N allocators. ``length`` is the length of the "
 "allocators array. NULL entries are ignored."
 msgstr ""
 
-#: ../../../reference/c-api/strings.rst:234
+#: ../../../reference/c-api/strings.rst:235
 msgid ""
 "If pointers to the same allocator are passed multiple times, only releases "
 "the allocator mutex once."
 msgstr ""
 
-#: ../../../reference/c-api/strings.rst:241
+#: ../../../reference/c-api/strings.rst:242
 msgid ""
 "Extract the packed contents of ``packed_string`` into ``unpacked_string``."
 msgstr ""
 
-#: ../../../reference/c-api/strings.rst:243
+#: ../../../reference/c-api/strings.rst:244
 msgid ""
 "The ``unpacked_string`` is a read-only view onto the ``packed_string`` data "
 "and should not be used to modify the string data. If ``packed_string`` is "
@@ -302,7 +304,7 @@ msgid ""
 "string, and returns 0 otherwise."
 msgstr ""
 
-#: ../../../reference/c-api/strings.rst:249
+#: ../../../reference/c-api/strings.rst:250
 msgid ""
 "A useful pattern is to define a stack-allocated npy_static_string instance "
 "initialized to ``{0, NULL}`` and pass a pointer to the stack-allocated "
@@ -310,14 +312,20 @@ msgid ""
 "simultaneously unpack a string and determine if it is a null string."
 msgstr ""
 
-#: ../../../reference/c-api/strings.rst:258
+#: ../../../reference/c-api/strings.rst:259
 msgid ""
 "Pack the null string into ``packed_string``. Returns 0 on success and -1 on "
 "failure."
 msgstr ""
 
-#: ../../../reference/c-api/strings.rst:267
+#: ../../../reference/c-api/strings.rst:268
 msgid ""
 "Copy and pack the first ``size`` entries of the buffer pointed to by ``buf`` "
 "into the ``packed_string``. Returns 0 on success and -1 on failure."
+msgstr ""
+
+#: ../../../reference/c-api/strings.rst:271
+msgid ""
+"The ``buf`` pointer must store valid, complete UTF-8. The ``NpyString_pack`` "
+"function does not validate it."
 msgstr ""

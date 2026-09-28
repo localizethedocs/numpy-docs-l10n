@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -290,7 +290,7 @@ msgstr ""
 msgid "big-endian"
 msgstr ""
 
-#: ../../../glossary.rst:237 ../../../glossary.rst:374
+#: ../../../glossary.rst:237 ../../../glossary.rst:377
 msgid "See `Endianness <https://en.wikipedia.org/wiki/Endianness>`_."
 msgstr ""
 
@@ -385,191 +385,197 @@ msgstr ""
 msgid "``unsafe``: any data conversions may be done."
 msgstr ""
 
-#: ../../../glossary.rst:290
+#: ../../../glossary.rst:291
+msgid ""
+"Python ``int``, ``float`` and ``complex`` scalars are treated by kind rather "
+"than by dtype, see :ref:`arrays.promotion.python-scalar-casting`."
+msgstr ""
+
+#: ../../../glossary.rst:293
 msgid "column-major"
 msgstr ""
 
-#: ../../../glossary.rst:292
+#: ../../../glossary.rst:295
 msgid ""
 "See `Row- and column-major order <https://en.wikipedia.org/wiki/Row-"
 "_and_column-major_order>`_."
 msgstr ""
 
-#: ../../../glossary.rst:294
+#: ../../../glossary.rst:297
 msgid "contiguous"
 msgstr ""
 
-#: ../../../glossary.rst:297
+#: ../../../glossary.rst:300
 msgid "An array is contiguous if:"
 msgstr ""
 
-#: ../../../glossary.rst:299
+#: ../../../glossary.rst:302
 msgid "it occupies an unbroken block of memory, and"
 msgstr ""
 
-#: ../../../glossary.rst:300
+#: ../../../glossary.rst:303
 msgid ""
 "array elements with higher indexes occupy higher addresses (that is, no :"
 "term:`stride` is negative)."
 msgstr ""
 
-#: ../../../glossary.rst:303
+#: ../../../glossary.rst:306
 msgid "There are two types of proper-contiguous NumPy arrays:"
 msgstr ""
 
-#: ../../../glossary.rst:305
+#: ../../../glossary.rst:308
 msgid ""
 "Fortran-contiguous arrays refer to data that is stored column-wise, i.e. the "
 "indexing of data as stored in memory starts from the lowest dimension;"
 msgstr ""
 
-#: ../../../glossary.rst:308
+#: ../../../glossary.rst:311
 msgid ""
 "C-contiguous, or simply contiguous arrays, refer to data that is stored row-"
 "wise, i.e. the indexing of data as stored in memory starts from the highest "
 "dimension."
 msgstr ""
 
-#: ../../../glossary.rst:312
+#: ../../../glossary.rst:315
 msgid "For one-dimensional arrays these notions coincide."
 msgstr ""
 
-#: ../../../glossary.rst:314
+#: ../../../glossary.rst:317
 msgid ""
 "For example, a 2x2 array ``A`` is Fortran-contiguous if its elements are "
 "stored in memory in the following order::"
 msgstr ""
 
-#: ../../../glossary.rst:317
+#: ../../../glossary.rst:320
 msgid "A[0,0] A[1,0] A[0,1] A[1,1]"
 msgstr ""
 
-#: ../../../glossary.rst:319
+#: ../../../glossary.rst:322
 msgid "and C-contiguous if the order is as follows::"
 msgstr ""
 
-#: ../../../glossary.rst:321
+#: ../../../glossary.rst:324
 msgid "A[0,0] A[0,1] A[1,0] A[1,1]"
 msgstr ""
 
-#: ../../../glossary.rst:323
+#: ../../../glossary.rst:326
 msgid ""
 "To test whether an array is C-contiguous, use the ``.flags.c_contiguous`` "
 "attribute of NumPy arrays.  To test for Fortran contiguity, use the ``.flags."
 "f_contiguous`` attribute."
 msgstr ""
 
-#: ../../../glossary.rst:327
+#: ../../../glossary.rst:330
 msgid "copy"
 msgstr ""
 
-#: ../../../glossary.rst:329
+#: ../../../glossary.rst:332
 msgid "See :term:`view`."
 msgstr ""
 
-#: ../../../glossary.rst:331
+#: ../../../glossary.rst:334
 msgid "dimension"
 msgstr "維度（dimension）"
 
-#: ../../../glossary.rst:333
+#: ../../../glossary.rst:336
 msgid "See :term:`axis`."
 msgstr ""
 
-#: ../../../glossary.rst:335
+#: ../../../glossary.rst:338
 msgid "dtype"
 msgstr ""
 
-#: ../../../glossary.rst:337
+#: ../../../glossary.rst:340
 msgid ""
 "The datatype describing the (identically typed) elements in an ndarray. It "
 "can be changed to reinterpret the array contents. For details, see :doc:"
 "`Data type objects (dtype). <reference/arrays.dtypes>`"
 msgstr ""
 
-#: ../../../glossary.rst:341
+#: ../../../glossary.rst:344
 msgid "fancy indexing"
 msgstr ""
 
-#: ../../../glossary.rst:343
+#: ../../../glossary.rst:346
 msgid "Another term for :term:`advanced indexing`."
 msgstr ""
 
-#: ../../../glossary.rst:345
+#: ../../../glossary.rst:348
 msgid "field"
 msgstr "欄位（field）"
 
-#: ../../../glossary.rst:347
+#: ../../../glossary.rst:350
 msgid ""
 "In a :term:`structured data type`, each subtype is called a `field`. The "
 "`field` has a name (a string), a type (any valid dtype), and an optional "
 "`title`. See :ref:`arrays.dtypes`."
 msgstr ""
 
-#: ../../../glossary.rst:351
+#: ../../../glossary.rst:354
 msgid "Fortran order"
 msgstr ""
 
-#: ../../../glossary.rst:353
+#: ../../../glossary.rst:356
 msgid "Same as :term:`column-major`."
 msgstr ""
 
-#: ../../../glossary.rst:355
+#: ../../../glossary.rst:358
 msgid "flattened"
 msgstr ""
 
-#: ../../../glossary.rst:357
+#: ../../../glossary.rst:360
 msgid "See :term:`ravel`."
 msgstr ""
 
-#: ../../../glossary.rst:359
+#: ../../../glossary.rst:362
 msgid "homogeneous"
 msgstr ""
 
-#: ../../../glossary.rst:361
+#: ../../../glossary.rst:364
 msgid ""
 "All elements of a homogeneous array have the same type. ndarrays, in "
 "contrast to Python lists, are homogeneous. The type can be complicated, as "
 "in a :term:`structured array`, but all elements have that type."
 msgstr ""
 
-#: ../../../glossary.rst:365
+#: ../../../glossary.rst:368
 msgid ""
 "NumPy `object arrays <#term-object-array>`_, which contain references to "
 "Python objects, fill the role of heterogeneous arrays."
 msgstr ""
 
-#: ../../../glossary.rst:368
+#: ../../../glossary.rst:371
 msgid "itemsize"
 msgstr ""
 
-#: ../../../glossary.rst:370
+#: ../../../glossary.rst:373
 msgid "The size of the dtype element in bytes."
 msgstr ""
 
-#: ../../../glossary.rst:372
+#: ../../../glossary.rst:375
 msgid "little-endian"
 msgstr ""
 
-#: ../../../glossary.rst:376
+#: ../../../glossary.rst:379
 msgid "mask"
 msgstr ""
 
-#: ../../../glossary.rst:378
+#: ../../../glossary.rst:381
 msgid "A boolean array used to select only certain elements for an operation:"
 msgstr ""
 
-#: ../../../glossary.rst:392
+#: ../../../glossary.rst:395
 msgid "masked array"
 msgstr ""
 
-#: ../../../glossary.rst:394
+#: ../../../glossary.rst:397
 msgid ""
 "Bad or missing data can be cleanly ignored by putting it in a masked array, "
 "which has an internal boolean array indicating invalid entries. Operations "
 "with masked arrays ignore these entries. ::"
 msgstr ""
 
-#: ../../../glossary.rst:398
+#: ../../../glossary.rst:401
 msgid ""
 ">>> a = np.ma.masked_array([np.nan, 2, np.nan], [True, False, True])\n"
 ">>> a\n"
@@ -583,33 +589,33 @@ msgid ""
 "       fill_value=1e+20)"
 msgstr ""
 
-#: ../../../glossary.rst:409
+#: ../../../glossary.rst:412
 msgid "For details, see :doc:`Masked arrays. <reference/maskedarray>`"
 msgstr ""
 
-#: ../../../glossary.rst:411
+#: ../../../glossary.rst:414
 msgid "matrix"
 msgstr ""
 
-#: ../../../glossary.rst:413
+#: ../../../glossary.rst:416
 msgid ""
 "NumPy's two-dimensional :doc:`matrix class <reference/generated/numpy."
 "matrix>` should no longer be used; use regular ndarrays."
 msgstr ""
 
-#: ../../../glossary.rst:417
+#: ../../../glossary.rst:420
 msgid "ndarray"
 msgstr "ndarray"
 
-#: ../../../glossary.rst:419
+#: ../../../glossary.rst:422
 msgid ":doc:`NumPy's basic structure <reference/arrays>`."
 msgstr ""
 
-#: ../../../glossary.rst:421
+#: ../../../glossary.rst:424
 msgid "object array"
 msgstr "物件陣列（object arrary）"
 
-#: ../../../glossary.rst:423
+#: ../../../glossary.rst:426
 msgid ""
 "An array whose dtype is ``object``; that is, it contains references to "
 "Python objects. Indexing the array dereferences the Python objects, so "
@@ -617,11 +623,11 @@ msgid ""
 "objects."
 msgstr ""
 
-#: ../../../glossary.rst:428
+#: ../../../glossary.rst:431
 msgid "ravel"
 msgstr ""
 
-#: ../../../glossary.rst:430
+#: ../../../glossary.rst:433
 msgid ""
 ":doc:`numpy.ravel \\ <reference/generated/numpy.ravel>` and :doc:`numpy."
 "flatten \\ <reference/generated/numpy.ndarray.flatten>` both flatten an "
@@ -629,48 +635,48 @@ msgid ""
 "returns a copy."
 msgstr ""
 
-#: ../../../glossary.rst:437
+#: ../../../glossary.rst:440
 msgid ""
 "Flattening collapses a multidimensional array to a single dimension; details "
 "of how this is done (for instance, whether ``a[n+1]`` should be the next row "
 "or next column) are parameters."
 msgstr ""
 
-#: ../../../glossary.rst:441
+#: ../../../glossary.rst:444
 msgid "record array"
 msgstr ""
 
-#: ../../../glossary.rst:443
+#: ../../../glossary.rst:446
 msgid ""
 "A :term:`structured array` with allowing access in an attribute style (``a."
 "field``) in addition to ``a['field']``. For details, see :doc:`numpy."
 "recarray. <reference/generated/numpy.recarray>`"
 msgstr ""
 
-#: ../../../glossary.rst:447
+#: ../../../glossary.rst:450
 msgid "row-major"
 msgstr ""
 
-#: ../../../glossary.rst:449
+#: ../../../glossary.rst:452
 msgid ""
 "See `Row- and column-major order <https://en.wikipedia.org/wiki/Row-"
 "_and_column-major_order>`_. NumPy creates arrays in row-major order by "
 "default."
 msgstr ""
 
-#: ../../../glossary.rst:452
+#: ../../../glossary.rst:455
 msgid "scalar"
 msgstr "純量（scalar）"
 
-#: ../../../glossary.rst:454
+#: ../../../glossary.rst:457
 msgid "In NumPy, usually a synonym for :term:`array scalar`."
 msgstr ""
 
-#: ../../../glossary.rst:456
+#: ../../../glossary.rst:459
 msgid "shape"
 msgstr ""
 
-#: ../../../glossary.rst:458
+#: ../../../glossary.rst:461
 msgid ""
 "A tuple showing the length of each dimension of an ndarray. The length of "
 "the tuple itself is the number of dimensions (:doc:`numpy.ndim <reference/"
@@ -679,11 +685,11 @@ msgid ""
 "<reference/generated/numpy.ndarray.shape>`."
 msgstr ""
 
-#: ../../../glossary.rst:465
+#: ../../../glossary.rst:468
 msgid "stride"
 msgstr ""
 
-#: ../../../glossary.rst:467
+#: ../../../glossary.rst:470
 msgid ""
 "Physical memory is one-dimensional;  strides provide a mechanism to map a "
 "given index to an address in memory. For an N-dimensional array, its "
@@ -692,7 +698,7 @@ msgid ""
 "address."
 msgstr ""
 
-#: ../../../glossary.rst:473
+#: ../../../glossary.rst:476
 msgid ""
 "Strides are computed automatically from an array's dtype and shape, but can "
 "be directly specified using :doc:`as_strided <reference/generated/numpy.lib."
@@ -700,77 +706,77 @@ msgid ""
 "``check_bounds`` parameter."
 msgstr ""
 
-#: ../../../glossary.rst:478
+#: ../../../glossary.rst:481
 msgid ""
 "For details, see :doc:`numpy.ndarray.strides <reference/generated/numpy."
 "ndarray.strides>`."
 msgstr ""
 
-#: ../../../glossary.rst:481
+#: ../../../glossary.rst:484
 msgid ""
 "To see how striding underlies the power of NumPy views, see `The NumPy "
 "array: a structure for efficient numerical computation. \\ <https://arxiv."
 "org/pdf/1102.1523.pdf>`_"
 msgstr ""
 
-#: ../../../glossary.rst:485
+#: ../../../glossary.rst:488
 msgid "structured array"
 msgstr ""
 
-#: ../../../glossary.rst:487
+#: ../../../glossary.rst:490
 msgid "Array whose :term:`dtype` is a :term:`structured data type`."
 msgstr ""
 
-#: ../../../glossary.rst:489
+#: ../../../glossary.rst:492
 msgid "structured data type"
 msgstr ""
 
-#: ../../../glossary.rst:491
+#: ../../../glossary.rst:494
 msgid ""
 "Users can create arbitrarily complex :term:`dtypes <dtype>` that can include "
 "other arrays and dtypes. These composite dtypes are called :doc:`structured "
 "data types. <user/basics.rec>`"
 msgstr ""
 
-#: ../../../glossary.rst:495
+#: ../../../glossary.rst:498
 msgid "subarray"
 msgstr ""
 
-#: ../../../glossary.rst:497
+#: ../../../glossary.rst:500
 msgid "An array nested in a :term:`structured data type`, as ``b`` is here:"
 msgstr ""
 
-#: ../../../glossary.rst:504
+#: ../../../glossary.rst:507
 msgid "subarray data type"
 msgstr ""
 
-#: ../../../glossary.rst:506
+#: ../../../glossary.rst:509
 msgid "An element of a structured datatype that behaves like an ndarray."
 msgstr ""
 
-#: ../../../glossary.rst:508
+#: ../../../glossary.rst:511
 msgid "title"
 msgstr ""
 
-#: ../../../glossary.rst:510
+#: ../../../glossary.rst:513
 msgid "An alias for a field name in a structured datatype."
 msgstr ""
 
-#: ../../../glossary.rst:512
+#: ../../../glossary.rst:515
 msgid "type"
 msgstr ""
 
-#: ../../../glossary.rst:514
+#: ../../../glossary.rst:517
 msgid ""
 "In NumPy, usually a synonym for :term:`dtype`. For the more general Python "
 "meaning, :term:`see here. <python:type>`"
 msgstr ""
 
-#: ../../../glossary.rst:517
+#: ../../../glossary.rst:520
 msgid "ufunc"
 msgstr ""
 
-#: ../../../glossary.rst:519
+#: ../../../glossary.rst:522
 msgid ""
 "NumPy's fast element-by-element computation (:term:`vectorization`) gives a "
 "choice which function gets applied. The general term for the function is "
@@ -778,11 +784,11 @@ msgid ""
 "ufuncs, but users can also :doc:`write their own. <reference/ufuncs>`"
 msgstr ""
 
-#: ../../../glossary.rst:525
+#: ../../../glossary.rst:528
 msgid "vectorization"
 msgstr ""
 
-#: ../../../glossary.rst:527
+#: ../../../glossary.rst:530
 msgid ""
 "NumPy hands off array processing to C, where looping and computation are "
 "much faster than in Python. To exploit this, programmers using NumPy "
@@ -791,30 +797,30 @@ msgid ""
 "code to leverage it."
 msgstr ""
 
-#: ../../../glossary.rst:532
+#: ../../../glossary.rst:535
 msgid "view"
 msgstr ""
 
-#: ../../../glossary.rst:534
+#: ../../../glossary.rst:537
 msgid ""
 "Without touching underlying data, NumPy can make one array appear to change "
 "its datatype and shape."
 msgstr ""
 
-#: ../../../glossary.rst:537
+#: ../../../glossary.rst:540
 msgid ""
 "An array created this way is a `view`, and NumPy often exploits the "
 "performance gain of using a view versus making a new array."
 msgstr ""
 
-#: ../../../glossary.rst:540
+#: ../../../glossary.rst:543
 msgid ""
 "A potential drawback is that writing to a view can alter the original as "
 "well. If this is a problem, NumPy instead needs to create a physically "
 "distinct array -- a `copy`."
 msgstr ""
 
-#: ../../../glossary.rst:544
+#: ../../../glossary.rst:547
 msgid ""
 "Some NumPy routines always return views, some always return copies, some may "
 "return one or the other, and for some the choice can be specified. "

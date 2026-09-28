@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -361,7 +361,7 @@ msgid "Parameters"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/extbuild.py:docstring
-#: of numpy.testing._private.extbuild.build_and_import_extension:9
+#: of numpy.testing._private.extbuild.build_and_import_extension:8
 msgid "**functions**"
 msgstr ""
 
@@ -376,7 +376,7 @@ msgid "Each fragment is a sequence of func_name, calling convention, snippet."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/extbuild.py:docstring
-#: of numpy.testing._private.extbuild.build_and_import_extension:13
+#: of numpy.testing._private.extbuild.build_and_import_extension:11
 msgid "**prologue**"
 msgstr ""
 
@@ -392,7 +392,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/extbuild.py:docstring
-#: of numpy.testing._private.extbuild.build_and_import_extension:16
+#: of numpy.testing._private.extbuild.build_and_import_extension:15
 msgid "**build_dir**"
 msgstr ""
 
@@ -407,7 +407,7 @@ msgid "Where to build the module, usually a temporary directory"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/extbuild.py:docstring
-#: of numpy.testing._private.extbuild.build_and_import_extension:19
+#: of numpy.testing._private.extbuild.build_and_import_extension:18
 msgid "**include_dirs**"
 msgstr ""
 
@@ -422,7 +422,7 @@ msgid "Extra directories to find include files when compiling"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/extbuild.py:docstring
-#: of numpy.testing._private.extbuild.build_and_import_extension:24
+#: of numpy.testing._private.extbuild.build_and_import_extension:21
 msgid "**more_init**"
 msgstr ""
 
@@ -437,7 +437,7 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/extbuild.py:docstring
-#: of numpy.testing._private.extbuild.build_and_import_extension:38
+#: of numpy.testing._private.extbuild.build_and_import_extension:28
 msgid "out: module"
 msgstr ""
 
@@ -454,17 +454,17 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/extbuild.py:docstring
 #: of numpy.testing._private.extbuild.build_and_import_extension:-1
 msgid ""
-"<div id=\"1832fda6-2d8b-48d5-8369-47b3b826b169\" "
+"<div id=\"de303e3a-ca9b-48f6-9306-f0a553a8affa\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('087317f7-9757-486c-"
-"a07a-6edcede2033b','1832fda6-2d8b-48d5-8369-47b3b826b169')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('087317f7-9757-486c-"
-"a07a-6edcede2033b','1832fda6-2d8b-48d5-8369-47b3b826b169')\">Open In Tab</"
-"button></div><div id=\"4f93a9e7-9086-4151-ba15-e242e67e7a3d\" "
-"class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
+"tryExamplesHideIframe('f96f6d15-1591-4b18-a960-3dcb5212cbf4','de303e3a-"
+"ca9b-48f6-9306-f0a553a8affa')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('f96f6d15-1591-4b18-a960-3dcb5212cbf4','de303e3a-ca9b-48f6-9306-"
+"f0a553a8affa')\">Open In Tab</button></div><div id=\"b644f4f1-00eb-475b-"
+"b966-5d9e1d3e422f\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/testing/_private/extbuild.py:docstring
@@ -794,11 +794,23 @@ msgid ""
 "each failure, and better-than-naive-random techniques for triggering bugs."
 msgstr ""
 
-#: ../../../../TESTS.rst:415
+#: ../../../../TESTS.rst:414
+msgid ""
+"Note that ``hypothesis`` is an *optional* test dependency: it is not "
+"required to run the test suite, and Hypothesis-based tests are skipped when "
+"it is not installed. When adding a new Hypothesis-based test, import the "
+"``given``, ``settings`` and strategy helpers from ``numpy.testing._private."
+"hypothesis_helpers`` instead of ``hypothesis`` directly, and mark the test "
+"with ``@pytest.mark.skipif(not HAS_HYPOTHESIS, reason=\"hypothesis is not "
+"installed\")`` so it is skipped rather than failing to collect when "
+"Hypothesis is absent."
+msgstr ""
+
+#: ../../../../TESTS.rst:424
 msgid "Writing thread-safe tests"
 msgstr ""
 
-#: ../../../../TESTS.rst:417
+#: ../../../../TESTS.rst:426
 msgid ""
 "Writing thread-safe tests may require some trial-and-error. Generally you "
 "should follow the guidelines stated so far, especially when it comes to "
@@ -808,13 +820,13 @@ msgid ""
 "run into."
 msgstr ""
 
-#: ../../../../TESTS.rst:423
+#: ../../../../TESTS.rst:432
 msgid ""
 "Using ``pytest.mark.parametrize`` may occasionally cause thread-safety "
 "issues. To fix this, you can use ``copy()``::"
 msgstr ""
 
-#: ../../../../TESTS.rst:426
+#: ../../../../TESTS.rst:435
 msgid ""
 "@pytest.mark.parametrize('dimensionality', [3, 10, 25])\n"
 "@pytest.mark.parametrize('dtype', [np.float32, np.float64])\n"
@@ -825,38 +837,38 @@ msgid ""
 "    ..."
 msgstr ""
 
-#: ../../../../TESTS.rst:434
+#: ../../../../TESTS.rst:443
 msgid ""
 "If you are testing something that is inherently thread-unsafe, you can label "
 "your test with ``pytest.mark.thread_unsafe`` so that it will run under a "
 "single thread and not cause test failures::"
 msgstr ""
 
-#: ../../../../TESTS.rst:438
+#: ../../../../TESTS.rst:447
 msgid ""
 "@pytest.mark.thread_unsafe(reason=\"reason this test is thread-unsafe\")\n"
 "def test_thread_unsafe():\n"
 "  ..."
 msgstr ""
 
-#: ../../../../TESTS.rst:442
+#: ../../../../TESTS.rst:451
 msgid "Some examples of what should be labeled as thread-unsafe:"
 msgstr ""
 
-#: ../../../../TESTS.rst:444
+#: ../../../../TESTS.rst:453
 msgid "Usage of ``sys.stdout`` and ``sys.stderr``"
 msgstr ""
 
-#: ../../../../TESTS.rst:445
+#: ../../../../TESTS.rst:454
 msgid ""
 "Mutation of global data, like docstrings, modules, garbage collectors, etc."
 msgstr ""
 
-#: ../../../../TESTS.rst:446
+#: ../../../../TESTS.rst:455
 msgid "Tests that require a lot of memory, since they could cause crashes."
 msgstr ""
 
-#: ../../../../TESTS.rst:448
+#: ../../../../TESTS.rst:457
 msgid ""
 "Additionally, some ``pytest`` fixtures are thread-unsafe, such as "
 "``monkeypatch`` and ``capsys``. However, ``pytest-run-parallel`` will "
@@ -864,7 +876,7 @@ msgid ""
 "fixtures have been patched to be thread-safe, like ``tmp_path``."
 msgstr ""
 
-#: ../../../../TESTS.rst:454
+#: ../../../../TESTS.rst:463
 msgid "Documentation for ``numpy.test``"
 msgstr ""
 
@@ -894,7 +906,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.test:16 numpy.test:30
+#: of numpy.test:15 numpy.test:20
 msgid "**module_name**"
 msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,7 +37,7 @@ msgid "Parameters"
 msgstr "參數"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:9
+#: of numpy.percentile:8
 msgid "**a**"
 msgstr "**a**"
 
@@ -52,7 +52,7 @@ msgid "Input array or object that can be converted to an array."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:13
+#: of numpy.percentile:11
 msgid "**q**"
 msgstr ""
 
@@ -69,7 +69,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:18
+#: of numpy.percentile:15
 msgid "**axis**"
 msgstr "**axis**"
 
@@ -86,7 +86,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:23
+#: of numpy.percentile:20
 msgid "**out**"
 msgstr "**out**"
 
@@ -104,7 +104,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:28
+#: of numpy.percentile:25
 msgid "**overwrite_input**"
 msgstr ""
 
@@ -122,7 +122,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:56
+#: of numpy.percentile:30
 msgid "**method**"
 msgstr ""
 
@@ -220,7 +220,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:61
+#: of numpy.percentile:58
 msgid "**keepdims**"
 msgstr ""
 
@@ -233,7 +233,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:75
+#: of numpy.percentile:63
 msgid "**weights**"
 msgstr ""
 
@@ -259,7 +259,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:93
+#: of numpy.percentile:79
 msgid "**percentile**"
 msgstr ""
 
@@ -274,49 +274,48 @@ msgid ""
 "If `q` is a single percentile and `axis=None`, then the result is a scalar. "
 "If multiple percentiles are given, first axis of the result corresponds to "
 "the percentiles. The other axes are the axes that remain after the reduction "
-"of `a`. If the input contains integers or floats smaller than ``float64``, "
-"the output data-type is ``float64``. Otherwise, the output data-type is the "
-"same as that of the input. If `out` is specified, that array is returned "
-"instead."
+"of `a`. If the input contains integers, the output data-type is ``float64``. "
+"Otherwise, the output data-type is the same as that of the input. If `out` "
+"is specified, that array is returned instead."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:98
+#: of numpy.percentile:97
 msgid ":obj:`mean`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:100
+#: of numpy.percentile:99
 msgid ":obj:`median`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:101
+#: of numpy.percentile:100
 msgid "equivalent to ``percentile(..., 50)``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:102
+#: of numpy.percentile:101
 msgid ":obj:`nanpercentile`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:104
+#: of numpy.percentile:103
 msgid ":obj:`quantile`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:105
+#: of numpy.percentile:104
 msgid "equivalent to percentile, except q in the range [0, 1]."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:109
+#: of numpy.percentile:108
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:110
+#: of numpy.percentile:109
 msgid ""
 "The behavior of `numpy.percentile` with percentage `q` is that of `numpy."
 "quantile` with argument ``q/100``. For more information, please see `numpy."
@@ -324,29 +323,29 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:115
+#: of numpy.percentile:114
 msgid "References"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:116
+#: of numpy.percentile:115
 msgid ""
 "R. J. Hyndman and Y. Fan, \"Sample quantiles in statistical packages,\" The "
 "American Statistician, 50(4), pp. 361-365, 1996"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:122
+#: of numpy.percentile:121
 msgid "[R08bde0ebf37b-1]_"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:125
+#: of numpy.percentile:124
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:157
+#: of numpy.percentile:156
 msgid "The different methods can be visualized graphically:"
 msgstr ""
 
@@ -384,22 +383,22 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:191
+#: of numpy.percentile:190
 msgid ""
-"<div id=\"485e4b7b-d2f4-4479-b98f-a8a3da53c1bc\" "
+"<div id=\"aa159421-ac6b-42db-81f6-89ef20d00488\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('b98ab502-cf0c-41fc-97a6-191ed56cc2a5','485e4b7b-"
-"d2f4-4479-b98f-a8a3da53c1bc')\">Go Back</button><button "
-"class=\"try_examples_button\" onclick=\"window.openInNewTab('b98ab502-"
-"cf0c-41fc-97a6-191ed56cc2a5','485e4b7b-d2f4-4479-b98f-a8a3da53c1bc')\">Open "
-"In Tab</button></div><div id=\"df4e07be-cd89-4cfc-97a1-2af7e9386aeb\" "
+"tryExamplesHideIframe('db78f1d5-dc95-489c-be46-c931336ac0be','aa159421-"
+"ac6b-42db-81f6-89ef20d00488')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('db78f1d5-"
+"dc95-489c-be46-c931336ac0be','aa159421-ac6b-42db-81f6-89ef20d00488')\">Open "
+"In Tab</button></div><div id=\"8fa0acd7-28f7-4250-a463-1521e387da6a\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.percentile:191
+#: of numpy.percentile:190
 msgid ""
 "<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
 "loadTryExamplesConfig(\"../../try_examples.json\");});</script>"

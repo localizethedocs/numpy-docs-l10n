@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,7 +27,7 @@ msgstr "方法"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduce:2
-msgid "Reduces `array`'s dimension by one, by applying ufunc along one axis."
+msgid "Reduces ``array``'s dimension by one, by applying ufunc along one axis."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
@@ -60,7 +60,7 @@ msgid "Parameters"
 msgstr "參數"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduce:21
+#: of numpy.ufunc.reduce:20
 msgid "**array**"
 msgstr "**array**"
 
@@ -75,7 +75,7 @@ msgid "The array to act on."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduce:36
+#: of numpy.ufunc.reduce:23
 msgid "**axis**"
 msgstr "**axis**"
 
@@ -110,7 +110,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduce:42
+#: of numpy.ufunc.reduce:38
 msgid "**dtype**"
 msgstr "**dtype**"
 
@@ -129,7 +129,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduce:53
+#: of numpy.ufunc.reduce:44
 msgid "**out**"
 msgstr "**out**"
 
@@ -144,17 +144,18 @@ msgid ""
 "Location into which the result is stored. If not provided or None, a freshly-"
 "allocated array is returned. If passed as a keyword argument, can be "
 "Ellipses (``out=...``) to ensure an array is returned even if the result is "
-"0-dimensional (which is useful especially for object dtype), or a 1-element "
-"tuple (latter for consistency with ``ufunc.__call__``)."
+"0-dimensional (which is useful especially for object dtype), or a tuple with "
+"one entry per output (latter for consistency with ``ufunc.__call__``). For a "
+"ufunc with a single output, a 1-element tuple is also accepted, as before."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduce:52
+#: of numpy.ufunc.reduce:54
 msgid "Support for ``out=...`` was added."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduce:58
+#: of numpy.ufunc.reduce:57
 msgid "**keepdims**"
 msgstr ""
 
@@ -164,34 +165,39 @@ msgid "bool, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduce:56
+#: of numpy.ufunc.reduce:58
 msgid ""
 "If this is set to True, the axes which are reduced are left in the result as "
 "dimensions with size one. With this option, the result will broadcast "
-"correctly against the original `array`."
+"correctly against the original ``array``."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduce:65
+#: of numpy.ufunc.reduce:62
 msgid "**initial**"
 msgstr "**initial**"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduce:-1
-msgid "scalar, optional"
+msgid "scalar or tuple of scalars, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduce:61
+#: of numpy.ufunc.reduce:63
 msgid ""
 "The value with which to start the reduction. If the ufunc has no identity or "
 "the dtype is object, this defaults to None - otherwise it defaults to ufunc."
 "identity. If ``None`` is given, the first element of the reduction is used, "
-"and an error is thrown if the reduction is empty."
+"and an error is thrown if the reduction is empty. For a ufunc with more than "
+"one output (see the note on multiple outputs below), a tuple with one value "
+"per output may be given instead of a single scalar. A scalar still seeds "
+"every output. The entries of such a tuple cannot be ``None``, since \"no "
+"initial value\" cannot be requested for individual outputs; pass a plain "
+"``None`` to unset the initial value for the whole reduction."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduce:73
+#: of numpy.ufunc.reduce:75
 msgid "**where**"
 msgstr "**where**"
 
@@ -201,10 +207,10 @@ msgid "array_like of bool, optional"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduce:68
+#: of numpy.ufunc.reduce:76
 msgid ""
-"A boolean array which is broadcasted to match the dimensions of `array`, and "
-"selects elements to include in the reduction. Note that for ufuncs like "
+"A boolean array which is broadcasted to match the dimensions of ``array``, "
+"and selects elements to include in the reduction. Note that for ufuncs like "
 "``minimum`` that do not have an identity defined, one has to pass in also "
 "``initial``."
 msgstr ""
@@ -215,39 +221,57 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduce:87
+#: of numpy.ufunc.reduce:85
 msgid "**r**"
 msgstr "**r**"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduce:-1
-msgid "ndarray"
-msgstr "ndarray"
-
-#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduce:78
-msgid "The reduced array. If `out` was supplied, `r` is a reference to it."
+msgid "ndarray or tuple of ndarray"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduce:90
+#: of numpy.ufunc.reduce:86
+msgid ""
+"The reduced array. If `out` was supplied, `r` is a reference to it. For a "
+"ufunc with more than one output whose loop implementation registers a "
+"reduction loop (see the note below), `r` is instead a tuple with one array "
+"per output."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduce:99
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduce:100
+msgid ""
+"``reduce`` normally only supports ufuncs with a single output. A ufunc with "
+"more than one output can still be reduced if its loop implementation "
+"registers a dedicated reduction loop. Otherwise, calling ``reduce`` on it "
+"raises a ``TypeError``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.ufunc.reduce:107
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduce:99
+#: of numpy.ufunc.reduce:116
 msgid "A multi-dimensional array example:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduce:120
+#: of numpy.ufunc.reduce:137
 msgid ""
 "You can use the ``initial`` keyword argument to initialize the reduction "
 "with a different value, and ``where`` to select specific elements to include:"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.ufunc.reduce:131
+#: of numpy.ufunc.reduce:148
 msgid ""
 "Allows reductions of empty arrays where they would normally fail, i.e. for "
 "ufuncs without an identity."
@@ -256,14 +280,16 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduce:-1
 msgid ""
-"<div id=\"24b7ca9c-2751-402f-90ec-26283a724f07\" "
+"<div id=\"eb8edd54-95b9-4fc4-9ccd-7c3c1f6a0605\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('fb6adeca-5ce7-4397-91e4-037911220782','24b7ca9c-2751-402f-90ec-26283a724f07')\">Go "
-"Back</button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('fb6adeca-5ce7-4397-91e4-037911220782','24b7ca9c-2751-402f-90ec-26283a724f07')\">Open "
-"In Tab</button></div><div id=\"43510724-41ec-464b-9ea0-bfeabec0cab8\" "
+"tryExamplesHideIframe('48508f79-b2a3-4173-"
+"bc23-239e888a5f14','eb8edd54-95b9-4fc4-9ccd-7c3c1f6a0605')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('48508f79-b2a3-4173-"
+"bc23-239e888a5f14','eb8edd54-95b9-4fc4-9ccd-7c3c1f6a0605')\">Open In Tab</"
+"button></div><div id=\"83fe4be5-f744-4d15-bd8c-8c7a794e8b04\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
@@ -273,3 +299,6 @@ msgid ""
 "<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
 "loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
 msgstr ""
+
+#~ msgid "ndarray"
+#~ msgstr "ndarray"

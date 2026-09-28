@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 14:07+0000\n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgid "Parameters"
 msgstr "參數"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nanquantile:11
+#: of numpy.nanquantile:9
 msgid "**a**"
 msgstr "**a**"
 
@@ -51,7 +51,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nanquantile:15
+#: of numpy.nanquantile:13
 msgid "**q**"
 msgstr ""
 
@@ -68,7 +68,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nanquantile:20
+#: of numpy.nanquantile:17
 msgid "**axis**"
 msgstr "**axis**"
 
@@ -85,7 +85,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nanquantile:25
+#: of numpy.nanquantile:22
 msgid "**out**"
 msgstr "**out**"
 
@@ -103,7 +103,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nanquantile:30
+#: of numpy.nanquantile:27
 msgid "**overwrite_input**"
 msgstr ""
 
@@ -121,7 +121,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nanquantile:58
+#: of numpy.nanquantile:32
 msgid "**method**"
 msgstr ""
 
@@ -219,7 +219,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nanquantile:69
+#: of numpy.nanquantile:60
 msgid "**keepdims**"
 msgstr ""
 
@@ -241,7 +241,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nanquantile:82
+#: of numpy.nanquantile:71
 msgid "**weights**"
 msgstr ""
 
@@ -267,7 +267,7 @@ msgid "Returns"
 msgstr "回傳值"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nanquantile:100
+#: of numpy.nanquantile:86
 msgid "**quantile**"
 msgstr ""
 
@@ -282,89 +282,87 @@ msgid ""
 "If `q` is a single probability and `axis=None`, then the result is a scalar. "
 "If multiple probability levels are given, first axis of the result "
 "corresponds to the quantiles. The other axes are the axes that remain after "
-"the reduction of `a`. If the input contains integers or floats smaller than "
-"``float64``, the output data-type is ``float64``. Otherwise, the output data-"
-"type is the same as that of the input. If `out` is specified, that array is "
-"returned instead."
+"the reduction of `a`. If the input contains integers, the output data-type "
+"is ``float64``. Otherwise, the output data-type is the same as that of the "
+"input. If `out` is specified, that array is returned instead."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nanquantile:105
+#: of numpy.nanquantile:104
 msgid ":obj:`quantile`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nanquantile:107
+#: of numpy.nanquantile:106
 msgid ":obj:`nanmean`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nanquantile:109
+#: of numpy.nanquantile:108
 msgid ":obj:`nanmedian`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nanquantile:110
+#: of numpy.nanquantile:109
 msgid "equivalent to ``nanquantile(..., 0.5)``"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nanquantile:111
+#: of numpy.nanquantile:110
 msgid ":obj:`nanpercentile`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nanquantile:112
+#: of numpy.nanquantile:111
 msgid "same as nanquantile, but with q in the range [0, 100]."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nanquantile:116
+#: of numpy.nanquantile:115
 msgid "Notes"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nanquantile:117
+#: of numpy.nanquantile:116
 msgid ""
 "The behavior of `numpy.nanquantile` is the same as that of `numpy.quantile` "
 "(ignoring nan values). For more information, please see `numpy.quantile`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nanquantile:122
+#: of numpy.nanquantile:121
 msgid "References"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nanquantile:123
+#: of numpy.nanquantile:122
 msgid ""
 "R. J. Hyndman and Y. Fan, \"Sample quantiles in statistical packages,\" The "
 "American Statistician, 50(4), pp. 361-365, 1996"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nanquantile:129
+#: of numpy.nanquantile:128
 msgid "[R02de30f409d2-1]_"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
-#: of numpy.nanquantile:132
+#: of numpy.nanquantile:131
 msgid "Examples"
 msgstr "範例"
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
 #: of numpy.nanquantile:-1
 msgid ""
-"<div id=\"d83fd9cd-85ec-472b-9d6b-6b7625a9df00\" "
+"<div id=\"88ecf2ee-d001-4f7f-a264-d3788ed49d57\" "
 "class=\"try_examples_outer_iframe  hidden\"><div "
 "class=\"try_examples_button_container\"><button "
 "class=\"try_examples_button\" onclick=\"window."
-"tryExamplesHideIframe('fd554567-df5f-43b9-"
-"a001-62e7e5be9863','d83fd9cd-85ec-472b-9d6b-6b7625a9df00')\">Go Back</"
-"button><button class=\"try_examples_button\" onclick=\"window."
-"openInNewTab('fd554567-df5f-43b9-"
-"a001-62e7e5be9863','d83fd9cd-85ec-472b-9d6b-6b7625a9df00')\">Open In Tab</"
-"button></div><div id=\"3b2eae20-3966-46d2-890b-b990eca2228f\" "
+"tryExamplesHideIframe('99d37712-e9bc-47b4-bd60-820d4c1fa8e2','88ecf2ee-"
+"d001-4f7f-a264-d3788ed49d57')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window.openInNewTab('99d37712-"
+"e9bc-47b4-bd60-820d4c1fa8e2','88ecf2ee-d001-4f7f-a264-d3788ed49d57')\">Open "
+"In Tab</button></div><div id=\"36a7272a-6dff-45fd-953e-eae7ce981079\" "
 "class=\"jupyterlite_sphinx_iframe_container\"></div></div>"
 msgstr ""
 
