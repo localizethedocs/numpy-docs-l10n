@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../building/introspecting_a_build.rst:4
+msgid "Introspecting build steps"
+msgstr ""
+
+#: ../../../building/introspecting_a_build.rst:6
+msgid ""
+"When you have an issue with a particular Python extension module or other "
+"build target, there are a number of ways to figure out what the build system "
+"is doing exactly. Beyond looking at the ``meson.build`` content for the "
+"target of interest, these include:"
+msgstr ""
+
+#: ../../../building/introspecting_a_build.rst:11
+msgid "Reading the generated ``build.ninja`` file in the build directory,"
+msgstr ""
+
+#: ../../../building/introspecting_a_build.rst:12
+msgid ""
+"Using ``meson introspect`` to learn more about build options, dependencies "
+"and flags used for the target,"
+msgstr ""
+
+#: ../../../building/introspecting_a_build.rst:14
+msgid ""
+"Reading ``<build-dir>/meson-info/*.json`` for details on discovered "
+"dependencies, where Meson plans to install files to, etc."
+msgstr ""
+
+#: ../../../building/introspecting_a_build.rst:17
+msgid ""
+"These things are all available after the configure stage of the build (i.e., "
+"``meson setup``) has run. It is typically more effective to look at this "
+"information, rather than running the build and reading the full build log."
+msgstr ""
+
+#: ../../../building/introspecting_a_build.rst:21
+msgid ""
+"For more details on this topic, see the `SciPy doc page on build "
+"introspection <https://scipy.github.io/devdocs/building/"
+"introspecting_a_build.html>`__."
+msgstr ""

@@ -1,0 +1,1668 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/arrays.ndarray.rst:7
+msgid "The N-dimensional array (:class:`ndarray`)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:9
+msgid ""
+"An :class:`ndarray` is a (usually fixed-size) multidimensional container of "
+"items of the same type and size. The number of dimensions and items in an "
+"array is defined by its :attr:`shape <ndarray.shape>`, which is a :class:"
+"`tuple` of *N* non-negative integers that specify the sizes of each "
+"dimension. The type of items in the array is specified by a separate :ref:"
+"`data-type object (dtype) <arrays.dtypes>`, one of which is associated with "
+"each ndarray."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:17
+msgid ""
+"As with other container objects in Python, the contents of an :class:"
+"`ndarray` can be accessed and modified by :ref:`indexing or slicing <arrays."
+"indexing>` the array (using, for example, *N* integers), and via the methods "
+"and attributes of the :class:`ndarray`."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:24
+msgid ""
+"Different :class:`ndarrays <ndarray>` can share the same data, so that "
+"changes made in one :class:`ndarray` may be visible in another. That is, an "
+"ndarray can be a *\"view\"* to another ndarray, and the data it is referring "
+"to is taken care of by the *\"base\"* ndarray. ndarrays can also be views to "
+"memory owned by Python :class:`strings <str>` or objects implementing the :"
+"class:`memoryview` or :ref:`array <arrays.interface>` interfaces."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:33
+msgid "Example"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:37
+msgid ""
+"A 2-dimensional array of size 2 x 3, composed of 4-byte integer elements:"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:50
+msgid "The array can be indexed using Python container-like syntax:"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:56
+msgid ""
+"For example :ref:`slicing <arrays.indexing>` can produce views of the array:"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:71
+msgid "Constructing arrays"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:73
+msgid ""
+"New arrays can be constructed using the routines detailed in :ref:`routines."
+"array-creation`, and also by using the low-level :class:`ndarray` "
+"constructor:"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:81:<autosummary>:1
+msgid ""
+":py:obj:`ndarray <numpy.ndarray>`\\ \\(shape\\[\\, dtype\\, buffer\\, "
+"offset\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:81:<autosummary>:1
+msgid ""
+"An array object represents a multidimensional, homogeneous array of fixed-"
+"size items."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:86
+msgid "Indexing arrays"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:88
+msgid ""
+"Arrays can be indexed using an extended Python slicing syntax, "
+"``array[selection]``.  Similar syntax is also used for accessing fields in "
+"a :term:`structured data type`."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:92
+msgid ":ref:`Array Indexing <arrays.indexing>`."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:97
+msgid "Internal memory layout of an ndarray"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:99
+msgid ""
+"An instance of class :class:`ndarray` consists of a contiguous one-"
+"dimensional segment of computer memory (owned by the array, or by some other "
+"object), combined with an indexing scheme that maps *N* integers into the "
+"location of an item in the block.  The ranges in which the indices can vary "
+"is specified by the :obj:`shape <ndarray.shape>` of the array. How many "
+"bytes each item takes and how the bytes are interpreted is defined by the :"
+"ref:`data-type object <arrays.dtypes>` associated with the array."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:111
+msgid ""
+"A segment of memory is inherently 1-dimensional, and there are many "
+"different schemes for arranging the items of an *N*-dimensional array in a 1-"
+"dimensional block. NumPy is flexible, and :class:`ndarray` objects can "
+"accommodate any *strided indexing scheme*. In a strided scheme, the N-"
+"dimensional index :math:`(n_0, n_1, ..., n_{N-1})` corresponds to the offset "
+"(in bytes):"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:118
+msgid ""
+"n_{\\mathrm{offset}} = \\sum_{k=0}^{N-1} s_k n_k\n"
+"\n"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:120
+msgid ""
+"from the beginning of the memory block associated with the array. Here, :"
+"math:`s_k` are integers which specify the :obj:`strides <ndarray.strides>` "
+"of the array. The :term:`column-major` order (used, for example, in the "
+"Fortran language and in *Matlab*) and :term:`row-major` order (used in C) "
+"schemes are just specific kinds of strided scheme, and correspond to memory "
+"that can be *addressed* by the strides:"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:127
+msgid ""
+"s_k^{\\mathrm{column}} = \\mathrm{itemsize} \\prod_{j=0}^{k-1} d_j ,\n"
+"\\quad  s_k^{\\mathrm{row}} = \\mathrm{itemsize} \\prod_{j=k+1}^{N-1} d_j ."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:134
+msgid "where :math:`d_j` `= self.shape[j]`."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:136
+msgid ""
+"Both the C and Fortran orders are :term:`contiguous`, *i.e.,* single-"
+"segment, memory layouts, in which every part of the memory block can be "
+"accessed by some combination of the indices."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:142
+msgid ""
+"*Contiguous arrays* and *single-segment arrays* are synonymous and are used "
+"interchangeably throughout the documentation."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:145
+msgid ""
+"While a C-style and Fortran-style contiguous array, which has the "
+"corresponding flags set, can be addressed with the above strides, the actual "
+"strides may be different. This can happen in two cases:"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:149
+msgid ""
+"If ``self.shape[k] == 1`` then for any legal index ``index[k] == 0``. This "
+"means that in the formula for the offset :math:`n_k = 0` and thus :math:`s_k "
+"n_k = 0` and the value of :math:`s_k` `= self.strides[k]` is arbitrary."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:153
+msgid ""
+"If an array has no elements (``self.size == 0``) there is no legal index and "
+"the strides are never used. Any array with no elements may be considered C-"
+"style and Fortran-style contiguous."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:157
+msgid ""
+"Point 1. means that ``self`` and ``self.squeeze()`` always have the same "
+"contiguity and ``aligned`` flags value. This also means that even a high "
+"dimensional array could be C-style and Fortran-style contiguous at the same "
+"time."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:164
+msgid ""
+"An array is considered aligned if the memory offsets for all elements and "
+"the base offset itself is a multiple of `self.itemsize <ndarray.itemsize>`. "
+"Understanding *memory-alignment* leads to better performance on most "
+"hardware."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:170
+msgid ""
+"It does *not* generally hold that ``self.strides[-1] == self.itemsize`` for "
+"C-style contiguous arrays or ``self.strides[0] == self.itemsize`` for "
+"Fortran-style contiguous arrays is true."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:174
+msgid ""
+"Data in new :class:`ndarrays <ndarray>` is in the :term:`row-major` (C) "
+"order, unless otherwise specified, but, for example, :ref:`basic array "
+"slicing <arrays.indexing>` often produces :term:`views <view>` in a "
+"different scheme."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:183
+msgid ""
+"Several algorithms in NumPy work on arbitrarily strided arrays. However, "
+"some algorithms require single-segment arrays. When an irregularly strided "
+"array is passed in to such algorithms, a copy is automatically made."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:191
+msgid "Array attributes"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:193
+msgid ""
+"Array attributes reflect information that is intrinsic to the array itself. "
+"Generally, accessing an array through its attributes allows you to get and "
+"sometimes set intrinsic properties of the array without creating a new "
+"array. The exposed attributes are the core parts of an array and only some "
+"of them can be reset meaningfully without creating a new array. Information "
+"on each attribute is given below."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:201
+msgid "Memory layout"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:203
+msgid ""
+"The following attributes contain information about the memory layout of the "
+"array:"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:218:<autosummary>:1
+msgid ":py:obj:`ndarray.flags <numpy.ndarray.flags>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:218:<autosummary>:1
+msgid "Information about the memory layout of the array."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:218:<autosummary>:1
+msgid ":py:obj:`ndarray.shape <numpy.ndarray.shape>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:218:<autosummary>:1
+msgid "Tuple of array dimensions."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:218:<autosummary>:1
+msgid ":py:obj:`ndarray.strides <numpy.ndarray.strides>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:218:<autosummary>:1
+msgid "Tuple of bytes to step in each dimension when traversing an array."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:218:<autosummary>:1
+msgid ":py:obj:`ndarray.ndim <numpy.ndarray.ndim>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:218:<autosummary>:1
+msgid "Number of array dimensions."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:218:<autosummary>:1
+msgid ":py:obj:`ndarray.data <numpy.ndarray.data>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:218:<autosummary>:1
+msgid "Python buffer object pointing to the start of the array's data."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:218:<autosummary>:1
+msgid ":py:obj:`ndarray.size <numpy.ndarray.size>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:218:<autosummary>:1
+msgid "Number of elements in the array."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:218:<autosummary>:1
+msgid ":py:obj:`ndarray.itemsize <numpy.ndarray.itemsize>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:218:<autosummary>:1
+msgid "Length of one array element in bytes."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:218:<autosummary>:1
+msgid ":py:obj:`ndarray.nbytes <numpy.ndarray.nbytes>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:218:<autosummary>:1
+msgid "Total bytes consumed by the elements of the array."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:218:<autosummary>:1
+msgid ":py:obj:`ndarray.base <numpy.ndarray.base>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:218:<autosummary>:1
+msgid "Base object if memory is from some other object."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:220
+msgid "Data type"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:222
+msgid ":ref:`Data type objects <arrays.dtypes>`"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:224
+msgid ""
+"The data type object associated with the array can be found in the :attr:"
+"`dtype <ndarray.dtype>` attribute:"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:231:<autosummary>:1
+msgid ":py:obj:`ndarray.dtype <numpy.ndarray.dtype>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:231:<autosummary>:1
+msgid "Data-type of the array's elements."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:233
+msgid "Other attributes"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:243:<autosummary>:1
+msgid ":py:obj:`ndarray.T <numpy.ndarray.T>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:243:<autosummary>:1
+msgid "View of the transposed array."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:243:<autosummary>:1
+msgid ":py:obj:`ndarray.real <numpy.ndarray.real>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:243:<autosummary>:1
+msgid "The real part of the array."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:243:<autosummary>:1
+msgid ":py:obj:`ndarray.imag <numpy.ndarray.imag>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:243:<autosummary>:1
+msgid "The imaginary part of the array."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:243:<autosummary>:1
+msgid ":py:obj:`ndarray.flat <numpy.ndarray.flat>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:243:<autosummary>:1
+msgid "A 1-D iterator over the array."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:247
+msgid "Array interface"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:249
+msgid ":ref:`arrays.interface`."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:252
+msgid ":obj:`~object.__array_interface__`"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:252
+msgid "Python-side of the array interface"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:253
+msgid ":obj:`~object.__array_struct__`"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:253
+msgid "C-side of the array interface"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:257
+msgid ":mod:`ctypes` foreign function interface"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:263:<autosummary>:1
+msgid ":py:obj:`ndarray.ctypes <numpy.ndarray.ctypes>`\\"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:263:<autosummary>:1
+msgid ""
+"An object to simplify the interaction of the array with the ctypes module."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:267
+msgid "Array methods"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:269
+msgid ""
+"An :class:`ndarray` object has many methods which operate on or with the "
+"array in some fashion, typically returning an array result. These methods "
+"are briefly explained below. (Each method's docstring has a more complete "
+"description.)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:274
+msgid ""
+"For the following methods there are also corresponding functions in :mod:"
+"`numpy`: :func:`all`, :func:`any`, :func:`argmax`, :func:`argmin`, :func:"
+"`argpartition`, :func:`argsort`, :func:`choose`, :func:`clip`, :func:"
+"`compress`, :func:`copy`, :func:`cumprod`, :func:`cumsum`, :func:"
+"`diagonal`, :func:`imag`, :func:`max <amax>`, :func:`mean`, :func:`min "
+"<amin>`, :func:`nonzero`, :func:`partition`, :func:`prod`, :func:`put`, :"
+"func:`ravel`, :func:`real`, :func:`repeat`, :func:`reshape`, :func:`round "
+"<around>`, :func:`searchsorted`, :func:`sort`, :func:`squeeze`, :func:"
+"`std`, :func:`sum`, :func:`swapaxes`, :func:`take`, :func:`trace`, :func:"
+"`transpose`, :func:`var`."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:287
+msgid "Array conversion"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid ":py:obj:`ndarray.item <numpy.ndarray.item>`\\ \\(\\*args\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid "Copy an element of an array to a standard Python scalar and return it."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid ":py:obj:`ndarray.tolist <numpy.ndarray.tolist>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid ""
+"Return the array as an ``a.ndim``-levels deep nested list of Python scalars."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid ":py:obj:`ndarray.tobytes <numpy.ndarray.tobytes>`\\ \\(\\[order\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid "Construct Python bytes containing the raw data bytes in the array."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.tofile <numpy.ndarray.tofile>`\\ \\(fid\\, \\/\\[\\, sep\\, "
+"format\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid "Write array to a file as text or binary (default)."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid ":py:obj:`ndarray.dump <numpy.ndarray.dump>`\\ \\(file\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid "Dump a pickle of the array to the specified file."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid ":py:obj:`ndarray.dumps <numpy.ndarray.dumps>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid "Returns the pickle of the array as a string."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.astype <numpy.ndarray.astype>`\\ \\(dtype\\[\\, order\\, "
+"casting\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid "Copy of the array, cast to a specified type."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.byteswap <numpy.ndarray.byteswap>`\\ \\(\\[inplace\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid "Swap the bytes of the array elements"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid ":py:obj:`ndarray.copy <numpy.ndarray.copy>`\\ \\(\\[order\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid "Return a copy of the array."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.view <numpy.ndarray.view>`\\ \\(\\[dtype\\]\\[\\, type\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid "New view of array with the same data."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.getfield <numpy.ndarray.getfield>`\\ \\(dtype\\[\\, "
+"offset\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid "Returns a field of the given array as a certain type."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.setflags <numpy.ndarray.setflags>`\\ \\(\\[write\\, "
+"align\\, uic\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid "Set array flags WRITEABLE, ALIGNED, WRITEBACKIFCOPY, respectively."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid ":py:obj:`ndarray.fill <numpy.ndarray.fill>`\\ \\(value\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:305:<autosummary>:1
+msgid "Fill the array with a scalar value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:307
+msgid "Shape manipulation"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:309
+msgid ""
+"For reshape, resize, and transpose, the single tuple argument may be "
+"replaced with ``n`` integers which will be interpreted as an n-tuple."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:322:<autosummary>:1
+msgid ":py:obj:`ndarray.reshape <numpy.ndarray.reshape>`\\ \\(a.reshape\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:322:<autosummary>:1
+msgid "Returns an array containing the same data with a new shape."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:322:<autosummary>:1
+msgid ":py:obj:`ndarray.resize <numpy.ndarray.resize>`\\ \\(a.resize\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:322:<autosummary>:1
+msgid "Change shape and size of array in-place."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:322:<autosummary>:1
+msgid ":py:obj:`ndarray.transpose <numpy.ndarray.transpose>`\\ \\(\\*axes\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:322:<autosummary>:1
+msgid "Returns a view of the array with axes transposed."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:322:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.swapaxes <numpy.ndarray.swapaxes>`\\ \\(axis1\\, axis2\\, "
+"\\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:322:<autosummary>:1
+msgid "Return a view of the array with `axis1` and `axis2` interchanged."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:322:<autosummary>:1
+msgid ":py:obj:`ndarray.flatten <numpy.ndarray.flatten>`\\ \\(\\[order\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:322:<autosummary>:1
+msgid "Return a copy of the array collapsed into one dimension."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:322:<autosummary>:1
+msgid ":py:obj:`ndarray.ravel <numpy.ndarray.ravel>`\\ \\(\\[order\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:322:<autosummary>:1
+msgid "Return a flattened array."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:322:<autosummary>:1
+msgid ":py:obj:`ndarray.squeeze <numpy.ndarray.squeeze>`\\ \\(\\[axis\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:322:<autosummary>:1
+msgid "Remove axes of length one from `a`."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:324
+msgid "Item selection and manipulation"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:326
+msgid ""
+"For array methods that take an *axis* keyword, it defaults to *None*. If "
+"axis is *None*, then the array is treated as a 1-D array. Any other value "
+"for *axis* represents the dimension along which the operation should proceed."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.take <numpy.ndarray.take>`\\ \\(indices\\[\\, axis\\, "
+"out\\, mode\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid "Return an array formed from the elements of `a` at the given indices."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.put <numpy.ndarray.put>`\\ \\(indices\\, values\\[\\, "
+"mode\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid "Set ``a.flat[n] = values[n]`` for all ``n`` in indices."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.repeat <numpy.ndarray.repeat>`\\ \\(repeats\\[\\, axis\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid "Repeat elements of an array."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.choose <numpy.ndarray.choose>`\\ \\(choices\\[\\, out\\, "
+"mode\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid "Use an index array to construct a new array from a set of choices."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.sort <numpy.ndarray.sort>`\\ \\(\\[axis\\, kind\\, order\\, "
+"stable\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid "Sort an array in-place."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.argsort <numpy.ndarray.argsort>`\\ \\(\\[axis\\, kind\\, "
+"order\\, stable\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid "Returns the indices that would sort this array."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.partition <numpy.ndarray.partition>`\\ \\(kth\\[\\, axis\\, "
+"kind\\, order\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid ""
+"Partially sorts the elements in the array in such a way that the value of "
+"the element in k-th position is in the position it would be in a sorted "
+"array."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.argpartition <numpy.ndarray.argpartition>`\\ \\(kth\\[\\, "
+"axis\\, kind\\, order\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid "Returns the indices that would partition this array."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.searchsorted <numpy.ndarray.searchsorted>`\\ \\(v\\[\\, "
+"side\\, sorter\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid ""
+"Find indices where elements of `v` should be inserted in `a` to maintain "
+"order."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid ":py:obj:`ndarray.nonzero <numpy.ndarray.nonzero>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid "Return the indices of the elements that are non-zero."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.compress <numpy.ndarray.compress>`\\ \\(condition\\[\\, "
+"axis\\, out\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid "Return selected slices of this array along given axis."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.diagonal <numpy.ndarray.diagonal>`\\ \\(\\[offset\\, "
+"axis1\\, axis2\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:346:<autosummary>:1
+msgid "Return specified diagonals."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:348
+msgid "Calculation"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:352
+msgid "Many of these methods take an argument named *axis*. In such cases,"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:354
+msgid ""
+"If *axis* is *None* (the default), the array is treated as a 1-D array and "
+"the operation is performed over the entire array. This behavior is also the "
+"default if self is a 0-dimensional array or array scalar. (An array scalar "
+"is an instance of the types/classes float32, float64, etc., whereas a 0-"
+"dimensional array is an ndarray instance containing precisely one array "
+"scalar.)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:361
+msgid ""
+"If *axis* is an integer, then the operation is done over the given axis (for "
+"each 1-D subarray that can be created along the given axis)."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:364
+msgid "Example of the *axis* argument"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:368
+msgid ""
+"A 3-dimensional array of size 3 x 3 x 3, summed over each of its three axes:"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:401
+msgid ""
+"The parameter *dtype* specifies the data type over which a reduction "
+"operation (like summing) should take place. The default reduce data type is "
+"the same as the data type of *self*. To avoid overflow, it can be useful to "
+"perform the reduction using a larger data type."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:406
+msgid ""
+"For several methods, an optional *out* argument can also be provided and the "
+"result will be placed into the output array given. The *out* argument must "
+"be an :class:`ndarray` and have the same number of elements. It can have a "
+"different data type in which case casting will be performed."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.max <numpy.ndarray.max>`\\ \\(\\[axis\\, out\\, keepdims\\, "
+"initial\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid "Return the maximum along a given axis."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.argmax <numpy.ndarray.argmax>`\\ \\(\\[axis\\, out\\, "
+"keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid "Return indices of the maximum values along the given axis."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.min <numpy.ndarray.min>`\\ \\(\\[axis\\, out\\, keepdims\\, "
+"initial\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid "Return the minimum along a given axis."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.argmin <numpy.ndarray.argmin>`\\ \\(\\[axis\\, out\\, "
+"keepdims\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid "Return indices of the minimum values along the given axis."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.clip <numpy.ndarray.clip>`\\ \\(\\[min\\, max\\, out\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid "Return an array whose values are limited to ``[min, max]``."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid ":py:obj:`ndarray.conj <numpy.ndarray.conj>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid "Complex-conjugate all elements."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.round <numpy.ndarray.round>`\\ \\(\\[decimals\\, out\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid "Return `a` with each element rounded to the given number of decimals."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.trace <numpy.ndarray.trace>`\\ \\(\\[offset\\, axis1\\, "
+"axis2\\, dtype\\, out\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid "Return the sum along diagonals of the array."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.sum <numpy.ndarray.sum>`\\ \\(\\[axis\\, dtype\\, out\\, "
+"keepdims\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid "Return the sum of the array elements over the given axis."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.cumsum <numpy.ndarray.cumsum>`\\ \\(\\[axis\\, dtype\\, "
+"out\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid "Return the cumulative sum of the elements along the given axis."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.mean <numpy.ndarray.mean>`\\ \\(\\[axis\\, dtype\\, out\\, "
+"keepdims\\, where\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid "Returns the average of the array elements along given axis."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.var <numpy.ndarray.var>`\\ \\(\\[axis\\, dtype\\, out\\, "
+"ddof\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid "Returns the variance of the array elements, along given axis."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.std <numpy.ndarray.std>`\\ \\(\\[axis\\, dtype\\, out\\, "
+"ddof\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid "Returns the standard deviation of the array elements along given axis."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.prod <numpy.ndarray.prod>`\\ \\(\\[axis\\, dtype\\, out\\, "
+"keepdims\\, ...\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid "Return the product of the array elements over the given axis"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.cumprod <numpy.ndarray.cumprod>`\\ \\(\\[axis\\, dtype\\, "
+"out\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid "Return the cumulative product of the elements along the given axis."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.all <numpy.ndarray.all>`\\ \\(\\[axis\\, out\\, keepdims\\, "
+"where\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid "Returns True if all elements evaluate to True."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.any <numpy.ndarray.any>`\\ \\(\\[axis\\, out\\, keepdims\\, "
+"where\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:432:<autosummary>:1
+msgid "Returns True if any of the elements of `a` evaluate to True."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:434
+msgid "Arithmetic, matrix multiplication, and comparison operations"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:438
+msgid ""
+"Arithmetic and comparison operations on :class:`ndarrays <ndarray>` are "
+"defined as element-wise operations, and generally yield :class:`ndarray` "
+"objects as results."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:442
+msgid ""
+"Each of the arithmetic operations (``+``, ``-``, ``*``, ``/``, ``//``, "
+"``%``, ``divmod()``, ``**`` or ``pow()``, ``<<``, ``>>``, ``&``, ``^``, ``|"
+"``, ``~``) and the comparisons (``==``, ``<``, ``>``, ``<=``, ``>=``, ``!"
+"=``) is equivalent to the corresponding universal function (or :term:`ufunc` "
+"for short) in NumPy.  For more information, see the section on :ref:"
+"`Universal Functions <ufuncs>`."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:450
+msgid "Comparison operators:"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:461:<autosummary>:1
+msgid ":py:obj:`ndarray.__lt__ <numpy.ndarray.__lt__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:461:<autosummary>:1
+msgid "Return self<value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:461:<autosummary>:1
+msgid ":py:obj:`ndarray.__le__ <numpy.ndarray.__le__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:461:<autosummary>:1
+msgid "Return self<=value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:461:<autosummary>:1
+msgid ":py:obj:`ndarray.__gt__ <numpy.ndarray.__gt__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:461:<autosummary>:1
+msgid "Return self>value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:461:<autosummary>:1
+msgid ":py:obj:`ndarray.__ge__ <numpy.ndarray.__ge__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:461:<autosummary>:1
+msgid "Return self>=value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:461:<autosummary>:1
+msgid ":py:obj:`ndarray.__eq__ <numpy.ndarray.__eq__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:461:<autosummary>:1
+msgid "Return self==value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:461:<autosummary>:1
+msgid ":py:obj:`ndarray.__ne__ <numpy.ndarray.__ne__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:461:<autosummary>:1
+msgid "Return self!=value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:462
+msgid "Truth value of an array (:class:`bool() <bool>`):"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:468:<autosummary>:1
+msgid ":py:obj:`ndarray.__bool__ <numpy.ndarray.__bool__>`\\ \\(\\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:468:<autosummary>:1
+msgid "True if self else False"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:471
+msgid ""
+"Truth-value testing of an array invokes :meth:`ndarray.__bool__`, which "
+"raises an error if the number of elements in the array is not 1, because the "
+"truth value of such arrays is ambiguous. Use :meth:`.any() <ndarray.any>` "
+"and :meth:`.all() <ndarray.all>` instead to be clear about what is meant in "
+"such cases. (If you wish to check for whether an array is empty, use for "
+"example ``.size > 0``.)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:480
+msgid "Unary operations:"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:489:<autosummary>:1
+msgid ":py:obj:`ndarray.__neg__ <numpy.ndarray.__neg__>`\\ \\(\\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:489:<autosummary>:1
+msgid "-self"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:489:<autosummary>:1
+msgid ":py:obj:`ndarray.__pos__ <numpy.ndarray.__pos__>`\\ \\(\\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:489:<autosummary>:1
+msgid "+self"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:489:<autosummary>:1
+msgid ":py:obj:`ndarray.__abs__ <numpy.ndarray.__abs__>`\\ \\(self\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:489:<autosummary>:1
+msgid ":py:obj:`ndarray.__invert__ <numpy.ndarray.__invert__>`\\ \\(\\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:489:<autosummary>:1
+msgid "~self"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:490
+msgid "Arithmetic:"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid ":py:obj:`ndarray.__add__ <numpy.ndarray.__add__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid "Return self+value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid ":py:obj:`ndarray.__sub__ <numpy.ndarray.__sub__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid "Return self-value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid ":py:obj:`ndarray.__mul__ <numpy.ndarray.__mul__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid "Return self*value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__truediv__ <numpy.ndarray.__truediv__>`\\ \\(value\\, \\/"
+"\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid "Return self/value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__floordiv__ <numpy.ndarray.__floordiv__>`\\ \\(value\\, \\/"
+"\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid "Return self//value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid ":py:obj:`ndarray.__mod__ <numpy.ndarray.__mod__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid "Return self%value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__divmod__ <numpy.ndarray.__divmod__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid "Return divmod(self, value)."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__pow__ <numpy.ndarray.__pow__>`\\ \\(value\\[\\, mod\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid "Return pow(self, value, mod)."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__lshift__ <numpy.ndarray.__lshift__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid "Return self<<value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__rshift__ <numpy.ndarray.__rshift__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid "Return self>>value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid ":py:obj:`ndarray.__and__ <numpy.ndarray.__and__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid "Return self&value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid ":py:obj:`ndarray.__or__ <numpy.ndarray.__or__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid "Return self|value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid ":py:obj:`ndarray.__xor__ <numpy.ndarray.__xor__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:508:<autosummary>:1
+msgid "Return self^value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:511
+msgid ""
+"Any third argument to :func:`pow()` is silently ignored, as the underlying :"
+"func:`ufunc <power>` takes only two arguments."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:514
+msgid ""
+"Because :class:`ndarray` is a built-in type (written in C), the ``__r{op}"
+"__`` special methods are not directly defined."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:517
+msgid ""
+"The functions called to implement many arithmetic special methods for arrays "
+"can be modified using :class:`__array_ufunc__ <numpy.class.__array_ufunc__>`."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:520
+msgid "Arithmetic, in-place:"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__iadd__ <numpy.ndarray.__iadd__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid "Return self+=value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__isub__ <numpy.ndarray.__isub__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid "Return self-=value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__imul__ <numpy.ndarray.__imul__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid "Return self*=value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__itruediv__ <numpy.ndarray.__itruediv__>`\\ \\(value\\, \\/"
+"\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid "Return self/=value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__ifloordiv__ <numpy.ndarray.__ifloordiv__>`\\ \\(value\\, "
+"\\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid "Return self//=value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__imod__ <numpy.ndarray.__imod__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid "Return self%=value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__ipow__ <numpy.ndarray.__ipow__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid "Return self**=value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__ilshift__ <numpy.ndarray.__ilshift__>`\\ \\(value\\, \\/"
+"\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid "Return self<<=value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__irshift__ <numpy.ndarray.__irshift__>`\\ \\(value\\, \\/"
+"\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid "Return self>>=value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__iand__ <numpy.ndarray.__iand__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid "Return self&=value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid ":py:obj:`ndarray.__ior__ <numpy.ndarray.__ior__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid "Return self|=value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__ixor__ <numpy.ndarray.__ixor__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:537:<autosummary>:1
+msgid "Return self^=value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:540
+msgid ""
+"In place operations will perform the calculation using the precision decided "
+"by the data type of the two operands, but will silently downcast the result "
+"(if necessary) so it can fit back into the array.  Therefore, for mixed "
+"precision calculations, ``A {op}= B`` can be different than ``A = A {op} "
+"B``. For example, suppose ``a = ones((3,3))``. Then, ``a += 3j`` is "
+"different than ``a = a + 3j``: while they both perform the same computation, "
+"``a += 3`` casts the result to fit back in ``a``, whereas ``a = a + 3j`` re-"
+"binds the name ``a`` to the result."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:550
+msgid "Matrix Multiplication:"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:556:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__matmul__ <numpy.ndarray.__matmul__>`\\ \\(value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:556:<autosummary>:1
+msgid "Return self@value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:559
+msgid ""
+"Matrix operators ``@`` and ``@=`` were introduced in Python 3.5 following :"
+"pep:`465`, and the ``@`` operator has been introduced in NumPy 1.10.0. "
+"Further information can be found in the :func:`matmul` documentation."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:564
+msgid "Special methods"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:566
+msgid "For standard library functions:"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:575:<autosummary>:1
+msgid ":py:obj:`ndarray.__copy__ <numpy.ndarray.__copy__>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:575:<autosummary>:1
+msgid "Used if :func:`copy.copy` is called on an array."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:575:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__deepcopy__ <numpy.ndarray.__deepcopy__>`\\ \\(memo\\, \\/"
+"\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:575:<autosummary>:1
+msgid "Used if :func:`copy.deepcopy` is called on an array."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:575:<autosummary>:1
+msgid ":py:obj:`ndarray.__reduce__ <numpy.ndarray.__reduce__>`\\ \\(\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:575:<autosummary>:1
+msgid "For pickling."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:575:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__setstate__ <numpy.ndarray.__setstate__>`\\ \\(state\\, \\/"
+"\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:575:<autosummary>:1
+msgid "For unpickling."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:576
+msgid "Basic customization:"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:584:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__new__ <numpy.ndarray.__new__>`\\ \\(\\*args\\, "
+"\\*\\*kwargs\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:584:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__array__ <numpy.ndarray.__array__>`\\ \\(\\[dtype\\]\\, "
+"\\*\\[\\, copy\\]\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:584:<autosummary>:1
+msgid ""
+"For ``dtype`` parameter it returns a new reference to self if ``dtype`` is "
+"not given or it matches array's data type."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:584:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__array_wrap__ <numpy.ndarray.__array_wrap__>`\\ "
+"\\(array\\[\\, context\\[\\, ...\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:584:<autosummary>:1
+msgid "Returns a view of `array` with the same type as self."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:585
+msgid "Container customization: (see :ref:`Indexing <arrays.indexing>`)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:594:<autosummary>:1
+msgid ":py:obj:`ndarray.__len__ <numpy.ndarray.__len__>`\\ \\(\\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:594:<autosummary>:1
+msgid "Return len(self)."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:594:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__getitem__ <numpy.ndarray.__getitem__>`\\ \\(key\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:594:<autosummary>:1
+msgid "Return self[key]."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:594:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__setitem__ <numpy.ndarray.__setitem__>`\\ \\(key\\, "
+"value\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:594:<autosummary>:1
+msgid "Set self[key] to value."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:594:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__contains__ <numpy.ndarray.__contains__>`\\ \\(key\\, \\/"
+"\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:594:<autosummary>:1
+msgid "Return bool(key in self)."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:595
+msgid ""
+"Conversion; the operations :class:`int() <int>`, :class:`float() <float>` "
+"and :class:`complex() <complex>`. They work only on arrays that have one "
+"element in them and return the appropriate scalar."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:606:<autosummary>:1
+msgid ":py:obj:`ndarray.__int__ <numpy.ndarray.__int__>`\\ \\(self\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:606:<autosummary>:1
+msgid ":py:obj:`ndarray.__float__ <numpy.ndarray.__float__>`\\ \\(self\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:606:<autosummary>:1
+msgid ":py:obj:`ndarray.__complex__ <numpy.ndarray.__complex__>`\\ \\(self\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:607
+msgid "String representations:"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:614:<autosummary>:1
+msgid ":py:obj:`ndarray.__str__ <numpy.ndarray.__str__>`\\ \\(\\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:614:<autosummary>:1
+msgid "Return str(self)."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:614:<autosummary>:1
+msgid ":py:obj:`ndarray.__repr__ <numpy.ndarray.__repr__>`\\ \\(\\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:614:<autosummary>:1
+msgid "Return repr(self)."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:615
+msgid "Utility method for typing:"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:621:<autosummary>:1
+msgid ""
+":py:obj:`ndarray.__class_getitem__ <numpy.ndarray.__class_getitem__>`\\ \\(\\"
+"$cls\\, item\\, \\/\\)"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:621:<autosummary>:1
+msgid "ndarray[shape, dtype]"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:625
+msgid "Structural pattern matching"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:627
+msgid ""
+"Arrays support :pep:`structural pattern matching <634>`. The array is "
+"matched as a sequence, so you can unpack arrays along the first dimension in "
+"``match``/``case`` statements::"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:631
+msgid ""
+">>> arr = np.array([[1, 2], [3, 4]])\n"
+">>> match arr:\n"
+"...     case [row1, row2]:\n"
+"...         print(f\"row1={row1}, row2={row2}\")\n"
+"row1=[1 2], row2=[3 4]"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:637
+msgid "Nested patterns work too, matching inner dimensions::"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:639
+msgid ""
+">>> match arr:\n"
+"...     case [[a, b], [c, d]]:\n"
+"...         print(f\"a={a}, b={b}, c={c}, d={d}\")\n"
+"a=1, b=2, c=3, d=4"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:644
+msgid "All ndarray subclasses inherit this behavior."
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:22
+msgid "view"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:22
+msgid "base"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:108
+msgid "C-order"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:108
+msgid "Fortran-order"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:108
+msgid "row-major"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:108
+msgid "column-major"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:108
+msgid "stride"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:108
+msgid "offset"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:132
+msgid "single-segment"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:132
+msgid "contiguous"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:132
+msgid "non-contiguous"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:162
+msgid "aligned"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:350
+msgid "axis"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:436
+msgid "comparison"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:436
+msgid "arithmetic"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:436
+msgid "matrix"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:436
+msgid "operation"
+msgstr ""
+
+#: ../../../reference/arrays.ndarray.rst:436
+msgid "operator"
+msgstr ""
