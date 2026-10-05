@@ -1,0 +1,440 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release/1.4.0-notes.rst:3
+msgid "NumPy 1.4.0 Release Notes"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:5
+msgid ""
+"This minor includes numerous bug fixes, as well as a few new features. It is "
+"backward compatible with 1.3.0 release."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:9
+msgid "Highlights"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:11
+msgid "New datetime dtype support to deal with dates in arrays"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:13
+msgid "Faster import time"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:15 ../../../release/1.4.0-notes.rst:25
+msgid "Extended array wrapping mechanism for ufuncs"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:17
+msgid "New Neighborhood iterator (C-level only)"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:19
+msgid "C99-like complex functions in npymath"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:22
+msgid "New features"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:27
+msgid ""
+"An __array_prepare__ method has been added to ndarray to provide subclasses "
+"greater flexibility to interact with ufuncs and ufunc-like functions. "
+"ndarray already provided __array_wrap__, which allowed subclasses to set the "
+"array type for the result and populate metadata on the way out of the ufunc "
+"(as seen in the implementation of MaskedArray). For some applications it is "
+"necessary to provide checks and populate metadata *on the way in*. "
+"__array_prepare__ is therefore called just after the ufunc has initialized "
+"the output array but before computing the results and populating it. This "
+"way, checks can be made and errors raised before operations which may modify "
+"data in place."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:38
+msgid "Automatic detection of forward incompatibilities"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:40
+msgid ""
+"Previously, if an extension was built against a version N of NumPy, and used "
+"on a system with NumPy M < N, the import_array was successful, which could "
+"cause crashes because the version M does not have a function in N. Starting "
+"from NumPy 1.4.0, this will cause a failure in import_array, so the error "
+"will be caught early on."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:47
+msgid "New iterators"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:49
+msgid ""
+"A new neighborhood iterator has been added to the C API. It can be used to "
+"iterate over the items in a neighborhood of an array, and can handle "
+"boundaries conditions automatically. Zero and one padding are available, as "
+"well as arbitrary constant value, mirror and circular padding."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:55
+msgid "New polynomial support"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:57
+msgid ""
+"New modules chebyshev and polynomial have been added. The new polynomial "
+"module is not compatible with the current polynomial support in numpy, but "
+"is much like the new chebyshev module. The most noticeable difference to "
+"most will be that coefficients are specified from low to high power, that "
+"the low level functions do *not* work with the Chebyshev and Polynomial "
+"classes as arguments, and that the Chebyshev and Polynomial classes include "
+"a domain. Mapping between domains is a linear substitution and the two "
+"classes can be converted one to the other, allowing, for instance, a "
+"Chebyshev series in one domain to be expanded as a polynomial in another "
+"domain. The new classes should generally be used instead of the low level "
+"functions, the latter are provided for those who wish to build their own "
+"classes."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:69
+msgid ""
+"The new modules are not automatically imported into the numpy namespace, "
+"they must be explicitly brought in with an \"import numpy.polynomial\" "
+"statement."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:74
+msgid "New C API"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:76
+msgid "The following C functions have been added to the C API:"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:78
+msgid ""
+"PyArray_GetNDArrayCFeatureVersion: return the *API* version of the loaded "
+"numpy."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:80
+msgid ""
+"PyArray_Correlate2 - like PyArray_Correlate, but implements the usual "
+"definition of correlation. Inputs are not swapped, and conjugate is taken "
+"for complex arrays."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:83
+msgid ""
+"PyArray_NeighborhoodIterNew - a new iterator to iterate over a neighborhood "
+"of a point, with automatic boundaries handling. It is documented in the "
+"iterators section of the C-API reference, and you can find some examples in  "
+"the multiarray_test.c.src file in numpy.core."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:89
+msgid "New ufuncs"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:91
+msgid "The following ufuncs have been added to the C API:"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:93
+msgid ""
+"copysign - return the value of the first argument with the sign copied from "
+"the second argument."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:95
+msgid ""
+"nextafter - return the next representable floating point value of the first "
+"argument toward the second argument."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:99
+msgid "New defines"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:101
+msgid ""
+"The alpha processor is now defined and available in numpy/npy_cpu.h. The "
+"failed detection of the PARISC processor has been fixed. The defines are:"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:104
+msgid "NPY_CPU_HPPA: PARISC"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:105
+msgid "NPY_CPU_ALPHA: Alpha"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:108
+msgid "Testing"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:110
+msgid ""
+"deprecated decorator: this decorator may be used to avoid cluttering testing "
+"output while testing DeprecationWarning is effectively raised by the "
+"decorated test."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:113
+msgid ""
+"assert_array_almost_equal_nulp: new method to compare two arrays of floating "
+"point values. With this function, two values are considered close if there "
+"are not many representable floating point values in between, thus being more "
+"robust than assert_array_almost_equal when the values fluctuate a lot."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:118
+msgid ""
+"assert_array_max_ulp: raise an assertion if there are more than N "
+"representable numbers between two floating point values."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:120
+msgid ""
+"assert_warns: raise an AssertionError if a callable does not generate a "
+"warning of the appropriate class, without altering the warning state."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:124
+msgid "Reusing npymath"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:126
+msgid ""
+"In 1.3.0, we started putting portable C math routines in npymath library, so "
+"that people can use those to write portable extensions. Unfortunately, it "
+"was not possible to easily link against this library: in 1.4.0, support has "
+"been added to numpy.distutils so that 3rd party can reuse this library. See "
+"coremath documentation for more information."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:133
+msgid "Improved set operations"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:135
+msgid ""
+"In previous versions of NumPy some set functions (intersect1d, setxor1d, "
+"setdiff1d and setmember1d) could return incorrect results if the input "
+"arrays contained duplicate items. These now work correctly for input arrays "
+"with duplicates. setmember1d has been renamed to in1d, as with the change to "
+"accept arrays with duplicates it is no longer a set operation, and is "
+"conceptually similar to an elementwise version of the Python operator 'in'.  "
+"All of these functions now accept the boolean keyword assume_unique. This is "
+"False by default, but can be set True if the input arrays are known not to "
+"contain duplicates, which can increase the functions' execution speed."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:148
+msgid "Improvements"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:150
+msgid ""
+"numpy import is noticeably faster (from 20 to 30 % depending on the platform "
+"and computer)"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:153
+msgid "The sort functions now sort nans to the end."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:155
+msgid "Real sort order is [R, nan]"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:156
+msgid "Complex sort order is [R + Rj, R + nanj, nan + Rj, nan + nanj]"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:158
+msgid ""
+"Complex numbers with the same nan placements are sorted according to the non-"
+"nan part if it exists."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:160
+msgid ""
+"The type comparison functions have been made consistent with the new sort "
+"order of nans. Searchsorted now works with sorted arrays containing nan "
+"values."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:163
+msgid "Complex division has been made more resistant to overflow."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:164
+msgid "Complex floor division has been made more resistant to overflow."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:167
+msgid "Deprecations"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:169
+msgid "The following functions are deprecated:"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:171
+msgid ""
+"correlate: it takes a new keyword argument old_behavior. When True (the "
+"default), it returns the same result as before. When False, compute the "
+"conventional correlation, and take the conjugate for complex arrays. The old "
+"behavior will be removed in NumPy 1.5, and raises a DeprecationWarning in "
+"1.4."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:177
+msgid ""
+"unique1d: use unique instead. unique1d raises a deprecation warning in 1.4, "
+"and will be removed in 1.5."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:180
+msgid ""
+"intersect1d_nu: use intersect1d instead. intersect1d_nu raises a deprecation "
+"warning in 1.4, and will be removed in 1.5."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:183
+msgid ""
+"setmember1d: use in1d instead. setmember1d raises a deprecation warning in "
+"1.4, and will be removed in 1.5."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:186
+msgid "The following raise errors:"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:188
+msgid ""
+"When operating on 0-d arrays, ``numpy.max`` and other functions accept only "
+"``axis=0``, ``axis=-1`` and ``axis=None``. Using an out-of-bounds axes is an "
+"indication of a bug, so Numpy raises an error for these cases now."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:193
+msgid ""
+"Specifying ``axis > MAX_DIMS`` is no longer allowed; Numpy raises now an "
+"error instead of behaving similarly as for ``axis=None``."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:197
+msgid "Internal changes"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:200
+msgid "Use C99 complex functions when available"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:202
+msgid ""
+"The numpy complex types are now guaranteed to be ABI compatible with C99 "
+"complex type, if available on the platform. Moreover, the complex ufunc now "
+"use the platform C99 functions instead of our own."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:207
+msgid "split multiarray and umath source code"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:209
+msgid ""
+"The source code of multiarray and umath has been split into separate logic "
+"compilation units. This should make the source code more amenable for "
+"newcomers."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:214
+msgid "Separate compilation"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:216
+msgid ""
+"By default, every file of multiarray (and umath) is merged into one for "
+"compilation as was the case before, but if NPY_SEPARATE_COMPILATION env "
+"variable is set to a non-negative value, experimental individual compilation "
+"of each file is enabled. This makes the compile/debug cycle much faster when "
+"working on core numpy."
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:223
+msgid "Separate core math library"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:225
+msgid "New functions which have been added:"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:227
+msgid "npy_copysign"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:228
+msgid "npy_nextafter"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:229
+msgid "npy_cpack"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:230
+msgid "npy_creal"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:231
+msgid "npy_cimag"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:232
+msgid "npy_cabs"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:233
+msgid "npy_cexp"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:234
+msgid "npy_clog"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:235
+msgid "npy_cpow"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:236
+msgid "npy_csqr"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:237
+msgid "npy_ccos"
+msgstr ""
+
+#: ../../../release/1.4.0-notes.rst:238
+msgid "npy_csin"
+msgstr ""

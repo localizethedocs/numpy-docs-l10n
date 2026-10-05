@@ -1,0 +1,211 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.unwrap.rst:4
+msgid "numpy.unwrap"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:2
+msgid ""
+"Unwrap by taking the complement of large deltas with respect to the period."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:4
+msgid ""
+"This unwraps a signal `p` by changing elements which have an absolute "
+"difference from their predecessor of more than ``max(discont, period/2)`` to "
+"their `period`-complementary values."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:8
+msgid ""
+"For the default case where `period` is :math:`2\\pi` and `discont` is :math:"
+"`\\pi`, this unwraps a radian phase `p` such that adjacent differences are "
+"never greater than :math:`\\pi` by adding :math:`2k\\pi` for some integer :"
+"math:`k`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:15
+msgid "**p**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:16
+msgid "Input array."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:18
+msgid "**discont**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:-1
+msgid "float, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:19
+msgid ""
+"Maximum discontinuity between values, default is ``period/2``. Values below "
+"``period/2`` are treated as if they were ``period/2``. To have an effect "
+"different from the default, `discont` should be larger than ``period/2``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:24
+msgid "**axis**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:25
+msgid "Axis along which unwrap will operate, default is the last axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:27
+msgid "**period**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:-1
+msgid "float or int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:28
+msgid ""
+"Size of the range over which the input wraps. By default, it is ``2 pi``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:37
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:-1
+msgid "ndarray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:38
+msgid ""
+"Output array. Its dtype is ``numpy.result_type(p, period)``. In particular "
+"an integer array unwrapped with an integer `period` keeps its integer dtype, "
+"while any float `period` (including the default ``2 pi``) produces a "
+"floating-point result."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:52
+msgid ":obj:`rad2deg`, :obj:`deg2rad`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:54
+msgid ":obj:`numpy.ma.unwrap`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:55
+msgid "Mask-aware equivalent for masked arrays."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:59
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:60
+msgid ""
+"If the discontinuity in `p` is smaller than ``period/2``, but larger than "
+"`discont`, no unwrapping is done because taking the complement would only "
+"make the discontinuity larger."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:64
+msgid ""
+"This function does not work properly with masked arrays, use `numpy.ma."
+"unwrap` instead."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:69
+msgid "Examples"
+msgstr ""
+
+#: ../../../reference/generated/numpy.unwrap.rst:23
+msgid ""
+"This example plots the unwrapping of the wrapped input signal `w`. First "
+"generate `w`, then apply `unwrap` to get `u`."
+msgstr ""
+
+#: ../../../reference/generated/numpy.unwrap.rst:30
+msgid "Plot `w` and `u`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:113
+msgid ""
+"<div id=\"65c09d94-d4d2-4ddb-8e36-cd0a4e82a516\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('f0b2e75b-34db-4a28-83c4-2897e9f13b81','65c09d94-"
+"d4d2-4ddb-8e36-cd0a4e82a516')\">Go Back</button><button "
+"class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('f0b2e75b-34db-4a28-83c4-2897e9f13b81','65c09d94-d4d2-4ddb-8e36-"
+"cd0a4e82a516')\">Open In Tab</button></div><div id=\"397f9804-3073-43dd-"
+"bf5b-3ce0c451898f\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/__init__.py:docstring
+#: of numpy.unwrap:113
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""

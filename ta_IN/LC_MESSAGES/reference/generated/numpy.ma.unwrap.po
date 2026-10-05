@@ -1,0 +1,209 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-28 06:37+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.ma.unwrap.rst:4
+msgid "numpy.ma.unwrap"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:2
+msgid ""
+"Unwrap by taking the complement of large deltas with respect to the period."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:4
+msgid ""
+"This unwraps a signal `p` by changing elements which have an absolute "
+"difference from their predecessor of more than ``max(discont, period/2)`` to "
+"their `period`-complementary values. Masked elements are skipped over, so "
+"the predecessor of an element is the closest preceding unmasked one, and the "
+"mask is preserved in the output."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:10
+msgid ""
+"For the default case where `period` is :math:`2\\pi` and `discont` is :math:"
+"`\\pi`, this unwraps a radian phase `p` such that adjacent differences are "
+"never greater than :math:`\\pi` by adding :math:`2k\\pi` for some integer :"
+"math:`k`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:17
+msgid "**p**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:-1
+msgid "array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:18
+msgid ""
+"Input array. Masked entries are not taken into account in the computation."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:21
+msgid "**discont**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:-1
+msgid "float, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:22
+msgid ""
+"Maximum discontinuity between values, default is ``period/2``. Values below "
+"``period/2`` are treated as if they were ``period/2``. To have an effect "
+"different from the default, `discont` should be larger than ``period/2``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:27
+msgid "**axis**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:28
+msgid "Axis along which unwrap will operate, default is the last axis."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:30
+msgid "**period**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:-1
+msgid "float or int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:31
+msgid ""
+"Size of the range over which the input wraps. By default, it is ``2 pi``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:38
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:-1
+msgid "MaskedArray"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:39
+msgid ""
+"Output array, carrying the mask of `p`. Its dtype is ``numpy.result_type(p, "
+"period)``. In particular an integer array unwrapped with an integer `period` "
+"keeps its integer dtype, while any float `period` (including the default ``2 "
+"pi``) produces a floating-point result. The data underlying the masked "
+"elements is unspecified."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:55
+msgid ":obj:`numpy.unwrap`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:56
+msgid "Equivalent function for ndarrays"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:60
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:61
+msgid ""
+"If the discontinuity in `p` is smaller than ``period/2``, but larger than "
+"`discont`, no unwrapping is done because taking the complement would only "
+"make the discontinuity larger."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:65
+msgid ""
+"Unwrapping assumes that the change between an element and its predecessor is "
+"less than half a period. Across a masked gap that assumption cannot be "
+"checked, so a gap hiding more than half a period of change is not recovered "
+"and leaves the elements after it offset by a multiple of `period`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:73
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:87
+msgid ""
+"The masked element is skipped over, so the fourth element is unwrapped "
+"against the second one."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:-1
+msgid ""
+"<div id=\"04671322-2113-4173-a25f-97921bfd3d14\" "
+"class=\"try_examples_outer_iframe  hidden\"><div "
+"class=\"try_examples_button_container\"><button "
+"class=\"try_examples_button\" onclick=\"window."
+"tryExamplesHideIframe('78ace660-71b9-43a9-"
+"b597-72f2a6a4ed42','04671322-2113-4173-a25f-97921bfd3d14')\">Go Back</"
+"button><button class=\"try_examples_button\" onclick=\"window."
+"openInNewTab('78ace660-71b9-43a9-b597-72f2a6a4ed42','04671322-2113-4173-"
+"a25f-97921bfd3d14')\">Open In Tab</button></div><div id=\"6ccfb505-2f74-4cd7-"
+"bfb7-bd1005e6377c\" class=\"jupyterlite_sphinx_iframe_container\"></div></"
+"div>"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/ma/extras.py:docstring
+#: of numpy.ma.extras.unwrap:-1
+msgid ""
+"<script>document.addEventListener(\"DOMContentLoaded\", function() {window."
+"loadTryExamplesConfig(\"../../try_examples.json\");});</script>"
+msgstr ""
