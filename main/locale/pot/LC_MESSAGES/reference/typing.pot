@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NumPy main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-28 06:37+0000\n"
+"POT-Creation-Date: 2026-10-05 17:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -334,7 +334,8 @@ msgid "Any scalar or sequence that can be interpreted as an ndarray."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
-#: of numpy.typing:187 numpy.typing:223 numpy.typing:246
+#: of numpy.typing:187 numpy.typing:223 numpy.typing:245 numpy.typing:275
+#: numpy.typing:295 numpy.typing:315 numpy.typing:335 numpy.typing:355
 #: numpy.typing.NBitBase:29
 msgid "Examples"
 msgstr ""
@@ -394,22 +395,19 @@ msgid ""
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
-#: of numpy.typing:236
+#: of numpy.typing:235
 msgid ""
-"A `np.ndarray[tuple[Any, ...], np.dtype[ScalarT]] <numpy.ndarray>` type "
-"alias :term:`generic <generic type>` w.r.t. its `dtype.type <numpy.dtype."
-"type>`."
+"A :term:`generic <generic type>` type alias for arrays with a given dtype "
+"and unspecified shape."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
-#: of numpy.typing:240
-msgid ""
-"Can be used during runtime for typing arrays with a given dtype and "
-"unspecified shape."
+#: of numpy.typing:238
+msgid "type NDArray[ST: generic] = ndarray[tuple[Any, ...], dtype[ST]]"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
-#: of numpy.typing:247
+#: of numpy.typing:246
 msgid ""
 ">>> import numpy as np\n"
 ">>> import numpy.typing as npt\n"
@@ -425,6 +423,103 @@ msgid ""
 "\n"
 ">>> def func(a: npt.ArrayLike) -> npt.NDArray[Any]:\n"
 "...     return np.array(a)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:266
+msgid "A 0-d `NDArray` generic type alias."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:268
+msgid "type Array0D[ST: generic] = ndarray[tuple[()], dtype[ST]]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:276
+msgid ""
+">>> import numpy as np\n"
+">>> import numpy.typing as npt\n"
+"\n"
+">>> x: npt.Array0D[np.float64] = np.array(3.14)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:286
+msgid "A 1-d `NDArray` generic type alias."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:288
+msgid "type Array1D[ST: generic] = ndarray[tuple[int], dtype[ST]]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:296
+msgid ""
+">>> import numpy as np\n"
+">>> import numpy.typing as npt\n"
+"\n"
+">>> t: npt.Array1D[np.float64] = np.linspace(0, 1, 5)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:306
+msgid "A 2-d `NDArray` generic type alias."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:308
+msgid "type Array2D[ST: generic] = ndarray[tuple[int, int], dtype[ST]]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:316
+msgid ""
+">>> import numpy as np\n"
+">>> import numpy.typing as npt\n"
+"\n"
+">>> m: npt.Array2D[np.float64] = np.eye(3)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:326
+msgid "A 3-d `NDArray` generic type alias."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:328
+msgid "type Array3D[ST: generic] = ndarray[tuple[int, int, int], dtype[ST]]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:336
+msgid ""
+">>> import numpy as np\n"
+">>> import numpy.typing as npt\n"
+"\n"
+">>> rgb: npt.Array3D[np.uint8] = np.zeros((480, 640, 3), dtype=np.uint8)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:346
+msgid "A 4-d `NDArray` generic type alias."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:348
+msgid ""
+"type Array4D[ST: generic] = ndarray[tuple[int, int, int, int], dtype[ST]]"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
+#: of numpy.typing:356
+msgid ""
+">>> import numpy as np\n"
+">>> import numpy.typing as npt\n"
+"\n"
+">>> rgb_gif: npt.Array4D[np.uint8] = np.zeros((8, 480, 640, 3), dtype=np."
+"uint8)"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.13/site-packages/numpy/typing/__init__.py:docstring
