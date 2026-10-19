@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release/1.10.1-notes.rst:3
+msgid "NumPy 1.10.1 Release Notes"
+msgstr "NumPy 1.10.1 發行備註"
+
+#: ../../../release/1.10.1-notes.rst:5
+msgid ""
+"This release deals with a few build problems that showed up in 1.10.0. Most "
+"users would not have seen these problems. The differences are:"
+msgstr ""
+
+#: ../../../release/1.10.1-notes.rst:8
+msgid ""
+"Compiling with msvc9 or msvc10 for 32 bit Windows now requires SSE2. This "
+"was the easiest fix for what looked to be some miscompiled code when SSE2 "
+"was not used. If you need to compile for 32 bit Windows systems without SSE2 "
+"support, mingw32 should still work."
+msgstr ""
+
+#: ../../../release/1.10.1-notes.rst:13
+msgid "Make compiling with VS2008 python2.7 SDK easier"
+msgstr ""
+
+#: ../../../release/1.10.1-notes.rst:15
+msgid ""
+"Change Intel compiler options so that code will also be generated to support "
+"systems without SSE4.2."
+msgstr ""
+
+#: ../../../release/1.10.1-notes.rst:18
+msgid ""
+"Some _config test functions needed an explicit integer return in order to "
+"avoid the openSUSE rpmlinter erring out."
+msgstr ""
+
+#: ../../../release/1.10.1-notes.rst:21
+msgid ""
+"We ran into a problem with pipy not allowing reuse of filenames and a "
+"resulting proliferation of *.*.*.postN releases. Not only were the names "
+"getting out of hand, some packages were unable to work with the postN suffix."
+msgstr ""
+
+#: ../../../release/1.10.1-notes.rst:27
+msgid "Numpy 1.10.1 supports Python 2.6 - 2.7 and 3.2 - 3.5."
+msgstr ""
+
+#: ../../../release/1.10.1-notes.rst:30
+msgid "Commits:"
+msgstr ""
+
+#: ../../../release/1.10.1-notes.rst:32
+msgid ""
+"45a3d84 DEP: Remove warning for `full` when dtype is set. 0c1a5df BLD: "
+"import setuptools to allow compile with VS2008 python2.7 sdk 04211c6 BUG: "
+"mask nan to 1 in ordered compare 826716f DOC: Document the reason msvc "
+"requires SSE2 on 32 bit platforms. 49fa187 BLD: enable SSE2 for 32-bit msvc "
+"9 and 10 compilers dcbc4cc MAINT: remove Wreturn-type warnings from config "
+"checks d6564cb BLD: do not build exclusively for SSE4.2 processors 15cb66f "
+"BLD: do not build exclusively for SSE4.2 processors c38bc08 DOC: fix var. "
+"reference in percentile docstring 78497f4 DOC: Sync 1.10.0-notes.rst in 1.10."
+"x branch with master."
+msgstr ""

@@ -1,0 +1,1095 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 13:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../dev/releasing.rst:3
+msgid "Releasing a version"
+msgstr ""
+
+#: ../../../dev/releasing.rst:5
+msgid ""
+"The following guides include detailed information on how to prepare a NumPy "
+"release."
+msgstr ""
+
+#: ../../../dev/releasing.rst:12
+msgid "How to prepare a release"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:1
+msgid ""
+"These instructions give an overview of what is necessary to build binary "
+"releases for NumPy."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:5
+msgid "Current build and release info"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:7
+msgid ""
+"Useful info can be found in `building-from-source` in the docs as well as in "
+"these three files:"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:10
+msgid ""
+"`HOWTO_RELEASE.rst <https://github.com/numpy/numpy/blob/main/doc/"
+"HOWTO_RELEASE.rst>`_"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:11
+msgid ""
+"`RELEASE_WALKTHROUGH.rst <https://github.com/numpy/numpy/blob/main/doc/"
+"RELEASE_WALKTHROUGH.rst>`_"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:12
+msgid ""
+"`BRANCH_WALKTHROUGH.rst <https://github.com/numpy/numpy/blob/main/doc/"
+"BRANCH_WALKTHROUGH.rst>`_"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:15
+msgid "Supported platforms and versions"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:16
+msgid ""
+":ref:`NEP 29 <NEP29>` outlines which Python versions are supported *at a "
+"minimum*. We usually decide to keep support for a given Python version "
+"slightly longer than that minimum, to avoid giving other projects issues - "
+"this is at the discretion of the release manager."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:21
+msgid "**macOS**"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:23
+msgid ""
+"We aim to support the same set of macOS versions as are supported by Python."
+"org and `cibuildwheel`_ for any given Python version. We build binary wheels "
+"for macOS that are compatible with common Python installation methods, e.g., "
+"from python.org, ``python-build-standalone`` (the ones ``uv`` installs), "
+"system Python, conda-forge, Homebrew and MacPorts."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:29
+msgid "**Windows**"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:31
+msgid ""
+"We build 32- and 64-bit wheels on Windows. Windows 7, 8 and 10 are "
+"supported. We build NumPy using the most convenient compilers, which are (as "
+"of Aug 2025) MSVC for x86/x86-64 and Clang-cl for arm64, `cibuildwheel`_ and "
+"GitHub Actions."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:38
+msgid "**Linux**"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:40
+msgid ""
+"We build and ship ``manylinux`` and ``musllinux`` wheels for x86-64 and "
+"aarch64 platforms on PyPI. Wheels for 32-bit platforms are not currently "
+"provided. We aim to support the lowest non-EOL versions, and upgrade roughly "
+"in sync with `cibuildwheel`_. See `pypa/manylinux <https://github.com/pypa/"
+"manylinux>`__ and `this distro compatibility table <https://github.com/"
+"mayeut/pep600_compliance?tab=readme-ov-file#distro-compatibility>`__ for "
+"more details."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:48
+msgid "**BSD / Solaris / AIX**"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:50
+msgid ""
+"No binary wheels are provided on PyPI, however we expect building from "
+"source on these platforms to work fine."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:54
+msgid "Toolchains"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:55
+msgid "For building wheels, we use the following toolchains:"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:57
+msgid ""
+"Linux: we use the default compilers in the ``manylinux``/``musllinux`` "
+"Docker images, which is usually a relatively recent GCC version."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:59
+msgid ""
+"macOS: we use the Apple Clang compilers and XCode version installed on the "
+"GitHub Actions runner image."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:61
+msgid ""
+"Windows: for x86 and x86-64 we use the default MSVC and Visual Studio "
+"toolchain installed on the relevant GitHub actions runner image. Note that "
+"in the past it has sometimes been necessary to use an older toolchain to "
+"avoid causing problems through the static ``libnpymath`` library for SciPy - "
+"please inspect the `numpy/numpy-release <https://github.com/numpy/numpy-"
+"release>`__ code and CI logs in case the exact version numbers need to be "
+"determined."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:68
+msgid ""
+"For building from source, minimum compiler versions are tracked in the top-"
+"level ``meson.build`` file."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:72
+msgid "OpenBLAS"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:74
+msgid ""
+"Most wheels link to a version of OpenBLAS_ supplied via the openblas-libs_ "
+"repo. The shared object (or DLL) is shipped within the wheel, renamed to "
+"prevent name collisions with other OpenBLAS shared objects that may exist in "
+"the filesystem."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:82
+msgid "Building docs"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:83
+msgid ""
+"We are no longer building ``pdf`` files. The requirements for building the "
+"``html`` docs are no different than for regular development. See the README "
+"of the `numpy/doc <https://github.com/numpy/doc>`__ repository and the step "
+"by step instructions in ``doc/RELEASE_WALKTHROUGH.rst`` for more details."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:89
+msgid "Uploading to PyPI"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:90
+msgid ""
+"Creating a release on PyPI and uploading wheels and sdist is automated in CI "
+"and uses `PyPI's trusted publishing <https://docs.pypi.org/trusted-"
+"publishers/>`__. See the README in the `numpy/numpy-release <https://github."
+"com/numpy/numpy-release>`__ repository and the step by step instructions in "
+"``doc/RELEASE_WALKTHROUGH.rst`` for more details."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:97
+msgid "Generating author/PR lists"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:98
+msgid ""
+"You will need a personal access token `<https://help.github.com/articles/"
+"creating-a-personal-access-token-for-the-command-line/>`_ so that scripts "
+"can access the GitHub NumPy repository. With that token, the author/PR "
+"changelog content can be generated by running ``spin changelog``. It may "
+"require a few extra packages, like ``gitpython`` and ``pygithub``."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:106
+msgid "What is released"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:108
+msgid ""
+"On PyPI we release wheels for a number of platforms (as discussed higher "
+"up), and an sdist."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:111
+msgid ""
+"On GitHub Releases we release the same sdist (because the source archives "
+"which are autogenerated by GitHub itself aren't complete), as well as the "
+"release notes and changelog."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:117
+msgid "Release process"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:120
+msgid "Agree on a release schedule"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:121
+msgid ""
+"A typical release schedule for a feature release is two release candidates "
+"and a final release.  It's best to discuss the timing on the mailing list "
+"first, in order for people to get their commits in on time. After a date is "
+"set, create a new ``maintenance/x.y.z`` branch, add new empty release notes "
+"for the next version in the main branch and update the Milestones on the "
+"issue tracker."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:128
+msgid "Check deprecations"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:129
+msgid ""
+"Before :ref:`the release branch is made <branching>`, it should be checked "
+"that all deprecated code that should be removed is actually removed, and all "
+"new deprecations say in the docstring or deprecation warning what version "
+"the code will be removed."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:135
+msgid "Check the C API version number"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:136
+msgid "The C API version needs to be tracked in three places"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:138
+msgid "numpy/_core/meson.build"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:139
+msgid "numpy/_core/code_generators/cversions.txt"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:140
+msgid "numpy/_core/include/numpy/numpyconfig.h"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:142
+msgid "There are three steps to the process."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:144
+msgid ""
+"If the API has changed, increment the C_API_VERSION in numpy/core/meson."
+"build. The API is unchanged only if any code compiled against the current "
+"API will be backward compatible with the last released NumPy version. Any "
+"changes to C structures or additions to the public interface will make the "
+"new API not backward compatible."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:150
+msgid ""
+"If the C_API_VERSION in the first step has changed, or if the hash of the "
+"API has changed, the cversions.txt file needs to be updated. To check the "
+"hash, run the script numpy/_core/cversions.py and note the API hash that is "
+"printed. If that hash does not match the last hash in numpy/_core/"
+"code_generators/cversions.txt the hash has changed. Using both the "
+"appropriate C_API_VERSION and hash, add a new entry to cversions.txt. If the "
+"API version was not changed, but the hash differs, you will need to comment "
+"out the previous entry for that API version. For instance, in NumPy 1.9 "
+"annotations were added, which changed the hash, but the API was the same as "
+"in 1.8. The hash serves as a check for API changes, but it is not definitive."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:162
+msgid ""
+"If steps 1 and 2 are done correctly, compiling the release should not give a "
+"warning \"API mismatch detect at the beginning of the build\"."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:165
+msgid ""
+"The numpy/_core/include/numpy/numpyconfig.h will need a new "
+"NPY_X_Y_API_VERSION macro, where X and Y are the major and minor version "
+"numbers of the release. The value given to that macro only needs to be "
+"increased from the previous version if some of the functions or macros in "
+"the include files were deprecated."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:171
+msgid ""
+"The C ABI version number in numpy/_core/meson.build should only be updated "
+"for a major release."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:176
+msgid "Check the release notes"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:177
+msgid ""
+"Use `towncrier`_ to build the release note and commit the changes. This will "
+"remove all the fragments from ``doc/release/upcoming_changes`` and add ``doc/"
+"release/<version>-note.rst``.::"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:181
+msgid ""
+"towncrier build --version \"<version>\"\n"
+"git commit -m\"Create release note\""
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:184
+msgid "Check that the release notes are up-to-date."
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:186
+msgid ""
+"Update the release notes with a Highlights section. Mention some of the "
+"following:"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:189
+msgid "major new features"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:190
+msgid "deprecated and removed features"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:191
+msgid "supported Python versions"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:192
+msgid "for SciPy, supported NumPy version(s)"
+msgstr ""
+
+#: ../../../../HOWTO_RELEASE.rst:193
+msgid "outlook for the near future"
+msgstr ""
+
+#: ../../../dev/releasing.rst:18
+msgid "Step-by-step directions"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:1
+msgid ""
+"This is a walkthrough of the NumPy 2.4.0 release on Linux, which will be the "
+"first feature release using the `numpy/numpy-release <https://github.com/"
+"numpy/numpy-release>`__ repository."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:5
+msgid ""
+"The commands can be copied into the command line, but be sure to replace "
+"2.4.0 with the correct version. This should be read together with the :ref:"
+"`general release guide <prepare_release>`."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:10
+msgid "Facility preparation"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:12
+msgid ""
+"Before beginning to make a release, use the ``requirements/*_requirements."
+"txt`` files to ensure that you have the needed software. Most software can "
+"be installed with pip, but some will require apt-get, dnf, or whatever your "
+"system uses for software. You will also need a GitHub personal access token "
+"(PAT) to push the documentation. There are a few ways to streamline things:"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:18
+msgid ""
+"Git can be set up to use a keyring to store your GitHub personal access "
+"token. Search online for the details."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:23
+msgid "Prior to release"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:26
+msgid "Add/drop Python versions"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:28
+msgid ""
+"When adding or dropping Python versions, multiple config and CI files need "
+"to be edited in addition to changing the minimum version in ``pyproject."
+"toml``. Make these changes in an ordinary PR against main and backport if "
+"necessary. We currently release wheels for new Python versions after the "
+"first Python RC once manylinux and cibuildwheel support that new Python "
+"version."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:36
+msgid "Backport pull requests"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:38
+msgid ""
+"Changes that have been marked for this release must be backported to the "
+"maintenance/2.4.x branch."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:43
+msgid "Update 2.4.0 milestones"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:45
+msgid ""
+"Look at the issues/prs with 2.4.0 milestones and either push them off to a "
+"later version, or maybe remove the milestone. You may need to add a "
+"milestone."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:49
+msgid "Check the numpy-release repo"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:51
+msgid ""
+"The things to check are the ``cibuildwheel`` version in ``.github/workflows/"
+"wheels.yml`` and the ``openblas`` versions in ``openblas_requirements.txt``."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:57
+msgid "Make a release PR"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:59
+msgid ""
+"Four documents usually need to be updated or created for the release PR:"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:61
+msgid "The changelog"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:62
+msgid "The release notes"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:63
+msgid "The ``.mailmap`` file"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:64
+msgid "The ``pyproject.toml`` file"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:66
+msgid ""
+"These changes should be made in an ordinary PR against the maintenance "
+"branch. Other small, miscellaneous fixes may be part of this PR. The commit "
+"message might be something like::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:70
+msgid ""
+"REL: Prepare for the NumPy 2.4.0 release\n"
+"\n"
+"- Create 2.4.0-changelog.rst.\n"
+"- Update 2.4.0-notes.rst.\n"
+"- Update .mailmap.\n"
+"- Update pyproject.toml"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:79
+msgid "Set the release version"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:81
+msgid ""
+"Check the ``pyproject.toml`` file and set the release version and update the "
+"classifier if needed::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:84
+#: ../../../../RELEASE_WALKTHROUGH.rst:290
+msgid "$ gvim pyproject.toml"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:88
+msgid "Check the ``doc/source/release.rst`` file"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:90
+msgid ""
+"make sure that the release notes have an entry in the ``release.rst`` file::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:92
+#: ../../../../RELEASE_WALKTHROUGH.rst:286
+msgid "$ gvim doc/source/release.rst"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:96
+msgid "Generate the changelog"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:98
+msgid ""
+"The changelog is generated using the changelog tool (``spin changelog``), "
+"which collects merged pull requests and formats them into a release-ready "
+"changelog::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:102
+msgid ""
+"$ spin changelog $GITHUB v2.3.0..maintenance/2.4.x > doc/changelog/2.4.0-"
+"changelog.rst"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:104
+msgid ""
+"where ``GITHUB`` contains your GitHub access token. The text will need to be "
+"checked for non-standard contributor names. It is also a good idea to remove "
+"any links that may be present in the PR titles as they don't translate well "
+"to Markdown, replace them with monospaced text. The non-standard contributor "
+"names should be fixed by updating the ``.mailmap`` file, which is a lot of "
+"work. It is best to make several trial runs before reaching this point and "
+"ping the malefactors using a GitHub issue to get the needed information."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:114
+msgid "Finish the release notes"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:116
+msgid ""
+"If there are any release notes snippets in ``doc/release/upcoming_changes/"
+"``, run ``spin notes``, which will incorporate the snippets into the ``doc/"
+"source/release/notes-towncrier.rst`` file and delete the snippets::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:120
+msgid ""
+"$ spin notes\n"
+"$ gvim doc/source/release/notes-towncrier.rst doc/source/release/2.4.0-notes."
+"rst"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:123
+msgid ""
+"Once the ``notes-towncrier`` contents have been incorporated into release "
+"notes the ``.. include:: notes-towncrier.rst`` directive can be removed.  "
+"The notes will always need some fixups, the introduction will need to be "
+"written, and significant changes should be called out. For patch releases "
+"the changelog text may also be appended, but not for the initial release as "
+"it is too long. Check previous release notes to see how this is done."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:132
+msgid "Test the wheel builds"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:134
+msgid ""
+"After the release PR is merged, go to the ``numpy-release`` repository in "
+"your browser and manually trigger the workflow on the ``maintenance/2.4.x`` "
+"branch using the ``Run workflow`` button in ``actions``.  Make sure that the "
+"upload target is ``none`` in the *environment* dropdown. The wheels take "
+"about 1 hour to build, but sometimes GitHub is very slow. If some wheel "
+"builds fail for unrelated reasons, you can re-run them as normal in the "
+"GitHub Actions UI with ``re-run failed``. After the wheels are built review "
+"the results, checking that the number of artifacts are correct, the wheel "
+"names are as expected, etc. If everything looks good, proceed with the "
+"release."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:146
+msgid "Release walkthrough"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:148
+msgid ""
+"Note that in the code snippets below, ``upstream`` refers to the root "
+"repository on GitHub and ``origin`` to its fork in your personal GitHub "
+"repositories. You may need to make adjustments if you have not forked the "
+"repository but simply cloned it locally. You can also edit ``.git/config`` "
+"and add ``upstream`` if it isn't already present."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:156
+msgid "1. Tag the release commit"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:158
+msgid ""
+"Checkout the branch for the release, make sure it is up to date, and clean "
+"the repository::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:161
+msgid ""
+"$ git checkout maintenance/2.4.x\n"
+"$ git pull upstream maintenance/2.4.x\n"
+"$ git submodule update\n"
+"$ git clean -xdfq"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:166
+msgid "Sanity check::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:168
+msgid "$ python3 -m spin test -m full"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:170
+msgid ""
+"Tag the release and push the tag. This requires write permission for the "
+"numpy repository::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:173
+msgid ""
+"$ git tag -a -s v2.4.0 -m\"NumPy 2.4.0 release\"\n"
+"$ git push upstream v2.4.0"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:176
+msgid "If you need to delete the tag due to error::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:178
+msgid ""
+"$ git tag -d v2.4.0\n"
+"$ git push --delete upstream v2.4.0"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:183
+msgid "2. Build wheels and sdist"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:185
+msgid ""
+"Go to the ``numpy-release`` repository in your browser and manually trigger "
+"the workflow on the ``maintenance/2.4.x`` branch using the ``Run workflow`` "
+"button in ``actions``.  Make sure that the upload target is ``pypi`` in the "
+"*environment* dropdown. The wheels take about 1 hour to build, but sometimes "
+"GitHub is very slow. If some wheel builds fail for unrelated reasons, you "
+"can re-run them as normal in the GitHub Actions UI with ``re-run failed``. "
+"After the wheels are built review the results, checking that the number of "
+"artifacts are correct, the wheel names are as expected, etc. If everything "
+"looks good trigger the upload."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:197
+msgid "3. Upload files to GitHub Releases"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:199
+msgid ""
+"Go to `<https://github.com/numpy/numpy/releases>`_, there should be a "
+"``v2.4.0`` tag, click on it and hit the edit button for that tag and update "
+"the title to \"v2.4.0 (<date>)\". There are two ways to add files, using an "
+"editable text window and as binary uploads. The text window needs markdown, "
+"so translate the release notes from rst to md::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:205
+msgid "$ python tools/write_release.py 2.4.0"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:207
+msgid ""
+"this will create a ``release/README.md`` file that you can edit. Check the "
+"result to see that it looks correct. Things that may need fixing: wrapped "
+"lines that need unwrapping and links that should be changed to monospaced "
+"text. Then copy the contents to the clipboard and paste them into the text "
+"window. It may take several tries to get it look right. Then"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:213
+msgid ""
+"Download the sdist (``numpy-2.4.0.tar.gz``) from PyPI and upload it to "
+"GitHub as a binary file. You cannot do this using pip."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:215
+msgid "Upload ``release/README.rst`` as a binary file."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:216
+msgid "Upload ``doc/changelog/2.4.0-changelog.rst`` as a binary file."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:217
+msgid "Check the pre-release button if this is a pre-releases."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:218
+msgid "Hit the ``Publish release`` button at the bottom."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:221
+msgid ""
+"Please ensure that all 3 files are uploaded are present and the release text "
+"is complete. Releases are configured to be immutable, so mistakes can't "
+"(easily) be fixed anymore."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:227
+msgid "4. Upload documents to numpy.org (skip for prereleases)"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:229
+msgid "You will need a GitHub personal access token to push the update."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:231
+msgid ""
+"This step is only needed for final releases and can be skipped for pre-"
+"releases and most patch releases. ``make merge-doc`` clones the ``numpy/"
+"doc`` repo into ``doc/build/merge`` and updates it with the new "
+"documentation::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:235
+msgid ""
+"$ git clean -xdfq\n"
+"$ git co v2.4.0\n"
+"$ rm -rf doc/build  # want version to be current\n"
+"$ python -m spin docs merge-doc --build\n"
+"$ pushd doc/build/merge"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:241
+msgid ""
+"If the release series is a new one, you will need to add a new section to "
+"the ``doc/build/merge/index.html`` front page just after the \"insert here\" "
+"comment::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:244
+msgid "$ gvim index.html +/'insert here'"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:246
+msgid ""
+"Further, update the version-switcher json file to add the new release and "
+"update the version marked ``(stable)`` and ``preferred``::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:249
+msgid "$ gvim _static/versions.json"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:251
+msgid "Then run ``update.py`` to update the version in ``_static``::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:253
+msgid "$ python3 update.py"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:255
+msgid ""
+"You can \"test run\" the new documentation in a browser to make sure the "
+"links work, although the version dropdown will not change, it pulls its "
+"information from ``numpy.org``::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:259
+msgid "$ firefox index.html  # or google-chrome, etc."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:261
+msgid "Update the stable link and update::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:263
+msgid ""
+"$ ln -sfn 2.4 stable\n"
+"$ ls -l  # check the link"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:266
+msgid ""
+"Once everything seems satisfactory, update, commit and upload the changes::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:268
+msgid ""
+"$ git commit -a -m\"Add documentation for v2.4.0\"\n"
+"$ git push git@github.com:numpy/doc\n"
+"$ popd"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:274
+msgid ""
+"5. Reset the maintenance branch into a development state (skip for "
+"prereleases)"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:276
+msgid ""
+"Create release notes for next release and edit them to set the version. "
+"These notes will be a skeleton and have little content::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:279
+msgid ""
+"$ git checkout -b begin-2.4.1 maintenance/2.4.x\n"
+"$ cp doc/source/release/template.rst doc/source/release/2.4.1-notes.rst\n"
+"$ gvim doc/source/release/2.4.1-notes.rst\n"
+"$ git add doc/source/release/2.4.1-notes.rst"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:284
+msgid "Add a link to the new release notes::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:288
+msgid "Update the ``version`` in ``pyproject.toml``::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:292
+msgid ""
+"Commit the result, edit the commit message, note the files in the commit, "
+"and add a line ``[skip cirrus] [skip actions]``, then push::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:295
+msgid ""
+"$ git commit -a -m\"MAINT: Prepare 2.4.x for further development\"\n"
+"$ git rebase -i HEAD^\n"
+"$ git push origin HEAD"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:299
+msgid "Go to GitHub and make a PR. It should be merged quickly."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:303
+msgid "6. Announce the release on numpy.org (skip for prereleases)"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:305
+msgid ""
+"This assumes that you have forked `<https://github.com/numpy/numpy.org>`_::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:307
+msgid ""
+"$ cd ../numpy.org\n"
+"$ git checkout main\n"
+"$ git pull upstream main\n"
+"$ git checkout -b announce-numpy-2.4.0\n"
+"$ gvim content/en/news.md"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:313
+msgid ""
+"For all releases, go to the bottom of the page and add a one line link. Look "
+"to the previous links for example."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:315
+msgid "For the ``*.0`` release in a cycle:"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:317
+msgid ""
+"Add a new section at the top with a short description of the new features "
+"and point the news link to it."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:319
+msgid "Edit the newsHeader and date fields at the top of news.md"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:320
+msgid "Also edit the buttonText on line 14 in content/en/config.yaml"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:322
+msgid "commit and push::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:324
+msgid ""
+"$ git commit -a -m\"announce the NumPy 2.4.0 release\"\n"
+"$ git push origin HEAD"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:327
+#: ../../../../RELEASE_WALKTHROUGH.rst:355
+msgid "Go to GitHub and make a PR."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:331
+msgid "7. Announce to mailing lists"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:333
+msgid ""
+"The release should be announced on the numpy-discussion and python-announce-"
+"list mailing lists. Look at previous announcements for the basic template. "
+"The contributor and PR lists are the same as generated for the release notes "
+"above. If you cross-post, make sure that python-announce-list is BCC so that "
+"replies will not be sent to that list."
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:341
+msgid "8. Post-release update main (skip for prereleases)"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:343
+msgid ""
+"Checkout main and forward port the documentation changes. You may also want "
+"to update these notes if procedures have changed or improved::"
+msgstr ""
+
+#: ../../../../RELEASE_WALKTHROUGH.rst:346
+msgid ""
+"$ git checkout -b post-2.4.0-release-update main\n"
+"$ git checkout maintenance/2.4.x doc/source/release/2.4.0-notes.rst\n"
+"$ git checkout maintenance/2.4.x doc/changelog/2.4.0-changelog.rst\n"
+"$ git checkout maintenance/2.4.x .mailmap  # only if updated for release.\n"
+"$ gvim doc/source/release.rst  # Add link to new notes\n"
+"$ git status  # check status before commit\n"
+"$ git commit -a -m\"MAINT: Update main after 2.4.0 release.\"\n"
+"$ git push origin HEAD"
+msgstr ""
+
+#: ../../../dev/releasing.rst:26
+msgid "Branch walkthrough"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:1
+msgid ""
+"This guide contains a walkthrough of branching NumPy 2.3.x on Linux.  The "
+"commands can be copied into the command line, but be sure to replace 2.3 and "
+"2.4 by the correct versions. It is good practice to make ``.mailmap`` as "
+"current as possible before making the branch, that may take several weeks."
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:6
+msgid ""
+"This should be read together with the :ref:`general release guide "
+"<prepare_release>`."
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:10
+msgid "Branching"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:13
+msgid "Make the branch"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:15
+msgid ""
+"This is only needed when starting a new maintenance branch. The start of a "
+"new development cycle in the main branch should get an annotated tag. That "
+"is done as follows::"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:19
+msgid ""
+"$ git checkout main\n"
+"$ git pull upstream main\n"
+"$ git commit --allow-empty -m'REL: Begin NumPy 2.4.0 development'\n"
+"$ git push upstream HEAD"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:24
+msgid "If the push fails because new PRs have been merged, do::"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:26
+msgid "$ git pull --rebase upstream"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:28
+msgid "and repeat the push. Once the push succeeds, tag it::"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:30
+msgid ""
+"$ git tag -a -s v2.4.0.dev0 -m'Begin NumPy 2.4.0 development'\n"
+"$ git push upstream v2.4.0.dev0"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:33
+msgid "then make the new branch and push it::"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:35
+msgid ""
+"$ git branch maintenance/2.3.x HEAD^\n"
+"$ git push upstream maintenance/2.3.x"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:39
+msgid "Prepare the main branch for further development"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:41
+msgid "Make a PR branch to prepare ``main`` for further development::"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:43
+msgid "$ git checkout -b 'prepare-main-for-2.4.0-development' v2.4.0.dev0"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:45
+msgid "Delete the release note fragments::"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:47
+msgid "$ git rm doc/release/upcoming_changes/[0-9]*.*.rst"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:49
+msgid "Create the new release notes skeleton and add to index::"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:51
+msgid ""
+"$ cp doc/source/release/template.rst doc/source/release/2.4.0-notes.rst\n"
+"$ gvim doc/source/release/2.4.0-notes.rst  # put the correct version\n"
+"$ git add doc/source/release/2.4.0-notes.rst\n"
+"$ gvim doc/source/release.rst  # add new notes to notes index\n"
+"$ git add doc/source/release.rst"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:57
+msgid ""
+"Update ``cversions.txt`` to add current release. There should be no new hash "
+"to worry about at this early point, just add a comment following previous "
+"practice::"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:61
+msgid ""
+"$ gvim numpy/_core/code_generators/cversions.txt\n"
+"$ git add numpy/_core/code_generators/cversions.txt"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:64
+msgid "Check your work, commit it, and push::"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:66
+msgid ""
+"$ git status  # check work\n"
+"$ git commit -m'REL: Prepare main for NumPy 2.4.0 development'\n"
+"$ git push origin HEAD"
+msgstr ""
+
+#: ../../../../BRANCH_WALKTHROUGH.rst:70
+msgid "Now make a pull request."
+msgstr ""
