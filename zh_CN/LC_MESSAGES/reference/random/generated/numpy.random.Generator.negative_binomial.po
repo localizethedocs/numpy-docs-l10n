@@ -1,0 +1,220 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/generated/numpy.random.Generator.negative_binomial.rst:4
+msgid "numpy.random.Generator.negative\\_binomial"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.Generator.negative_binomial.rst:8
+msgid "method"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:2
+msgid "Draw samples from a negative binomial distribution."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:4
+msgid ""
+"Samples are drawn from a negative binomial distribution with specified "
+"parameters, `n` successes and `p` probability of success where `n` is > 0 "
+"and `p` is in the interval (0, 1]."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:11
+msgid "**n**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:-1
+msgid "float or array_like of floats"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:11
+msgid "Parameter of the distribution, > 0."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:14
+msgid "**p**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:14
+msgid "Parameter of the distribution. Must satisfy 0 < p <= 1."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:20
+msgid "**size**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:-1
+msgid "int or tuple of ints, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:17
+msgid ""
+"Output shape.  If the given shape is, e.g., ``(m, n, k)``, then ``m * n * "
+"k`` samples are drawn.  If size is ``None`` (default), a single value is "
+"returned if ``n`` and ``p`` are both scalars. Otherwise, ``np.broadcast(n, "
+"p).size`` samples are drawn."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:34
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:-1
+msgid "ndarray or scalar"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:25
+msgid ""
+"Drawn samples from the parameterized negative binomial distribution, where "
+"each sample is equal to N, the number of failures that occurred before a "
+"total of n successes was reached."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:37
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:38
+msgid "The probability mass function of the negative binomial distribution is"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:40
+msgid ""
+"P(N;n,p) = \\frac{\\Gamma(N+n)}{N!\\Gamma(n)}p^{n}(1-p)^{N},\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:42
+msgid ""
+"where :math:`n` is the number of successes, :math:`p` is the probability of "
+"success, :math:`N+n` is the number of trials, and :math:`\\Gamma` is the "
+"gamma function. When :math:`n` is an integer, :math:`\\frac{\\Gamma(N+n)}{N!"
+"\\Gamma(n)} = \\binom{N+n-1}{N}`, which is the more common form of this term "
+"in the pmf. The negative binomial distribution gives the probability of N "
+"failures given n successes, with a success on the last trial."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:50
+msgid ""
+"If one throws a die repeatedly until the third time a \"1\" appears, then "
+"the probability distribution of the number of non-\"1\"s that appear before "
+"the third \"1\" is a negative binomial distribution."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:54
+msgid ""
+"Because this method internally calls ``Generator.poisson`` with an "
+"intermediate random value, a ValueError is raised when the choice of  :math:"
+"`n` and :math:`p` would result in the mean + 10 sigma of the sampled "
+"intermediate distribution exceeding the max acceptable value of the  "
+"``Generator.poisson`` method. This happens when :math:`p` is too low  (a lot "
+"of failures happen for every success) and :math:`n` is too big ( a lot of "
+"successes are allowed). Therefore, the :math:`n` and :math:`p` values must "
+"satisfy the constraint:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:63
+msgid ""
+"n\\frac{1-p}{p}+10n\\sqrt{n}\\frac{1-p}{p}<2^{63}-1-10\\sqrt{2^{63}-1},\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:65
+msgid ""
+"Where the left side of the equation is the derived mean + 10 sigma of a "
+"sample from the gamma distribution internally used as the :math:`lam` "
+"parameter of a poisson sample, and the right side of the equation is the "
+"constraint for maximum value of :math:`lam` in ``Generator.poisson``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:71
+msgid "References"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:72
+msgid ""
+"Weisstein, Eric W. \"Negative Binomial Distribution.\" From MathWorld--A "
+"Wolfram Web Resource. http://mathworld.wolfram.com/"
+"NegativeBinomialDistribution.html"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:75
+msgid ""
+"Wikipedia, \"Negative binomial distribution\", https://en.wikipedia.org/wiki/"
+"Negative_binomial_distribution"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:80
+msgid "[R30b32598df4a-1]_, [R30b32598df4a-2]_"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:83
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:84
+msgid "Draw samples from the distribution:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.Generator.negative_binomial:86
+msgid ""
+"A real world example. A company drills wild-cat oil exploration wells, each "
+"with an estimated probability of success of 0.1.  What is the probability of "
+"having one success for each successive well, that is what is the probability "
+"of a single success after drilling 5 wells, after 6 wells, etc.?"
+msgstr ""

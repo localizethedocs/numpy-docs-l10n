@@ -1,0 +1,397 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.polynomial.chebyshev.chebfit.rst:4
+msgid "numpy.polynomial.chebyshev.chebfit"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:2
+msgid "Least squares fit of Chebyshev series to data."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:4
+msgid ""
+"Return the coefficients of a Chebyshev series of degree `deg` that is the "
+"least squares fit to the data values `y` given at points `x`. If `y` is 1-D "
+"the returned coefficients will also be 1-D. If `y` is 2-D multiple fits are "
+"done, one for each column of `y`, and the resulting coefficients are stored "
+"in the corresponding columns of a 2-D return. The fitted polynomial(s) are "
+"in the form"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:11
+msgid ""
+"p(x) = c_0 + c_1 * T_1(x) + ... + c_n * T_n(x),\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:13
+msgid "where `n` is `deg`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:18
+msgid "**x**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:-1
+msgid "array_like, shape (M,)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:18
+msgid "x-coordinates of the M sample points ``(x[i], y[i])``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:23
+msgid "**y**"
+msgstr "**y**"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:-1
+msgid "array_like, shape (M,) or (M, K)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:21
+msgid ""
+"y-coordinates of the sample points. Several data sets of sample points "
+"sharing the same x-coordinates can be fitted at once by passing in a 2D-"
+"array that contains one dataset per column."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:29
+msgid "**deg**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:-1
+msgid "int or 1-D array_like"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:26
+msgid ""
+"Degree(s) of the fitting polynomials. If `deg` is a single integer, all "
+"terms up to and including the `deg`'th term are included in the fit. For "
+"NumPy versions >= 1.11.0 a list of integers specifying the degrees of the "
+"terms to include may be used instead."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:35
+msgid "**rcond**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:-1
+msgid "float, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:32
+msgid ""
+"Relative condition number of the fit. Singular values smaller than this "
+"relative to the largest singular value will be ignored. The default value is "
+"len(x)*eps, where eps is the relative precision of the float type, about "
+"2e-16 in most cases."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:40
+msgid "**full**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:-1
+msgid "bool, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:38
+msgid ""
+"Switch determining nature of return value. When it is False (the default) "
+"just the coefficients are returned, when True diagnostic information from "
+"the singular value decomposition is also returned."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:49
+msgid "**w** : array_like, shape (`M`,), optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:-1
+msgid "array_like, shape ("
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:43
+msgid ""
+"Weights. If not None, the weight ``w[i]`` applies to the unsquared residual "
+"``y[i] - y_hat[i]`` at ``x[i]``. Ideally the weights are chosen so that the "
+"errors of the products ``w[i]*y[i]`` all have the same variance.  When using "
+"inverse-variance weighting, use ``w[i] = 1/sigma(y[i])``.  The default value "
+"is None."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:0
+msgid "Returns"
+msgstr "回傳值"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:56
+msgid "**coef**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:-1
+msgid "ndarray, shape (M,) or (M, K)"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:54
+msgid ""
+"Chebyshev coefficients ordered from low to high. If `y` was 2-D, the "
+"coefficients for the data in column k  of `y` are in column `k`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:70
+msgid "**[residuals, rank, singular_values, rcond]**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:-1
+msgid "list"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:59
+msgid "These values are only returned if ``full == True``"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:61
+msgid "residuals -- sum of squared residuals of the least squares fit"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:62
+msgid "rank -- the numerical rank of the scaled Vandermonde matrix"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:63
+msgid "singular_values -- singular values of the scaled Vandermonde matrix"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:64
+msgid "rcond -- value of `rcond`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:66
+msgid "For more details, see `numpy.linalg.lstsq`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:0
+msgid "Warns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:81
+msgid "RankWarning"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:75
+msgid ""
+"The rank of the coefficient matrix in the least-squares fit is deficient. "
+"The warning is only raised if ``full == False``.  The warnings can be turned "
+"off by"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:86
+msgid ":obj:`numpy.polynomial.polynomial.polyfit`"
+msgstr ":obj:`numpy.polynomial.polynomial.polyfit`"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:88
+msgid ":obj:`numpy.polynomial.legendre.legfit`"
+msgstr ":obj:`numpy.polynomial.legendre.legfit`"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:90
+msgid ":obj:`numpy.polynomial.laguerre.lagfit`"
+msgstr ":obj:`numpy.polynomial.laguerre.lagfit`"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:92
+msgid ":obj:`numpy.polynomial.hermite.hermfit`"
+msgstr ":obj:`numpy.polynomial.hermite.hermfit`"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:94
+msgid ":obj:`numpy.polynomial.hermite_e.hermefit`"
+msgstr ":obj:`numpy.polynomial.hermite_e.hermefit`"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:96
+msgid ":obj:`chebval`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:97
+msgid "Evaluates a Chebyshev series."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:98
+msgid ":obj:`chebvander`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:99
+msgid "Vandermonde matrix of Chebyshev series."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:100
+msgid ":obj:`chebweight`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:101
+msgid "Chebyshev weight function."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:102
+msgid ":obj:`numpy.linalg.lstsq`"
+msgstr ":obj:`numpy.linalg.lstsq`"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:103
+msgid "Computes a least-squares fit from the matrix."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:104
+msgid ":obj:`scipy.interpolate.UnivariateSpline`"
+msgstr ":obj:`scipy.interpolate.UnivariateSpline`"
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:105
+msgid "Computes spline fits."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:109
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:110
+msgid ""
+"The solution is the coefficients of the Chebyshev series `p` that minimizes "
+"the sum of the weighted squared errors"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:113
+msgid ""
+"E = \\sum_j w_j^2 * |y_j - p(x_j)|^2,\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:115
+msgid ""
+"where :math:`w_j` are the weights. This problem is solved by setting up as "
+"the (typically) overdetermined matrix equation"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:118
+msgid ""
+"V(x) * c = w * y,\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:120
+msgid ""
+"where `V` is the weighted pseudo Vandermonde matrix of `x`, `c` are the "
+"coefficients to be solved for, `w` are the weights, and `y` are the observed "
+"values.  This equation is then solved using the singular value decomposition "
+"of `V`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:125
+msgid ""
+"If some of the singular values of `V` are so small that they are neglected, "
+"then a `RankWarning` will be issued. This means that the coefficient values "
+"may be poorly determined. Using a lower order fit will usually get rid of "
+"the warning.  The `rcond` parameter can also be set to a value smaller than "
+"its default, but the resulting fit may be spurious and have large "
+"contributions from roundoff error."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:132
+msgid ""
+"Fits using Chebyshev series are usually better conditioned than fits using "
+"power series, but much can depend on the distribution of the sample points "
+"and the smoothness of the data. If the quality of the fit is inadequate "
+"splines may be a good alternative."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:138
+msgid "References"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:139
+msgid ""
+"Wikipedia, \"Curve fitting\", https://en.wikipedia.org/wiki/Curve_fitting"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py:docstring
+#: of numpy.polynomial.chebyshev.chebfit:144
+msgid "[R0f3b6a011c4f-1]_"
+msgstr ""
