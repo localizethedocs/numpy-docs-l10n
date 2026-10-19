@@ -1,0 +1,1488 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en-US" data-content_root="../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Datetimes and timedeltas &#8212; NumPy v2.5 Manual</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css?v=f676e775" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/numpy.css?v=7e165a8b" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="../_static/documentation_options.js?v=15104687"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script src="../_static/jupyterlite_sphinx.js?v=96e329c5"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-domain="numpy.org/doc/stable/" defer="defer" src="https://views.scientific-python.org/js/script.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/arrays.datetime';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.17.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '2.5';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            0;
+        </script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://projects.localizethedocs.org/numpy-docs-l10n/reference/arrays.datetime.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Universal functions (ufunc)" href="ufuncs.html" />
+    <link rel="prev" title="The array interface protocol" href="arrays.interface.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en-US"/>
+  <meta name="docsearch:version" content="2.5" />
+    <meta name="docbuild:last-update" content="Oct 19, 2026"/>
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+<script type="text/javascript" src="../ltd-provenance.js"></script>
+<script type="text/javascript" src="../ltd-current.js"></script>
+<script type="text/javascript" src="../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../ltd-flyout.js"></script>
+
+  </head>
+  <body data-default-mode="light">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.5 Manual - Home"/>
+    <img src="../_static/numpylogo_dark.svg" class="logo__image only-dark pst-js-only" alt="NumPy v2.5 Manual - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../user/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../building/index.html">
+    Building from source
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../dev/index.html">
+    Development
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../release.html">
+    Release notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://numpy.org/numpy-tutorials/">
+    Learn
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://numpy.org/neps">
+    NEPs
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button></div>
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/numpy/numpy" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../user/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    API reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../building/index.html">
+    Building from source
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../dev/index.html">
+    Development
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../release.html">
+    Release notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://numpy.org/numpy-tutorials/">
+    Learn
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://numpy.org/neps">
+    NEPs
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button></div>
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/numpy/numpy" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar"><svg class="pst-icon svg-inline--fa" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="module_structure.html">NumPy’s module structure</a></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="arrays.html">Array objects</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="arrays.ndarray.html">The N-dimensional array (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arrays.scalars.html">Scalars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arrays.dtypes.html">Data type objects (<code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arrays.promotion.html">Data type promotion in NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arrays.nditer.html">Iterating over arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arrays.classes.html">Standard array subclasses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maskedarray.html">Masked arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arrays.interface.html">The array interface protocol</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Datetimes and timedeltas</a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ufuncs.html">Universal functions (<code class="xref py py-class docutils literal notranslate"><span class="pre">ufunc</span></code>)</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="routines.html">Routines and objects by topic</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="typing.html">Typing (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.typing</span></code>)</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="c-api/index.html">NumPy C-API</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="array_api.html">Array API standard compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simd/index.html">CPU/SIMD optimizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thread_safety.html">Thread Safety</a></li>
+<li class="toctree-l1"><a class="reference internal" href="global_state.html">Global Configuration Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">NumPy security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distutils_status_migration.html">Status of <code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> and migration advice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="swig.html">NumPy and SWIG</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">NumPy reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="arrays.html" class="nav-link">Array objects</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Datetimes and timedeltas</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="datetimes-and-timedeltas">
+<span id="arrays-datetime"></span><h1>Datetimes and timedeltas<a class="headerlink" href="#datetimes-and-timedeltas" title="Link to this heading">#</a></h1>
+<p>Starting in NumPy 1.7, there are core array data types which natively
+support datetime functionality. The data type is called <a class="reference internal" href="arrays.scalars.html#numpy.datetime64" title="numpy.datetime64"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime64</span></code></a>,
+so named because <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a> is already taken by the Python standard library.</p>
+<section id="datetime64-conventions-and-assumptions">
+<h2>Datetime64 conventions and assumptions<a class="headerlink" href="#datetime64-conventions-and-assumptions" title="Link to this heading">#</a></h2>
+<p>Similar to the Python <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.date" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">date</span></code></a> class, dates are expressed in the current
+Gregorian Calendar, indefinitely extended both in the future and in the past.
+<a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> Contrary to Python <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.date" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">date</span></code></a>, which supports only years in the 1 AD — 9999
+AD range, <a class="reference internal" href="arrays.scalars.html#numpy.datetime64" title="numpy.datetime64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime64</span></code></a> allows also for dates BC; years BC follow the <a class="reference external" href="https://en.wikipedia.org/wiki/Astronomical_year_numbering">Astronomical
+year numbering</a>
+convention, i.e. year 2 BC is numbered −1, year 1 BC is numbered 0, year 1 AD is
+numbered 1.</p>
+<p>Time instants, say 16:23:32.234, are represented counting hours, minutes,
+seconds and fractions from midnight: i.e. 00:00:00.000 is midnight, 12:00:00.000
+is noon, etc. Each calendar day has exactly 86400 seconds. This is a “naive”
+time, with no explicit notion of timezones or specific time scales (UT1, UTC, TAI,
+etc.). <a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id3" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>The calendar obtained by extending the Gregorian calendar before its
+official adoption on Oct. 15, 1582 is called <a class="reference external" href="https://en.wikipedia.org/wiki/Proleptic_Gregorian_calendar">Proleptic Gregorian Calendar</a></p>
+</aside>
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>The assumption of 86400 seconds per calendar day is not valid for UTC,
+the present day civil time scale. In fact due to the presence of
+<a class="reference external" href="https://en.wikipedia.org/wiki/Leap_second">leap seconds</a> on rare occasions
+a day may be 86401 or 86399 seconds long. On the contrary the 86400s day
+assumption holds for the TAI timescale. An explicit support for TAI and
+TAI to UTC conversion, accounting for leap seconds, is proposed but not
+yet implemented. See also the <a class="reference internal" href="#shortcomings">shortcomings</a> section below.</p>
+</aside>
+</aside>
+</section>
+<section id="basic-datetimes">
+<h2>Basic datetimes<a class="headerlink" href="#basic-datetimes" title="Link to this heading">#</a></h2>
+<p>The most basic way to create datetimes is from strings in ISO 8601 date
+or datetime format. It is also possible to create datetimes from an integer by
+offset relative to the Unix epoch (00:00:00 UTC on 1 January 1970).
+The unit for internal storage is automatically selected from the
+form of the string, and can be either a <a class="reference internal" href="#arrays-dtypes-dateunits"><span class="std std-ref">date unit</span></a> or a
+<a class="reference internal" href="#arrays-dtypes-timeunits"><span class="std std-ref">time unit</span></a>. The date units are years (‘Y’),
+months (‘M’), weeks (‘W’), and days (‘D’), while the time units are
+hours (‘h’), minutes (‘m’), seconds (‘s’), milliseconds (‘ms’), and
+some additional SI-prefix seconds-based units. The <a class="reference internal" href="arrays.scalars.html#numpy.datetime64" title="numpy.datetime64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime64</span></code></a> data type
+also accepts the string “NAT”, in any combination of lowercase/uppercase
+letters, for a “Not A Time” value. The string “now” is also supported and
+returns the current UTC time. By default, it uses second (‘s’) precision, but
+you can specify a different unit (e.g., ‘M’, ‘D’, ‘h’) to truncate the result
+to that precision. Units finer than seconds (such as ‘ms’ or ‘ns’) are
+supported but will show fractional parts as zeros, effectively truncating to
+whole seconds. The string “today” is also supported and returns the current UTC
+date with day precision. It also supports the same precision specifiers
+as <code class="docutils literal notranslate"><span class="pre">now</span></code>.</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="try_examples_outer_container docutils container" id="f888ff86-dbdd-4e04-82a8-de4cbe62a88d">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('f888ff86-dbdd-4e04-82a8-de4cbe62a88d','5872627e-5e82-4620-ba57-e76d8674ceea','8a0fe75e-ca16-4e0c-b03f-c6f39b9cee6b','../lite/tree/../notebooks/index.html?path=3ba182f3_fc44_40c3_b64f_91826b5efa82.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<p>A simple ISO date:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2005-02-25'</span><span class="p">)</span>
+<span class="go">np.datetime64('2005-02-25')</span>
+</pre></div>
+</div>
+<p>From an integer and a date unit, 1 year since the UNIX epoch:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'Y'</span><span class="p">)</span>
+<span class="go">np.datetime64('1971')</span>
+</pre></div>
+</div>
+<p>Using months for the unit:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2005-02'</span><span class="p">)</span>
+<span class="go">np.datetime64('2005-02')</span>
+</pre></div>
+</div>
+<p>Specifying just the month, but forcing a ‘days’ unit:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2005-02'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">)</span>
+<span class="go">np.datetime64('2005-02-01')</span>
+</pre></div>
+</div>
+<p>From a date and time:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2005-02-25T03:30'</span><span class="p">)</span>
+<span class="go">np.datetime64('2005-02-25T03:30')</span>
+</pre></div>
+</div>
+<p>NAT (not a time):</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'nat'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">)</span>
+<span class="go">np.datetime64('NaT', 'D')</span>
+</pre></div>
+</div>
+<p>The current time (UTC, default second precision):</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'now'</span><span class="p">)</span>
+<span class="go">np.datetime64('2025-08-05T02:22:14')  # result will depend on the current time</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'now'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">)</span>
+<span class="go">np.datetime64('2025-08-05')</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'now'</span><span class="p">,</span> <span class="s1">'ms'</span><span class="p">)</span>
+<span class="go">np.datetime64('2025-08-05T02:22:14.000')</span>
+</pre></div>
+</div>
+<p>The current date:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'today'</span><span class="p">)</span>
+<span class="go">np.datetime64('2025-08-05')  # result will depend on the current date</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="8a0fe75e-ca16-4e0c-b03f-c6f39b9cee6b" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('f888ff86-dbdd-4e04-82a8-de4cbe62a88d','8a0fe75e-ca16-4e0c-b03f-c6f39b9cee6b')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('f888ff86-dbdd-4e04-82a8-de4cbe62a88d','8a0fe75e-ca16-4e0c-b03f-c6f39b9cee6b')">Open In Tab</button></div><div id="5872627e-5e82-4620-ba57-e76d8674ceea" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<p>When creating an array of datetimes from a string, it is still possible
+to automatically select the unit from the inputs, by using the
+datetime type with generic units.</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 2.5: </span>The generic units of <a class="reference internal" href="arrays.scalars.html#numpy.timedelta64" title="numpy.timedelta64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timedelta64</span></code></a> were deprecated in NumPy 2.5 and
+will raise an error in the future. With this change,
+<code class="docutils literal notranslate"><span class="pre">NaT</span></code> in <a class="reference internal" href="arrays.scalars.html#numpy.datetime64" title="numpy.datetime64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime64</span></code></a> is now required to have an explicit time unit.</p>
+</div>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="try_examples_outer_container docutils container" id="fe91388a-e313-4037-888f-0c772bf838c8">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('fe91388a-e313-4037-888f-0c772bf838c8','0d19971c-3304-4362-9663-b719bd1971f1','8afbfe84-ca48-4cb6-a9ac-84a5eae5c716','../lite/tree/../notebooks/index.html?path=78ff7928_33e3_43f6_962f_3e7d592c5d24.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">'2007-07-13'</span><span class="p">,</span> <span class="s1">'2006-01-13'</span><span class="p">,</span> <span class="s1">'2010-08-13'</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">)</span>
+<span class="go">array(['2007-07-13', '2006-01-13', '2010-08-13'], dtype='datetime64[D]')</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">'2001-01-01T12:00'</span><span class="p">,</span> <span class="s1">'2002-02-03T13:56:03.172'</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">)</span>
+<span class="go">array(['2001-01-01T12:00:00.000', '2002-02-03T13:56:03.172'],</span>
+<span class="go">      dtype='datetime64[ms]')</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="8afbfe84-ca48-4cb6-a9ac-84a5eae5c716" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('fe91388a-e313-4037-888f-0c772bf838c8','8afbfe84-ca48-4cb6-a9ac-84a5eae5c716')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('fe91388a-e313-4037-888f-0c772bf838c8','8afbfe84-ca48-4cb6-a9ac-84a5eae5c716')">Open In Tab</button></div><div id="0d19971c-3304-4362-9663-b719bd1971f1" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<p>An array of datetimes can be constructed from integers representing
+POSIX timestamps with the given unit.</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="try_examples_outer_container docutils container" id="fbd05a64-6c8b-4fe5-9060-40f83ecc089b">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('fbd05a64-6c8b-4fe5-9060-40f83ecc089b','e23c46b8-8a89-4aa2-87ca-48ab8dfff097','2491ccac-cf68-440b-b759-ce679a5c7214','../lite/tree/../notebooks/index.html?path=637074aa_f2be_44b2_94ea_934b65731a55.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1577836800</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">'datetime64[s]'</span><span class="p">)</span>
+<span class="go">array(['1970-01-01T00:00:00', '2020-01-01T00:00:00'],</span>
+<span class="go">      dtype='datetime64[s]')</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1577836800000</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'datetime64[ms]'</span><span class="p">)</span>
+<span class="go">array(['1970-01-01T00:00:00.000', '2020-01-01T00:00:00.000'],</span>
+<span class="go">      dtype='datetime64[ms]')</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="2491ccac-cf68-440b-b759-ce679a5c7214" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('fbd05a64-6c8b-4fe5-9060-40f83ecc089b','2491ccac-cf68-440b-b759-ce679a5c7214')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('fbd05a64-6c8b-4fe5-9060-40f83ecc089b','2491ccac-cf68-440b-b759-ce679a5c7214')">Open In Tab</button></div><div id="e23c46b8-8a89-4aa2-87ca-48ab8dfff097" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<p>The datetime type works with many common NumPy functions, for
+example <a class="reference internal" href="generated/numpy.arange.html#numpy.arange" title="numpy.arange"><code class="xref py py-func docutils literal notranslate"><span class="pre">arange</span></code></a> can be used to generate ranges of dates.</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="try_examples_outer_container docutils container" id="9b062ee6-1e31-450c-a235-e4ec0d10ff37">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('9b062ee6-1e31-450c-a235-e4ec0d10ff37','896300cb-fca0-42d0-9622-e69ba946c8e1','7e117b33-95e1-4dde-a96b-baa545402be1','../lite/tree/../notebooks/index.html?path=b18fbf62_87da_41fc_94ab_f7b5e6ae6313.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<p>All the dates for one month:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="s1">'2005-02'</span><span class="p">,</span> <span class="s1">'2005-03'</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">'datetime64[D]'</span><span class="p">)</span>
+<span class="go">array(['2005-02-01', '2005-02-02', '2005-02-03', '2005-02-04',</span>
+<span class="go">       '2005-02-05', '2005-02-06', '2005-02-07', '2005-02-08',</span>
+<span class="go">       '2005-02-09', '2005-02-10', '2005-02-11', '2005-02-12',</span>
+<span class="go">       '2005-02-13', '2005-02-14', '2005-02-15', '2005-02-16',</span>
+<span class="go">       '2005-02-17', '2005-02-18', '2005-02-19', '2005-02-20',</span>
+<span class="go">       '2005-02-21', '2005-02-22', '2005-02-23', '2005-02-24',</span>
+<span class="go">       '2005-02-25', '2005-02-26', '2005-02-27', '2005-02-28'],</span>
+<span class="go">      dtype='datetime64[D]')</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="7e117b33-95e1-4dde-a96b-baa545402be1" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('9b062ee6-1e31-450c-a235-e4ec0d10ff37','7e117b33-95e1-4dde-a96b-baa545402be1')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('9b062ee6-1e31-450c-a235-e4ec0d10ff37','7e117b33-95e1-4dde-a96b-baa545402be1')">Open In Tab</button></div><div id="896300cb-fca0-42d0-9622-e69ba946c8e1" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<p>The datetime object represents a single moment in time. If two
+datetimes have different units, they may still be representing
+the same moment of time, and converting from a bigger unit like
+months to a smaller unit like days is considered a ‘safe’ cast
+because the moment of time is still being represented exactly.</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="try_examples_outer_container docutils container" id="9ee86b33-b02f-4fb8-8d22-b2044211a1b6">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('9ee86b33-b02f-4fb8-8d22-b2044211a1b6','13d43140-ab00-4ccd-bf15-4ea3d63c37be','e8892077-da17-4ca7-b6c4-528de20d692e','../lite/tree/../notebooks/index.html?path=63f28ba5_e7a3_43da_9203_9e673fd7db22.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2005'</span><span class="p">)</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2005-01-01'</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2010-03-14T15'</span><span class="p">)</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2010-03-14T15:00:00.00'</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="e8892077-da17-4ca7-b6c4-528de20d692e" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('9ee86b33-b02f-4fb8-8d22-b2044211a1b6','e8892077-da17-4ca7-b6c4-528de20d692e')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('9ee86b33-b02f-4fb8-8d22-b2044211a1b6','e8892077-da17-4ca7-b6c4-528de20d692e')">Open In Tab</button></div><div id="13d43140-ab00-4ccd-bf15-4ea3d63c37be" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 1.11.0: </span>NumPy does not store timezone information. For backwards compatibility, datetime64
+still parses timezone offsets, which it handles by converting to
+UTC±00:00 (Zulu time). This behaviour is deprecated and will raise an error in the
+future.</p>
+</div>
+</section>
+<section id="datetime-and-timedelta-arithmetic">
+<h2>Datetime and timedelta arithmetic<a class="headerlink" href="#datetime-and-timedelta-arithmetic" title="Link to this heading">#</a></h2>
+<p>NumPy allows the subtraction of two datetime values, an operation which
+produces a number with a time unit. Because NumPy doesn’t have a physical
+quantities system in its core, the <a class="reference internal" href="arrays.scalars.html#numpy.timedelta64" title="numpy.timedelta64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timedelta64</span></code></a> data type was created
+to complement <a class="reference internal" href="arrays.scalars.html#numpy.datetime64" title="numpy.datetime64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime64</span></code></a>. The arguments for <a class="reference internal" href="arrays.scalars.html#numpy.timedelta64" title="numpy.timedelta64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timedelta64</span></code></a> are a number,
+to represent the number of units, and a date/time unit, such as
+(D)ay, (M)onth, (Y)ear, (h)ours, (m)inutes, or (s)econds. The <a class="reference internal" href="arrays.scalars.html#numpy.timedelta64" title="numpy.timedelta64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timedelta64</span></code></a>
+data type also accepts the string “NAT” in place of the number for a “Not A Time” value.</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="try_examples_outer_container docutils container" id="0669eceb-287f-4451-b1fc-ee38f7f08ee2">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('0669eceb-287f-4451-b1fc-ee38f7f08ee2','d175c6a4-5424-4586-a4e9-286d0f5e5059','89ff0e3e-7570-4ead-8e43-4588520b4ef4','../lite/tree/../notebooks/index.html?path=fa7b5090_254e_4451_9635_548e60cf182e.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">)</span>
+<span class="go">np.timedelta64(1,'D')</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s1">'h'</span><span class="p">)</span>
+<span class="go">np.timedelta64(4,'h')</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="s1">'nAt'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">)</span>
+<span class="go">np.timedelta64('NaT', 'D')</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="89ff0e3e-7570-4ead-8e43-4588520b4ef4" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('0669eceb-287f-4451-b1fc-ee38f7f08ee2','89ff0e3e-7570-4ead-8e43-4588520b4ef4')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('0669eceb-287f-4451-b1fc-ee38f7f08ee2','89ff0e3e-7570-4ead-8e43-4588520b4ef4')">Open In Tab</button></div><div id="d175c6a4-5424-4586-a4e9-286d0f5e5059" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<p>Datetimes and Timedeltas work together to provide ways for
+simple datetime calculations.</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="try_examples_outer_container docutils container" id="49d6908a-bf8a-457b-9473-8f1d967aedf3">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('49d6908a-bf8a-457b-9473-8f1d967aedf3','0521e2f1-6a76-42d5-9aeb-ebb403f4ae92','c4d04ee5-2f71-47ef-b95a-2c494b1f9676','../lite/tree/../notebooks/index.html?path=20c3ed7c_989b_4dd5_8601_54f82eff3173.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2009-01-01'</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2008-01-01'</span><span class="p">)</span>
+<span class="go">np.timedelta64(366,'D')</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2009'</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">)</span>
+<span class="go">np.datetime64('2009-01-21')</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2011-06-15T00:00'</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="s1">'h'</span><span class="p">)</span>
+<span class="go">np.datetime64('2011-06-15T12:00')</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">'W'</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">'D'</span><span class="p">)</span>
+<span class="go">7.0</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">'W'</span><span class="p">)</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="s1">'D'</span><span class="p">)</span>
+<span class="go">np.timedelta64(7,'D')</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'nat'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2009-01-01'</span><span class="p">)</span>
+<span class="go">np.timedelta64('NaT','D')</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2009-01-01'</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="s1">'nat'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">)</span>
+<span class="go">np.datetime64('NaT', 'D')</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="c4d04ee5-2f71-47ef-b95a-2c494b1f9676" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('49d6908a-bf8a-457b-9473-8f1d967aedf3','c4d04ee5-2f71-47ef-b95a-2c494b1f9676')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('49d6908a-bf8a-457b-9473-8f1d967aedf3','c4d04ee5-2f71-47ef-b95a-2c494b1f9676')">Open In Tab</button></div><div id="0521e2f1-6a76-42d5-9aeb-ebb403f4ae92" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<p>There are two Timedelta units (‘Y’, years and ‘M’, months) which are treated
+specially, because how much time they represent changes depending
+on when they are used. While a timedelta day unit is equivalent to
+24 hours, month and year units cannot be converted directly into days
+without using ‘unsafe’ casting.</p>
+<p>The <a class="reference internal" href="generated/numpy.ndarray.astype.html#numpy.ndarray.astype" title="numpy.ndarray.astype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray.astype</span></code></a> method can be used for unsafe
+conversion of months/years to days. The conversion follows
+calculating the averaged values from the 400 year leap-year cycle.</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="try_examples_outer_container docutils container" id="25a9fb65-7594-4a58-882e-cd261c46d823">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('25a9fb65-7594-4a58-882e-cd261c46d823','99ef892e-2ae3-4695-87de-a5ccf6f39a04','d68392ee-e39a-4d32-981a-5453979c5a9e','../lite/tree/../notebooks/index.html?path=0988da46_78f5_4266_b39d_0a2898ef54f1.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'Y'</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s1">'M'</span><span class="p">)</span>
+<span class="go">numpy.timedelta64(12,'M')</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">"&lt;stdin&gt;"</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">TypeError</span>: <span class="n">Cannot cast NumPy timedelta64 scalar from metadata [Y] to [D] according to the rule 'same_kind'</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="d68392ee-e39a-4d32-981a-5453979c5a9e" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('25a9fb65-7594-4a58-882e-cd261c46d823','d68392ee-e39a-4d32-981a-5453979c5a9e')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('25a9fb65-7594-4a58-882e-cd261c46d823','d68392ee-e39a-4d32-981a-5453979c5a9e')">Open In Tab</button></div><div id="99ef892e-2ae3-4695-87de-a5ccf6f39a04" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+</section>
+<section id="datetime-units">
+<h2>Datetime units<a class="headerlink" href="#datetime-units" title="Link to this heading">#</a></h2>
+<p>The Datetime and Timedelta data types support a large number of time
+units, as well as generic units which can be coerced into any of the
+other units based on input data.
+The generic units are deprecated since NumPy 2.5
+and will raise an error in the future. Migration guidance is provided
+in the <a class="reference internal" href="#migration-guide-for-deprecation-of-generic-units">migration guide for deprecation of generic units</a> section below.</p>
+<p>Datetimes are always stored with
+an epoch of 1970-01-01T00:00. This means the supported dates are
+always a symmetric interval around the epoch, called “time span” in the
+table below.</p>
+<p>The length of the span is the range of a 64-bit integer times the length
+of the date or unit.  For example, the time span for ‘W’ (week) is exactly
+7 times longer than the time span for ‘D’ (day), and the time span for
+‘D’ (day) is exactly 24 times longer than the time span for ‘h’ (hour).</p>
+<p>Here are the date units:</p>
+<div class="pst-scrollable-table-container"><table class="table" id="arrays-dtypes-dateunits">
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>Meaning</p></th>
+<th class="head"><p>Time span (relative)</p></th>
+<th class="head"><p>Time span (absolute)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Y</p></td>
+<td><p>year</p></td>
+<td><p>+/- 9.2e18 years</p></td>
+<td><p>[9.2e18 BC, 9.2e18 AD]</p></td>
+</tr>
+<tr class="row-odd"><td><p>M</p></td>
+<td><p>month</p></td>
+<td><p>+/- 7.6e17 years</p></td>
+<td><p>[7.6e17 BC, 7.6e17 AD]</p></td>
+</tr>
+<tr class="row-even"><td><p>W</p></td>
+<td><p>week</p></td>
+<td><p>+/- 1.7e17 years</p></td>
+<td><p>[1.7e17 BC, 1.7e17 AD]</p></td>
+</tr>
+<tr class="row-odd"><td><p>D</p></td>
+<td><p>day</p></td>
+<td><p>+/- 2.5e16 years</p></td>
+<td><p>[2.5e16 BC, 2.5e16 AD]</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>And here are the time units:</p>
+<div class="pst-scrollable-table-container"><table class="table" id="arrays-dtypes-timeunits">
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>Meaning</p></th>
+<th class="head"><p>Time span (relative)</p></th>
+<th class="head"><p>Time span (absolute)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>h</p></td>
+<td><p>hour</p></td>
+<td><p>+/- 1.0e15 years</p></td>
+<td><p>[1.0e15 BC, 1.0e15 AD]</p></td>
+</tr>
+<tr class="row-odd"><td><p>m</p></td>
+<td><p>minute</p></td>
+<td><p>+/- 1.7e13 years</p></td>
+<td><p>[1.7e13 BC, 1.7e13 AD]</p></td>
+</tr>
+<tr class="row-even"><td><p>s</p></td>
+<td><p>second</p></td>
+<td><p>+/- 2.9e11 years</p></td>
+<td><p>[2.9e11 BC, 2.9e11 AD]</p></td>
+</tr>
+<tr class="row-odd"><td><p>ms</p></td>
+<td><p>millisecond</p></td>
+<td><p>+/- 2.9e8 years</p></td>
+<td><p>[ 2.9e8 BC,  2.9e8 AD]</p></td>
+</tr>
+<tr class="row-even"><td><p>us / μs</p></td>
+<td><p>microsecond</p></td>
+<td><p>+/- 2.9e5 years</p></td>
+<td><p>[290301 BC, 294241 AD]</p></td>
+</tr>
+<tr class="row-odd"><td><p>ns</p></td>
+<td><p>nanosecond</p></td>
+<td><p>+/- 292 years</p></td>
+<td><p>[  1678 AD,   2262 AD]</p></td>
+</tr>
+<tr class="row-even"><td><p>ps</p></td>
+<td><p>picosecond</p></td>
+<td><p>+/- 106 days</p></td>
+<td><p>[  1969 AD,   1970 AD]</p></td>
+</tr>
+<tr class="row-odd"><td><p>fs</p></td>
+<td><p>femtosecond</p></td>
+<td><p>+/- 2.6 hours</p></td>
+<td><p>[  1969 AD,   1970 AD]</p></td>
+</tr>
+<tr class="row-even"><td><p>as</p></td>
+<td><p>attosecond</p></td>
+<td><p>+/- 9.2 seconds</p></td>
+<td><p>[  1969 AD,   1970 AD]</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="converting-datetime-and-timedelta-to-python-object">
+<h2>Converting datetime and timedelta to Python Object<a class="headerlink" href="#converting-datetime-and-timedelta-to-python-object" title="Link to this heading">#</a></h2>
+<p>NumPy follows a strict protocol when converting <a class="reference internal" href="arrays.scalars.html#numpy.datetime64" title="numpy.datetime64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime64</span></code></a> and/or <a class="reference internal" href="arrays.scalars.html#numpy.timedelta64" title="numpy.timedelta64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timedelta64</span></code></a> to Python Objects (e.g., <code class="docutils literal notranslate"><span class="pre">tuple</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>, <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime.datetime</span></code></a>).</p>
+<p>The protocol is described in the following table:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Input Type</p></th>
+<th class="head"><p>for <a class="reference internal" href="arrays.scalars.html#numpy.datetime64" title="numpy.datetime64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime64</span></code></a></p></th>
+<th class="head"><p>for <a class="reference internal" href="arrays.scalars.html#numpy.timedelta64" title="numpy.timedelta64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timedelta64</span></code></a></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">NaT</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>ns/ps/fs/as</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>μs/ms/s/m/h</p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime.datetime</span></code></a></p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.timedelta" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime.timedelta</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>D/W (Linear units)</p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.date" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime.date</span></code></a></p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.timedelta" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime.timedelta</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Y/M (Non-linear units)</p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.date" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime.date</span></code></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Generic units</p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.date" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime.date</span></code></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 2.5: </span>The generic units of <a class="reference internal" href="arrays.scalars.html#numpy.timedelta64" title="numpy.timedelta64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timedelta64</span></code></a> are deprecated in NumPy 2.5 and
+will raise an error in the future.</p>
+</div>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="try_examples_outer_container docutils container" id="5c4f67dd-392f-4f2c-8356-e2a7e05dbd1b">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('5c4f67dd-392f-4f2c-8356-e2a7e05dbd1b','b724241f-d302-4fbd-80d0-66e28c47e5fd','78a151c1-d071-4b6f-95d3-8956528d890e','../lite/tree/../notebooks/index.html?path=d2579a2b_a7d0_4318_b6af_c8ff07318cb0.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'NaT'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+<span class="go">&lt;class 'NoneType'&gt;</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="s1">'NaT'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+<span class="go">&lt;class 'NoneType'&gt;</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">123</span><span class="p">,</span> <span class="s1">'ns'</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+<span class="go">&lt;class 'int'&gt;</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2025-01-01T12:00:00.123456'</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+<span class="go">&lt;class 'datetime.datetime'&gt;</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+<span class="go">&lt;class 'datetime.timedelta'&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="78a151c1-d071-4b6f-95d3-8956528d890e" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('5c4f67dd-392f-4f2c-8356-e2a7e05dbd1b','78a151c1-d071-4b6f-95d3-8956528d890e')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('5c4f67dd-392f-4f2c-8356-e2a7e05dbd1b','78a151c1-d071-4b6f-95d3-8956528d890e')">Open In Tab</button></div><div id="b724241f-d302-4fbd-80d0-66e28c47e5fd" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<p>In the case where conversion of <a class="reference internal" href="arrays.scalars.html#numpy.datetime64" title="numpy.datetime64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime64</span></code></a> and/or <a class="reference internal" href="arrays.scalars.html#numpy.timedelta64" title="numpy.timedelta64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timedelta64</span></code></a> is done
+against Python types like <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, and <code class="docutils literal notranslate"><span class="pre">str</span></code> the corresponding return types
+will be <code class="docutils literal notranslate"><span class="pre">np.str_</span></code>, <code class="docutils literal notranslate"><span class="pre">np.int64</span></code> and <code class="docutils literal notranslate"><span class="pre">np.float64</span></code>.</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="try_examples_outer_container docutils container" id="c4dd10aa-8e6e-44fe-8764-a4b4af8e5294">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('c4dd10aa-8e6e-44fe-8764-a4b4af8e5294','d5f1888d-cbfc-4fd3-9e27-4d0c553f5190','8ef297ae-f5b7-4e2d-b84a-b49a8591ea73','../lite/tree/../notebooks/index.html?path=0f9e0b69_8a45_478f_8d20_40ca1591275c.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">))</span>
+<span class="go">&lt;class 'numpy.int64'&gt;</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2025-01-01T12:00:00.123456'</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">))</span>
+<span class="go">&lt;class 'numpy.float64'&gt;</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">123</span><span class="p">,</span> <span class="s1">'ns'</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">))</span>
+<span class="go">&lt;class 'numpy.str_'&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="8ef297ae-f5b7-4e2d-b84a-b49a8591ea73" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('c4dd10aa-8e6e-44fe-8764-a4b4af8e5294','8ef297ae-f5b7-4e2d-b84a-b49a8591ea73')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('c4dd10aa-8e6e-44fe-8764-a4b4af8e5294','8ef297ae-f5b7-4e2d-b84a-b49a8591ea73')">Open In Tab</button></div><div id="d5f1888d-cbfc-4fd3-9e27-4d0c553f5190" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+</section>
+<section id="business-day-functionality">
+<h2>Business day functionality<a class="headerlink" href="#business-day-functionality" title="Link to this heading">#</a></h2>
+<p>To allow the datetime to be used in contexts where only certain days of
+the week are valid, NumPy includes a set of “busday” (business day)
+functions.</p>
+<p>The default for busday functions is that the only valid days are Monday
+through Friday (the usual business days).  The implementation is based on
+a “weekmask” containing 7 Boolean flags to indicate valid days; custom
+weekmasks are possible that specify other sets of valid days.</p>
+<p>The “busday” functions can additionally check a list of “holiday” dates,
+specific dates that are not valid days.</p>
+<p>The function <a class="reference internal" href="generated/numpy.busday_offset.html#numpy.busday_offset" title="numpy.busday_offset"><code class="xref py py-func docutils literal notranslate"><span class="pre">busday_offset</span></code></a> allows you to apply offsets
+specified in business days to datetimes with a unit of ‘D’ (day).</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="try_examples_outer_container docutils container" id="c66ceac2-0750-49c8-bd95-911009a95d09">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('c66ceac2-0750-49c8-bd95-911009a95d09','326c1508-91f6-40ef-a865-e661cca03d18','61fcc389-7dfd-4745-9796-2b37f598bf93','../lite/tree/../notebooks/index.html?path=452a9d73_66e2_4cf9_8ae3_f5bebcaabf59.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">busday_offset</span><span class="p">(</span><span class="s1">'2011-06-23'</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="go">np.datetime64('2011-06-24')</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">busday_offset</span><span class="p">(</span><span class="s1">'2011-06-23'</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">np.datetime64('2011-06-27')</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="61fcc389-7dfd-4745-9796-2b37f598bf93" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('c66ceac2-0750-49c8-bd95-911009a95d09','61fcc389-7dfd-4745-9796-2b37f598bf93')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('c66ceac2-0750-49c8-bd95-911009a95d09','61fcc389-7dfd-4745-9796-2b37f598bf93')">Open In Tab</button></div><div id="326c1508-91f6-40ef-a865-e661cca03d18" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<p>When an input date falls on the weekend or a holiday,
+<a class="reference internal" href="generated/numpy.busday_offset.html#numpy.busday_offset" title="numpy.busday_offset"><code class="xref py py-func docutils literal notranslate"><span class="pre">busday_offset</span></code></a> first applies a rule to roll the
+date to a valid business day, then applies the offset. The
+default rule is ‘raise’, which simply raises an exception.
+The rules most typically used are ‘forward’ and ‘backward’.</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="try_examples_outer_container docutils container" id="4b7d4c72-ff28-4145-9956-ad6d64f5a48c">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('4b7d4c72-ff28-4145-9956-ad6d64f5a48c','f2ad7d46-60d0-4af4-a956-367620ad5bdc','a02215cb-2ece-4a55-8287-1efa035c326b','../lite/tree/../notebooks/index.html?path=7867467c_d58b_4dc2_b5a8_809b0a41db21.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">busday_offset</span><span class="p">(</span><span class="s1">'2011-06-25'</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">"&lt;stdin&gt;"</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">ValueError</span>: <span class="n">Non-business day date in busday_offset</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">busday_offset</span><span class="p">(</span><span class="s1">'2011-06-25'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">roll</span><span class="o">=</span><span class="s1">'forward'</span><span class="p">)</span>
+<span class="go">np.datetime64('2011-06-27')</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">busday_offset</span><span class="p">(</span><span class="s1">'2011-06-25'</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">roll</span><span class="o">=</span><span class="s1">'forward'</span><span class="p">)</span>
+<span class="go">np.datetime64('2011-06-29')</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">busday_offset</span><span class="p">(</span><span class="s1">'2011-06-25'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">roll</span><span class="o">=</span><span class="s1">'backward'</span><span class="p">)</span>
+<span class="go">np.datetime64('2011-06-24')</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">busday_offset</span><span class="p">(</span><span class="s1">'2011-06-25'</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">roll</span><span class="o">=</span><span class="s1">'backward'</span><span class="p">)</span>
+<span class="go">np.datetime64('2011-06-28')</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="a02215cb-2ece-4a55-8287-1efa035c326b" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('4b7d4c72-ff28-4145-9956-ad6d64f5a48c','a02215cb-2ece-4a55-8287-1efa035c326b')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('4b7d4c72-ff28-4145-9956-ad6d64f5a48c','a02215cb-2ece-4a55-8287-1efa035c326b')">Open In Tab</button></div><div id="f2ad7d46-60d0-4af4-a956-367620ad5bdc" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<p>In some cases, an appropriate use of the roll and the offset
+is necessary to get a desired answer.</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="try_examples_outer_container docutils container" id="2bc6064e-5ab0-483a-a9c5-8bc224e8758d">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('2bc6064e-5ab0-483a-a9c5-8bc224e8758d','301fad6e-eb03-40a5-9a33-a739ae22738f','ee04603a-02bf-47d2-b2a6-aba5b9412ce3','../lite/tree/../notebooks/index.html?path=fbfcab0a_3d9a_492c_81b1_f5b60bededb2.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<p>The first business day on or after a date:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">busday_offset</span><span class="p">(</span><span class="s1">'2011-03-20'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">roll</span><span class="o">=</span><span class="s1">'forward'</span><span class="p">)</span>
+<span class="go">np.datetime64('2011-03-21')</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">busday_offset</span><span class="p">(</span><span class="s1">'2011-03-22'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">roll</span><span class="o">=</span><span class="s1">'forward'</span><span class="p">)</span>
+<span class="go">np.datetime64('2011-03-22')</span>
+</pre></div>
+</div>
+<p>The first business day strictly after a date:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">busday_offset</span><span class="p">(</span><span class="s1">'2011-03-20'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">roll</span><span class="o">=</span><span class="s1">'backward'</span><span class="p">)</span>
+<span class="go">np.datetime64('2011-03-21')</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">busday_offset</span><span class="p">(</span><span class="s1">'2011-03-22'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">roll</span><span class="o">=</span><span class="s1">'backward'</span><span class="p">)</span>
+<span class="go">np.datetime64('2011-03-23')</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="ee04603a-02bf-47d2-b2a6-aba5b9412ce3" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('2bc6064e-5ab0-483a-a9c5-8bc224e8758d','ee04603a-02bf-47d2-b2a6-aba5b9412ce3')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('2bc6064e-5ab0-483a-a9c5-8bc224e8758d','ee04603a-02bf-47d2-b2a6-aba5b9412ce3')">Open In Tab</button></div><div id="301fad6e-eb03-40a5-9a33-a739ae22738f" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<p>The function is also useful for computing some kinds of days
+like holidays. In Canada and the U.S., Mother’s day is on
+the second Sunday in May, which can be computed with a custom
+weekmask.</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="try_examples_outer_container docutils container" id="dee27d39-0460-4be4-bcb3-de487f00dbb5">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('dee27d39-0460-4be4-bcb3-de487f00dbb5','5cb0f6c6-a529-4e8a-936d-3a5d6f141e7f','9030dd6b-cfb4-405f-ac40-13e2e7f810a6','../lite/tree/../notebooks/index.html?path=06c00f4f_c92f_43bb_8df7_05d8e57cb7ec.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">busday_offset</span><span class="p">(</span><span class="s1">'2012-05'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">roll</span><span class="o">=</span><span class="s1">'forward'</span><span class="p">,</span> <span class="n">weekmask</span><span class="o">=</span><span class="s1">'Sun'</span><span class="p">)</span>
+<span class="go">np.datetime64('2012-05-13')</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="9030dd6b-cfb4-405f-ac40-13e2e7f810a6" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('dee27d39-0460-4be4-bcb3-de487f00dbb5','9030dd6b-cfb4-405f-ac40-13e2e7f810a6')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('dee27d39-0460-4be4-bcb3-de487f00dbb5','9030dd6b-cfb4-405f-ac40-13e2e7f810a6')">Open In Tab</button></div><div id="5cb0f6c6-a529-4e8a-936d-3a5d6f141e7f" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<p>When performance is important for manipulating many business dates
+with one particular choice of weekmask and holidays, there is
+an object <a class="reference internal" href="generated/numpy.busdaycalendar.html#numpy.busdaycalendar" title="numpy.busdaycalendar"><code class="xref py py-class docutils literal notranslate"><span class="pre">busdaycalendar</span></code></a> which stores the data necessary
+in an optimized form.</p>
+<section id="np-is-busday">
+<h3>np.is_busday():<a class="headerlink" href="#np-is-busday" title="Link to this heading">#</a></h3>
+<p>To test a <a class="reference internal" href="arrays.scalars.html#numpy.datetime64" title="numpy.datetime64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime64</span></code></a> value to see if it is a valid day, use <a class="reference internal" href="generated/numpy.is_busday.html#numpy.is_busday" title="numpy.is_busday"><code class="xref py py-func docutils literal notranslate"><span class="pre">is_busday</span></code></a>.</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="try_examples_outer_container docutils container" id="46f0759e-ebec-43f5-b7ea-500a3fd88515">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('46f0759e-ebec-43f5-b7ea-500a3fd88515','044832c2-ab51-4e29-8023-8d31097aa7a0','955ef498-bfbe-4b8c-979f-78c9c31e0cb1','../lite/tree/../notebooks/index.html?path=aab16baa_03be_4bf8_a0f9_7991508c7ef2.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">is_busday</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2011-07-15'</span><span class="p">))</span>  <span class="c1"># a Friday</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">is_busday</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2011-07-16'</span><span class="p">))</span> <span class="c1"># a Saturday</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">is_busday</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2011-07-16'</span><span class="p">),</span> <span class="n">weekmask</span><span class="o">=</span><span class="s2">"Sat Sun"</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2011-07-11'</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2011-07-18'</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">is_busday</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">array([ True,  True,  True,  True,  True, False, False])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="955ef498-bfbe-4b8c-979f-78c9c31e0cb1" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('46f0759e-ebec-43f5-b7ea-500a3fd88515','955ef498-bfbe-4b8c-979f-78c9c31e0cb1')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('46f0759e-ebec-43f5-b7ea-500a3fd88515','955ef498-bfbe-4b8c-979f-78c9c31e0cb1')">Open In Tab</button></div><div id="044832c2-ab51-4e29-8023-8d31097aa7a0" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+</section>
+<section id="np-busday-count">
+<h3>np.busday_count():<a class="headerlink" href="#np-busday-count" title="Link to this heading">#</a></h3>
+<p>To find how many valid days there are in a specified range of datetime64
+dates, use <a class="reference internal" href="generated/numpy.busday_count.html#numpy.busday_count" title="numpy.busday_count"><code class="xref py py-func docutils literal notranslate"><span class="pre">busday_count</span></code></a>:</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="try_examples_outer_container docutils container" id="806a1803-cfe8-4964-8439-c030cd4688c6">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('806a1803-cfe8-4964-8439-c030cd4688c6','53d898c8-8776-4c8b-a4d1-1d0dc8d6e507','d7b5b834-feeb-4ec0-b5c5-5c2bef61a18b','../lite/tree/../notebooks/index.html?path=86b2e429_70b4_4f26_8497_9330add721b4.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">busday_count</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2011-07-11'</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2011-07-18'</span><span class="p">))</span>
+<span class="go">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">busday_count</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2011-07-18'</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2011-07-11'</span><span class="p">))</span>
+<span class="go">-5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="d7b5b834-feeb-4ec0-b5c5-5c2bef61a18b" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('806a1803-cfe8-4964-8439-c030cd4688c6','d7b5b834-feeb-4ec0-b5c5-5c2bef61a18b')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('806a1803-cfe8-4964-8439-c030cd4688c6','d7b5b834-feeb-4ec0-b5c5-5c2bef61a18b')">Open In Tab</button></div><div id="53d898c8-8776-4c8b-a4d1-1d0dc8d6e507" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<p>If you have an array of datetime64 day values, and you want a count of
+how many of them are valid dates, you can do this:</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="try_examples_outer_container docutils container" id="d053fc42-7546-4f41-9337-a7e7987f35dc">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('d053fc42-7546-4f41-9337-a7e7987f35dc','6fa44d10-a802-420f-b1a0-8df9d1d8e505','d7aa5844-94fa-414a-a14f-06363a290e00','../lite/tree/../notebooks/index.html?path=b6533f5a_9687_4a04_9f71_fb908b060018.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2011-07-11'</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">'2011-07-18'</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">is_busday</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="d7aa5844-94fa-414a-a14f-06363a290e00" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('d053fc42-7546-4f41-9337-a7e7987f35dc','d7aa5844-94fa-414a-a14f-06363a290e00')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('d053fc42-7546-4f41-9337-a7e7987f35dc','d7aa5844-94fa-414a-a14f-06363a290e00')">Open In Tab</button></div><div id="6fa44d10-a802-420f-b1a0-8df9d1d8e505" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+</section>
+<section id="custom-weekmasks">
+<h3>Custom weekmasks<a class="headerlink" href="#custom-weekmasks" title="Link to this heading">#</a></h3>
+<p>Here are several examples of custom weekmask values.  These examples
+specify the “busday” default of Monday through Friday being valid days.</p>
+<p>Some examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Positional sequences; positions are Monday through Sunday.</span>
+<span class="c1"># Length of the sequence must be exactly 7.</span>
+<span class="n">weekmask</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="c1"># list or other sequence; 0 == invalid day, 1 == valid day</span>
+<span class="n">weekmask</span> <span class="o">=</span> <span class="s2">"1111100"</span>
+<span class="c1"># string '0' == invalid day, '1' == valid day</span>
+
+<span class="c1"># string abbreviations from this list: Mon Tue Wed Thu Fri Sat Sun</span>
+<span class="n">weekmask</span> <span class="o">=</span> <span class="s2">"Mon Tue Wed Thu Fri"</span>
+<span class="c1"># any amount of whitespace is allowed; abbreviations are case-sensitive.</span>
+<span class="n">weekmask</span> <span class="o">=</span> <span class="s2">"MonTue Wed  Thu</span><span class="se">\t</span><span class="s2">Fri"</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="datetime64-shortcomings">
+<span id="shortcomings"></span><h2>Datetime64 shortcomings<a class="headerlink" href="#datetime64-shortcomings" title="Link to this heading">#</a></h2>
+<p>The assumption that all days are exactly 86400 seconds long makes <a class="reference internal" href="arrays.scalars.html#numpy.datetime64" title="numpy.datetime64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime64</span></code></a>
+largely compatible with Python <a class="reference external" href="https://docs.python.org/3/library/datetime.html#module-datetime" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime</span></code></a> and “POSIX time” semantics; therefore
+they all share the same well known shortcomings with respect to the UTC
+timescale and historical time determination. A brief non exhaustive summary is
+given below.</p>
+<ul>
+<li><p>It is impossible to parse valid UTC timestamps occurring during a positive
+leap second.</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<p>“2016-12-31 23:59:60 UTC” was a leap second, therefore “2016-12-31
+23:59:60.450 UTC” is a valid timestamp which is not parseable by
+<a class="reference internal" href="arrays.scalars.html#numpy.datetime64" title="numpy.datetime64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime64</span></code></a>:</p>
+<div class="try_examples_outer_container docutils container" id="e64e5e1c-9be0-47fa-b61e-d0548d7a0fe3">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('e64e5e1c-9be0-47fa-b61e-d0548d7a0fe3','01e6bee8-bc3e-4885-88f4-10bb4e1ad834','4aad3673-f0bc-4dd2-ae81-a16e89ebb16a','../lite/tree/../notebooks/index.html?path=1c8c7df8_27a0_443e_8ee0_39baa100e23f.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s2">"2016-12-31 23:59:60.450"</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">"&lt;stdin&gt;"</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">ValueError</span>: <span class="n">Seconds out of range in datetime string "2016-12-31 23:59:60.450"</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="4aad3673-f0bc-4dd2-ae81-a16e89ebb16a" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('e64e5e1c-9be0-47fa-b61e-d0548d7a0fe3','4aad3673-f0bc-4dd2-ae81-a16e89ebb16a')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('e64e5e1c-9be0-47fa-b61e-d0548d7a0fe3','4aad3673-f0bc-4dd2-ae81-a16e89ebb16a')">Open In Tab</button></div><div id="01e6bee8-bc3e-4885-88f4-10bb4e1ad834" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+</li>
+<li><p>Timedelta64 computations between two UTC dates can be wrong by an integer
+number of SI seconds.</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<p>Compute the number of SI seconds between “2021-01-01 12:56:23.423 UTC” and
+“2001-01-01 00:00:00.000 UTC”:</p>
+<div class="try_examples_outer_container docutils container" id="4015319c-cbd7-4191-aebd-68250ba58176">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('4015319c-cbd7-4191-aebd-68250ba58176','5b300e7d-1220-44e8-a351-e670b3f21b25','b03de2be-9da9-4fe2-87a6-2d485c51c5be','../lite/tree/../notebooks/index.html?path=31d7607f_d110_494f_a4c3_1f54acd61ce8.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">(</span>
+<span class="gp">... </span>  <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s2">"2021-01-01 12:56:23.423"</span><span class="p">)</span>
+<span class="gp">... </span>  <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s2">"2001-01-01"</span><span class="p">)</span>
+<span class="gp">... </span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"s"</span><span class="p">)</span>
+<span class="go">631198583.423</span>
+</pre></div>
+</div>
+<p>However, the correct answer is <em class="xref py py-obj">631198588.423</em> SI seconds, because there were
+5 leap seconds between 2001 and 2021.</p>
+</div>
+</div>
+<div id="b03de2be-9da9-4fe2-87a6-2d485c51c5be" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('4015319c-cbd7-4191-aebd-68250ba58176','b03de2be-9da9-4fe2-87a6-2d485c51c5be')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('4015319c-cbd7-4191-aebd-68250ba58176','b03de2be-9da9-4fe2-87a6-2d485c51c5be')">Open In Tab</button></div><div id="5b300e7d-1220-44e8-a351-e670b3f21b25" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+</li>
+<li><p>Timedelta64 computations for dates in the past do not return SI seconds, as
+one would expect.</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<blockquote>
+<div><p>Compute the number of seconds between “000-01-01 UT” and “1600-01-01 UT”,
+where UT is <a class="reference external" href="https://en.wikipedia.org/wiki/Universal_Time">universal time</a>:</p>
+</div></blockquote>
+<div class="try_examples_outer_container docutils container" id="c97d4aef-2c46-42f3-880e-a4fdc5250e83">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('c97d4aef-2c46-42f3-880e-a4fdc5250e83','cd32ccb6-ad69-4330-af47-c903c7b5b316','5c500625-7dce-4443-a7c8-98b5b4b932b0','../lite/tree/../notebooks/index.html?path=cbf9c04e_1a8a_447d_88cf_03009ecc62f0.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s2">"0000-01-01"</span><span class="p">,</span> <span class="s2">"us"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s2">"1600-01-01"</span><span class="p">,</span> <span class="s2">"us"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span>
+<span class="go">numpy.timedelta64(50491123200000000,'us')</span>
+</pre></div>
+</div>
+<p>The computed results, <em class="xref py py-obj">50491123200</em> seconds, are obtained as the elapsed
+number of days (<em class="xref py py-obj">584388</em>) times <em class="xref py py-obj">86400</em> seconds; this is the number of
+seconds of a clock in sync with the Earth’s rotation. The exact value in SI
+seconds can only be estimated, e.g., using data published in <a class="reference external" href="https://doi.org/10.1098/rspa.2016.0404">Measurement of
+the Earth’s rotation: 720 BC to AD 2015, 2016, Royal Society’s Proceedings
+A 472, by Stephenson et.al.</a>. A
+sensible estimate is <em class="xref py py-obj">50491112870 ± 90</em> seconds, with a difference of 10330
+seconds.</p>
+</div>
+</div>
+<div id="5c500625-7dce-4443-a7c8-98b5b4b932b0" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('c97d4aef-2c46-42f3-880e-a4fdc5250e83','5c500625-7dce-4443-a7c8-98b5b4b932b0')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('c97d4aef-2c46-42f3-880e-a4fdc5250e83','5c500625-7dce-4443-a7c8-98b5b4b932b0')">Open In Tab</button></div><div id="cd32ccb6-ad69-4330-af47-c903c7b5b316" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+</li>
+</ul>
+</section>
+<section id="migration-guide-for-deprecation-of-generic-units">
+<span id="migration-guide-generic-units"></span><h2>Migration guide for deprecation of generic units<a class="headerlink" href="#migration-guide-for-deprecation-of-generic-units" title="Link to this heading">#</a></h2>
+<p>The generic units of <a class="reference internal" href="arrays.scalars.html#numpy.timedelta64" title="numpy.timedelta64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timedelta64</span></code></a> are deprecated since NumPy 2.5
+and will raise an error in the future.
+This section provides guidance on how to update code
+that uses generic units of <a class="reference internal" href="arrays.scalars.html#numpy.timedelta64" title="numpy.timedelta64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timedelta64</span></code></a> and <a class="reference internal" href="arrays.scalars.html#numpy.datetime64" title="numpy.datetime64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime64</span></code></a> to avoid future errors.</p>
+<p>The straight forward way is to replace the generic unit with a specific time unit
+such as ‘D’ (day), ‘h’ (hour), ‘m’ (minute), ‘s’ (second), etc.
+The choice of the specific time unit will depend on the context of your code and
+the level of precision you require.</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="try_examples_outer_container docutils container" id="3ac39b8e-65c6-42cd-ad4b-0d90a7975fd5">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('3ac39b8e-65c6-42cd-ad4b-0d90a7975fd5','0c88f922-8536-478c-bc4b-8d194aac7ee9','f76d9307-594b-4e68-9fba-31c5d6807b4d','../lite/tree/../notebooks/index.html?path=1040d844_5c1a_44bc_9a78_8c92eee73a01.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Old code using generic units of timedelta64</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">"s"</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="go">DeprecationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `+ 1`).Please use a specific unit instead.</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Updated code using a specific time unit</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">"s"</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"s"</span><span class="p">)</span>
+<span class="go">np.timedelta64(6,'s')</span>
+</pre></div>
+</div>
+<p>When comparing <a class="reference internal" href="arrays.scalars.html#numpy.timedelta64" title="numpy.timedelta64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timedelta64</span></code></a> objects, make sure to use the same specific time unit for both operands even if they are representing <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"s"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="go">DeprecationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `== 0`).Please use a specific unit instead.</span>
+<span class="go">np.True_</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"s"</span><span class="p">)</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"s"</span><span class="p">)</span>
+<span class="go">np.True_</span>
+</pre></div>
+</div>
+<p>When using <code class="docutils literal notranslate"><span class="pre">numpy.testing.assert_allclose</span></code> to compare <a class="reference internal" href="arrays.scalars.html#numpy.timedelta64" title="numpy.timedelta64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timedelta64</span></code></a> objects, ensure to set a specific time unit to <code class="docutils literal notranslate"><span class="pre">atol</span></code> parameter as well.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">'m8[s]'</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_allclose</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"s"</span><span class="p">),</span> <span class="n">atol</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"s"</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Previously, <a class="reference internal" href="arrays.scalars.html#numpy.datetime64" title="numpy.datetime64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime64</span></code></a> allowed <em class="xref py py-obj">NaT</em> without specifying a time unit.
+With the deprecation of generic units, <em class="xref py py-obj">NaT</em> is now required to have an explicit time unit
+for consistency with other datetime and timedelta operations.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s2">"NAT"</span><span class="p">)</span>
+<span class="go">DeprecationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `+ 1`).Please use a specific unit instead.</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s2">"NAT"</span><span class="p">,</span> <span class="s2">"D"</span><span class="p">)</span>
+<span class="go">np.datetime64('NaT', 'D')</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="f76d9307-594b-4e68-9fba-31c5d6807b4d" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('3ac39b8e-65c6-42cd-ad4b-0d90a7975fd5','f76d9307-594b-4e68-9fba-31c5d6807b4d')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('3ac39b8e-65c6-42cd-ad4b-0d90a7975fd5','f76d9307-594b-4e68-9fba-31c5d6807b4d')">Open In Tab</button></div><div id="0c88f922-8536-478c-bc4b-8d194aac7ee9" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="arrays.interface.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">The array interface protocol</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ufuncs.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Universal functions (<code class="xref py py-class docutils literal notranslate"><span class="pre">ufunc</span></code>)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datetime64-conventions-and-assumptions">Datetime64 conventions and assumptions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-datetimes">Basic datetimes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datetime-and-timedelta-arithmetic">Datetime and timedelta arithmetic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datetime-units">Datetime units</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-datetime-and-timedelta-to-python-object">Converting datetime and timedelta to Python Object</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#business-day-functionality">Business day functionality</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#np-is-busday">np.is_busday():</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#np-busday-count">np.busday_count():</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-weekmasks">Custom weekmasks</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datetime64-shortcomings">Datetime64 shortcomings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#migration-guide-for-deprecation-of-generic-units">Migration guide for deprecation of generic units</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2008-2026, NumPy Developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.17.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
