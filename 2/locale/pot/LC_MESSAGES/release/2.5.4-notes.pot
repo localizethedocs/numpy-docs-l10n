@@ -1,0 +1,270 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 14:52+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release/2.5.4-notes.rst:5
+msgid "NumPy 2.5.4 Release Notes"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:7
+msgid "*Released on 2026-10-10.*"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:9
+msgid ""
+"NumPy 2.5.4 is a patch release that fixes bugs discovered after the 2.5.3 "
+"release. Highlights are:"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:12
+msgid "Many typing fixes and improvements,"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:13
+msgid "A workaround for the MSVC 19.51 bug, see below."
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:15
+msgid "This release supports Python versions 3.12-3.15."
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:19
+msgid "Improvements"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:21
+msgid ""
+"``numpy.linalg.svd`` and ``numpy.linalg.lstsq`` now raise for inputs "
+"containing infinities instead of returning garbage results."
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:23
+msgid ""
+"Fixed hangs in ``numpy.linalg.svd`` and ``numpy.linalg.lstsq`` for certain "
+"inputs containing infinities for recent versions of some LAPACK "
+"implementations."
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:25
+msgid "``numpy.linalg.cond`` now handles non-finite inputs more consistently."
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:27
+msgid "(`gh-32593 <https://github.com/numpy/numpy/pull/32593>`__)"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:30
+msgid "StringDType hashing with NaN sentinels"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:31
+msgid ""
+"``StringDType`` instances with equivalent floating-point NaN sentinels now "
+"have equal hashes. Previously, distinct NaN objects could produce equal "
+"dtype instances with different hashes, causing dictionary lookups and set "
+"deduplication to fail."
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:36
+msgid "(`gh-32563 <https://github.com/numpy/numpy/pull/32563>`__)"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:40
+msgid "Changes"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:43
+msgid ""
+"``MaskedArray`` resets a fill_value that cannot be represented in a new dtype"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:44
+msgid ""
+"A fill_value copied from a source array is now reset to the default "
+"fill_value for the new dtype when it cannot be represented in that dtype.  "
+"Previously the copied value could be stale: ufuncs that change dtype left "
+"the result holding a fill_value typed for the old dtype, which raised a "
+"``TypeError`` only when something later validated it (such as ``.view()``), "
+"and a floating point fill_value that overflows an integer dtype was kept as "
+"an out-of-range value together with a ``RuntimeWarning``.  Both now fall "
+"back to the default, including when a masked array is passed to "
+"``MaskedArray`` with a different ``dtype``.  A fill_value given explicitly "
+"by the user is still validated and raises as before.  This can now raise a "
+"``ComplexWarning`` if the fill_value is complex and the new dtype is real."
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:56
+msgid ""
+"(`gh-32508 <https://github.com/numpy/numpy/pull/32508>`__) (`gh-32562 "
+"<https://github.com/numpy/numpy/pull/32562>`__)"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:61
+msgid "Contributors"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:63
+msgid ""
+"A total of 9 people contributed to this release.  People with a \"+\" by "
+"their names contributed a patch for the first time."
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:66
+msgid "Aniket Singh Yadav"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:67
+msgid "Bhuvansh Kataria +"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:68
+msgid "Charles Harris"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:69
+msgid "Iason Krommydas"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:70
+msgid "Joren Hammudoglu"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:71
+msgid "Lazizbek Ergashev +"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:72
+msgid "Nathan Goldbaum"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:73
+msgid "Sebastian Berg"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:74
+msgid "Yeonho Kim"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:78
+msgid "Pull requests merged"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:80
+msgid "A total of 17 pull requests were merged for this release."
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:82
+msgid ""
+"`#32520 <https://github.com/numpy/numpy/pull/32520>`__: MAINT: Prepare 2.5.x "
+"for further development"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:83
+msgid ""
+"`#32557 <https://github.com/numpy/numpy/pull/32557>`__: BUG: Reset an "
+"unrepresentable fill_value on a dtype change (#32508)"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:84
+msgid ""
+"`#32565 <https://github.com/numpy/numpy/pull/32565>`__: BLD: work around "
+"MSVC 19.51 bug (#32561)"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:85
+msgid ""
+"`#32600 <https://github.com/numpy/numpy/pull/32600>`__: BUG: fix "
+"np.strings.replace truncating old/new to a's"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:86
+msgid ""
+"`#32707 <https://github.com/numpy/numpy/pull/32707>`__: BUG: fix _ureduce "
+"reshape when a kept axis has size 0 (#32536)"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:87
+msgid ""
+"`#32709 <https://github.com/numpy/numpy/pull/32709>`__: BUG: fix two "
+"possible crashes in the ufunc.accumulate implementation..."
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:88
+msgid ""
+"`#32710 <https://github.com/numpy/numpy/pull/32710>`__: BUG: Reset an "
+"inherited fill_value in MaskedArray.__new__ as..."
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:89
+msgid ""
+"`#32711 <https://github.com/numpy/numpy/pull/32711>`__: ENH: Improvements "
+"and fixes for stringdtype hashing (#32563)"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:90
+msgid ""
+"`#32713 <https://github.com/numpy/numpy/pull/32713>`__: CI: increase ppc64le "
+"timeout to match other timeouts (#32583)"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:91
+msgid ""
+"`#32718 <https://github.com/numpy/numpy/pull/32718>`__: BUG: fix memory leak "
+"in legacy ArrayMethod wrapper code"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:92
+msgid ""
+"`#32719 <https://github.com/numpy/numpy/pull/32719>`__: BUG: check for non-"
+"finite input before calling gesdd/gelsd and..."
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:93
+msgid ""
+"`#32738 <https://github.com/numpy/numpy/pull/32738>`__: BUG: fix segfault in "
+"as_arrays() on self-referencing pyscalars"
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:94
+msgid ""
+"`#32741 <https://github.com/numpy/numpy/pull/32741>`__: TYP: Various typing "
+"improvements."
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:95
+msgid ""
+"`#32791 <https://github.com/numpy/numpy/pull/32791>`__: BUG: Fix "
+"canonicalization/promotion of nested subarray types..."
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:96
+msgid ""
+"`#32888 <https://github.com/numpy/numpy/pull/32888>`__: MAINT: Update "
+"vendored-meson to match main."
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:97
+msgid ""
+"`#32904 <https://github.com/numpy/numpy/pull/32904>`__: TYP: Backport a "
+"number of typing updates."
+msgstr ""
+
+#: ../../../release/2.5.4-notes.rst:98
+msgid ""
+"`#32956 <https://github.com/numpy/numpy/pull/32956>`__: TYP: Various typing "
+"fixes and improvements."
+msgstr ""
