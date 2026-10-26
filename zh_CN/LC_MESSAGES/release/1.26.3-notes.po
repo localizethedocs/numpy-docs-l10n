@@ -1,0 +1,394 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-23 08:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release/1.26.3-notes.rst:5
+msgid "NumPy 1.26.3 Release Notes"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:7
+msgid ""
+"NumPy 1.26.3 is a maintenance release that fixes bugs and regressions "
+"discovered after the 1.26.2 release. The most notable changes are the f2py "
+"bug fixes. The Python versions supported by this release are 3.9-3.12."
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:13
+msgid "Compatibility"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:15
+msgid ""
+"``f2py`` will no longer accept ambiguous ``-m`` and ``.pyf`` CLI "
+"combinations. When more than one ``.pyf`` file is passed, an error is "
+"raised. When both ``-m`` and a ``.pyf`` is passed, a warning is emitted and "
+"the ``-m`` provided name is ignored."
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:22
+msgid "Improvements"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:24
+msgid ""
+"``f2py`` now handles ``common`` blocks which have ``kind`` specifications "
+"from modules. This further expands the usability of intrinsics like "
+"``iso_fortran_env`` and ``iso_c_binding``."
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:30
+msgid "Contributors"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:32
+msgid ""
+"A total of 18 people contributed to this release.  People with a \"+\" by "
+"their names contributed a patch for the first time."
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:35
+msgid "@DWesl"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:36
+msgid "@Illviljan"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:37
+msgid "Alexander Grund"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:38
+msgid "Andrea Bianchi +"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:39
+msgid "Charles Harris"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:40
+msgid "Daniel Vanzo"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:41
+msgid "Johann Rohwer +"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:42
+msgid "Matti Picus"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:43
+msgid "Nathan Goldbaum"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:44
+msgid "Peter Hawkins"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:45
+msgid "Raghuveer Devulapalli"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:46
+msgid "Ralf Gommers"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:47
+msgid "Rohit Goswami"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:48
+msgid "Sayed Adel"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:49
+msgid "Sebastian Berg"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:50
+msgid "Stefano Rivera +"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:51
+msgid "Thomas A Caswell"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:52
+msgid "matoro"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:56
+msgid "Pull requests merged"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:57
+msgid "A total of 42 pull requests were merged for this release."
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:59
+msgid ""
+"`#25130 <https://github.com/numpy/numpy/pull/25130>`__: MAINT: prepare 1.26."
+"x for further development"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:60
+msgid ""
+"`#25188 <https://github.com/numpy/numpy/pull/25188>`__: TYP: add None to "
+"``__getitem__`` in ``numpy.array_api``"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:61
+msgid ""
+"`#25189 <https://github.com/numpy/numpy/pull/25189>`__: BLD,BUG: quadmath "
+"required where available [f2py]"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:62
+msgid ""
+"`#25190 <https://github.com/numpy/numpy/pull/25190>`__: BUG: alpha doesn't "
+"use REAL(10)"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:63
+msgid ""
+"`#25191 <https://github.com/numpy/numpy/pull/25191>`__: BUG: Fix FP overflow "
+"error in division when the divisor is scalar"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:64
+msgid ""
+"`#25192 <https://github.com/numpy/numpy/pull/25192>`__: MAINT: Pin scipy-"
+"openblas version."
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:65
+msgid ""
+"`#25201 <https://github.com/numpy/numpy/pull/25201>`__: BUG: Fix f2py to "
+"enable use of string optional inout argument"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:66
+msgid ""
+"`#25202 <https://github.com/numpy/numpy/pull/25202>`__: BUG: Fix -"
+"fsanitize=alignment issue in numpy/_core/src/multiarray/arraytypes.c.src"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:67
+msgid ""
+"`#25203 <https://github.com/numpy/numpy/pull/25203>`__: TST: Explicitly pass "
+"NumPy path to cython during tests (also..."
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:68
+msgid ""
+"`#25204 <https://github.com/numpy/numpy/pull/25204>`__: BUG: fix issues with "
+"``newaxis`` and ``linalg.solve`` in ``numpy.array_api``"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:69
+msgid ""
+"`#25205 <https://github.com/numpy/numpy/pull/25205>`__: BUG: Disallow "
+"shadowed modulenames"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:70
+msgid ""
+"`#25217 <https://github.com/numpy/numpy/pull/25217>`__: BUG: Handle common "
+"blocks with kind specifications from modules"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:71
+msgid ""
+"`#25218 <https://github.com/numpy/numpy/pull/25218>`__: BUG: Fix moving "
+"compiled executable to root with f2py -c on Windows"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:72
+msgid ""
+"`#25219 <https://github.com/numpy/numpy/pull/25219>`__: BUG: Fix single to "
+"half-precision conversion on PPC64/VSX3"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:73
+msgid ""
+"`#25227 <https://github.com/numpy/numpy/pull/25227>`__: TST: f2py: fix issue "
+"in test skip condition"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:74
+msgid ""
+"`#25240 <https://github.com/numpy/numpy/pull/25240>`__: Revert \"MAINT: Pin "
+"scipy-openblas version.\""
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:75
+msgid ""
+"`#25249 <https://github.com/numpy/numpy/pull/25249>`__: MAINT: do not use "
+"``long`` type"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:76
+msgid ""
+"`#25377 <https://github.com/numpy/numpy/pull/25377>`__: TST: PyPy needs "
+"another gc.collect on latest versions"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:77
+msgid ""
+"`#25378 <https://github.com/numpy/numpy/pull/25378>`__: CI: Install Lapack "
+"runtime on Cygwin."
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:78
+msgid ""
+"`#25379 <https://github.com/numpy/numpy/pull/25379>`__: MAINT: Bump conda-"
+"incubator/setup-miniconda from 2.2.0 to 3.0.1"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:79
+msgid ""
+"`#25380 <https://github.com/numpy/numpy/pull/25380>`__: BLD: update vendored "
+"Meson for AIX shared library fix"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:80
+msgid ""
+"`#25419 <https://github.com/numpy/numpy/pull/25419>`__: MAINT: Init ``base`` "
+"in cpu_avx512_kn"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:81
+msgid ""
+"`#25420 <https://github.com/numpy/numpy/pull/25420>`__: BUG: Fix failing "
+"test_features on SapphireRapids"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:82
+msgid ""
+"`#25422 <https://github.com/numpy/numpy/pull/25422>`__: BUG: Fix non-"
+"contiguous memory load when ARM/Neon is enabled"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:83
+msgid ""
+"`#25428 <https://github.com/numpy/numpy/pull/25428>`__: MAINT,BUG: Never "
+"import distutils above 3.12 [f2py]"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:84
+msgid ""
+"`#25452 <https://github.com/numpy/numpy/pull/25452>`__: MAINT: make the "
+"import-time check for old Accelerate more specific"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:85
+msgid ""
+"`#25458 <https://github.com/numpy/numpy/pull/25458>`__: BUG: fix macOS "
+"version checks for Accelerate support"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:86
+msgid ""
+"`#25465 <https://github.com/numpy/numpy/pull/25465>`__: MAINT: Bump actions/"
+"setup-node and larsoner/circleci-artifacts-redirector-action"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:87
+msgid ""
+"`#25466 <https://github.com/numpy/numpy/pull/25466>`__: BUG: avoid seg fault "
+"from OOB access in RandomState.set_state()"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:88
+msgid ""
+"`#25467 <https://github.com/numpy/numpy/pull/25467>`__: BUG: Fix two errors "
+"related to not checking for failed allocations"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:89
+msgid ""
+"`#25468 <https://github.com/numpy/numpy/pull/25468>`__: BUG: Fix regression "
+"with ``f2py`` wrappers when modules and subroutines..."
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:90
+msgid ""
+"`#25475 <https://github.com/numpy/numpy/pull/25475>`__: BUG: Fix build "
+"issues on SPR"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:91
+msgid ""
+"`#25478 <https://github.com/numpy/numpy/pull/25478>`__: BLD: fix "
+"uninitialized variable warnings from simd/neon/memory.h"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:92
+msgid ""
+"`#25480 <https://github.com/numpy/numpy/pull/25480>`__: BUG: Handle "
+"``iso_c_type`` mappings more consistently"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:93
+msgid ""
+"`#25481 <https://github.com/numpy/numpy/pull/25481>`__: BUG: Fix module name "
+"bug in signature files [urgent] [f2py]"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:94
+msgid ""
+"`#25482 <https://github.com/numpy/numpy/pull/25482>`__: BUG: Handle .pyf.src "
+"and fix SciPy [urgent]"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:95
+msgid ""
+"`#25483 <https://github.com/numpy/numpy/pull/25483>`__: DOC: ``f2py`` "
+"rewrite with ``meson`` details"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:96
+msgid ""
+"`#25485 <https://github.com/numpy/numpy/pull/25485>`__: BUG: Add external "
+"library handling for meson [f2py]"
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:97
+msgid ""
+"`#25486 <https://github.com/numpy/numpy/pull/25486>`__: MAINT: Run f2py's "
+"meson backend with the same python that ran..."
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:98
+msgid ""
+"`#25489 <https://github.com/numpy/numpy/pull/25489>`__: MAINT: Update "
+"``numpy/f2py/_backends`` from main."
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:99
+msgid ""
+"`#25490 <https://github.com/numpy/numpy/pull/25490>`__: MAINT: Easy updates "
+"of ``f2py/*.py`` from main."
+msgstr ""
+
+#: ../../../release/1.26.3-notes.rst:100
+msgid ""
+"`#25491 <https://github.com/numpy/numpy/pull/25491>`__: MAINT: Update "
+"crackfortran.py and f2py2e.py from main"
+msgstr ""
