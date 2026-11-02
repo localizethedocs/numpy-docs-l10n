@@ -1,0 +1,173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release/1.16.2-notes.rst:3
+msgid "NumPy 1.16.2 Release Notes"
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:5
+msgid ""
+"NumPy 1.16.2 is a quick release fixing several problems encountered on "
+"Windows. The Python versions supported are 2.7 and 3.5-3.7. The Windows "
+"problems addressed are:"
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:9
+msgid "DLL load problems for NumPy wheels on Windows,"
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:10
+msgid "distutils command line parsing on Windows."
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:12
+msgid ""
+"There is also a regression fix correcting signed zeros produced by divmod, "
+"see below for details."
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:15
+msgid ""
+"Downstream developers building this release should use Cython >= 0.29.2 and, "
+"if using OpenBLAS, OpenBLAS > v0.3.4."
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:18
+msgid ""
+"If you are installing using pip, you may encounter a problem with older "
+"installed versions of NumPy that pip did not delete becoming mixed with the "
+"current version, resulting in an ``ImportError``. That problem is "
+"particularly common on Debian derived distributions due to a modified pip.  "
+"The fix is to make sure all previous NumPy versions installed by pip have "
+"been removed. See `#12736 <https://github.com/numpy/numpy/issues/12736>`__ "
+"for discussion of the issue."
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:28
+msgid "Compatibility notes"
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:31
+msgid "Signed zero when using divmod"
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:32
+msgid ""
+"Starting in version 1.12.0, numpy incorrectly returned a negatively signed "
+"zero when using the ``divmod`` and ``floor_divide`` functions when the "
+"result was zero. For example::"
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:36
+msgid ""
+">>> np.zeros(10)//1\n"
+"array([-0., -0., -0., -0., -0., -0., -0., -0., -0., -0.])"
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:39
+msgid ""
+"With this release, the result is correctly returned as a positively signed "
+"zero::"
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:42
+msgid ""
+">>> np.zeros(10)//1\n"
+"array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])"
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:47
+msgid "Contributors"
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:49
+msgid ""
+"A total of 5 people contributed to this release.  People with a \"+\" by "
+"their names contributed a patch for the first time."
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:52
+msgid "Charles Harris"
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:53
+msgid "Eric Wieser"
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:54
+msgid "Matti Picus"
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:55
+msgid "Tyler Reddy"
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:56
+msgid "Tony LaTorre +"
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:60
+msgid "Pull requests merged"
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:62
+msgid "A total of 7 pull requests were merged for this release."
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:64
+msgid ""
+"`#12909 <https://github.com/numpy/numpy/pull/12909>`__: TST: fix vmImage "
+"dispatch in Azure"
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:65
+msgid ""
+"`#12923 <https://github.com/numpy/numpy/pull/12923>`__: MAINT: remove "
+"complicated test of multiarray import failure mode"
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:66
+msgid ""
+"`#13020 <https://github.com/numpy/numpy/pull/13020>`__: BUG: fix signed zero "
+"behavior in npy_divmod"
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:67
+msgid ""
+"`#13026 <https://github.com/numpy/numpy/pull/13026>`__: MAINT: Add functions "
+"to parse shell-strings in the platform-native..."
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:68
+msgid ""
+"`#13028 <https://github.com/numpy/numpy/pull/13028>`__: BUG: Fix regression "
+"in parsing of F90 and F77 environment variables"
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:69
+msgid ""
+"`#13038 <https://github.com/numpy/numpy/pull/13038>`__: BUG: parse shell "
+"escaping in extra_compile_args and extra_link_args"
+msgstr ""
+
+#: ../../../release/1.16.2-notes.rst:70
+msgid ""
+"`#13041 <https://github.com/numpy/numpy/pull/13041>`__: BLD: Windows "
+"absolute path DLL loading"
+msgstr ""
