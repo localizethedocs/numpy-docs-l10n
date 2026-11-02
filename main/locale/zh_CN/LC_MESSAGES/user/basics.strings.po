@@ -43,10 +43,10 @@ msgstr ""
 
 #: ../../../user/basics.strings.rst:19
 msgid ""
-"For the first use case, NumPy provides the fixed-width `numpy.void`, `numpy."
-"str_` and `numpy.bytes_` data types. For the second use case, numpy provides "
-"`numpy.dtypes.StringDType`. Below we describe how to work with both fixed-"
-"width and variable-width string arrays, how to convert between the two "
+"For the first use case, NumPy provides the fixed-width `numpy.void`, "
+"`numpy.str_` and `numpy.bytes_` data types. For the second use case, numpy "
+"provides `numpy.dtypes.StringDType`. Below we describe how to work with both "
+"fixed-width and variable-width string arrays, how to convert between the two "
 "representations, and provide some advice for most efficiently working with "
 "string data in NumPy."
 msgstr ""
@@ -57,10 +57,10 @@ msgstr ""
 
 #: ../../../user/basics.strings.rst:29
 msgid ""
-"Before NumPy 2.0, the fixed-width `numpy.str_`, `numpy.bytes_`, and `numpy."
-"void` data types were the only types available for working with strings and "
-"bytestrings in NumPy. For this reason, they are used as the default dtype "
-"for strings and bytestrings, respectively:"
+"Before NumPy 2.0, the fixed-width `numpy.str_`, `numpy.bytes_`, and "
+"`numpy.void` data types were the only types available for working with "
+"strings and bytestrings in NumPy. For this reason, they are used as the "
+"default dtype for strings and bytestrings, respectively:"
 msgstr ""
 
 #: ../../../user/basics.strings.rst:37
@@ -242,14 +242,14 @@ msgstr ""
 
 #: ../../../user/basics.strings.rst:204
 msgid ""
-"``StringDType`` supports round-trip casts between `numpy.str_`, `numpy."
-"bytes_`, and `numpy.void`. Casting to a fixed-width string is most useful "
-"when strings need to be memory-mapped in an ndarray or when a fixed-width "
-"string is needed for reading and writing to a columnar data format with a "
-"known maximum string length. The `numpy.bytes_` cast is most useful for "
-"string data that is known to contain only ASCII characters, as characters "
-"outside this range cannot be represented in a single byte in the UTF-8 "
-"encoding and are rejected."
+"``StringDType`` supports round-trip casts between `numpy.str_`, "
+"`numpy.bytes_`, and `numpy.void`. Casting to a fixed-width string is most "
+"useful when strings need to be memory-mapped in an ndarray or when a fixed-"
+"width string is needed for reading and writing to a columnar data format "
+"with a known maximum string length. The `numpy.bytes_` cast is most useful "
+"for string data that is known to contain only ASCII characters, as "
+"characters outside this range cannot be represented in a single byte in the "
+"UTF-8 encoding and are rejected."
 msgstr ""
 
 #: ../../../user/basics.strings.rst:213
@@ -282,10 +282,10 @@ msgstr ""
 
 #: ../../../user/basics.strings.rst:230
 msgid ""
-"Any valid unicode string can be cast to `numpy.str_`, although since `numpy."
-"str_` uses a 32-bit UCS4 encoding for all characters, this will often waste "
-"memory for real-world textual data that can be well-represented by a more "
-"memory-efficient encoding."
+"Any valid unicode string can be cast to `numpy.str_`, although since "
+"`numpy.str_` uses a 32-bit UCS4 encoding for all characters, this will often "
+"waste memory for real-world textual data that can be well-represented by a "
+"more memory-efficient encoding."
 msgstr ""
 
 #: ../../../user/basics.strings.rst:235

@@ -76,18 +76,18 @@ msgstr ""
 #: ../../../reference/swig.testing.rst:37
 msgid ""
 "is a `SWIG`_ interface file that defines a python module ``Vector`` that "
-"wraps the functions in ``Vector.h`` while utilizing the typemaps in ``numpy."
-"i`` to correctly handle the C arrays."
+"wraps the functions in ``Vector.h`` while utilizing the typemaps in "
+"``numpy.i`` to correctly handle the C arrays."
 msgstr ""
 
 #: ../../../reference/swig.testing.rst:41
 msgid ""
-"The ``Makefile`` calls ``swig`` to generate ``Vector.py`` and ``Vector_wrap."
-"cxx``, and also executes the ``setup.py`` script that compiles ``Vector_wrap."
-"cxx`` and links together the extension module ``_Vector.so`` or ``_Vector."
-"dylib``, depending on the platform.  This extension module and the proxy "
-"file ``Vector.py`` are both placed in a subdirectory under the ``build`` "
-"directory."
+"The ``Makefile`` calls ``swig`` to generate ``Vector.py`` and "
+"``Vector_wrap.cxx``, and also executes the ``setup.py`` script that compiles "
+"``Vector_wrap.cxx`` and links together the extension module ``_Vector.so`` "
+"or ``_Vector.dylib``, depending on the platform.  This extension module and "
+"the proxy file ``Vector.py`` are both placed in a subdirectory under the "
+"``build`` directory."
 msgstr ""
 
 #: ../../../reference/swig.testing.rst:48
@@ -214,10 +214,11 @@ msgid ""
 "``Vector``.  It follows the conventions for using ``numpy.i`` as described "
 "in this chapter.  It defines a `SWIG`_ macro ``%apply_numpy_typemaps`` that "
 "has a single argument ``TYPE``. It uses the `SWIG`_ directive ``%apply`` to "
-"apply the provided typemaps to the argument signatures found in ``Vector."
-"h``.  This macro is then implemented for all of the data types supported by "
-"``numpy.i``.  It then does a ``%include \"Vector.h\"`` to wrap all of the "
-"function prototypes in ``Vector.h`` using the typemaps in ``numpy.i``."
+"apply the provided typemaps to the argument signatures found in "
+"``Vector.h``.  This macro is then implemented for all of the data types "
+"supported by ``numpy.i``.  It then does a ``%include \"Vector.h\"`` to wrap "
+"all of the function prototypes in ``Vector.h`` using the typemaps in "
+"``numpy.i``."
 msgstr ""
 
 #: ../../../reference/swig.testing.rst:121
@@ -226,10 +227,10 @@ msgstr ""
 
 #: ../../../reference/swig.testing.rst:123
 msgid ""
-"After ``make`` is used to build the testing extension modules, ``testVector."
-"py`` can be run to execute the tests.  As with other scripts that use "
-"``unittest`` to facilitate unit testing, ``testVector.py`` defines a class "
-"that inherits from ``unittest.TestCase``::"
+"After ``make`` is used to build the testing extension modules, "
+"``testVector.py`` can be run to execute the tests.  As with other scripts "
+"that use ``unittest`` to facilitate unit testing, ``testVector.py`` defines "
+"a class that inherits from ``unittest.TestCase``::"
 msgstr ""
 
 #: ../../../reference/swig.testing.rst:129

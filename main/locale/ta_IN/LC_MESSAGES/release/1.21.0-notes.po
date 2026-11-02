@@ -163,8 +163,8 @@ msgstr ""
 msgid ""
 "A ``DeprecationWarning`` is now given if the ``.dtype`` attribute of an "
 "object passed into ``np.dtype`` or as a ``dtype=obj`` argument is not a "
-"dtype. NumPy will stop attempting to recursively coerce the result of ``."
-"dtype``."
+"dtype. NumPy will stop attempting to recursively coerce the result of "
+"``.dtype``."
 msgstr ""
 
 #: ../../../release/1.21.0-notes.rst:96
@@ -441,11 +441,11 @@ msgstr ""
 
 #: ../../../release/1.21.0-notes.rst:280
 msgid ""
-"If you run into these, in most cases pass for example ``dtype=np."
-"timedelta64`` which clearly denotes a general ``timedelta64`` without any "
-"unit or byte-order defined.  If you need to specify the output dtype "
-"precisely, you may do so by either casting the inputs or providing an output "
-"array using `out=`."
+"If you run into these, in most cases pass for example "
+"``dtype=np.timedelta64`` which clearly denotes a general ``timedelta64`` "
+"without any unit or byte-order defined.  If you need to specify the output "
+"dtype precisely, you may do so by either casting the inputs or providing an "
+"output array using `out=`."
 msgstr ""
 
 #: ../../../release/1.21.0-notes.rst:285
@@ -617,13 +617,13 @@ msgstr ""
 #: ../../../release/1.21.0-notes.rst:408
 msgid ""
 "A new ``min_digits`` argument has been added to the dragon4 float printing "
-"functions `~numpy.format_float_positional` and `~numpy."
-"format_float_scientific` . This kwd guarantees that at least the given "
-"number of digits will be printed when printing in unique=True mode, even if "
-"the extra digits are unnecessary to uniquely specify the value. It is the "
-"counterpart to the precision argument which sets the maximum number of "
-"digits to be printed. When unique=False in fixed precision mode, it has no "
-"effect and the precision argument fixes the number of digits."
+"functions `~numpy.format_float_positional` and "
+"`~numpy.format_float_scientific` . This kwd guarantees that at least the "
+"given number of digits will be printed when printing in unique=True mode, "
+"even if the extra digits are unnecessary to uniquely specify the value. It "
+"is the counterpart to the precision argument which sets the maximum number "
+"of digits to be printed. When unique=False in fixed precision mode, it has "
+"no effect and the precision argument fixes the number of digits."
 msgstr ""
 
 #: ../../../release/1.21.0-notes.rst:417
@@ -797,9 +797,10 @@ msgstr ""
 
 #: ../../../release/1.21.0-notes.rst:524
 msgid ""
-"All placeholder annotations, that were previously annotated as ``typing."
-"Any``, have been improved. Where appropriate they have been replaced with "
-"explicit function definitions, classes or other miscellaneous objects."
+"All placeholder annotations, that were previously annotated as "
+"``typing.Any``, have been improved. Where appropriate they have been "
+"replaced with explicit function definitions, classes or other miscellaneous "
+"objects."
 msgstr ""
 
 #: ../../../release/1.21.0-notes.rst:528
@@ -818,8 +819,8 @@ msgstr ""
 msgid ""
 "Integer division of NumPy arrays now uses `libdivide <https://libdivide.com/"
 ">`__ when the divisor is a constant. With the usage of libdivide and other "
-"minor optimizations, there is a large speedup. The ``//`` operator and ``np."
-"floor_divide`` makes use of the new changes."
+"minor optimizations, there is a large speedup. The ``//`` operator and "
+"``np.floor_divide`` makes use of the new changes."
 msgstr ""
 
 #: ../../../release/1.21.0-notes.rst:541

@@ -50,10 +50,10 @@ msgstr ""
 
 #: ../../../user/c-info.reduction-loop-tutorial.rst:28
 msgid ""
-"That trick does not generalize to ufuncs with more than one output, such as :"
-"func:`numpy.divmod`. Their forward loop has a two-in/``nout``-out signature. "
-"There is no natural way to pair each output up with an input that could hold "
-"its running result."
+"That trick does not generalize to ufuncs with more than one output, such "
+"as :func:`numpy.divmod`. Their forward loop has a two-in/``nout``-out "
+"signature. There is no natural way to pair each output up with an input that "
+"could hold its running result."
 msgstr ""
 
 #: ../../../user/c-info.reduction-loop-tutorial.rst:33
@@ -63,9 +63,9 @@ msgid ""
 "That loop has an ``(nout + 1)``-in/``nout``-out signature. It takes the "
 "current per-output accumulators plus one streamed input element, and writes "
 "the updated accumulators. We use this signature because it collapses down to "
-"the usual two-input/one-output case when ``nout`` is 1. See :c:macro:"
-"`NPY_METH_get_reduction_loop` in the :doc:`ArrayMethod API reference </"
-"reference/c-api/array>` for the exact data/stride layout."
+"the usual two-input/one-output case when ``nout`` is 1. "
+"See :c:macro:`NPY_METH_get_reduction_loop` in the :doc:`ArrayMethod API "
+"reference </reference/c-api/array>` for the exact data/stride layout."
 msgstr ""
 
 #: ../../../user/c-info.reduction-loop-tutorial.rst:43
@@ -114,18 +114,19 @@ msgstr ""
 msgid ""
 "The example below defines a ``minimummaximum`` ufunc for the ``'f8'`` "
 "(``double``) dtype only. It computes the running minimum and maximum in a "
-"single pass, so ``minimummaximum.reduce(a)`` returns the pair ``(a.min(), a."
-"max())`` using one loop over ``a`` rather than two."
+"single pass, so ``minimummaximum.reduce(a)`` returns the pair ``(a.min(), "
+"a.max())`` using one loop over ``a`` rather than two."
 msgstr ""
 
 #: ../../../user/c-info.reduction-loop-tutorial.rst:77
 msgid ""
 "``NPY_METH_get_reduction_loop`` is an ``ArrayMethod`` slot. The ufunc's loop "
-"must therefore be registered through the ``PyArrayMethod_Spec`` API (:c:func:"
-"`PyUFunc_AddLoopFromSpec`), not the legacy ``PyUFunc_FromFuncAndData`` loop "
-"table used in the previous tutorial. The ufunc itself is still created with :"
-"c:func:`PyUFunc_FromFuncAndData`, just without any loops attached yet. The "
-"loop is added separately, via its ``ArrayMethod`` spec."
+"must therefore be registered through the ``PyArrayMethod_Spec`` API "
+"(:c:func:`PyUFunc_AddLoopFromSpec`), not the legacy "
+"``PyUFunc_FromFuncAndData`` loop table used in the previous tutorial. The "
+"ufunc itself is still created with :c:func:`PyUFunc_FromFuncAndData`, just "
+"without any loops attached yet. The loop is added separately, via its "
+"``ArrayMethod`` spec."
 msgstr ""
 
 #: ../../../user/c-info.reduction-loop-tutorial.rst:85
@@ -490,20 +491,20 @@ msgid ""
 "The promoter always resolves to ``'f8'``, regardless of the input dtypes. "
 "Integer input arrays are therefore silently cast to ``float64`` instead of "
 "keeping their own dtype. A multi-dtype ufunc would register a loop per dtype "
-"and pick the common one, as the built-in :func:`numpy.minimum`/:func:`numpy."
-"maximum` do."
+"and pick the common one, as the built-"
+"in :func:`numpy.minimum`/:func:`numpy.maximum` do."
 msgstr ""
 
 #: ../../../user/c-info.reduction-loop-tutorial.rst:403
 msgid ""
 "It registers no reduction identity. Reducing an empty array therefore raises "
 "a :exc:`ValueError`, the same as ``numpy.maximum.reduce``. A multi-output "
-"ufunc can provide per-output identities with the :c:macro:"
-"`NPY_METH_get_multi_reduction_initials` slot, the multi-output version of :c:"
-"macro:`NPY_METH_get_reduction_initial`. Its function fills one initial value "
-"per output, for example ``+inf`` for the running minimum and ``-inf`` for "
-"the running maximum. Reducing an empty array, or reducing with a ``where=`` "
-"mask, then returns those identities instead of raising::"
+"ufunc can provide per-output identities with "
+"the :c:macro:`NPY_METH_get_multi_reduction_initials` slot, the multi-output "
+"version of :c:macro:`NPY_METH_get_reduction_initial`. Its function fills one "
+"initial value per output, for example ``+inf`` for the running minimum and "
+"``-inf`` for the running maximum. Reducing an empty array, or reducing with "
+"a ``where=`` mask, then returns those identities instead of raising::"
 msgstr ""
 
 #: ../../../user/c-info.reduction-loop-tutorial.rst:412
@@ -528,21 +529,21 @@ msgstr ""
 
 #: ../../../user/c-info.reduction-loop-tutorial.rst:425
 msgid ""
-":meth:`~numpy.ufunc.accumulate`, :meth:`~numpy.ufunc.reduceat`, and :meth:"
-"`~numpy.ufunc.at` are not supported for multi-output ufuncs yet, only :meth:"
-"`~numpy.ufunc.reduce` is."
+":meth:`~numpy.ufunc.accumulate`, :meth:`~numpy.ufunc.reduceat`, "
+"and :meth:`~numpy.ufunc.at` are not supported for multi-output ufuncs yet, "
+"only :meth:`~numpy.ufunc.reduce` is."
 msgstr ""
 
 #: ../../../user/c-info.reduction-loop-tutorial.rst:431
 msgid ""
-":doc:`ArrayMethod API reference </reference/c-api/array>` for the full :c:"
-"macro:`NPY_METH_get_reduction_loop` reference documentation."
+":doc:`ArrayMethod API reference </reference/c-api/array>` for the "
+"full :c:macro:`NPY_METH_get_reduction_loop` reference documentation."
 msgstr ""
 
 #: ../../../user/c-info.reduction-loop-tutorial.rst:433
 msgid ""
-":ref:`ufuncs-basics` for the Python-level behavior of :meth:`~numpy.ufunc."
-"reduce` on multi-output ufuncs."
+":ref:`ufuncs-basics` for the Python-level behavior "
+"of :meth:`~numpy.ufunc.reduce` on multi-output ufuncs."
 msgstr ""
 
 #: ../../../user/c-info.reduction-loop-tutorial.rst:7

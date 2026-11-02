@@ -42,8 +42,8 @@ msgstr ""
 msgid ""
 "Many of the changes covered in the 2.0 release notes and in this migration "
 "guide can be automatically adapted in downstream code with a dedicated `Ruff "
-"<https://docs.astral.sh/ruff/>`__ rule, namely rule `NPY201 <https://docs."
-"astral.sh/ruff/rules/numpy2-deprecation/>`__."
+"<https://docs.astral.sh/ruff/>`__ rule, namely rule `NPY201 <https://"
+"docs.astral.sh/ruff/rules/numpy2-deprecation/>`__."
 msgstr ""
 
 #: ../../../numpy_2_0_migration_guide.rst:26
@@ -143,8 +143,8 @@ msgid ""
 "Most end-users should not be affected by this change.  Some operations will "
 "use more memory, but some operations may actually become faster. If you "
 "experience issues due to calling a library written in a compiled language it "
-"may help to explicitly cast to a ``long``, for example with: ``arr = arr."
-"astype(\"long\", copy=False)``."
+"may help to explicitly cast to a ``long``, for example with: ``arr = "
+"arr.astype(\"long\", copy=False)``."
 msgstr ""
 
 #: ../../../numpy_2_0_migration_guide.rst:84
@@ -264,9 +264,9 @@ msgstr ""
 
 #: ../../../numpy_2_0_migration_guide.rst:151
 msgid ""
-"**Custom User DTypes:** Existing user dtypes must now use :c:type:"
-"`PyArray_DescrProto` to define their dtype and slightly modify the code. See "
-"note in :c:func:`PyArray_RegisterDataType`."
+"**Custom User DTypes:** Existing user dtypes must now "
+"use :c:type:`PyArray_DescrProto` to define their dtype and slightly modify "
+"the code. See note in :c:func:`PyArray_RegisterDataType`."
 msgstr ""
 
 #: ../../../numpy_2_0_migration_guide.rst:156
@@ -365,9 +365,9 @@ msgid ""
 "This has implications for Cython. It is recommended to always use the native "
 "typedefs ``cfloat_t``, ``cdouble_t``, ``clongdouble_t`` rather than the "
 "NumPy types ``npy_cfloat``, etc, unless you have to interface with C code "
-"written using the NumPy types. You can still write cython code using the ``c."
-"real`` and ``c.imag`` attributes (using the native typedefs), but you can no "
-"longer use in-place operators ``c.imag += 1`` in Cython's c++ mode."
+"written using the NumPy types. You can still write cython code using the "
+"``c.real`` and ``c.imag`` attributes (using the native typedefs), but you "
+"can no longer use in-place operators ``c.imag += 1`` in Cython's c++ mode."
 msgstr ""
 
 #: ../../../numpy_2_0_migration_guide.rst:223
@@ -550,8 +550,8 @@ msgstr ""
 #: ../../../numpy_2_0_migration_guide.rst:274
 #: ../../../numpy_2_0_migration_guide.rst:276
 msgid ""
-"Emit ``DeprecationWarning`` with ``warnings.warn`` directly, or use ``typing."
-"deprecated``."
+"Emit ``DeprecationWarning`` with ``warnings.warn`` directly, or use "
+"``typing.deprecated``."
 msgstr ""
 
 #: ../../../numpy_2_0_migration_guide.rst:276
@@ -1068,8 +1068,8 @@ msgstr ""
 #: ../../../numpy_2_0_migration_guide.rst:429
 msgid ""
 "The :ref:`copy keyword behavior changes <copy-keyword-changes-2.0>` in "
-"`~numpy.asarray`, `~numpy.array` and `ndarray.__array__ <numpy.ndarray."
-"__array__>` may require these changes:"
+"`~numpy.asarray`, `~numpy.array` and `ndarray.__array__ "
+"<numpy.ndarray.__array__>` may require these changes:"
 msgstr ""
 
 #: ../../../numpy_2_0_migration_guide.rst:433

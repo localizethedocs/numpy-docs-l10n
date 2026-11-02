@@ -492,15 +492,15 @@ msgstr ""
 
 #: ../../../release/1.20.0-notes.rst:234
 msgid ""
-"For example, ``shapely`` will allow conversion to an array-like using ``line."
-"coords`` rather than ``np.asarray(line)``. Users may work around the "
+"For example, ``shapely`` will allow conversion to an array-like using "
+"``line.coords`` rather than ``np.asarray(line)``. Users may work around the "
 "warning, or use the new convention when it becomes available."
 msgstr ""
 
 #: ../../../release/1.20.0-notes.rst:238
 msgid ""
-"Unfortunately, using the new behaviour can only be achieved by calling ``np."
-"array(array_like)``."
+"Unfortunately, using the new behaviour can only be achieved by calling "
+"``np.array(array_like)``."
 msgstr ""
 
 #: ../../../release/1.20.0-notes.rst:241
@@ -535,9 +535,9 @@ msgstr ""
 
 #: ../../../release/1.20.0-notes.rst:258
 msgid ""
-"Array creation and casting using ``np.array(arr, dtype)`` and ``arr."
-"astype(dtype)`` will use different logic when ``dtype`` is a subarray dtype "
-"such as ``np.dtype(\"(2)i,\")``."
+"Array creation and casting using ``np.array(arr, dtype)`` and "
+"``arr.astype(dtype)`` will use different logic when ``dtype`` is a subarray "
+"dtype such as ``np.dtype(\"(2)i,\")``."
 msgstr ""
 
 #: ../../../release/1.20.0-notes.rst:262
@@ -838,11 +838,12 @@ msgstr ""
 #: ../../../release/1.20.0-notes.rst:443
 msgid ""
 "To stay in sync with the deprecation for ``np.dtype(\"Complex64\")`` and "
-"other numeric-style (capital case) types.  These were removed from ``np."
-"sctypeDict`` and ``np.typeDict``.  You should use the lower case versions "
-"instead.  Note that ``\"Complex64\"`` corresponds to ``\"complex128\"`` and "
-"``\"Complex32\"`` corresponds to ``\"complex64\"``.  The numpy style (new) "
-"versions, denote the full size and not the size of the real/imaginary part."
+"other numeric-style (capital case) types.  These were removed from "
+"``np.sctypeDict`` and ``np.typeDict``.  You should use the lower case "
+"versions instead.  Note that ``\"Complex64\"`` corresponds to "
+"``\"complex128\"`` and ``\"Complex32\"`` corresponds to ``\"complex64\"``.  "
+"The numpy style (new) versions, denote the full size and not the size of the "
+"real/imaginary part."
 msgstr ""
 
 #: ../../../release/1.20.0-notes.rst:454
@@ -885,20 +886,20 @@ msgstr ""
 
 #: ../../../release/1.20.0-notes.rst:473
 msgid ""
-"Float and timedelta promotion consistently raises a TypeError. ``np."
-"promote_types(\"float32\", \"m8\")`` aligns with ``np.promote_types(\"m8\", "
-"\"float32\")`` now and both raise a TypeError. Previously, ``np."
-"promote_types(\"float32\", \"m8\")`` returned ``\"m8\"`` which was "
-"considered a bug."
+"Float and timedelta promotion consistently raises a TypeError. "
+"``np.promote_types(\"float32\", \"m8\")`` aligns with "
+"``np.promote_types(\"m8\", \"float32\")`` now and both raise a TypeError. "
+"Previously, ``np.promote_types(\"float32\", \"m8\")`` returned ``\"m8\"`` "
+"which was considered a bug."
 msgstr ""
 
 #: ../../../release/1.20.0-notes.rst:479
 msgid ""
-"Uint64 and timedelta promotion consistently raises a TypeError. ``np."
-"promote_types(\"uint64\", \"m8\")`` aligns with ``np.promote_types(\"m8\", "
-"\"uint64\")`` now and both raise a TypeError. Previously, ``np."
-"promote_types(\"uint64\", \"m8\")`` returned ``\"m8\"`` which was considered "
-"a bug."
+"Uint64 and timedelta promotion consistently raises a TypeError. "
+"``np.promote_types(\"uint64\", \"m8\")`` aligns with "
+"``np.promote_types(\"m8\", \"uint64\")`` now and both raise a TypeError. "
+"Previously, ``np.promote_types(\"uint64\", \"m8\")`` returned ``\"m8\"`` "
+"which was considered a bug."
 msgstr ""
 
 #: ../../../release/1.20.0-notes.rst:485
@@ -1199,8 +1200,8 @@ msgid ""
 "The keyword argument ``where`` is added and allows to only consider "
 "specified elements or subaxes from an array in the Boolean evaluation of "
 "``all`` and ``any``. This new keyword is available to the functions ``all`` "
-"and ``any`` both via ``numpy`` directly or in the methods of ``numpy."
-"ndarray``."
+"and ``any`` both via ``numpy`` directly or in the methods of "
+"``numpy.ndarray``."
 msgstr ""
 
 #: ../../../release/1.20.0-notes.rst:659 ../../../release/1.20.0-notes.rst:672
@@ -1220,8 +1221,8 @@ msgstr ""
 msgid ""
 "The keyword argument ``where`` is added and allows to limit the scope in the "
 "calculation of ``mean``, ``std`` and ``var`` to only a subset of elements. "
-"It is available both via ``numpy`` directly or in the methods of ``numpy."
-"ndarray``."
+"It is available both via ``numpy`` directly or in the methods of "
+"``numpy.ndarray``."
 msgstr ""
 
 #: ../../../release/1.20.0-notes.rst:677
@@ -1490,8 +1491,8 @@ msgstr ""
 
 #: ../../../release/1.20.0-notes.rst:827
 msgid ""
-"``numpy.core.records.fromfile`` can now use file-like objects, for instance :"
-"py:class:`io.BytesIO`"
+"``numpy.core.records.fromfile`` can now use file-like objects, for "
+"instance :py:class:`io.BytesIO`"
 msgstr ""
 
 #: ../../../release/1.20.0-notes.rst:830

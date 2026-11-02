@@ -130,8 +130,8 @@ msgstr ""
 msgid ""
 "When creating a new ``dtype`` a ``VisibleDeprecationWarning`` will be given "
 "if ``align=`` is not a boolean.  This is mainly to prevent accidentally "
-"passing a subarray align flag where it has no effect, such as ``np."
-"dtype(\"f8\", 3)`` instead of ``np.dtype((\"f8\", 3))``.  We strongly "
+"passing a subarray align flag where it has no effect, such as "
+"``np.dtype(\"f8\", 3)`` instead of ``np.dtype((\"f8\", 3))``.  We strongly "
 "suggest to always pass ``align=`` as a keyword argument."
 msgstr ""
 
@@ -387,8 +387,8 @@ msgstr ""
 
 #: ../../../release/2.4.0-notes.rst:193
 msgid ""
-"``numpy.trapz`` — deprecated since NumPy 2.0 (2023-08-18). Use ``numpy."
-"trapezoid`` or ``scipy.integrate`` functions instead."
+"``numpy.trapz`` — deprecated since NumPy 2.0 (2023-08-18). Use "
+"``numpy.trapezoid`` or ``scipy.integrate`` functions instead."
 msgstr ""
 
 #: ../../../release/2.4.0-notes.rst:196
@@ -441,8 +441,8 @@ msgstr ""
 #: ../../../release/2.4.0-notes.rst:219
 msgid ""
 "Calling ``np.sum(generator)`` directly on a generator object now raises a "
-"``TypeError``.  This behavior was deprecated in NumPy 1.15.0. Use ``np."
-"sum(np.fromiter(generator))`` or the python ``sum`` builtin instead."
+"``TypeError``.  This behavior was deprecated in NumPy 1.15.0. Use "
+"``np.sum(np.fromiter(generator))`` or the python ``sum`` builtin instead."
 msgstr ""
 
 #: ../../../release/2.4.0-notes.rst:223
@@ -645,8 +645,8 @@ msgid ""
 "Masked arrays now accept and preserve a Python ``str`` as their "
 "``fill_value`` when using the variable‑width ``StringDType`` (kind ``'T'``), "
 "including through slicing and views.  The default is ``'N/A'`` and may be "
-"overridden by any valid string. This fixes issue `gh‑29421 <https://github."
-"com/numpy/numpy/issues/29421>`__ and was implemented in pull request "
+"overridden by any valid string. This fixes issue `gh‑29421 <https://"
+"github.com/numpy/numpy/issues/29421>`__ and was implemented in pull request "
 "`gh‑29423 <https://github.com/numpy/numpy/pull/29423>`__."
 msgstr ""
 
@@ -1138,8 +1138,8 @@ msgstr ""
 
 #: ../../../release/2.4.0-notes.rst:622
 msgid ""
-"Removed compiler compatibility workarounds for partial feature support (e."
-"g., AVX512 without mask operations)"
+"Removed compiler compatibility workarounds for partial feature support "
+"(e.g., AVX512 without mask operations)"
 msgstr ""
 
 #: ../../../release/2.4.0-notes.rst:624

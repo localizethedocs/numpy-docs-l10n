@@ -215,8 +215,8 @@ msgstr ""
 #: ../../../release/1.19.0-notes.rst:121
 msgid ""
 "Objects with ``len(obj) == 0`` which implement an \"array-like\" interface, "
-"meaning an object implementing ``obj.__array__()``, ``obj."
-"__array_interface__``, ``obj.__array_struct__``, or the python buffer "
+"meaning an object implementing ``obj.__array__()``, "
+"``obj.__array_interface__``, ``obj.__array_struct__``, or the python buffer "
 "interface and which are also sequences (i.e. Pandas objects) will now always "
 "retain there shape correctly when converted to an array. If such an object "
 "has a shape of ``(0, 1)`` previously, it could be converted into an array of "
@@ -233,10 +233,10 @@ msgstr ""
 
 #: ../../../release/1.19.0-notes.rst:134
 msgid ""
-"As part of the continued removal of Python 2 compatibility, ``multiarray."
-"int_asbuffer`` was removed. On Python 3, it threw a ``NotImplementedError`` "
-"and was unused internally. It is expected that there are no downstream use "
-"cases for this method with Python 3."
+"As part of the continued removal of Python 2 compatibility, "
+"``multiarray.int_asbuffer`` was removed. On Python 3, it threw a "
+"``NotImplementedError`` and was unused internally. It is expected that there "
+"are no downstream use cases for this method with Python 3."
 msgstr ""
 
 #: ../../../release/1.19.0-notes.rst:139
@@ -281,9 +281,9 @@ msgid ""
 "``numpy.issubdtype`` had a FutureWarning since NumPy 1.14 which has expired "
 "now. This means that certain input where the second argument was neither a "
 "datatype nor a NumPy scalar type (such as a string or a python type like "
-"``int`` or ``float``) will now be consistent with passing in ``np."
-"dtype(arg2).type``. This makes the result consistent with expectations and "
-"leads to a false result in some cases which previously returned true."
+"``int`` or ``float``) will now be consistent with passing in "
+"``np.dtype(arg2).type``. This makes the result consistent with expectations "
+"and leads to a false result in some cases which previously returned true."
 msgstr ""
 
 #: ../../../release/1.19.0-notes.rst:166
@@ -314,9 +314,9 @@ msgstr ""
 
 #: ../../../release/1.19.0-notes.rst:180
 msgid ""
-"The former has changed to have the expected meaning of setting ``numpy."
-"ndarray.strides`` to ``()``, while the latter continues to result in strides "
-"being chosen automatically."
+"The former has changed to have the expected meaning of setting "
+"``numpy.ndarray.strides`` to ``()``, while the latter continues to result in "
+"strides being chosen automatically."
 msgstr ""
 
 #: ../../../release/1.19.0-notes.rst:184
@@ -572,8 +572,8 @@ msgstr ""
 #: ../../../release/1.19.0-notes.rst:328
 msgid ""
 "``np.str_`` arrays are always stored as UCS4, so the corresponding scalars "
-"now expose this through the buffer interface, meaning ``memoryview(np."
-"str_('test'))`` now works."
+"now expose this through the buffer interface, meaning "
+"``memoryview(np.str_('test'))`` now works."
 msgstr ""
 
 #: ../../../release/1.19.0-notes.rst:332
@@ -746,8 +746,8 @@ msgstr ""
 #: ../../../release/1.19.0-notes.rst:426
 msgid ""
 "The ufunc ``~numpy.logaddexp2`` now has an identity of ``-inf``, allowing it "
-"to be called on empty sequences.  This matches the identity of ``~numpy."
-"logaddexp``."
+"to be called on empty sequences.  This matches the identity of "
+"``~numpy.logaddexp``."
 msgstr ""
 
 #: ../../../release/1.19.0-notes.rst:429
@@ -766,9 +766,9 @@ msgstr ""
 msgid ""
 "A code path and test have been in the code since NumPy 0.4 for a two-"
 "argument variant of ``__array__(dtype=None, context=None)``. It was "
-"activated when calling ``ufunc(op)`` or ``ufunc.reduce(op)`` if ``op."
-"__array__`` existed. However that variant is not documented, and it is not "
-"clear what the intention was for its use. It has been removed."
+"activated when calling ``ufunc(op)`` or ``ufunc.reduce(op)`` if "
+"``op.__array__`` existed. However that variant is not documented, and it is "
+"not clear what the intention was for its use. It has been removed."
 msgstr ""
 
 #: ../../../release/1.19.0-notes.rst:443
@@ -781,9 +781,9 @@ msgstr ""
 
 #: ../../../release/1.19.0-notes.rst:447
 msgid ""
-"In order to expose ``numpy.random.BitGenerator`` and ``numpy.random."
-"SeedSequence`` to Cython, the ``_bitgenerator`` module is now public as "
-"``numpy.random.bit_generator``"
+"In order to expose ``numpy.random.BitGenerator`` and "
+"``numpy.random.SeedSequence`` to Cython, the ``_bitgenerator`` module is now "
+"public as ``numpy.random.bit_generator``"
 msgstr ""
 
 #: ../../../release/1.19.0-notes.rst:452
@@ -804,15 +804,15 @@ msgstr ""
 
 #: ../../../release/1.19.0-notes.rst:459
 msgid ""
-"Fixed ``eigh`` and ``cholesky`` methods in ``numpy.random."
-"multivariate_normal``"
+"Fixed ``eigh`` and ``cholesky`` methods in "
+"``numpy.random.multivariate_normal``"
 msgstr ""
 
 #: ../../../release/1.19.0-notes.rst:460
 msgid ""
-"Previously, when passing ``method='eigh'`` or ``method='cholesky'``, ``numpy."
-"random.multivariate_normal`` produced samples from the wrong distribution. "
-"This is now fixed."
+"Previously, when passing ``method='eigh'`` or ``method='cholesky'``, "
+"``numpy.random.multivariate_normal`` produced samples from the wrong "
+"distribution. This is now fixed."
 msgstr ""
 
 #: ../../../release/1.19.0-notes.rst:464

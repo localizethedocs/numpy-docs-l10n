@@ -130,9 +130,9 @@ msgstr ""
 
 #: ../../../release/1.22.0-notes.rst:64
 msgid ""
-"The misspelled keyword argument ``delimitor`` of ``numpy.ma.mrecords."
-"fromtextfile()`` has been changed to ``delimiter``, using it will emit a "
-"deprecation warning."
+"The misspelled keyword argument ``delimitor`` of "
+"``numpy.ma.mrecords.fromtextfile()`` has been changed to ``delimiter``, "
+"using it will emit a deprecation warning."
 msgstr ""
 
 #: ../../../release/1.22.0-notes.rst:68
@@ -256,8 +256,8 @@ msgstr ""
 
 #: ../../../release/1.22.0-notes.rst:136
 msgid ""
-"The old behavior can be restored via ``np."
-"set_printoptions(legacy=\"1.21\")``."
+"The old behavior can be restored via "
+"``np.set_printoptions(legacy=\"1.21\")``."
 msgstr ""
 
 #: ../../../release/1.22.0-notes.rst:138
@@ -295,8 +295,8 @@ msgstr ""
 msgid ""
 "This change affects the variates produced by the ``random.Generator`` "
 "methods ``random``, ``standard_normal``, ``standard_exponential``, and "
-"``standard_gamma``, but only when the dtype is specified as ``numpy."
-"float32``."
+"``standard_gamma``, but only when the dtype is specified as "
+"``numpy.float32``."
 msgstr ""
 
 #: ../../../release/1.22.0-notes.rst:158
@@ -381,13 +381,14 @@ msgid ""
 "An initial implementation of `NEP 47`_ (adoption the array API standard) has "
 "been added as ``numpy.array_api``. The implementation is experimental and "
 "will issue a UserWarning on import, as the `array API standard <https://data-"
-"apis.org/array-api/latest/index.html>`_ is still in draft state. ``numpy."
-"array_api`` is a conforming implementation of the array API standard, which "
-"is also minimal, meaning that only those functions and behaviors that are "
-"required by the standard are implemented (see the NEP for more info). "
-"Libraries wishing to make use of the array API standard are encouraged to "
-"use ``numpy.array_api`` to check that they are only using functionality that "
-"is guaranteed to be present in standard conforming implementations."
+"apis.org/array-api/latest/index.html>`_ is still in draft state. "
+"``numpy.array_api`` is a conforming implementation of the array API "
+"standard, which is also minimal, meaning that only those functions and "
+"behaviors that are required by the standard are implemented (see the NEP for "
+"more info). Libraries wishing to make use of the array API standard are "
+"encouraged to use ``numpy.array_api`` to check that they are only using "
+"functionality that is guaranteed to be present in standard conforming "
+"implementations."
 msgstr ""
 
 #: ../../../release/1.22.0-notes.rst:218
@@ -604,8 +605,8 @@ msgstr ""
 
 #: ../../../release/1.22.0-notes.rst:343
 msgid ""
-"Mimicking :pep:`585`, the ``numpy.ndarray``, ``numpy.dtype`` and ``numpy."
-"number`` classes are now subscriptable for python 3.9 and later. "
+"Mimicking :pep:`585`, the ``numpy.ndarray``, ``numpy.dtype`` and "
+"``numpy.number`` classes are now subscriptable for python 3.9 and later. "
 "Consequently, expressions that were previously only allowed in .pyi stub "
 "files or with the help of ``from __future__ import annotations`` are now "
 "also legal during runtime."
@@ -635,8 +636,8 @@ msgstr ""
 #: ../../../release/1.22.0-notes.rst:365
 msgid ""
 "All parameters in the can now take any :term:`python:path-like object`. This "
-"includes the likes of strings, bytes and objects implementing the :meth:"
-"`__fspath__<os.PathLike.__fspath__>` protocol."
+"includes the likes of strings, bytes and objects implementing "
+"the :meth:`__fspath__<os.PathLike.__fspath__>` protocol."
 msgstr ""
 
 #: ../../../release/1.22.0-notes.rst:369
@@ -652,8 +653,8 @@ msgstr ""
 msgid ""
 "The attributes ``smallest_normal`` and ``smallest_subnormal`` are available "
 "as an extension of ``finfo`` class for any floating-point data type. To use "
-"these new attributes, write ``np.finfo(np.float64).smallest_normal`` or ``np."
-"finfo(np.float64).smallest_subnormal``."
+"these new attributes, write ``np.finfo(np.float64).smallest_normal`` or "
+"``np.finfo(np.float64).smallest_subnormal``."
 msgstr ""
 
 #: ../../../release/1.22.0-notes.rst:378
@@ -681,8 +682,8 @@ msgstr ""
 
 #: ../../../release/1.22.0-notes.rst:390
 msgid ""
-"``numpy.fromregex`` now accepts objects implementing the ``__fspath__<os."
-"PathLike>`` protocol, *e.g.* ``pathlib.Path``."
+"``numpy.fromregex`` now accepts objects implementing the "
+"``__fspath__<os.PathLike>`` protocol, *e.g.* ``pathlib.Path``."
 msgstr ""
 
 #: ../../../release/1.22.0-notes.rst:393
@@ -787,8 +788,8 @@ msgstr ""
 #: ../../../release/1.22.0-notes.rst:436
 msgid ""
 "Besides the main namespace, a limited number of sub-packages contain "
-"annotations as well. This includes, among others, ``numpy.testing``, ``numpy."
-"linalg`` and ``numpy.random`` (available since 1.21)."
+"annotations as well. This includes, among others, ``numpy.testing``, "
+"``numpy.linalg`` and ``numpy.random`` (available since 1.21)."
 msgstr ""
 
 #: ../../../release/1.22.0-notes.rst:440

@@ -23,9 +23,9 @@ msgstr ""
 
 #: ../../../reference/random/new-or-different.rst:8
 msgid ""
-"NumPy 1.17.0 introduced `Generator` as an improved replacement for the :ref:"
-"`legacy <legacy>` `RandomState`. Here is a quick comparison of the two "
-"implementations."
+"NumPy 1.17.0 introduced `Generator` as an improved replacement for "
+"the :ref:`legacy <legacy>` `RandomState`. Here is a quick comparison of the "
+"two implementations."
 msgstr ""
 
 #: ../../../reference/random/new-or-different.rst:13
@@ -92,9 +92,9 @@ msgstr ""
 #: ../../../reference/random/new-or-different.rst:41
 msgid ""
 "The normal, exponential and gamma generators use 256-step Ziggurat methods "
-"which are 2-10 times faster than NumPy's default implementation in `~."
-"Generator.standard_normal`, `~.Generator.standard_exponential` or `~."
-"Generator.standard_gamma`. Because of the change in algorithms, it is not "
+"which are 2-10 times faster than NumPy's default implementation in "
+"`~.Generator.standard_normal`, `~.Generator.standard_exponential` or "
+"`~.Generator.standard_gamma`. Because of the change in algorithms, it is not "
 "possible to reproduce the exact random values using `Generator` for these "
 "distributions or any distribution method that relies on them."
 msgstr ""
@@ -139,16 +139,16 @@ msgstr ""
 
 #: ../../../reference/random/new-or-different.rst:69
 msgid ""
-"The `rand` and `randn` methods are only available through the legacy `~."
-"RandomState`."
+"The `rand` and `randn` methods are only available through the legacy "
+"`~.RandomState`."
 msgstr ""
 
 #: ../../../reference/random/new-or-different.rst:71
 msgid ""
 "`Generator.random` is now the canonical way to generate floating-point "
 "random numbers, which replaces `RandomState.random_sample`, `sample`, and "
-"`ranf`, all of which were aliases. This is consistent with Python's `random."
-"random`."
+"`ranf`, all of which were aliases. This is consistent with Python's "
+"`random.random`."
 msgstr ""
 
 #: ../../../reference/random/new-or-different.rst:75
@@ -240,9 +240,9 @@ msgstr ""
 
 #: ../../../reference/random/new-or-different.rst:117
 msgid ""
-"Optional ``axis`` argument for methods like `~.Generator.choice`, `~."
-"Generator.permutation` and `~.Generator.shuffle` that controls which axis an "
-"operation is performed over for multi-dimensional arrays."
+"Optional ``axis`` argument for methods like `~.Generator.choice`, "
+"`~.Generator.permutation` and `~.Generator.shuffle` that controls which axis "
+"an operation is performed over for multi-dimensional arrays."
 msgstr ""
 
 #: ../../../reference/random/new-or-different.rst:1
@@ -274,6 +274,6 @@ msgstr ""
 
 #: ../../../reference/random/new-or-different.rst:130
 msgid ""
-"Added a method to sample from the complex normal distribution (`~.Generator."
-"complex_normal`)"
+"Added a method to sample from the complex normal distribution "
+"(`~.Generator.complex_normal`)"
 msgstr ""

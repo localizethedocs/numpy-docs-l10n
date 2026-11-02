@@ -48,9 +48,9 @@ msgid ""
 "``(np.min(a, ...), np.max(a, ...))`` but computes both in a single fused "
 "pass over the data.  For dtypes that support ``min``/``max`` but have no "
 "fused ``minmax`` loop (such as the string DType and other user DTypes), it "
-"falls back to two separate reductions.  A masked-array counterpart ``np.ma."
-"minmax`` was also added, which simply returns ``(np.ma.min(a, ...), np.ma."
-"max(a, ...))``."
+"falls back to two separate reductions.  A masked-array counterpart "
+"``np.ma.minmax`` was also added, which simply returns ``(np.ma.min(a, ...), "
+"np.ma.max(a, ...))``."
 msgstr ""
 
 #: ../../../release/notes-towncrier.rst:26
@@ -69,8 +69,8 @@ msgstr ""
 msgid ""
 "Importing ``numpy.linalg.lapack_lite`` is deprecated. The module is an "
 "internal implementation detail of `numpy.linalg` and was never intended as a "
-"public API. Users that need LAPACK or BLAS routines should use ``scipy."
-"linalg.lapack`` or ``scipy.linalg.blas`` instead."
+"public API. Users that need LAPACK or BLAS routines should use "
+"``scipy.linalg.lapack`` or ``scipy.linalg.blas`` instead."
 msgstr ""
 
 #: ../../../release/notes-towncrier.rst:40
@@ -149,8 +149,8 @@ msgstr ""
 
 #: ../../../release/notes-towncrier.rst:83
 msgid ""
-"Casts from fixed-width `numpy.bytes_` and `numpy.str_` arrays to `numpy."
-"dtypes.StringDType` are now considered `\"safe\"` rather than `\"same-"
+"Casts from fixed-width `numpy.bytes_` and `numpy.str_` arrays to "
+"`numpy.dtypes.StringDType` are now considered `\"safe\"` rather than `\"same-"
 "kind\"`."
 msgstr ""
 
@@ -319,8 +319,8 @@ msgstr ""
 #: ../../../release/notes-towncrier.rst:174
 msgid ""
 "If you are using these in your extensions, we suggest migrating to use `the "
-"Python Raw Memory Interface instead <https://docs.python.org/3/c-api/memory."
-"html#raw-memory-interface>`_."
+"Python Raw Memory Interface instead <https://docs.python.org/3/c-api/"
+"memory.html#raw-memory-interface>`_."
 msgstr ""
 
 #: ../../../release/notes-towncrier.rst:178
@@ -348,17 +348,17 @@ msgstr ""
 
 #: ../../../release/notes-towncrier.rst:194
 msgid ""
-"New ``descending`` keyword argument for `numpy.partition` and `numpy."
-"argpartition`"
+"New ``descending`` keyword argument for `numpy.partition` and "
+"`numpy.argpartition`"
 msgstr ""
 
 #: ../../../release/notes-towncrier.rst:195
 msgid ""
-"Users can now pass the ``descending=True`` keyword argument to `numpy."
-"partition` and `numpy.argpartition` to partition and argpartition arrays in "
-"descending order. NaN values, if present, are partitioned to the end of the "
-"array in both ascending and descending sorts. This feature is available for "
-"all built-in dtypes except ``void`` and ``generic``."
+"Users can now pass the ``descending=True`` keyword argument to "
+"`numpy.partition` and `numpy.argpartition` to partition and argpartition "
+"arrays in descending order. NaN values, if present, are partitioned to the "
+"end of the array in both ascending and descending sorts. This feature is "
+"available for all built-in dtypes except ``void`` and ``generic``."
 msgstr ""
 
 #: ../../../release/notes-towncrier.rst:201
@@ -373,8 +373,8 @@ msgstr ""
 msgid ""
 "User-defined dtypes can now implement custom partitioning and "
 "argpartitioning using the ArrayMethod API in a fashion similar to sorting "
-"and argsorting. These methods are used by `numpy.partition` and `numpy."
-"argpartition` when called with arrays of the user-defined dtype."
+"and argsorting. These methods are used by `numpy.partition` and "
+"`numpy.argpartition` when called with arrays of the user-defined dtype."
 msgstr ""
 
 #: ../../../release/notes-towncrier.rst:210
@@ -454,16 +454,16 @@ msgstr ""
 
 #: ../../../release/notes-towncrier.rst:256
 msgid ""
-"`numpy.i0` no longer returns ``inf`` for large inputs such as ``np."
-"i0(713.0)``. The function now avoids intermediate overflow and returns the "
-"correct finite value."
+"`numpy.i0` no longer returns ``inf`` for large inputs such as "
+"``np.i0(713.0)``. The function now avoids intermediate overflow and returns "
+"the correct finite value."
 msgstr ""
 
 #: ../../../release/notes-towncrier.rst:258
 msgid ""
 "`numpy.i0(np.inf)` no longer triggers a spurious ``RuntimeWarning`` due to "
-"divide-by-zero in the implementation and returns `np.inf` rather than `np."
-"nan`."
+"divide-by-zero in the implementation and returns `np.inf` rather than "
+"`np.nan`."
 msgstr ""
 
 #: ../../../release/notes-towncrier.rst:260
@@ -560,10 +560,10 @@ msgstr ""
 
 #: ../../../release/notes-towncrier.rst:305
 msgid ""
-"Passing a dtype or scalar type to `numpy.common_type`, such as ``np."
-"common_type(np.dtype(\"f4\"))``, used to raise a confusing "
-"``AttributeError``. It now raises a ``TypeError`` that points to `numpy."
-"result_type` and `numpy.promote_types`, which are the tools meant for "
+"Passing a dtype or scalar type to `numpy.common_type`, such as "
+"``np.common_type(np.dtype(\"f4\"))``, used to raise a confusing "
+"``AttributeError``. It now raises a ``TypeError`` that points to "
+"`numpy.result_type` and `numpy.promote_types`, which are the tools meant for "
 "combining dtypes and scalar types."
 msgstr ""
 
@@ -653,9 +653,9 @@ msgstr ""
 
 #: ../../../release/notes-towncrier.rst:356
 msgid ""
-"``numpy.lib._datasource.DataSource`` and ``Repository`` now accept ``os."
-"PathLike`` local paths in the same places that accepted string paths. This "
-"includes ``open``, ``exists``, and ``abspath`` methods, as well as the "
+"``numpy.lib._datasource.DataSource`` and ``Repository`` now accept "
+"``os.PathLike`` local paths in the same places that accepted string paths. "
+"This includes ``open``, ``exists``, and ``abspath`` methods, as well as the "
 "module-level ``numpy.lib._datasource.open`` helper."
 msgstr ""
 
@@ -720,10 +720,11 @@ msgstr ""
 
 #: ../../../release/notes-towncrier.rst:393
 msgid ""
-"The casts from fixed-width `numpy.bytes_` and `numpy.str_` to `numpy.dtypes."
-"StringDType` are now marked `\"safe\"` rather than `\"same-kind\"`. We also "
-"now validate that `numpy.bytes_`, `numpy.void`, and `numpy.str_` arrays "
-"contain valid UTF-8 before converting to `numpy.dtypes.StringDType`."
+"The casts from fixed-width `numpy.bytes_` and `numpy.str_` to "
+"`numpy.dtypes.StringDType` are now marked `\"safe\"` rather than `\"same-"
+"kind\"`. We also now validate that `numpy.bytes_`, `numpy.void`, and "
+"`numpy.str_` arrays contain valid UTF-8 before converting to "
+"`numpy.dtypes.StringDType`."
 msgstr ""
 
 #: ../../../release/notes-towncrier.rst:401
@@ -822,9 +823,9 @@ msgstr ""
 
 #: ../../../release/notes-towncrier.rst:449
 msgid ""
-"`numpy.repeat` now casts ``repeats`` with same-kind casting, like `numpy."
-"take`. Integer arrays such as ``uint64``, or ``int64`` on 32-bit platforms, "
-"no longer raise a ``TypeError``."
+"`numpy.repeat` now casts ``repeats`` with same-kind casting, like "
+"`numpy.take`. Integer arrays such as ``uint64``, or ``int64`` on 32-bit "
+"platforms, no longer raise a ``TypeError``."
 msgstr ""
 
 #: ../../../release/notes-towncrier.rst:452
@@ -974,11 +975,12 @@ msgstr ""
 
 #: ../../../release/notes-towncrier.rst:530
 msgid ""
-"`numpy.sum`, `numpy.prod`, `numpy.min`, `numpy.max`, `numpy.amin`, `numpy."
-"amax`, `numpy.any`, and `numpy.all` now avoid Python dispatch overhead for "
-"exact `numpy.ndarray` inputs, reducing call times for benchmarked small-"
-"array reductions by approximately 30%-50%. Subclasses and custom array types "
-"continue to use the original ``__array_function__`` dispatch path."
+"`numpy.sum`, `numpy.prod`, `numpy.min`, `numpy.max`, `numpy.amin`, "
+"`numpy.amax`, `numpy.any`, and `numpy.all` now avoid Python dispatch "
+"overhead for exact `numpy.ndarray` inputs, reducing call times for "
+"benchmarked small-array reductions by approximately 30%-50%. Subclasses and "
+"custom array types continue to use the original ``__array_function__`` "
+"dispatch path."
 msgstr ""
 
 #: ../../../release/notes-towncrier.rst:536
@@ -992,12 +994,12 @@ msgstr ""
 
 #: ../../../release/notes-towncrier.rst:540
 msgid ""
-"The internal helpers that forward functions such as `numpy.take`, `numpy."
-"reshape`, `numpy.transpose`, `numpy.argsort`, `numpy.argmax`, `numpy."
-"cumsum`, `numpy.round` and `numpy.searchsorted` to the corresponding ndarray "
-"method are now implemented in C. This reduces the Python-level call overhead "
-"of about 25 dispatched functions, which is most noticeable for small arrays "
-"(typically 5%-30% faster)."
+"The internal helpers that forward functions such as `numpy.take`, "
+"`numpy.reshape`, `numpy.transpose`, `numpy.argsort`, `numpy.argmax`, "
+"`numpy.cumsum`, `numpy.round` and `numpy.searchsorted` to the corresponding "
+"ndarray method are now implemented in C. This reduces the Python-level call "
+"overhead of about 25 dispatched functions, which is most noticeable for "
+"small arrays (typically 5%-30% faster)."
 msgstr ""
 
 #: ../../../release/notes-towncrier.rst:547
@@ -1362,8 +1364,8 @@ msgstr ""
 
 #: ../../../release/notes-towncrier.rst:780
 msgid ""
-"``ndarray.byteswap`` now supports dtypes that have no defined byte order (e."
-"g. when ``dtype.byteorder == \"|\"``). Such values are left unchanged, "
+"``ndarray.byteswap`` now supports dtypes that have no defined byte order "
+"(e.g. when ``dtype.byteorder == \"|\"``). Such values are left unchanged, "
 "including when they occur in structured dtypes."
 msgstr ""
 
@@ -1573,6 +1575,6 @@ msgstr ""
 #: ../../../release/notes-towncrier.rst:902
 msgid ""
 "(`gh-32423 <https://github.com/numpy/numpy/pull/32423>`__, `gh-32508 "
-"<https://github.com/numpy/numpy/pull/32508>`__, `gh-32562 <https://github."
-"com/numpy/numpy/pull/32562>`__)"
+"<https://github.com/numpy/numpy/pull/32508>`__, `gh-32562 <https://"
+"github.com/numpy/numpy/pull/32562>`__)"
 msgstr ""
