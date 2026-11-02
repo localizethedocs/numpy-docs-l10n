@@ -33,11 +33,12 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduce:4
 msgid ""
-"Let :math:`array.shape = (N_0, ..., N_i, ..., N_{M-1})`.  Then :math:`ufunc."
-"reduce(array, axis=i)[k_0, ..,k_{i-1}, k_{i+1}, .., k_{M-1}]` = the result "
-"of iterating `j` over :math:`range(N_i)`, cumulatively applying ufunc to "
-"each :math:`array[k_0, ..,k_{i-1}, j, k_{i+1}, .., k_{M-1}]`. For a one-"
-"dimensional array, reduce produces results equivalent to: ::"
+"Let :math:`array.shape = (N_0, ..., N_i, ..., N_{M-1})`.  "
+"Then :math:`ufunc.reduce(array, axis=i)[k_0, ..,k_{i-1}, k_{i+1}, .., "
+"k_{M-1}]` = the result of iterating `j` over :math:`range(N_i)`, "
+"cumulatively applying ufunc to each :math:`array[k_0, ..,k_{i-1}, j, "
+"k_{i+1}, .., k_{M-1}]`. For a one-dimensional array, reduce produces results "
+"equivalent to: ::"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
@@ -141,8 +142,9 @@ msgstr ""
 #: of numpy.ufunc.reduce:46
 msgid ""
 "A location into which the result is stored. If not provided or None, a "
-"freshly-allocated array is returned. For consistency with ``ufunc."
-"__call__``, if given as a keyword, this may be wrapped in a 1-element tuple."
+"freshly-allocated array is returned. For consistency with "
+"``ufunc.__call__``, if given as a keyword, this may be wrapped in a 1-"
+"element tuple."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
@@ -182,9 +184,9 @@ msgstr ""
 #: of numpy.ufunc.reduce:62
 msgid ""
 "The value with which to start the reduction. If the ufunc has no identity or "
-"the dtype is object, this defaults to None - otherwise it defaults to ufunc."
-"identity. If ``None`` is given, the first element of the reduction is used, "
-"and an error is thrown if the reduction is empty."
+"the dtype is object, this defaults to None - otherwise it defaults to "
+"ufunc.identity. If ``None`` is given, the first element of the reduction is "
+"used, and an error is thrown if the reduction is empty."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring

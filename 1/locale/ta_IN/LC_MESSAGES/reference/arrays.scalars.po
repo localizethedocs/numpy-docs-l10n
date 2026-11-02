@@ -49,14 +49,14 @@ msgstr ""
 #: ../../../reference/arrays.scalars.rst:25
 msgid ""
 "Array scalars live in a hierarchy (see the Figure below) of data types. They "
-"can be detected using the hierarchy: For example, ``isinstance(val, np."
-"generic)`` will return :py:data:`True` if *val* is an array scalar object. "
-"Alternatively, what kind of array scalar is present can be determined using "
-"other members of the data type hierarchy. Thus, for example "
+"can be detected using the hierarchy: For example, ``isinstance(val, "
+"np.generic)`` will return :py:data:`True` if *val* is an array scalar "
+"object. Alternatively, what kind of array scalar is present can be "
+"determined using other members of the data type hierarchy. Thus, for example "
 "``isinstance(val, np.complexfloating)`` will return :py:data:`True` if *val* "
 "is a complex valued type, while ``isinstance(val, np.flexible)`` will return "
-"true if *val* is one of the flexible itemsize array types (:class:`str_`, :"
-"class:`bytes_`, :class:`void`)."
+"true if *val* is one of the flexible itemsize array types "
+"(:class:`str_`, :class:`bytes_`, :class:`void`)."
 msgstr ""
 
 #: ../../../reference/arrays.scalars.rst:38
@@ -686,9 +686,10 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
 #: of numpy.bool_:6
 msgid ""
-"The :class:`bool_` type is not a subclass of the :class:`int_` type (the :"
-"class:`bool_` is not even a number type). This is different than Python's "
-"default implementation of :class:`bool` as a sub-class of :class:`int`."
+"The :class:`bool_` type is not a subclass of the :class:`int_` type "
+"(the :class:`bool_` is not even a number type). This is different than "
+"Python's default implementation of :class:`bool` as a sub-class "
+"of :class:`int`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
@@ -736,8 +737,8 @@ msgstr ""
 
 #: ../../../reference/arrays.scalars.rst:274
 msgid ""
-"The data actually stored in object arrays (*i.e.*, arrays having dtype :"
-"class:`object_`) are references to Python objects, not the objects "
+"The data actually stored in object arrays (*i.e.*, arrays having "
+"dtype :class:`object_`) are references to Python objects, not the objects "
 "themselves. Hence, object arrays behave more like usual Python :class:`lists "
 "<list>`, in the sense that their contents need not be of the same Python "
 "type."
@@ -926,8 +927,8 @@ msgstr ""
 msgid ""
 "Numeric Compatibility: If you used old typecode characters in your Numeric "
 "code (which was never recommended), you will need to change some of them to "
-"the new characters. In particular, the needed changes are ``c -> S1``, ``b -"
-"> B``, ``1 -> b``, ``s -> h``, ``w -> H``, and ``u -> I``. These changes "
+"the new characters. In particular, the needed changes are ``c -> S1``, ``b "
+"-> B``, ``1 -> b``, ``s -> h``, ``w -> H``, and ``u -> I``. These changes "
 "make the type character convention more consistent with other Python modules "
 "such as the :mod:`struct` module."
 msgstr ""
@@ -1042,9 +1043,9 @@ msgstr ""
 
 #: ../../../reference/arrays.scalars.rst:440
 msgid ""
-"The array scalar objects have an :obj:`array priority <class."
-"__array_priority__>` of :c:data:`NPY_SCALAR_PRIORITY` (-1,000,000.0). They "
-"also do not (yet) have a :attr:`ctypes <ndarray.ctypes>` attribute. "
+"The array scalar objects have an :obj:`array priority "
+"<class.__array_priority__>` of :c:data:`NPY_SCALAR_PRIORITY` (-1,000,000.0). "
+"They also do not (yet) have a :attr:`ctypes <ndarray.ctypes>` attribute. "
 "Otherwise, they share the same attributes as arrays:"
 msgstr ""
 
@@ -1273,8 +1274,8 @@ msgstr ""
 
 #: ../../../reference/arrays.scalars.rst:510:<autosummary>:1
 msgid ""
-":py:obj:`number.__class_getitem__ <numpy.number.__class_getitem__>`\\ "
-"\\(item\\, \\/\\)"
+":py:obj:`number.__class_getitem__ <numpy.number.__class_getitem__>`\\ \\"
+"(item\\, \\/\\)"
 msgstr ""
 
 #: ../../../reference/arrays.scalars.rst:510:<autosummary>:1

@@ -200,11 +200,12 @@ msgstr ""
 
 #: ../../../../TESTS.rst:119
 msgid ""
-"Similarly, the pytest functions :func:`pytest.raises` and :func:`pytest."
-"warns` should be preferred over their legacy counterparts :func:`numpy."
-"testing.assert_raises` and :func:`numpy.testing.assert_warns`, since the "
-"pytest variants are more broadly used and allow more explicit targeting of "
-"warnings and errors when used with the ``match`` regex."
+"Similarly, the pytest functions :func:`pytest.raises` "
+"and :func:`pytest.warns` should be preferred over their legacy "
+"counterparts :func:`numpy.testing.assert_raises` "
+"and :func:`numpy.testing.assert_warns`, since the pytest variants are more "
+"broadly used and allow more explicit targeting of warnings and errors when "
+"used with the ``match`` regex."
 msgstr ""
 
 #: ../../../../TESTS.rst:126
@@ -351,8 +352,8 @@ msgstr ""
 msgid ""
 "Unlabeled tests like the ones above are run in the default ``numpy.test()`` "
 "run.  If you want to label your test as slow - and therefore reserved for a "
-"full ``numpy.test(label='full')`` run, you can label it with ``pytest.mark."
-"slow``::"
+"full ``numpy.test(label='full')`` run, you can label it with "
+"``pytest.mark.slow``::"
 msgstr ""
 
 #: ../../../../TESTS.rst:159
@@ -423,8 +424,8 @@ msgstr ""
 #: ../../../../TESTS.rst:206
 msgid ""
 "One very nice feature of testing is allowing easy testing across a range of "
-"parameters - a nasty problem for standard unit tests. Use the ``pytest.mark."
-"parametrize`` decorator."
+"parameters - a nasty problem for standard unit tests. Use the "
+"``pytest.mark.parametrize`` decorator."
 msgstr ""
 
 #: ../../../../TESTS.rst:211
@@ -676,8 +677,9 @@ msgid ""
 "new bugs or regressions, a test that passes most of the time but fails "
 "occasionally with no code changes is not helpful. Make the random data "
 "deterministic by setting the random number seed before generating it.  Use "
-"either Python's ``random.seed(some_number)`` or NumPy's ``numpy.random."
-"seed(some_number)``, depending on the source of random numbers."
+"either Python's ``random.seed(some_number)`` or NumPy's "
+"``numpy.random.seed(some_number)``, depending on the source of random "
+"numbers."
 msgstr ""
 
 #: ../../../../TESTS.rst:376

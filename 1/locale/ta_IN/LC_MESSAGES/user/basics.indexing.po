@@ -249,10 +249,10 @@ msgstr ""
 msgid ""
 "An integer, *i*, returns the same values as ``i:i+1`` **except** the "
 "dimensionality of the returned object is reduced by 1. In particular, a "
-"selection tuple with the *p*-th element an integer (and all other entries ``:"
-"``) returns the corresponding sub-array with dimension *N - 1*. If *N = 1* "
-"then the returned object is an array scalar. These objects are explained in :"
-"ref:`arrays.scalars`."
+"selection tuple with the *p*-th element an integer (and all other entries "
+"``:``) returns the corresponding sub-array with dimension *N - 1*. If *N = "
+"1* then the returned object is an array scalar. These objects are explained "
+"in :ref:`arrays.scalars`."
 msgstr ""
 
 #: ../../../user/basics.indexing.rst:194
@@ -668,10 +668,10 @@ msgid ""
 "This advanced indexing occurs when *obj* is an array object of Boolean type, "
 "such as may be returned from comparison operators. A single boolean index "
 "array is practically identical to ``x[obj.nonzero()]`` where, as described "
-"above, :meth:`obj.nonzero() <ndarray.nonzero>` returns a tuple (of length :"
-"attr:`obj.ndim <ndarray.ndim>`) of integer index arrays showing the :py:data:"
-"`True` elements of *obj*. However, it is faster when ``obj.shape == x."
-"shape``."
+"above, :meth:`obj.nonzero() <ndarray.nonzero>` returns a tuple (of "
+"length :attr:`obj.ndim <ndarray.ndim>`) of integer index arrays showing "
+"the :py:data:`True` elements of *obj*. However, it is faster when "
+"``obj.shape == x.shape``."
 msgstr ""
 
 #: ../../../user/basics.indexing.rst:484
@@ -687,8 +687,8 @@ msgstr ""
 #: ../../../user/basics.indexing.rst:492
 msgid ""
 "A common use case for this is filtering for desired element values. For "
-"example, one may wish to select all entries from an array which are not :"
-"const:`NaN`::"
+"example, one may wish to select all entries from an array which are "
+"not :const:`NaN`::"
 msgstr ""
 
 #: ../../../user/basics.indexing.rst:496
@@ -715,8 +715,8 @@ msgid ""
 "In general if an index includes a Boolean array, the result will be "
 "identical to inserting ``obj.nonzero()`` into the same position and using "
 "the integer array indexing mechanism described above. ``x[ind_1, "
-"boolean_array, ind_2]`` is equivalent to ``x[(ind_1,) + boolean_array."
-"nonzero() + (ind_2,)]``."
+"boolean_array, ind_2]`` is equivalent to ``x[(ind_1,) + "
+"boolean_array.nonzero() + (ind_2,)]``."
 msgstr ""
 
 #: ../../../user/basics.indexing.rst:513
@@ -770,9 +770,9 @@ msgstr ""
 #: ../../../user/basics.indexing.rst:547
 msgid ""
 "Combining multiple Boolean indexing arrays or a Boolean with an integer "
-"indexing array can best be understood with the :meth:`obj.nonzero() <ndarray."
-"nonzero>` analogy. The function :func:`ix_` also supports boolean arrays and "
-"will work without any surprises."
+"indexing array can best be understood with the :meth:`obj.nonzero() "
+"<ndarray.nonzero>` analogy. The function :func:`ix_` also supports boolean "
+"arrays and will work without any surprises."
 msgstr ""
 
 #: ../../../user/basics.indexing.rst:554
@@ -845,10 +845,10 @@ msgstr ""
 
 #: ../../../user/basics.indexing.rst:608
 msgid ""
-"When there is at least one slice (``:``), ellipsis (``...``) or :const:"
-"`newaxis` in the index (or the array has more dimensions than there are "
-"advanced indices), then the behaviour can be more complicated. It is like "
-"concatenating the indexing result for each advanced index element."
+"When there is at least one slice (``:``), ellipsis (``...``) "
+"or :const:`newaxis` in the index (or the array has more dimensions than "
+"there are advanced indices), then the behaviour can be more complicated. It "
+"is like concatenating the indexing result for each advanced index element."
 msgstr ""
 
 #: ../../../user/basics.indexing.rst:613
@@ -913,8 +913,8 @@ msgstr ""
 
 #: ../../../user/basics.indexing.rst:652
 msgid ""
-"The advanced indices are separated by a slice, :py:data:`Ellipsis` or :const:"
-"`newaxis`. For example ``x[arr1, :, arr2]``."
+"The advanced indices are separated by a slice, :py:data:`Ellipsis` "
+"or :const:`newaxis`. For example ``x[arr1, :, arr2]``."
 msgstr ""
 
 #: ../../../user/basics.indexing.rst:654
@@ -941,8 +941,8 @@ msgid ""
 "(10, 2, 3, 4, 30) because the (20,)-shaped subspace has been replaced with a "
 "(2, 3, 4)-shaped broadcasted indexing subspace. If we let *i, j, k* loop "
 "over the (2, 3, 4)-shaped subspace then ``result[..., i, j, k, :] = x[..., "
-"ind[i, j, k], :]``. This example produces the same result as :meth:`x."
-"take(ind, axis=-2) <ndarray.take>`."
+"ind[i, j, k], :]``. This example produces the same result "
+"as :meth:`x.take(ind, axis=-2) <ndarray.take>`."
 msgstr ""
 
 #: ../../../user/basics.indexing.rst:678
@@ -953,9 +953,9 @@ msgid ""
 "been replaced with the (2, 3, 4) subspace from the indices. However, ``x[:, "
 "ind_1, :, ind_2]`` has shape (2, 3, 4, 10, 30, 50) because there is no "
 "unambiguous place to drop in the indexing subspace, thus it is tacked-on to "
-"the beginning. It is always possible to use :meth:`.transpose() <ndarray."
-"transpose>` to move the subspace anywhere desired. Note that this example "
-"cannot be replicated using :func:`take`."
+"the beginning. It is always possible to use :meth:`.transpose() "
+"<ndarray.transpose>` to move the subspace anywhere desired. Note that this "
+"example cannot be replicated using :func:`take`."
 msgstr ""
 
 #: ../../../user/basics.indexing.rst:692
@@ -1177,9 +1177,9 @@ msgstr ""
 
 #: ../../../user/basics.indexing.rst:852
 msgid ""
-"For this reason, it is possible to use the output from the :meth:`np."
-"nonzero() <ndarray.nonzero>` function directly as an index since it always "
-"returns a tuple of index arrays."
+"For this reason, it is possible to use the output from "
+"the :meth:`np.nonzero() <ndarray.nonzero>` function directly as an index "
+"since it always returns a tuple of index arrays."
 msgstr ""
 
 #: ../../../user/basics.indexing.rst:856
@@ -1237,9 +1237,9 @@ msgstr ""
 
 #: ../../../user/basics.indexing.rst:885
 msgid ""
-"When an ellipsis (``...``) is present but has no size (i.e. replaces zero ``:"
-"``) the result will still always be an array. A view if no advanced index is "
-"present, otherwise a copy."
+"When an ellipsis (``...``) is present but has no size (i.e. replaces zero "
+"``:``) the result will still always be an array. A view if no advanced index "
+"is present, otherwise a copy."
 msgstr ""
 
 #: ../../../user/basics.indexing.rst:888

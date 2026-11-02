@@ -78,12 +78,12 @@ msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:42
 msgid ""
-"In future numpy releases, the functions ``np.fromfile`` and ``np."
-"fromstring`` will throw an error when parsing bad data. This will now give a "
-"``DeprecationWarning`` where previously partial or even invalid data was "
-"silently returned. This deprecation also affects the C defined functions "
-"``PyArray_FromString`` and ``PyArray_FromFile`` (`gh-13605 <https://github."
-"com/numpy/numpy/pull/13605>`__)"
+"In future numpy releases, the functions ``np.fromfile`` and "
+"``np.fromstring`` will throw an error when parsing bad data. This will now "
+"give a ``DeprecationWarning`` where previously partial or even invalid data "
+"was silently returned. This deprecation also affects the C defined functions "
+"``PyArray_FromString`` and ``PyArray_FromFile`` (`gh-13605 <https://"
+"github.com/numpy/numpy/pull/13605>`__)"
 msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:50
@@ -94,8 +94,8 @@ msgstr ""
 msgid ""
 "Setting a ``MaskedArray.fill_value`` to a non-scalar array is deprecated "
 "since the logic to broadcast the fill value to the array is fragile, "
-"especially when slicing. (`gh-13698 <https://github.com/numpy/numpy/"
-"pull/13698>`__)"
+"especially when slicing. (`gh-13698 <https://github.com/numpy/numpy/pull/"
+"13698>`__)"
 msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:57
@@ -114,8 +114,8 @@ msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:64
 msgid ""
-"``np.alen`` was deprecated. Use ``len`` instead. (`gh-14181 <https://github."
-"com/numpy/numpy/pull/14181>`__)"
+"``np.alen`` was deprecated. Use ``len`` instead. (`gh-14181 <https://"
+"github.com/numpy/numpy/pull/14181>`__)"
 msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:68
@@ -129,8 +129,8 @@ msgid ""
 "``mirr``, ``nper``, ``npv``, ``pmt``, ``ppmt``, ``pv`` and ``rate`` are "
 "deprecated, and will be removed from NumPy 1.20.The replacement for these "
 "functions is the Python package `numpy-financial <https://pypi.org/project/"
-"numpy-financial>`_. (`gh-14720 <https://github.com/numpy/numpy/"
-"pull/14720>`__)"
+"numpy-financial>`_. (`gh-14720 <https://github.com/numpy/numpy/pull/"
+"14720>`__)"
 msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:78
@@ -152,15 +152,15 @@ msgstr ""
 #: ../../../release/1.18.0-notes.rst:86
 msgid ""
 "``PyArray_As1D`` and ``PyArray_As2D`` have been removed in favor of "
-"``PyArray_AsCArray`` (`gh-14036 <https://github.com/numpy/numpy/"
-"pull/14036>`__)"
+"``PyArray_AsCArray`` (`gh-14036 <https://github.com/numpy/numpy/pull/"
+"14036>`__)"
 msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:90
 msgid ""
 "``np.rank`` has been removed. This was deprecated in NumPy 1.10 and has been "
-"replaced by ``np.ndim``. (`gh-14039 <https://github.com/numpy/numpy/"
-"pull/14039>`__)"
+"replaced by ``np.ndim``. (`gh-14039 <https://github.com/numpy/numpy/pull/"
+"14039>`__)"
 msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:94
@@ -179,8 +179,8 @@ msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:103
 msgid ""
-"``numeric.loads``, ``numeric.load``, ``np.ma.dump``, ``np.ma.dumps``, ``np."
-"ma.load``, ``np.ma.loads`` are removed, use ``pickle`` methods instead "
+"``numeric.loads``, ``numeric.load``, ``np.ma.dump``, ``np.ma.dumps``, "
+"``np.ma.load``, ``np.ma.loads`` are removed, use ``pickle`` methods instead "
 "(`gh-14256 <https://github.com/numpy/numpy/pull/14256>`__)"
 msgstr ""
 
@@ -218,8 +218,8 @@ msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:126
 msgid ""
-"Remove deprecated support for boolean and empty condition lists in ``np."
-"select`` (`gh-14583 <https://github.com/numpy/numpy/pull/14583>`__)"
+"Remove deprecated support for boolean and empty condition lists in "
+"``np.select`` (`gh-14583 <https://github.com/numpy/numpy/pull/14583>`__)"
 msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:130
@@ -246,9 +246,10 @@ msgstr ""
 msgid ""
 "The files ``numpy/testing/decorators.py``, ``numpy/testing/noseclasses.py`` "
 "and ``numpy/testing/nosetester.py`` have been removed.  They were never "
-"meant to be public (all relevant objects are present in the ``numpy."
-"testing`` namespace), and importing them has given a deprecation warning "
-"since NumPy 1.15.0 (`gh-14567 <https://github.com/numpy/numpy/pull/14567>`__)"
+"meant to be public (all relevant objects are present in the "
+"``numpy.testing`` namespace), and importing them has given a deprecation "
+"warning since NumPy 1.15.0 (`gh-14567 <https://github.com/numpy/numpy/pull/"
+"14567>`__)"
 msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:150
@@ -334,10 +335,10 @@ msgid ""
 "adjustment to user- facing code. Specifically, code that either disallowed "
 "the calls to ``numpy.isinf`` or ``numpy.isnan`` or checked that they raised "
 "an exception will require adaptation, and code that mistakenly called "
-"``numpy.fmax`` and ``numpy.fmin`` instead of ``numpy.maximum`` or ``numpy."
-"minimum`` respectively will require adjustment. This also affects ``numpy."
-"nanmax`` and ``numpy.nanmin``. (`gh-14841 <https://github.com/numpy/numpy/"
-"pull/14841>`__)"
+"``numpy.fmax`` and ``numpy.fmin`` instead of ``numpy.maximum`` or "
+"``numpy.minimum`` respectively will require adjustment. This also affects "
+"``numpy.nanmax`` and ``numpy.nanmin``. (`gh-14841 <https://github.com/numpy/"
+"numpy/pull/14841>`__)"
 msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:203
@@ -366,8 +367,8 @@ msgstr ""
 #: ../../../release/1.18.0-notes.rst:217
 msgid ""
 "Previously this returned True for any datatype of itemsize 0, but now this "
-"returns false for the non-flexible datatype with itemsize 0, ``np."
-"dtype([])``. (`gh-14393 <https://github.com/numpy/numpy/pull/14393>`__)"
+"returns false for the non-flexible datatype with itemsize 0, "
+"``np.dtype([])``. (`gh-14393 <https://github.com/numpy/numpy/pull/14393>`__)"
 msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:223
@@ -468,10 +469,11 @@ msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:280
 msgid ""
-"A ``method`` keyword argument is now available for ``np.random."
-"multivariate_normal`` with possible values ``{'svd', 'eigh', 'cholesky'}``. "
-"To use it, write ``np.random.multivariate_normal(..., method=<method>)``. "
-"(`gh-14197 <https://github.com/numpy/numpy/pull/14197>`__)"
+"A ``method`` keyword argument is now available for "
+"``np.random.multivariate_normal`` with possible values ``{'svd', 'eigh', "
+"'cholesky'}``. To use it, write ``np.random.multivariate_normal(..., "
+"method=<method>)``. (`gh-14197 <https://github.com/numpy/numpy/pull/"
+"14197>`__)"
 msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:287
@@ -528,8 +530,8 @@ msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:314
 msgid ""
-"Now ``numpy.fromfile`` can read complex numbers. (`gh-14730 <https://github."
-"com/numpy/numpy/pull/14730>`__)"
+"Now ``numpy.fromfile`` can read complex numbers. (`gh-14730 <https://"
+"github.com/numpy/numpy/pull/14730>`__)"
 msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:318
@@ -557,8 +559,8 @@ msgid ""
 "``NaT`` is now effectively treated as the largest integer for sorting "
 "purposes, so that it sorts to the end of arrays. This change is for "
 "consistency with ``NaN`` sorting behavior. (`gh-12658 <https://github.com/"
-"numpy/numpy/pull/12658>`__) (`gh-15068 <https://github.com/numpy/numpy/"
-"pull/15068>`__)"
+"numpy/numpy/pull/12658>`__) (`gh-15068 <https://github.com/numpy/numpy/pull/"
+"15068>`__)"
 msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:338
@@ -601,8 +603,8 @@ msgid ""
 "This applies to: ``LDFLAGS``, ``F77FLAGS``, ``F90FLAGS``, ``FREEFLAGS``, "
 "``FOPT``, ``FDEBUG``, and ``FFLAGS``. NumPy 1.16 and 1.17 gave build "
 "warnings in situations where this change in behavior would have affected the "
-"compile flags used. (`gh-14248 <https://github.com/numpy/numpy/"
-"pull/14248>`__)"
+"compile flags used. (`gh-14248 <https://github.com/numpy/numpy/pull/"
+"14248>`__)"
 msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:364
@@ -614,8 +616,8 @@ msgid ""
 "``numpy.random.entropy`` was added to the ``numpy.random`` namespace in "
 "1.17.0. It was meant to be a private c-extension module, but was exposed as "
 "public. It has been replaced by ``numpy.random.SeedSequence`` so the module "
-"was completely removed. (`gh-14498 <https://github.com/numpy/numpy/"
-"pull/14498>`__)"
+"was completely removed. (`gh-14498 <https://github.com/numpy/numpy/pull/"
+"14498>`__)"
 msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:373
@@ -628,9 +630,9 @@ msgid ""
 "part of configuring NumPy, the files ``_numpyconfig.h`` and ``config.h`` are "
 "created by probing support for various runtime functions and routines. "
 "Previously, the very verbose compiler output during this stage clouded more "
-"important information. By default the output is silenced. Running ``runtests."
-"py --debug-info`` will add ``--verbose-cfg`` to the ``build_src`` subcommand,"
-"which will restore the previous behaviour."
+"important information. By default the output is silenced. Running "
+"``runtests.py --debug-info`` will add ``--verbose-cfg`` to the ``build_src`` "
+"subcommand,which will restore the previous behaviour."
 msgstr ""
 
 #: ../../../release/1.18.0-notes.rst:382

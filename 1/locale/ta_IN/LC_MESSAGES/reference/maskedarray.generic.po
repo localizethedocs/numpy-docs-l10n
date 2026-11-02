@@ -28,9 +28,9 @@ msgstr ""
 
 #: ../../../reference/maskedarray.generic.rst:13
 msgid ""
-"Masked arrays are arrays that may have missing or invalid entries. The :mod:"
-"`numpy.ma` module provides a nearly work-alike replacement for numpy that "
-"supports data arrays with masks."
+"Masked arrays are arrays that may have missing or invalid entries. "
+"The :mod:`numpy.ma` module provides a nearly work-alike replacement for "
+"numpy that supports data arrays with masks."
 msgstr ""
 
 #: ../../../reference/maskedarray.generic.rst:20
@@ -98,8 +98,8 @@ msgstr ""
 msgid ""
 "The main feature of the :mod:`numpy.ma` module is the :class:`MaskedArray` "
 "class, which is a subclass of :class:`numpy.ndarray`. The class, its "
-"attributes and methods are described in more details in the :ref:"
-"`MaskedArray class <maskedarray.baseclass>` section."
+"attributes and methods are described in more details in "
+"the :ref:`MaskedArray class <maskedarray.baseclass>` section."
 msgstr ""
 
 #: ../../../reference/maskedarray.generic.rst:65
@@ -156,8 +156,8 @@ msgstr ""
 
 #: ../../../reference/maskedarray.generic.rst:97
 msgid ""
-"A second possibility is to use the two masked array constructors, :func:"
-"`array` and :func:`masked_array`."
+"A second possibility is to use the two masked array "
+"constructors, :func:`array` and :func:`masked_array`."
 msgstr ""
 
 #: ../../../reference/maskedarray.generic.rst:106:<autosummary>:1
@@ -217,8 +217,8 @@ msgstr ""
 
 #: ../../../reference/maskedarray.generic.rst:145:<autosummary>:1
 msgid ""
-":py:obj:`masked_equal <numpy.ma.masked_equal>`\\ \\(x\\, value\\[\\, "
-"copy\\]\\)"
+":py:obj:`masked_equal <numpy.ma.masked_equal>`\\ \\(x\\, value\\[\\, copy\\]"
+"\\)"
 msgstr ""
 
 #: ../../../reference/maskedarray.generic.rst:145:<autosummary>:1
@@ -275,8 +275,8 @@ msgstr ""
 
 #: ../../../reference/maskedarray.generic.rst:145:<autosummary>:1
 msgid ""
-":py:obj:`masked_less_equal <numpy.ma.masked_less_equal>`\\ \\(x\\, "
-"value\\[\\, copy\\]\\)"
+":py:obj:`masked_less_equal <numpy.ma.masked_less_equal>`\\ \\(x\\, value\\"
+"[\\, copy\\]\\)"
 msgstr ""
 
 #: ../../../reference/maskedarray.generic.rst:145:<autosummary>:1
@@ -350,15 +350,15 @@ msgstr ""
 
 #: ../../../reference/maskedarray.generic.rst:155
 msgid ""
-"through the :meth:`~MaskedArray.__array__` method. The output is then a :"
-"class:`numpy.ndarray`."
+"through the :meth:`~MaskedArray.__array__` method. The output is then "
+"a :class:`numpy.ndarray`."
 msgstr ""
 
 #: ../../../reference/maskedarray.generic.rst:158
 msgid ""
 "by directly taking a view of the masked array as a :class:`numpy.ndarray` or "
-"one of its subclass (which is actually what using the :attr:`~MaskedArray."
-"data` attribute does)."
+"one of its subclass (which is actually what using "
+"the :attr:`~MaskedArray.data` attribute does)."
 msgstr ""
 
 #: ../../../reference/maskedarray.generic.rst:162
@@ -379,9 +379,9 @@ msgstr ""
 
 #: ../../../reference/maskedarray.generic.rst:175
 msgid ""
-"The mask of a masked array is accessible through its :attr:`~MaskedArray."
-"mask` attribute. We must keep in mind that a ``True`` entry in the mask "
-"indicates an *invalid* data."
+"The mask of a masked array is accessible through "
+"its :attr:`~MaskedArray.mask` attribute. We must keep in mind that a "
+"``True`` entry in the mask indicates an *invalid* data."
 msgstr ""
 
 #: ../../../reference/maskedarray.generic.rst:179
@@ -401,8 +401,8 @@ msgstr ""
 #: ../../../reference/maskedarray.generic.rst:192
 msgid ""
 "To retrieve only the valid entries, we can use the inverse of the mask as an "
-"index. The inverse of the mask can be calculated with the :func:`numpy."
-"logical_not` function or simply with the ``~`` operator::"
+"index. The inverse of the mask can be calculated with "
+"the :func:`numpy.logical_not` function or simply with the ``~`` operator::"
 msgstr ""
 
 #: ../../../reference/maskedarray.generic.rst:196
@@ -634,26 +634,26 @@ msgstr ""
 
 #: ../../../reference/maskedarray.generic.rst:365
 msgid ""
-"If the masked array has named fields, accessing a single entry returns a :"
-"class:`numpy.void` object if none of the fields are masked, or a 0d masked "
-"array with the same dtype as the initial array if at least one of the fields "
-"is masked."
+"If the masked array has named fields, accessing a single entry returns "
+"a :class:`numpy.void` object if none of the fields are masked, or a 0d "
+"masked array with the same dtype as the initial array if at least one of the "
+"fields is masked."
 msgstr ""
 
 #: ../../../reference/maskedarray.generic.rst:379
 msgid ""
-"When accessing a slice, the output is a masked array whose :attr:"
-"`~MaskedArray.data` attribute is a view of the original data, and whose mask "
-"is either :attr:`nomask` (if there was no invalid entries in the original "
-"array) or a view of the corresponding slice of the original mask. The view "
-"is required to ensure propagation of any modification of the mask to the "
-"original."
+"When accessing a slice, the output is a masked array "
+"whose :attr:`~MaskedArray.data` attribute is a view of the original data, "
+"and whose mask is either :attr:`nomask` (if there was no invalid entries in "
+"the original array) or a view of the corresponding slice of the original "
+"mask. The view is required to ensure propagation of any modification of the "
+"mask to the original."
 msgstr ""
 
 #: ../../../reference/maskedarray.generic.rst:401
 msgid ""
-"Accessing a field of a masked array with structured datatype returns a :"
-"class:`MaskedArray`."
+"Accessing a field of a masked array with structured datatype returns "
+"a :class:`MaskedArray`."
 msgstr ""
 
 #: ../../../reference/maskedarray.generic.rst:405
@@ -678,8 +678,8 @@ msgstr ""
 #: ../../../reference/maskedarray.generic.rst:417
 msgid ""
 "The :mod:`numpy.ma` module comes with a specific implementation of most "
-"ufuncs. Unary and binary functions that have a validity domain (such as :"
-"func:`~numpy.log` or :func:`~numpy.divide`) return the :data:`masked` "
+"ufuncs. Unary and binary functions that have a validity domain (such "
+"as :func:`~numpy.log` or :func:`~numpy.divide`) return the :data:`masked` "
 "constant whenever the input is masked or falls outside the validity domain::"
 msgstr ""
 

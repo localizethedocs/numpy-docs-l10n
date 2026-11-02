@@ -33,16 +33,16 @@ msgstr "對單一軸上的指定切片執行（局部）歸約。"
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:4
 msgid ""
-"For i in ``range(len(indices))``, `reduceat` computes ``ufunc."
-"reduce(array[indices[i]:indices[i+1]])``, which becomes the i-th generalized "
-"\"row\" parallel to `axis` in the final result (i.e., in a 2-D array, for "
-"example, if `axis = 0`, it becomes the i-th row, but if `axis = 1`, it "
-"becomes the i-th column).  There are three exceptions to this:"
+"For i in ``range(len(indices))``, `reduceat` computes "
+"``ufunc.reduce(array[indices[i]:indices[i+1]])``, which becomes the i-th "
+"generalized \"row\" parallel to `axis` in the final result (i.e., in a 2-D "
+"array, for example, if `axis = 0`, it becomes the i-th row, but if `axis = "
+"1`, it becomes the i-th column).  There are three exceptions to this:"
 msgstr ""
-"對於 `range(len(indices))` 中的每個 i，`reduceat` 計算 `ufunc."
-"reduce(array[indices[i]:indices[i+1]])`，它成為最終結果中沿 `axis` 方向的第 "
-"i 個廣義“行”（例如，在二維數組中，``axis` 方向的第 i 個廣義“行”（例如，在二維"
-"數組中，`` axis = i1 行列）。但有三個例外："
+"對於 `range(len(indices))` 中的每個 i，`reduceat` 計算 "
+"`ufunc.reduce(array[indices[i]:indices[i+1]])`，它成為最終結果中沿 `axis` 方"
+"向的第 i 個廣義“行”（例如，在二維數組中，``axis` 方向的第 i 個廣義“行”（例"
+"如，在二維數組中，`` axis = i1 行列）。但有三個例外："
 
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:10
@@ -50,8 +50,8 @@ msgid ""
 "when ``i = len(indices) - 1`` (so for the last index), ``indices[i+1] = "
 "array.shape[axis]``."
 msgstr ""
-"當「`i = len(indices) - 1``（即最後一個索引）時，``indices[i+1] = array."
-"shape[axis]``。"
+"當「`i = len(indices) - 1``（即最後一個索引）時，``indices[i+1] = "
+"array.shape[axis]``。"
 
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
 #: of numpy.ufunc.reduceat:12
@@ -154,8 +154,9 @@ msgstr ""
 #: of numpy.ufunc.reduceat:37
 msgid ""
 "A location into which the result is stored. If not provided or None, a "
-"freshly-allocated array is returned. For consistency with ``ufunc."
-"__call__``, if given as a keyword, this may be wrapped in a 1-element tuple."
+"freshly-allocated array is returned. For consistency with "
+"``ufunc.__call__``, if given as a keyword, this may be wrapped in a 1-"
+"element tuple."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring

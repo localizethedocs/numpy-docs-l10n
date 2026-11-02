@@ -95,8 +95,8 @@ msgstr ""
 msgid ""
 "Using ``np.bool_`` objects in place of integers is deprecated.  Previously "
 "``operator.index(np.bool_)`` was legal and allowed constructs such as ``[1, "
-"2, 3][np.True_]``. That was misleading, as it behaved differently from ``np."
-"array([1, 2, 3])[np.True_]``."
+"2, 3][np.True_]``. That was misleading, as it behaved differently from "
+"``np.array([1, 2, 3])[np.True_]``."
 msgstr ""
 
 #: ../../../release/1.14.0-notes.rst:57
@@ -114,11 +114,11 @@ msgstr ""
 #: ../../../release/1.14.0-notes.rst:63
 msgid ""
 "Calling ``np.fromstring`` with the default value of the ``sep`` argument is "
-"deprecated.  When that argument is not provided, a broken version of ``np."
-"frombuffer`` is used that silently accepts unicode strings and -- after "
+"deprecated.  When that argument is not provided, a broken version of "
+"``np.frombuffer`` is used that silently accepts unicode strings and -- after "
 "encoding them as either utf-8 (python 3) or the default encoding (python 2) "
-"-- treats them as binary data. If reading binary data is desired, ``np."
-"frombuffer`` should be used directly."
+"-- treats them as binary data. If reading binary data is desired, "
+"``np.frombuffer`` should be used directly."
 msgstr ""
 
 #: ../../../release/1.14.0-notes.rst:70
@@ -148,10 +148,11 @@ msgstr ""
 #: ../../../release/1.14.0-notes.rst:86
 msgid ""
 "``np.issubdtype`` will stop downcasting dtype-like arguments. It might be "
-"expected that ``issubdtype(np.float32, 'float64')`` and ``issubdtype(np."
-"float32, np.float64)`` mean the same thing - however, there was an "
-"undocumented special case that translated the former into ``issubdtype(np."
-"float32, np.floating)``, giving the surprising result of True."
+"expected that ``issubdtype(np.float32, 'float64')`` and "
+"``issubdtype(np.float32, np.float64)`` mean the same thing - however, there "
+"was an undocumented special case that translated the former into "
+"``issubdtype(np.float32, np.floating)``, giving the surprising result of "
+"True."
 msgstr ""
 
 #: ../../../release/1.14.0-notes.rst:92
@@ -231,11 +232,11 @@ msgstr ""
 
 #: ../../../release/1.14.0-notes.rst:139
 msgid ""
-"Previously, ``np.ma.default_fill_value`` would return a 0d array, but ``np."
-"ma.minimum_fill_value`` and ``np.ma.maximum_fill_value`` would return a "
-"tuple of the fields. Instead, all three methods return a structured ``np."
-"void`` object, which is what you would already find in the ``.fill_value`` "
-"attribute."
+"Previously, ``np.ma.default_fill_value`` would return a 0d array, but "
+"``np.ma.minimum_fill_value`` and ``np.ma.maximum_fill_value`` would return a "
+"tuple of the fields. Instead, all three methods return a structured "
+"``np.void`` object, which is what you would already find in the "
+"``.fill_value`` attribute."
 msgstr ""
 
 #: ../../../release/1.14.0-notes.rst:144
@@ -258,8 +259,8 @@ msgid ""
 "non-contiguous will be replaced by a writeable copy in the future. This "
 "temporary measure is aimed to notify folks who expect the underlying array "
 "be modified in this situation that that will no longer be the case. The most "
-"likely places for this to be noticed is when expressions of the form ``np."
-"asarray(a.flat)`` are used, or when ``a.flat`` is passed as the out "
+"likely places for this to be noticed is when expressions of the form "
+"``np.asarray(a.flat)`` are used, or when ``a.flat`` is passed as the out "
 "parameter to a ufunc."
 msgstr ""
 
@@ -357,9 +358,10 @@ msgstr ""
 msgid ""
 "On Python 2, ``void_array.astype(bool)`` would always return an array of "
 "``True``, unless the dtype is ``V0``. On Python 3, this operation would "
-"usually crash. Going forwards, `astype` matches the behavior of ``bool(np."
-"void)``, considering a buffer of all zeros as false, and anything else as "
-"true. Checks for ``V0`` can still be done with ``arr.dtype.itemsize == 0``."
+"usually crash. Going forwards, `astype` matches the behavior of "
+"``bool(np.void)``, considering a buffer of all zeros as false, and anything "
+"else as true. Checks for ``V0`` can still be done with ``arr.dtype.itemsize "
+"== 0``."
 msgstr ""
 
 #: ../../../release/1.14.0-notes.rst:213
@@ -526,9 +528,9 @@ msgstr ""
 
 #: ../../../release/1.14.0-notes.rst:290
 msgid ""
-"A trailing comma is no longer inserted for ``str``. Previously, ``str(np."
-"arange(1001))`` gave ``'[   0    1    2 ...,  998  999 1000]'``, which has "
-"an extra comma."
+"A trailing comma is no longer inserted for ``str``. Previously, "
+"``str(np.arange(1001))`` gave ``'[   0    1    2 ...,  998  999 1000]'``, "
+"which has an extra comma."
 msgstr ""
 
 #: ../../../release/1.14.0-notes.rst:293
@@ -743,8 +745,8 @@ msgstr ""
 #: ../../../release/1.14.0-notes.rst:420
 msgid ""
 "These options could previously be controlled using ``np.set_printoptions``, "
-"but now can be changed on a per-call basis as arguments to ``np."
-"array2string``."
+"but now can be changed on a per-call basis as arguments to "
+"``np.array2string``."
 msgstr ""
 
 #: ../../../release/1.14.0-notes.rst:424
@@ -956,8 +958,8 @@ msgstr ""
 
 #: ../../../release/1.14.0-notes.rst:534
 msgid ""
-"New functions ``np.format_float_scientific`` and ``np."
-"format_float_positional`` are provided to generate these decimal "
+"New functions ``np.format_float_scientific`` and "
+"``np.format_float_positional`` are provided to generate these decimal "
 "representations."
 msgstr ""
 
@@ -1117,17 +1119,17 @@ msgstr ""
 #: ../../../release/1.14.0-notes.rst:624
 msgid ""
 "Previously the ``str`` and ``repr`` of 0d arrays had idiosyncratic "
-"implementations which returned ``str(a.item())`` and ``'array(' + repr(a."
-"item()) + ')'`` respectively for 0d array ``a``, unlike both numpy scalars "
-"and higher dimension ndarrays."
+"implementations which returned ``str(a.item())`` and ``'array(' + "
+"repr(a.item()) + ')'`` respectively for 0d array ``a``, unlike both numpy "
+"scalars and higher dimension ndarrays."
 msgstr ""
 
 #: ../../../release/1.14.0-notes.rst:629
 msgid ""
 "Now, the ``str`` of a 0d array acts like a numpy scalar using ``str(a[()])`` "
 "and the ``repr`` acts like higher dimension arrays using "
-"``formatter(a[()])``, where  ``formatter``  can be specified using ``np."
-"set_printoptions``. The ``style`` argument of ``np.array2string`` is "
+"``formatter(a[()])``, where  ``formatter``  can be specified using "
+"``np.set_printoptions``. The ``style`` argument of ``np.array2string`` is "
 "deprecated."
 msgstr ""
 

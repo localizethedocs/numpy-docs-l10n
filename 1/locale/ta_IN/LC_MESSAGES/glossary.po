@@ -282,8 +282,8 @@ msgid ""
 "generated/numpy.ndarray.base>` attribute returns the object whose memory the "
 "array is referencing. That object may be referencing the memory from still "
 "another object, so the owning object may be ``a.base.base.base...``. Some "
-"writers erroneously claim that testing ``base`` determines if arrays are :"
-"term:`view`\\ s. For the correct way, see :func:`numpy.shares_memory`."
+"writers erroneously claim that testing ``base`` determines if arrays "
+"are :term:`view`\\ s. For the correct way, see :func:`numpy.shares_memory`."
 msgstr ""
 
 #: ../../../glossary.rst:235
@@ -337,8 +337,8 @@ msgstr ""
 msgid ""
 "But in certain useful cases, NumPy can duplicate data along \"missing\" axes "
 "or \"too-short\" dimensions so shapes will match. The duplication costs no "
-"memory or time. For details, see :doc:`Broadcasting. <user/basics."
-"broadcasting>`"
+"memory or time. For details, see :doc:`Broadcasting. <user/"
+"basics.broadcasting>`"
 msgstr ""
 
 #: ../../../glossary.rst:273
@@ -373,8 +373,8 @@ msgstr ""
 
 #: ../../../glossary.rst:287
 msgid ""
-"array elements with higher indexes occupy higher addresses (that is, no :"
-"term:`stride` is negative)."
+"array elements with higher indexes occupy higher addresses (that is, "
+"no :term:`stride` is negative)."
 msgstr ""
 
 #: ../../../glossary.rst:290
@@ -419,8 +419,8 @@ msgstr ""
 #: ../../../glossary.rst:310
 msgid ""
 "To test whether an array is C-contiguous, use the ``.flags.c_contiguous`` "
-"attribute of NumPy arrays.  To test for Fortran contiguity, use the ``.flags."
-"f_contiguous`` attribute."
+"attribute of NumPy arrays.  To test for Fortran contiguity, use the "
+"``.flags.f_contiguous`` attribute."
 msgstr ""
 
 #: ../../../glossary.rst:314
@@ -446,8 +446,8 @@ msgstr ""
 #: ../../../glossary.rst:324
 msgid ""
 "The datatype describing the (identically typed) elements in an ndarray. It "
-"can be changed to reinterpret the array contents. For details, see :doc:"
-"`Data type objects (dtype). <reference/arrays.dtypes>`"
+"can be changed to reinterpret the array contents. For details, "
+"see :doc:`Data type objects (dtype). <reference/arrays.dtypes>`"
 msgstr ""
 
 #: ../../../glossary.rst:328
@@ -557,8 +557,8 @@ msgstr ""
 
 #: ../../../glossary.rst:400
 msgid ""
-"NumPy's two-dimensional :doc:`matrix class <reference/generated/numpy."
-"matrix>` should no longer be used; use regular ndarrays."
+"NumPy's two-dimensional :doc:`matrix class <reference/generated/"
+"numpy.matrix>` should no longer be used; use regular ndarrays."
 msgstr ""
 
 #: ../../../glossary.rst:404
@@ -587,10 +587,10 @@ msgstr ""
 
 #: ../../../glossary.rst:417
 msgid ""
-":doc:`numpy.ravel \\ <reference/generated/numpy.ravel>` and :doc:`numpy."
-"flatten \\ <reference/generated/numpy.ndarray.flatten>` both flatten an "
-"ndarray. ``ravel`` will return a view if possible; ``flatten`` always "
-"returns a copy."
+":doc:`numpy.ravel \\ <reference/generated/numpy.ravel>` "
+"and :doc:`numpy.flatten \\ <reference/generated/numpy.ndarray.flatten>` both "
+"flatten an ndarray. ``ravel`` will return a view if possible; ``flatten`` "
+"always returns a copy."
 msgstr ""
 
 #: ../../../glossary.rst:424
@@ -606,9 +606,9 @@ msgstr ""
 
 #: ../../../glossary.rst:430
 msgid ""
-"A :term:`structured array` with allowing access in an attribute style (``a."
-"field``) in addition to ``a['field']``. For details, see :doc:`numpy."
-"recarray. <reference/generated/numpy.recarray>`"
+"A :term:`structured array` with allowing access in an attribute style "
+"(``a.field``) in addition to ``a['field']``. For details, "
+"see :doc:`numpy.recarray. <reference/generated/numpy.recarray>`"
 msgstr ""
 
 #: ../../../glossary.rst:434
@@ -659,21 +659,21 @@ msgstr ""
 #: ../../../glossary.rst:460
 msgid ""
 "Strides are computed automatically from an array's dtype and shape, but can "
-"be directly specified using :doc:`as_strided. <reference/generated/numpy.lib."
-"stride_tricks.as_strided>`"
+"be directly specified using :doc:`as_strided. <reference/generated/"
+"numpy.lib.stride_tricks.as_strided>`"
 msgstr ""
 
 #: ../../../glossary.rst:464
 msgid ""
-"For details, see :doc:`numpy.ndarray.strides <reference/generated/numpy."
-"ndarray.strides>`."
+"For details, see :doc:`numpy.ndarray.strides <reference/generated/"
+"numpy.ndarray.strides>`."
 msgstr ""
 
 #: ../../../glossary.rst:467
 msgid ""
 "To see how striding underlies the power of NumPy views, see `The NumPy "
-"array: a structure for efficient numerical computation. \\ <https://arxiv."
-"org/pdf/1102.1523.pdf>`_"
+"array: a structure for efficient numerical computation. \\ <https://"
+"arxiv.org/pdf/1102.1523.pdf>`_"
 msgstr ""
 
 #: ../../../glossary.rst:471
@@ -749,9 +749,9 @@ msgstr ""
 msgid ""
 "NumPy hands off array processing to C, where looping and computation are "
 "much faster than in Python. To exploit this, programmers using NumPy "
-"eliminate Python loops in favor of array-to-array operations. :term:"
-"`vectorization` can refer both to the C offloading and to structuring NumPy "
-"code to leverage it."
+"eliminate Python loops in favor of array-to-array "
+"operations. :term:`vectorization` can refer both to the C offloading and to "
+"structuring NumPy code to leverage it."
 msgstr ""
 
 #: ../../../glossary.rst:518
@@ -781,7 +781,8 @@ msgstr ""
 msgid ""
 "Some NumPy routines always return views, some always return copies, some may "
 "return one or the other, and for some the choice can be specified. "
-"Responsibility for managing views and copies falls to the programmer. :func:"
-"`numpy.shares_memory` will check whether ``b`` is a view of ``a``, but an "
-"exact answer isn't always feasible, as the documentation page explains."
+"Responsibility for managing views and copies falls to the "
+"programmer. :func:`numpy.shares_memory` will check whether ``b`` is a view "
+"of ``a``, but an exact answer isn't always feasible, as the documentation "
+"page explains."
 msgstr ""

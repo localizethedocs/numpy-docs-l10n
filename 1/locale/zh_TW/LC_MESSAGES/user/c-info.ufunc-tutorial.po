@@ -238,11 +238,11 @@ msgstr ""
 
 #: ../../../user/c-info.ufunc-tutorial.rst:202
 msgid ""
-"Once the spam module is imported into python, you can call logit via ``spam."
-"logit``. Note that the function used above cannot be applied as-is to numpy "
-"arrays. To do so we must call :py:func:`numpy.vectorize` on it. For example, "
-"if a python interpreter is opened in the file containing the spam library or "
-"spam has been installed, one can perform the following commands:"
+"Once the spam module is imported into python, you can call logit via "
+"``spam.logit``. Note that the function used above cannot be applied as-is to "
+"numpy arrays. To do so we must call :py:func:`numpy.vectorize` on it. For "
+"example, if a python interpreter is opened in the file containing the spam "
+"library or spam has been installed, one can perform the following commands:"
 msgstr ""
 
 #: ../../../user/c-info.ufunc-tutorial.rst:225
@@ -828,11 +828,11 @@ msgstr ""
 #: ../../../user/c-info.ufunc-tutorial.rst:799
 msgid ""
 "This example shows how to create a ufunc for a structured array dtype. For "
-"the example we show a trivial ufunc for adding two arrays with dtype ``'u8,"
-"u8,u8'``. The process is a bit different from the other examples since a "
-"call to :c:func:`PyUFunc_FromFuncAndData` doesn't fully register ufuncs for "
-"custom dtypes and structured array dtypes. We need to also call :c:func:"
-"`PyUFunc_RegisterLoopForDescr` to finish setting up the ufunc."
+"the example we show a trivial ufunc for adding two arrays with dtype "
+"``'u8,u8,u8'``. The process is a bit different from the other examples since "
+"a call to :c:func:`PyUFunc_FromFuncAndData` doesn't fully register ufuncs "
+"for custom dtypes and structured array dtypes. We need to also "
+"call :c:func:`PyUFunc_RegisterLoopForDescr` to finish setting up the ufunc."
 msgstr ""
 
 #: ../../../user/c-info.ufunc-tutorial.rst:806

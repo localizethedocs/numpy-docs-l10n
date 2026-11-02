@@ -204,8 +204,8 @@ msgstr ""
 msgid ""
 "Controls if intermediate optimization should occur. No optimization will "
 "occur if False and True will default to the 'greedy' algorithm. Also accepts "
-"an explicit contraction list from the ``np.einsum_path`` function. See ``np."
-"einsum_path`` for more details. Defaults to False."
+"an explicit contraction list from the ``np.einsum_path`` function. See "
+"``np.einsum_path`` for more details. Defaults to False."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
@@ -230,9 +230,7 @@ msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
 #: of numpy.einsum:75
-msgid ""
-":obj:`einsum_path`, :obj:`dot`, :obj:`inner`, :obj:`outer`, :obj:"
-"`tensordot`, :obj:`linalg.multi_dot`"
+msgid ":obj:`einsum_path`, :obj:`dot`, :obj:`inner`, :obj:`outer`, :obj:`tensordot`, :obj:`linalg.multi_dot`"
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
@@ -303,22 +301,22 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
 #: of numpy.einsum:98
 msgid ""
-"Matrix multiplication and dot product, :py:func:`numpy.matmul` :py:func:"
-"`numpy.dot`."
+"Matrix multiplication and dot "
+"product, :py:func:`numpy.matmul` :py:func:`numpy.dot`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
 #: of numpy.einsum:99
 msgid ""
-"Vector inner and outer products, :py:func:`numpy.inner` :py:func:`numpy."
-"outer`."
+"Vector inner and outer "
+"products, :py:func:`numpy.inner` :py:func:`numpy.outer`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
 #: of numpy.einsum:100
 msgid ""
-"Broadcasting, element-wise and scalar multiplication, :py:func:`numpy."
-"multiply`."
+"Broadcasting, element-wise and scalar "
+"multiplication, :py:func:`numpy.multiply`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
@@ -329,8 +327,8 @@ msgstr ""
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
 #: of numpy.einsum:102
 msgid ""
-"Chained array operations, in efficient calculation order, :py:func:`numpy."
-"einsum_path`."
+"Chained array operations, in efficient calculation "
+"order, :py:func:`numpy.einsum_path`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
@@ -342,10 +340,10 @@ msgid ""
 "to :py:func:`np.inner(a,b) <numpy.inner>`. If a label appears only once, it "
 "is not summed, so ``np.einsum('i', a)`` produces a view of ``a`` with no "
 "changes. A further example ``np.einsum('ij,jk', a, b)`` describes "
-"traditional matrix multiplication and is equivalent to :py:func:`np.matmul(a,"
-"b) <numpy.matmul>`. Repeated subscript labels in one operand take the "
-"diagonal. For example, ``np.einsum('ii', a)`` is equivalent to :py:func:`np."
-"trace(a) <numpy.trace>`."
+"traditional matrix multiplication and is equivalent "
+"to :py:func:`np.matmul(a,b) <numpy.matmul>`. Repeated subscript labels in "
+"one operand take the diagonal. For example, ``np.einsum('ii', a)`` is "
+"equivalent to :py:func:`np.trace(a) <numpy.trace>`."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
@@ -381,8 +379,8 @@ msgid ""
 "broadcasting is done by adding an ellipsis to the left of each term, like "
 "``np.einsum('...ii->...i', a)``. To take the trace along the first and last "
 "axes, you can do ``np.einsum('i...i', a)``, or to do a matrix-matrix product "
-"with the left-most indices instead of rightmost, one can do ``np."
-"einsum('ij...,jk...->ik...', a, b)``."
+"with the left-most indices instead of rightmost, one can do "
+"``np.einsum('ij...,jk...->ik...', a, b)``."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
@@ -409,9 +407,9 @@ msgstr ""
 msgid ""
 "Views returned from einsum are now writeable whenever the input array is "
 "writeable. For example, ``np.einsum('ijk...->kji...', a)`` will now have the "
-"same effect as :py:func:`np.swapaxes(a, 0, 2) <numpy.swapaxes>` and ``np."
-"einsum('ii->i', a)`` will return a writeable view of the diagonal of a 2D "
-"array."
+"same effect as :py:func:`np.swapaxes(a, 0, 2) <numpy.swapaxes>` and "
+"``np.einsum('ii->i', a)`` will return a writeable view of the diagonal of a "
+"2D array."
 msgstr ""
 
 #: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring

@@ -295,14 +295,14 @@ msgstr ""
 #: ../../../release/1.17.0-notes.rst:178
 msgid ""
 "Due to bugs in the application of ``log`` to random floating point numbers, "
-"the stream may change when sampling from `~RandomState.beta`, `~RandomState."
-"binomial`, `~RandomState.laplace`, `~RandomState.logistic`, `~RandomState."
-"logseries` or `~RandomState.multinomial` if a ``0`` is generated in the "
-"underlying `MT19937` random stream.  There is a ``1`` in :math:`10^{53}` "
-"chance of this occurring, so the probability that the stream changes for any "
-"given seed is extremely small. If a ``0`` is encountered in the underlying "
-"generator, then the incorrect value produced (either `numpy.inf` or `numpy."
-"nan`) is now dropped."
+"the stream may change when sampling from `~RandomState.beta`, "
+"`~RandomState.binomial`, `~RandomState.laplace`, `~RandomState.logistic`, "
+"`~RandomState.logseries` or `~RandomState.multinomial` if a ``0`` is "
+"generated in the underlying `MT19937` random stream.  There is a ``1`` "
+"in :math:`10^{53}` chance of this occurring, so the probability that the "
+"stream changes for any given seed is extremely small. If a ``0`` is "
+"encountered in the underlying generator, then the incorrect value produced "
+"(either `numpy.inf` or `numpy.nan`) is now dropped."
 msgstr ""
 
 #: ../../../release/1.17.0-notes.rst:191
@@ -333,8 +333,8 @@ msgid ""
 "Previously, `can_cast` returned `True` for almost all inputs for "
 "``casting='unsafe'``, even for cases where casting was not possible, such as "
 "from a structured dtype to a regular one.  This has been fixed, making it "
-"more consistent with actual casting using, e.g., the `.astype <ndarray."
-"astype>` method."
+"more consistent with actual casting using, e.g., the `.astype "
+"<ndarray.astype>` method."
 msgstr ""
 
 #: ../../../release/1.17.0-notes.rst:209
@@ -455,8 +455,8 @@ msgid ""
 "keyword argument, which can be used to tell which elements to include in the "
 "reduction.  For reductions that do not have an identity, it is necessary to "
 "also pass in an initial value (e.g., ``initial=np.inf`` for `min`).  For "
-"instance, the equivalent of `nansum` would be ``np.sum(a, where=~np."
-"isnan(a))``."
+"instance, the equivalent of `nansum` would be ``np.sum(a, "
+"where=~np.isnan(a))``."
 msgstr ""
 
 #: ../../../release/1.17.0-notes.rst:294
@@ -576,8 +576,8 @@ msgstr ""
 #: ../../../release/1.17.0-notes.rst:358
 msgid ""
 "``arr.dtype[['a', 'b']]`` now returns a dtype that is equivalent to "
-"``arr[['a', 'b']].dtype``, for consistency with ``arr.dtype['a'] == arr['a']."
-"dtype``."
+"``arr[['a', 'b']].dtype``, for consistency with ``arr.dtype['a'] == "
+"arr['a'].dtype``."
 msgstr ""
 
 #: ../../../release/1.17.0-notes.rst:362
@@ -780,8 +780,8 @@ msgstr ""
 #: ../../../release/1.17.0-notes.rst:472
 msgid ""
 "These ufuncs now call the ``__floor__``, ``__ceil__``, and ``__trunc__`` "
-"methods when called on object arrays, making them compatible with `decimal."
-"Decimal` and `fractions.Fraction` objects."
+"methods when called on object arrays, making them compatible with "
+"`decimal.Decimal` and `fractions.Fraction` objects."
 msgstr ""
 
 #: ../../../release/1.17.0-notes.rst:477

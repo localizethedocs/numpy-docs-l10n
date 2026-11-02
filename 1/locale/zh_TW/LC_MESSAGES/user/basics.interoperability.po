@@ -24,20 +24,20 @@ msgstr ""
 #: ../../../user/basics.interoperability.rst:8
 msgid ""
 "NumPy's ndarray objects provide both a high-level API for operations on "
-"array-structured data and a concrete implementation of the API based on :ref:"
-"`strided in-RAM storage <arrays>`. While this API is powerful and fairly "
-"general, its concrete implementation has limitations. As datasets grow and "
-"NumPy becomes used in a variety of new environments and architectures, there "
-"are cases where the strided in-RAM storage strategy is inappropriate, which "
-"has caused different libraries to reimplement this API for their own uses. "
-"This includes GPU arrays (CuPy_), Sparse arrays (`scipy.sparse`, `PyData/"
-"Sparse <Sparse_>`_) and parallel arrays (Dask_ arrays) as well as various "
-"NumPy-like implementations in deep learning frameworks, like TensorFlow_ and "
-"PyTorch_. Similarly, there are many projects that build on top of the NumPy "
-"API for labeled and indexed arrays (XArray_), automatic differentiation "
-"(JAX_), masked arrays (`numpy.ma`), physical units (astropy.units_, pint_, "
-"unyt_), among others that add additional functionality on top of the NumPy "
-"API."
+"array-structured data and a concrete implementation of the API based "
+"on :ref:`strided in-RAM storage <arrays>`. While this API is powerful and "
+"fairly general, its concrete implementation has limitations. As datasets "
+"grow and NumPy becomes used in a variety of new environments and "
+"architectures, there are cases where the strided in-RAM storage strategy is "
+"inappropriate, which has caused different libraries to reimplement this API "
+"for their own uses. This includes GPU arrays (CuPy_), Sparse arrays "
+"(`scipy.sparse`, `PyData/Sparse <Sparse_>`_) and parallel arrays (Dask_ "
+"arrays) as well as various NumPy-like implementations in deep learning "
+"frameworks, like TensorFlow_ and PyTorch_. Similarly, there are many "
+"projects that build on top of the NumPy API for labeled and indexed arrays "
+"(XArray_), automatic differentiation (JAX_), masked arrays (`numpy.ma`), "
+"physical units (astropy.units_, pint_, unyt_), among others that add "
+"additional functionality on top of the NumPy API."
 msgstr ""
 
 #: ../../../user/basics.interoperability.rst:23
@@ -92,9 +92,9 @@ msgstr ""
 
 #: ../../../user/basics.interoperability.rst:48
 msgid ""
-"The ``__array_interface__`` protocol, described :ref:`in this page <arrays."
-"interface>`. A precursor to Python's buffer protocol, it defines a way to "
-"access the contents of a NumPy array from other C extensions."
+"The ``__array_interface__`` protocol, described :ref:`in this page "
+"<arrays.interface>`. A precursor to Python's buffer protocol, it defines a "
+"way to access the contents of a NumPy array from other C extensions."
 msgstr ""
 
 #: ../../../user/basics.interoperability.rst:52
@@ -205,8 +205,8 @@ msgstr ""
 msgid ""
 "``__dlpack__(self, stream=None)`` and ``__dlpack_device__`` methods on the "
 "array object, which will be called from within ``from_dlpack``, to query "
-"what device the array is on (may be needed to pass in the correct stream, e."
-"g. in the case of multiple GPUs) and to access the data."
+"what device the array is on (may be needed to pass in the correct stream, "
+"e.g. in the case of multiple GPUs) and to access the data."
 msgstr ""
 
 #: ../../../user/basics.interoperability.rst:146
@@ -257,8 +257,8 @@ msgstr ""
 
 #: ../../../user/basics.interoperability.rst:180
 msgid ""
-"``__array_ufunc__``: allows third-party objects to support and override :ref:"
-"`ufuncs <ufuncs-basics>`."
+"``__array_ufunc__``: allows third-party objects to support and "
+"override :ref:`ufuncs <ufuncs-basics>`."
 msgstr ""
 
 #: ../../../user/basics.interoperability.rst:182
@@ -362,8 +362,8 @@ msgstr ""
 
 #: ../../../user/basics.interoperability.rst:248
 msgid ""
-"For more information on these methods, see :ref:`basics.subclassing` and :"
-"ref:`specific-array-subtyping`."
+"For more information on these methods, see :ref:`basics.subclassing` "
+"and :ref:`specific-array-subtyping`."
 msgstr ""
 
 #: ../../../user/basics.interoperability.rst:253
@@ -381,9 +381,9 @@ msgstr ""
 #: ../../../user/basics.interoperability.rst:265
 msgid ""
 "Now, ``ser`` is **not** a ndarray, but because it `implements the "
-"__array_ufunc__ protocol <https://pandas.pydata.org/docs/user_guide/dsintro."
-"html#dataframe-interoperability-with-numpy-functions>`__, we can apply "
-"ufuncs to it as if it were a ndarray:"
+"__array_ufunc__ protocol <https://pandas.pydata.org/docs/user_guide/"
+"dsintro.html#dataframe-interoperability-with-numpy-functions>`__, we can "
+"apply ufuncs to it as if it were a ndarray:"
 msgstr ""
 
 #: ../../../user/basics.interoperability.rst:283
@@ -530,9 +530,9 @@ msgstr ""
 
 #: ../../../user/basics.interoperability.rst:423
 msgid ""
-"See `the Dask array documentation <https://docs.dask.org/en/stable/array."
-"html>`__ and the `scope of Dask arrays interoperability with NumPy arrays "
-"<https://docs.dask.org/en/stable/array.html#scope>`__ for details."
+"See `the Dask array documentation <https://docs.dask.org/en/stable/"
+"array.html>`__ and the `scope of Dask arrays interoperability with NumPy "
+"arrays <https://docs.dask.org/en/stable/array.html#scope>`__ for details."
 msgstr ""
 
 #: ../../../user/basics.interoperability.rst:429
