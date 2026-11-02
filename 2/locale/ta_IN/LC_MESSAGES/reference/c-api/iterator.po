@@ -148,8 +148,8 @@ msgstr ""
 #: ../../../reference/c-api/iterator.rst:121
 msgid ""
 "Here is a copy function using the iterator.  The ``order`` parameter is used "
-"to control the memory layout of the allocated result, typically :c:data:"
-"`NPY_KEEPORDER` is desired."
+"to control the memory layout of the allocated result, "
+"typically :c:data:`NPY_KEEPORDER` is desired."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:125
@@ -329,8 +329,8 @@ msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:286
 msgid ""
-"This is a function pointer for the iteration loop, returned by :c:func:"
-"`NpyIter_GetIterNext`."
+"This is a function pointer for the iteration loop, returned "
+"by :c:func:`NpyIter_GetIterNext`."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:291
@@ -350,8 +350,8 @@ msgstr ""
 #: ../../../reference/c-api/iterator.rst:303
 msgid ""
 "Flags that may be passed in ``flags`` are any combination of the global and "
-"per-operand flags documented in :c:func:`NpyIter_MultiNew`, except for :c:"
-"data:`NPY_ITER_ALLOCATE`."
+"per-operand flags documented in :c:func:`NpyIter_MultiNew`, except "
+"for :c:data:`NPY_ITER_ALLOCATE`."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:307
@@ -365,18 +365,18 @@ msgstr ""
 #: ../../../reference/c-api/iterator.rst:361
 msgid ""
 "Any of the :c:type:`NPY_CASTING` enum values may be passed to ``casting``. "
-"The values include :c:data:`NPY_NO_CASTING`, :c:data:`NPY_EQUIV_CASTING`, :c:"
-"data:`NPY_SAFE_CASTING`, :c:data:`NPY_SAME_KIND_CASTING`, and :c:data:"
-"`NPY_UNSAFE_CASTING`.  To allow the casts to occur, copying or buffering "
-"must also be enabled."
+"The values "
+"include :c:data:`NPY_NO_CASTING`, :c:data:`NPY_EQUIV_CASTING`, :c:data:`NPY_SAFE_CASTING`, :c:data:`NPY_SAME_KIND_CASTING`, "
+"and :c:data:`NPY_UNSAFE_CASTING`.  To allow the casts to occur, copying or "
+"buffering must also be enabled."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:317
 msgid ""
 "If ``dtype`` isn't ``NULL``, then it requires that data type. If copying is "
-"allowed, it will make a temporary copy if the data is castable.  If :c:data:"
-"`NPY_ITER_UPDATEIFCOPY` is enabled, it will also copy the data back with "
-"another cast upon iterator destruction."
+"allowed, it will make a temporary copy if the data is castable.  "
+"If :c:data:`NPY_ITER_UPDATEIFCOPY` is enabled, it will also copy the data "
+"back with another cast upon iterator destruction."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:322
@@ -425,10 +425,10 @@ msgstr ""
 msgid ""
 "Any of the :c:type:`NPY_ORDER` enum values may be passed to ``order``.  For "
 "efficient iteration, :c:data:`NPY_KEEPORDER` is the best option, and the "
-"other orders enforce the particular iteration pattern.  When using :c:data:"
-"`NPY_KEEPORDER`, if you also want to ensure that the iteration is not "
-"reversed along an axis, you should pass the flag :c:data:"
-"`NPY_ITER_DONT_NEGATE_STRIDES`."
+"other orders enforce the particular iteration pattern.  When "
+"using :c:data:`NPY_KEEPORDER`, if you also want to ensure that the iteration "
+"is not reversed along an axis, you should pass the "
+"flag :c:data:`NPY_ITER_DONT_NEGATE_STRIDES`."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:367
@@ -475,8 +475,9 @@ msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:406
 msgid ""
-"This flag is incompatible with :c:data:`NPY_ITER_C_INDEX`, :c:data:"
-"`NPY_ITER_F_INDEX`, and :c:data:`NPY_ITER_MULTI_INDEX`."
+"This flag is incompatible "
+"with :c:data:`NPY_ITER_C_INDEX`, :c:data:`NPY_ITER_F_INDEX`, "
+"and :c:data:`NPY_ITER_MULTI_INDEX`."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:411
@@ -548,17 +549,18 @@ msgstr ""
 #: ../../../reference/c-api/iterator.rst:470
 msgid ""
 "Enables support for iteration of sub-ranges of the full ``iterindex`` range "
-"``[0, NpyIter_IterSize(iter))``.  Use the function :c:func:"
-"`NpyIter_ResetToIterIndexRange` to specify a range for iteration."
+"``[0, NpyIter_IterSize(iter))``.  Use the "
+"function :c:func:`NpyIter_ResetToIterIndexRange` to specify a range for "
+"iteration."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:475
 msgid ""
-"This flag can only be used with :c:data:`NPY_ITER_EXTERNAL_LOOP` when :c:"
-"data:`NPY_ITER_BUFFERED` is enabled.  This is because without buffering, the "
-"inner loop is always the size of the innermost iteration dimension, and "
-"allowing it to get cut up would require special handling, effectively making "
-"it more like the buffered version."
+"This flag can only be used with :c:data:`NPY_ITER_EXTERNAL_LOOP` "
+"when :c:data:`NPY_ITER_BUFFERED` is enabled.  This is because without "
+"buffering, the inner loop is always the size of the innermost iteration "
+"dimension, and allowing it to get cut up would require special handling, "
+"effectively making it more like the buffered version."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:484
@@ -580,17 +582,17 @@ msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:496
 msgid ""
-"Note that if an operand is given the flag :c:data:`NPY_ITER_COPY` or :c:data:"
-"`NPY_ITER_UPDATEIFCOPY`, a copy will be made in preference to buffering.  "
-"Buffering will still occur when the array was broadcast so elements need to "
-"be duplicated to get a constant stride."
+"Note that if an operand is given the flag :c:data:`NPY_ITER_COPY` "
+"or :c:data:`NPY_ITER_UPDATEIFCOPY`, a copy will be made in preference to "
+"buffering.  Buffering will still occur when the array was broadcast so "
+"elements need to be duplicated to get a constant stride."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:502
 msgid ""
 "In normal buffering, the size of each inner loop is equal to the buffer "
-"size, or possibly larger if :c:data:`NPY_ITER_GROWINNER` is specified.  If :"
-"c:data:`NPY_ITER_REDUCE_OK` is enabled and a reduction occurs, the inner "
+"size, or possibly larger if :c:data:`NPY_ITER_GROWINNER` is specified.  "
+"If :c:data:`NPY_ITER_REDUCE_OK` is enabled and a reduction occurs, the inner "
 "loops may become smaller depending on the structure of the reduction."
 msgstr ""
 
@@ -604,10 +606,10 @@ msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:519
 msgid ""
-"When buffering is enabled, this delays allocation of the buffers until :c:"
-"func:`NpyIter_Reset` or another reset function is called.  This flag exists "
-"to avoid wasteful copying of buffer data when making multiple copies of a "
-"buffered iterator for multi-threaded iteration."
+"When buffering is enabled, this delays allocation of the buffers "
+"until :c:func:`NpyIter_Reset` or another reset function is called.  This "
+"flag exists to avoid wasteful copying of buffer data when making multiple "
+"copies of a buffered iterator for multi-threaded iteration."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:525
@@ -707,10 +709,10 @@ msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:606
 msgid ""
-"This is for output arrays, and requires that the flag :c:data:"
-"`NPY_ITER_WRITEONLY` or :c:data:`NPY_ITER_READWRITE` be set.  If ``op[i]`` "
-"is NULL, creates a new array with the final broadcast dimensions, and a "
-"layout matching the iteration order of the iterator."
+"This is for output arrays, and requires that the "
+"flag :c:data:`NPY_ITER_WRITEONLY` or :c:data:`NPY_ITER_READWRITE` be set.  "
+"If ``op[i]`` is NULL, creates a new array with the final broadcast "
+"dimensions, and a layout matching the iteration order of the iterator."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:612
@@ -759,19 +761,21 @@ msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:649
 msgid ""
-"The data type of an operand with this flag should be either :c:data:"
-"`NPY_BOOL`, :c:data:`NPY_MASK`, or a struct dtype whose fields are all valid "
-"mask dtypes. In the latter case, it must match up with a struct operand "
-"being WRITEMASKED, as it is specifying a mask for each field of that array."
+"The data type of an operand with this flag should be "
+"either :c:data:`NPY_BOOL`, :c:data:`NPY_MASK`, or a struct dtype whose "
+"fields are all valid mask dtypes. In the latter case, it must match up with "
+"a struct operand being WRITEMASKED, as it is specifying a mask for each "
+"field of that array."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:655
 msgid ""
 "This flag only affects writing from the buffer back to the array. This means "
-"that if the operand is also :c:data:`NPY_ITER_READWRITE` or :c:data:"
-"`NPY_ITER_WRITEONLY`, code doing iteration can write to this operand to "
-"control which elements will be untouched and which ones will be modified. "
-"This is useful when the mask should be a combination of input masks."
+"that if the operand is also :c:data:`NPY_ITER_READWRITE` "
+"or :c:data:`NPY_ITER_WRITEONLY`, code doing iteration can write to this "
+"operand to control which elements will be untouched and which ones will be "
+"modified. This is useful when the mask should be a combination of input "
+"masks."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:665
@@ -842,8 +846,8 @@ msgstr ""
 msgid ""
 "**Note**: Before NumPy 1.8 ``oa_ndim == 0`` was used for signalling that "
 "``op_axes`` and ``itershape`` are unused. This is deprecated and should be "
-"replaced with -1. Better backward compatibility may be achieved by using :c:"
-"func:`NpyIter_MultiNew` for this case."
+"replaced with -1. Better backward compatibility may be achieved by "
+"using :c:func:`NpyIter_MultiNew` for this case."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:720
@@ -885,15 +889,15 @@ msgstr ""
 #: ../../../reference/c-api/iterator.rst:750
 msgid ""
 "The recommended approach to multithreaded iteration is to first create an "
-"iterator with the flags :c:data:`NPY_ITER_EXTERNAL_LOOP`, :c:data:"
-"`NPY_ITER_RANGED`, :c:data:`NPY_ITER_BUFFERED`, :c:data:"
-"`NPY_ITER_DELAY_BUFALLOC`, and possibly :c:data:`NPY_ITER_GROWINNER`.  "
-"Create a copy of this iterator for each thread (minus one for the first "
-"iterator).  Then, take the iteration index range ``[0, "
-"NpyIter_GetIterSize(iter))`` and split it up into tasks, for example using a "
-"TBB parallel_for loop. When a thread gets a task to execute, it then uses "
-"its copy of the iterator by calling :c:func:`NpyIter_ResetToIterIndexRange` "
-"and iterating over the full range."
+"iterator with the "
+"flags :c:data:`NPY_ITER_EXTERNAL_LOOP`, :c:data:`NPY_ITER_RANGED`, :c:data:`NPY_ITER_BUFFERED`, :c:data:`NPY_ITER_DELAY_BUFALLOC`, "
+"and possibly :c:data:`NPY_ITER_GROWINNER`.  Create a copy of this iterator "
+"for each thread (minus one for the first iterator).  Then, take the "
+"iteration index range ``[0, NpyIter_GetIterSize(iter))`` and split it up "
+"into tasks, for example using a TBB parallel_for loop. When a thread gets a "
+"task to execute, it then uses its copy of the iterator by "
+"calling :c:func:`NpyIter_ResetToIterIndexRange` and iterating over the full "
+"range."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:762
@@ -913,10 +917,10 @@ msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:775
 msgid ""
-"Removes an axis from iteration.  This requires that :c:data:"
-"`NPY_ITER_MULTI_INDEX` was set for iterator creation, and does not work if "
-"buffering is enabled or an index is being tracked. This function also resets "
-"the iterator to its initial state."
+"Removes an axis from iteration.  This requires "
+"that :c:data:`NPY_ITER_MULTI_INDEX` was set for iterator creation, and does "
+"not work if buffering is enabled or an index is being tracked. This function "
+"also resets the iterator to its initial state."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:780
@@ -1021,8 +1025,8 @@ msgstr ""
 msgid ""
 "Resets the iterator and restricts it to the ``iterindex`` range ``[istart, "
 "iend)``.  See :c:func:`NpyIter_Copy` for an explanation of how to use this "
-"for multi-threaded iteration.  This requires that the flag :c:data:"
-"`NPY_ITER_RANGED` was passed to the iterator constructor."
+"for multi-threaded iteration.  This requires that the "
+"flag :c:data:`NPY_ITER_RANGED` was passed to the iterator constructor."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:862
@@ -1057,14 +1061,14 @@ msgstr ""
 #: ../../../reference/c-api/iterator.rst:899
 msgid ""
 "Creating iterators for nested iteration requires some care.  All the "
-"iterator operands must match exactly, or the calls to :c:func:"
-"`NpyIter_ResetBasePointers` will be invalid.  This means that automatic "
-"copies and output allocation should not be used haphazardly. It is possible "
-"to still use the automatic data conversion and casting features of the "
-"iterator by creating one of the iterators with all the conversion parameters "
-"enabled, then grabbing the allocated operands with the :c:func:"
-"`NpyIter_GetOperandArray` function and passing them into the constructors "
-"for the rest of the iterators."
+"iterator operands must match exactly, or the calls "
+"to :c:func:`NpyIter_ResetBasePointers` will be invalid.  This means that "
+"automatic copies and output allocation should not be used haphazardly. It is "
+"possible to still use the automatic data conversion and casting features of "
+"the iterator by creating one of the iterators with all the conversion "
+"parameters enabled, then grabbing the allocated operands with "
+"the :c:func:`NpyIter_GetOperandArray` function and passing them into the "
+"constructors for the rest of the iterators."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:909
@@ -1122,20 +1126,20 @@ msgstr ""
 msgid ""
 "Adjusts the iterator to point to the ``index`` specified. If the iterator "
 "was constructed with the flag :c:data:`NPY_ITER_C_INDEX`, ``index`` is the C-"
-"order index, and if the iterator was constructed with the flag :c:data:"
-"`NPY_ITER_F_INDEX`, ``index`` is the Fortran-order index.  Returns an error "
-"if there is no index being tracked, the index is out of bounds, or inner "
-"loop iteration is disabled."
+"order index, and if the iterator was constructed with the "
+"flag :c:data:`NPY_ITER_F_INDEX`, ``index`` is the Fortran-order index.  "
+"Returns an error if there is no index being tracked, the index is out of "
+"bounds, or inner loop iteration is disabled."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:968
 msgid ""
 "Returns the number of elements being iterated.  This is the product of all "
-"the dimensions in the shape.  When a multi index is being tracked (and :c:"
-"func:`NpyIter_RemoveAxis` may be called) the size may be ``-1`` to indicate "
-"an iterator is too large.  Such an iterator is invalid, but may become valid "
-"after :c:func:`NpyIter_RemoveAxis` is called. It is not necessary to check "
-"for this case."
+"the dimensions in the shape.  When a multi index is being tracked "
+"(and :c:func:`NpyIter_RemoveAxis` may be called) the size may be ``-1`` to "
+"indicate an iterator is too large.  Such an iterator is invalid, but may "
+"become valid after :c:func:`NpyIter_RemoveAxis` is called. It is not "
+"necessary to check for this case."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:977
@@ -1146,9 +1150,9 @@ msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:983
 msgid ""
-"Gets the ``iterindex`` sub-range that is being iterated.  If :c:data:"
-"`NPY_ITER_RANGED` was not specified, this always returns the range ``[0, "
-"NpyIter_IterSize(iter))``."
+"Gets the ``iterindex`` sub-range that is being iterated.  "
+"If :c:data:`NPY_ITER_RANGED` was not specified, this always returns the "
+"range ``[0, NpyIter_IterSize(iter))``."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:989
@@ -1170,14 +1174,14 @@ msgstr ""
 msgid ""
 "Returns 1 if the caller needs to handle the inner-most 1-dimensional loop, "
 "or 0 if the iterator handles all looping. This is controlled by the "
-"constructor flag :c:data:`NPY_ITER_EXTERNAL_LOOP` or :c:func:"
-"`NpyIter_EnableExternalLoop`."
+"constructor flag :c:data:`NPY_ITER_EXTERNAL_LOOP` "
+"or :c:func:`NpyIter_EnableExternalLoop`."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:1011
 msgid ""
-"Returns 1 if the iterator was created with the :c:data:"
-"`NPY_ITER_MULTI_INDEX` flag, 0 otherwise."
+"Returns 1 if the iterator was created with "
+"the :c:data:`NPY_ITER_MULTI_INDEX` flag, 0 otherwise."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:1016
@@ -1298,9 +1302,9 @@ msgid ""
 "Builds a set of strides which are the same as the strides of an output array "
 "created using the :c:data:`NPY_ITER_ALLOCATE` flag, where NULL was passed "
 "for op_axes.  This is for data packed contiguously, but not necessarily in C "
-"or Fortran order. This should be used together with :c:func:"
-"`NpyIter_GetShape` and :c:func:`NpyIter_GetNDim` with the flag :c:data:"
-"`NPY_ITER_MULTI_INDEX` passed into the constructor."
+"or Fortran order. This should be used together "
+"with :c:func:`NpyIter_GetShape` and :c:func:`NpyIter_GetNDim` with the "
+"flag :c:data:`NPY_ITER_MULTI_INDEX` passed into the constructor."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:1121
@@ -1428,13 +1432,13 @@ msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:1216
 msgid ""
-"If a compile-time fixed buffer is being used (both flags :c:data:"
-"`NPY_ITER_BUFFERED` and :c:data:`NPY_ITER_EXTERNAL_LOOP`), the inner size "
-"may be used as a signal as well.  The size is guaranteed to become zero when "
-"``iternext()`` returns false, enabling the following loop construct.  Note "
-"that if you use this construct, you should not pass :c:data:"
-"`NPY_ITER_GROWINNER` as a flag, because it will cause larger sizes under "
-"some circumstances."
+"If a compile-time fixed buffer is being used (both "
+"flags :c:data:`NPY_ITER_BUFFERED` and :c:data:`NPY_ITER_EXTERNAL_LOOP`), the "
+"inner size may be used as a signal as well.  The size is guaranteed to "
+"become zero when ``iternext()`` returns false, enabling the following loop "
+"construct.  Note that if you use this construct, you should not "
+"pass :c:data:`NPY_ITER_GROWINNER` as a flag, because it will cause larger "
+"sizes under some circumstances."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:1224
@@ -1487,10 +1491,10 @@ msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:1280
 msgid ""
-"This gives back a pointer to the ``nop`` data pointers.  If :c:data:"
-"`NPY_ITER_EXTERNAL_LOOP` was not specified, each data pointer points to the "
-"current data item of the iterator.  If no inner iteration was specified, it "
-"points to the first data item of the inner loop."
+"This gives back a pointer to the ``nop`` data pointers.  "
+"If :c:data:`NPY_ITER_EXTERNAL_LOOP` was not specified, each data pointer "
+"points to the current data item of the iterator.  If no inner iteration was "
+"specified, it points to the first data item of the inner loop."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:1286
@@ -1521,9 +1525,9 @@ msgstr ""
 #: ../../../reference/c-api/iterator.rst:1303
 msgid ""
 "This gives back a pointer to the index being tracked, or NULL if no index is "
-"being tracked.  It is only usable if one of the flags :c:data:"
-"`NPY_ITER_C_INDEX` or :c:data:`NPY_ITER_F_INDEX` were specified during "
-"construction."
+"being tracked.  It is only usable if one of the "
+"flags :c:data:`NPY_ITER_C_INDEX` or :c:data:`NPY_ITER_F_INDEX` were "
+"specified during construction."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:1308
@@ -1574,12 +1578,12 @@ msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:1341
 msgid ""
-"Once the iterator is prepared for iteration (after a reset if :c:data:"
-"`NPY_ITER_DELAY_BUFALLOC` was used), call this to get the strides which may "
-"be used to select a fast inner loop function.  For example, if the stride is "
-"0, that means the inner loop can always load its value into a variable once, "
-"then use the variable throughout the loop, or if the stride equals the "
-"itemsize, a contiguous version for that operand may be used."
+"Once the iterator is prepared for iteration (after a reset "
+"if :c:data:`NPY_ITER_DELAY_BUFALLOC` was used), call this to get the strides "
+"which may be used to select a fast inner loop function.  For example, if the "
+"stride is 0, that means the inner loop can always load its value into a "
+"variable once, then use the variable throughout the loop, or if the stride "
+"equals the itemsize, a contiguous version for that operand may be used."
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:1355
@@ -1621,8 +1625,8 @@ msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:1371
 msgid ""
-":c:func:`NpyIter_New` + ``axes`` parameter **or** Iterator flag :c:data:"
-"`NPY_ITER_EXTERNAL_LOOP`"
+":c:func:`NpyIter_New` + ``axes`` parameter **or** Iterator "
+"flag :c:data:`NPY_ITER_EXTERNAL_LOOP`"
 msgstr ""
 
 #: ../../../reference/c-api/iterator.rst:1373

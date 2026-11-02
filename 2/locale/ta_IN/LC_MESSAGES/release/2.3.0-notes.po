@@ -126,8 +126,8 @@ msgstr ""
 #: ../../../release/2.3.0-notes.rst:67
 msgid ""
 "But in NumPy 2.2.0, ``float64`` and ``complex128`` were changed to concrete "
-"subtypes, causing static type-checkers to reject ``x: np.float64 = f(np."
-"complex128(42j))``."
+"subtypes, causing static type-checkers to reject ``x: np.float64 = "
+"f(np.complex128(42j))``."
 msgstr ""
 
 #: ../../../release/2.3.0-notes.rst:71
@@ -285,8 +285,9 @@ msgstr ""
 
 #: ../../../release/2.3.0-notes.rst:187
 msgid ""
-"Converting ``np.complex``, ``np.integer``, ``np.signedinteger``, ``np."
-"unsignedinteger``, ``np.generic`` to a dtype errors (deprecated since 1.19)"
+"Converting ``np.complex``, ``np.integer``, ``np.signedinteger``, "
+"``np.unsignedinteger``, ``np.generic`` to a dtype errors (deprecated since "
+"1.19)"
 msgstr ""
 
 #: ../../../release/2.3.0-notes.rst:193
@@ -384,8 +385,8 @@ msgstr ""
 #: ../../../release/2.3.0-notes.rst:256
 msgid ""
 "The type parameter of ``np.dtype`` now defaults to ``typing.Any``. This way, "
-"static type-checkers will infer ``dtype: np.dtype`` as ``dtype: np."
-"dtype[Any]``, without reporting an error."
+"static type-checkers will infer ``dtype: np.dtype`` as ``dtype: "
+"np.dtype[Any]``, without reporting an error."
 msgstr ""
 
 #: ../../../release/2.3.0-notes.rst:260
@@ -520,8 +521,8 @@ msgstr ""
 
 #: ../../../release/2.3.0-notes.rst:339
 msgid ""
-"Scalar comparisons between non-comparable dtypes such as ``np.array(1) == np."
-"array('s')`` now return a NumPy bool instead of a Python bool."
+"Scalar comparisons between non-comparable dtypes such as ``np.array(1) == "
+"np.array('s')`` now return a NumPy bool instead of a Python bool."
 msgstr ""
 
 #: ../../../release/2.3.0-notes.rst:343
@@ -672,9 +673,9 @@ msgstr ""
 msgid ""
 "The vector norm ``ord=inf`` and the matrix norms ``ord={1, 2, inf, 'nuc'}`` "
 "now always returns zero for empty arrays. Empty arrays have at least one "
-"axis of size zero. This affects ``np.linalg.norm``, ``np.linalg."
-"vector_norm``, and ``np.linalg.matrix_norm``. Previously, NumPy would raises "
-"errors or return zero depending on the shape of the array."
+"axis of size zero. This affects ``np.linalg.norm``, "
+"``np.linalg.vector_norm``, and ``np.linalg.matrix_norm``. Previously, NumPy "
+"would raises errors or return zero depending on the shape of the array."
 msgstr ""
 
 #: ../../../release/2.3.0-notes.rst:433

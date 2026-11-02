@@ -83,11 +83,11 @@ msgstr ""
 
 #: ../../../../HOWTO_RELEASE.rst:23
 msgid ""
-"We aim to support the same set of macOS versions as are supported by Python."
-"org and `cibuildwheel`_ for any given Python version. We build binary wheels "
-"for macOS that are compatible with common Python installation methods, e.g., "
-"from python.org, ``python-build-standalone`` (the ones ``uv`` installs), "
-"system Python, conda-forge, Homebrew and MacPorts."
+"We aim to support the same set of macOS versions as are supported by "
+"Python.org and `cibuildwheel`_ for any given Python version. We build binary "
+"wheels for macOS that are compatible with common Python installation "
+"methods, e.g., from python.org, ``python-build-standalone`` (the ones ``uv`` "
+"installs), system Python, conda-forge, Homebrew and MacPorts."
 msgstr ""
 
 #: ../../../../HOWTO_RELEASE.rst:29
@@ -196,9 +196,9 @@ msgstr ""
 msgid ""
 "Creating a release on PyPI and uploading wheels and sdist is automated in CI "
 "and uses `PyPI's trusted publishing <https://docs.pypi.org/trusted-"
-"publishers/>`__. See the README in the `numpy/numpy-release <https://github."
-"com/numpy/numpy-release>`__ repository and the step by step instructions in "
-"``doc/RELEASE_WALKTHROUGH.rst`` for more details."
+"publishers/>`__. See the README in the `numpy/numpy-release <https://"
+"github.com/numpy/numpy-release>`__ repository and the step by step "
+"instructions in ``doc/RELEASE_WALKTHROUGH.rst`` for more details."
 msgstr ""
 
 #: ../../../../HOWTO_RELEASE.rst:97
@@ -287,11 +287,11 @@ msgstr ""
 
 #: ../../../../HOWTO_RELEASE.rst:144
 msgid ""
-"If the API has changed, increment the C_API_VERSION in numpy/core/meson."
-"build. The API is unchanged only if any code compiled against the current "
-"API will be backward compatible with the last released NumPy version. Any "
-"changes to C structures or additions to the public interface will make the "
-"new API not backward compatible."
+"If the API has changed, increment the C_API_VERSION in numpy/core/"
+"meson.build. The API is unchanged only if any code compiled against the "
+"current API will be backward compatible with the last released NumPy "
+"version. Any changes to C structures or additions to the public interface "
+"will make the new API not backward compatible."
 msgstr ""
 
 #: ../../../../HOWTO_RELEASE.rst:150
@@ -390,8 +390,8 @@ msgstr ""
 #: ../../../../RELEASE_WALKTHROUGH.rst:5
 msgid ""
 "The commands can be copied into the command line, but be sure to replace "
-"2.4.0 with the correct version. This should be read together with the :ref:"
-"`general release guide <prepare_release>`."
+"2.4.0 with the correct version. This should be read together with "
+"the :ref:`general release guide <prepare_release>`."
 msgstr ""
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:10
@@ -400,11 +400,12 @@ msgstr ""
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:12
 msgid ""
-"Before beginning to make a release, use the ``requirements/*_requirements."
-"txt`` files to ensure that you have the needed software. Most software can "
-"be installed with pip, but some will require apt-get, dnf, or whatever your "
-"system uses for software. You will also need a GitHub personal access token "
-"(PAT) to push the documentation. There are a few ways to streamline things:"
+"Before beginning to make a release, use the ``requirements/"
+"*_requirements.txt`` files to ensure that you have the needed software. Most "
+"software can be installed with pip, but some will require apt-get, dnf, or "
+"whatever your system uses for software. You will also need a GitHub personal "
+"access token (PAT) to push the documentation. There are a few ways to "
+"streamline things:"
 msgstr ""
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:18
@@ -424,11 +425,11 @@ msgstr ""
 #: ../../../../RELEASE_WALKTHROUGH.rst:28
 msgid ""
 "When adding or dropping Python versions, multiple config and CI files need "
-"to be edited in addition to changing the minimum version in ``pyproject."
-"toml``. Make these changes in an ordinary PR against main and backport if "
-"necessary. We currently release wheels for new Python versions after the "
-"first Python RC once manylinux and cibuildwheel support that new Python "
-"version."
+"to be edited in addition to changing the minimum version in "
+"``pyproject.toml``. Make these changes in an ordinary PR against main and "
+"backport if necessary. We currently release wheels for new Python versions "
+"after the first Python RC once manylinux and cibuildwheel support that new "
+"Python version."
 msgstr ""
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:36
@@ -575,8 +576,8 @@ msgstr ""
 #: ../../../../RELEASE_WALKTHROUGH.rst:120
 msgid ""
 "$ spin notes\n"
-"$ gvim doc/source/release/notes-towncrier.rst doc/source/release/2.4.0-notes."
-"rst"
+"$ gvim doc/source/release/notes-towncrier.rst doc/source/release/2.4.0-"
+"notes.rst"
 msgstr ""
 
 #: ../../../../RELEASE_WALKTHROUGH.rst:123

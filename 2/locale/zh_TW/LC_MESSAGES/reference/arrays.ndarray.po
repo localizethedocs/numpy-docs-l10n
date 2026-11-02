@@ -25,19 +25,19 @@ msgstr "N 維陣列（:class:`ndarray`）"
 msgid ""
 "An :class:`ndarray` is a (usually fixed-size) multidimensional container of "
 "items of the same type and size. The number of dimensions and items in an "
-"array is defined by its :attr:`shape <ndarray.shape>`, which is a :class:"
-"`tuple` of *N* non-negative integers that specify the sizes of each "
-"dimension. The type of items in the array is specified by a separate :ref:"
-"`data-type object (dtype) <arrays.dtypes>`, one of which is associated with "
-"each ndarray."
+"array is defined by its :attr:`shape <ndarray.shape>`, which is "
+"a :class:`tuple` of *N* non-negative integers that specify the sizes of each "
+"dimension. The type of items in the array is specified by a "
+"separate :ref:`data-type object (dtype) <arrays.dtypes>`, one of which is "
+"associated with each ndarray."
 msgstr ""
 
 #: ../../../reference/arrays.ndarray.rst:17
 msgid ""
-"As with other container objects in Python, the contents of an :class:"
-"`ndarray` can be accessed and modified by :ref:`indexing or slicing <arrays."
-"indexing>` the array (using, for example, *N* integers), and via the methods "
-"and attributes of the :class:`ndarray`."
+"As with other container objects in Python, the contents of "
+"an :class:`ndarray` can be accessed and modified by :ref:`indexing or "
+"slicing <arrays.indexing>` the array (using, for example, *N* integers), and "
+"via the methods and attributes of the :class:`ndarray`."
 msgstr ""
 
 #: ../../../reference/arrays.ndarray.rst:24
@@ -46,8 +46,8 @@ msgid ""
 "changes made in one :class:`ndarray` may be visible in another. That is, an "
 "ndarray can be a *\"view\"* to another ndarray, and the data it is referring "
 "to is taken care of by the *\"base\"* ndarray. ndarrays can also be views to "
-"memory owned by Python :class:`strings <str>` or objects implementing the :"
-"class:`memoryview` or :ref:`array <arrays.interface>` interfaces."
+"memory owned by Python :class:`strings <str>` or objects implementing "
+"the :class:`memoryview` or :ref:`array <arrays.interface>` interfaces."
 msgstr ""
 
 #: ../../../reference/arrays.ndarray.rst:33
@@ -74,9 +74,9 @@ msgstr ""
 
 #: ../../../reference/arrays.ndarray.rst:73
 msgid ""
-"New arrays can be constructed using the routines detailed in :ref:`routines."
-"array-creation`, and also by using the low-level :class:`ndarray` "
-"constructor:"
+"New arrays can be constructed using the routines detailed "
+"in :ref:`routines.array-creation`, and also by using the low-"
+"level :class:`ndarray` constructor:"
 msgstr ""
 
 #: ../../../reference/arrays.ndarray.rst:81:<autosummary>:1
@@ -119,8 +119,8 @@ msgid ""
 "object), combined with an indexing scheme that maps *N* integers into the "
 "location of an item in the block.  The ranges in which the indices can vary "
 "is specified by the :obj:`shape <ndarray.shape>` of the array. How many "
-"bytes each item takes and how the bytes are interpreted is defined by the :"
-"ref:`data-type object <arrays.dtypes>` associated with the array."
+"bytes each item takes and how the bytes are interpreted is defined by "
+"the :ref:`data-type object <arrays.dtypes>` associated with the array."
 msgstr ""
 
 #: ../../../reference/arrays.ndarray.rst:111
@@ -141,12 +141,12 @@ msgstr ""
 
 #: ../../../reference/arrays.ndarray.rst:120
 msgid ""
-"from the beginning of the memory block associated with the array. Here, :"
-"math:`s_k` are integers which specify the :obj:`strides <ndarray.strides>` "
-"of the array. The :term:`column-major` order (used, for example, in the "
-"Fortran language and in *Matlab*) and :term:`row-major` order (used in C) "
-"schemes are just specific kinds of strided scheme, and correspond to memory "
-"that can be *addressed* by the strides:"
+"from the beginning of the memory block associated with the array. "
+"Here, :math:`s_k` are integers which specify the :obj:`strides "
+"<ndarray.strides>` of the array. The :term:`column-major` order (used, for "
+"example, in the Fortran language and in *Matlab*) and :term:`row-major` "
+"order (used in C) schemes are just specific kinds of strided scheme, and "
+"correspond to memory that can be *addressed* by the strides:"
 msgstr ""
 
 #: ../../../reference/arrays.ndarray.rst:127
@@ -337,8 +337,8 @@ msgstr ":ref:`資料型別物件 <arrays.dtypes>`"
 
 #: ../../../reference/arrays.ndarray.rst:224
 msgid ""
-"The data type object associated with the array can be found in the :attr:"
-"`dtype <ndarray.dtype>` attribute:"
+"The data type object associated with the array can be found in "
+"the :attr:`dtype <ndarray.dtype>` attribute:"
 msgstr ""
 
 #: ../../../reference/arrays.ndarray.rst:231:<autosummary>:1
@@ -436,16 +436,11 @@ msgstr ""
 
 #: ../../../reference/arrays.ndarray.rst:274
 msgid ""
-"For the following methods there are also corresponding functions in :mod:"
-"`numpy`: :func:`all`, :func:`any`, :func:`argmax`, :func:`argmin`, :func:"
-"`argpartition`, :func:`argsort`, :func:`choose`, :func:`clip`, :func:"
-"`compress`, :func:`copy`, :func:`cumprod`, :func:`cumsum`, :func:"
-"`diagonal`, :func:`imag`, :func:`max <amax>`, :func:`mean`, :func:`min "
-"<amin>`, :func:`nonzero`, :func:`partition`, :func:`prod`, :func:`put`, :"
-"func:`ravel`, :func:`real`, :func:`repeat`, :func:`reshape`, :func:`round "
-"<around>`, :func:`searchsorted`, :func:`sort`, :func:`squeeze`, :func:"
-"`std`, :func:`sum`, :func:`swapaxes`, :func:`take`, :func:`trace`, :func:"
-"`transpose`, :func:`var`."
+"For the following methods there are also corresponding functions "
+"in :mod:`numpy`: :func:`all`, :func:`any`, :func:`argmax`, :func:`argmin`, :func:`argpartition`, :func:`argsort`, :func:`choose`, :func:`clip`, :func:`compress`, :func:`copy`, :func:`cumprod`, :func:`cumsum`, :func:`diagonal`, :func:`imag`, :func:`max "
+"<amax>`, :func:`mean`, :func:`min "
+"<amin>`, :func:`nonzero`, :func:`partition`, :func:`prod`, :func:`put`, :func:`ravel`, :func:`real`, :func:`repeat`, :func:`reshape`, :func:`round "
+"<around>`, :func:`searchsorted`, :func:`sort`, :func:`squeeze`, :func:`std`, :func:`sum`, :func:`swapaxes`, :func:`take`, :func:`trace`, :func:`transpose`, :func:`var`."
 msgstr ""
 
 #: ../../../reference/arrays.ndarray.rst:287
@@ -1055,8 +1050,8 @@ msgid ""
 "``%``, ``divmod()``, ``**`` or ``pow()``, ``<<``, ``>>``, ``&``, ``^``, ``|"
 "``, ``~``) and the comparisons (``==``, ``<``, ``>``, ``<=``, ``>=``, ``!"
 "=``) is equivalent to the corresponding universal function (or :term:`ufunc` "
-"for short) in NumPy.  For more information, see the section on :ref:"
-"`Universal Functions <ufuncs>`."
+"for short) in NumPy.  For more information, see the section "
+"on :ref:`Universal Functions <ufuncs>`."
 msgstr ""
 
 #: ../../../reference/arrays.ndarray.rst:450
@@ -1291,8 +1286,8 @@ msgstr ""
 
 #: ../../../reference/arrays.ndarray.rst:511
 msgid ""
-"Any third argument to :func:`pow()` is silently ignored, as the underlying :"
-"func:`ufunc <power>` takes only two arguments."
+"Any third argument to :func:`pow()` is silently ignored, as the "
+"underlying :func:`ufunc <power>` takes only two arguments."
 msgstr ""
 
 #: ../../../reference/arrays.ndarray.rst:514
@@ -1465,9 +1460,9 @@ msgstr ""
 
 #: ../../../reference/arrays.ndarray.rst:559
 msgid ""
-"Matrix operators ``@`` and ``@=`` were introduced in Python 3.5 following :"
-"pep:`465`, and the ``@`` operator has been introduced in NumPy 1.10.0. "
-"Further information can be found in the :func:`matmul` documentation."
+"Matrix operators ``@`` and ``@=`` were introduced in Python 3.5 "
+"following :pep:`465`, and the ``@`` operator has been introduced in NumPy "
+"1.10.0. Further information can be found in the :func:`matmul` documentation."
 msgstr ""
 
 #: ../../../reference/arrays.ndarray.rst:564
@@ -1546,11 +1541,11 @@ msgstr ""
 
 #: ../../../reference/arrays.ndarray.rst:584:<autosummary>:1
 msgid ""
-":py:obj:`ndarray.__array_wrap__ <numpy.ndarray.__array_wrap__>`\\ "
-"\\(array\\[\\, context\\[\\, ...\\)"
+":py:obj:`ndarray.__array_wrap__ <numpy.ndarray.__array_wrap__>`\\ \\(array\\"
+"[\\, context\\[\\, ...\\)"
 msgstr ""
-":py:obj:`ndarray.__array_wrap__ <numpy.ndarray.__array_wrap__>`\\ "
-"\\(array\\[\\, context\\[\\, ...\\)"
+":py:obj:`ndarray.__array_wrap__ <numpy.ndarray.__array_wrap__>`\\ \\(array\\"
+"[\\, context\\[\\, ...\\)"
 
 #: ../../../reference/arrays.ndarray.rst:584:<autosummary>:1
 msgid "Returns a view of `array` with the same type as self."

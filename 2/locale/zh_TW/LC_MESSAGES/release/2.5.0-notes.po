@@ -109,8 +109,8 @@ msgstr ""
 msgid ""
 "Setting the dtype attribute is deprecated because mutating an array is "
 "unsafe if an array is shared, especially by multiple threads.  As an "
-"alternative, you can create a view with a new dtype via ``array."
-"view(dtype=new_dtype)``."
+"alternative, you can create a view with a new dtype via "
+"``array.view(dtype=new_dtype)``."
 msgstr ""
 
 #: ../../../release/2.5.0-notes.rst:56
@@ -121,10 +121,10 @@ msgstr ""
 msgid ""
 "Setting the ``shape`` attribute is deprecated because mutating an array is "
 "unsafe if an array is shared, especially by multiple threads.  As an "
-"alternative, you can create a new view via ``np.reshape`` or ``np.ndarray."
-"reshape``. For example: ``x = np.arange(15); x = np.reshape(x, (3, 5))``. To "
-"ensure that no copy is made from the data, one can use ``np.reshape(..., "
-"copy=False)``."
+"alternative, you can create a new view via ``np.reshape`` or "
+"``np.ndarray.reshape``. For example: ``x = np.arange(15); x = np.reshape(x, "
+"(3, 5))``. To ensure that no copy is made from the data, one can use "
+"``np.reshape(..., copy=False)``."
 msgstr ""
 
 #: ../../../release/2.5.0-notes.rst:64
@@ -209,8 +209,8 @@ msgid ""
 "Inputs other than integers are deprecated for ``numpy.triu_indices`` and "
 "``numpy.tril_indices``.  Non-integer values for the ``M``, ``k`` and ``N`` "
 "parameters of ``numpy.tri`` are deprecated.  Non-integer values for the "
-"``k`` parameter of both ``numpy.tril_indices_from`` and ``numpy."
-"triu_indices_from`` are deprecated."
+"``k`` parameter of both ``numpy.tril_indices_from`` and "
+"``numpy.triu_indices_from`` are deprecated."
 msgstr ""
 
 #: ../../../release/2.5.0-notes.rst:114 ../../../release/2.5.0-notes.rst:605
@@ -244,9 +244,9 @@ msgstr ""
 
 #: ../../../release/2.5.0-notes.rst:129
 msgid ""
-"Or, for a quick fix, define ``_set_dtype`` as a function (calling ``ndarray."
-"_set_dtype()`` to avoid ``DeprecationWarnings``. (Future versions might "
-"migrate towards the ``_set_dtype = None`` path.)"
+"Or, for a quick fix, define ``_set_dtype`` as a function (calling "
+"``ndarray._set_dtype()`` to avoid ``DeprecationWarnings``. (Future versions "
+"might migrate towards the ``_set_dtype = None`` path.)"
 msgstr ""
 
 #: ../../../release/2.5.0-notes.rst:133
@@ -318,8 +318,8 @@ msgstr ""
 
 #: ../../../release/2.5.0-notes.rst:172
 msgid ""
-"``recfromtxt`` and ``recfromcsv`` have been removed from ``numpy.lib."
-"_npyio`` in favor of ``numpy.genfromtxt``. (deprecated since 2.0)"
+"``recfromtxt`` and ``recfromcsv`` have been removed from "
+"``numpy.lib._npyio`` in favor of ``numpy.genfromtxt``. (deprecated since 2.0)"
 msgstr ""
 
 #: ../../../release/2.5.0-notes.rst:176
@@ -368,8 +368,8 @@ msgstr ""
 
 #: ../../../release/2.5.0-notes.rst:199
 msgid ""
-"``_add_newdoc_ufunc(ufunc, newdoc)`` has been removed in favor of ``ufunc."
-"__doc__ = newdoc``. (deprecated since 2.2)"
+"``_add_newdoc_ufunc(ufunc, newdoc)`` has been removed in favor of "
+"``ufunc.__doc__ = newdoc``. (deprecated since 2.2)"
 msgstr ""
 
 #: ../../../release/2.5.0-notes.rst:203
@@ -558,9 +558,9 @@ msgstr ""
 
 #: ../../../release/2.5.0-notes.rst:309
 msgid ""
-"The legacy ``numpy.random.RandomState.binomial`` and ``numpy.random."
-"RandomState.multinomial`` are not affected: they preserve the original "
-"(incorrect) behavior, so existing streams remain reproducible."
+"The legacy ``numpy.random.RandomState.binomial`` and "
+"``numpy.random.RandomState.multinomial`` are not affected: they preserve the "
+"original (incorrect) behavior, so existing streams remain reproducible."
 msgstr ""
 
 #: ../../../release/2.5.0-notes.rst:313
@@ -616,8 +616,8 @@ msgstr ""
 
 #: ../../../release/2.5.0-notes.rst:344
 msgid ""
-"NumPy now supports the stable ABI for free-threaded Python as described in :"
-"pep:`803`."
+"NumPy now supports the stable ABI for free-threaded Python as described "
+"in :pep:`803`."
 msgstr ""
 
 #: ../../../release/2.5.0-notes.rst:347
@@ -717,13 +717,13 @@ msgstr ""
 
 #: ../../../release/2.5.0-notes.rst:401
 msgid ""
-"Users can now pass the ``descending=True`` keyword argument to ``numpy."
-"sort`` and ``numpy.argsort`` to sort and argsort arrays in descending order. "
-"NaN values, if present, are sorted to the end of the array in both ascending "
-"and descending sorts. This feature is available for all built-in dtypes "
-"except ``void``, ``object``, and ``generic``. Note that SIMD optimizations "
-"for sorting are currently not available for descending sorts, so performance "
-"may be slower."
+"Users can now pass the ``descending=True`` keyword argument to "
+"``numpy.sort`` and ``numpy.argsort`` to sort and argsort arrays in "
+"descending order. NaN values, if present, are sorted to the end of the array "
+"in both ascending and descending sorts. This feature is available for all "
+"built-in dtypes except ``void``, ``object``, and ``generic``. Note that SIMD "
+"optimizations for sorting are currently not available for descending sorts, "
+"so performance may be slower."
 msgstr ""
 
 #: ../../../release/2.5.0-notes.rst:408
@@ -753,9 +753,9 @@ msgid ""
 "one, e.g., previously passed in an integer array where a double array was "
 "expected: the writeback to integer would likely give wrong results.  To "
 "avoid such situations, ``intent(inplace)`` will now only allow arrays that "
-"have equivalent type to that used in the fortran routine, i.e., ``dtype."
-"kind`` is the same. For instance, a routine expecting double would be able "
-"to receive float, but would raise on integer input."
+"have equivalent type to that used in the fortran routine, i.e., "
+"``dtype.kind`` is the same. For instance, a routine expecting double would "
+"be able to receive float, but would raise on integer input."
 msgstr ""
 
 #: ../../../release/2.5.0-notes.rst:432
@@ -861,12 +861,12 @@ msgstr ""
 msgid ""
 "Input and output dtypes for ``numpy.linalg`` functions are now more precise. "
 "Several of these functions also gain preliminary shape-typing support while "
-"remaining backward compatible.  For example, the return type of ``numpy."
-"linalg.matmul`` now depends on the shape-type of its inputs, or fall back to "
-"the backward-compatible return type if the shape-types are unknown at type-"
-"checking time. Because of limitations in Python's type system and current "
-"type-checkers, shape-typing cannot cover every situation and is often only "
-"implemented for the most common lower-rank cases."
+"remaining backward compatible.  For example, the return type of "
+"``numpy.linalg.matmul`` now depends on the shape-type of its inputs, or fall "
+"back to the backward-compatible return type if the shape-types are unknown "
+"at type-checking time. Because of limitations in Python's type system and "
+"current type-checkers, shape-typing cannot cover every situation and is "
+"often only implemented for the most common lower-rank cases."
 msgstr ""
 
 #: ../../../release/2.5.0-notes.rst:503
@@ -988,8 +988,8 @@ msgid ""
 "the readonly nature of scalar types in NumPy.  The previous behavior relied "
 "on undocumented implicit temporary arrays and was not well-defined.  Users "
 "who need to convert scalar types to ctypes should first convert them to an "
-"array (e.g., ``numpy.asarray``) before passing them to ``numpy.ctypeslib."
-"as_ctypes``."
+"array (e.g., ``numpy.asarray``) before passing them to "
+"``numpy.ctypeslib.as_ctypes``."
 msgstr ""
 
 #: ../../../release/2.5.0-notes.rst:580 ../../../release/2.5.0-notes.rst:589

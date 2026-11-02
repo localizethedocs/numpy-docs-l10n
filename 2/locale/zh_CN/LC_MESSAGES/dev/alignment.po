@@ -32,8 +32,8 @@ msgstr ""
 
 #: ../../../dev/alignment.rst:14
 msgid ""
-"Creating :term:`structured datatypes <structured data type>` with :term:"
-"`fields <field>` aligned like in a C-struct."
+"Creating :term:`structured datatypes <structured data type>` "
+"with :term:`fields <field>` aligned like in a C-struct."
 msgstr ""
 
 #: ../../../dev/alignment.rst:16
@@ -75,10 +75,10 @@ msgstr ""
 
 #: ../../../dev/alignment.rst:38
 msgid ""
-"For example, on a (typical Linux x64 GCC) system, the NumPy :attr:"
-"`complex64` datatype is implemented as ``struct { float real, imag; }``. "
-"This has \"true\" alignment of 4 and \"uint\" alignment of 8 (equal to the "
-"true alignment of ``uint64``)."
+"For example, on a (typical Linux x64 GCC) system, the "
+"NumPy :attr:`complex64` datatype is implemented as ``struct { float real, "
+"imag; }``. This has \"true\" alignment of 4 and \"uint\" alignment of 8 "
+"(equal to the true alignment of ``uint64``)."
 msgstr ""
 
 #: ../../../dev/alignment.rst:43
@@ -157,24 +157,25 @@ msgstr ""
 #: ../../../dev/alignment.rst:63
 msgid ""
 "The ``ALIGNED`` flag of an ndarray, computed in ``IsAligned`` and checked "
-"by :c:func:`PyArray_ISALIGNED`. This is computed from :attr:`dtype."
-"alignment`. It is set to ``True`` if every item in the array is at a memory "
-"location consistent with :attr:`dtype.alignment`, which is the case if the "
-"``data ptr`` and all strides of the array are multiples of that alignment."
+"by :c:func:`PyArray_ISALIGNED`. This is computed "
+"from :attr:`dtype.alignment`. It is set to ``True`` if every item in the "
+"array is at a memory location consistent with :attr:`dtype.alignment`, which "
+"is the case if the ``data ptr`` and all strides of the array are multiples "
+"of that alignment."
 msgstr ""
 
 #: ../../../dev/alignment.rst:69
 msgid ""
-"The ``align`` keyword of the dtype constructor, which only affects :ref:"
-"`structured_arrays`. If the structure's field offsets are not manually "
-"provided, NumPy determines offsets automatically. In that case, "
+"The ``align`` keyword of the dtype constructor, which only "
+"affects :ref:`structured_arrays`. If the structure's field offsets are not "
+"manually provided, NumPy determines offsets automatically. In that case, "
 "``align=True`` pads the structure so that each field is \"true\" aligned in "
 "memory and sets :attr:`dtype.alignment` to be the largest of the field "
 "\"true\" alignments. This is like what C-structs usually do. Otherwise if "
 "offsets or itemsize were manually provided ``align=True`` simply checks that "
 "all the fields are \"true\" aligned and that the total itemsize is a "
-"multiple of the largest field alignment. In either case :attr:`dtype."
-"isalignedstruct` is also set to True."
+"multiple of the largest field alignment. In either "
+"case :attr:`dtype.isalignedstruct` is also set to True."
 msgstr ""
 
 #: ../../../dev/alignment.rst:79

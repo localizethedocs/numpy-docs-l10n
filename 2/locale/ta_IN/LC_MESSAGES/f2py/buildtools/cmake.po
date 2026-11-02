@@ -149,8 +149,8 @@ msgid ""
 "# Depend on sources\n"
 "target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE Python::NumPy)\n"
 "add_dependencies(${CMAKE_PROJECT_NAME} genpyf)\n"
-"target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE "
-"\"${F2PY_INCLUDE_DIR}\")\n"
+"target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE \"$"
+"{F2PY_INCLUDE_DIR}\")\n"
 msgstr ""
 
 #: ../../../f2py/buildtools/cmake.rst:36
@@ -159,9 +159,9 @@ msgid ""
 "``add_custom_command`` is used to generate the wrapper ``C`` files and then "
 "added as a dependency of the actual shared library target via a "
 "``add_custom_target`` directive which prevents the command from running "
-"every time. Additionally, the method used for obtaining the ``fortranobject."
-"c`` file can also be used to grab the ``numpy`` headers on older ``cmake`` "
-"versions."
+"every time. Additionally, the method used for obtaining the "
+"``fortranobject.c`` file can also be used to grab the ``numpy`` headers on "
+"older ``cmake`` versions."
 msgstr ""
 
 #: ../../../f2py/buildtools/cmake.rst:43

@@ -25,8 +25,8 @@ msgstr ""
 msgid ""
 "It helps to learn a bit about how NumPy arrays are handled under the covers "
 "to understand NumPy better. This section provides a brief explanation. More "
-"details are available in Travis Oliphant's book `Guide to NumPy <https://web."
-"mit.edu/dvp/Public/numpybook.pdf>`_."
+"details are available in Travis Oliphant's book `Guide to NumPy <https://"
+"web.mit.edu/dvp/Public/numpybook.pdf>`_."
 msgstr ""
 
 #: ../../../dev/internals.rst:14
@@ -79,8 +79,8 @@ msgstr ""
 
 #: ../../../dev/internals.rst:35
 msgid ""
-"Whether the array is to be interpreted as :term:`C-order <C order>` or :term:"
-"`Fortran-order <Fortran order>`."
+"Whether the array is to be interpreted as :term:`C-order <C order>` "
+"or :term:`Fortran-order <Fortran order>`."
 msgstr ""
 
 #: ../../../dev/internals.rst:38
@@ -99,11 +99,11 @@ msgid ""
 "metadata object that uses the same data buffer to create a new :term:`view` "
 "of that data buffer that has a different interpretation of the buffer (e.g., "
 "different shape, offset, byte order, strides, etc) but shares the same data "
-"bytes. Many operations in NumPy do just this such as :term:`slicing <python:"
-"slice>`. Other operations, such as transpose, don't move data elements "
-"around in the array, but rather change the information about the shape and "
-"strides so that the indexing of the array changes, but the data in the array "
-"doesn't move."
+"bytes. Many operations in NumPy do just this such as :term:`slicing "
+"<python:slice>`. Other operations, such as transpose, don't move data "
+"elements around in the array, but rather change the information about the "
+"shape and strides so that the indexing of the array changes, but the data in "
+"the array doesn't move."
 msgstr ""
 
 #: ../../../dev/internals.rst:54
@@ -195,9 +195,10 @@ msgstr ""
 msgid ""
 "The situation with NumPy makes this issue yet more complicated. The internal "
 "machinery of NumPy arrays is flexible enough to accept any ordering of "
-"indices. One can simply reorder indices by manipulating the internal :term:"
-"`stride` information for arrays without reordering the data at all. NumPy "
-"will know how to map the new index order to the data without moving the data."
+"indices. One can simply reorder indices by manipulating the "
+"internal :term:`stride` information for arrays without reordering the data "
+"at all. NumPy will know how to map the new index order to the data without "
+"moving the data."
 msgstr ""
 
 #: ../../../dev/internals.rst:125

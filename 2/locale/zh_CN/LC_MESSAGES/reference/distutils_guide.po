@@ -116,9 +116,10 @@ msgid ""
 "In order to add a Python package to SciPy, its build script (``setup.py``) "
 "must meet certain requirements. The most important requirement is that the "
 "package define a ``configuration(parent_package='',top_path=None)`` function "
-"which returns a dictionary suitable for passing to ``numpy.distutils.core."
-"setup(..)``. To simplify the construction of this dictionary, ``numpy."
-"distutils.misc_util`` provides the ``Configuration`` class, described below."
+"which returns a dictionary suitable for passing to "
+"``numpy.distutils.core.setup(..)``. To simplify the construction of this "
+"dictionary, ``numpy.distutils.misc_util`` provides the ``Configuration`` "
+"class, described below."
 msgstr ""
 
 #: ../../../../DISTUTILS.rst:52
@@ -332,8 +333,8 @@ msgid ""
 "<config.name.replace('.','/')>/`` directory. If ``files`` item is a tuple "
 "then it's first argument specifies the installation suffix relative to "
 "``<prefix>/include/pythonX.X/`` path.  This is a Python distutils method; "
-"its use is discouraged for NumPy and SciPy in favour of ``config."
-"add_data_files(*files)``."
+"its use is discouraged for NumPy and SciPy in favour of "
+"``config.add_data_files(*files)``."
 msgstr ""
 
 #: ../../../../DISTUTILS.rst:209
@@ -407,8 +408,8 @@ msgid ""
 "``config.add_library(name, sources, **build_info)`` --- add a library to "
 "``libraries`` list. Allowed keywords arguments are ``depends``, ``macros``, "
 "``include_dirs``, ``extra_compiler_args``, ``f2py_options``, "
-"``extra_f77_compile_args``, ``extra_f90_compile_args``.  See ``."
-"add_extension()`` method for more information on arguments."
+"``extra_f77_compile_args``, ``extra_f90_compile_args``.  See "
+"``.add_extension()`` method for more information on arguments."
 msgstr ""
 
 #: ../../../../DISTUTILS.rst:265
@@ -933,8 +934,8 @@ msgstr ""
 #: ../../../../DISTUTILS.rst:605
 msgid ""
 "Some old Fortran codes need special compiler options in order to work "
-"correctly. In order to specify compiler options per source file, ``numpy."
-"distutils`` Fortran compiler looks for the following pattern::"
+"correctly. In order to specify compiler options per source file, "
+"``numpy.distutils`` Fortran compiler looks for the following pattern::"
 msgstr ""
 
 #: ../../../../DISTUTILS.rst:610

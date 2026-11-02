@@ -33,15 +33,15 @@ msgstr ""
 
 #: ../../../dev/depending_on_numpy.rst:13
 msgid ""
-"NumPy uses a standard, :pep:`440` compliant, versioning scheme: ``major."
-"minor.bugfix``. A *major* release is highly unusual and if it happens it "
-"will most likely indicate an ABI break. NumPy 1.xx releases happened from "
-"2006 to 2023; NumPy 2.0 in early 2024 is the first release which changed the "
-"ABI (minor ABI breaks for corner cases may have happened a few times in "
-"minor releases). *Minor* versions are released regularly, typically every 6 "
-"months. Minor versions contain new features, deprecations, and removals of "
-"previously deprecated code. *Bugfix* releases are made even more frequently; "
-"they do not contain any new features or deprecations."
+"NumPy uses a standard, :pep:`440` compliant, versioning scheme: "
+"``major.minor.bugfix``. A *major* release is highly unusual and if it "
+"happens it will most likely indicate an ABI break. NumPy 1.xx releases "
+"happened from 2006 to 2023; NumPy 2.0 in early 2024 is the first release "
+"which changed the ABI (minor ABI breaks for corner cases may have happened a "
+"few times in minor releases). *Minor* versions are released regularly, "
+"typically every 6 months. Minor versions contain new features, deprecations, "
+"and removals of previously deprecated code. *Bugfix* releases are made even "
+"more frequently; they do not contain any new features or deprecations."
 msgstr ""
 
 #: ../../../dev/depending_on_numpy.rst:24
@@ -65,13 +65,13 @@ msgstr ""
 
 #: ../../../dev/depending_on_numpy.rst:37
 msgid ""
-"Modules can also be safely built against NumPy 2.0 or later in :ref:"
-"`CPython's abi3 mode <python:stable-abi>`, which allows building against a "
-"single (minimum-supported) version of Python but be forward compatible "
-"higher versions in the same series (e.g., ``3.x``). This can greatly reduce "
-"the number of wheels that need to be built and distributed. For more "
-"information and examples, see the `cibuildwheel docs <https://cibuildwheel."
-"pypa.io/en/stable/faq/#abi3>`__."
+"Modules can also be safely built against NumPy 2.0 or later "
+"in :ref:`CPython's abi3 mode <python:stable-abi>`, which allows building "
+"against a single (minimum-supported) version of Python but be forward "
+"compatible higher versions in the same series (e.g., ``3.x``). This can "
+"greatly reduce the number of wheels that need to be built and distributed. "
+"For more information and examples, see the `cibuildwheel docs <https://"
+"cibuildwheel.pypa.io/en/stable/faq/#abi3>`__."
 msgstr ""
 
 #: ../../../dev/depending_on_numpy.rst:48
@@ -214,9 +214,9 @@ msgstr ""
 #: ../../../dev/depending_on_numpy.rst:139
 msgid ""
 "NumPy itself and many core scientific Python packages have agreed on a "
-"schedule for dropping support for old Python and NumPy versions: :ref:"
-"`NEP29`. We recommend all packages depending on NumPy to follow the "
-"recommendations in NEP 29."
+"schedule for dropping support for old Python and NumPy "
+"versions: :ref:`NEP29`. We recommend all packages depending on NumPy to "
+"follow the recommendations in NEP 29."
 msgstr ""
 
 #: ../../../dev/depending_on_numpy.rst:144
@@ -239,8 +239,8 @@ msgid ""
 "current release of NumPy [*]_. If you use the NumPy C-API (directly or via "
 "Cython), you can also pin the current major version to prevent ABI breakage. "
 "Note that setting an upper bound on NumPy may `affect the ability of your "
-"library to be installed alongside other, newer packages <https://iscinumpy."
-"dev/post/bound-version-constraints/>`__."
+"library to be installed alongside other, newer packages <https://"
+"iscinumpy.dev/post/bound-version-constraints/>`__."
 msgstr ""
 
 #: ../../../dev/depending_on_numpy.rst:160
@@ -335,8 +335,8 @@ msgstr ""
 
 #: ../../../dev/depending_on_numpy.rst:219
 msgid ""
-"Once ``2.0.0rc1`` is available, you can adjust your metadata in ``pyproject."
-"toml`` in the way outlined below."
+"Once ``2.0.0rc1`` is available, you can adjust your metadata in "
+"``pyproject.toml`` in the way outlined below."
 msgstr ""
 
 #: ../../../dev/depending_on_numpy.rst:222

@@ -81,10 +81,10 @@ msgid ""
 "datetime format. It is also possible to create datetimes from an integer by "
 "offset relative to the Unix epoch (00:00:00 UTC on 1 January 1970). The unit "
 "for internal storage is automatically selected from the form of the string, "
-"and can be either a :ref:`date unit <arrays.dtypes.dateunits>` or a :ref:"
-"`time unit <arrays.dtypes.timeunits>`. The date units are years ('Y'), "
-"months ('M'), weeks ('W'), and days ('D'), while the time units are hours "
-"('h'), minutes ('m'), seconds ('s'), milliseconds ('ms'), and some "
+"and can be either a :ref:`date unit <arrays.dtypes.dateunits>` or "
+"a :ref:`time unit <arrays.dtypes.timeunits>`. The date units are years "
+"('Y'), months ('M'), weeks ('W'), and days ('D'), while the time units are "
+"hours ('h'), minutes ('m'), seconds ('s'), milliseconds ('ms'), and some "
 "additional SI-prefix seconds-based units. The `datetime64` data type also "
 "accepts the string \"NAT\", in any combination of lowercase/uppercase "
 "letters, for a \"Not A Time\" value. The string \"now\" is also supported "
@@ -175,8 +175,8 @@ msgstr ""
 
 #: ../../../reference/arrays.datetime.rst:157
 msgid ""
-"The datetime type works with many common NumPy functions, for example :func:"
-"`arange` can be used to generate ranges of dates."
+"The datetime type works with many common NumPy functions, for "
+"example :func:`arange` can be used to generate ranges of dates."
 msgstr ""
 
 #: ../../../reference/arrays.datetime.rst:164
@@ -261,8 +261,8 @@ msgstr ""
 msgid ""
 "The length of the span is the range of a 64-bit integer times the length of "
 "the date or unit.  For example, the time span for 'W' (week) is exactly 7 "
-"times longer than the time span for 'D' (day), and the time span for "
-"'D' (day) is exactly 24 times longer than the time span for 'h' (hour)."
+"times longer than the time span for 'D' (day), and the time span for 'D' "
+"(day) is exactly 24 times longer than the time span for 'h' (hour)."
 msgstr ""
 
 #: ../../../reference/arrays.datetime.rst:307
@@ -502,8 +502,8 @@ msgstr ""
 #: ../../../reference/arrays.datetime.rst:342
 msgid ""
 "NumPy follows a strict protocol when converting `datetime64` and/or "
-"`timedelta64` to Python Objects (e.g., ``tuple``, ``list``, `datetime."
-"datetime`)."
+"`timedelta64` to Python Objects (e.g., ``tuple``, ``list``, "
+"`datetime.datetime`)."
 msgstr ""
 
 #: ../../../reference/arrays.datetime.rst:344
@@ -646,8 +646,9 @@ msgstr ""
 #: ../../../reference/arrays.datetime.rst:502
 msgid ""
 "When performance is important for manipulating many business dates with one "
-"particular choice of weekmask and holidays, there is an object :class:"
-"`busdaycalendar` which stores the data necessary in an optimized form."
+"particular choice of weekmask and holidays, there is an "
+"object :class:`busdaycalendar` which stores the data necessary in an "
+"optimized form."
 msgstr ""
 
 #: ../../../reference/arrays.datetime.rst:508
@@ -656,8 +657,8 @@ msgstr ""
 
 #: ../../../reference/arrays.datetime.rst:509
 msgid ""
-"To test a `datetime64` value to see if it is a valid day, use :func:"
-"`is_busday`."
+"To test a `datetime64` value to see if it is a valid day, "
+"use :func:`is_busday`."
 msgstr ""
 
 #: ../../../reference/arrays.datetime.rst:528

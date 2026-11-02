@@ -103,17 +103,17 @@ msgstr ""
 #: ../../../release/1.24.0-notes.rst:46
 msgid ""
 "Many of these did succeed before.  Such code was mainly useful for unsigned "
-"integers with negative values such as ``np.uint8(-1)`` giving ``np.iinfo(np."
-"uint8).max``."
+"integers with negative values such as ``np.uint8(-1)`` giving "
+"``np.iinfo(np.uint8).max``."
 msgstr ""
 
 #: ../../../release/1.24.0-notes.rst:50
 msgid ""
-"Note that conversion between NumPy integers is unaffected, so that ``np."
-"array(-1).astype(np.uint8)`` continues to work and use C integer overflow "
-"logic.  For negative values, it will also work to view the array: ``np."
-"array(-1, dtype=np.int8).view(np.uint8)``. In some cases, using ``np."
-"iinfo(np.uint8).max`` or ``val % 2**8`` may also work well."
+"Note that conversion between NumPy integers is unaffected, so that "
+"``np.array(-1).astype(np.uint8)`` continues to work and use C integer "
+"overflow logic.  For negative values, it will also work to view the array: "
+"``np.array(-1, dtype=np.int8).view(np.uint8)``. In some cases, using "
+"``np.iinfo(np.uint8).max`` or ``val % 2**8`` may also work well."
 msgstr ""
 
 #: ../../../release/1.24.0-notes.rst:57
@@ -149,8 +149,8 @@ msgstr ""
 #: ../../../release/1.24.0-notes.rst:72
 msgid ""
 "The scalar type aliases ending in a 0 bit size: ``np.object0``, ``np.str0``, "
-"``np.bytes0``, ``np.void0``, ``np.int0``, ``np.uint0`` as well as ``np."
-"bool8`` are now deprecated and will eventually be removed."
+"``np.bytes0``, ``np.void0``, ``np.int0``, ``np.uint0`` as well as "
+"``np.bool8`` are now deprecated and will eventually be removed."
 msgstr ""
 
 #: ../../../release/1.24.0-notes.rst:76 ../../../release/1.24.0-notes.rst:132
@@ -163,9 +163,9 @@ msgstr ""
 
 #: ../../../release/1.24.0-notes.rst:82
 msgid ""
-"The ``normed`` keyword argument has been removed from `np.histogram`, `np."
-"histogram2d`, and `np.histogramdd`. Use ``density`` instead.  If ``normed`` "
-"was passed by position, ``density`` is now used."
+"The ``normed`` keyword argument has been removed from `np.histogram`, "
+"`np.histogram2d`, and `np.histogramdd`. Use ``density`` instead.  If "
+"``normed`` was passed by position, ``density`` is now used."
 msgstr ""
 
 #: ../../../release/1.24.0-notes.rst:87
@@ -204,8 +204,8 @@ msgstr ""
 
 #: ../../../release/1.24.0-notes.rst:104
 msgid ""
-"The mini() method of ``np.ma.MaskedArray`` has been removed. Use either ``np."
-"ma.MaskedArray.min()`` or ``np.ma.minimum.reduce()``."
+"The mini() method of ``np.ma.MaskedArray`` has been removed. Use either "
+"``np.ma.MaskedArray.min()`` or ``np.ma.minimum.reduce()``."
 msgstr ""
 
 #: ../../../release/1.24.0-notes.rst:107
@@ -318,9 +318,9 @@ msgstr ""
 
 #: ../../../release/1.24.0-notes.rst:171
 msgid ""
-"When the ``dtype`` keyword argument is used with :py:func:`array()` or :py:"
-"func:`asarray()`, the dtype of the returned array now always exactly matches "
-"the dtype provided by the caller."
+"When the ``dtype`` keyword argument is used with :py:func:`array()` "
+"or :py:func:`asarray()`, the dtype of the returned array now always exactly "
+"matches the dtype provided by the caller."
 msgstr ""
 
 #: ../../../release/1.24.0-notes.rst:175
@@ -804,8 +804,8 @@ msgid ""
 ">>> np.arange(2, dtype=str)\n"
 "Traceback (most recent call last)\n"
 "   ...\n"
-"TypeError: arange() not supported for inputs with DType <class 'numpy."
-"dtype[str_]'>."
+"TypeError: arange() not supported for inputs with DType <class "
+"'numpy.dtype[str_]'>."
 msgstr ""
 
 #: ../../../release/1.24.0-notes.rst:442
@@ -818,9 +818,9 @@ msgstr ""
 
 #: ../../../release/1.24.0-notes.rst:446
 msgid ""
-"The protocols used in ``numpy.typing.ArrayLike`` and ``numpy.typing."
-"DTypeLike`` are now properly marked as runtime checkable, making them easier "
-"to use for runtime type checkers."
+"The protocols used in ``numpy.typing.ArrayLike`` and "
+"``numpy.typing.DTypeLike`` are now properly marked as runtime checkable, "
+"making them easier to use for runtime type checkers."
 msgstr ""
 
 #: ../../../release/1.24.0-notes.rst:450
@@ -853,12 +853,12 @@ msgstr ""
 
 #: ../../../release/1.24.0-notes.rst:467
 msgid ""
-"The comparison functions (``numpy.equal``, ``numpy.not_equal``, ``numpy."
-"less``, ``numpy.less_equal``, ``numpy.greater`` and ``numpy.greater_equal``) "
-"are now much faster as they are now vectorized with universal intrinsics. "
-"For a CPU with SIMD extension AVX512BW, the performance gain is up to 2.57x, "
-"1.65x and 19.15x for integer, float and boolean data types, respectively "
-"(with N=50000)."
+"The comparison functions (``numpy.equal``, ``numpy.not_equal``, "
+"``numpy.less``, ``numpy.less_equal``, ``numpy.greater`` and "
+"``numpy.greater_equal``) are now much faster as they are now vectorized with "
+"universal intrinsics. For a CPU with SIMD extension AVX512BW, the "
+"performance gain is up to 2.57x, 1.65x and 19.15x for integer, float and "
+"boolean data types, respectively (with N=50000)."
 msgstr ""
 
 #: ../../../release/1.24.0-notes.rst:473
