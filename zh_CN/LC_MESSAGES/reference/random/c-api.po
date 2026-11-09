@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/c-api.rst:2
+msgid "C API for random"
+msgstr ""
+
+#: ../../../reference/random/c-api.rst:6
+msgid ""
+"Access to various distributions below is available via Cython or C-wrapper "
+"libraries like CFFI. All the functions accept a :c:type:`bitgen_t` as their "
+"first argument.  To access these from Cython or C, you must link with the "
+"``npyrandom`` static library which is part of the NumPy distribution, "
+"located in ``numpy/random/lib``. Note that you must *also* link with "
+"``npymath``, see :ref:`linking-npymath`."
+msgstr ""
+
+#: ../../../reference/random/c-api.rst:16
+msgid ""
+"The :c:type:`bitgen_t` holds the current state of the BitGenerator and "
+"pointers to functions that return standard C types while advancing the state."
+msgstr ""
+
+#: ../../../reference/random/c-api.rst:20
+msgid ""
+"struct bitgen:\n"
+"    void *state\n"
+"    npy_uint64 (*next_uint64)(void *st) nogil\n"
+"    uint32_t (*next_uint32)(void *st) nogil\n"
+"    double (*next_double)(void *st) nogil\n"
+"    npy_uint64 (*next_raw)(void *st) nogil\n"
+"\n"
+"ctypedef bitgen bitgen_t"
+msgstr ""
+
+#: ../../../reference/random/c-api.rst:31
+msgid "See :doc:`extending` for examples of using these functions."
+msgstr ""
+
+#: ../../../reference/random/c-api.rst:33
+msgid "The functions are named with the following conventions:"
+msgstr ""
+
+#: ../../../reference/random/c-api.rst:35
+msgid ""
+"\"standard\" refers to the reference values for any parameters. For instance "
+"\"standard_uniform\" means a uniform distribution on the interval ``0.0`` to "
+"``1.0``"
+msgstr ""
+
+#: ../../../reference/random/c-api.rst:39
+msgid "\"fill\" functions will fill the provided ``out`` with ``cnt`` values."
+msgstr ""
+
+#: ../../../reference/random/c-api.rst:41
+msgid ""
+"The functions without \"standard\" in their name require additional "
+"parameters to describe the distributions."
+msgstr ""
+
+#: ../../../reference/random/c-api.rst:44
+msgid ""
+"Functions with ``inv`` in their name are based on the slower inverse method "
+"instead of a ziggurat lookup algorithm, which is significantly faster. The "
+"non-ziggurat variants are used in corner cases and for legacy compatibility."
+msgstr ""
+
+#: ../../../reference/random/c-api.rst:131
+msgid ""
+"typedef struct s_binomial_t {\n"
+"  int has_binomial; /* !=0: following parameters initialized for binomial "
+"*/\n"
+"  double psave;\n"
+"  RAND_INT_TYPE nsave;\n"
+"  double r;\n"
+"  double q;\n"
+"  double fm;\n"
+"  RAND_INT_TYPE m;\n"
+"  double p1;\n"
+"  double xm;\n"
+"  double xl;\n"
+"  double xr;\n"
+"  double c;\n"
+"  double laml;\n"
+"  double lamr;\n"
+"  double p2;\n"
+"  double p3;\n"
+"  double p4;\n"
+"} binomial_t;"
+msgstr ""
+
+#: ../../../reference/random/c-api.rst:176
+msgid "Generate a single integer"
+msgstr ""
+
+#: ../../../reference/random/c-api.rst:187
+msgid "Generate random uint64 numbers in closed interval [off, off + rng]."
+msgstr ""
