@@ -1,0 +1,132 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/generated/numpy.exceptions.AxisError.rst:4
+msgid "numpy.exceptions.AxisError"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.AxisError:2
+msgid "Axis supplied was invalid."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.AxisError:4
+msgid ""
+"This is raised whenever an ``axis`` parameter is specified that is larger "
+"than the number of array dimensions. For compatibility with code written "
+"against older numpy versions, which raised a mixture of `ValueError` and "
+"`IndexError` for this situation, this exception subclasses both to ensure "
+"that ``except ValueError`` and ``except IndexError`` statements continue to "
+"catch `AxisError`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.AxisError:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.AxisError:17 numpy.exceptions.AxisError:68
+msgid "**axis**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.AxisError:-1
+msgid "int or str"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.AxisError:16
+msgid ""
+"The out of bounds axis or a custom exception message. If an axis is "
+"provided, then `ndim` should be specified as well."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.AxisError:20 numpy.exceptions.AxisError:75
+msgid "**ndim**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.AxisError:-1
+msgid "int, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.AxisError:20
+msgid "The number of array dimensions."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.AxisError:33
+msgid "**msg_prefix**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.AxisError:-1
+msgid "str, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.AxisError:23
+msgid "A prefix for the exception message."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.AxisError:36
+msgid "Examples"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.AxisError:43
+msgid "Negative axes are preserved:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.AxisError:50
+msgid ""
+"The class constructor generally takes the axis and arrays' dimensionality as "
+"arguments:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.AxisError:56
+msgid "Alternatively, a custom exception message can be passed:"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.AxisError:0
+msgid "Attributes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.AxisError:64
+msgid ""
+"The out of bounds axis or ``None`` if a custom exception message was "
+"provided. This should be the axis as passed by the user, before any "
+"normalization to resolve negative indices."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/exceptions.py:docstring
+#: of numpy.exceptions.AxisError:71
+msgid ""
+"The number of array dimensions or ``None`` if a custom exception message was "
+"provided."
+msgstr ""
