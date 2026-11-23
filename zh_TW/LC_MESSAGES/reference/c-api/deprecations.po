@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2026, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 09:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/c-api/deprecations.rst:4
+msgid "C API deprecations"
+msgstr ""
+
+#: ../../../reference/c-api/deprecations.rst:7
+msgid "Background"
+msgstr ""
+
+#: ../../../reference/c-api/deprecations.rst:9
+msgid ""
+"The API exposed by NumPy for third-party extensions has grown over years of "
+"releases, and has allowed programmers to directly access NumPy functionality "
+"from C. This API can be best described as \"organic\".   It has emerged from "
+"multiple competing desires and from multiple points of view over the years, "
+"strongly influenced by the desire to make it easy for users to move to NumPy "
+"from Numeric and Numarray.   The core API originated with Numeric in 1995 "
+"and there are patterns such as the heavy use of macros written to mimic "
+"Python's C-API as well as account for compiler technology of the late 90's. "
+"There is also only a small group of volunteers who have had very little time "
+"to spend on improving this API."
+msgstr ""
+
+#: ../../../reference/c-api/deprecations.rst:21
+msgid ""
+"There is an ongoing effort to improve the API. It is important in this "
+"effort to ensure that code that compiles for NumPy 1.X continues to compile "
+"for NumPy 1.X.  At the same time, certain API's will be marked as deprecated "
+"so that future-looking code can avoid these API's and follow better "
+"practices."
+msgstr ""
+
+#: ../../../reference/c-api/deprecations.rst:28
+msgid ""
+"Another important role played by deprecation markings in the C API is to "
+"move towards hiding internal details of the NumPy implementation. For those "
+"needing direct, easy, access to the data of ndarrays, this will not remove "
+"this ability. Rather, there are many potential performance optimizations "
+"which require changing the implementation details, and NumPy developers have "
+"been unable to try them because of the high value of preserving ABI "
+"compatibility. By deprecating this direct access, we will in the future be "
+"able to improve NumPy's performance in ways we cannot presently."
+msgstr ""
+
+#: ../../../reference/c-api/deprecations.rst:39
+msgid "Deprecation mechanism NPY_NO_DEPRECATED_API"
+msgstr ""
+
+#: ../../../reference/c-api/deprecations.rst:41
+msgid ""
+"In C, there is no equivalent to the deprecation warnings that Python "
+"supports. One way to do deprecations is to flag them in the documentation "
+"and release notes, then remove or change the deprecated features in a future "
+"major version (NumPy 2.0 and beyond).  Minor versions of NumPy should not "
+"have major C-API changes, however, that prevent code that worked on a "
+"previous minor release.  For example, we will do our best to ensure that "
+"code that compiled and worked on NumPy 1.4 should continue to work on NumPy "
+"1.7 (but perhaps with compiler warnings)."
+msgstr ""
+
+#: ../../../reference/c-api/deprecations.rst:51
+msgid ""
+"To use the NPY_NO_DEPRECATED_API mechanism, you need to #define it to the "
+"target API version of NumPy before #including any NumPy headers. If you want "
+"to confirm that your code is clean against 1.7, use:"
+msgstr ""
+
+#: ../../../reference/c-api/deprecations.rst:55
+msgid "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION"
+msgstr "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION"
+
+#: ../../../reference/c-api/deprecations.rst:59
+msgid ""
+"On compilers which support a #warning mechanism, NumPy issues a compiler "
+"warning if you do not define the symbol NPY_NO_DEPRECATED_API. This way, the "
+"fact that there are deprecations will be flagged for third-party developers "
+"who may not have read the release notes closely."
+msgstr ""
+
+#: ../../../reference/c-api/deprecations.rst:64
+msgid ""
+"Note that defining NPY_NO_DEPRECATED_API is not sufficient to make your "
+"extension ABI compatible with a given NumPy version. See :ref:`for-"
+"downstream-package-authors`."
+msgstr ""
