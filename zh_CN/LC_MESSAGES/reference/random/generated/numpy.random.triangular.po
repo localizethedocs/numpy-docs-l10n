@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2022, NumPy Developers
+# This file is distributed under the same license as the NumPy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NumPy 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/random/generated/numpy.random.triangular.rst:4
+msgid "numpy.random.triangular"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:2
+msgid ""
+"Draw samples from the triangular distribution over the interval ``[left, "
+"right]``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:5
+msgid ""
+"The triangular distribution is a continuous probability distribution with "
+"lower limit left, peak at mode, and upper limit right. Unlike the other "
+"distributions, these parameters directly define the shape of the pdf."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:11
+msgid ""
+"New code should use the `~numpy.random.Generator.triangular` method of a "
+"`~numpy.random.Generator` instance instead; please see the :ref:`random-"
+"quick-start`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:18
+msgid "**left**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:-1
+msgid "float or array_like of floats"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:18
+msgid "Lower limit."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:22
+msgid "**mode**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:21
+msgid ""
+"The value where the peak of the distribution occurs. The value must fulfill "
+"the condition ``left <= mode <= right``."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:25
+msgid "**right**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:25
+msgid "Upper limit, must be larger than `left`."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:32
+msgid "**size**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:-1
+msgid "int or tuple of ints, optional"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:28
+msgid ""
+"Output shape.  If the given shape is, e.g., ``(m, n, k)``, then ``m * n * "
+"k`` samples are drawn.  If size is ``None`` (default), a single value is "
+"returned if ``left``, ``mode``, and ``right`` are all scalars.  Otherwise, "
+"``np.broadcast(left, mode, right).size`` samples are drawn."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:43
+msgid "**out**"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:-1
+msgid "ndarray or scalar"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:37
+msgid "Drawn samples from the parameterized triangular distribution."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:48
+msgid ":obj:`random.Generator.triangular`"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:49
+msgid "which should be used for new code."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:53
+msgid "Notes"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:54
+msgid "The probability density function for the triangular distribution is"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:56
+msgid ""
+"P(x;l, m, r) = \\begin{cases}\n"
+"\\frac{2(x-l)}{(r-l)(m-l)}& \\text{for $l \\leq x \\leq m$},\\\\\n"
+"\\frac{2(r-x)}{(r-l)(r-m)}& \\text{for $m \\leq x \\leq r$},\\\\\n"
+"0& \\text{otherwise}.\n"
+"\\end{cases}\n"
+"\n"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:62
+msgid ""
+"The triangular distribution is often used in ill-defined problems where the "
+"underlying distribution is not known, but some knowledge of the limits and "
+"mode exists. Often it is used in simulations."
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:68
+msgid "References"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:69
+msgid ""
+"Wikipedia, \"Triangular distribution\" https://en.wikipedia.org/wiki/"
+"Triangular_distribution"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:74
+msgid "[R2465fa468494-1]_"
+msgstr ""
+
+#: ../../../../../../../.conda/lib/python3.10/site-packages/numpy/__init__.py:docstring
+#: of numpy.random.triangular:77
+msgid "Examples"
+msgstr ""
+
+#: ../../../reference/random/generated/numpy.random.triangular.rst:3
+msgid "Draw values from the distribution and plot the histogram:"
+msgstr ""
